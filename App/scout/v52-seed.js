@@ -1603,8 +1603,8 @@
   var outcomes = [
     { code: 'contacted', label: 'Contacted', note: 'Package sent.' },
     { code: 'replied', label: 'Replied', note: 'They engaged.' },
-    { code: 'signed', label: 'Signed', note: 'The only outcome that validates the model.' },
-    { code: 'declined', label: 'Declined', note: 'With a reason — each teaches something different.' }
+    { code: 'signed', label: 'Signed', note: 'They said yes.' },
+    { code: 'declined', label: 'Declined', note: 'With a reason.' }
   ];
   var declineReasons = [
     { code: 'agency', label: 'Already with an agency', teaches: 'The Missing check failed — representation was not in the inventory.' },

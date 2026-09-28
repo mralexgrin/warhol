@@ -140,6 +140,7 @@
        otherwise is remembered. Persisted so the choice survives a reload, which
        is the difference between a preference and a fidget. */
     railWide: false,
+    railChosen: false,
     gateError: null,            // the sign-in refusal, inline and generic
     gateShow: false,            // is the password field showing its value
     /* render() replaces the whole DOM, so a field that reads its value from the
@@ -174,7 +175,7 @@
     /* v6.2 — `run` rides along now that a lookup is a batch. Six names typed in
        and resolved is work, and the answer used to be thrown away by any
        navigation that cleared the timers. */
-    'railWide', 'helpFrom', 'tracked', 'run',
+    'railWide', 'railChosen', 'helpFrom', 'tracked', 'run',
     /* v5.8 — the scans ride along too. A reload used to put every fresh brief
        back to "Scout is looking" from zero, which on a live run means paying
        for the same names twice. Sanitised on the way out by scanSnapshot. */
@@ -461,7 +462,7 @@
   function railHTML() {
     var who = me();
     var dark = document.documentElement.getAttribute('data-theme') === 'dark';
-    var wide = !!state.railWide;
+    var wide = railIsWide();
     return '<nav class="railcol railcol--wide' + (wide ? '' : ' railcol--mini') +
       '" aria-label="Sections">' +
       /* v5.5c — THE REAL MARK. The gradient tile with a typographic S in it was
@@ -598,6 +599,15 @@
       '<span class="tx">' + (wide ? 'Collapse' : 'Expand') + '</span></button>' +
       '</div>' +
       '</nav>';
+  }
+
+  /* v7 — LABELS WHEN THERE IS ROOM FOR THEM. v5.5b made the rail icons-only to
+     give the work column 176px, which matters at a laptop width and not on a
+     wide screen — and an inbox, an eye and a box do not say drop, watchlist and
+     passed. Wide by default from 1360px; once the toggle is used, the person's
+     choice wins at every width. */
+  function railIsWide() {
+    return state.railChosen ? !!state.railWide : window.innerWidth >= 1360;
   }
 
   function navBtn(view, ic, label, n, nWhat) {
@@ -2036,7 +2046,7 @@
         var h = S.plain(c.headline);
         if (h && !/^no headline/i.test(h)) {
           return '<p class="thesis thesis--judged">' +
-            '<span class="judged-tag">The model&rsquo;s read</span>' + esc(h) + '</p>';
+            '<span class="judged-tag">The model&rsquo;s read</span>' + esc(roundBig(h)) + '</p>';
         }
         var prelim = preliminaryHeadline(c);
         return prelim
@@ -3108,9 +3118,7 @@
     var open = state.outcomeTray === c.id;
     return '<div class="p outcomebox mt-5">' +
       '<span class="lab">Any word?</span>' +
-      '<p class="obnote">The only thing that tells Scout whether it was right. It rides in the ' +
-      'digest too &mdash; <em>&ldquo;You promoted ' + esc(c.name.split(' ')[0]) + ' 9 days ago. Any word?&rdquo;</em> &mdash; ' +
-      'because a field nobody is prompted for is blank in a month.</p>' +
+      '<p class="obnote">What they said when you reached out.</p>' +
       '<div class="ocrow">' + S.outcomes.map(function (x) {
         return '<button class="ocbtn' + (o.code === x.code ? ' on' : '') + '" data-act="outcome" data-id="' +
           c.id + '" data-o="' + x.code + '"><b>' + esc(x.label) + '</b><span>' + esc(x.note) + '</span></button>';
@@ -3124,7 +3132,7 @@
         }).join('') + '</div></div>' : '') +
       (o.code && o.code !== 'declined'
         ? '<p class="obstate">Recorded ' + esc(U.longDate(o.at || asOf())) + '. ' +
-          (o.code === 'signed' ? 'This is the row that validates the model.' : 'Scout will ask again in nine days.') + '</p>'
+          (o.code === 'signed' ? '' : 'Scout will ask again in nine days.') + '</p>'
         : '') +
       '</div>';
   }
@@ -3405,7 +3413,7 @@
   function passedView() {
     var rows = passedList();
     var head = '<header class="pagehead"><h1>Passed</h1>' +
-      '<p class="deck">Nobody vanishes. Every pass carries your reason and what would bring the name ' +
+      '<p class="deck">Every pass, with your reason and what would bring the name ' +
       'back.</p></header>';
 
     if (!rows.length) {
@@ -3490,10 +3498,8 @@
     if (state.briefStage === 'write') {
       return '<header class="pagehead"><span class="kick pk">New brief</span><h1>Add to Scout</h1>' +
         briefModeToggle() +
-        '<p class="deck">A brief is the assignment: what we need, who we are looking for, where they ' +
-        'post, and what good looks like. Write it the way you would say it out loud. This is not a ' +
-        'search &mdash; a search returns results now, ranked by match, but a brief returns nobody ' +
-        'today, reports tomorrow morning, and is allowed to find nothing.</p>' +
+        '<p class="deck">Say who you are looking for and where they post, the way you would say it out ' +
+        'loud. Scout reports back tomorrow morning, and it may find nobody.</p>' +
         '</header>' +
         '<div class="form">' +
         '<form data-act="briefsubmit">' +
@@ -4144,8 +4150,7 @@
     return '<header class="pagehead"><div class="rpt-tags">' +
       '<span class="pill pill--ok">Promoted</span></div>' +
       '<h1 class="mt-3">Outreach package: ' + esc(c.name) + '</h1>' +
-      '<p class="deck">Everything a first contact needs was already in the report, so this costs nothing to ' +
-      'assemble.</p></header>' +
+      '<p class="deck">The signals from the report, ready for a first contact.</p></header>' +
       /* v5.5 — THE TWO HALVES OF THIS SCREEN ARE THE PRODUCT'S WHOLE ARGUMENT,
          and they were one white panel split by a gutter. Left is carried over:
          the same sentences the card and the report already made, which is why
@@ -4169,16 +4174,37 @@
           '<p class="draft-sig">' + esc(who.name) + ' ' + DOT + ' Paradium</p></div>' +
           '<div class="formacts"><button class="btn btn--primary" data-act="copy" data-id="' + c.id + '">' +
           (state.copied ? 'Copied' : 'Copy the draft') + '</button>' +
-          '<button class="btn btn--ghost" data-act="view" data-view="drop">Back to the drop</button></div>'
-        : '<p class="draftnone mt-3"><b>Not written for this creator.</b> Scout does not draft a first contact ' +
-          'to a real person until someone owns that decision. The signals above are the package; the ' +
-          'words are yours.</p>' +
+          outreachBack() + '</div>'
+        : '<p class="draftnone mt-3">Scout does not write the first message. The signals are the ' +
+          'package; the words are yours.</p>' +
           '<div class="formacts">' +
           '<button class="btn btn--primary" data-act="copy" data-id="' + c.id + '">' +
           (state.copied ? 'Copied' : 'Copy the signals') + '</button>' +
-          '<button class="btn btn--ghost" data-act="view" data-view="drop">Back to the drop</button></div>') +
-      '<p class="lifecycle"><b>Scout never sends.</b> When you hear back, tell it &mdash; that answer ' +
-      'is the only thing that says whether the machine was right.</p></div></div>';
+          outreachBack() + '</div>') +
+      '<p class="lifecycle"><b>Scout never sends.</b> When you hear back, record it on the ' +
+      '<button class="lnk" data-act="view" data-view="promoted">Promoted list</button>.</p></div></div>';
+  }
+
+  /* v7 — "between 264,818 and 1,717,306 views" is exact and unreadable in a
+     sentence. Counts of ten thousand or more are shortened the way the rest of
+     the report prints an audience (447k, 1.7M); the engine's words are kept,
+     and every smaller number is left alone. */
+  function roundBig(text) {
+    return String(text).replace(/\b\d{1,3}(?:,\d{3})+\b|\b\d{5,}\b/g, function (m) {
+      var n = Number(m.replace(/,/g, ''));
+      if (n < 10000) return m;
+      if (n >= 1e6) return (Math.round(n / 1e5) / 10).toString().replace(/\.0$/, '') + 'M';
+      return Math.round(n / 1000) + 'k';
+    });
+  }
+
+  /* v7 — the package said "Back to the drop" wherever it was opened from,
+     including the Promoted list. */
+  function outreachBack() {
+    var v = state.outreachFrom || 'drop';
+    var name = v === 'promoted' ? 'the promoted list' : v === 'watchlist' ? 'the watchlist'
+      : v === 'passed' ? 'the passed list' : 'the drop';
+    return '<button class="btn btn--ghost" data-act="view" data-view="' + esc(v) + '">Back to ' + name + '</button>';
   }
 
   /* ================================================================= ADMIN */
@@ -4906,10 +4932,7 @@
         .map(function (n) {
           return '<button data-act="thresh" data-v="' + n + '" aria-pressed="' + (ad.threshold === n) + '">' + n + '</button>';
         }).join('') + '</div>' +
-      '<p class="adfine">Read off a result, not chosen: whatever produces five to ten names on a good ' +
-      'day and zero on a thin one.</p>' +
-      '<p class="adfine">Re-read it the first time a cohort has real demand. The cohort behind ' +
-      S.THRESHOLD + ' had almost none that Scout could reach, so its ceiling was well under 100.</p>' +
+      '<p class="adfine">Set so a good day brings five to ten names and a thin day none.</p>' +
       /* The admin moving this number is the person most owed the story of where
          it came from and what the score it gates is made of. */
       helpLink('cut', 'What makes the cut') + '</section>' +
@@ -5158,7 +5181,7 @@
                     state.view === 'briefdetail' ? briefDetailView() :
                       state.view === 'newbrief' ? briefView() : dropView();
 
-      html = '<div class="slab slab--app' + (state.railWide ? '' : ' slab--rmini') + '">' + railHTML() +
+      html = '<div class="slab slab--app' + (railIsWide() ? '' : ' slab--rmini') + '">' + railHTML() +
         '<main class="main" id="main">' +
         '<div class="wrap' + fade + '">' + body + '</div></main></div>';
     }
@@ -5485,7 +5508,9 @@
     }
     state.rcp = null;
 
-    if (act === 'railtog') { state.railWide = !state.railWide; state.menu = false; render(); return; }
+    if (act === 'railtog') {
+      state.railWide = !railIsWide(); state.railChosen = true; state.menu = false; render(); return;
+    }
     if (act === 'menu') { state.menu = !state.menu; render(); return; }
     if (act === 'theme') { setTheme(el.getAttribute('data-set')); render(); return; }
 
@@ -5659,9 +5684,13 @@
     if (act === 'promote') {
       state.decisions[id] = { verb: 'promote', at: asOf() };
       decided(id, 'Promoted ' + creator(id).name + '.');
+      state.outreachFrom = state.view === 'report' ? state.from : state.view;
       state.outreachId = id; go('outreach'); return;
     }
-    if (act === 'outreach') { state.outreachId = id; go('outreach'); return; }
+    if (act === 'outreach') {
+      state.outreachFrom = state.view === 'report' ? state.from : state.view;
+      state.outreachId = id; go('outreach'); return;
+    }
     if (act === 'undo') { delete state.decisions[id]; delete state.outcomeState[id]; render(); return; }
     if (act === 'toastundo') {
       var t = state.toast;
@@ -6045,6 +6074,16 @@
       var ract = key === 'p' ? 'promote' : key === 'w' ? 'watchtray' : key === 'x' ? 'passtray' : null;
       if (ract && head) { e.preventDefault(); press(head, ract); }
     }
+  });
+
+  /* The rail's default follows the window across 1360px; re-render only on
+     the crossing, never on every resize event. */
+  var railWasWide = null;
+  window.addEventListener('resize', function () {
+    if (state.railChosen || state.phase === 'signedout') return;
+    var w = railIsWide();
+    if (railWasWide === null) { railWasWide = w; return; }
+    if (w !== railWasWide) { railWasWide = w; render(); }
   });
 
   /* v5 checked only the popover and the menu, which taught you the key works

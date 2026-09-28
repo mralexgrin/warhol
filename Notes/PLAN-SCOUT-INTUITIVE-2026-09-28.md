@@ -79,3 +79,35 @@ something that makes the evidence look wrong, or removes a step between the user
 | 10 | The model's read is one 60-word sentence with raw numbers (264,818 and 1,717,306 views). | Round the numbers and break it into short sentences where the source allows. |
 
 Each phase ships as its own branch and PR.
+
+### Phase 4 — done on branch `phase4-copy`
+
+- **#8.** The rail is wide, with labels, by default from 1360px, and switches when the window crosses that
+  width. Once someone uses the toggle, their choice wins at every width.
+- **#9.** Tier-3 copy cut to the fact in these places:
+  - The New brief intro, which had a paragraph arguing that a brief is not a search.
+  - The Outreach package's "costs nothing to assemble", its not-written note, and its "Scout never sends"
+    line. That line now links to the Promoted list.
+  - Admin's two paragraphs defending the bar.
+  - The "Any word?" note.
+  - The outcome notes ("validates the model").
+  - "Nobody vanishes" on the Passed page.
+
+  The Outreach back button now names where the package was opened from.
+- **#10.** The model's read shortens counts of 10,000 or more (264,818 → 265k, 1,717,306 → 1.7M). Its
+  words are the engine's and are not rewritten here.
+
+## Phase 5 — Responsive, and a simpler mobile
+
+Asked for 28 Sep: the layout is sloppy at several breakpoints and nearly unusable on a phone.
+Audit each screen at 375, 768, 1024, 1280 and 1440. On a phone, Scout becomes the drop, the report and the
+three verbs, and everything else steps back.
+
+## Phase 6 — Trends that read at a glance
+
+Asked for 28 Sep: *Where the market is short* is hard to read and could be much richer visually.
+
+## Phase 7 — One system for the report
+
+Asked for 28 Sep: in the report, the graphs, the summary and the type are all over the place. Streamline
+them into one scale, one chart style and one reading order.
