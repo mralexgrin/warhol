@@ -41,7 +41,7 @@
       ],
       "scoreThreshold": 25,
       "costs": {
-        "takenAt": "2026-08-14T15:09:01.224Z",
+        "takenAt": "2026-08-14T15:09:01.229Z",
         "spent": 33.6782,
         "studiedCreators": 238,
         "perCreator": 0.1415,

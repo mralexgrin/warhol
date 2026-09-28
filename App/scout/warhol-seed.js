@@ -32,7 +32,7 @@
     ],
     "scoreThreshold": 25,
     "costs": {
-      "takenAt": "2026-08-14T15:05:17.179Z",
+      "takenAt": "2026-08-14T15:05:17.184Z",
       "spent": 33.317,
       "studiedCreators": 238,
       "perCreator": 0.14,
@@ -378,12 +378,12 @@
       "audience": {
         "total": 1120000
       },
-      "score": 44,
+      "score": 39,
       "scoreDelta": null,
       "confidence": 0.833,
       "pillars": {
         "gap": {
-          "score": 32,
+          "score": 27,
           "max": 60,
           "engine": "rule+llm",
           "coverage": 0.833,
@@ -393,16 +393,16 @@
               "label": "Owned-channel absence",
               "engine": "rule",
               "value": "No store, no newsletter, no membership",
-              "weightPct": 75,
+              "weightPct": 89,
               "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
             },
             {
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "144 purchase-intent comments",
-              "weightPct": 25,
-              "detail": "144 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "value": "41 purchase-intent comments",
+              "weightPct": 11,
+              "detail": "41 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -566,7 +566,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "unspecified"
+          "label": "store"
         },
         {
           "kind": "comment",
@@ -575,7 +575,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "unspecified"
+          "label": "store"
         },
         {
           "kind": "comment",
@@ -584,7 +584,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "unspecified"
+          "label": "store"
         },
         {
           "kind": "comment",
@@ -669,52 +669,7 @@
         },
         {
           "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -750,43 +705,7 @@
         },
         {
           "kind": "comment",
-          "quote": "I have purchased many products from DIY and CLEAN, and love both.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Just started using this product and love it!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Can't wait to try it out 🔥",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -804,61 +723,7 @@
         },
         {
           "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "I have a 80series landcruiser i been looking for a great product.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I have two unopened tins still on my shelf from when I thought it was being discontinued so I stocked up.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I use the Diy wax , I can say it really does fill.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "However $30 for this glass/cleaner/sealant is a bit steep considering you can get Glaco for $35 which is a full on coating. But just to support Ivan I'll buy a bott",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -876,43 +741,7 @@
         },
         {
           "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Love me some DIYDetail products, I'm still hooked on Quickbeads. My favorite so far, you have to pry it from my dead cold beaded hands. However $30 for this glass/cleaner/sealant is a bit steep considering you can get Glaco for $35 which is a full on coating. But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -994,33 +823,6 @@
         {
           "kind": "comment",
           "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Can't wait to try it out 🔥",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -1038,42 +840,6 @@
         },
         {
           "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Hello Pan, Thank you for your videos — they truly help us better understand the entire world of detailing. I would like to know whether my Clean by Pan 8‑year coating, applied to my vehicle about a year ago and stored immediately afterward in my freezer, can still be used on my new summer car.",
           "platform": "YouTube",
           "url": null,
@@ -1083,151 +849,16 @@
         },
         {
           "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
+          "label": "membership"
         },
         {
           "kind": "comment",
           "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -1246,87 +877,6 @@
         {
           "kind": "comment",
           "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -1336,141 +886,6 @@
         {
           "kind": "comment",
           "quote": "Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I would like to know whether my Clean by Pan 8‑year coating, applied to my vehicle about a year ago and stored immediately afterward in my freezer, can still be used on my new summer car.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Can't wait to try it out 🔥",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Finally, a C8 Corvette! Thanks, Pan, for making this happen. Nice to see your approach on this vehicle so I can learn some tricks taking care of mine... Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -1488,52 +903,7 @@
         },
         {
           "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Hi pan, I'm currently half way through my V1 bottle and love the slickness, foam and scent. Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -1548,303 +918,6 @@
           "observedAt": "2026-08-14",
           "engine": "llm",
           "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "membership"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'll try this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Finally, a C8 Corvette! Thanks, Pan, for making this happen. Nice to see your approach on this vehicle so I can learn some tricks taking care of mine... Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "membership"
         },
         {
           "kind": "signal",
@@ -2955,16 +2028,16 @@
               "label": "Owned-channel absence",
               "engine": "rule",
               "value": "No store, no newsletter",
-              "weightPct": 99,
+              "weightPct": 100,
               "detail": "4 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
             },
             {
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "4 purchase-intent comments",
-              "weightPct": 1,
-              "detail": "4 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "value": "1 purchase-intent comment",
+              "weightPct": 0,
+              "detail": "1 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -3112,33 +2185,6 @@
         }
       ],
       "evidence": [
-        {
-          "kind": "comment",
-          "quote": "I bought a rock rake from Lee Valley. Great to see a genius at work!Thanks Wes.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I bought a rock rake from Lee Valley. Great to see a genius at work!Thanks Wes.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I bought a rock rake from Lee Valley. Great to see a genius at work!Thanks Wes.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
         {
           "kind": "comment",
           "quote": "I bought a rock rake from Lee Valley. Great to see a genius at work!Thanks Wes.",
@@ -3996,1354 +3042,6 @@
       "sourceWhy": "a person typed this handle in"
     },
     {
-      "id": "c_worth_call_they_make_2__superfastmatt",
-      "name": "superfastmatt",
-      "handle": "@superfastmatt",
-      "initials": "SU",
-      "avatar": "https://yt3.googleusercontent.com/nqgbsRZPop6g87lugiS2bCe3a7WfW7cRTW3WjIQIykcXdU9ykFmfSHRHRxRhUs5KtMNWc8iG6CA=s900-c0x00ffffff-no-rj",
-      "mandateId": "m_worth_call_they_make_2",
-      "primaryPlatform": "TikTok profile",
-      "platforms": [
-        {
-          "name": "TikTok profile",
-          "handle": "@superfastmatt",
-          "followers": 17700,
-          "url": "https://www.tiktok.com/@superfastmatt",
-          "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/0b7ead6dbc777cca77f6d564a1916b41~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=a92d7667&x-expires=1786885200&x-signature=jhtmvCdV%2BKd98VNYp8HMSIIq7Mw%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
-          "avatarExpires": "2026-08-16T13:00:00.000Z",
-          "avatarStale": false,
-          "matchConfidence": 1
-        },
-        {
-          "name": "YouTube channel",
-          "handle": "@superfastmatt",
-          "followers": 666000,
-          "url": "https://www.youtube.com/@superfastmatt",
-          "avatar": "https://yt3.googleusercontent.com/nqgbsRZPop6g87lugiS2bCe3a7WfW7cRTW3WjIQIykcXdU9ykFmfSHRHRxRhUs5KtMNWc8iG6CA=s900-c0x00ffffff-no-rj",
-          "avatarExpires": null,
-          "avatarStale": false,
-          "matchConfidence": 1
-        }
-      ],
-      "places": [
-        {
-          "name": "TikTok profile",
-          "url": "https://www.tiktok.com/@superfastmatt",
-          "host": "tiktok.com",
-          "followers": 17700
-        },
-        {
-          "name": "YouTube channel",
-          "url": "https://www.youtube.com/@superfastmatt",
-          "host": "youtube.com",
-          "followers": 666000
-        }
-      ],
-      "audience": {
-        "total": 683700
-      },
-      "score": 28,
-      "scoreDelta": null,
-      "confidence": 0.667,
-      "pillars": {
-        "gap": {
-          "score": 16,
-          "max": 60,
-          "engine": "rule+llm",
-          "coverage": 0.667,
-          "subsignals": [
-            {
-              "key": "owned",
-              "label": "Owned-channel absence",
-              "engine": "rule",
-              "value": "No newsletter, no podcast",
-              "weightPct": 71,
-              "detail": "4 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
-            },
-            {
-              "key": "demand",
-              "label": "Unmet demand",
-              "engine": "llm+rule",
-              "value": "68 purchase-intent comments",
-              "weightPct": 29,
-              "detail": "68 lines classified as intent to buy or subscribe, in text the engine fetched first."
-            }
-          ]
-        },
-        "strain": {
-          "score": 12,
-          "max": 40,
-          "engine": "rule+llm",
-          "subsignals": [
-            {
-              "key": "abandon",
-              "label": "Abandonment markers",
-              "engine": "rule",
-              "value": "2 dead links they still publish — they tried, it broke",
-              "weightPct": 100,
-              "detail": "2 dead links they still publish — they tried, it broke — 12 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "selfreport",
-              "label": "Self-reported strain",
-              "engine": "llm",
-              "value": "we couldn't read their captions",
-              "weightPct": 0,
-              "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "cadence",
-              "label": "Cadence decay",
-              "engine": "rule",
-              "value": "−18% vs baseline",
-              "weightPct": 0,
-              "detail": "2.3 videos a month now, against 2.8 before that — down 18% — 0 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "unanswered",
-              "label": "Unanswered audience",
-              "engine": "rule",
-              "value": "not readable on this look",
-              "weightPct": 0,
-              "detail": "needs a second look — this is a change over time, and we have seen them once"
-            }
-          ]
-        },
-        "fit": {
-          "verdict": "pass",
-          "engine": "llm",
-          "subsignals": [
-            {
-              "key": "brief",
-              "label": "Against the brief",
-              "engine": "llm",
-              "value": "pass",
-              "detail": "He's an automotive engineer who does hands-on engine swaps and builds on camera in a consistent explainer format, which fits the DIY repair and restoration brief, though the recent-post evidence is thin and doesn't directly confirm he names specific parts and products every video."
-            }
-          ]
-        }
-      },
-      "inventory": [
-        {
-          "item": "YouTube channel",
-          "state": "present",
-          "surfacesChecked": 15,
-          "note": "found it — youtube.com/@superfastmatt",
-          "observedAt": "2026-08-14",
-          "source": "youtube_channel"
-        },
-        {
-          "item": "Newsletter",
-          "state": "verified_absent",
-          "surfacesChecked": 96,
-          "note": "not there · we looked in 6 places",
-          "observedAt": "2026-08-14",
-          "source": "newsletter"
-        },
-        {
-          "item": "Store",
-          "state": "present",
-          "surfacesChecked": 42,
-          "note": "something at superfastmatt.myshopify.com — not confirmed as theirs",
-          "observedAt": "2026-08-14",
-          "source": "store"
-        },
-        {
-          "item": "Membership",
-          "state": "present",
-          "surfacesChecked": 17,
-          "note": "something at patreon.com/superfastmatt — not confirmed as theirs",
-          "observedAt": "2026-08-14",
-          "source": "membership"
-        },
-        {
-          "item": "Podcast",
-          "state": "verified_absent",
-          "surfacesChecked": 25,
-          "note": "not there · we looked in 2 places",
-          "observedAt": "2026-08-14",
-          "source": "podcast"
-        },
-        {
-          "item": "Website",
-          "state": "present",
-          "surfacesChecked": 44,
-          "note": "found it — tiktok.com/@superfastmatt",
-          "observedAt": "2026-08-14",
-          "source": "website"
-        },
-        {
-          "item": "Representation",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "their bio does not mention it, which is not the same as nobody having signed them",
-          "observedAt": "2026-08-14",
-          "source": "representation"
-        },
-        {
-          "item": "Sponsored posts",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
-          "observedAt": "2026-08-14",
-          "source": "sponsorships"
-        },
-        {
-          "item": "Affiliate links",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
-          "observedAt": "2026-08-14",
-          "source": "affiliate_links"
-        },
-        {
-          "item": "Platform subscriptions",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-          "observedAt": "2026-08-14",
-          "source": "platform_subscriptions"
-        },
-        {
-          "item": "Shopping tags",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-          "observedAt": "2026-08-14",
-          "source": "shopping_tags"
-        }
-      ],
-      "evidence": [
-        {
-          "kind": "comment",
-          "quote": "I want one. License plate: \"D2\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I've got my fingers crossed that Slate makes it. I love small trucks.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm yearning for an R3X.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "If I can afford the R3 I'll defo get one",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "im for slate bigtime, ill get one once they become a readily available, if they do so.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "still bigger than i'd buy since i don't need a big car, but if the r3 is as small as promised, i might be convinced to get one",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I have my eye on an R2, once it level 3 self-drives.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'll probably buy a nice used R1T when they get a little more common.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I really like rivians. I would like to buy one in the future so I hope they can stick around.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I want one. License plate: \"D2\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm yearning for an R3X.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "If I can afford the R3 I'll defo get one",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I really really want Aptera to succeed. I can't put my finger on why, but there's just something about them. I guess the design just makes a lot of sense for most people the majority of the time.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I hope aptera makes it. Not just because i threw 3 grand at it, but because it's the only vehicle out there that's not a non-aero brick for some reason, can get 1000 miles to a charge and can sit out for 6 months without the battery dying. I want it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I really like rivians. I would like to buy one in the future so I hope they can stick around.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I want Aptera to make it",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Rivian is the only EV company I am fully hoping to buy into. They just seem so passionate about making a *good product* that *happens* to be an EV, rather than just trying to meet a quota and/or jump ship as soon as they are allowed (Honda >.>). I get to test the R2 tomorrow. I hope it goes well. Th",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "im for slate bigtime, ill get one once they become a readily available, if they do so.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I want one. License plate: \"D2\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I've got my fingers crossed that Slate makes it. I love small trucks.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm yearning for an R3X.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I own a Rivian 2nd Gen R1T. I watched the videos and followed the growing pains through the 1st Gen product line before making my decision to purchase, and I am glad I did.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I really really want Aptera to succeed. I can't put my finger on why, but there's just something about them. I guess the design just makes a lot of sense for most people the majority of the time.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I hope Slate makes it. The market needs a basic, economy EV to counter all the luxury laptops with wheels.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I think Aptera's going to make it, but initially be niche, which was the original intention anyways. Go Aptera!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "If I can afford the R3 I'll defo get one",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I bought a used r1t launch edition over a year ago, and live where it's bitter cold about 19 months a year with a 6 minute 110° summer. I've asked myself if I'd ever get another gas cage, and I got sad thinking about the prospect.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I really like rivians. I would like to buy one in the future so I hope they can stick around.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "im for slate bigtime, ill get one once they become a readily available, if they do so.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I hope aptera makes it. Not just because i threw 3 grand at it, but because it's the only vehicle out there that's not a non-aero brick for some reason, can get 1000 miles to a charge and can sit out for 6 months without the battery dying. I want it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I want Aptera to make it",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Rivian is the only EV company I am fully hoping to buy into. They just seem so passionate about making a *good product* that *happens* to be an EV, rather than just trying to meet a quota and/or jump ship as soon as they are allowed (Honda >.>). I get to test the R2 tomorrow. I hope it goes well.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I want one. License plate: \"D2\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "If I can afford the R3 I'll defo get one",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "im for slate bigtime, ill get one once they become a readily available, if they do so.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I really like rivians. I would like to buy one in the future so I hope they can stick around.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I have my eye on an R2, once it level 3 self-drives.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I too have a deposit on an R2, although it was more of a statement. I'll probably buy a nice used R1T when they get a little more common.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I hope aptera makes it. Not just because i threw 3 grand at it, but because it's the only vehicle out there that's not a non-aero brick for some reason, can get 1000 miles to a charge and can sit out for 6 months without the battery dying. I want it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I want one. License plate: \"D2\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm yearning for an R3X.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "If I can afford the R3 I'll defo get one",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I hope aptera makes it. Not just because i threw 3 grand at it, but because it's the only vehicle out there that's not a non-aero brick for some reason, can get 1000 miles to a charge and can sit out for 6 months without the battery dying. I want it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "im for slate bigtime, ill get one once they become a readily available, if they do so.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Rivian is the only EV company I am fully hoping to buy into. They just seem so passionate about making a *good product* that *happens* to be an EV, rather than just trying to meet a quota and/or jump ship as soon as they are allowed (Honda >.>). I get to test the R2 tomorrow. I hope it goes well. Th",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I want Aptera to make it",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I really hope they do make it and can expand into Europe as well, I wouldn't mind a Tesla alternative tha",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The R3 looks so sick, if it has decent self driving, the wife and I will be getting that.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "still bigger than i'd buy since i don't need a big car, but if the r3 is as small as promised, i might be convinced to get one",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I want one. License plate: \"D2\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm yearning for an R3X.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "If I can afford the R3 I'll defo get one",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I hope aptera makes it. Not just because i threw 3 grand at it, but because it's the only vehicle out there that's not a non-aero brick for some reason, can get 1000 miles to a charge and can sit out for 6 months without the battery dying. I want it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "im for slate bigtime, ill get one once they become a readily available, if they do so.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Rivian is the only EV company I am fully hoping to buy into. They just seem so passionate about making a *good product* that *happens* to be an EV, rather than just trying to meet a quota and/or jump ship as soon as they are allowed (Honda >.>). I get to test the R2 tomorrow. I hope it goes well. Th",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I want Aptera to make it",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I unironically like the look of Rivian's cars. I just found out about the R3, and even that looks really cool in my opinion. Some sort of cross between a futuristic Jeep and an old Russian Lada. I really hope they do make it and can expand into Europe as well, I wouldn't mind a Tesla alternative tha",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The R3 looks so sick, if it has decent self driving, the wife and I will be getting that.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I have my eye on an R2, once it level 3 self-drives.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "14:56 you said keychain and I immediately looked for a purchase link. You sold out so fast last time, like super fast! 😅",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Great investment on the key chains, I will be buying one once they have outlived their usefulness and you need them to be converted back to cold hard cash. Congrats on your run, thats amazing. You definitely are living up to your name.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dang it! I wanted the blue key chain to pair with my red one.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "14:56 you said keychain and I immediately looked for a purchase link. You sold out so fast last time, like super fast! 😅",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Great investment on the key chains, I will be buying one once they have outlived their usefulness and you need them to be converted back to cold hard cash. Congrats on your run, thats amazing. You definitely are living up to your name.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dang it! I wanted the blue key chain to pair with my red one.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Great investment on the key chains, I will be buying one once they have outlived their usefulness and you need them to be converted back to cold hard cash.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "14:56 you said keychain and I immediately looked for a purchase link. You sold out so fast last time, like super fast! 😅",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dang it! I wanted the blue key chain to pair with my red one.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "signal",
-          "quote": "https://www.youtube.com/@SuperfastMatt",
-          "platform": "link they publish",
-          "url": "https://www.youtube.com/@SuperfastMatt",
-          "observedAt": "2026-08-12",
-          "engine": "rule",
-          "label": "abandonment"
-        },
-        {
-          "kind": "signal",
-          "quote": "https://www.youtube.com/@SuperfastMatt",
-          "platform": "link they publish",
-          "url": "https://www.youtube.com/@SuperfastMatt",
-          "observedAt": "2026-08-12",
-          "engine": "rule",
-          "label": "abandonment"
-        }
-      ],
-      "status": "in_drop",
-      "resurfaced": null,
-      "passed": null,
-      "promoted": null,
-      "outcome": null,
-      "asOf": "2026-08-14",
-      "alert": null,
-      "samples": [
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "Speed Week Was A Mixed Bag",
-          "url": "https://www.youtube.com/watch?v=0gUvDfgn5I0",
-          "at": "2026-08-11T15:17:43Z",
-          "thumbnail": "https://i.ytimg.com/vi/0gUvDfgn5I0/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 421558,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:21:48.393Z",
-          "status": null
-        },
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "Rivian Is Gonna Be Alright",
-          "url": "https://www.youtube.com/watch?v=JEmjg1q19GI",
-          "at": "2026-07-26T14:57:04Z",
-          "thumbnail": "https://i.ytimg.com/vi/JEmjg1q19GI/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 261335,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:21:48.393Z",
-          "status": null
-        },
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "The World's Best Driving Road Is Kinda Terrible",
-          "url": "https://www.youtube.com/watch?v=o0mNM0LIFY4",
-          "at": "2026-07-11T14:19:32Z",
-          "thumbnail": "https://i.ytimg.com/vi/o0mNM0LIFY4/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 454787,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:21:48.393Z",
-          "status": null
-        },
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "3D Print A Whole Race Car Body. Or Just Watch Me Do It. Whatever.",
-          "url": "https://www.youtube.com/watch?v=nt85nTMnY1w",
-          "at": "2026-06-20T23:53:10Z",
-          "thumbnail": "https://i.ytimg.com/vi/nt85nTMnY1w/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 415052,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:21:48.393Z",
-          "status": null
-        }
-      ],
-      "samplesSearched": {
-        "count": 0,
-        "why": "they link none of their own posts anywhere we can read"
-      },
-      "headline": "superfastmatt makes car build and engineering videos for 666,000 on YouTube, with recent uploads landing between 256,172 and 449,495 views, and he already sells through a store, a membership, and his own website, but he has no newsletter or podcast and his posting has slowed to 2.3 videos a month from 2.8.",
-      "headlineRestsOn": "666,000 on YouTube · \"Rivian Is Gonna Be Alright\" (256,172 views) · \"The World's Best Driving Road Is Kinda Terrible\" (449,495 views) · Store · Membership · Own website · Newsletter · Podcast · 2.3 videos a month now, against 2.8 before that",
-      "accent": "#6E6E6E",
-      "play": {
-        "id": null,
-        "label": "No play recommended",
-        "why": "The play catalog (§5.5) is a product decision the engine does not make.",
-        "generated": true
-      },
-      "outreach": {
-        "subject": null,
-        "opener": null,
-        "bullets": [],
-        "close": null,
-        "generated": true,
-        "why": "Generated on Promote (§6.5). Nothing generates it yet."
-      },
-      "generatedFields": [
-        "accent",
-        "play",
-        "outreach"
-      ],
-      "source": "named",
-      "sourceWhy": null
-    },
-    {
-      "id": "c_worth_call_they_make_2__motorcitymechanic",
-      "name": "motorcitymechanic",
-      "handle": "@motorcitymechanic",
-      "initials": "MO",
-      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kaFAoWrqsWdm_zVN9kvkf6_Rgh6XcM79nb_diHLVIPN-U=s900-c0x00ffffff-no-rj",
-      "mandateId": "m_worth_call_they_make_2",
-      "primaryPlatform": "YouTube channel",
-      "platforms": [
-        {
-          "name": "YouTube channel",
-          "handle": "@motorcitymechanic",
-          "followers": 253000,
-          "url": "https://www.youtube.com/@motorcitymechanic",
-          "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kaFAoWrqsWdm_zVN9kvkf6_Rgh6XcM79nb_diHLVIPN-U=s900-c0x00ffffff-no-rj",
-          "avatarExpires": null,
-          "avatarStale": false,
-          "matchConfidence": 1
-        }
-      ],
-      "places": [
-        {
-          "name": "YouTube channel",
-          "url": "https://www.youtube.com/@motorcitymechanic",
-          "host": "youtube.com",
-          "followers": 253000
-        }
-      ],
-      "audience": {
-        "total": 253000
-      },
-      "score": 28,
-      "scoreDelta": null,
-      "confidence": 0.833,
-      "pillars": {
-        "gap": {
-          "score": 28,
-          "max": 60,
-          "engine": "rule+llm",
-          "coverage": 0.833,
-          "subsignals": [
-            {
-              "key": "owned",
-              "label": "Owned-channel absence",
-              "engine": "rule",
-              "value": "No store, no newsletter, no membership",
-              "weightPct": 97,
-              "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
-            },
-            {
-              "key": "demand",
-              "label": "Unmet demand",
-              "engine": "llm+rule",
-              "value": "10 purchase-intent comments",
-              "weightPct": 3,
-              "detail": "10 lines classified as intent to buy or subscribe, in text the engine fetched first."
-            }
-          ]
-        },
-        "strain": {
-          "score": 0,
-          "max": 40,
-          "engine": "rule+llm",
-          "subsignals": [
-            {
-              "key": "abandon",
-              "label": "Abandonment markers",
-              "engine": "rule",
-              "value": "nothing abandoned that we can see",
-              "weightPct": 0,
-              "detail": "nothing abandoned that we can see — 0 of the 40 Pressure points. Ceiling on this look is 22."
-            },
-            {
-              "key": "selfreport",
-              "label": "Self-reported strain",
-              "engine": "llm",
-              "value": "we couldn't read their captions",
-              "weightPct": 0,
-              "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 22."
-            },
-            {
-              "key": "cadence",
-              "label": "Cadence decay",
-              "engine": "rule",
-              "value": "not readable on this look",
-              "weightPct": 0,
-              "detail": "we could not read their posting rate — only 5 uploads in the 275 days before that — too few to call it a rate"
-            },
-            {
-              "key": "unanswered",
-              "label": "Unanswered audience",
-              "engine": "rule",
-              "value": "not readable on this look",
-              "weightPct": 0,
-              "detail": "needs a second look — this is a change over time, and we have seen them once"
-            }
-          ]
-        },
-        "fit": {
-          "verdict": "pass",
-          "engine": "llm",
-          "subsignals": [
-            {
-              "key": "brief",
-              "label": "Against the brief",
-              "engine": "llm",
-              "value": "pass",
-              "detail": "Nothing visible contradicts the brief — a Detroit mechanic channel with 253k YouTube subscribers sits in a category people genuinely search for and lends itself to a repeatable, clippable repair-and-diagnosis format — though the scraped page text is boilerplate, so the actual content is unconfirmed rather than disqualifying."
-            }
-          ]
-        }
-      },
-      "inventory": [
-        {
-          "item": "YouTube channel",
-          "state": "present",
-          "surfacesChecked": 0,
-          "note": "found it — youtube.com/@motorcitymechanic",
-          "observedAt": "2026-08-14",
-          "source": "youtube_channel"
-        },
-        {
-          "item": "Newsletter",
-          "state": "verified_absent",
-          "surfacesChecked": 74,
-          "note": "not there · we looked in 6 places",
-          "observedAt": "2026-08-14",
-          "source": "newsletter"
-        },
-        {
-          "item": "Store",
-          "state": "verified_absent",
-          "surfacesChecked": 48,
-          "note": "not there · we looked in 4 places · 3 wouldn't answer",
-          "observedAt": "2026-08-14",
-          "source": "store"
-        },
-        {
-          "item": "Membership",
-          "state": "verified_absent",
-          "surfacesChecked": 34,
-          "note": "not there · we looked in 3 places",
-          "observedAt": "2026-08-14",
-          "source": "membership"
-        },
-        {
-          "item": "Podcast",
-          "state": "verified_absent",
-          "surfacesChecked": 20,
-          "note": "not there · we looked in 2 places · 1 wouldn't answer",
-          "observedAt": "2026-08-14",
-          "source": "podcast"
-        },
-        {
-          "item": "Website",
-          "state": "present",
-          "surfacesChecked": 16,
-          "note": "something at youtube.com/user/vipertech30813 — not confirmed as theirs",
-          "observedAt": "2026-08-14",
-          "source": "website"
-        },
-        {
-          "item": "Representation",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "their bio does not mention it, which is not the same as nobody having signed them",
-          "observedAt": "2026-08-14",
-          "source": "representation"
-        },
-        {
-          "item": "Sponsored posts",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
-          "observedAt": "2026-08-14",
-          "source": "sponsorships"
-        },
-        {
-          "item": "Affiliate links",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
-          "observedAt": "2026-08-14",
-          "source": "affiliate_links"
-        },
-        {
-          "item": "Platform subscriptions",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-          "observedAt": "2026-08-14",
-          "source": "platform_subscriptions"
-        },
-        {
-          "item": "Shopping tags",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-          "observedAt": "2026-08-14",
-          "source": "shopping_tags"
-        }
-      ],
-      "evidence": [
-        {
-          "kind": "comment",
-          "quote": "If the Pacifica was equipped with a 5.7 EZC instead of 3.6, I'd buy one!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I currently have a valve cover leak. I purchased the 13mm wrenches as suggested.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "If the Pacifica was equipped with a 5.7 EZC instead of 3.6, I'd buy one!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I really appreciate your Channel, it's very helpful. My stepdaughter is on a budget with her Chrysler 200 and I'm going to need some cams. Are there any aftermarket cams that can be trusted?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "If the Pacifica was equipped with a 5.7 EZC instead of 3.6, I'd buy one!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I really appreciate your Channel, it's very helpful. My stepdaughter is on a budget with her Chrysler 200 and I'm going to need some cams. Are there any aftermarket cams that can be trusted?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "If the Pacifica was equipped with a 5.7 EZC instead of 3.6, I'd buy one!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I purchased the 13mm wrenches as suggested.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "If the Pacifica was equipped with a 5.7 EZC instead of 3.6, I'd buy one!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I purchased the 13mm wrenches as suggested.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        }
-      ],
-      "status": "in_drop",
-      "resurfaced": null,
-      "passed": null,
-      "promoted": null,
-      "outcome": null,
-      "asOf": "2026-08-14",
-      "alert": null,
-      "samples": [
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "Chrysler Dodge Jeep Ram 3.6L Camshaft Tone Wheel Check Tool 2027900090",
-          "url": "https://www.youtube.com/watch?v=X6BXr08mMK0",
-          "at": "2026-08-13T16:00:09Z",
-          "thumbnail": "https://i.ytimg.com/vi/X6BXr08mMK0/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 1570,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:07:53.181Z",
-          "status": null
-        },
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "WARNING: Chrysler, Dodge, Jeep, Ram 3.6L Pentastar engine loose oil galley bolts, make sure to check",
-          "url": "https://www.youtube.com/watch?v=KNZFFciXKk8",
-          "at": "2025-12-18T16:08:38Z",
-          "thumbnail": "https://i.ytimg.com/vi/KNZFFciXKk8/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 80420,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:07:53.181Z",
-          "status": null
-        },
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "2021-2025 WL Jeep Grand Cherokee main battery replacement",
-          "url": "https://www.youtube.com/watch?v=bFA2vI2Fiso",
-          "at": "2025-10-10T16:01:13Z",
-          "thumbnail": "https://i.ytimg.com/vi/bFA2vI2Fiso/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 76497,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:07:53.181Z",
-          "status": null
-        },
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "2021-2025 WL Jeep Grand Cherokee Park Override Procedure",
-          "url": "https://www.youtube.com/watch?v=yvvRtFe4nPQ",
-          "at": "2025-10-07T16:01:41Z",
-          "thumbnail": "https://i.ytimg.com/vi/yvvRtFe4nPQ/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 19547,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:07:53.182Z",
-          "status": null
-        }
-      ],
-      "samplesSearched": {
-        "count": 0,
-        "why": "they link none of their own posts anywhere we can read"
-      },
-      "headline": "motorcitymechanic makes step-by-step Chrysler, Dodge, Jeep, and Ram repair videos for 253,000 YouTube subscribers and runs his own website, but has no newsletter, store, or membership to sell parts, tools, or paid help to the owners who come looking for a fix.",
-      "headlineRestsOn": "audience: 253,000 on YouTube · YouTube channel, Own website · they do not have: Newsletter, Store, Membership · \"WARNING: Chrysler, Dodge, Jeep, Ram 3.6L Pentastar engine loose oil galley bolts, make sure to check\" · \"2021-2025 WL Jeep Grand Cherokee main battery replacement\" · \"2017-2021 Jeep Compass tail light bulbs and housing/assembly replacement\"",
-      "accent": "#6E6E6E",
-      "play": {
-        "id": null,
-        "label": "No play recommended",
-        "why": "The play catalog (§5.5) is a product decision the engine does not make.",
-        "generated": true
-      },
-      "outreach": {
-        "subject": null,
-        "opener": null,
-        "bullets": [],
-        "close": null,
-        "generated": true,
-        "why": "Generated on Promote (§6.5). Nothing generates it yet."
-      },
-      "generatedFields": [
-        "accent",
-        "play",
-        "outreach"
-      ],
-      "source": "named",
-      "sourceWhy": "a person typed this handle in"
-    },
-    {
       "id": "c_worth_call_they_make_2__hayesfawcett",
       "name": "hayesfawcett",
       "handle": "@hayesfawcett",
@@ -6079,6 +3777,348 @@
       },
       "headline": null,
       "headlineRestsOn": null,
+      "accent": "#6E6E6E",
+      "play": {
+        "id": null,
+        "label": "No play recommended",
+        "why": "The play catalog (§5.5) is a product decision the engine does not make.",
+        "generated": true
+      },
+      "outreach": {
+        "subject": null,
+        "opener": null,
+        "bullets": [],
+        "close": null,
+        "generated": true,
+        "why": "Generated on Promote (§6.5). Nothing generates it yet."
+      },
+      "generatedFields": [
+        "accent",
+        "play",
+        "outreach"
+      ],
+      "source": "named",
+      "sourceWhy": "a person typed this handle in"
+    },
+    {
+      "id": "c_worth_call_they_make_2__motorcitymechanic",
+      "name": "motorcitymechanic",
+      "handle": "@motorcitymechanic",
+      "initials": "MO",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kaFAoWrqsWdm_zVN9kvkf6_Rgh6XcM79nb_diHLVIPN-U=s900-c0x00ffffff-no-rj",
+      "mandateId": "m_worth_call_they_make_2",
+      "primaryPlatform": "YouTube channel",
+      "platforms": [
+        {
+          "name": "YouTube channel",
+          "handle": "@motorcitymechanic",
+          "followers": 253000,
+          "url": "https://www.youtube.com/@motorcitymechanic",
+          "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kaFAoWrqsWdm_zVN9kvkf6_Rgh6XcM79nb_diHLVIPN-U=s900-c0x00ffffff-no-rj",
+          "avatarExpires": null,
+          "avatarStale": false,
+          "matchConfidence": 1
+        }
+      ],
+      "places": [
+        {
+          "name": "YouTube channel",
+          "url": "https://www.youtube.com/@motorcitymechanic",
+          "host": "youtube.com",
+          "followers": 253000
+        }
+      ],
+      "audience": {
+        "total": 253000
+      },
+      "score": 27,
+      "scoreDelta": null,
+      "confidence": 0.833,
+      "pillars": {
+        "gap": {
+          "score": 27,
+          "max": 60,
+          "engine": "rule+llm",
+          "coverage": 0.833,
+          "subsignals": [
+            {
+              "key": "owned",
+              "label": "Owned-channel absence",
+              "engine": "rule",
+              "value": "No store, no newsletter, no membership",
+              "weightPct": 99,
+              "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
+            },
+            {
+              "key": "demand",
+              "label": "Unmet demand",
+              "engine": "llm+rule",
+              "value": "4 purchase-intent comments",
+              "weightPct": 1,
+              "detail": "4 lines classified as intent to buy or subscribe, in text the engine fetched first."
+            }
+          ]
+        },
+        "strain": {
+          "score": 0,
+          "max": 40,
+          "engine": "rule+llm",
+          "subsignals": [
+            {
+              "key": "abandon",
+              "label": "Abandonment markers",
+              "engine": "rule",
+              "value": "nothing abandoned that we can see",
+              "weightPct": 0,
+              "detail": "nothing abandoned that we can see — 0 of the 40 Pressure points. Ceiling on this look is 22."
+            },
+            {
+              "key": "selfreport",
+              "label": "Self-reported strain",
+              "engine": "llm",
+              "value": "we couldn't read their captions",
+              "weightPct": 0,
+              "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 22."
+            },
+            {
+              "key": "cadence",
+              "label": "Cadence decay",
+              "engine": "rule",
+              "value": "not readable on this look",
+              "weightPct": 0,
+              "detail": "we could not read their posting rate — only 5 uploads in the 275 days before that — too few to call it a rate"
+            },
+            {
+              "key": "unanswered",
+              "label": "Unanswered audience",
+              "engine": "rule",
+              "value": "not readable on this look",
+              "weightPct": 0,
+              "detail": "needs a second look — this is a change over time, and we have seen them once"
+            }
+          ]
+        },
+        "fit": {
+          "verdict": "pass",
+          "engine": "llm",
+          "subsignals": [
+            {
+              "key": "brief",
+              "label": "Against the brief",
+              "engine": "llm",
+              "value": "pass",
+              "detail": "Nothing visible contradicts the brief — a Detroit mechanic channel with 253k YouTube subscribers sits in a category people genuinely search for and lends itself to a repeatable, clippable repair-and-diagnosis format — though the scraped page text is boilerplate, so the actual content is unconfirmed rather than disqualifying."
+            }
+          ]
+        }
+      },
+      "inventory": [
+        {
+          "item": "YouTube channel",
+          "state": "present",
+          "surfacesChecked": 0,
+          "note": "found it — youtube.com/@motorcitymechanic",
+          "observedAt": "2026-08-14",
+          "source": "youtube_channel"
+        },
+        {
+          "item": "Newsletter",
+          "state": "verified_absent",
+          "surfacesChecked": 74,
+          "note": "not there · we looked in 6 places",
+          "observedAt": "2026-08-14",
+          "source": "newsletter"
+        },
+        {
+          "item": "Store",
+          "state": "verified_absent",
+          "surfacesChecked": 48,
+          "note": "not there · we looked in 4 places · 3 wouldn't answer",
+          "observedAt": "2026-08-14",
+          "source": "store"
+        },
+        {
+          "item": "Membership",
+          "state": "verified_absent",
+          "surfacesChecked": 34,
+          "note": "not there · we looked in 3 places",
+          "observedAt": "2026-08-14",
+          "source": "membership"
+        },
+        {
+          "item": "Podcast",
+          "state": "verified_absent",
+          "surfacesChecked": 20,
+          "note": "not there · we looked in 2 places · 1 wouldn't answer",
+          "observedAt": "2026-08-14",
+          "source": "podcast"
+        },
+        {
+          "item": "Website",
+          "state": "present",
+          "surfacesChecked": 16,
+          "note": "something at youtube.com/user/vipertech30813 — not confirmed as theirs",
+          "observedAt": "2026-08-14",
+          "source": "website"
+        },
+        {
+          "item": "Representation",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "their bio does not mention it, which is not the same as nobody having signed them",
+          "observedAt": "2026-08-14",
+          "source": "representation"
+        },
+        {
+          "item": "Sponsored posts",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "observedAt": "2026-08-14",
+          "source": "sponsorships"
+        },
+        {
+          "item": "Affiliate links",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "observedAt": "2026-08-14",
+          "source": "affiliate_links"
+        },
+        {
+          "item": "Platform subscriptions",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+          "observedAt": "2026-08-14",
+          "source": "platform_subscriptions"
+        },
+        {
+          "item": "Shopping tags",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+          "observedAt": "2026-08-14",
+          "source": "shopping_tags"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "comment",
+          "quote": "If the Pacifica was equipped with a 5.7 EZC instead of 3.6, I'd buy one!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "I currently have a valve cover leak. I purchased the 13mm wrenches as suggested.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "store"
+        },
+        {
+          "kind": "comment",
+          "quote": "I really appreciate your Channel, it's very helpful. My stepdaughter is on a budget with her Chrysler 200 and I'm going to need some cams. Are there any aftermarket cams that can be trusted?",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "store"
+        },
+        {
+          "kind": "comment",
+          "quote": "I purchased the 13mm wrenches as suggested.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "store"
+        }
+      ],
+      "status": "in_drop",
+      "resurfaced": null,
+      "passed": null,
+      "promoted": null,
+      "outcome": null,
+      "asOf": "2026-08-14",
+      "alert": null,
+      "samples": [
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "Chrysler Dodge Jeep Ram 3.6L Camshaft Tone Wheel Check Tool 2027900090",
+          "url": "https://www.youtube.com/watch?v=X6BXr08mMK0",
+          "at": "2026-08-13T16:00:09Z",
+          "thumbnail": "https://i.ytimg.com/vi/X6BXr08mMK0/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 1570,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:07:53.181Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "WARNING: Chrysler, Dodge, Jeep, Ram 3.6L Pentastar engine loose oil galley bolts, make sure to check",
+          "url": "https://www.youtube.com/watch?v=KNZFFciXKk8",
+          "at": "2025-12-18T16:08:38Z",
+          "thumbnail": "https://i.ytimg.com/vi/KNZFFciXKk8/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 80420,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:07:53.181Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "2021-2025 WL Jeep Grand Cherokee main battery replacement",
+          "url": "https://www.youtube.com/watch?v=bFA2vI2Fiso",
+          "at": "2025-10-10T16:01:13Z",
+          "thumbnail": "https://i.ytimg.com/vi/bFA2vI2Fiso/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 76497,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:07:53.181Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "2021-2025 WL Jeep Grand Cherokee Park Override Procedure",
+          "url": "https://www.youtube.com/watch?v=yvvRtFe4nPQ",
+          "at": "2025-10-07T16:01:41Z",
+          "thumbnail": "https://i.ytimg.com/vi/yvvRtFe4nPQ/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 19547,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:07:53.182Z",
+          "status": null
+        }
+      ],
+      "samplesSearched": {
+        "count": 0,
+        "why": "they link none of their own posts anywhere we can read"
+      },
+      "headline": "motorcitymechanic makes step-by-step Chrysler, Dodge, Jeep, and Ram repair videos for 253,000 YouTube subscribers and runs his own website, but has no newsletter, store, or membership to sell parts, tools, or paid help to the owners who come looking for a fix.",
+      "headlineRestsOn": "audience: 253,000 on YouTube · YouTube channel, Own website · they do not have: Newsletter, Store, Membership · \"WARNING: Chrysler, Dodge, Jeep, Ram 3.6L Pentastar engine loose oil galley bolts, make sure to check\" · \"2021-2025 WL Jeep Grand Cherokee main battery replacement\" · \"2017-2021 Jeep Compass tail light bulbs and housing/assembly replacement\"",
       "accent": "#6E6E6E",
       "play": {
         "id": null,
@@ -7690,6 +5730,580 @@
       "sourceWhy": null
     },
     {
+      "id": "c_worth_call_they_make_2__superfastmatt",
+      "name": "superfastmatt",
+      "handle": "@superfastmatt",
+      "initials": "SU",
+      "avatar": "https://yt3.googleusercontent.com/nqgbsRZPop6g87lugiS2bCe3a7WfW7cRTW3WjIQIykcXdU9ykFmfSHRHRxRhUs5KtMNWc8iG6CA=s900-c0x00ffffff-no-rj",
+      "mandateId": "m_worth_call_they_make_2",
+      "primaryPlatform": "TikTok profile",
+      "platforms": [
+        {
+          "name": "TikTok profile",
+          "handle": "@superfastmatt",
+          "followers": 17700,
+          "url": "https://www.tiktok.com/@superfastmatt",
+          "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/0b7ead6dbc777cca77f6d564a1916b41~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=a92d7667&x-expires=1786885200&x-signature=jhtmvCdV%2BKd98VNYp8HMSIIq7Mw%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+          "avatarExpires": "2026-08-16T13:00:00.000Z",
+          "avatarStale": false,
+          "matchConfidence": 1
+        },
+        {
+          "name": "YouTube channel",
+          "handle": "@superfastmatt",
+          "followers": 666000,
+          "url": "https://www.youtube.com/@superfastmatt",
+          "avatar": "https://yt3.googleusercontent.com/nqgbsRZPop6g87lugiS2bCe3a7WfW7cRTW3WjIQIykcXdU9ykFmfSHRHRxRhUs5KtMNWc8iG6CA=s900-c0x00ffffff-no-rj",
+          "avatarExpires": null,
+          "avatarStale": false,
+          "matchConfidence": 1
+        }
+      ],
+      "places": [
+        {
+          "name": "TikTok profile",
+          "url": "https://www.tiktok.com/@superfastmatt",
+          "host": "tiktok.com",
+          "followers": 17700
+        },
+        {
+          "name": "YouTube channel",
+          "url": "https://www.youtube.com/@superfastmatt",
+          "host": "youtube.com",
+          "followers": 666000
+        }
+      ],
+      "audience": {
+        "total": 683700
+      },
+      "score": 25,
+      "scoreDelta": null,
+      "confidence": 0.667,
+      "pillars": {
+        "gap": {
+          "score": 13,
+          "max": 60,
+          "engine": "rule+llm",
+          "coverage": 0.667,
+          "subsignals": [
+            {
+              "key": "owned",
+              "label": "Owned-channel absence",
+              "engine": "rule",
+              "value": "No newsletter, no podcast",
+              "weightPct": 85,
+              "detail": "4 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
+            },
+            {
+              "key": "demand",
+              "label": "Unmet demand",
+              "engine": "llm+rule",
+              "value": "26 purchase-intent comments",
+              "weightPct": 15,
+              "detail": "26 lines classified as intent to buy or subscribe, in text the engine fetched first."
+            }
+          ]
+        },
+        "strain": {
+          "score": 12,
+          "max": 40,
+          "engine": "rule+llm",
+          "subsignals": [
+            {
+              "key": "abandon",
+              "label": "Abandonment markers",
+              "engine": "rule",
+              "value": "2 dead links they still publish — they tried, it broke",
+              "weightPct": 100,
+              "detail": "2 dead links they still publish — they tried, it broke — 12 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "selfreport",
+              "label": "Self-reported strain",
+              "engine": "llm",
+              "value": "we couldn't read their captions",
+              "weightPct": 0,
+              "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "cadence",
+              "label": "Cadence decay",
+              "engine": "rule",
+              "value": "−18% vs baseline",
+              "weightPct": 0,
+              "detail": "2.3 videos a month now, against 2.8 before that — down 18% — 0 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "unanswered",
+              "label": "Unanswered audience",
+              "engine": "rule",
+              "value": "not readable on this look",
+              "weightPct": 0,
+              "detail": "needs a second look — this is a change over time, and we have seen them once"
+            }
+          ]
+        },
+        "fit": {
+          "verdict": "pass",
+          "engine": "llm",
+          "subsignals": [
+            {
+              "key": "brief",
+              "label": "Against the brief",
+              "engine": "llm",
+              "value": "pass",
+              "detail": "He's an automotive engineer who does hands-on engine swaps and builds on camera in a consistent explainer format, which fits the DIY repair and restoration brief, though the recent-post evidence is thin and doesn't directly confirm he names specific parts and products every video."
+            }
+          ]
+        }
+      },
+      "inventory": [
+        {
+          "item": "YouTube channel",
+          "state": "present",
+          "surfacesChecked": 15,
+          "note": "found it — youtube.com/@superfastmatt",
+          "observedAt": "2026-08-14",
+          "source": "youtube_channel"
+        },
+        {
+          "item": "Newsletter",
+          "state": "verified_absent",
+          "surfacesChecked": 96,
+          "note": "not there · we looked in 6 places",
+          "observedAt": "2026-08-14",
+          "source": "newsletter"
+        },
+        {
+          "item": "Store",
+          "state": "present",
+          "surfacesChecked": 42,
+          "note": "something at superfastmatt.myshopify.com — not confirmed as theirs",
+          "observedAt": "2026-08-14",
+          "source": "store"
+        },
+        {
+          "item": "Membership",
+          "state": "present",
+          "surfacesChecked": 17,
+          "note": "something at patreon.com/superfastmatt — not confirmed as theirs",
+          "observedAt": "2026-08-14",
+          "source": "membership"
+        },
+        {
+          "item": "Podcast",
+          "state": "verified_absent",
+          "surfacesChecked": 25,
+          "note": "not there · we looked in 2 places",
+          "observedAt": "2026-08-14",
+          "source": "podcast"
+        },
+        {
+          "item": "Website",
+          "state": "present",
+          "surfacesChecked": 44,
+          "note": "found it — tiktok.com/@superfastmatt",
+          "observedAt": "2026-08-14",
+          "source": "website"
+        },
+        {
+          "item": "Representation",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "their bio does not mention it, which is not the same as nobody having signed them",
+          "observedAt": "2026-08-14",
+          "source": "representation"
+        },
+        {
+          "item": "Sponsored posts",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "observedAt": "2026-08-14",
+          "source": "sponsorships"
+        },
+        {
+          "item": "Affiliate links",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "observedAt": "2026-08-14",
+          "source": "affiliate_links"
+        },
+        {
+          "item": "Platform subscriptions",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+          "observedAt": "2026-08-14",
+          "source": "platform_subscriptions"
+        },
+        {
+          "item": "Shopping tags",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+          "observedAt": "2026-08-14",
+          "source": "shopping_tags"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "comment",
+          "quote": "I want one. License plate: \"D2\"",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "I've got my fingers crossed that Slate makes it. I love small trucks.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "I'm yearning for an R3X.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "If I can afford the R3 I'll defo get one",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "im for slate bigtime, ill get one once they become a readily available, if they do so.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "still bigger than i'd buy since i don't need a big car, but if the r3 is as small as promised, i might be convinced to get one",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "I have my eye on an R2, once it level 3 self-drives.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "I'll probably buy a nice used R1T when they get a little more common.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "I really like rivians. I would like to buy one in the future so I hope they can stick around.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "store"
+        },
+        {
+          "kind": "comment",
+          "quote": "I really really want Aptera to succeed. I can't put my finger on why, but there's just something about them. I guess the design just makes a lot of sense for most people the majority of the time.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "I hope aptera makes it. Not just because i threw 3 grand at it, but because it's the only vehicle out there that's not a non-aero brick for some reason, can get 1000 miles to a charge and can sit out for 6 months without the battery dying. I want it.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "I want Aptera to make it",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "Rivian is the only EV company I am fully hoping to buy into. They just seem so passionate about making a *good product* that *happens* to be an EV, rather than just trying to meet a quota and/or jump ship as soon as they are allowed (Honda >.>). I get to test the R2 tomorrow. I hope it goes well. Th",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "I own a Rivian 2nd Gen R1T. I watched the videos and followed the growing pains through the 1st Gen product line before making my decision to purchase, and I am glad I did.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "I hope Slate makes it. The market needs a basic, economy EV to counter all the luxury laptops with wheels.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "I think Aptera's going to make it, but initially be niche, which was the original intention anyways. Go Aptera!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "I bought a used r1t launch edition over a year ago, and live where it's bitter cold about 19 months a year with a 6 minute 110° summer. I've asked myself if I'd ever get another gas cage, and I got sad thinking about the prospect.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "Rivian is the only EV company I am fully hoping to buy into. They just seem so passionate about making a *good product* that *happens* to be an EV, rather than just trying to meet a quota and/or jump ship as soon as they are allowed (Honda >.>). I get to test the R2 tomorrow. I hope it goes well.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "I too have a deposit on an R2, although it was more of a statement. I'll probably buy a nice used R1T when they get a little more common.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "store"
+        },
+        {
+          "kind": "comment",
+          "quote": "I really hope they do make it and can expand into Europe as well, I wouldn't mind a Tesla alternative tha",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "The R3 looks so sick, if it has decent self driving, the wife and I will be getting that.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "I unironically like the look of Rivian's cars. I just found out about the R3, and even that looks really cool in my opinion. Some sort of cross between a futuristic Jeep and an old Russian Lada. I really hope they do make it and can expand into Europe as well, I wouldn't mind a Tesla alternative tha",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "14:56 you said keychain and I immediately looked for a purchase link. You sold out so fast last time, like super fast! 😅",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "store"
+        },
+        {
+          "kind": "comment",
+          "quote": "Great investment on the key chains, I will be buying one once they have outlived their usefulness and you need them to be converted back to cold hard cash. Congrats on your run, thats amazing. You definitely are living up to your name.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "store"
+        },
+        {
+          "kind": "comment",
+          "quote": "Dang it! I wanted the blue key chain to pair with my red one.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "store"
+        },
+        {
+          "kind": "comment",
+          "quote": "Great investment on the key chains, I will be buying one once they have outlived their usefulness and you need them to be converted back to cold hard cash.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "store"
+        },
+        {
+          "kind": "signal",
+          "quote": "https://www.youtube.com/@SuperfastMatt",
+          "platform": "link they publish",
+          "url": "https://www.youtube.com/@SuperfastMatt",
+          "observedAt": "2026-08-12",
+          "engine": "rule",
+          "label": "abandonment"
+        },
+        {
+          "kind": "signal",
+          "quote": "https://www.youtube.com/@SuperfastMatt",
+          "platform": "link they publish",
+          "url": "https://www.youtube.com/@SuperfastMatt",
+          "observedAt": "2026-08-12",
+          "engine": "rule",
+          "label": "abandonment"
+        }
+      ],
+      "status": "in_drop",
+      "resurfaced": null,
+      "passed": null,
+      "promoted": null,
+      "outcome": null,
+      "asOf": "2026-08-14",
+      "alert": null,
+      "samples": [
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "Speed Week Was A Mixed Bag",
+          "url": "https://www.youtube.com/watch?v=0gUvDfgn5I0",
+          "at": "2026-08-11T15:17:43Z",
+          "thumbnail": "https://i.ytimg.com/vi/0gUvDfgn5I0/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 421558,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:21:48.393Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "Rivian Is Gonna Be Alright",
+          "url": "https://www.youtube.com/watch?v=JEmjg1q19GI",
+          "at": "2026-07-26T14:57:04Z",
+          "thumbnail": "https://i.ytimg.com/vi/JEmjg1q19GI/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 261335,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:21:48.393Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "The World's Best Driving Road Is Kinda Terrible",
+          "url": "https://www.youtube.com/watch?v=o0mNM0LIFY4",
+          "at": "2026-07-11T14:19:32Z",
+          "thumbnail": "https://i.ytimg.com/vi/o0mNM0LIFY4/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 454787,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:21:48.393Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "3D Print A Whole Race Car Body. Or Just Watch Me Do It. Whatever.",
+          "url": "https://www.youtube.com/watch?v=nt85nTMnY1w",
+          "at": "2026-06-20T23:53:10Z",
+          "thumbnail": "https://i.ytimg.com/vi/nt85nTMnY1w/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 415052,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:21:48.393Z",
+          "status": null
+        }
+      ],
+      "samplesSearched": {
+        "count": 0,
+        "why": "they link none of their own posts anywhere we can read"
+      },
+      "headline": "superfastmatt makes car build and engineering videos for 666,000 on YouTube, with recent uploads landing between 256,172 and 449,495 views, and he already sells through a store, a membership, and his own website, but he has no newsletter or podcast and his posting has slowed to 2.3 videos a month from 2.8.",
+      "headlineRestsOn": "666,000 on YouTube · \"Rivian Is Gonna Be Alright\" (256,172 views) · \"The World's Best Driving Road Is Kinda Terrible\" (449,495 views) · Store · Membership · Own website · Newsletter · Podcast · 2.3 videos a month now, against 2.8 before that",
+      "accent": "#6E6E6E",
+      "play": {
+        "id": null,
+        "label": "No play recommended",
+        "why": "The play catalog (§5.5) is a product decision the engine does not make.",
+        "generated": true
+      },
+      "outreach": {
+        "subject": null,
+        "opener": null,
+        "bullets": [],
+        "close": null,
+        "generated": true,
+        "why": "Generated on Promote (§6.5). Nothing generates it yet."
+      },
+      "generatedFields": [
+        "accent",
+        "play",
+        "outreach"
+      ],
+      "source": "named",
+      "sourceWhy": null
+    },
+    {
       "id": "c_worth_call_they_make_2__brandonfwalker",
       "name": "brandonfwalker",
       "handle": "@brandonfwalker",
@@ -8492,12 +7106,12 @@
       "audience": {
         "total": 277000
       },
-      "score": 24,
+      "score": 23,
       "scoreDelta": null,
       "confidence": 0.833,
       "pillars": {
         "gap": {
-          "score": 24,
+          "score": 23,
           "max": 60,
           "engine": "rule+llm",
           "coverage": 0.833,
@@ -8514,9 +7128,9 @@
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "4 purchase-intent comments",
+              "value": "3 purchase-intent comments",
               "weightPct": 1,
-              "detail": "4 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "detail": "3 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -8681,15 +7295,6 @@
           "observedAt": "2026-08-14",
           "engine": "llm",
           "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "First you got me back into soldering over crimping. You may be convincing me more after this video. Love my TS 101 still need a Battery pack just cord for now till I break down and buy a battery pack👊🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
         },
         {
           "kind": "comment",
@@ -13240,16 +11845,16 @@
               "label": "Owned-channel absence",
               "engine": "rule",
               "value": "No store, no podcast",
-              "weightPct": 97,
+              "weightPct": 99,
               "detail": "3 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
             },
             {
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "6 purchase-intent comments",
-              "weightPct": 3,
-              "detail": "6 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "value": "1 purchase-intent comment",
+              "weightPct": 1,
+              "detail": "1 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -13397,51 +12002,6 @@
         }
       ],
       "evidence": [
-        {
-          "kind": "comment",
-          "quote": "Do you still sell the M56 valve cover? If so, what is your ebay username? I'd like to buy from you if still possible. Thanks!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you still sell the M56 valve cover? If so, what is your ebay username? I'd like to buy from you if still possible. Thanks!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you still sell the M56 valve cover? If so, what is your ebay username? I'd like to buy from you if still possible. Thanks!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you still sell the M56 valve cover? If so, what is your ebay username? I'd like to buy from you if still possible. Thanks!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you still sell the M56 valve cover? If so, what is your ebay username? I'd like to buy from you if still possible. Thanks!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
         {
           "kind": "comment",
           "quote": "Do you still sell the M56 valve cover? If so, what is your ebay username? I'd like to buy from you if still possible. Thanks!",
@@ -22736,9 +21296,9 @@
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "2 purchase-intent comments",
+              "value": "1 purchase-intent comment",
               "weightPct": 100,
-              "detail": "2 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "detail": "1 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -22886,15 +21446,6 @@
         }
       ],
       "evidence": [
-        {
-          "kind": "comment",
-          "quote": "Want to join this channel?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "membership"
-        },
         {
           "kind": "comment",
           "quote": "Want to join this channel?",
@@ -23059,12 +21610,12 @@
       "audience": {
         "total": 2470000
       },
-      "score": 43,
+      "score": 29,
       "scoreDelta": null,
       "confidence": 1,
       "pillars": {
         "gap": {
-          "score": 43,
+          "score": 29,
           "max": 60,
           "engine": "rule+llm",
           "coverage": 1,
@@ -23074,16 +21625,16 @@
               "label": "Owned-channel absence",
               "engine": "rule",
               "value": "No store, no newsletter, no membership",
-              "weightPct": 62,
+              "weightPct": 92,
               "detail": "6 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
             },
             {
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "546 purchase-intent comments",
-              "weightPct": 38,
-              "detail": "546 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "value": "32 purchase-intent comments",
+              "weightPct": 8,
+              "detail": "32 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -23238,7 +21789,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "store"
+          "label": "unspecified"
         },
         {
           "kind": "comment",
@@ -23247,7 +21798,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "store"
+          "label": "unspecified"
         },
         {
           "kind": "comment",
@@ -23256,7 +21807,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "store"
+          "label": "unspecified"
         },
         {
           "kind": "comment",
@@ -23265,7 +21816,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "store"
+          "label": "unspecified"
         },
         {
           "kind": "comment",
@@ -23283,7 +21834,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "store"
+          "label": "unspecified"
         },
         {
           "kind": "comment",
@@ -23310,7 +21861,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "store"
+          "label": "unspecified"
         },
         {
           "kind": "comment",
@@ -23319,7 +21870,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "store"
+          "label": "unspecified"
         },
         {
           "kind": "comment",
@@ -23328,7 +21879,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "store"
+          "label": "unspecified"
         },
         {
           "kind": "comment",
@@ -23337,29 +21888,11 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "store"
+          "label": "unspecified"
         },
         {
           "kind": "comment",
           "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -23374,78 +21907,6 @@
           "observedAt": "2026-08-14",
           "engine": "llm",
           "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
         },
         {
           "kind": "comment",
@@ -23512,24 +21973,6 @@
         },
         {
           "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
           "quote": "Will definitely be trying this recipe though!",
           "platform": "YouTube",
           "url": null,
@@ -23539,241 +21982,7 @@
         },
         {
           "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm gonna do it because I can! And because it tastes amazing!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Wow, Chef, that's one I have to make. Your Mom was a genius to figure out that ratatouille in a shepherd's {cottage) pie. Like you, my recipe is from my Mother -- but the filling is quite different. I love my family's version but I'm going to do this one because it just sounds so delicious!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -23791,97 +22000,7 @@
         },
         {
           "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
           "quote": "Another awesome dish! I cant wait to make it!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -23899,1884 +22018,12 @@
         },
         {
           "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "J'essaierai ce week-end. Ravi de vous revoir.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "J'essaierai ce week-end. Ravi de vous revoir.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Will definitely try this!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Wow, Chef, that's one I have to make. Your Mom was a genius to figure out that ratatouille in a shepherd's {cottage) pie. Like you, my recipe is from my Mother -- but the filling is quite different. I love my family's version but I'm going to do this one because it just sounds so delicious!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
           "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "J'essaierai ce week-end. Ravi de vous revoir.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm gonna do it because I can! And because it tastes amazing!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Wow, Chef, that's one I have to make. Your Mom was a genius to figure out that ratatouille in a shepherd's {cottage) pie. Like you, my recipe is from my Mother -- but the filling is quite different. I love my family's version but I'm going to do this one because it just sounds so delicious!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love scallopini and make it often and I just got two new tips to make it even better! thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "J'essaierai ce week-end. Ravi de vous revoir.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely be trying this recipe though!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "J'essaierai ce week-end. Ravi de vous revoir.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "J'essaierai ce week-end. Ravi de vous revoir.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
         },
         {
           "kind": "comment",
@@ -25790,1284 +22037,6 @@
         {
           "kind": "comment",
           "quote": "This will be for dinner, this Saturday!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely be trying this recipe though!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love scallopini and make it often and I just got two new tips to make it even better! thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Wow, Chef, that's one I have to make. Your Mom was a genius to figure out that ratatouille in a shepherd's {cottage) pie. Like you, my recipe is from my Mother -- but the filling is quite different. I love my family's version but I'm going to do this one because it just sounds so delicious!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Wow, Chef, that's one I have to make. Your Mom was a genius to figure out that ratatouille in a shepherd's {cottage) pie. Like you, my recipe is from my Mother -- but the filling is quite different. I love my family's version but I'm going to do this one because it just sounds so delicious!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm gonna do it because I can! And because it tastes amazing!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Wow, Chef, that's one I have to make. Your Mom was a genius to figure out that ratatouille in a shepherd's {cottage) pie. Like you, my recipe is from my Mother -- but the filling is quite different. I love my family's version but I'm going to do this one because it just sounds so delicious!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely be trying this recipe though!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Another awesome dish! I cant wait to make it!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -27094,1056 +22063,12 @@
         },
         {
           "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm gonna do it because I can! And because it tastes amazing!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Wow, Chef, that's one I have to make. Your Mom was a genius to figure out that ratatouille in a shepherd's {cottage) pie. Like you, my recipe is from my Mother -- but the filling is quite different. I love my family's version but I'm going to do this one because it just sounds so delicious!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm gonna do it because I can! And because it tastes amazing!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "I might make this tonight!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
           "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Oh I am making this tonight!!!! So happy Chef and Jack are back!!!! Thank you 🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "im s0o happy ur back. im sure chef knows but make sure you tell him he makes so many lives brighter. havent had a pork chop in a long time. i usually do pork chops with cream of mushroom for a sauce.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Was about to go to the grocery store for, you guessed it pork chops, this stopped me in my tracks😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I was going to buy pork chops last night when I was at the grocery store. I will tonight.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I will definitely be making this recipe for my family. Thank you Chef. ♥️🙏",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just got back from the store where I bought a package of pork loin chops for $5. I was planning to make pork in a coconut curry sauce, but now it is going to Pork Scallopini Milanese.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "This will be for dinner, this Saturday!! (So happy you returned!🙂)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Seeing you enjoying the chop sent me to the store I need that smile on my face as well",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yum, I might make this tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "im s0o happy ur back. im sure chef knows but make sure you tell him he makes so many lives brighter. havent had a pork chop in a long time. i usually do pork chops with cream of mushroom for a sauce.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love scallopini and make it often and I just got two new tips to make it even better! thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Dinner tonight",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "J'essaierai ce week-end. Ravi de vous revoir.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I know what I'm having tonight!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love chicken Milanese, but now I'm going to make the pork Milenese because it looks so good, Chef. 🙂👍🏻",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I had pork loin in my fridge to cook tomorrow. Perfect timing on the recipe. Thanks Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Made stuffed zucchini yesterday & took your advice - made extra sauce. It will work well as a base for this shepherds pie. Just need mashed potatoes. Alright!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I made Chef's cottage pie and it was insane. Will try this as well. Looks fantastic. Thank you Chef!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "The timing!!! I was planning on making some version of a Sheppard's Pie tonight for dinner as I need to use up the potatoes and ground beef I have before they go bad. This is so much better than the recipe I found online. My pregnant wife is going to be so happy. Thanks Chef.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "can't wait to make! Thanks for coming back to cook for us. We missed you! Now my mouth is watering!😋",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Will definitely try this! you AI the cover image? YOU DON'T NEED TO!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
         }
       ],
       "status": "in_drop",
@@ -28247,7622 +22172,6 @@
       ],
       "source": "proposed",
       "sourceWhy": "a model proposed this handle from a brief — Veteran French chef teaching one classic dish per video in a fixed, repeatable studio-kitchen setup.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
-    },
-    {
-      "id": "c_home_cooking_recipe_creators__joshuaweissman",
-      "name": "joshuaweissman",
-      "handle": "@joshuaweissman",
-      "initials": "JO",
-      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nfXRvoxu5cFt2H4WhJfFLbL5SVdzmvEnFymnPzH3_1qPM=s900-c0x00ffffff-no-rj",
-      "mandateId": "m_home_cooking_recipe_creators",
-      "primaryPlatform": "YouTube channel",
-      "platforms": [
-        {
-          "name": "YouTube channel",
-          "handle": "@joshuaweissman",
-          "followers": 10700000,
-          "url": "https://www.youtube.com/@joshuaweissman",
-          "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nfXRvoxu5cFt2H4WhJfFLbL5SVdzmvEnFymnPzH3_1qPM=s900-c0x00ffffff-no-rj",
-          "avatarExpires": null,
-          "avatarStale": false,
-          "matchConfidence": 1
-        }
-      ],
-      "places": [
-        {
-          "name": "YouTube channel",
-          "url": "https://www.youtube.com/@joshuaweissman",
-          "host": "youtube.com",
-          "followers": 10700000
-        },
-        {
-          "name": "Newsletter",
-          "url": "https://joshuaweissman.substack.com/",
-          "host": "joshuaweissman.substack.com",
-          "followers": null
-        }
-      ],
-      "audience": {
-        "total": 10700000
-      },
-      "score": 30,
-      "scoreDelta": null,
-      "confidence": 0.833,
-      "pillars": {
-        "gap": {
-          "score": 30,
-          "max": 60,
-          "engine": "rule+llm",
-          "coverage": 0.833,
-          "subsignals": [
-            {
-              "key": "owned",
-              "label": "Owned-channel absence",
-              "engine": "rule",
-              "value": "No store, no own website, no podcast",
-              "weightPct": 45,
-              "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
-            },
-            {
-              "key": "demand",
-              "label": "Unmet demand",
-              "engine": "llm+rule",
-              "value": "569 purchase-intent comments",
-              "weightPct": 55,
-              "detail": "569 lines classified as intent to buy or subscribe, in text the engine fetched first."
-            }
-          ]
-        },
-        "strain": {
-          "score": 0,
-          "max": 40,
-          "engine": "rule+llm",
-          "subsignals": [
-            {
-              "key": "abandon",
-              "label": "Abandonment markers",
-              "engine": "rule",
-              "value": "nothing abandoned that we can see",
-              "weightPct": 0,
-              "detail": "nothing abandoned that we can see — 0 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "selfreport",
-              "label": "Self-reported strain",
-              "engine": "llm",
-              "value": "we couldn't read their captions",
-              "weightPct": 0,
-              "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "cadence",
-              "label": "Cadence decay",
-              "engine": "rule",
-              "value": "+2% vs baseline",
-              "weightPct": 0,
-              "detail": "5.7 videos a month, steady against 5.6 before that; the recent ones are getting 15% fewer views — 0 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "unanswered",
-              "label": "Unanswered audience",
-              "engine": "rule",
-              "value": "not readable on this look",
-              "weightPct": 0,
-              "detail": "needs a second look — this is a change over time, and we have seen them once"
-            }
-          ]
-        },
-        "fit": {
-          "verdict": "pass",
-          "engine": "llm",
-          "subsignals": [
-            {
-              "key": "brief",
-              "label": "Against the brief",
-              "engine": "llm",
-              "value": "pass",
-              "detail": "Joshua Weissman is a well-known food and cooking creator whose channel is built on cooking dishes start to finish in recognizable repeatable formats, aimed at a mainly US audience, so he fits the brief even though the scraped post titles here are uninformative."
-            }
-          ]
-        }
-      },
-      "inventory": [
-        {
-          "item": "YouTube channel",
-          "state": "present",
-          "surfacesChecked": 128,
-          "note": "found it — youtube.com/@joshuaweissman",
-          "observedAt": "2026-08-14",
-          "source": "youtube_channel"
-        },
-        {
-          "item": "Newsletter",
-          "state": "present",
-          "surfacesChecked": 520,
-          "note": "found it — joshuaweissman.substack.com",
-          "observedAt": "2026-08-14",
-          "source": "newsletter"
-        },
-        {
-          "item": "Store",
-          "state": "verified_absent",
-          "surfacesChecked": 594,
-          "note": "not there · we looked in 5 places · 2 wouldn't answer",
-          "observedAt": "2026-08-14",
-          "source": "store"
-        },
-        {
-          "item": "Membership",
-          "state": "present",
-          "surfacesChecked": 366,
-          "note": "something at patreon.com/profile/creators — not confirmed as theirs",
-          "observedAt": "2026-08-14",
-          "source": "membership"
-        },
-        {
-          "item": "Podcast",
-          "state": "verified_absent",
-          "surfacesChecked": 273,
-          "note": "not there · we looked in 3 places",
-          "observedAt": "2026-08-14",
-          "source": "podcast"
-        },
-        {
-          "item": "Website",
-          "state": "verified_absent",
-          "surfacesChecked": 136,
-          "note": "not there · we looked in 2 places",
-          "observedAt": "2026-08-14",
-          "source": "website"
-        },
-        {
-          "item": "Representation",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "their bio does not mention it, which is not the same as nobody having signed them",
-          "observedAt": "2026-08-14",
-          "source": "representation"
-        },
-        {
-          "item": "Sponsored posts",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
-          "observedAt": "2026-08-14",
-          "source": "sponsorships"
-        },
-        {
-          "item": "Affiliate links",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
-          "observedAt": "2026-08-14",
-          "source": "affiliate_links"
-        },
-        {
-          "item": "Platform subscriptions",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-          "observedAt": "2026-08-14",
-          "source": "platform_subscriptions"
-        },
-        {
-          "item": "Shopping tags",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-          "observedAt": "2026-08-14",
-          "source": "shopping_tags"
-        }
-      ],
-      "evidence": [
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Collab with Andy, please",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "This is a required new series 😭😭😭❤️",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "This is a required new series 😭😭😭❤️",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "This is a required new series 😭😭😭❤️",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "This is a required new series 😭😭😭❤️",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "we need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I kinda want a full lenght video with Josh's take on baby food",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We want more of these",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I kinda want a full lenght video with Josh's take on baby food",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We want MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "This is a required new series 😭😭😭❤️",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm looking forward to the next set of meals you make. I also have a ban at home who would probably love this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We want more of these",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We want more of these",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I kinda want a full lenght video with Josh's take on baby food",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "This is a required new series 😭😭😭❤️",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Banana bread looks Dope Andy is real goat man I have basic rice cooker with just on switch cook and heat Can any one guide me how to try banana bread with basic rice cooker ??",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you need a fancy rice cooker to accomplish all this? Ours just has an on or warm switch and I'm wondering what else I can realistically make in it",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I kinda want a full lenght video with Josh's take on baby food",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I need the recipe on how you made the baby",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I kinda want a full lenght video with Josh's take on baby food",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm looking forward to the next set of meals you make. I also have a ban at home who would probably love this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I kinda want a full lenght video with Josh's take on baby food",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Collab with Andy, please",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm looking forward to the next set of meals you make. I also have a ban at home who would probably love this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "This is a required new series 😭😭😭❤️",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm looking forward to the next set of meals you make. I also have a ban at home who would probably love this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I kinda want a full lenght video with Josh's take on baby food",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I kinda want a full lenght video with Josh's take on baby food",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I kinda want a full lenght video with Josh's take on baby food",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm looking forward to the next set of meals you make. I also have a ban at home who would probably love this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your next visit is on me.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I kinda want a full lenght video with Josh's take on baby food",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I kinda want a full lenght video with Josh's take on baby food",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Collab with Andy, please",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We want more of these",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm looking forward to the next set of meals you make. I also have a ban at home who would probably love this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I need the recipe on how you made the baby",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "This is a required new series 😭😭😭❤️",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm looking forward to the next set of meals you make. I also have a ban at home who would probably love this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your next visit is on me.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thank you Josh - you taught me how to cook, and South Park taught me Casa Bonita exists. Take me there!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your best so far. Baby recipe stuff! We want em!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More episodes of this please 😁",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More rice cooker recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We need a series \"Joshua cooks for baby\"",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Josh can we please get more of this series!!!❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "That was hilarious. WE WANT MORE OF THESE",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "can we get the 'but better' series back pls",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "But better and but cheaper please",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        }
-      ],
-      "status": "in_drop",
-      "resurfaced": null,
-      "passed": null,
-      "promoted": null,
-      "outcome": null,
-      "asOf": "2026-08-14",
-      "alert": null,
-      "samples": [
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "Top 3 Brownie Hacks",
-          "url": "https://www.youtube.com/watch?v=iLe2PLFdIgY",
-          "at": "2026-08-11T15:30:29Z",
-          "thumbnail": "https://i.ytimg.com/vi/iLe2PLFdIgY/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 850794,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:04:27.739Z",
-          "status": null
-        },
-        {
-          "platform": "Newsletter",
-          "publication": "JoshuaWeissman",
-          "kind": "writing",
-          "title": "looking great for great people",
-          "url": "https://joshuaweissman.substack.com/p/looking-great-for-great-people",
-          "at": "2025-11-14T08:31:25.000Z",
-          "thumbnail": null,
-          "excerpt": null,
-          "metric": null,
-          "metricUnit": null,
-          "metricWhy": "a feed carries no read or listen count",
-          "foundIn": "their newsletter",
-          "seenAt": "2026-08-14T13:04:36.011Z",
-          "status": null
-        },
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "I Investigated The “Illegal” Food of Facebook Marketplace",
-          "url": "https://www.youtube.com/watch?v=HkDSTzzogLk",
-          "at": "2026-08-09T14:30:28Z",
-          "thumbnail": "https://i.ytimg.com/vi/HkDSTzzogLk/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 1848799,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:04:27.739Z",
-          "status": null
-        },
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "Testing Rice Cooker Hacks",
-          "url": "https://www.youtube.com/watch?v=z_GQgp1EGpc",
-          "at": "2026-08-05T15:00:33Z",
-          "thumbnail": "https://i.ytimg.com/vi/z_GQgp1EGpc/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 1068282,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:04:27.739Z",
-          "status": null
-        }
-      ],
-      "samplesSearched": {
-        "count": 1,
-        "why": "1 piece of their own work"
-      },
-      "headline": "Joshua Weissman cooks for 10,700,000 YouTube subscribers at 5.7 videos a month, with recent uploads landing between 692,903 and 2,157,280 views, and he already runs a newsletter and a membership but has no store, no podcast, and no site of his own.",
-      "headlineRestsOn": "10,700,000 on YouTube · YouTube channel · Newsletter · Membership · Store · Podcast · Own website · 5.7 videos a month · \"Top 3 Brownie Hacks\" (692,903 views) · \"I Cook For a Baby\" (2,157,280 views)",
-      "accent": "#6E6E6E",
-      "play": {
-        "id": null,
-        "label": "No play recommended",
-        "why": "The play catalog (§5.5) is a product decision the engine does not make.",
-        "generated": true
-      },
-      "outreach": {
-        "subject": null,
-        "opener": null,
-        "bullets": [],
-        "close": null,
-        "generated": true,
-        "why": "Generated on Promote (§6.5). Nothing generates it yet."
-      },
-      "generatedFields": [
-        "accent",
-        "play",
-        "outreach"
-      ],
-      "source": "proposed",
-      "sourceWhy": "a model proposed this handle from a brief — Trained cook turned video creator known for making one dish per episode from scratch, widely covered in food media.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
-    },
-    {
-      "id": "c_home_cooking_recipe_creators__doobydobap",
-      "name": "doobydobap",
-      "handle": "@doobydobap",
-      "initials": "DO",
-      "avatar": "https://yt3.googleusercontent.com/fjXGOTy4Vv5bH96Nn8LKhpKrQ5jGU465XzIClNi6_tfcAsN4uePvphpIRJZDr5yzVdXt9kr2Hw=s900-c0x00ffffff-no-rj",
-      "mandateId": "m_home_cooking_recipe_creators",
-      "primaryPlatform": "TikTok profile",
-      "platforms": [
-        {
-          "name": "TikTok profile",
-          "handle": "@doobydobap",
-          "followers": 3200000,
-          "url": "https://www.tiktok.com/@doobydobap",
-          "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/f817f2c7c73f630c4bc0788597c5d1ae~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=4015e1d3&x-expires=1786885200&x-signature=dkpbmirmgS5eEwXWOHqh%2BKCDXSs%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
-          "avatarExpires": "2026-08-16T13:00:00.000Z",
-          "avatarStale": false,
-          "separate": true,
-          "why": "nothing on either page links the TikTok to the YouTube, so it is not added in"
-        },
-        {
-          "name": "YouTube channel",
-          "handle": "@doobydobap",
-          "followers": 4480000,
-          "url": "https://www.youtube.com/@doobydobap",
-          "avatar": "https://yt3.googleusercontent.com/fjXGOTy4Vv5bH96Nn8LKhpKrQ5jGU465XzIClNi6_tfcAsN4uePvphpIRJZDr5yzVdXt9kr2Hw=s900-c0x00ffffff-no-rj",
-          "avatarExpires": null,
-          "avatarStale": false,
-          "matchConfidence": 1
-        }
-      ],
-      "places": [
-        {
-          "name": "TikTok profile",
-          "url": "https://www.tiktok.com/@doobydobap",
-          "host": "tiktok.com",
-          "followers": 3200000
-        },
-        {
-          "name": "YouTube channel",
-          "url": "https://www.youtube.com/@doobydobap",
-          "host": "youtube.com",
-          "followers": 4480000
-        },
-        {
-          "name": "Website",
-          "url": "https://doobydobap.com/",
-          "host": "doobydobap.com",
-          "followers": null
-        }
-      ],
-      "audience": {
-        "total": 4480000
-      },
-      "score": 29,
-      "scoreDelta": null,
-      "confidence": 0.833,
-      "pillars": {
-        "gap": {
-          "score": 23,
-          "max": 60,
-          "engine": "rule+llm",
-          "coverage": 0.833,
-          "subsignals": [
-            {
-              "key": "owned",
-              "label": "Owned-channel absence",
-              "engine": "rule",
-              "value": "No store, no membership, no podcast",
-              "weightPct": 55,
-              "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
-            },
-            {
-              "key": "demand",
-              "label": "Unmet demand",
-              "engine": "llm+rule",
-              "value": "206 purchase-intent comments",
-              "weightPct": 45,
-              "detail": "206 lines classified as intent to buy or subscribe, in text the engine fetched first."
-            }
-          ]
-        },
-        "strain": {
-          "score": 6,
-          "max": 40,
-          "engine": "rule+llm",
-          "subsignals": [
-            {
-              "key": "abandon",
-              "label": "Abandonment markers",
-              "engine": "rule",
-              "value": "nothing abandoned that we can see",
-              "weightPct": 0,
-              "detail": "nothing abandoned that we can see — 0 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "selfreport",
-              "label": "Self-reported strain",
-              "engine": "llm",
-              "value": "we couldn't read their captions",
-              "weightPct": 0,
-              "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "cadence",
-              "label": "Cadence decay",
-              "engine": "rule",
-              "value": "−55% vs baseline",
-              "weightPct": 100,
-              "detail": "2.3 videos a month now, against 5.1 before that — down 54%; the recent ones are getting 49% fewer views — 6.4 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "unanswered",
-              "label": "Unanswered audience",
-              "engine": "rule",
-              "value": "not readable on this look",
-              "weightPct": 0,
-              "detail": "needs a second look — this is a change over time, and we have seen them once"
-            }
-          ]
-        },
-        "fit": {
-          "verdict": "pass",
-          "engine": "llm",
-          "subsignals": [
-            {
-              "key": "brief",
-              "label": "Against the brief",
-              "engine": "llm",
-              "value": "pass",
-              "detail": "Dooby Dobap is a large food creator whose whole channel is cooking dishes on camera with recipes, aimed at a mostly US audience, so she fits the brief even though the scraped post text doesn't show the specific one-dish format."
-            }
-          ]
-        }
-      },
-      "inventory": [
-        {
-          "item": "YouTube channel",
-          "state": "present",
-          "surfacesChecked": 32,
-          "note": "found it — youtube.com/@doobydobap",
-          "observedAt": "2026-08-14",
-          "source": "youtube_channel"
-        },
-        {
-          "item": "Newsletter",
-          "state": "present",
-          "surfacesChecked": 122,
-          "note": "something at substack.com/@doobydobap — not confirmed as theirs",
-          "observedAt": "2026-08-14",
-          "source": "newsletter"
-        },
-        {
-          "item": "Store",
-          "state": "verified_absent",
-          "surfacesChecked": 143,
-          "note": "not there · we looked in 5 places · 2 wouldn't answer",
-          "observedAt": "2026-08-14",
-          "source": "store"
-        },
-        {
-          "item": "Membership",
-          "state": "verified_absent",
-          "surfacesChecked": 100,
-          "note": "not there · we looked in 4 places",
-          "observedAt": "2026-08-14",
-          "source": "membership"
-        },
-        {
-          "item": "Podcast",
-          "state": "verified_absent",
-          "surfacesChecked": 56,
-          "note": "not there · we looked in 2 places",
-          "observedAt": "2026-08-14",
-          "source": "podcast"
-        },
-        {
-          "item": "Website",
-          "state": "present",
-          "surfacesChecked": 38,
-          "note": "found it — doobydobap.com",
-          "observedAt": "2026-08-14",
-          "source": "website"
-        },
-        {
-          "item": "Representation",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "their bio does not mention it, which is not the same as nobody having signed them",
-          "observedAt": "2026-08-14",
-          "source": "representation"
-        },
-        {
-          "item": "Sponsored posts",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
-          "observedAt": "2026-08-14",
-          "source": "sponsorships"
-        },
-        {
-          "item": "Affiliate links",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
-          "observedAt": "2026-08-14",
-          "source": "affiliate_links"
-        },
-        {
-          "item": "Platform subscriptions",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-          "observedAt": "2026-08-14",
-          "source": "platform_subscriptions"
-        },
-        {
-          "item": "Shopping tags",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-          "observedAt": "2026-08-14",
-          "source": "shopping_tags"
-        }
-      ],
-      "evidence": [
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls )",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I need the japanese version of this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "these vlogs with a mix of your personal life, commentary and dynamic with Kevin are the absolute best! they remind me of your early vlogs where you found beauty in the simplicity if every day life :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I need the japanese version of this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I loveeee your way of announcing changes in your life. Congratulations, Im happy you found each other. And pleaseeeee more videos like this. Just the two of you cooking amazing dishes! ♥️🙌🏼 blessings guys ✨",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "Can you both do a cookoff video against each other. That would be fun to watch. Oh, and you both are the judges also",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I need the japanese version of this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "these vlogs with a mix of your personal life, commentary and dynamic with Kevin are the absolute best! they remind me of your early vlogs where you found beauty in the simplicity if every day life :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Can you both do a cookoff video against each other. That would be fun to watch. Oh, and you both are the judges also",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love how calming this video is, very well done. Would love to see more of this.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "I need the japanese version of this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love how calming this video is, very well done. Would love to see more of this.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I loveeee your way of announcing changes in your life. Congratulations, Im happy you found each other. And pleaseeeee more videos like this. Just the two of you cooking amazing dishes! ♥️🙌🏼 blessings guys ✨",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love how calming this video is, very well done. Would love to see more of this.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "these vlogs with a mix of your personal life, commentary and dynamic with Kevin are the absolute best! they remind me of your early vlogs where you found beauty in the simplicity if every day life :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I loveeee your way of announcing changes in your life. Congratulations, Im happy you found each other. And pleaseeeee more videos like this. Just the two of you cooking amazing dishes! ♥️🙌🏼 blessings guys ✨",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love how calming this video is, very well done. Would love to see more of this.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I loveeee your way of announcing changes in your life. Congratulations, Im happy you found each other. And pleaseeeee more videos like this. Just the two of you cooking amazing dishes! ♥️🙌🏼 blessings guys ✨",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I loveeee your way of announcing changes in your life. Congratulations, Im happy you found each other. And pleaseeeee more videos like this. Just the two of you cooking amazing dishes! ♥️🙌🏼 blessings guys ✨",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "I need the japanese version of this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love how calming this video is, very well done. Would love to see more of this.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More Kevin please!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "these vlogs with a mix of your personal life, commentary and dynamic with Kevin are the absolute best! they remind me of your early vlogs where you found beauty in the simplicity if every day life :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "I need the japanese version of this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I loveeee your way of announcing changes in your life. Congratulations, Im happy you found each other. And pleaseeeee more videos like this. Just the two of you cooking amazing dishes! ♥️🙌🏼 blessings guys ✨",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "these vlogs with a mix of your personal life, commentary and dynamic with Kevin are the absolute best! they remind me of your early vlogs where you found beauty in the simplicity if every day life :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I loveeee your way of announcing changes in your life. Congratulations, Im happy you found each other. And pleaseeeee more videos like this. Just the two of you cooking amazing dishes! ♥️🙌🏼 blessings guys ✨",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I need the japanese version of this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "please drop the rye bread recipe abeg!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I never went to Relae itself but made a point of going to its sibling Manfreds and Vins over the road on every visit to Copenhagen. What they could do with simple vegetables and textures (and wine!) was incredible. More Kevin please!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I love how calming this video is, very well done. Would love to see more of this.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I need the japanese version of this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I loveeee your way of announcing changes in your life. Congratulations, Im happy you found each other. And pleaseeeee more videos like this. Just the two of you cooking amazing dishes! ♥️🙌🏼 blessings guys ✨",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "Does Kevin have his own channel?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "these vlogs with a mix of your personal life, commentary and dynamic with Kevin are the absolute best! they remind me of your early vlogs where you found beauty in the simplicity if every day life :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "would love to see more of this series 🤩",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls )",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "they need to make more vlog style stuff like this together",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "pleaseeeee more videos like this. Just the two of you cooking amazing dishes! ♥️🙌🏼 blessings guys ✨",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "website"
-        },
-        {
-          "kind": "comment",
-          "quote": "I need the japanese version of this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please, I am begging you make this a series. I could watch this forever!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Petition to have more regular Kevin episodes",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "More of this. So glad to see you both happy.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Love this format ! More of this pleaaase",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        }
-      ],
-      "status": "in_drop",
-      "resurfaced": null,
-      "passed": null,
-      "promoted": null,
-      "outcome": null,
-      "asOf": "2026-08-14",
-      "alert": null,
-      "samples": [
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "What my Ex-Michelin Trained Chef Husband Cooks in a Week",
-          "url": "https://www.youtube.com/watch?v=2t9u1nMZ0-8",
-          "at": "2026-08-03T02:42:42Z",
-          "thumbnail": "https://i.ytimg.com/vi/2t9u1nMZ0-8/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 574166,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:04:44.804Z",
-          "status": null
-        },
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "Danes🇩🇰 vs Koreans🇰🇷",
-          "url": "https://www.youtube.com/watch?v=VbFm7kykuOI",
-          "at": "2026-07-27T23:11:53Z",
-          "thumbnail": "https://i.ytimg.com/vi/VbFm7kykuOI/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 2681044,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:04:44.804Z",
-          "status": null
-        },
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "A Beginner's Guide to Chinese Cooking",
-          "url": "https://www.youtube.com/watch?v=-w5E1DvIhy0",
-          "at": "2026-07-20T22:27:07Z",
-          "thumbnail": "https://i.ytimg.com/vi/-w5E1DvIhy0/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 245937,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:04:44.804Z",
-          "status": null
-        },
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "Alone in New York City!",
-          "url": "https://www.youtube.com/watch?v=rMTG9ZULTJw",
-          "at": "2026-07-02T01:02:17Z",
-          "thumbnail": "https://i.ytimg.com/vi/rMTG9ZULTJw/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 362976,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:04:44.804Z",
-          "status": null
-        }
-      ],
-      "samplesSearched": {
-        "count": 0,
-        "why": "they link none of their own posts anywhere we can read"
-      },
-      "headline": "Doobydobap makes food and travel videos for 3,200,000 followers on TikTok and 4,480,000 on YouTube, sends a newsletter, and runs her own website, but has no store or membership, and she is posting 2.3 videos a month against 5.1 before, with recent videos getting 49% fewer views.",
-      "headlineRestsOn": "3,200,000 on TikTok · 4,480,000 on YouTube · Newsletter · Own website · YouTube channel · Store · Membership · 2.3 videos a month now, against 5.1 before that · the recent ones are getting 49% fewer views · \"What my Ex-Michelin Trained Chef Husband Cooks in a Week\" (558,673 views) · \"A Beginner's Guide to Chinese Cooking\" (241,595 views) · \"I Cycled Across Korea (to Eat)\" (376,264 views) · \"Alone in New York City!\" (360,738 views)",
-      "accent": "#6E6E6E",
-      "play": {
-        "id": null,
-        "label": "No play recommended",
-        "why": "The play catalog (§5.5) is a product decision the engine does not make.",
-        "generated": true
-      },
-      "outreach": {
-        "subject": null,
-        "opener": null,
-        "bullets": [],
-        "close": null,
-        "generated": true,
-        "why": "Generated on Promote (§6.5). Nothing generates it yet."
-      },
-      "generatedFields": [
-        "accent",
-        "play",
-        "outreach"
-      ],
-      "source": "proposed",
-      "sourceWhy": "a model proposed this handle from a brief — Korean-American cook who films one dish start to finish with a narrative style, widely profiled.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
     },
     {
       "id": "c_home_cooking_recipe_creators__cookingwithlynja",
@@ -36794,6 +23103,1070 @@
       "sourceWhy": "a model proposed this handle from a brief — Home recipe developer whose cooking videos follow a consistent one-recipe-per-post structure for US home cooks.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
     },
     {
+      "id": "c_home_cooking_recipe_creators__doobydobap",
+      "name": "doobydobap",
+      "handle": "@doobydobap",
+      "initials": "DO",
+      "avatar": "https://yt3.googleusercontent.com/fjXGOTy4Vv5bH96Nn8LKhpKrQ5jGU465XzIClNi6_tfcAsN4uePvphpIRJZDr5yzVdXt9kr2Hw=s900-c0x00ffffff-no-rj",
+      "mandateId": "m_home_cooking_recipe_creators",
+      "primaryPlatform": "TikTok profile",
+      "platforms": [
+        {
+          "name": "TikTok profile",
+          "handle": "@doobydobap",
+          "followers": 3200000,
+          "url": "https://www.tiktok.com/@doobydobap",
+          "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/f817f2c7c73f630c4bc0788597c5d1ae~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=4015e1d3&x-expires=1786885200&x-signature=dkpbmirmgS5eEwXWOHqh%2BKCDXSs%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+          "avatarExpires": "2026-08-16T13:00:00.000Z",
+          "avatarStale": false,
+          "separate": true,
+          "why": "nothing on either page links the TikTok to the YouTube, so it is not added in"
+        },
+        {
+          "name": "YouTube channel",
+          "handle": "@doobydobap",
+          "followers": 4480000,
+          "url": "https://www.youtube.com/@doobydobap",
+          "avatar": "https://yt3.googleusercontent.com/fjXGOTy4Vv5bH96Nn8LKhpKrQ5jGU465XzIClNi6_tfcAsN4uePvphpIRJZDr5yzVdXt9kr2Hw=s900-c0x00ffffff-no-rj",
+          "avatarExpires": null,
+          "avatarStale": false,
+          "matchConfidence": 1
+        }
+      ],
+      "places": [
+        {
+          "name": "TikTok profile",
+          "url": "https://www.tiktok.com/@doobydobap",
+          "host": "tiktok.com",
+          "followers": 3200000
+        },
+        {
+          "name": "YouTube channel",
+          "url": "https://www.youtube.com/@doobydobap",
+          "host": "youtube.com",
+          "followers": 4480000
+        },
+        {
+          "name": "Website",
+          "url": "https://doobydobap.com/",
+          "host": "doobydobap.com",
+          "followers": null
+        }
+      ],
+      "audience": {
+        "total": 4480000
+      },
+      "score": 21,
+      "scoreDelta": null,
+      "confidence": 0.833,
+      "pillars": {
+        "gap": {
+          "score": 15,
+          "max": 60,
+          "engine": "rule+llm",
+          "coverage": 0.833,
+          "subsignals": [
+            {
+              "key": "owned",
+              "label": "Owned-channel absence",
+              "engine": "rule",
+              "value": "No store, no membership, no podcast",
+              "weightPct": 87,
+              "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
+            },
+            {
+              "key": "demand",
+              "label": "Unmet demand",
+              "engine": "llm+rule",
+              "value": "24 purchase-intent comments",
+              "weightPct": 13,
+              "detail": "24 lines classified as intent to buy or subscribe, in text the engine fetched first."
+            }
+          ]
+        },
+        "strain": {
+          "score": 6,
+          "max": 40,
+          "engine": "rule+llm",
+          "subsignals": [
+            {
+              "key": "abandon",
+              "label": "Abandonment markers",
+              "engine": "rule",
+              "value": "nothing abandoned that we can see",
+              "weightPct": 0,
+              "detail": "nothing abandoned that we can see — 0 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "selfreport",
+              "label": "Self-reported strain",
+              "engine": "llm",
+              "value": "we couldn't read their captions",
+              "weightPct": 0,
+              "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "cadence",
+              "label": "Cadence decay",
+              "engine": "rule",
+              "value": "−55% vs baseline",
+              "weightPct": 100,
+              "detail": "2.3 videos a month now, against 5.1 before that — down 54%; the recent ones are getting 49% fewer views — 6.4 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "unanswered",
+              "label": "Unanswered audience",
+              "engine": "rule",
+              "value": "not readable on this look",
+              "weightPct": 0,
+              "detail": "needs a second look — this is a change over time, and we have seen them once"
+            }
+          ]
+        },
+        "fit": {
+          "verdict": "pass",
+          "engine": "llm",
+          "subsignals": [
+            {
+              "key": "brief",
+              "label": "Against the brief",
+              "engine": "llm",
+              "value": "pass",
+              "detail": "Dooby Dobap is a large food creator whose whole channel is cooking dishes on camera with recipes, aimed at a mostly US audience, so she fits the brief even though the scraped post text doesn't show the specific one-dish format."
+            }
+          ]
+        }
+      },
+      "inventory": [
+        {
+          "item": "YouTube channel",
+          "state": "present",
+          "surfacesChecked": 32,
+          "note": "found it — youtube.com/@doobydobap",
+          "observedAt": "2026-08-14",
+          "source": "youtube_channel"
+        },
+        {
+          "item": "Newsletter",
+          "state": "present",
+          "surfacesChecked": 122,
+          "note": "something at substack.com/@doobydobap — not confirmed as theirs",
+          "observedAt": "2026-08-14",
+          "source": "newsletter"
+        },
+        {
+          "item": "Store",
+          "state": "verified_absent",
+          "surfacesChecked": 143,
+          "note": "not there · we looked in 5 places · 2 wouldn't answer",
+          "observedAt": "2026-08-14",
+          "source": "store"
+        },
+        {
+          "item": "Membership",
+          "state": "verified_absent",
+          "surfacesChecked": 100,
+          "note": "not there · we looked in 4 places",
+          "observedAt": "2026-08-14",
+          "source": "membership"
+        },
+        {
+          "item": "Podcast",
+          "state": "verified_absent",
+          "surfacesChecked": 56,
+          "note": "not there · we looked in 2 places",
+          "observedAt": "2026-08-14",
+          "source": "podcast"
+        },
+        {
+          "item": "Website",
+          "state": "present",
+          "surfacesChecked": 38,
+          "note": "found it — doobydobap.com",
+          "observedAt": "2026-08-14",
+          "source": "website"
+        },
+        {
+          "item": "Representation",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "their bio does not mention it, which is not the same as nobody having signed them",
+          "observedAt": "2026-08-14",
+          "source": "representation"
+        },
+        {
+          "item": "Sponsored posts",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "observedAt": "2026-08-14",
+          "source": "sponsorships"
+        },
+        {
+          "item": "Affiliate links",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "observedAt": "2026-08-14",
+          "source": "affiliate_links"
+        },
+        {
+          "item": "Platform subscriptions",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+          "observedAt": "2026-08-14",
+          "source": "platform_subscriptions"
+        },
+        {
+          "item": "Shopping tags",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+          "observedAt": "2026-08-14",
+          "source": "shopping_tags"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "comment",
+          "quote": "Petition to have more regular Kevin episodes",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Please, I am begging you make this a series. I could watch this forever!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Pls make more video's like this dooby. ( pretty pls )",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Love this format ! More of this pleaaase",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I need the japanese version of this",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "More cooking videos with Kevin, please! And written down recipes cuz I would really love to cook and try all your dishes. Very touching video btw🥹",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Pls make more video's like this dooby. ( pretty pls ) It felt like a warm hug , and Kevin's cooking was so therapeutic to watch ❤",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "they need to make more vlog style stuff like this together so heart-warming hits like the best romance shows and movies",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!! danish rye bread with a thick layer of butte",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Do you have a recipe going up for this? :D curious what is sprinkled on the kimchi too!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "website"
+        },
+        {
+          "kind": "comment",
+          "quote": "these vlogs with a mix of your personal life, commentary and dynamic with Kevin are the absolute best! they remind me of your early vlogs where you found beauty in the simplicity if every day life :)",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I loveeee your way of announcing changes in your life. Congratulations, Im happy you found each other. And pleaseeeee more videos like this. Just the two of you cooking amazing dishes! ♥️🙌🏼 blessings guys ✨",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Can you both do a cookoff video against each other. That would be fun to watch. Oh, and you both are the judges also",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I love how calming this video is, very well done. Would love to see more of this.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "congratulations on your nuptials! your lives are filled with love and daily magic... i cried some happy tears for you. this was one of my favorite videos you've made! would love to see more of this series 🤩 also... please drop the rye bread recipe abeg!!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "More Kevin please!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "please drop the rye bread recipe abeg!!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "website"
+        },
+        {
+          "kind": "comment",
+          "quote": "I never went to Relae itself but made a point of going to its sibling Manfreds and Vins over the road on every visit to Copenhagen. What they could do with simple vegetables and textures (and wine!) was incredible. More Kevin please!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Does Kevin have his own channel?",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "would love to see more of this series 🤩",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "More cooking videos with Kevin, please!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "they need to make more vlog style stuff like this together",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "pleaseeeee more videos like this. Just the two of you cooking amazing dishes! ♥️🙌🏼 blessings guys ✨",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "More of this. So glad to see you both happy.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        }
+      ],
+      "status": "candidate",
+      "resurfaced": null,
+      "passed": null,
+      "promoted": null,
+      "outcome": null,
+      "asOf": "2026-08-14",
+      "alert": null,
+      "samples": [
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "What my Ex-Michelin Trained Chef Husband Cooks in a Week",
+          "url": "https://www.youtube.com/watch?v=2t9u1nMZ0-8",
+          "at": "2026-08-03T02:42:42Z",
+          "thumbnail": "https://i.ytimg.com/vi/2t9u1nMZ0-8/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 574166,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:04:44.804Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "Danes🇩🇰 vs Koreans🇰🇷",
+          "url": "https://www.youtube.com/watch?v=VbFm7kykuOI",
+          "at": "2026-07-27T23:11:53Z",
+          "thumbnail": "https://i.ytimg.com/vi/VbFm7kykuOI/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 2681044,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:04:44.804Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "A Beginner's Guide to Chinese Cooking",
+          "url": "https://www.youtube.com/watch?v=-w5E1DvIhy0",
+          "at": "2026-07-20T22:27:07Z",
+          "thumbnail": "https://i.ytimg.com/vi/-w5E1DvIhy0/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 245937,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:04:44.804Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "Alone in New York City!",
+          "url": "https://www.youtube.com/watch?v=rMTG9ZULTJw",
+          "at": "2026-07-02T01:02:17Z",
+          "thumbnail": "https://i.ytimg.com/vi/rMTG9ZULTJw/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 362976,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:04:44.804Z",
+          "status": null
+        }
+      ],
+      "samplesSearched": {
+        "count": 0,
+        "why": "they link none of their own posts anywhere we can read"
+      },
+      "headline": "Doobydobap makes food and travel videos for 3,200,000 followers on TikTok and 4,480,000 on YouTube, sends a newsletter, and runs her own website, but has no store or membership, and she is posting 2.3 videos a month against 5.1 before, with recent videos getting 49% fewer views.",
+      "headlineRestsOn": "3,200,000 on TikTok · 4,480,000 on YouTube · Newsletter · Own website · YouTube channel · Store · Membership · 2.3 videos a month now, against 5.1 before that · the recent ones are getting 49% fewer views · \"What my Ex-Michelin Trained Chef Husband Cooks in a Week\" (558,673 views) · \"A Beginner's Guide to Chinese Cooking\" (241,595 views) · \"I Cycled Across Korea (to Eat)\" (376,264 views) · \"Alone in New York City!\" (360,738 views)",
+      "accent": "#6E6E6E",
+      "play": {
+        "id": null,
+        "label": "No play recommended",
+        "why": "The play catalog (§5.5) is a product decision the engine does not make.",
+        "generated": true
+      },
+      "outreach": {
+        "subject": null,
+        "opener": null,
+        "bullets": [],
+        "close": null,
+        "generated": true,
+        "why": "Generated on Promote (§6.5). Nothing generates it yet."
+      },
+      "generatedFields": [
+        "accent",
+        "play",
+        "outreach"
+      ],
+      "source": "proposed",
+      "sourceWhy": "a model proposed this handle from a brief — Korean-American cook who films one dish start to finish with a narrative style, widely profiled.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
+    },
+    {
+      "id": "c_home_cooking_recipe_creators__joshuaweissman",
+      "name": "joshuaweissman",
+      "handle": "@joshuaweissman",
+      "initials": "JO",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nfXRvoxu5cFt2H4WhJfFLbL5SVdzmvEnFymnPzH3_1qPM=s900-c0x00ffffff-no-rj",
+      "mandateId": "m_home_cooking_recipe_creators",
+      "primaryPlatform": "YouTube channel",
+      "platforms": [
+        {
+          "name": "YouTube channel",
+          "handle": "@joshuaweissman",
+          "followers": 10700000,
+          "url": "https://www.youtube.com/@joshuaweissman",
+          "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nfXRvoxu5cFt2H4WhJfFLbL5SVdzmvEnFymnPzH3_1qPM=s900-c0x00ffffff-no-rj",
+          "avatarExpires": null,
+          "avatarStale": false,
+          "matchConfidence": 1
+        }
+      ],
+      "places": [
+        {
+          "name": "YouTube channel",
+          "url": "https://www.youtube.com/@joshuaweissman",
+          "host": "youtube.com",
+          "followers": 10700000
+        },
+        {
+          "name": "Newsletter",
+          "url": "https://joshuaweissman.substack.com/",
+          "host": "joshuaweissman.substack.com",
+          "followers": null
+        }
+      ],
+      "audience": {
+        "total": 10700000
+      },
+      "score": 16,
+      "scoreDelta": null,
+      "confidence": 0.833,
+      "pillars": {
+        "gap": {
+          "score": 16,
+          "max": 60,
+          "engine": "rule+llm",
+          "coverage": 0.833,
+          "subsignals": [
+            {
+              "key": "owned",
+              "label": "Owned-channel absence",
+              "engine": "rule",
+              "value": "No store, no own website, no podcast",
+              "weightPct": 89,
+              "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
+            },
+            {
+              "key": "demand",
+              "label": "Unmet demand",
+              "engine": "llm+rule",
+              "value": "23 purchase-intent comments",
+              "weightPct": 11,
+              "detail": "23 lines classified as intent to buy or subscribe, in text the engine fetched first."
+            }
+          ]
+        },
+        "strain": {
+          "score": 0,
+          "max": 40,
+          "engine": "rule+llm",
+          "subsignals": [
+            {
+              "key": "abandon",
+              "label": "Abandonment markers",
+              "engine": "rule",
+              "value": "nothing abandoned that we can see",
+              "weightPct": 0,
+              "detail": "nothing abandoned that we can see — 0 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "selfreport",
+              "label": "Self-reported strain",
+              "engine": "llm",
+              "value": "we couldn't read their captions",
+              "weightPct": 0,
+              "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "cadence",
+              "label": "Cadence decay",
+              "engine": "rule",
+              "value": "+2% vs baseline",
+              "weightPct": 0,
+              "detail": "5.7 videos a month, steady against 5.6 before that; the recent ones are getting 15% fewer views — 0 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "unanswered",
+              "label": "Unanswered audience",
+              "engine": "rule",
+              "value": "not readable on this look",
+              "weightPct": 0,
+              "detail": "needs a second look — this is a change over time, and we have seen them once"
+            }
+          ]
+        },
+        "fit": {
+          "verdict": "pass",
+          "engine": "llm",
+          "subsignals": [
+            {
+              "key": "brief",
+              "label": "Against the brief",
+              "engine": "llm",
+              "value": "pass",
+              "detail": "Joshua Weissman is a well-known food and cooking creator whose channel is built on cooking dishes start to finish in recognizable repeatable formats, aimed at a mainly US audience, so he fits the brief even though the scraped post titles here are uninformative."
+            }
+          ]
+        }
+      },
+      "inventory": [
+        {
+          "item": "YouTube channel",
+          "state": "present",
+          "surfacesChecked": 128,
+          "note": "found it — youtube.com/@joshuaweissman",
+          "observedAt": "2026-08-14",
+          "source": "youtube_channel"
+        },
+        {
+          "item": "Newsletter",
+          "state": "present",
+          "surfacesChecked": 520,
+          "note": "found it — joshuaweissman.substack.com",
+          "observedAt": "2026-08-14",
+          "source": "newsletter"
+        },
+        {
+          "item": "Store",
+          "state": "verified_absent",
+          "surfacesChecked": 594,
+          "note": "not there · we looked in 5 places · 2 wouldn't answer",
+          "observedAt": "2026-08-14",
+          "source": "store"
+        },
+        {
+          "item": "Membership",
+          "state": "present",
+          "surfacesChecked": 366,
+          "note": "something at patreon.com/profile/creators — not confirmed as theirs",
+          "observedAt": "2026-08-14",
+          "source": "membership"
+        },
+        {
+          "item": "Podcast",
+          "state": "verified_absent",
+          "surfacesChecked": 273,
+          "note": "not there · we looked in 3 places",
+          "observedAt": "2026-08-14",
+          "source": "podcast"
+        },
+        {
+          "item": "Website",
+          "state": "verified_absent",
+          "surfacesChecked": 136,
+          "note": "not there · we looked in 2 places",
+          "observedAt": "2026-08-14",
+          "source": "website"
+        },
+        {
+          "item": "Representation",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "their bio does not mention it, which is not the same as nobody having signed them",
+          "observedAt": "2026-08-14",
+          "source": "representation"
+        },
+        {
+          "item": "Sponsored posts",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "observedAt": "2026-08-14",
+          "source": "sponsorships"
+        },
+        {
+          "item": "Affiliate links",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "observedAt": "2026-08-14",
+          "source": "affiliate_links"
+        },
+        {
+          "item": "Platform subscriptions",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+          "observedAt": "2026-08-14",
+          "source": "platform_subscriptions"
+        },
+        {
+          "item": "Shopping tags",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+          "observedAt": "2026-08-14",
+          "source": "shopping_tags"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "comment",
+          "quote": "More rice cooker recipes!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Collab with Andy, please",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "We need a series \"Joshua cooks for baby\"",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Josh can we please get more of this series!!!❤",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "This is a required new series 😭😭😭❤️",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Pls more of this content 🥺😁😁 I fkn enjoyed it 😁😁",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake 😮",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "More episodes of this please 😁",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "That was hilarious. WE WANT MORE OF THESE",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Please keep these coming...I love your baby😵‍💫...lots of blessings 🥹😇😇",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Your best so far. Baby recipe stuff! We want em!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I see an ongoing series about to happen. Loved your video! Beautiful presentation, your baby eats masterpieces!❤",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I kinda want a full lenght video with Josh's take on baby food",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "We want more of these",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I'm looking forward to the next set of meals you make. I also have a ban at home who would probably love this",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Banana bread looks Dope Andy is real goat man I have basic rice cooker with just on switch cook and heat Can any one guide me how to try banana bread with basic rice cooker ??",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "Do you need a fancy rice cooker to accomplish all this? Ours just has an on or warm switch and I'm wondering what else I can realistically make in it",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "Need a long form with your baby recipes, especially that sweet potato pancake",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I need the recipe on how you made the baby",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "Your next visit is on me.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "store"
+        },
+        {
+          "kind": "comment",
+          "quote": "Thank you Josh - you taught me how to cook, and South Park taught me Casa Bonita exists. Take me there!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "store"
+        },
+        {
+          "kind": "comment",
+          "quote": "can we get the 'but better' series back pls",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "But better and but cheaper please",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        }
+      ],
+      "status": "candidate",
+      "resurfaced": null,
+      "passed": null,
+      "promoted": null,
+      "outcome": null,
+      "asOf": "2026-08-14",
+      "alert": null,
+      "samples": [
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "Top 3 Brownie Hacks",
+          "url": "https://www.youtube.com/watch?v=iLe2PLFdIgY",
+          "at": "2026-08-11T15:30:29Z",
+          "thumbnail": "https://i.ytimg.com/vi/iLe2PLFdIgY/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 850794,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:04:27.739Z",
+          "status": null
+        },
+        {
+          "platform": "Newsletter",
+          "publication": "JoshuaWeissman",
+          "kind": "writing",
+          "title": "looking great for great people",
+          "url": "https://joshuaweissman.substack.com/p/looking-great-for-great-people",
+          "at": "2025-11-14T08:31:25.000Z",
+          "thumbnail": null,
+          "excerpt": null,
+          "metric": null,
+          "metricUnit": null,
+          "metricWhy": "a feed carries no read or listen count",
+          "foundIn": "their newsletter",
+          "seenAt": "2026-08-14T13:04:36.011Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "I Investigated The “Illegal” Food of Facebook Marketplace",
+          "url": "https://www.youtube.com/watch?v=HkDSTzzogLk",
+          "at": "2026-08-09T14:30:28Z",
+          "thumbnail": "https://i.ytimg.com/vi/HkDSTzzogLk/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 1848799,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:04:27.739Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "Testing Rice Cooker Hacks",
+          "url": "https://www.youtube.com/watch?v=z_GQgp1EGpc",
+          "at": "2026-08-05T15:00:33Z",
+          "thumbnail": "https://i.ytimg.com/vi/z_GQgp1EGpc/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 1068282,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:04:27.739Z",
+          "status": null
+        }
+      ],
+      "samplesSearched": {
+        "count": 1,
+        "why": "1 piece of their own work"
+      },
+      "headline": "Joshua Weissman cooks for 10,700,000 YouTube subscribers at 5.7 videos a month, with recent uploads landing between 692,903 and 2,157,280 views, and he already runs a newsletter and a membership but has no store, no podcast, and no site of his own.",
+      "headlineRestsOn": "10,700,000 on YouTube · YouTube channel · Newsletter · Membership · Store · Podcast · Own website · 5.7 videos a month · \"Top 3 Brownie Hacks\" (692,903 views) · \"I Cook For a Baby\" (2,157,280 views)",
+      "accent": "#6E6E6E",
+      "play": {
+        "id": null,
+        "label": "No play recommended",
+        "why": "The play catalog (§5.5) is a product decision the engine does not make.",
+        "generated": true
+      },
+      "outreach": {
+        "subject": null,
+        "opener": null,
+        "bullets": [],
+        "close": null,
+        "generated": true,
+        "why": "Generated on Promote (§6.5). Nothing generates it yet."
+      },
+      "generatedFields": [
+        "accent",
+        "play",
+        "outreach"
+      ],
+      "source": "proposed",
+      "sourceWhy": "a model proposed this handle from a brief — Trained cook turned video creator known for making one dish per episode from scratch, widely covered in food media.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
+    },
+    {
       "id": "c_home_cooking_recipe_creators__ethanchlebowski",
       "name": "ethanchlebowski",
       "handle": "@ethanchlebowski",
@@ -36859,12 +24232,12 @@
       "audience": {
         "total": 2430000
       },
-      "score": 25,
+      "score": 12,
       "scoreDelta": null,
       "confidence": 0.833,
       "pillars": {
         "gap": {
-          "score": 25,
+          "score": 12,
           "max": 60,
           "engine": "rule+llm",
           "coverage": 0.833,
@@ -36874,16 +24247,16 @@
               "label": "Owned-channel absence",
               "engine": "rule",
               "value": "No newsletter, no membership",
-              "weightPct": 45,
+              "weightPct": 92,
               "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
             },
             {
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "366 purchase-intent comments",
-              "weightPct": 55,
-              "detail": "366 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "value": "11 purchase-intent comments",
+              "weightPct": 8,
+              "detail": "11 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -37042,33 +24415,6 @@
         },
         {
           "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
           "platform": "YouTube",
           "url": null,
@@ -37114,592 +24460,7 @@
         },
         {
           "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
           "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -37717,2590 +24478,7 @@
         },
         {
           "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Pls do some meal prep veg/salad recipes!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "PLEASE DO MORE VIDs like this. I always struggle with how to make a good bulk protein and having short videos like this or even a guide helps a ton!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep cranking out slop recs 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "where can i get a stainless peel pan?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "absolutely do not stop this kind of stuff!!!! i never comment but need more of this, from my favorite creator too. possibly a series?? at least do more",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "yes! I'd like to see slop bowls around the world, where you try to make a healthy quick one representing different international cuisines",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "MORE slop bowls!! :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "A slop bowl series would be a total game changer for meal prep",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -40326,7 +24504,7 @@
           "label": "unspecified"
         }
       ],
-      "status": "in_drop",
+      "status": "candidate",
       "resurfaced": null,
       "passed": null,
       "promoted": null,
@@ -40429,6 +24607,400 @@
       "sourceWhy": "a model proposed this handle from a brief — Home cook who films a single recipe start to finish with an explanatory, technique-first approach for a US audience.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
     },
     {
+      "id": "c_home_cooking_recipe_creators__thegoldenbalance",
+      "name": "thegoldenbalance",
+      "handle": "@thegoldenbalance",
+      "initials": "TH",
+      "avatar": "https://yt3.googleusercontent.com/JA4SHJG0wkJ9nlksLsGrduuwpxezBn3fyGgCznDCqaEdJoFL2qM2bWtsrWQonmnaM25OQ3uSow=s900-c0x00ffffff-no-rj",
+      "mandateId": "m_home_cooking_recipe_creators",
+      "primaryPlatform": "TikTok profile",
+      "platforms": [
+        {
+          "name": "TikTok profile",
+          "handle": "@thegoldenbalance",
+          "followers": 8500000,
+          "url": "https://www.tiktok.com/@thegoldenbalance",
+          "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/7319866735920676906~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=30a6d949&x-expires=1786885200&x-signature=YB2HuF4ejLIwGDvava5l8Kxn9o4%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+          "avatarExpires": "2026-08-16T13:00:00.000Z",
+          "avatarStale": false,
+          "matchConfidence": 1
+        },
+        {
+          "name": "YouTube channel",
+          "handle": "@thegoldenbalance",
+          "followers": 3530000,
+          "url": "https://www.youtube.com/@thegoldenbalance",
+          "avatar": "https://yt3.googleusercontent.com/JA4SHJG0wkJ9nlksLsGrduuwpxezBn3fyGgCznDCqaEdJoFL2qM2bWtsrWQonmnaM25OQ3uSow=s900-c0x00ffffff-no-rj",
+          "avatarExpires": null,
+          "avatarStale": false,
+          "separate": true,
+          "why": "nothing on either page links the YouTube to the TikTok, so it is not added in"
+        },
+        {
+          "name": "Bluesky profile",
+          "handle": "@thegoldenbalance",
+          "followers": 39,
+          "url": "https://bsky.app/profile/thegoldenbalance.bsky.social",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:odt2oegxmtzoq5pkne7srg7z/bafkreidwmjfszx4zwoiwwdijzwlwrcc2526ihzuhcoqc24duci2xj3qgxe",
+          "avatarExpires": null,
+          "avatarStale": false,
+          "separate": true,
+          "why": "nothing on either page links the Bluesky to the TikTok, so it is not added in"
+        }
+      ],
+      "places": [
+        {
+          "name": "TikTok profile",
+          "url": "https://www.tiktok.com/@thegoldenbalance",
+          "host": "tiktok.com",
+          "followers": 8500000
+        },
+        {
+          "name": "YouTube channel",
+          "url": "https://www.youtube.com/@thegoldenbalance",
+          "host": "youtube.com",
+          "followers": 3530000
+        },
+        {
+          "name": "Bluesky profile",
+          "url": "https://bsky.app/profile/thegoldenbalance.bsky.social",
+          "host": "bsky.app",
+          "followers": 39
+        },
+        {
+          "name": "Store",
+          "url": "https://www.thegoldenbalance.com/store",
+          "host": "thegoldenbalance.com",
+          "followers": null
+        },
+        {
+          "name": "Podcast",
+          "url": "https://podcasts.apple.com/us/podcast/the-golden-balance/id1809558008?uo=4",
+          "host": "podcasts.apple.com",
+          "followers": null
+        },
+        {
+          "name": "Spotify",
+          "url": "https://podcasters.spotify.com/pod/show/fidan-asgarova/episodes/Trailer-episode-e31o5tf",
+          "host": "podcasters.spotify.com",
+          "followers": null
+        }
+      ],
+      "audience": {
+        "total": 8500000
+      },
+      "score": 7,
+      "scoreDelta": null,
+      "confidence": 0.833,
+      "pillars": {
+        "gap": {
+          "score": 7,
+          "max": 60,
+          "engine": "rule+llm",
+          "coverage": 0.833,
+          "subsignals": [
+            {
+              "key": "owned",
+              "label": "Owned-channel absence",
+              "engine": "rule",
+              "value": "No newsletter",
+              "weightPct": 96,
+              "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
+            },
+            {
+              "key": "demand",
+              "label": "Unmet demand",
+              "engine": "llm+rule",
+              "value": "4 purchase-intent comments",
+              "weightPct": 4,
+              "detail": "4 lines classified as intent to buy or subscribe, in text the engine fetched first."
+            }
+          ]
+        },
+        "strain": {
+          "score": 0,
+          "max": 40,
+          "engine": "rule+llm",
+          "subsignals": [
+            {
+              "key": "abandon",
+              "label": "Abandonment markers",
+              "engine": "rule",
+              "value": "nothing abandoned that we can see",
+              "weightPct": 0,
+              "detail": "nothing abandoned that we can see — 0 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "selfreport",
+              "label": "Self-reported strain",
+              "engine": "llm",
+              "value": "we couldn't read their captions",
+              "weightPct": 0,
+              "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "cadence",
+              "label": "Cadence decay",
+              "engine": "rule",
+              "value": "−3% vs baseline",
+              "weightPct": 0,
+              "detail": "9 videos a month now, against 9.3 before that — down 3%; the recent ones are getting 45% fewer views — 0 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "unanswered",
+              "label": "Unanswered audience",
+              "engine": "rule",
+              "value": "not readable on this look",
+              "weightPct": 0,
+              "detail": "needs a second look — this is a change over time, and we have seen them once"
+            }
+          ]
+        },
+        "fit": {
+          "verdict": "pass",
+          "engine": "llm",
+          "subsignals": [
+            {
+              "key": "brief",
+              "label": "Against the brief",
+              "engine": "llm",
+              "value": "pass",
+              "detail": "Ahmad Alzahabi's Golden Balance is exactly a single-dish, start-to-finish cooking format with recipes on his own site and a huge US-facing following, so he fits the brief squarely."
+            }
+          ]
+        }
+      },
+      "inventory": [
+        {
+          "item": "YouTube channel",
+          "state": "present",
+          "surfacesChecked": 48,
+          "note": "found it — youtube.com/@thegoldenbalance",
+          "observedAt": "2026-08-14",
+          "source": "youtube_channel"
+        },
+        {
+          "item": "Newsletter",
+          "state": "verified_absent",
+          "surfacesChecked": 263,
+          "note": "not there · we looked in 6 places",
+          "observedAt": "2026-08-14",
+          "source": "newsletter"
+        },
+        {
+          "item": "Store",
+          "state": "present",
+          "surfacesChecked": 135,
+          "note": "found it — thegoldenbalance.com/store · that page links back to their TikTok",
+          "observedAt": "2026-08-14",
+          "source": "store"
+        },
+        {
+          "item": "Membership",
+          "state": "present",
+          "surfacesChecked": 50,
+          "note": "something at patreon.com/thegoldenbalance — not confirmed as theirs",
+          "observedAt": "2026-08-14",
+          "source": "membership"
+        },
+        {
+          "item": "Podcast",
+          "state": "present",
+          "surfacesChecked": 5,
+          "note": "found it — https://podcasts.apple.com/us/podcast/the-golden-balance/id1809558008?uo=4",
+          "observedAt": "2026-08-14",
+          "source": "podcast"
+        },
+        {
+          "item": "Website",
+          "state": "present",
+          "surfacesChecked": 45,
+          "note": "found it — thegoldenbalance.com · that page links back to their TikTok",
+          "observedAt": "2026-08-14",
+          "source": "website"
+        },
+        {
+          "item": "Representation",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "their bio does not mention it, which is not the same as nobody having signed them",
+          "observedAt": "2026-08-14",
+          "source": "representation"
+        },
+        {
+          "item": "Sponsored posts",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "observedAt": "2026-08-14",
+          "source": "sponsorships"
+        },
+        {
+          "item": "Affiliate links",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "observedAt": "2026-08-14",
+          "source": "affiliate_links"
+        },
+        {
+          "item": "Platform subscriptions",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+          "observedAt": "2026-08-14",
+          "source": "platform_subscriptions"
+        },
+        {
+          "item": "Shopping tags",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+          "observedAt": "2026-08-14",
+          "source": "shopping_tags"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "comment",
+          "quote": "Yo where did you buy your shirt from. Love the neck writing",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "store"
+        },
+        {
+          "kind": "comment",
+          "quote": "Mohamed Salah next!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Freaking Paul Pogba, let's GOOOOOOO. More football players please.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Yesterday i made sujuk shawarma from your video and i have leftover beef perfect for this. You are becoming very useful!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "store"
+        }
+      ],
+      "status": "candidate",
+      "resurfaced": null,
+      "passed": null,
+      "promoted": null,
+      "outcome": null,
+      "asOf": "2026-08-14",
+      "alert": null,
+      "samples": [
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "Bacon Jam Patty Melt",
+          "url": "https://www.youtube.com/watch?v=_r7CFLw37ME",
+          "at": "2026-08-14T13:00:21Z",
+          "thumbnail": "https://i.ytimg.com/vi/_r7CFLw37ME/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 37,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:04:54.755Z",
+          "status": null
+        },
+        {
+          "platform": "Podcast",
+          "publication": "The Golden Balance",
+          "kind": "episode",
+          "title": "Trailer episode",
+          "url": "https://podcasters.spotify.com/pod/show/fidan-asgarova/episodes/Trailer-episode-e31o5tf",
+          "at": "2025-04-19T17:57:51.000Z",
+          "thumbnail": null,
+          "excerpt": "Salam Aleykum and welcome to The Golden Balance.\n My name is Fidan and I'm just a sister from Azerbaijan and this is a space l've been dreaming about for a long time.\n This podcast will be a gentle, honest, and faith-centered space - where we talk about life, deen, growth, and all the little moments",
+          "metric": null,
+          "metricUnit": null,
+          "metricWhy": "a feed carries no read or listen count",
+          "foundIn": "their podcast",
+          "seenAt": "2026-08-14T13:05:04.881Z",
+          "status": null
+        },
+        {
+          "platform": "Bluesky",
+          "publication": null,
+          "kind": "post",
+          "title": "Let’s Make Red Curry Ramen 😮‍💨",
+          "url": "https://bsky.app/profile/thegoldenbalance.bsky.social/post/3lgdcggjpw42i",
+          "at": "2025-01-22T11:50:15.217Z",
+          "thumbnail": null,
+          "excerpt": "Let’s Make Red Curry Ramen 😮‍💨",
+          "metric": 7,
+          "metricUnit": "likes",
+          "metricWhy": null,
+          "foundIn": "the Bluesky AppView",
+          "seenAt": "2026-08-14T13:04:54.755Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "Brazilian Cherry Lemonade",
+          "url": "https://www.youtube.com/watch?v=BvApDtRbuHk",
+          "at": "2026-08-12T13:00:37Z",
+          "thumbnail": "https://i.ytimg.com/vi/BvApDtRbuHk/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 251017,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:04:54.755Z",
+          "status": null
+        }
+      ],
+      "samplesSearched": {
+        "count": 1,
+        "why": "1 piece of their own work"
+      },
+      "headline": "He cooks food and travels for 8,500,000 followers on TikTok and 3,530,000 on YouTube, already sells through a store, membership, podcast and his own site, and has no newsletter, so there is no way to reach those viewers directly while recent videos pull 45% fewer views.",
+      "headlineRestsOn": "8,500,000 on TikTok · 3,530,000 on YouTube · YouTube channel · Store · Membership · Podcast · Own website · Newsletter · the recent ones are getting 45% fewer views · \"Brazilian Cherry Lemonade\" (50,964 views) · \"I Tried Jamaica's Craziest Foods (Chicken Feet, Ackee, Oxtail)\" (37,793 views) · \"I Returned to Syria After 15 Years\" (385,096 views) · \"20 Minute Breakfast Idea\" (369,125 views)",
+      "accent": "#6E6E6E",
+      "play": {
+        "id": null,
+        "label": "No play recommended",
+        "why": "The play catalog (§5.5) is a product decision the engine does not make.",
+        "generated": true
+      },
+      "outreach": {
+        "subject": null,
+        "opener": null,
+        "bullets": [],
+        "close": null,
+        "generated": true,
+        "why": "Generated on Promote (§6.5). Nothing generates it yet."
+      },
+      "generatedFields": [
+        "accent",
+        "play",
+        "outreach"
+      ],
+      "source": "proposed",
+      "sourceWhy": "a model proposed this handle from a brief — Palestinian-American home cook whose videos each center on one dish cooked through in a recognizable format.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
+    },
+    {
       "id": "c_home_cooking_recipe_creators__brianlagerstrom",
       "name": "brianlagerstrom",
       "handle": "@brianlagerstrom",
@@ -40480,12 +25052,12 @@
       "audience": {
         "total": 1800000
       },
-      "score": 8,
+      "score": 6,
       "scoreDelta": null,
       "confidence": 0.667,
       "pillars": {
         "gap": {
-          "score": 8,
+          "score": 6,
           "max": 60,
           "engine": "rule+llm",
           "coverage": 0.667,
@@ -40495,16 +25067,16 @@
               "label": "Owned-channel absence",
               "engine": "rule",
               "value": "No membership, no podcast",
-              "weightPct": 61,
+              "weightPct": 84,
               "detail": "4 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
             },
             {
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "44 purchase-intent comments",
-              "weightPct": 39,
-              "detail": "44 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "value": "13 purchase-intent comments",
+              "weightPct": 16,
+              "detail": "13 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -40717,24 +25289,6 @@
         },
         {
           "kind": "comment",
-          "quote": "BRIAN! Will you be producing more of your garlic presses?? Stock is no longer available",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your sponsor speech was hilarious and I will immediately buy the garlic press now.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "My garlic press broke sooo long ago, but I sat quietly in faith that the Lagerstrom Garlic Press would come. ❤",
           "platform": "YouTube",
           "url": null,
@@ -40744,25 +25298,7 @@
         },
         {
           "kind": "comment",
-          "quote": "I ordered your garlic press. I don't particularly need a garlic press as I don't mind a little knife work but I really think people should support you.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "That does look like a very nice garlic press. If l needed one I'd definitely consider it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I've been WAITING for this garlic press! I'm currently unemployed, but as soon as I get a job I'm going to use some of my first paycheck to buy this puppy and get to cookin'!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -40789,60 +25325,6 @@
         },
         {
           "kind": "comment",
-          "quote": "When will there be more garlic press' available?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "BRIAN! Will you be producing more of your garlic presses?? Stock is no longer available",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your sponsor speech was hilarious and I will immediately buy the garlic press now.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I ordered your garlic press. I don't particularly need a garlic press as I don't mind a little knife work but I really think people should support you.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I've been WAITING for this garlic press! I'm currently unemployed, but as soon as I get a job I'm going to use some of my first paycheck to buy this puppy and get to cookin'!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I ordered the garlic press and it arrived a couple days ago. Very high quality and works beautifully!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Your recipes are consistently my family's favorites and have improved my life. I wish you had more confidence in your fan club, as it seems you are out of garlic presses to buy.",
           "platform": "YouTube",
           "url": null,
@@ -40852,196 +25334,7 @@
         },
         {
           "kind": "comment",
-          "quote": "Hey Brian! Is there a link to your new garlic press? I really want to try one out!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your sponsor speech was hilarious and I will immediately buy the garlic press now.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My garlic press broke sooo long ago, but I sat quietly in faith that the Lagerstrom Garlic Press would come. ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "I ordered your garlic press. I don't particularly need a garlic press as I don't mind a little knife work but I really think people should support you. I've been cooking a lot of your dishes and the time and knowledge you give us in these videos deserves support. I look forward to trying out your pr",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I've been WAITING for this garlic press! I'm currently unemployed, but as soon as I get a job I'm going to use some of my first paycheck to buy this puppy and get to cookin'!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I ordered the garlic press and it arrived a couple days ago. Very high quality and works beautifully! I've spent way more than $49 on multiple garlic presses that I will now be getting rid of, worth every penny! Thank you Brian!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your recipes are consistently my family's favorites and have improved my life. I wish you had more confidence in your fan club, as it seems you are out of garlic presses to buy.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Hey Brian! Is there a link to your new garlic press? I really want to try one out!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "When will there be more garlic press' available?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your sponsor speech was hilarious and I will immediately buy the garlic press now.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My garlic press broke sooo long ago, but I sat quietly in faith that the Lagerstrom Garlic Press would come. ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I ordered your garlic press. I don't particularly need a garlic press as I don't mind a little knife work but I really think people should support you. I've been cooking a lot of your dishes and the time and knowledge you give us in these videos deserves support. I look forward to trying out your pr",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I've been WAITING for this garlic press! I'm currently unemployed, but as soon as I get a job I'm going to use some of my first paycheck to buy this puppy and get to cookin'!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I ordered the garlic press and it arrived a couple days ago. Very high quality and works beautifully! I've spent way more than $49 on multiple garlic presses that I will now be getting rid of, worth every penny! Thank you Brian!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your recipes are consistently my family's favorites and have improved my life. I wish you had more confidence in your fan club, as it seems you are out of garlic presses to buy.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Hey Brian! Is there a link to your new garlic press? I really want to try one out!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "When will there be more garlic press' available?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Your sponsor speech was hilarious and I will immediately buy the garlic press now.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My garlic press broke sooo long ago, but I sat quietly in faith that the Lagerstrom Garlic Press would come. ❤",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I've been WAITING for this garlic press! I'm currently unemployed, but as soon as I get a job I'm going to use some of my first paycheck to buy this puppy and get to cookin'!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I ordered your garlic press. I don't particularly need a garlic press as I don't mind a little knife work but I really think people should support you. I've been cooking a lot of your dishes and the time and knowledge you give us in these videos deserves support. I look forward to trying out your pr",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I ordered the garlic press and it arrived a couple days ago. Very high quality and works beautifully! I've spent way more than $49 on multiple garlic presses that I will now be getting rid of, worth every penny! Thank you Brian!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -41150,508 +25443,6 @@
       ],
       "source": "proposed",
       "sourceWhy": "a model proposed this handle from a brief — Former professional baker/chef who films one restaurant-style dish per video in a consistent home-kitchen format.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
-    },
-    {
-      "id": "c_home_cooking_recipe_creators__thegoldenbalance",
-      "name": "thegoldenbalance",
-      "handle": "@thegoldenbalance",
-      "initials": "TH",
-      "avatar": "https://yt3.googleusercontent.com/JA4SHJG0wkJ9nlksLsGrduuwpxezBn3fyGgCznDCqaEdJoFL2qM2bWtsrWQonmnaM25OQ3uSow=s900-c0x00ffffff-no-rj",
-      "mandateId": "m_home_cooking_recipe_creators",
-      "primaryPlatform": "TikTok profile",
-      "platforms": [
-        {
-          "name": "TikTok profile",
-          "handle": "@thegoldenbalance",
-          "followers": 8500000,
-          "url": "https://www.tiktok.com/@thegoldenbalance",
-          "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/7319866735920676906~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=30a6d949&x-expires=1786885200&x-signature=YB2HuF4ejLIwGDvava5l8Kxn9o4%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
-          "avatarExpires": "2026-08-16T13:00:00.000Z",
-          "avatarStale": false,
-          "matchConfidence": 1
-        },
-        {
-          "name": "YouTube channel",
-          "handle": "@thegoldenbalance",
-          "followers": 3530000,
-          "url": "https://www.youtube.com/@thegoldenbalance",
-          "avatar": "https://yt3.googleusercontent.com/JA4SHJG0wkJ9nlksLsGrduuwpxezBn3fyGgCznDCqaEdJoFL2qM2bWtsrWQonmnaM25OQ3uSow=s900-c0x00ffffff-no-rj",
-          "avatarExpires": null,
-          "avatarStale": false,
-          "separate": true,
-          "why": "nothing on either page links the YouTube to the TikTok, so it is not added in"
-        },
-        {
-          "name": "Bluesky profile",
-          "handle": "@thegoldenbalance",
-          "followers": 39,
-          "url": "https://bsky.app/profile/thegoldenbalance.bsky.social",
-          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:odt2oegxmtzoq5pkne7srg7z/bafkreidwmjfszx4zwoiwwdijzwlwrcc2526ihzuhcoqc24duci2xj3qgxe",
-          "avatarExpires": null,
-          "avatarStale": false,
-          "separate": true,
-          "why": "nothing on either page links the Bluesky to the TikTok, so it is not added in"
-        }
-      ],
-      "places": [
-        {
-          "name": "TikTok profile",
-          "url": "https://www.tiktok.com/@thegoldenbalance",
-          "host": "tiktok.com",
-          "followers": 8500000
-        },
-        {
-          "name": "YouTube channel",
-          "url": "https://www.youtube.com/@thegoldenbalance",
-          "host": "youtube.com",
-          "followers": 3530000
-        },
-        {
-          "name": "Bluesky profile",
-          "url": "https://bsky.app/profile/thegoldenbalance.bsky.social",
-          "host": "bsky.app",
-          "followers": 39
-        },
-        {
-          "name": "Store",
-          "url": "https://www.thegoldenbalance.com/store",
-          "host": "thegoldenbalance.com",
-          "followers": null
-        },
-        {
-          "name": "Podcast",
-          "url": "https://podcasts.apple.com/us/podcast/the-golden-balance/id1809558008?uo=4",
-          "host": "podcasts.apple.com",
-          "followers": null
-        },
-        {
-          "name": "Spotify",
-          "url": "https://podcasters.spotify.com/pod/show/fidan-asgarova/episodes/Trailer-episode-e31o5tf",
-          "host": "podcasters.spotify.com",
-          "followers": null
-        }
-      ],
-      "audience": {
-        "total": 8500000
-      },
-      "score": 8,
-      "scoreDelta": null,
-      "confidence": 0.833,
-      "pillars": {
-        "gap": {
-          "score": 8,
-          "max": 60,
-          "engine": "rule+llm",
-          "coverage": 0.833,
-          "subsignals": [
-            {
-              "key": "owned",
-              "label": "Owned-channel absence",
-              "engine": "rule",
-              "value": "No newsletter",
-              "weightPct": 84,
-              "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
-            },
-            {
-              "key": "demand",
-              "label": "Unmet demand",
-              "engine": "llm+rule",
-              "value": "16 purchase-intent comments",
-              "weightPct": 16,
-              "detail": "16 lines classified as intent to buy or subscribe, in text the engine fetched first."
-            }
-          ]
-        },
-        "strain": {
-          "score": 0,
-          "max": 40,
-          "engine": "rule+llm",
-          "subsignals": [
-            {
-              "key": "abandon",
-              "label": "Abandonment markers",
-              "engine": "rule",
-              "value": "nothing abandoned that we can see",
-              "weightPct": 0,
-              "detail": "nothing abandoned that we can see — 0 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "selfreport",
-              "label": "Self-reported strain",
-              "engine": "llm",
-              "value": "we couldn't read their captions",
-              "weightPct": 0,
-              "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "cadence",
-              "label": "Cadence decay",
-              "engine": "rule",
-              "value": "−3% vs baseline",
-              "weightPct": 0,
-              "detail": "9 videos a month now, against 9.3 before that — down 3%; the recent ones are getting 45% fewer views — 0 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "unanswered",
-              "label": "Unanswered audience",
-              "engine": "rule",
-              "value": "not readable on this look",
-              "weightPct": 0,
-              "detail": "needs a second look — this is a change over time, and we have seen them once"
-            }
-          ]
-        },
-        "fit": {
-          "verdict": "pass",
-          "engine": "llm",
-          "subsignals": [
-            {
-              "key": "brief",
-              "label": "Against the brief",
-              "engine": "llm",
-              "value": "pass",
-              "detail": "Ahmad Alzahabi's Golden Balance is exactly a single-dish, start-to-finish cooking format with recipes on his own site and a huge US-facing following, so he fits the brief squarely."
-            }
-          ]
-        }
-      },
-      "inventory": [
-        {
-          "item": "YouTube channel",
-          "state": "present",
-          "surfacesChecked": 48,
-          "note": "found it — youtube.com/@thegoldenbalance",
-          "observedAt": "2026-08-14",
-          "source": "youtube_channel"
-        },
-        {
-          "item": "Newsletter",
-          "state": "verified_absent",
-          "surfacesChecked": 263,
-          "note": "not there · we looked in 6 places",
-          "observedAt": "2026-08-14",
-          "source": "newsletter"
-        },
-        {
-          "item": "Store",
-          "state": "present",
-          "surfacesChecked": 135,
-          "note": "found it — thegoldenbalance.com/store · that page links back to their TikTok",
-          "observedAt": "2026-08-14",
-          "source": "store"
-        },
-        {
-          "item": "Membership",
-          "state": "present",
-          "surfacesChecked": 50,
-          "note": "something at patreon.com/thegoldenbalance — not confirmed as theirs",
-          "observedAt": "2026-08-14",
-          "source": "membership"
-        },
-        {
-          "item": "Podcast",
-          "state": "present",
-          "surfacesChecked": 5,
-          "note": "found it — https://podcasts.apple.com/us/podcast/the-golden-balance/id1809558008?uo=4",
-          "observedAt": "2026-08-14",
-          "source": "podcast"
-        },
-        {
-          "item": "Website",
-          "state": "present",
-          "surfacesChecked": 45,
-          "note": "found it — thegoldenbalance.com · that page links back to their TikTok",
-          "observedAt": "2026-08-14",
-          "source": "website"
-        },
-        {
-          "item": "Representation",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "their bio does not mention it, which is not the same as nobody having signed them",
-          "observedAt": "2026-08-14",
-          "source": "representation"
-        },
-        {
-          "item": "Sponsored posts",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
-          "observedAt": "2026-08-14",
-          "source": "sponsorships"
-        },
-        {
-          "item": "Affiliate links",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
-          "observedAt": "2026-08-14",
-          "source": "affiliate_links"
-        },
-        {
-          "item": "Platform subscriptions",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-          "observedAt": "2026-08-14",
-          "source": "platform_subscriptions"
-        },
-        {
-          "item": "Shopping tags",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-          "observedAt": "2026-08-14",
-          "source": "shopping_tags"
-        }
-      ],
-      "evidence": [
-        {
-          "kind": "comment",
-          "quote": "Yo where did you buy your shirt from. Love the neck writing",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yo where did you buy your shirt from. Love the neck writing",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yo where did you buy your shirt from. Love the neck writing",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yo where did you buy your shirt from. Love the neck writing",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yo where did you buy your shirt from. Love the neck writing",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yo where did you buy your shirt from. Love the neck writing",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Mohamed Salah next!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Freaking Paul Pogba, let's GOOOOOOO. More football players please.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yo where did you buy your shirt from. Love the neck writing",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yo where did you buy your shirt from. Love the neck writing",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yo where did you buy your shirt from. Love the neck writing",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yo where did you buy your shirt from. Love the neck writing",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yesterday i made sujuk shawarma from your video and i have leftover beef perfect for this. You are becoming very useful!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yo where did you buy your shirt from. Love the neck writing",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yesterday i made sujuk shawarma from your video and i have leftover beef perfect for this. You are becoming very useful!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Yo where did you buy your shirt from. Love the neck writing",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        }
-      ],
-      "status": "candidate",
-      "resurfaced": null,
-      "passed": null,
-      "promoted": null,
-      "outcome": null,
-      "asOf": "2026-08-14",
-      "alert": null,
-      "samples": [
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "Bacon Jam Patty Melt",
-          "url": "https://www.youtube.com/watch?v=_r7CFLw37ME",
-          "at": "2026-08-14T13:00:21Z",
-          "thumbnail": "https://i.ytimg.com/vi/_r7CFLw37ME/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 37,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:04:54.755Z",
-          "status": null
-        },
-        {
-          "platform": "Podcast",
-          "publication": "The Golden Balance",
-          "kind": "episode",
-          "title": "Trailer episode",
-          "url": "https://podcasters.spotify.com/pod/show/fidan-asgarova/episodes/Trailer-episode-e31o5tf",
-          "at": "2025-04-19T17:57:51.000Z",
-          "thumbnail": null,
-          "excerpt": "Salam Aleykum and welcome to The Golden Balance.\n My name is Fidan and I'm just a sister from Azerbaijan and this is a space l've been dreaming about for a long time.\n This podcast will be a gentle, honest, and faith-centered space - where we talk about life, deen, growth, and all the little moments",
-          "metric": null,
-          "metricUnit": null,
-          "metricWhy": "a feed carries no read or listen count",
-          "foundIn": "their podcast",
-          "seenAt": "2026-08-14T13:05:04.881Z",
-          "status": null
-        },
-        {
-          "platform": "Bluesky",
-          "publication": null,
-          "kind": "post",
-          "title": "Let’s Make Red Curry Ramen 😮‍💨",
-          "url": "https://bsky.app/profile/thegoldenbalance.bsky.social/post/3lgdcggjpw42i",
-          "at": "2025-01-22T11:50:15.217Z",
-          "thumbnail": null,
-          "excerpt": "Let’s Make Red Curry Ramen 😮‍💨",
-          "metric": 7,
-          "metricUnit": "likes",
-          "metricWhy": null,
-          "foundIn": "the Bluesky AppView",
-          "seenAt": "2026-08-14T13:04:54.755Z",
-          "status": null
-        },
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "Brazilian Cherry Lemonade",
-          "url": "https://www.youtube.com/watch?v=BvApDtRbuHk",
-          "at": "2026-08-12T13:00:37Z",
-          "thumbnail": "https://i.ytimg.com/vi/BvApDtRbuHk/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 251017,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:04:54.755Z",
-          "status": null
-        }
-      ],
-      "samplesSearched": {
-        "count": 1,
-        "why": "1 piece of their own work"
-      },
-      "headline": "He cooks food and travels for 8,500,000 followers on TikTok and 3,530,000 on YouTube, already sells through a store, membership, podcast and his own site, and has no newsletter, so there is no way to reach those viewers directly while recent videos pull 45% fewer views.",
-      "headlineRestsOn": "8,500,000 on TikTok · 3,530,000 on YouTube · YouTube channel · Store · Membership · Podcast · Own website · Newsletter · the recent ones are getting 45% fewer views · \"Brazilian Cherry Lemonade\" (50,964 views) · \"I Tried Jamaica's Craziest Foods (Chicken Feet, Ackee, Oxtail)\" (37,793 views) · \"I Returned to Syria After 15 Years\" (385,096 views) · \"20 Minute Breakfast Idea\" (369,125 views)",
-      "accent": "#6E6E6E",
-      "play": {
-        "id": null,
-        "label": "No play recommended",
-        "why": "The play catalog (§5.5) is a product decision the engine does not make.",
-        "generated": true
-      },
-      "outreach": {
-        "subject": null,
-        "opener": null,
-        "bullets": [],
-        "close": null,
-        "generated": true,
-        "why": "Generated on Promote (§6.5). Nothing generates it yet."
-      },
-      "generatedFields": [
-        "accent",
-        "play",
-        "outreach"
-      ],
-      "source": "proposed",
-      "sourceWhy": "a model proposed this handle from a brief — Palestinian-American home cook whose videos each center on one dish cooked through in a recognizable format.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
     },
     {
       "id": "c_home_cooking_recipe_creators__sipandfeast",
@@ -45219,12 +29010,12 @@
       "audience": {
         "total": 1120000
       },
-      "score": 44,
+      "score": 39,
       "scoreDelta": null,
       "confidence": 0.833,
       "pillars": {
         "gap": {
-          "score": 32,
+          "score": 27,
           "max": 60,
           "engine": "rule+llm",
           "coverage": 0.833,
@@ -45234,16 +29025,16 @@
               "label": "Owned-channel absence",
               "engine": "rule",
               "value": "No store, no newsletter, no membership",
-              "weightPct": 75,
+              "weightPct": 89,
               "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
             },
             {
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "144 purchase-intent comments",
-              "weightPct": 25,
-              "detail": "144 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "value": "41 purchase-intent comments",
+              "weightPct": 11,
+              "detail": "41 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -45407,7 +29198,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "unspecified"
+          "label": "store"
         },
         {
           "kind": "comment",
@@ -45416,7 +29207,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "unspecified"
+          "label": "store"
         },
         {
           "kind": "comment",
@@ -45425,7 +29216,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "unspecified"
+          "label": "store"
         },
         {
           "kind": "comment",
@@ -45510,52 +29301,7 @@
         },
         {
           "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -45591,43 +29337,7 @@
         },
         {
           "kind": "comment",
-          "quote": "I have purchased many products from DIY and CLEAN, and love both.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Just started using this product and love it!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Can't wait to try it out 🔥",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -45645,61 +29355,7 @@
         },
         {
           "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "I have a 80series landcruiser i been looking for a great product.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I have two unopened tins still on my shelf from when I thought it was being discontinued so I stocked up.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I use the Diy wax , I can say it really does fill.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "However $30 for this glass/cleaner/sealant is a bit steep considering you can get Glaco for $35 which is a full on coating. But just to support Ivan I'll buy a bott",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -45717,43 +29373,7 @@
         },
         {
           "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Love me some DIYDetail products, I'm still hooked on Quickbeads. My favorite so far, you have to pry it from my dead cold beaded hands. However $30 for this glass/cleaner/sealant is a bit steep considering you can get Glaco for $35 which is a full on coating. But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -45835,33 +29455,6 @@
         {
           "kind": "comment",
           "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Can't wait to try it out 🔥",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -45879,42 +29472,6 @@
         },
         {
           "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Hello Pan, Thank you for your videos — they truly help us better understand the entire world of detailing. I would like to know whether my Clean by Pan 8‑year coating, applied to my vehicle about a year ago and stored immediately afterward in my freezer, can still be used on my new summer car.",
           "platform": "YouTube",
           "url": null,
@@ -45924,151 +29481,16 @@
         },
         {
           "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
+          "label": "membership"
         },
         {
           "kind": "comment",
           "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -46087,87 +29509,6 @@
         {
           "kind": "comment",
           "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -46177,141 +29518,6 @@
         {
           "kind": "comment",
           "quote": "Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I would like to know whether my Clean by Pan 8‑year coating, applied to my vehicle about a year ago and stored immediately afterward in my freezer, can still be used on my new summer car.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Can't wait to try it out 🔥",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Finally, a C8 Corvette! Thanks, Pan, for making this happen. Nice to see your approach on this vehicle so I can learn some tricks taking care of mine... Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -46329,52 +29535,7 @@
         },
         {
           "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Hi pan, I'm currently half way through my V1 bottle and love the slickness, foam and scent. Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -46389,303 +29550,6 @@
           "observedAt": "2026-08-14",
           "engine": "llm",
           "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "membership"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'll try this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Finally, a C8 Corvette! Thanks, Pan, for making this happen. Nice to see your approach on this vehicle so I can learn some tricks taking care of mine... Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "membership"
         },
         {
           "kind": "signal",
@@ -47314,12 +30178,12 @@
       "audience": {
         "total": 696000
       },
-      "score": 31,
+      "score": 33,
       "scoreDelta": null,
       "confidence": 0.833,
       "pillars": {
         "gap": {
-          "score": 23,
+          "score": 24,
           "max": 60,
           "engine": "rule+llm",
           "coverage": 0.833,
@@ -47329,16 +30193,16 @@
               "label": "Owned-channel absence",
               "engine": "rule",
               "value": "No store, no newsletter, no membership",
-              "weightPct": 97,
+              "weightPct": 99,
               "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
             },
             {
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "7 purchase-intent comments",
-              "weightPct": 3,
-              "detail": "7 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "value": "4 purchase-intent comments",
+              "weightPct": 1,
+              "detail": "4 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -47521,33 +30385,6 @@
           "observedAt": "2026-08-14",
           "engine": "llm",
           "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Mike, you need to start your own channel",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I would PAY to follow Mike around all day helping him and reinforce my trade skills - flat out GOAT!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Mike, you need to start your own channel",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
         }
       ],
       "status": "in_drop",
@@ -47653,1289 +30490,6 @@
       "sourceWhy": "a model proposed this handle from a brief — Matt Moreman, a heavily cross-referenced figure in the car care world, whose videos center on detailing gear and specific product and equipment walkthroughs.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
     },
     {
-      "id": "c_car_detailing_diy_repair_3__mymechanics",
-      "name": "mymechanics",
-      "handle": "@mymechanics",
-      "initials": "MY",
-      "avatar": "https://yt3.googleusercontent.com/Aw7J1OVKIiaUJ_pO6u4MMmB5y3FMfSevbVMrw_lUEASfzgVqaP2glEDTeJ4hlOOPz941iaA9yw=s900-c0x00ffffff-no-rj",
-      "mandateId": "m_car_detailing_diy_repair_3",
-      "primaryPlatform": "TikTok profile",
-      "platforms": [
-        {
-          "name": "TikTok profile",
-          "handle": "@mymechanics",
-          "followers": 2,
-          "url": "https://www.tiktok.com/@mymechanics",
-          "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/7327802512349200390~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=84f07d6b&x-expires=1786885200&x-signature=lvRKZSGWcXLBNHmuLY0tDUtw8x8%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
-          "avatarExpires": "2026-08-16T13:00:00.000Z",
-          "avatarStale": false,
-          "separate": true,
-          "why": "nothing on either page links the TikTok to the YouTube, so it is not added in"
-        },
-        {
-          "name": "YouTube channel",
-          "handle": "@mymechanics",
-          "followers": 3640000,
-          "url": "https://www.youtube.com/@mymechanics",
-          "avatar": "https://yt3.googleusercontent.com/Aw7J1OVKIiaUJ_pO6u4MMmB5y3FMfSevbVMrw_lUEASfzgVqaP2glEDTeJ4hlOOPz941iaA9yw=s900-c0x00ffffff-no-rj",
-          "avatarExpires": null,
-          "avatarStale": false,
-          "matchConfidence": 1
-        }
-      ],
-      "places": [
-        {
-          "name": "TikTok profile",
-          "url": "https://www.tiktok.com/@mymechanics",
-          "host": "tiktok.com",
-          "followers": 2
-        },
-        {
-          "name": "YouTube channel",
-          "url": "https://www.youtube.com/@mymechanics",
-          "host": "youtube.com",
-          "followers": 3640000
-        },
-        {
-          "name": "Website",
-          "url": "https://www.mymechanics.com/personal/",
-          "host": "mymechanics.com",
-          "followers": null
-        }
-      ],
-      "audience": {
-        "total": 3640000
-      },
-      "score": 25,
-      "scoreDelta": null,
-      "confidence": 0.833,
-      "pillars": {
-        "gap": {
-          "score": 25,
-          "max": 60,
-          "engine": "rule+llm",
-          "coverage": 0.833,
-          "subsignals": [
-            {
-              "key": "owned",
-              "label": "Owned-channel absence",
-              "engine": "rule",
-              "value": "No newsletter, no store, no podcast",
-              "weightPct": 74,
-              "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
-            },
-            {
-              "key": "demand",
-              "label": "Unmet demand",
-              "engine": "llm+rule",
-              "value": "106 purchase-intent comments",
-              "weightPct": 26,
-              "detail": "106 lines classified as intent to buy or subscribe, in text the engine fetched first."
-            }
-          ]
-        },
-        "strain": {
-          "score": 0,
-          "max": 40,
-          "engine": "rule+llm",
-          "subsignals": [
-            {
-              "key": "abandon",
-              "label": "Abandonment markers",
-              "engine": "rule",
-              "value": "nothing abandoned that we can see",
-              "weightPct": 0,
-              "detail": "nothing abandoned that we can see — 0 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "selfreport",
-              "label": "Self-reported strain",
-              "engine": "llm",
-              "value": "we couldn't read their captions",
-              "weightPct": 0,
-              "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "cadence",
-              "label": "Cadence decay",
-              "engine": "rule",
-              "value": "+1% vs baseline",
-              "weightPct": 0,
-              "detail": "1 posts a month, steady against 1 before that — 0 of the 40 Pressure points. Ceiling on this look is 34."
-            },
-            {
-              "key": "unanswered",
-              "label": "Unanswered audience",
-              "engine": "rule",
-              "value": "not readable on this look",
-              "weightPct": 0,
-              "detail": "needs a second look — this is a change over time, and we have seen them once"
-            }
-          ]
-        },
-        "fit": {
-          "verdict": "pass",
-          "engine": "llm",
-          "subsignals": [
-            {
-              "key": "brief",
-              "label": "Against the brief",
-              "engine": "llm",
-              "value": "pass",
-              "detail": "He restores metal machinery and tools on camera in a rigidly repeated, edited format, which is squarely what the brief asks for — the only gap is that his ASMR style is wordless, so he doesn't verbally name parts or products, though the work itself is shot part-by-part in close detail."
-            }
-          ]
-        }
-      },
-      "inventory": [
-        {
-          "item": "YouTube channel",
-          "state": "present",
-          "surfacesChecked": 18,
-          "note": "found it — youtube.com/@mymechanics",
-          "observedAt": "2026-08-14",
-          "source": "youtube_channel"
-        },
-        {
-          "item": "Newsletter",
-          "state": "verified_absent",
-          "surfacesChecked": 97,
-          "note": "not there · we looked in 6 places",
-          "observedAt": "2026-08-14",
-          "source": "newsletter"
-        },
-        {
-          "item": "Store",
-          "state": "verified_absent",
-          "surfacesChecked": 60,
-          "note": "not there · we looked in 4 places · 2 wouldn't answer",
-          "observedAt": "2026-08-14",
-          "source": "store"
-        },
-        {
-          "item": "Membership",
-          "state": "present",
-          "surfacesChecked": 17,
-          "note": "something at patreon.com/mymechanics — not confirmed as theirs",
-          "observedAt": "2026-08-14",
-          "source": "membership"
-        },
-        {
-          "item": "Podcast",
-          "state": "verified_absent",
-          "surfacesChecked": 18,
-          "note": "not there · we looked in 1 place",
-          "observedAt": "2026-08-14",
-          "source": "podcast"
-        },
-        {
-          "item": "Website",
-          "state": "present",
-          "surfacesChecked": 0,
-          "note": "found it — mymechanics.com/personal",
-          "observedAt": "2026-08-14",
-          "source": "website"
-        },
-        {
-          "item": "Representation",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "their bio does not mention it, which is not the same as nobody having signed them",
-          "observedAt": "2026-08-14",
-          "source": "representation"
-        },
-        {
-          "item": "Sponsored posts",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "nothing in the 5 recent captions we could read — a sample, which cannot show that none exist",
-          "observedAt": "2026-08-14",
-          "source": "sponsorships"
-        },
-        {
-          "item": "Affiliate links",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
-          "observedAt": "2026-08-14",
-          "source": "affiliate_links"
-        },
-        {
-          "item": "Platform subscriptions",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-          "observedAt": "2026-08-14",
-          "source": "platform_subscriptions"
-        },
-        {
-          "item": "Shopping tags",
-          "state": "not_found",
-          "surfacesChecked": 0,
-          "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-          "observedAt": "2026-08-14",
-          "source": "shopping_tags"
-        }
-      ],
-      "evidence": [
-        {
-          "kind": "comment",
-          "quote": "all i want for Christmas is your engine block restoration",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "5 months later and I am just dying for the next long form update.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please never stop what you're doing.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm not ashamed to admit that I use your restoration videos as white noise to help me fall asleep, I have for years, even before I became a hydraulic mechanic.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Still waiting after 6 months, can't wait to see him restore the engine parts.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "老哥還活著嗎?我在等你的影片更新",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just watched the entire thing through in one sitting.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I joined the army in 1975. Only to be able to get the money together to buy one of these cars.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "When is the next video coming out?😊😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I have a 2012 Lexus ES350. Watching your restoration video, I would give anything to have you work on restoring the car to as pristine a condition as you have done with this.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Historians in 200 years are going to be very confused about why there is only one Datsun 240z left in existence.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "all i want for Christmas is your engine block restoration",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "all i want for Christmas is your engine block restoration",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "5 months later and I am just dying for the next long form update.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please never stop what you're doing.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just wanted to say I don't care if it takes you 10 years to finish this car, I'll be here watching the videos and supporting the channel.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "When is the next video coming out?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "have been trying to get my husband into watching restoration videos with me, and your series on this car has been perfect. you were already my favorite restoration channel, and he loves cars, so now we both get excited when a new video comes out and we can enjoy it together (or separately for maximu",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "all i want for Christmas is your engine block restoration",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "5 months later and I am just dying for the next long form update.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please never stop what you're doing.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm not ashamed to admit that I use your restoration videos as white noise to help me fall asleep, I have for years, even before I became a hydraulic mechanic.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Still waiting after 6 months, can't wait to see him restore the engine parts.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I joined the army in 1975. Only to be able to get the money together to buy one of these cars.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "I have a 2012 Lexus ES350. Watching your restoration video, I would give anything to have you work on restoring the car to as pristine a condition as you have done with this.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "When is the next video coming out?😊😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I cant wait for the engine build, trimming sharp edges of a piston, filing forging marks on conn rods, powder coated crankshaft",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "5 months later and I am just dying for the next long form update.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Still waiting after 6 months, can't wait to see him restore the engine parts.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "When is the next video coming out?😊😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "5 months later and I am just dying for the next long form update.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Still waiting after 6 months, can't wait to see him restore the engine parts.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I don't care if it takes you 10 years to finish this car, I'll be here watching the videos and supporting the channel.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "When is the next video coming out?😊😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "all i want for Christmas is your engine block restoration",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "all i want for Christmas is your engine block restoration",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "5 months later and I am just dying for the next long form update.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Please never stop what you're doing.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Still waiting after 6 months, can't wait to see him restore the engine parts.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Cant wait for it!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I don't care if it takes you 10 years to finish this car, I'll be here watching the videos and supporting the channel.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "When is the next video coming out?😊😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "all i want for Christmas is your engine block restoration",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "5 months later and I am just dying for the next long form update.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Still waiting after 6 months, can't wait to see him restore the engine parts.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Cant wait for it!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'll be here watching the videos and supporting the channel.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just watched the entire thing through in one sitting.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm looking forward to the rest.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "When a new video comes out and we can enjoy it together",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "When is the next video coming out?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Waiting to see that beauty on the road!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "老哥還活著嗎?我在等你的影片更新",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I think maybe just like everyone else we are wondering are you ok? Has this project just stopped",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "all i want for Christmas is your engine block restoration",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "5 months later and I am just dying for the next long form update.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Still waiting after 6 months, can't wait to see him restore the engine parts.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Cant wait for it!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'll be here watching the videos and supporting the channel.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Cannot wait for the upcoming videos",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep up the good work MM!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "When is the next video coming out?😊😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm looking forward to the rest.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "all i want for Christmas is your engine block restoration",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "5 months later and I am just dying for the next long form update.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Still waiting after 6 months, can't wait to see him restore the engine parts.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Cant wait for it!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I don't care if it takes you 10 years to finish this car, I'll be here watching the videos and supporting the channel.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "When a new video comes out and we can enjoy it together",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm looking forward to the rest.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "When is the next video coming out?😊😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Tôi đã đợi quá lâu mong chờ đến phần động cơ , nội thất và chiếc xe lăn bánh",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "all i want for Christmas is your engine block restoration",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "all i want for Christmas is your engine block restoration",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "5 months later and I am just dying for the next long form update.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Still waiting after 6 months, can't wait to see him restore the engine parts.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Cant wait for it!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Just in case you're worried about how long this project is taking, on a Youtube project timeline. I just wanted to say I don't care if it takes you 10 years to finish this car, I'll be here watching the videos and supporting the channel.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm looking forward to the rest.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "When is the next video coming out?😊😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Tôi đã đợi quá lâu mong chờ đến phần động cơ , nội thất và chiếc xe lăn bánh",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "all i want for Christmas is your engine block restoration",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "5 months later and I am just dying for the next long form update.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Still waiting after 6 months, can't wait to see him restore the engine parts.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Cant wait for it!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I don't care if it takes you 10 years to finish this car, I'll be here watching the videos and supporting the channel.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'm looking forward to the rest.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "When is the next video coming out?😊😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "all i want for Christmas is your engine block restoration",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "5 months later and I am just dying for the next long form update.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Still waiting after 6 months, can't wait to see him restore the engine parts.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Cant wait for it!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Just in case you're worried about how long this project is taking, on a Youtube project timeline. I just wanted to say I don't care if it takes you 10 years to finish this car, I'll be here watching the videos and supporting the channel.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Cannot wait for the upcoming videos",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Keep up the good work MM!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "When is the next video coming out?😊😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I think maybe just like everyone else we are wondering are you ok? Has this project just stopped 😢",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Tôi đã đợi quá lâu mong chờ đến phần động cơ , nội thất và chiếc xe lăn bánh",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Looking forward to the rest.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "all i want for Christmas is your engine block restoration",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "5 months later and I am just dying for the next long form update.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Still waiting after 6 months, can't wait to see him restore the engine parts.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Cant wait for it!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "I don't care if it takes you 10 years to finish this car, I'll be here watching the videos and supporting the channel.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "When is the next video coming out?😊😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "老哥還活著嗎?我在等你的影片更新",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        }
-      ],
-      "status": "in_drop",
-      "resurfaced": null,
-      "passed": null,
-      "promoted": null,
-      "outcome": null,
-      "asOf": "2026-08-14",
-      "alert": null,
-      "samples": [
-        {
-          "platform": "Their site",
-          "publication": "Mechanics Bank",
-          "kind": "writing",
-          "title": "Intern Insider",
-          "url": "https://www.mymechanics.com/intern-insider-3/",
-          "at": "2026-07-30T12:09:56.000Z",
-          "thumbnail": null,
-          "excerpt": "This summer, Carter Weaver joined Mechanics Bank as an intern, eager to gain hands-on experience with an organization he was already familiar with. Having previously banked with Mechanics, the opportunity to intern close to home while learning more about the financial industry made it an easy decisi",
-          "metric": null,
-          "metricUnit": null,
-          "metricWhy": "a feed carries no read or listen count",
-          "foundIn": "their site",
-          "seenAt": "2026-08-14T13:23:12.977Z",
-          "status": null
-        },
-        {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "The Datsun 240Z Restoration So Far - 2.5 Years in One Video (Part 1-8)",
-          "url": "https://www.youtube.com/watch?v=24KolOaqA6Q",
-          "at": "2025-12-21T09:12:34Z",
-          "thumbnail": "https://i.ytimg.com/vi/24KolOaqA6Q/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 2136401,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:23:03.465Z",
-          "status": null
-        },
-        {
-          "platform": "Their site",
-          "publication": "Mechanics Bank",
-          "kind": "writing",
-          "title": "Mechanics Bank Announces Promotion",
-          "url": "https://www.mymechanics.com/mechanics-bank-announces-promotion-2/",
-          "at": "2026-07-14T12:17:52.000Z",
-          "thumbnail": null,
-          "excerpt": "Mechanics Bank is pleased to announce the following promotion:\n \n Lindsay Alton has been promoted to Senior Vice President, Controller. Lindsay joined Mechanics in 2018 and served as a Senior Financial Analyst and Strategic Finance Manager prior to her current role. Lindsay has over 20 years of expe",
-          "metric": null,
-          "metricUnit": null,
-          "metricWhy": "a feed carries no read or listen count",
-          "foundIn": "their site",
-          "seenAt": "2026-08-14T13:23:12.977Z",
-          "status": null
-        },
-        {
-          "platform": "Their site",
-          "publication": "Mechanics Bank",
-          "kind": "writing",
-          "title": "Mechanics Bank Welcomes New Personnel",
-          "url": "https://www.mymechanics.com/mechanics-bank-welcomes-new-personnel/",
-          "at": "2026-06-26T19:03:07.000Z",
-          "thumbnail": null,
-          "excerpt": "Mechanics Bank is pleased to announce the addition of Brian Hinkle to the Mechanics team.\n \n Brian joined the Bank as a Business Development Officer and serves the Ashland market, where he has been a lifelong resident. Brian holds a Bachelor’s degree from Ashland University and has over 25 years of ",
-          "metric": null,
-          "metricUnit": null,
-          "metricWhy": "a feed carries no read or listen count",
-          "foundIn": "their site",
-          "seenAt": "2026-08-14T13:23:12.977Z",
-          "status": null
-        }
-      ],
-      "samplesSearched": {
-        "count": 3,
-        "why": "3 pieces of their own work"
-      },
-      "headline": "mymechanics films long car and tool restorations for 3,640,000 YouTube subscribers, with recent videos between 1,866,872 and 3,745,255 views, and sells nothing beyond memberships and his own website, so there is no newsletter, store, or podcast yet.",
-      "headlineRestsOn": "3,640,000 on YouTube · YouTube channel · Membership · Own website · Newsletter · Store · Podcast · \"Datsun 240 Restoration Part 7 - Rear End Perfection\" (1,866,872 views) · \"Datsun 240Z Restoration - Front Axle (Part 6)\" (3,745,255 views) · \"1917 Swiss Bead Roller Restoration - Making New Ones for a Masterpiece\" (1,886,329 views)",
-      "accent": "#6E6E6E",
-      "play": {
-        "id": null,
-        "label": "No play recommended",
-        "why": "The play catalog (§5.5) is a product decision the engine does not make.",
-        "generated": true
-      },
-      "outreach": {
-        "subject": null,
-        "opener": null,
-        "bullets": [],
-        "close": null,
-        "generated": true,
-        "why": "Generated on Promote (§6.5). Nothing generates it yet."
-      },
-      "generatedFields": [
-        "accent",
-        "play",
-        "outreach"
-      ],
-      "source": "proposed",
-      "sourceWhy": "a model proposed this handle from a brief — Arthur Tussik, known for silent rust restoration of tools and machine parts, showing every component disassembled, cleaned and reassembled in the same repeating structure.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
-    },
-    {
       "id": "c_car_detailing_diy_repair_3__mustie1",
       "name": "mustie1",
       "handle": "@mustie1",
@@ -48998,16 +30552,16 @@
               "label": "Owned-channel absence",
               "engine": "rule",
               "value": "No newsletter, no store, no membership",
-              "weightPct": 92,
+              "weightPct": 94,
               "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
             },
             {
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "24 purchase-intent comments",
-              "weightPct": 8,
-              "detail": "24 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "value": "18 purchase-intent comments",
+              "weightPct": 6,
+              "detail": "18 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -49274,33 +30828,6 @@
         },
         {
           "kind": "comment",
-          "quote": "And, yes most def for the follow up 'maintenance' video please Mustie :)",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Would love a follow on video!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Looking forward to the servicing and rodent clean up. Cheers",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
           "quote": "Love it! Those Kubotas are fantastic machines. Very reliable and capable. I have two. Love to see follow up videos on this one!",
           "platform": "YouTube",
           "url": null,
@@ -49337,34 +30864,7 @@
         },
         {
           "kind": "comment",
-          "quote": "Yay for a follow-up, please!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Damn I want Part 3 now!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
           "quote": "Hope to see more of next week",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "We get a third part? Cool!!!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -49776,20 +31276,20 @@
       "sourceWhy": "a model proposed this handle from a brief — Shop-based mechanic who tears into a specific car each video, names the failed component and the replacement part.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
     },
     {
-      "id": "c_car_detailing_diy_repair_3__thedetailgeek",
-      "name": "thedetailgeek",
-      "handle": "@thedetailgeek",
-      "initials": "TH",
-      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nh3BpO_PmKIExTQ9jmJWnD5b2TEqowJ8lRMqu2S9vbcQk=s900-c0x00ffffff-no-rj",
+      "id": "c_car_detailing_diy_repair_3__mymechanics",
+      "name": "mymechanics",
+      "handle": "@mymechanics",
+      "initials": "MY",
+      "avatar": "https://yt3.googleusercontent.com/Aw7J1OVKIiaUJ_pO6u4MMmB5y3FMfSevbVMrw_lUEASfzgVqaP2glEDTeJ4hlOOPz941iaA9yw=s900-c0x00ffffff-no-rj",
       "mandateId": "m_car_detailing_diy_repair_3",
       "primaryPlatform": "TikTok profile",
       "platforms": [
         {
           "name": "TikTok profile",
-          "handle": "@thedetailgeek",
-          "followers": 177800,
-          "url": "https://www.tiktok.com/@thedetailgeek",
-          "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/938da8ca29041f696d767b6e440090aa~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=6be62894&x-expires=1786885200&x-signature=eXOeIBfAXHwblr39EU56wvyWbrA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+          "handle": "@mymechanics",
+          "followers": 2,
+          "url": "https://www.tiktok.com/@mymechanics",
+          "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/7327802512349200390~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=84f07d6b&x-expires=1786885200&x-signature=lvRKZSGWcXLBNHmuLY0tDUtw8x8%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
           "avatarExpires": "2026-08-16T13:00:00.000Z",
           "avatarStale": false,
           "separate": true,
@@ -49797,10 +31297,10 @@
         },
         {
           "name": "YouTube channel",
-          "handle": "@thedetailgeek",
-          "followers": 3970000,
-          "url": "https://www.youtube.com/@thedetailgeek",
-          "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nh3BpO_PmKIExTQ9jmJWnD5b2TEqowJ8lRMqu2S9vbcQk=s900-c0x00ffffff-no-rj",
+          "handle": "@mymechanics",
+          "followers": 3640000,
+          "url": "https://www.youtube.com/@mymechanics",
+          "avatar": "https://yt3.googleusercontent.com/Aw7J1OVKIiaUJ_pO6u4MMmB5y3FMfSevbVMrw_lUEASfzgVqaP2glEDTeJ4hlOOPz941iaA9yw=s900-c0x00ffffff-no-rj",
           "avatarExpires": null,
           "avatarStale": false,
           "matchConfidence": 1
@@ -49809,26 +31309,32 @@
       "places": [
         {
           "name": "TikTok profile",
-          "url": "https://www.tiktok.com/@thedetailgeek",
+          "url": "https://www.tiktok.com/@mymechanics",
           "host": "tiktok.com",
-          "followers": 177800
+          "followers": 2
         },
         {
           "name": "YouTube channel",
-          "url": "https://www.youtube.com/@thedetailgeek",
+          "url": "https://www.youtube.com/@mymechanics",
           "host": "youtube.com",
-          "followers": 3970000
+          "followers": 3640000
+        },
+        {
+          "name": "Website",
+          "url": "https://www.mymechanics.com/personal/",
+          "host": "mymechanics.com",
+          "followers": null
         }
       ],
       "audience": {
-        "total": 3970000
+        "total": 3640000
       },
-      "score": 15,
+      "score": 21,
       "scoreDelta": null,
       "confidence": 0.833,
       "pillars": {
         "gap": {
-          "score": 15,
+          "score": 21,
           "max": 60,
           "engine": "rule+llm",
           "coverage": 0.833,
@@ -49837,7 +31343,7 @@
               "key": "owned",
               "label": "Owned-channel absence",
               "engine": "rule",
-              "value": "No newsletter, no membership, no podcast",
+              "value": "No newsletter, no store, no podcast",
               "weightPct": 90,
               "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
             },
@@ -49845,9 +31351,9 @@
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "19 purchase-intent comments",
+              "value": "28 purchase-intent comments",
               "weightPct": 10,
-              "detail": "19 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "detail": "28 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -49876,9 +31382,9 @@
               "key": "cadence",
               "label": "Cadence decay",
               "engine": "rule",
-              "value": "+0% vs baseline",
+              "value": "+1% vs baseline",
               "weightPct": 0,
-              "detail": "34 videos a month now, against 34 before that — down 0% — 0 of the 40 Pressure points. Ceiling on this look is 34."
+              "detail": "1 posts a month, steady against 1 before that — 0 of the 40 Pressure points. Ceiling on this look is 34."
             },
             {
               "key": "unanswered",
@@ -49899,7 +31405,7 @@
               "label": "Against the brief",
               "engine": "llm",
               "value": "pass",
-              "detail": "He's a dedicated car detailing channel doing hands-on transformations of filthy vehicles on camera in a repeatable format, and he points viewers to the products he uses, which is exactly what the brief asks for."
+              "detail": "He restores metal machinery and tools on camera in a rigidly repeated, edited format, which is squarely what the brief asks for — the only gap is that his ASMR style is wordless, so he doesn't verbally name parts or products, though the work itself is shot part-by-part in close detail."
             }
           ]
         }
@@ -49908,48 +31414,48 @@
         {
           "item": "YouTube channel",
           "state": "present",
-          "surfacesChecked": 16,
-          "note": "found it — youtube.com/@thedetailgeek",
+          "surfacesChecked": 18,
+          "note": "found it — youtube.com/@mymechanics",
           "observedAt": "2026-08-14",
           "source": "youtube_channel"
         },
         {
           "item": "Newsletter",
           "state": "verified_absent",
-          "surfacesChecked": 101,
+          "surfacesChecked": 97,
           "note": "not there · we looked in 6 places",
           "observedAt": "2026-08-14",
           "source": "newsletter"
         },
         {
           "item": "Store",
-          "state": "present",
-          "surfacesChecked": 64,
-          "note": "something at detailgeekautocare.com/shop — not confirmed as theirs",
+          "state": "verified_absent",
+          "surfacesChecked": 60,
+          "note": "not there · we looked in 4 places · 2 wouldn't answer",
           "observedAt": "2026-08-14",
           "source": "store"
         },
         {
           "item": "Membership",
-          "state": "verified_absent",
-          "surfacesChecked": 46,
-          "note": "not there · we looked in 3 places",
+          "state": "present",
+          "surfacesChecked": 17,
+          "note": "something at patreon.com/mymechanics — not confirmed as theirs",
           "observedAt": "2026-08-14",
           "source": "membership"
         },
         {
           "item": "Podcast",
           "state": "verified_absent",
-          "surfacesChecked": 27,
-          "note": "not there · we looked in 2 places",
+          "surfacesChecked": 18,
+          "note": "not there · we looked in 1 place",
           "observedAt": "2026-08-14",
           "source": "podcast"
         },
         {
           "item": "Website",
           "state": "present",
-          "surfacesChecked": 39,
-          "note": "found it — tiktok.com/@thedetailgeek",
+          "surfacesChecked": 0,
+          "note": "found it — mymechanics.com/personal",
           "observedAt": "2026-08-14",
           "source": "website"
         },
@@ -49965,7 +31471,7 @@
           "item": "Sponsored posts",
           "state": "not_found",
           "surfacesChecked": 0,
-          "note": "nothing in the 6 recent captions we could read — a sample, which cannot show that none exist",
+          "note": "nothing in the 5 recent captions we could read — a sample, which cannot show that none exist",
           "observedAt": "2026-08-14",
           "source": "sponsorships"
         },
@@ -49973,7 +31479,7 @@
           "item": "Affiliate links",
           "state": "not_found",
           "surfacesChecked": 0,
-          "note": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "note": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
           "observedAt": "2026-08-14",
           "source": "affiliate_links"
         },
@@ -49997,7 +31503,88 @@
       "evidence": [
         {
           "kind": "comment",
-          "quote": "At this point I would buy new mats!",
+          "quote": "all i want for Christmas is your engine block restoration",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "5 months later and I am just dying for the next long form update.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Please never stop what you're doing.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I'm not ashamed to admit that I use your restoration videos as white noise to help me fall asleep, I have for years, even before I became a hydraulic mechanic.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Still waiting after 6 months, can't wait to see him restore the engine parts.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "老哥還活著嗎?我在等你的影片更新",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I just watched the entire thing through in one sitting.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I joined the army in 1975. Only to be able to get the money together to buy one of these cars.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "When is the next video coming out?😊😊",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I have a 2012 Lexus ES350. Watching your restoration video, I would give anything to have you work on restoring the car to as pristine a condition as you have done with this.",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -50006,34 +31593,7 @@
         },
         {
           "kind": "comment",
-          "quote": "Want to join this channel?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "At this point I would buy new mats!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Want to join this channel?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "At this point I would buy new mats! 😮",
+          "quote": "Historians in 200 years are going to be very confused about why there is only one Datsun 240z left in existence.",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -50042,61 +31602,7 @@
         },
         {
           "kind": "comment",
-          "quote": "Want to join this channel?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "At this point I would buy new mats! 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Want to join this channel?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "At this point I would buy new mats!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "At this point I would buy new mats!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "At this point I would buy new mats! 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Want to join this channel?",
+          "quote": "I just wanted to say I don't care if it takes you 10 years to finish this car, I'll be here watching the videos and supporting the channel.",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -50105,7 +31611,7 @@
         },
         {
           "kind": "comment",
-          "quote": "Want to join this channel?",
+          "quote": "When is the next video coming out?",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -50114,34 +31620,7 @@
         },
         {
           "kind": "comment",
-          "quote": "At this point I would buy new mats!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Want to join this channel?",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "At this point I would buy new mats! 😮",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Want to join this channel?",
+          "quote": "have been trying to get my husband into watching restoration videos with me, and your series on this car has been perfect. you were already my favorite restoration channel, and he loves cars, so now we both get excited when a new video comes out and we can enjoy it together (or separately for maximu",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -50150,21 +31629,129 @@
         },
         {
           "kind": "comment",
-          "quote": "At this point I would buy new mats!",
+          "quote": "I cant wait for the engine build, trimming sharp edges of a piston, filing forging marks on conn rods, powder coated crankshaft",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "unspecified"
+          "label": "youtube_channel"
         },
         {
           "kind": "comment",
-          "quote": "Want to join this channel?",
+          "quote": "I don't care if it takes you 10 years to finish this car, I'll be here watching the videos and supporting the channel.",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "unspecified"
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Cant wait for it!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I'll be here watching the videos and supporting the channel.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I'm looking forward to the rest.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "When a new video comes out and we can enjoy it together",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Waiting to see that beauty on the road!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I think maybe just like everyone else we are wondering are you ok? Has this project just stopped",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Cannot wait for the upcoming videos",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Keep up the good work MM!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Tôi đã đợi quá lâu mong chờ đến phần động cơ , nội thất và chiếc xe lăn bánh",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Just in case you're worried about how long this project is taking, on a Youtube project timeline. I just wanted to say I don't care if it takes you 10 years to finish this car, I'll be here watching the videos and supporting the channel.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "I think maybe just like everyone else we are wondering are you ok? Has this project just stopped 😢",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
+        },
+        {
+          "kind": "comment",
+          "quote": "Looking forward to the rest.",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "youtube_channel"
         }
       ],
       "status": "candidate",
@@ -50176,76 +31763,76 @@
       "alert": null,
       "samples": [
         {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "You Won't BELIEVE What Was Inside This Car!!",
-          "url": "https://www.youtube.com/watch?v=xcB6b1EttVM",
-          "at": "2026-08-14T13:00:33Z",
-          "thumbnail": "https://i.ytimg.com/vi/xcB6b1EttVM/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 1003,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:20:49.110Z",
+          "platform": "Their site",
+          "publication": "Mechanics Bank",
+          "kind": "writing",
+          "title": "Intern Insider",
+          "url": "https://www.mymechanics.com/intern-insider-3/",
+          "at": "2026-07-30T12:09:56.000Z",
+          "thumbnail": null,
+          "excerpt": "This summer, Carter Weaver joined Mechanics Bank as an intern, eager to gain hands-on experience with an organization he was already familiar with. Having previously banked with Mechanics, the opportunity to intern close to home while learning more about the financial industry made it an easy decisi",
+          "metric": null,
+          "metricUnit": null,
+          "metricWhy": "a feed carries no read or listen count",
+          "foundIn": "their site",
+          "seenAt": "2026-08-14T13:23:12.977Z",
           "status": null
         },
         {
           "platform": "YouTube",
           "publication": null,
           "kind": "video",
-          "title": "The Dirt Didn't Stand a Chance...",
-          "url": "https://www.youtube.com/watch?v=D5Ohu6wqL5M",
-          "at": "2026-08-13T19:00:07Z",
-          "thumbnail": "https://i.ytimg.com/vi/D5Ohu6wqL5M/hqdefault.jpg",
+          "title": "The Datsun 240Z Restoration So Far - 2.5 Years in One Video (Part 1-8)",
+          "url": "https://www.youtube.com/watch?v=24KolOaqA6Q",
+          "at": "2025-12-21T09:12:34Z",
+          "thumbnail": "https://i.ytimg.com/vi/24KolOaqA6Q/hqdefault.jpg",
           "excerpt": null,
-          "metric": 4743,
+          "metric": 2136401,
           "metricUnit": "views",
           "metricWhy": null,
           "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:20:49.110Z",
+          "seenAt": "2026-08-14T13:23:03.465Z",
           "status": null
         },
         {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "The Right Way to Clean a Dirty Headliner!",
-          "url": "https://www.youtube.com/watch?v=-tO-C-PQH3g",
-          "at": "2026-08-12T19:00:37Z",
-          "thumbnail": "https://i.ytimg.com/vi/-tO-C-PQH3g/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 5179,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:20:49.110Z",
+          "platform": "Their site",
+          "publication": "Mechanics Bank",
+          "kind": "writing",
+          "title": "Mechanics Bank Announces Promotion",
+          "url": "https://www.mymechanics.com/mechanics-bank-announces-promotion-2/",
+          "at": "2026-07-14T12:17:52.000Z",
+          "thumbnail": null,
+          "excerpt": "Mechanics Bank is pleased to announce the following promotion:\n \n Lindsay Alton has been promoted to Senior Vice President, Controller. Lindsay joined Mechanics in 2018 and served as a Senior Financial Analyst and Strategic Finance Manager prior to her current role. Lindsay has over 20 years of expe",
+          "metric": null,
+          "metricUnit": null,
+          "metricWhy": "a feed carries no read or listen count",
+          "foundIn": "their site",
+          "seenAt": "2026-08-14T13:23:12.977Z",
           "status": null
         },
         {
-          "platform": "YouTube",
-          "publication": null,
-          "kind": "video",
-          "title": "You Won’t Believe What Came Out of This Floor Mat!",
-          "url": "https://www.youtube.com/watch?v=tsP9dBKfvOE",
-          "at": "2026-08-11T19:00:33Z",
-          "thumbnail": "https://i.ytimg.com/vi/tsP9dBKfvOE/hqdefault.jpg",
-          "excerpt": null,
-          "metric": 30130,
-          "metricUnit": "views",
-          "metricWhy": null,
-          "foundIn": "the YouTube Data API",
-          "seenAt": "2026-08-14T13:20:49.111Z",
+          "platform": "Their site",
+          "publication": "Mechanics Bank",
+          "kind": "writing",
+          "title": "Mechanics Bank Welcomes New Personnel",
+          "url": "https://www.mymechanics.com/mechanics-bank-welcomes-new-personnel/",
+          "at": "2026-06-26T19:03:07.000Z",
+          "thumbnail": null,
+          "excerpt": "Mechanics Bank is pleased to announce the addition of Brian Hinkle to the Mechanics team.\n \n Brian joined the Bank as a Business Development Officer and serves the Ashland market, where he has been a lifelong resident. Brian holds a Bachelor’s degree from Ashland University and has over 25 years of ",
+          "metric": null,
+          "metricUnit": null,
+          "metricWhy": "a feed carries no read or listen count",
+          "foundIn": "their site",
+          "seenAt": "2026-08-14T13:23:12.977Z",
           "status": null
         }
       ],
       "samplesSearched": {
-        "count": 0,
-        "why": "they link none of their own posts anywhere we can read"
+        "count": 3,
+        "why": "3 pieces of their own work"
       },
-      "headline": "thedetailgeek posts 34 car detailing videos a month to 3,970,000 YouTube subscribers and sells through a store and his own site, but has no newsletter, membership, or podcast to reach that audience directly.",
-      "headlineRestsOn": "3,970,000 on YouTube · 34 videos a month now · YouTube channel · Store · Own website · Newsletter · Membership · Podcast · \"The Right Way to Clean a Dirty Headliner!\" (5,151 views) · \"You Won\\u2019t Believe What Came Out of This Floor Mat!\" (30,029 views)",
+      "headline": "mymechanics films long car and tool restorations for 3,640,000 YouTube subscribers, with recent videos between 1,866,872 and 3,745,255 views, and sells nothing beyond memberships and his own website, so there is no newsletter, store, or podcast yet.",
+      "headlineRestsOn": "3,640,000 on YouTube · YouTube channel · Membership · Own website · Newsletter · Store · Podcast · \"Datsun 240 Restoration Part 7 - Rear End Perfection\" (1,866,872 views) · \"Datsun 240Z Restoration - Front Axle (Part 6)\" (3,745,255 views) · \"1917 Swiss Bead Roller Restoration - Making New Ones for a Masterpiece\" (1,886,329 views)",
       "accent": "#6E6E6E",
       "play": {
         "id": null,
@@ -50267,7 +31854,7 @@
         "outreach"
       ],
       "source": "proposed",
-      "sourceWhy": "a model proposed this handle from a brief — Canadian detailer whose entire channel is one repeated format: a filthy car, an on-camera clean, with the chemicals and tools named as he goes.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
+      "sourceWhy": "a model proposed this handle from a brief — Arthur Tussik, known for silent rust restoration of tools and machine parts, showing every component disassembled, cleaned and reassembled in the same repeating structure.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
     },
     {
       "id": "c_car_detailing_diy_repair_3__ammonyc",
@@ -50510,6 +32097,356 @@
       "sourceWhy": "a model proposed this handle from a brief — Larry Kosilla, one of the most widely written-about detailers; his videos are step-by-step paint correction and wash work with each chemical and pad named on camera.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
     },
     {
+      "id": "c_car_detailing_diy_repair_3__thedetailgeek",
+      "name": "thedetailgeek",
+      "handle": "@thedetailgeek",
+      "initials": "TH",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nh3BpO_PmKIExTQ9jmJWnD5b2TEqowJ8lRMqu2S9vbcQk=s900-c0x00ffffff-no-rj",
+      "mandateId": "m_car_detailing_diy_repair_3",
+      "primaryPlatform": "TikTok profile",
+      "platforms": [
+        {
+          "name": "TikTok profile",
+          "handle": "@thedetailgeek",
+          "followers": 177800,
+          "url": "https://www.tiktok.com/@thedetailgeek",
+          "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/938da8ca29041f696d767b6e440090aa~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=6be62894&x-expires=1786885200&x-signature=eXOeIBfAXHwblr39EU56wvyWbrA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+          "avatarExpires": "2026-08-16T13:00:00.000Z",
+          "avatarStale": false,
+          "separate": true,
+          "why": "nothing on either page links the TikTok to the YouTube, so it is not added in"
+        },
+        {
+          "name": "YouTube channel",
+          "handle": "@thedetailgeek",
+          "followers": 3970000,
+          "url": "https://www.youtube.com/@thedetailgeek",
+          "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_nh3BpO_PmKIExTQ9jmJWnD5b2TEqowJ8lRMqu2S9vbcQk=s900-c0x00ffffff-no-rj",
+          "avatarExpires": null,
+          "avatarStale": false,
+          "matchConfidence": 1
+        }
+      ],
+      "places": [
+        {
+          "name": "TikTok profile",
+          "url": "https://www.tiktok.com/@thedetailgeek",
+          "host": "tiktok.com",
+          "followers": 177800
+        },
+        {
+          "name": "YouTube channel",
+          "url": "https://www.youtube.com/@thedetailgeek",
+          "host": "youtube.com",
+          "followers": 3970000
+        }
+      ],
+      "audience": {
+        "total": 3970000
+      },
+      "score": 14,
+      "scoreDelta": null,
+      "confidence": 0.833,
+      "pillars": {
+        "gap": {
+          "score": 14,
+          "max": 60,
+          "engine": "rule+llm",
+          "coverage": 0.833,
+          "subsignals": [
+            {
+              "key": "owned",
+              "label": "Owned-channel absence",
+              "engine": "rule",
+              "value": "No newsletter, no membership, no podcast",
+              "weightPct": 99,
+              "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
+            },
+            {
+              "key": "demand",
+              "label": "Unmet demand",
+              "engine": "llm+rule",
+              "value": "3 purchase-intent comments",
+              "weightPct": 1,
+              "detail": "3 lines classified as intent to buy or subscribe, in text the engine fetched first."
+            }
+          ]
+        },
+        "strain": {
+          "score": 0,
+          "max": 40,
+          "engine": "rule+llm",
+          "subsignals": [
+            {
+              "key": "abandon",
+              "label": "Abandonment markers",
+              "engine": "rule",
+              "value": "nothing abandoned that we can see",
+              "weightPct": 0,
+              "detail": "nothing abandoned that we can see — 0 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "selfreport",
+              "label": "Self-reported strain",
+              "engine": "llm",
+              "value": "we couldn't read their captions",
+              "weightPct": 0,
+              "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "cadence",
+              "label": "Cadence decay",
+              "engine": "rule",
+              "value": "+0% vs baseline",
+              "weightPct": 0,
+              "detail": "34 videos a month now, against 34 before that — down 0% — 0 of the 40 Pressure points. Ceiling on this look is 34."
+            },
+            {
+              "key": "unanswered",
+              "label": "Unanswered audience",
+              "engine": "rule",
+              "value": "not readable on this look",
+              "weightPct": 0,
+              "detail": "needs a second look — this is a change over time, and we have seen them once"
+            }
+          ]
+        },
+        "fit": {
+          "verdict": "pass",
+          "engine": "llm",
+          "subsignals": [
+            {
+              "key": "brief",
+              "label": "Against the brief",
+              "engine": "llm",
+              "value": "pass",
+              "detail": "He's a dedicated car detailing channel doing hands-on transformations of filthy vehicles on camera in a repeatable format, and he points viewers to the products he uses, which is exactly what the brief asks for."
+            }
+          ]
+        }
+      },
+      "inventory": [
+        {
+          "item": "YouTube channel",
+          "state": "present",
+          "surfacesChecked": 16,
+          "note": "found it — youtube.com/@thedetailgeek",
+          "observedAt": "2026-08-14",
+          "source": "youtube_channel"
+        },
+        {
+          "item": "Newsletter",
+          "state": "verified_absent",
+          "surfacesChecked": 101,
+          "note": "not there · we looked in 6 places",
+          "observedAt": "2026-08-14",
+          "source": "newsletter"
+        },
+        {
+          "item": "Store",
+          "state": "present",
+          "surfacesChecked": 64,
+          "note": "something at detailgeekautocare.com/shop — not confirmed as theirs",
+          "observedAt": "2026-08-14",
+          "source": "store"
+        },
+        {
+          "item": "Membership",
+          "state": "verified_absent",
+          "surfacesChecked": 46,
+          "note": "not there · we looked in 3 places",
+          "observedAt": "2026-08-14",
+          "source": "membership"
+        },
+        {
+          "item": "Podcast",
+          "state": "verified_absent",
+          "surfacesChecked": 27,
+          "note": "not there · we looked in 2 places",
+          "observedAt": "2026-08-14",
+          "source": "podcast"
+        },
+        {
+          "item": "Website",
+          "state": "present",
+          "surfacesChecked": 39,
+          "note": "found it — tiktok.com/@thedetailgeek",
+          "observedAt": "2026-08-14",
+          "source": "website"
+        },
+        {
+          "item": "Representation",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "their bio does not mention it, which is not the same as nobody having signed them",
+          "observedAt": "2026-08-14",
+          "source": "representation"
+        },
+        {
+          "item": "Sponsored posts",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "nothing in the 6 recent captions we could read — a sample, which cannot show that none exist",
+          "observedAt": "2026-08-14",
+          "source": "sponsorships"
+        },
+        {
+          "item": "Affiliate links",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "observedAt": "2026-08-14",
+          "source": "affiliate_links"
+        },
+        {
+          "item": "Platform subscriptions",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+          "observedAt": "2026-08-14",
+          "source": "platform_subscriptions"
+        },
+        {
+          "item": "Shopping tags",
+          "state": "not_found",
+          "surfacesChecked": 0,
+          "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+          "observedAt": "2026-08-14",
+          "source": "shopping_tags"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "comment",
+          "quote": "At this point I would buy new mats!",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "Want to join this channel?",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        },
+        {
+          "kind": "comment",
+          "quote": "At this point I would buy new mats! 😮",
+          "platform": "YouTube",
+          "url": null,
+          "observedAt": "2026-08-14",
+          "engine": "llm",
+          "label": "unspecified"
+        }
+      ],
+      "status": "candidate",
+      "resurfaced": null,
+      "passed": null,
+      "promoted": null,
+      "outcome": null,
+      "asOf": "2026-08-14",
+      "alert": null,
+      "samples": [
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "You Won't BELIEVE What Was Inside This Car!!",
+          "url": "https://www.youtube.com/watch?v=xcB6b1EttVM",
+          "at": "2026-08-14T13:00:33Z",
+          "thumbnail": "https://i.ytimg.com/vi/xcB6b1EttVM/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 1003,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:20:49.110Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "The Dirt Didn't Stand a Chance...",
+          "url": "https://www.youtube.com/watch?v=D5Ohu6wqL5M",
+          "at": "2026-08-13T19:00:07Z",
+          "thumbnail": "https://i.ytimg.com/vi/D5Ohu6wqL5M/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 4743,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:20:49.110Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "The Right Way to Clean a Dirty Headliner!",
+          "url": "https://www.youtube.com/watch?v=-tO-C-PQH3g",
+          "at": "2026-08-12T19:00:37Z",
+          "thumbnail": "https://i.ytimg.com/vi/-tO-C-PQH3g/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 5179,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:20:49.110Z",
+          "status": null
+        },
+        {
+          "platform": "YouTube",
+          "publication": null,
+          "kind": "video",
+          "title": "You Won’t Believe What Came Out of This Floor Mat!",
+          "url": "https://www.youtube.com/watch?v=tsP9dBKfvOE",
+          "at": "2026-08-11T19:00:33Z",
+          "thumbnail": "https://i.ytimg.com/vi/tsP9dBKfvOE/hqdefault.jpg",
+          "excerpt": null,
+          "metric": 30130,
+          "metricUnit": "views",
+          "metricWhy": null,
+          "foundIn": "the YouTube Data API",
+          "seenAt": "2026-08-14T13:20:49.111Z",
+          "status": null
+        }
+      ],
+      "samplesSearched": {
+        "count": 0,
+        "why": "they link none of their own posts anywhere we can read"
+      },
+      "headline": "thedetailgeek posts 34 car detailing videos a month to 3,970,000 YouTube subscribers and sells through a store and his own site, but has no newsletter, membership, or podcast to reach that audience directly.",
+      "headlineRestsOn": "3,970,000 on YouTube · 34 videos a month now · YouTube channel · Store · Own website · Newsletter · Membership · Podcast · \"The Right Way to Clean a Dirty Headliner!\" (5,151 views) · \"You Won\\u2019t Believe What Came Out of This Floor Mat!\" (30,029 views)",
+      "accent": "#6E6E6E",
+      "play": {
+        "id": null,
+        "label": "No play recommended",
+        "why": "The play catalog (§5.5) is a product decision the engine does not make.",
+        "generated": true
+      },
+      "outreach": {
+        "subject": null,
+        "opener": null,
+        "bullets": [],
+        "close": null,
+        "generated": true,
+        "why": "Generated on Promote (§6.5). Nothing generates it yet."
+      },
+      "generatedFields": [
+        "accent",
+        "play",
+        "outreach"
+      ],
+      "source": "proposed",
+      "sourceWhy": "a model proposed this handle from a brief — Canadian detailer whose entire channel is one repeated format: a filthy car, an on-camera clean, with the chemicals and tools named as he goes.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity."
+    },
+    {
       "id": "c_car_detailing_diy_repair_3__vicegripgarage",
       "name": "vicegripgarage",
       "handle": "@vicegripgarage",
@@ -50572,16 +32509,16 @@
               "label": "Owned-channel absence",
               "engine": "rule",
               "value": "No newsletter, no membership, no podcast",
-              "weightPct": 94,
+              "weightPct": 98,
               "detail": "4 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
             },
             {
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "11 purchase-intent comments",
-              "weightPct": 6,
-              "detail": "11 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "value": "4 purchase-intent comments",
+              "weightPct": 2,
+              "detail": "4 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -50749,24 +32686,6 @@
         },
         {
           "kind": "comment",
-          "quote": "1st week on the air at a new radio station and today in the 5 o'clock hour when the most people are listening while they are driving home I said \"I can't wait to go home and watch part 2 of last weeks Vice Grip Garage video on their You Tube channel. If you are in to cars and car revivals VGG is you",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "1st week on the air at a new radio station and today in the 5 o'clock hour when the most people are listening while they are driving home I said \"I can't wait to go home and watch part 2 of last weeks Vice Grip Garage video on their You Tube channel. If you are in to cars and car revivals VGG is you",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
           "quote": "Fix up the LUV! Would be a great video series! Love VGG. Thank you Derek and family!",
           "platform": "YouTube",
           "url": null,
@@ -50777,51 +32696,6 @@
         {
           "kind": "comment",
           "quote": "You guys offroading an old rig to see cool stuff getting in family time is everything thing to me. Seriously if you and the boys start going to see cool outdoor stuff and trail riding in old beaters I'd watch the hell out of that.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "1st week on the air at a new radio station and today in the 5 o'clock hour when the most people are listening while they are driving home I said \"I can't wait to go home and watch part 2 of last weeks Vice Grip Garage video on their You Tube channel. If you are in to cars and car revivals VGG is you",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Fix up the LUV! Would be a great video series! Love VGG. Thank you Derek and family!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "You guys offroading an old rig to see cool stuff getting in family time is everything thing to me. Seriously if you and the boys start going to see cool outdoor stuff and trail riding in old beaters I'd watch the hell out of that.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "1st week on the air at a new radio station and today in the 5 o'clock hour when the most people are listening while they are driving home I said \"I can't wait to go home and watch part 2 of last weeks Vice Grip Garage video on their You Tube channel. If you are in to cars and car revivals VGG is you",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "1st week on the air at a new radio station and today in the 5 o'clock hour when the most people are listening while they are driving home I said \"I can't wait to go home and watch part 2 of last weeks Vice Grip Garage video on their You Tube channel. If you are in to cars and car revivals VGG is you",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -50983,12 +32857,12 @@
       "audience": {
         "total": 666000
       },
-      "score": 12,
+      "score": 11,
       "scoreDelta": null,
       "confidence": 0.833,
       "pillars": {
         "gap": {
-          "score": 12,
+          "score": 11,
           "max": 60,
           "engine": "rule+llm",
           "coverage": 0.833,
@@ -50998,16 +32872,16 @@
               "label": "Owned-channel absence",
               "engine": "rule",
               "value": "No newsletter, no podcast",
-              "weightPct": 92,
+              "weightPct": 96,
               "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
             },
             {
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "12 purchase-intent comments",
-              "weightPct": 8,
-              "detail": "12 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "value": "5 purchase-intent comments",
+              "weightPct": 4,
+              "detail": "5 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -51175,52 +33049,7 @@
         },
         {
           "kind": "comment",
-          "quote": "Hey Ray, you need at least one more subscriber! Your at 666,000😳",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ray when will we see you fixing Laurens Tahoe. cant wait to see it. im addicted tp your channel 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Hey Ray, you need at least one more subscriber! Your at 666,000😳",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
           "quote": "can't wait for part 3 LOL",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Hey Ray, you need at least one more subscriber! Your at 666,000😳",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ray when will we see you fixing Laurens Tahoe. cant wait to see it. im addicted tp your channel 😂",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -51244,24 +33073,6 @@
           "observedAt": "2026-08-14",
           "engine": "llm",
           "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ray when will we see you fixing Laurens Tahoe. cant wait to see it. im addicted tp your channel 😂",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
-        },
-        {
-          "kind": "comment",
-          "quote": "Hey Ray, you need at least one more subscriber! Your at 666,000😳",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "youtube_channel"
         }
       ],
       "status": "candidate",
@@ -58587,15 +40398,15 @@
         "c_worth_call_they_make_2__watchweswork",
         "c_worth_call_they_make_2__itshunterfriesen",
         "c_worth_call_they_make_2__marcelluswiley",
-        "c_worth_call_they_make_2__superfastmatt",
-        "c_worth_call_they_make_2__motorcitymechanic",
         "c_worth_call_they_make_2__hayesfawcett",
         "c_worth_call_they_make_2__girlwholove2gossip",
         "c_worth_call_they_make_2__ratchetsandwrenches",
+        "c_worth_call_they_make_2__motorcitymechanic",
         "c_worth_call_they_make_2__backseatcoach",
         "c_worth_call_they_make_2__samhartman_10",
         "c_worth_call_they_make_2__catsofyore",
         "c_worth_call_they_make_2__humblemechanic",
+        "c_worth_call_they_make_2__superfastmatt",
         "c_worth_call_they_make_2__brandonfwalker",
         "c_worth_call_they_make_2__gossipgilby",
         "c_worth_call_they_make_2__jeffvandermeer",
@@ -58649,13 +40460,13 @@
       ],
       "m_home_cooking_recipe_creators": [
         "c_home_cooking_recipe_creators__chefjeanpierre",
-        "c_home_cooking_recipe_creators__joshuaweissman",
-        "c_home_cooking_recipe_creators__doobydobap",
         "c_home_cooking_recipe_creators__cookingwithlynja",
         "c_home_cooking_recipe_creators__halfbakedharvest",
+        "c_home_cooking_recipe_creators__doobydobap",
+        "c_home_cooking_recipe_creators__joshuaweissman",
         "c_home_cooking_recipe_creators__ethanchlebowski",
-        "c_home_cooking_recipe_creators__brianlagerstrom",
         "c_home_cooking_recipe_creators__thegoldenbalance",
+        "c_home_cooking_recipe_creators__brianlagerstrom",
         "c_home_cooking_recipe_creators__sipandfeast",
         "c_home_cooking_recipe_creators__adamragusea"
       ],
@@ -58673,11 +40484,11 @@
         "c_car_detailing_diy_repair_3__pantheorganizer",
         "c_car_detailing_diy_repair_3__stauffergarage",
         "c_car_detailing_diy_repair_3__obsessedgarage",
-        "c_car_detailing_diy_repair_3__mymechanics",
         "c_car_detailing_diy_repair_3__mustie1",
         "c_car_detailing_diy_repair_3__thecarwizard",
-        "c_car_detailing_diy_repair_3__thedetailgeek",
+        "c_car_detailing_diy_repair_3__mymechanics",
         "c_car_detailing_diy_repair_3__ammonyc",
+        "c_car_detailing_diy_repair_3__thedetailgeek",
         "c_car_detailing_diy_repair_3__vicegripgarage",
         "c_car_detailing_diy_repair_3__rainmanraysrepairs",
         "c_car_detailing_diy_repair_3__chrisfix",
@@ -58764,12 +40575,12 @@
     "audience": {
       "total": 1120000
     },
-    "score": 44,
+    "score": 39,
     "scoreDelta": null,
     "confidence": 0.833,
     "pillars": {
       "gap": {
-        "score": 32,
+        "score": 27,
         "max": 60,
         "engine": "rule+llm",
         "coverage": 0.833,
@@ -58779,16 +40590,16 @@
             "label": "Owned-channel absence",
             "engine": "rule",
             "value": "No store, no newsletter, no membership",
-            "weightPct": 75,
+            "weightPct": 89,
             "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
           },
           {
             "key": "demand",
             "label": "Unmet demand",
             "engine": "llm+rule",
-            "value": "144 purchase-intent comments",
-            "weightPct": 25,
-            "detail": "144 lines classified as intent to buy or subscribe, in text the engine fetched first."
+            "value": "41 purchase-intent comments",
+            "weightPct": 11,
+            "detail": "41 lines classified as intent to buy or subscribe, in text the engine fetched first."
           }
         ]
       },
@@ -58952,7 +40763,7 @@
         "url": null,
         "observedAt": "2026-08-14",
         "engine": "llm",
-        "label": "unspecified"
+        "label": "store"
       },
       {
         "kind": "comment",
@@ -58961,7 +40772,7 @@
         "url": null,
         "observedAt": "2026-08-14",
         "engine": "llm",
-        "label": "unspecified"
+        "label": "store"
       },
       {
         "kind": "comment",
@@ -58970,7 +40781,7 @@
         "url": null,
         "observedAt": "2026-08-14",
         "engine": "llm",
-        "label": "unspecified"
+        "label": "store"
       },
       {
         "kind": "comment",
@@ -59055,52 +40866,7 @@
       },
       {
         "kind": "comment",
-        "quote": "Ordered!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "But just to support Ivan I'll buy a bott",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "But just to support Ivan I'll buy a bott",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
         "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
         "platform": "YouTube",
         "url": null,
         "observedAt": "2026-08-14",
@@ -59136,43 +40902,7 @@
       },
       {
         "kind": "comment",
-        "quote": "I have purchased many products from DIY and CLEAN, and love both.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Just started using this product and love it!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
         "quote": "Can't wait to try it out 🔥",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
         "platform": "YouTube",
         "url": null,
         "observedAt": "2026-08-14",
@@ -59190,61 +40920,7 @@
       },
       {
         "kind": "comment",
-        "quote": "But just to support Ivan I'll buy a bott",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
         "quote": "I have a 80series landcruiser i been looking for a great product.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I have two unopened tins still on my shelf from when I thought it was being discontinued so I stocked up.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I use the Diy wax , I can say it really does fill.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "However $30 for this glass/cleaner/sealant is a bit steep considering you can get Glaco for $35 which is a full on coating. But just to support Ivan I'll buy a bott",
         "platform": "YouTube",
         "url": null,
         "observedAt": "2026-08-14",
@@ -59262,43 +40938,7 @@
       },
       {
         "kind": "comment",
-        "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
         "quote": "Love me some DIYDetail products, I'm still hooked on Quickbeads. My favorite so far, you have to pry it from my dead cold beaded hands. However $30 for this glass/cleaner/sealant is a bit steep considering you can get Glaco for $35 which is a full on coating. But just to support Ivan I'll buy a bott",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
         "platform": "YouTube",
         "url": null,
         "observedAt": "2026-08-14",
@@ -59380,33 +41020,6 @@
       {
         "kind": "comment",
         "quote": "Have a whole gallon love it !!!!!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Can't wait to try it out 🔥",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
         "platform": "YouTube",
         "url": null,
         "observedAt": "2026-08-14",
@@ -59424,42 +41037,6 @@
       },
       {
         "kind": "comment",
-        "quote": "Thanks for the discount as always.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I did purchase the window cleaner (Glaco), but haven't used it ye",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I did a paint correction and put the 8 year coating on it.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
         "quote": "Hello Pan, Thank you for your videos — they truly help us better understand the entire world of detailing. I would like to know whether my Clean by Pan 8‑year coating, applied to my vehicle about a year ago and stored immediately afterward in my freezer, can still be used on my new summer car.",
         "platform": "YouTube",
         "url": null,
@@ -59469,151 +41046,16 @@
       },
       {
         "kind": "comment",
-        "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "My 128 oz one is arriving today😊",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Have a whole gallon love it !!!!!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
         "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
         "platform": "YouTube",
         "url": null,
         "observedAt": "2026-08-14",
         "engine": "llm",
-        "label": "unspecified"
-      },
-      {
-        "kind": "comment",
-        "quote": "Thanks for the discount as always.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "My 128 oz one is arriving today😊",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
+        "label": "membership"
       },
       {
         "kind": "comment",
         "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Have a whole gallon love it !!!!!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "But just to support Ivan I'll buy a bott",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Thanks for the discount as always.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
         "platform": "YouTube",
         "url": null,
         "observedAt": "2026-08-14",
@@ -59632,87 +41074,6 @@
       {
         "kind": "comment",
         "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "My 128 oz one is arriving today😊",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Have a whole gallon love it !!!!!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "unspecified"
-      },
-      {
-        "kind": "comment",
-        "quote": "Thanks for the discount as always.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
         "platform": "YouTube",
         "url": null,
         "observedAt": "2026-08-14",
@@ -59722,141 +41083,6 @@
       {
         "kind": "comment",
         "quote": "Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I did a paint correction and put the 8 year coating on it.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I would like to know whether my Clean by Pan 8‑year coating, applied to my vehicle about a year ago and stored immediately afterward in my freezer, can still be used on my new summer car.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "My 128 oz one is arriving today😊",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Have a whole gallon love it !!!!!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Can't wait to try it out 🔥",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "unspecified"
-      },
-      {
-        "kind": "comment",
-        "quote": "Thanks for the discount as always.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Finally, a C8 Corvette! Thanks, Pan, for making this happen. Nice to see your approach on this vehicle so I can learn some tricks taking care of mine... Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
         "platform": "YouTube",
         "url": null,
         "observedAt": "2026-08-14",
@@ -59874,52 +41100,7 @@
       },
       {
         "kind": "comment",
-        "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "unspecified"
-      },
-      {
-        "kind": "comment",
-        "quote": "My 128 oz one is arriving today😊",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
         "quote": "Hi pan, I'm currently half way through my V1 bottle and love the slickness, foam and scent. Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Have a whole gallon love it !!!!!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
         "platform": "YouTube",
         "url": null,
         "observedAt": "2026-08-14",
@@ -59934,303 +41115,6 @@
         "observedAt": "2026-08-14",
         "engine": "llm",
         "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "But just to support Ivan I'll buy a bott",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Thanks for the discount as always.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "My 128 oz one is arriving today😊",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Have a whole gallon love it !!!!!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "membership"
-      },
-      {
-        "kind": "comment",
-        "quote": "Thanks for the discount as always.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "My 128 oz one is arriving today😊",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Have a whole gallon love it !!!!!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I'll try this",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "But just to support Ivan I'll buy a bott",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "unspecified"
-      },
-      {
-        "kind": "comment",
-        "quote": "Thanks for the discount as always.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Finally, a C8 Corvette! Thanks, Pan, for making this happen. Nice to see your approach on this vehicle so I can learn some tricks taking care of mine... Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "My 128 oz one is arriving today😊",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Ordered!",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "store"
-      },
-      {
-        "kind": "comment",
-        "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-        "platform": "YouTube",
-        "url": null,
-        "observedAt": "2026-08-14",
-        "engine": "llm",
-        "label": "membership"
       },
       {
         "kind": "signal",
