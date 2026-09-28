@@ -2813,7 +2813,7 @@ blockquote.q .src .m { font-size: var(--fs-1); color: var(--text-3); }
 .trg-k { font-size: var(--fs-1); font-weight: 700; letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--text-3); }
 .trg-big { font-family: var(--disp); font-size: var(--fs-7); font-weight: 700; letter-spacing: -.03em;
   color: var(--text); font-variant-numeric: tabular-nums; line-height: 1; text-align: right; }
-.trg-big small { font-family: var(--body); font-size: var(--fs-2); font-weight: 500; color: var(--text-3); letter-spacing: 0; }
+.trg-big small { font-family: var(--ui); font-size: var(--fs-2); font-weight: 500; color: var(--text-3); letter-spacing: 0; }
 .trg-read { font-size: var(--fs-2); color: var(--text-2); line-height: 1.5; margin-top: 3px; }
 .trg-up { color: var(--text); font-weight: 600; }
 .trg-up::before { content: "\25B2 "; color: var(--teal-d); font-size: var(--fs-1); }
@@ -3095,7 +3095,7 @@ kbd {
 .tkpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s3); margin-top: var(--s5); }
 .tkpi { display: flex; flex-direction: column; gap: 2px; min-width: 0;
   padding: var(--s4) var(--s5); background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); }
-.tkpi-n { font-family: var(--display, inherit); font-size: clamp(26px, 2.6vw, 40px); font-weight: 700;
+.tkpi-n { font-family: var(--disp); font-size: clamp(26px, 2.6vw, 40px); font-weight: 700;
   letter-spacing: -.035em; line-height: 1.1; color: var(--text); }
 .tkpi-n--word { font-size: clamp(20px, 1.9vw, 28px); line-height: 1.25; }
 .tkpi-k { font-size: var(--fs-3); font-weight: 600; color: var(--text-2); }
@@ -3175,3 +3175,54 @@ kbd {
   .tmap { min-width: 560px; }
   .tevery .tpanel { overflow-x: auto; }
 }
+
+/* ================================================================ REPORT v7
+   ONE TYPE SYSTEM FOR THE REPORT. Measured before: 25 distinct text styles
+   across three families (one of them Arial, from buttons that never inherited
+   the app font, and two rules pointing at font variables that do not exist).
+   After, every piece of text takes one of eight roles:
+
+     title        --disp  38 / 700   the creator's name
+     heading      --disp  17 / 700   Demand, Output, Audience, a disclosure
+     figure       --disp  24 / 700   the one number a block leads with
+     lead         --ui    17 / 400   the model's read, a claim's first line
+     item         --ui    15 / 600   a work's title, a quote
+     body         --ui    13.5 / 400 lists, the fit's reason
+     meta         --ui    12.5 / 400 counts and dates under a line
+     label        --ui    11 / 700 caps  every eyebrow and chart tick
+
+   And ONE SECTION HEADER. The bands were butter, lilac and teal, a colour per
+   section that carried no meaning a reader could name. They are one neutral
+   band now; the eyebrow says what the section is.
+
+   And ONE DATA COLOUR for the report's charts: the built green, lighter for
+   the months and full for the one you are looking at. Violet means "not
+   there" everywhere else in Scout, so it no longer marks a selected month. */
+button, input, select, textarea { font-family: inherit; }
+
+/* -- section header */
+.claim .ch, .work .ch { background: var(--panel-2); color: var(--text); border-bottom: 1px solid var(--line); }
+.claim .ch h2, .work .ch h2 { font-family: var(--ui); color: var(--text-2); }
+.ch .q, .ch .pts--gate { color: var(--text-3); }
+.claim--why { background: var(--panel); }
+
+/* -- headings */
+.claim--why .subh, .claim--why .trg-k, .trg-k, .disc .t, .readfit .v {
+  font-family: var(--disp); font-size: var(--fs-5); font-weight: 700; letter-spacing: -.02em;
+  text-transform: none; color: var(--text); }
+.subh--gap, .claim .subh:not(.claim--why .subh) { font-family: var(--ui); }
+
+/* -- lead, item, body */
+.thesis, .lede { font-size: var(--fs-5); line-height: 1.5; }
+.quotes blockquote.q p, blockquote.q p { font-family: var(--ui); font-size: var(--fs-4); font-weight: 500; font-style: italic; line-height: 1.5; }
+.trg-ct, .sm-t { font-family: var(--ui); font-size: var(--fs-4); font-weight: 600; letter-spacing: 0; }
+.readfit .why { display: block; margin-top: 4px; font-family: var(--ui); font-size: var(--fs-3);
+  line-height: 1.55; color: var(--text-2); }
+
+/* -- charts: one data colour, app font on every tick */
+.trg-bar { background: color-mix(in srgb, var(--tc-p) 32%, var(--panel)); opacity: 1; }
+.trg-col:hover .trg-bar { background: color-mix(in srgb, var(--tc-p) 55%, var(--panel)); }
+.trg-col.sel .trg-bar { background: var(--tc-p); }
+.trg-peak { background: var(--tc-p); box-shadow: 0 0 0 3px color-mix(in srgb, var(--tc-p) 22%, transparent); }
+.trg-cap, .trg-sparkx, .trg-curvex { font-size: var(--fs-1); }
+.trg-curve svg path[stroke] { stroke: var(--tc-p); }

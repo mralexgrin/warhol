@@ -2488,7 +2488,7 @@
     var area = line + ' L' + xy[xy.length - 1][0] + ',' + GH + ' L' + xy[0][0] + ',' + GH + ' Z';
     var end = xy[xy.length - 1];
     var down = a.delta < 0;
-    var deltaStr = (down ? '−' : '+') + Math.abs(a.delta).toLocaleString('en-US');
+    var deltaStr = (down ? '−' : '+') + roundBig(Math.abs(a.delta).toLocaleString('en-US'));
     var pctStr = (down ? '−' : '+') + Math.abs(a.pct).toFixed(1) + '%';
 
     var audience = '<div class="trg">' +

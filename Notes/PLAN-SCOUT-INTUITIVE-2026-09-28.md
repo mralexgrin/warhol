@@ -156,3 +156,22 @@ Also fixed: the rail's resize listener missed the first width crossing after a l
 
 Asked for 28 Sep: in the report, the graphs, the summary and the type are all over the place. Streamline
 them into one scale, one chart style and one reading order.
+
+### Phase 7 — done on branch `phase7-report`
+
+Measured before: 25 distinct text styles on one report, across three families. Arial came from buttons
+that never inherited the app font. Two rules pointed at font variables that do not exist (`--body`,
+`--display`; the real ones are `--ui` and `--disp`), so they silently fell back to whatever font
+surrounded them.
+
+- **Eight type roles:** title 38, heading 17, figure 24 (display font); lead 17, item 15/600, body 13.5,
+  meta 12.5, label 11 caps (body font). Quotes and work titles moved to the body font. The fit's reason
+  went from 12.5px display to 13.5px body, so the read and the fit balance. Every button inherits the app
+  font. The page now uses 12 family/size pairs, all on the scale; the display sizes beyond the roles are the
+  score rings and avatar initials.
+- **One section header:** the butter, lilac and teal bands, a colour per section with no meaning a reader
+  could name, are now one neutral band, and the eyebrow says what the section is.
+- **One data colour for charts:** Output's months are pale built-green and the selected month is full
+  green (it was butter with a violet selection, and violet means "not there" elsewhere). Audience uses the
+  same green. The growth figure is rounded (+89,641 → +90k).
+- **Checked:** light and dark at 1440, and 375 with no overflow or console errors.
