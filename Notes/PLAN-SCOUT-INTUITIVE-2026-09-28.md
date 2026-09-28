@@ -103,6 +103,26 @@ Asked for 28 Sep: the layout is sloppy at several breakpoints and nearly unusabl
 Audit each screen at 375, 768, 1024, 1280 and 1440. On a phone, Scout becomes the drop, the report and the
 three verbs, and everything else steps back.
 
+### Phase 5 — done on branch `phase5-responsive`
+
+Found: 18 distinct width breakpoints, each added for one screen. At 375px the page was 473px wide, so
+everything was cut off on the right. The header took about 150px over four rows. The score ring sat on
+its own line above each name, and the verbs ran off-screen. At 768px the header wrapped into four rows.
+
+- **Phone (≤720px), one consolidated block:**
+  - A 56px sticky top bar holds the mark, Admin and you.
+  - The lists sit in a bottom tab bar with labels and counts.
+  - The page runs edge to edge with a single 16px gutter (the main pane's 24px no longer stacks on top).
+  - Brief tabs and Admin's section tabs scroll sideways.
+  - Rows put the ring beside the name, with the verbs as a full-width row of 44px targets.
+  - Wide tables scroll inside their own box.
+  - On a report the tab bar is replaced by a pinned bottom bar (back + the report's verbs, always
+    visible), so a decision never needs a scroll back to the top.
+- **Tablet (721–960px):** a single-row header (mark, labelled tabs, Admin and account icons), and rows
+  keep the ring beside the name.
+- **Checked:** no horizontal overflow on drop, report, watchlist, promoted, passed, admin or new brief at
+  375, 768, 900, 1024 and 1280. Sign-in fits at 375. Trends still overflows on a phone and is Phase 6.
+
 ## Phase 6 — Trends that read at a glance
 
 Asked for 28 Sep: *Where the market is short* is hard to read and could be much richer visually.

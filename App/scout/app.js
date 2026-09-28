@@ -5181,7 +5181,7 @@
                     state.view === 'briefdetail' ? briefDetailView() :
                       state.view === 'newbrief' ? briefView() : dropView();
 
-      html = '<div class="slab slab--app' + (railIsWide() ? '' : ' slab--rmini') + '">' + railHTML() +
+      html = '<div class="slab slab--app slab--v-' + esc(state.view) + (railIsWide() ? '' : ' slab--rmini') + '">' + railHTML() +
         '<main class="main" id="main">' +
         '<div class="wrap' + fade + '">' + body + '</div></main></div>';
     }

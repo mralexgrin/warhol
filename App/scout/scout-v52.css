@@ -2328,10 +2328,13 @@ blockquote.q .src .m { font-size: var(--fs-1); color: var(--text-3); }
   .row > .acts .vbtn, .row > .acts .btn { width: auto; }
 }
 @media (max-width: 900px) {
-  .row { grid-template-columns: 26px 1fr; }
-  .row > .scorewrap, .row > .rowmain { grid-column: 2; }
-  .row > .acts { grid-column: 2; flex-direction: row; flex-wrap: wrap; }
-  .wrow, .prow { grid-template-columns: 1fr; }
+  /* v7 — the ring stays beside the name. Stacking it on a line of its own
+     spent a whole row on one number and pushed every name down by 60px. */
+  .row { grid-template-columns: 26px 62px minmax(0, 1fr); }
+  .row > .acts { grid-column: 2 / -1; flex-direction: row; flex-wrap: wrap; }
+  .wrow { grid-template-columns: 54px minmax(0, 1fr); }
+  .wrow > .acts { grid-column: 1 / -1; }
+  .prow { grid-template-columns: 34px minmax(0, 1fr) auto; }
   .wrow > .acts { flex-direction: row; flex-wrap: wrap; }
   .wrow > .acts .vbtn { width: auto; }
   .whylist li, .preslist li { grid-template-columns: 1fr; gap: 2px; }
@@ -2925,3 +2928,152 @@ kbd {
 .donepanel { margin-bottom: var(--s5); padding-block: var(--s5); min-height: 0; }
 .doneacts { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s2); margin-top: var(--s4); }
 .doneacts:empty { display: none; }
+
+/* ===================================================================== PHONE
+   v7 — ONE PHONE LAYOUT, NOT EIGHTEEN BREAKPOINTS' WORTH OF ACCIDENTS.
+   Below 720px the desk becomes a phone app: a slim top bar (mark, Admin, you),
+   the lists as a bottom tab bar within thumb reach, the page edge to edge, and
+   every verb a full-width target. The desk-only tools (New brief in the rail,
+   the sidebar toggle, the engine footer) step out; the drop's own "New brief"
+   chip is still there for anyone who needs it. Everything above 720px is
+   untouched by this block. */
+@media (max-width: 720px) {
+  body { padding: 0; }
+  .slab, .slab--app { border-radius: 0; max-width: none; min-height: 100dvh; box-shadow: none; }
+
+  /* -- top bar */
+  .slab--app > .railcol {
+    position: sticky; top: 0; z-index: 40;
+    flex-direction: row; flex-wrap: nowrap; align-items: center; gap: var(--s2);
+    width: auto; min-height: 56px; padding: 8px var(--s4);
+    background: var(--slab); border-bottom: 1px solid var(--line);
+  }
+  .railcol .brandrow { padding: 0; margin-right: auto; }
+  .railcol .brandrow .sub-t, .railcol .engineft, .railcol .railtog, .railcol .newbrief { display: none; }
+  .railcol .brandlogo { height: 30px; width: auto; }
+  .railcol .railfoot {
+    display: flex; flex-direction: row; align-items: center; gap: var(--s2);
+    margin: 0; padding: 0; border: 0;
+  }
+  .railcol .railfoot .rnav { width: 40px; height: 40px; padding: 0; justify-content: center; }
+  .railcol .railfoot .rnav .tx, .railcol .whoami .who { display: none; }
+  .railcol .whoami { margin: 0; padding: 0; border: 0; width: 40px; height: 40px; justify-content: center; }
+
+  /* -- bottom tab bar */
+  .railcol .nav {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 45;
+    display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 0;
+    width: auto; margin: 0; padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
+    background: var(--panel); border-top: 1px solid var(--line); box-shadow: 0 -6px 20px -12px rgba(28,27,35,.25);
+  }
+  .railcol .nav .rnav {
+    position: relative; flex-direction: column; justify-content: center; gap: 2px;
+    width: auto; min-width: 0; min-height: 52px; padding: 4px 2px; border-radius: var(--r-sm);
+  }
+  .railcol .nav .rnav .tx {
+    display: block; flex: none; opacity: 1; visibility: visible; position: static;
+    font-size: 10.5px; font-weight: 600; letter-spacing: 0; white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis; max-width: 100%;
+  }
+  .railcol .nav .rnav .pill {
+    position: absolute; top: 2px; left: 50%; margin-left: 6px;
+    min-width: 18px; height: 18px; padding: 0 5px; font-size: 10.5px;
+  }
+  .slab--app > .main { padding-bottom: calc(84px + env(safe-area-inset-bottom)); }
+
+  /* -- page. The main pane's own 24px gutter came on top of the page's, so the
+     first card started 40px in on a 375px screen. One 16px gutter. */
+  .slab--app > .main { padding-inline: 0; padding-top: 0; }
+  .wrap { padding: var(--s4); }
+  .disc > button { flex-wrap: wrap; row-gap: 2px; }
+  .disc .t { flex: 1 1 auto; min-width: 0; }
+  .disc .s { flex: 1 1 100%; order: 3; }
+  .disc .chev { margin-left: auto; }
+  .pagehead h1 { font-size: clamp(28px, 8vw, 34px); }
+  .keyhint { display: none; }
+
+  /* Brief tabs scroll sideways instead of widening the page. */
+  .viewswrap { margin-inline: calc(-1 * var(--s4)); }
+  .views { flex-wrap: nowrap; overflow-x: auto; padding: 2px var(--s4) 6px;
+    scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .views::-webkit-scrollbar { display: none; }
+  .views > * { flex: none; }
+  .secnav { top: 56px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+    margin-inline: calc(-1 * var(--s4)); padding-inline: var(--s4); }
+  .secnav::-webkit-scrollbar { display: none; }
+  .secnav > * { flex: none; }
+
+  /* -- list rows: score and name on one line, evidence under, verbs across */
+  .row, .wrow {
+    grid-template-columns: 48px minmax(0, 1fr); gap: var(--s3) var(--s3);
+    padding: var(--s4);
+  }
+  .row .rk { display: none; }
+  .row > .scorewrap, .wrow > .scorewrap { grid-column: 1; }
+  .row > .rowmain, .wrow > .rowmain { grid-column: 2; }
+  .row > .acts, .wrow > .acts {
+    grid-column: 1 / -1; display: grid; flex-wrap: nowrap; grid-auto-flow: column; grid-auto-columns: 1fr; gap: var(--s2);
+  }
+  .row .acts .vbtn, .wrow .acts .vbtn, .wrow .acts .btn { width: 100%; min-height: 44px; justify-content: center; }
+  .prow { grid-template-columns: 34px minmax(0, 1fr); }
+  .prow > .vbtn { grid-column: 1 / -1; width: 100%; min-height: 44px; justify-content: center; }
+
+  /* -- the report: its verbs replace the tab bar. Reading a report is the one
+     place a decision is made from far down the page, and on a phone the head's
+     buttons are a long scroll back up. The compact bar (back + the verbs the
+     head shows) is pinned to the bottom, always on, and the head's copy of the
+     verbs steps out so there is one set. */
+  .slab--v-report .railcol .nav { display: none; }
+  .slab--v-report .compact {
+    position: fixed; left: 0; right: 0; bottom: 0; top: auto; height: auto; z-index: 45;
+  }
+  .slab--v-report .cbar {
+    position: static; opacity: 1; transform: none; pointer-events: auto;
+    gap: var(--s2); padding: 8px var(--s3) calc(8px + env(safe-area-inset-bottom));
+    border-bottom: 0; border-top: 1px solid var(--line); box-shadow: 0 -6px 20px -12px rgba(28,27,35,.25);
+  }
+  .slab--v-report .cbar > .ring, .slab--v-report .cbar > .face,
+  .slab--v-report .cbar > .who2, .slab--v-report .cbar > .series { display: none; }
+  .slab--v-report .cbar .verbs { flex: 1; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: var(--s2); }
+  .slab--v-report .cbar .verbs .vbtn, .slab--v-report .cbar .verbs .vbtn:not(.vbtn--go) {
+    display: inline-flex; width: 100%; min-height: 44px; justify-content: center; padding-inline: 8px; }
+  .slab--v-report .cbar .back { width: 44px; height: 44px; }
+  .slab--v-report .headverbs { display: none; }
+  .slab--v-report > .main { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+
+  /* -- the report head: one column, the score chip on its own line at full width,
+     and the accounts as chips that wrap rather than one per line. */
+  .cmdbar { flex-direction: column; align-items: stretch; gap: var(--s3); }
+  .cmdcluster { width: 100%; justify-content: flex-start; margin: 0; }
+  .cmdcluster .scorechip { margin-left: 0; }
+  .accts { display: flex; flex-wrap: wrap; gap: var(--s2); }
+
+  /* -- wide tables scroll inside their own box. Both already sat in a scroll
+     wrapper; the panel around it grew to the table's min-width instead,
+     because a flex or grid child will not shrink below its content unless told. */
+  .p, .wrap section, .wrap > div { min-width: 0; }
+  .wrapx, .wex-scroll { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  /* -- floating things clear the tab bar */
+  .toast { bottom: calc(84px + env(safe-area-inset-bottom)); }
+}
+
+/* =================================================================== TABLET
+   v7 — 721 to 960: one header row, not four. The rail's pieces used to wrap
+   into logo / tabs / tabs again / Admin / account. Now: the mark, the lists as
+   a row of labelled tabs, then Admin and the account as icons. New brief lives
+   on the drop's own chip row at this width. */
+@media (min-width: 721px) and (max-width: 960px) {
+  .slab--app > .railcol { flex-wrap: nowrap; gap: var(--s3); padding: 10px var(--s4); }
+  .railcol .brandrow .brandtx, .railcol .newbrief, .railcol .engineft, .railcol .railtog { display: none; }
+  .railcol .brandlogo { height: 30px; width: auto; }
+  .railcol .nav { flex-wrap: nowrap; gap: 2px; margin: 0 auto; }
+  .railcol .nav .rnav { width: auto; min-width: 0; padding: 7px 7px; gap: 5px; font-size: var(--fs-2); }
+  .railcol .nav .rnav .tx { flex: none; }
+  .railcol .nav .rnav .pill { margin-left: 2px; }
+  .railcol .railfoot { display: flex; flex-direction: row; align-items: center; gap: var(--s2);
+    margin: 0; padding: 0; border: 0; }
+  .railcol .railfoot .rnav { padding: 8px; }
+  .railcol .railfoot .rnav .tx, .railcol .whoami .who { display: none; }
+  .railcol .whoami { margin: 0; padding: 0; border: 0; }
+}
