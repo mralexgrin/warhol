@@ -349,6 +349,28 @@
     return ex;
   }
   function decisionFor(id) { return state.decisions[id] || null; }
+  /* v7 — THE LIST A NAME WAS ALREADY ON BEFORE TODAY. decisionFor only knows
+     today's verbs, so a report opened from the watchlist offered "Watch" on
+     someone already watched. The report's verbs now match the row they were
+     opened from. */
+  function standingOf(c) {
+    if (!c || decisionFor(c.id)) return null;
+    if (c.status === 'watched') return 'watched';
+    var passed = S.passedSeed.some(function (p) { return p.id === c.id; });
+    return passed && !state.unpassed[c.id] ? 'passed' : null;
+  }
+  function verbSet(c, size) {
+    var st = standingOf(c);
+    var undo = '<button class="vbtn vbtn--undo' + (size ? ' vbtn--' + size : '') + '" data-act="';
+    if (st === 'watched') {
+      return U.verbBtn('promote', c.id, 'Promote', 'go', size) +
+        undo + 'passtray" data-id="' + c.id + '">Stop watching</button>';
+    }
+    if (st === 'passed') return undo + 'unpass" data-id="' + c.id + '">Put back in the drop</button>';
+    return U.verbBtn('promote', c.id, 'Promote', 'go', size) +
+      U.verbBtn('watchtray', c.id, 'Watch', 'hold', size) +
+      U.verbBtn('passtray', c.id, 'Pass', 'no', size);
+  }
   function creator(id) { return id === W.runANameResult.id ? W.runANameResult : W.byId[id]; }
   function score(c) { return S.score13(c); }
   function remaining() {
@@ -358,7 +380,12 @@
     return v === 'pass' ? 'Passed' : v === 'watch' ? 'Watched' : 'Promoted';
   }
   function watchlist() {
-    var seeded = W.candidates.filter(function (c) { return c.status === 'watched'; });
+    /* v7 — a seeded watch that was passed or promoted today has left the list.
+       "Stop watching" used to add the name to Passed and leave it here too. */
+    var seeded = W.candidates.filter(function (c) {
+      var d = decisionFor(c.id);
+      return c.status === 'watched' && (!d || d.verb === 'watch');
+    });
     var added = [];
     Object.keys(state.decisions).forEach(function (id) {
       if (state.decisions[id].verb !== 'watch') return;
@@ -1899,10 +1926,7 @@
          for the corner. Mirrors the verbs' own rule: one set visible at a time,
          this one when the tall header has scrolled away. */
       seriesNav(c, true) +
-      (d || rewound() ? '' : '<div class="verbs">' +
-        U.verbBtn('promote', c.id, 'Promote', 'go', 'sm') +
-        U.verbBtn('watchtray', c.id, 'Watch', 'hold', 'sm') +
-        U.verbBtn('passtray', c.id, 'Pass', 'no', 'sm') + '</div>') +
+      (d || rewound() ? '' : '<div class="verbs">' + verbSet(c, 'sm') + '</div>') +
       '</div></div>';
 
     out += lens + '<header class="rpthead"><div class="who2 rpt-topbar">' +
@@ -1932,10 +1956,7 @@
       '<p class="handle">' + esc(c.handle) + '</p></div></div>' +
       '<div class="cmdcluster">' +
       ((d || rewound() || outcomeOf(c.id) || state.passTray === c.id || state.watchTray === c.id) ? ''
-        : '<div class="headverbs">' +
-          U.verbBtn('promote', c.id, 'Promote', 'go') +
-          U.verbBtn('watchtray', c.id, 'Watch', 'hold') +
-          U.verbBtn('passtray', c.id, 'Pass', 'no') + '</div>') +
+        : '<div class="headverbs">' + verbSet(c) + '</div>') +
       '<div class="scorechip">' + U.ring(c, 'sm', sc) +
       '<span class="bs-k">the score ' + U.rcp('score', c.id, 'the score') + '</span>' +
       '<span class="bs-n">bar is ' + state.admin.threshold + '</span></div>' +
@@ -2119,7 +2140,7 @@
       '<p class="lede">' + esc(cl.demand.line) + ', ' + esc(cl.demand.window) + '.</p>' +
       (cl.demand.quotes.length
         ? '<div class="quotes">' + cl.demand.quotes.map(function (e, i) {
-            return U.quoteBlock(e, asOf(), { url: false, likes: S.likesFor(c, i) });
+            return U.quoteBlock(e, asOf(), { url: false });
           }).join('') + '</div>'
         : '<p class="sub-t mt-3">Comments could not be read on this platform, so this scores neutral ' +
           'and pulls confidence down. It is not evidence of nothing.</p>') +
@@ -4719,7 +4740,9 @@
        two answers to the same question, 116 and 58, computed from the same data.
        dropFor + rejectedFor is exactly the brief's pool by construction — the two
        functions partition it — so it cannot drift from what the drop screen says. */
-    var clearingList = S.dropFor(asOf(), house, ad.threshold);
+    /* v7 — and it leaves out the names a list already owns, as the drop does.
+       Without standingExcluded() this read "10 of 65" beside a drop saying 9. */
+    var clearingList = S.dropFor(asOf(), house, ad.threshold, standingExcluded());
     var clearing = clearingList.length;
     var pool = clearing + S.rejectedFor(asOf(), house, ad.threshold).length;
 
@@ -5509,14 +5532,14 @@
       state.decisions[id] = { verb: 'pass', reasonCode: el.getAttribute('data-code'), at: asOf() };
       state.passTray = null;
       announce('Passed ' + creator(id).name + '.');
-      if (state.view === 'report') go('drop'); else render();
+      if (state.view === 'report') go(state.from || 'drop'); else render();
       return;
     }
     if (act === 'watch') {
       state.decisions[id] = { verb: 'watch', at: asOf(), window: el.getAttribute('data-w') || '1 month' };
       state.watchTray = null; state.watchWindow = null;
       announce('Watching ' + creator(id).name + ', checking back in ' + (el.getAttribute('data-w') || '1 month') + '.');
-      if (state.view === 'report') go('drop'); else render();
+      if (state.view === 'report') go(state.from || 'drop'); else render();
       return;
     }
     if (act === 'promote') {
@@ -5698,7 +5721,7 @@
         why: (wi && wi.value.trim()) || 'No reason given' };
       announce('Watching ' + creator(id).name + ' for ' + state.watchWindow + '.');
       state.watchTray = null; state.watchWindow = null;
-      if (state.view === 'report') go('drop'); else render();
+      if (state.view === 'report') go(state.from || 'drop'); else render();
       return;
     }
     var bf = e.target.closest ? e.target.closest('[data-act="briefsubmit"]') : null;
