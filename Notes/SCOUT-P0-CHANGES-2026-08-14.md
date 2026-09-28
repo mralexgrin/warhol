@@ -1,5 +1,8 @@
 # Scout P0 preview — what changed
 
+> **Merged into `App/scout/` on 28 Sep 2026** (branch `p0-consistency`). The
+> `scout-p0/` preview folder described below no longer exists.
+
 Isolated copy of `App/scout/` at **http://localhost:8140/scout-p0/**. Nothing in the
 real `scout/` app was touched. No copy changed (CLAUDE.md voice rules respected) —
 these are structural/visual consistency fixes only.

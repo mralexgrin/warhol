@@ -537,7 +537,12 @@
          the bottom and the top bar carried a second avatar that did the same
          job — so the identity is now the control, where it already was. */
       '<div class="acct acct--rail">' +
-      '<button class="whoami" data-act="menu" aria-expanded="' + state.menu + '" aria-haspopup="true">' +
+      '<button class="whoami" data-act="menu" aria-expanded="' + state.menu + '" aria-haspopup="true"' +
+      /* v6 P1 — the account control's visible label (`.who`) is display:none in
+         the collapsed rail, which left the button nameless to a screen reader.
+         The name is the accessible name in both states; in the wide rail it also
+         shows, so label-in-name holds. */
+      ' aria-label="' + esc(who.name) + '">' +
       /* v5.5c — no field behind it. `.ini` is the AVATAR component: a lilac tile
          standing in for a picture. With a glyph in it there is no picture being
          stood in for, so the tile was a coloured chip sitting directly under the
@@ -3235,12 +3240,20 @@
       /* v5.9 — the same pattern as the drop: the name opens the report, the
          buttons are verbs. Watching had no exit from the list you were looking
          at — the only control on the row was the report. */
-      return '<div class="wrow wrow--link" data-act="report" data-id="' + c.id + '" data-from="watchlist">' + U.face(c, 'sm') +
-        '<div><span class="nm">' +
+      /* v6 P0 — same row scaffold as the drop: score ring far left, the face
+         beside the name, the verbs on the right. The watchlist used to mirror
+         the drop rotated — ring on the right, no ring column — which read as a
+         different screen. One row shape now, ranked or not. */
+      return '<div class="wrow wrow--link" data-act="report" data-id="' + c.id + '" data-from="watchlist">' +
+        '<div class="scorewrap">' + U.ring(c, 'sm', score(c)) + '</div>' +
+        '<div class="rowmain">' +
+        '<div class="idline">' + U.face(c, 'sm') +
+        '<div class="idtext">' +
+        '<div class="idtop"><h2 class="nm">' +
         '<button class="nmlink" data-act="report" data-id="' + c.id + '" data-from="watchlist">' + esc(c.name) + '</button>' +
-        '</span>' +
-        '<span class="hd">' + esc(c.handle) + ' ' + DOT + ' kept ' + esc(U.longDate(since)) +
-        ' ' + DOT + ' ' + esc(win) + ' window</span>' +
+        '</h2><span class="hd">' + esc(c.handle) + '</span></div>' +
+        '<span class="plat1">kept ' + esc(U.longDate(since)) + ' ' + DOT + ' ' + esc(win) + ' window</span>' +
+        '</div></div>' +
         /* What the watchlist watches is the trajectory block, because those are
            the lines that move. An alert quotes the trend, never the score
            delta — "score dropped 4 points" says nothing a person can act on. */
@@ -3249,7 +3262,7 @@
         }).join('') + '</ul>' +
         due +
         (state.passTray === c.id ? passTray(c) : '') + '</div>' +
-        '<div class="right">' + U.ring(c, 'sm', score(c)) +
+        '<div class="acts">' +
         U.verbBtn('promote', c.id, 'Promote', 'go', 'sm') +
         '<button class="vbtn vbtn--undo vbtn--sm" data-act="passtray" data-id="' + c.id + '">Stop watching</button>' +
         '</div></div>';
@@ -3365,7 +3378,7 @@
        The person half is the old Run a name screen, unchanged below the
        header — same parser, same four stages, same honest miss. */
     if (state.briefStage === 'write' && state.briefMode === 'person') {
-      return '<header class="pagehead"><h1>Add to Scout</h1>' +
+      return '<header class="pagehead"><span class="kick pk">New brief</span><h1>Add to Scout</h1>' +
         briefModeToggle() +
         /* v6.2 — the old deck said "one person" and promised they stay in
            the Shortlist (then "Tracked by hand") afterwards. Both were true of the single-name screen
@@ -3377,7 +3390,7 @@
     }
 
     if (state.briefStage === 'write') {
-      return '<header class="pagehead"><h1>Add to Scout</h1>' +
+      return '<header class="pagehead"><span class="kick pk">New brief</span><h1>Add to Scout</h1>' +
         briefModeToggle() +
         '<p class="deck">A brief is the assignment: what we need, who we are looking for, where they ' +
         'post, and what good looks like. Write it the way you would say it out loud. This is not a ' +
@@ -4569,7 +4582,7 @@
     var days = m.days.length;
     var top = m.items[0];
 
-    var head = '<header class="pagehead"><h1>Where the market is short</h1>' +
+    var head = '<header class="pagehead"><span class="kick pk">Trends</span><h1>Where the market is short</h1>' +
       '<p class="deck">' + U.plural(m.people.length, 'creator') + ' read. ' + m.callable +
       ' of them have at least one thing their audience has a name for and they have not built.</p>' +
       '<div class="tage">' +
