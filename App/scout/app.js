@@ -528,6 +528,7 @@
          the only fix that survives them being equal. */
       navBtn('drop', 'drop', "Today's drop", String(dropList().length ? remaining() : 0), 'still to decide') +
       navBtn('watchlist', 'watch', 'Watchlist', String(watchlist().length), 'being watched') +
+      navBtn('promoted', 'up', 'Promoted', String(promotedList().length || ''), 'promoted') +
       navBtn('passed', 'passed', 'Passed', String(passedList().length), 'passed') +
       (SHOW_RUNNAME ? navBtn('runname', 'run', 'Run a name', '') : '') +
       /* v5.8 — TRENDS. The standing read of everything scanned so far, which
@@ -603,7 +604,8 @@
     var on = state.view === view ||
       (view === 'drop' && state.view === 'report' && state.from === 'drop') ||
       (view === 'watchlist' && state.view === 'report' && state.from === 'watchlist') ||
-      (view === 'passed' && state.view === 'report' && state.from === 'passed');
+      (view === 'passed' && state.view === 'report' && state.from === 'passed') ||
+      (view === 'promoted' && state.view === 'report' && state.from === 'promoted');
     return '<button class="rnav" data-act="view" data-view="' + view + '"' +
       (on ? ' aria-current="page"' : '') + '>' +
       '<span class="ic">' + U.icon(ic) + '</span><span class="tx">' + esc(label) + '</span>' +
@@ -1941,6 +1943,7 @@
       '<button class="btn btn--soft btn--sm backbtn" data-act="view" data-view="' + esc(state.from) + '">' +
       U.icon('back') + 'Back to ' + esc(state.from === 'watchlist' ? 'the watchlist'
         : state.from === 'passed' ? 'the passed list'
+        : state.from === 'promoted' ? 'the promoted list'
           : state.from === 'newbrief' ? 'the lookup' : state.from === 'runname' ? 'the lookup' : 'the drop') + '</button>' +
       seriesNav(c, false) + '</div>' +
       (c.sourceTag === 'manual' || c.resurfaced || rewound() ? '<div class="rpt-tags">' +
@@ -2779,6 +2782,7 @@
   function siblings() {
     if (state.from === 'watchlist') return watchlist();
     if (state.from === 'passed') return passedList().map(function (r) { return r.c; });
+    if (state.from === 'promoted') return promotedList().map(function (r) { return r.c; });
     if (state.from === 'drop') return dropList();
     return [];
   }
@@ -3319,6 +3323,53 @@
       '<button class="btn btn--sm btn--out" data-act="report" data-id="' + c.id + '" data-from="watchlist">Open the report</button>' +
       '<button class="btn btn--sm btn--out" data-act="passtray" data-id="' + c.id + '">Stop watching</button>' +
       '</div></div>';
+  }
+
+  /* ========================================================= PROMOTED LIST */
+  /* v7 — THE ONLY LIST THAT CAN PROVE THE MODEL RIGHT HAD NO SCREEN.
+     promotedList() was built and never rendered, so a promoted name was reachable
+     only from the day's drop — and gone from it the next morning, with "Any
+     word?" still blank on a report nobody could find. Same row as the watchlist;
+     the outcome takes the place of the trend. */
+  function outcomeLine(c) {
+    var o = outcomeOf(c.id);
+    if (!o || !o.code) return 'No word yet';
+    var hit = null;
+    S.outcomes.forEach(function (x) { if (x.code === o.code) hit = x.label; });
+    var why = o.code === 'declined' && o.declineCode ? declineLabel(o.declineCode) : null;
+    return (hit || o.code) + ' ' + U.shortDate(o.at || asOf()) + (why ? ' ' + DOT + ' ' + why.toLowerCase() : '');
+  }
+
+  function promotedView() {
+    var rows = promotedList();
+    var head = '<header class="pagehead"><h1>Promoted</h1>' +
+      '<p class="deck">Everyone promoted, and what they said.</p></header>';
+
+    if (!rows.length) {
+      return head + '<section class="p zero"><h2>Nobody promoted yet.</h2>' +
+        '<p>Promote a creator from the drop and they are kept here with what they said.</p></section>';
+    }
+
+    return head + '<div class="listwrap">' + rows.map(function (r) {
+      var c = r.c;
+      var o = outcomeOf(c.id);
+      return '<div class="wrow wrow--link" data-act="report" data-id="' + c.id + '" data-from="promoted">' +
+        '<div class="scorewrap">' + U.ring(c, 'sm', score(c)) + '</div>' +
+        '<div class="rowmain">' +
+        '<div class="idline">' + U.face(c, 'sm') +
+        '<div class="idtext">' +
+        '<div class="idtop"><h2 class="nm">' +
+        '<button class="nmlink" data-act="report" data-id="' + c.id + '" data-from="promoted">' + esc(c.name) + '</button>' +
+        '</h2><span class="hd">' + esc(c.handle) + '</span></div>' +
+        '<span class="plat1">promoted ' + esc(U.longDate(r.at)) + ' ' + DOT + ' ' + esc(r.by) + '</span>' +
+        '</div></div>' +
+        '<p class="oline' + (o && o.code ? '' : ' oline--none') + '">' + esc(outcomeLine(c)) + '</p>' +
+        '</div>' +
+        '<div class="acts">' +
+        '<button class="btn btn--sm btn--out" data-act="report" data-id="' + c.id + '" data-from="promoted">Open the report</button>' +
+        '<button class="btn btn--ghost btn--sm" data-act="outreach" data-id="' + c.id + '">Outreach package</button>' +
+        '</div></div>';
+    }).join('') + '</div>';
   }
 
   /* =========================================================== PASSED LIST */
@@ -4209,6 +4260,7 @@
       esc(state.helpFrom || 'drop') + '">' + U.icon('back') + 'Back to ' +
       esc(state.helpFrom === 'watchlist' ? 'the watchlist'
         : state.helpFrom === 'passed' ? 'the passed list'
+        : state.helpFrom === 'promoted' ? 'the promoted list'
           : state.helpFrom === 'report' ? 'the report'
             : state.helpFrom === 'admin' ? 'Admin'
               : state.helpFrom === 'newbrief' ? 'the lookup' : state.helpFrom === 'runname' ? 'the lookup' : 'the drop') + '</button></div>' +
@@ -5020,6 +5072,31 @@
     if (el) el.textContent = msg;
   }
 
+  /* v7 — EVERY VERB CAN BE TAKEN BACK FROM WHERE IT LANDS. Undo used to live
+     only on the drop's decided row, so a Promote from the report went straight
+     to the outreach package with no way back, and a Pass from the report
+     dropped you on another screen with the name gone. The toast names what
+     happened and holds the way back for eight seconds. Not persisted: after a
+     reload the lists are the way back. */
+  var toastTimer = null;
+  function decided(id, msg) {
+    announce(msg);
+    var t = state.toast = { id: id, msg: msg,
+      back: { view: state.view, from: state.from, reportId: state.reportId } };
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      if (state.toast !== t) return;
+      state.toast = null;
+      var el = document.getElementById('toast');
+      if (el) el.remove();
+    }, 8000);
+  }
+  function toastHTML() {
+    if (!state.toast) return '';
+    return '<div class="toast" id="toast"><span>' + esc(state.toast.msg) + '</span>' +
+      '<button class="toastbtn" data-act="toastundo">Undo</button></div>';
+  }
+
   function render(viewChanged) {
     var fade = state.animate && !reduceMotion.matches ? ' viewfade' : '';
     state.animate = false;
@@ -5038,6 +5115,7 @@
         state.view === 'report' ? reportView() :
           state.view === 'watchlist' ? watchlistView() :
             state.view === 'passed' ? passedView() :
+            state.view === 'promoted' ? promotedView() :
               (state.view === 'runname' && SHOW_RUNNAME) ? runNameView() :
                 state.view === 'outreach' ? outreachView() :
                   state.view === 'trends' ? trendsView() :
@@ -5051,6 +5129,7 @@
         '<div class="wrap' + fade + '">' + body + '</div></main></div>';
     }
     if (state.rcp) html += rcpPop();
+    if (state.phase !== 'signedout') html += toastHTML();
 
     /* render() replaces the whole DOM, which destroys the scroll container.
        Capture and restore; go() is the only thing that resets, because only a
@@ -5531,23 +5610,35 @@
     if (act === 'pass') {
       state.decisions[id] = { verb: 'pass', reasonCode: el.getAttribute('data-code'), at: asOf() };
       state.passTray = null;
-      announce('Passed ' + creator(id).name + '.');
+      decided(id, 'Passed ' + creator(id).name + '.');
       if (state.view === 'report') go(state.from || 'drop'); else render();
       return;
     }
     if (act === 'watch') {
       state.decisions[id] = { verb: 'watch', at: asOf(), window: el.getAttribute('data-w') || '1 month' };
       state.watchTray = null; state.watchWindow = null;
-      announce('Watching ' + creator(id).name + ', checking back in ' + (el.getAttribute('data-w') || '1 month') + '.');
+      decided(id, 'Watching ' + creator(id).name + ', checking back in ' + (el.getAttribute('data-w') || '1 month') + '.');
       if (state.view === 'report') go(state.from || 'drop'); else render();
       return;
     }
     if (act === 'promote') {
       state.decisions[id] = { verb: 'promote', at: asOf() };
+      decided(id, 'Promoted ' + creator(id).name + '.');
       state.outreachId = id; go('outreach'); return;
     }
     if (act === 'outreach') { state.outreachId = id; go('outreach'); return; }
     if (act === 'undo') { delete state.decisions[id]; delete state.outcomeState[id]; render(); return; }
+    if (act === 'toastundo') {
+      var t = state.toast;
+      if (!t) return;
+      delete state.decisions[t.id]; delete state.outcomeState[t.id];
+      state.toast = null;
+      announce('Undone. ' + creator(t.id).name + ' is back where they were.');
+      if (state.view === t.back.view && t.back.view !== 'report') { render(); return; }
+      state.reportId = t.back.reportId;
+      go(t.back.view, t.back.from);
+      return;
+    }
     /* v5.9 — the same clearing as `undo`, under the name the Passed list uses.
        One verb per surface: the button says what happens, not "undo". */
     if (act === 'unpass') {
@@ -5719,7 +5810,7 @@
       var id = ww.getAttribute('data-id');
       state.decisions[id] = { verb: 'watch', at: asOf(), window: state.watchWindow,
         why: (wi && wi.value.trim()) || 'No reason given' };
-      announce('Watching ' + creator(id).name + ' for ' + state.watchWindow + '.');
+      decided(id, 'Watching ' + creator(id).name + ' for ' + state.watchWindow + '.');
       state.watchTray = null; state.watchWindow = null;
       if (state.view === 'report') go(state.from || 'drop'); else render();
       return;

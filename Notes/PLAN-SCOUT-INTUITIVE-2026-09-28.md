@@ -22,9 +22,13 @@ something that makes the evidence look wrong, or removes a step between the user
   reads "Nothing we could read asked to buy".
 - **#1a, found on the way.** The like counts beside quotes were invented by `likesFor()` from audience size
   and quote rank. The seed stores no likes, so they are removed.
-- **#1b, still open and needs a decision.** The engine's `score.js` uses `demandPoints()` on raw
-  `signals.length`, so duplicates also raise **scores**. Fixing it means de-duplicating in the engine and
-  re-exporting the seed, which changes scores and can change who clears the bar.
+- **#1b, fixed in the engine (`cb8198f`).** `project()` keeps one reading per comment. The seeds were
+  rebuilt from the observation log as it stood at each original export time (log rows after that moment
+  hidden, clock pinned), so only the creators with repeated comments changed. Before the fix, that rebuild
+  matched the shipped files byte for byte, apart from one timestamp 5 ms off. Scores fell where duplicates
+  had inflated them: pantheorganizer 44 → 39, joshuaweissman 30 → 16. Home Cooking's drop went from 6 to
+  3. `App/trends/trends-data.js` was **not** rebuilt. It comes from per-creator snapshots dated 7 Aug and
+  still counts duplicates.
 - **#2, fixed.** The report's verbs follow the list the person is on. Passing or watching from a report
   returns you to the list you came from, not always the drop.
 - **#2a, found on the way.** *Stop watching* on a seeded watch added the name to Passed and also left it
@@ -37,6 +41,15 @@ something that makes the evidence look wrong, or removes a step between the user
 |---|---|---|
 | 4 | Promoted people vanish. `promotedList()` exists but no screen shows it, so "what they said" (PRD §8) has nowhere to be recorded once the day rolls over. | Add a **Promoted** list to the rail, with the date, who promoted them, and the outcome. |
 | 5 | Undo only exists on the drop's decided row. Promoting from the report goes straight to the outreach package with no way back. | Show one short undo toast after every Promote, Watch or Pass. |
+
+### Phase 2 — done on branch `phase2-loop`
+
+- **#4.** Added a **Promoted** list in the rail, between Watchlist and Passed. Each row shows the date, who
+  promoted them, and the recorded outcome ("No word yet", "Replied 14 Aug 26", "Declined … · reason"),
+  with *Open the report* and *Outreach package*. The report's back button and 1-of-N stepping work from it.
+- **#5.** Every Promote, Watch and Pass, from the drop or the report, shows a toast with **Undo** for eight
+  seconds. Undo clears the decision and returns you to the screen you decided on. From the outreach package
+  that is the report or the drop.
 
 ## Phase 3 — Work the drop faster
 
