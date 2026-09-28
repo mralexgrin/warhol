@@ -1288,6 +1288,7 @@
       (lr ? '<span class="deck-run">' + U.icon('run') +
         'Last run ' + esc(U.clockZone(lr.finished)) + ', ' +
         esc(U.shortDate(lr.finished)) + U.rcp('lastrun', '', 'the last run') + '</span>' : '') +
+      (list.length ? '<button class="keyhint" data-act="keys">Shortcuts</button>' : '') +
       '</p>' + '</header>';
 
     var chips = briefTabs(b);
@@ -1376,12 +1377,37 @@
 
     below += whoElse(b);
 
-    var done0 = remaining() === 0 ? '<div class="p p--teal zero mt-5">' +
-      '<h2>Worked to zero.</h2>' +
-      '<p>Every name has a decision. Next drop ' + U.clockZone(S.lastRun ? S.lastRun.next : '06:00') + '.</p></div>' : '';
+    /* v7 — THE END OF THE DAY GOES WHERE THE DAY STARTS. This panel sat under
+       the list and under "Also looked at", so the moment the work was done it
+       was a scroll away. It leads now, and says what the day came to and what
+       is due next, so "done" has somewhere to go. */
+    var done0 = '';
+    if (list.length && remaining() === 0) {
+      var tally = { promote: 0, watch: 0, pass: 0 };
+      list.forEach(function (c) { var d = decisionFor(c.id); if (d) tally[d.verb]++; });
+      var parts = [
+        tally.promote ? tally.promote + ' promoted' : '',
+        tally.watch ? tally.watch + ' watched' : '',
+        tally.pass ? tally.pass + ' passed' : ''
+      ].filter(Boolean);
+      var due = watchlist().filter(function (c) {
+        var a = S.V13[c.id] || {}, d = decisionFor(c.id);
+        var win = (d && d.window) || a.window || '1 month';
+        var span = win === '3 months' ? 90 : win === '2 months' ? 60 : 30;
+        return span - U.daysBetween(c.watchedSince || asOf(), asOf()) <= 7;
+      }).length;
+      done0 = '<div class="p p--teal zero donepanel">' +
+        '<h2>Worked to zero.</h2>' +
+        '<p>' + esc(parts.join(', ')) + '. Next drop ' + U.clockZone(S.lastRun ? S.lastRun.next : '06:00') + '.</p>' +
+        '<p class="doneacts">' +
+        (tally.promote ? '<button class="btn btn--sm btn--out" data-act="view" data-view="promoted">Promoted</button>' : '') +
+        (due ? '<button class="btn btn--sm btn--out" data-act="view" data-view="watchlist">' +
+          U.plural(due, 'name') + ' due on the watchlist this week</button>' : '') +
+        '</p></div>';
+    }
 
-    return lens + head + chips + runbar + progress +
-      '<div class="listwrap">' + rows + '</div>' + below + done0;
+    return lens + head + chips + runbar + progress + done0 +
+      '<div class="listwrap">' + rows + '</div>' + below;
   }
 
   /* v5.9 — WHEN HALF THE DROP LEADS WITH AN ABSENCE, SAY WHOSE ABSENCE IT IS.
@@ -1761,7 +1787,7 @@
        while a tray is open on this card: a tray is a decision in progress, and
        a stray click in its whitespace must not navigate out of it. */
     var trayOpen = state.passTray === c.id || state.watchTray === c.id;
-    return '<article class="row row--link" data-id="' + c.id + '"' +
+    return '<article class="row row--link' + (state.cursor === c.id ? ' row--cur' : '') + '" data-id="' + c.id + '"' +
       (trayOpen ? '' : ' data-act="report"') + '>' +
       '<div class="rk">' + rank + '</div>' +
       '<div class="scorewrap">' + U.ring(c, 'sm', score(c)) + '</div>' +
@@ -5081,6 +5107,14 @@
   var toastTimer = null;
   function decided(id, msg) {
     announce(msg);
+    /* The keyboard's place moves on with the decision, to the next name still
+       open below it, so J is never spent stepping over what is already done. */
+    if (state.cursor === id) {
+      var all = dropList(), at = -1, next = null;
+      all.forEach(function (c, n) { if (c.id === id) at = n; });
+      all.forEach(function (c, n) { if (!next && n > at && !decisionFor(c.id)) next = c.id; });
+      state.cursor = next;
+    }
     var t = state.toast = { id: id, msg: msg,
       back: { view: state.view, from: state.from, reportId: state.reportId } };
     clearTimeout(toastTimer);
@@ -5129,7 +5163,7 @@
         '<div class="wrap' + fade + '">' + body + '</div></main></div>';
     }
     if (state.rcp) html += rcpPop();
-    if (state.phase !== 'signedout') html += toastHTML();
+    if (state.phase !== 'signedout') html += toastHTML() + keysHTML();
 
     /* render() replaces the whole DOM, which destroys the scroll container.
        Capture and restore; go() is the only thing that resets, because only a
@@ -5603,6 +5637,7 @@
       state.passTray = id || null; state.watchTray = null; state.passAll = false; render(); return;
     }
     if (act === 'passall') { state.passAll = true; render(); return; }
+    if (act === 'keys') { toggleKeys(); return; }
     if (act === 'watchtray') {
       state.watchTray = id || null; state.passTray = null; state.watchWindow = null; render(); return;
     }
@@ -5919,14 +5954,110 @@
     }
   });
 
+  /* ============================================================ KEYBOARD
+     v7 — THE DAY IS "WORK THE DROP TO ZERO" (§3), and every decision was a
+     mouse trip to the far column and back. Each key presses the button a click
+     would, so the keyboard cannot drift from what the screen offers: a verb
+     the report does not show (Watch on someone already watched) has no key. */
+  function typing(t) {
+    return !!t && (/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) || t.isContentEditable);
+  }
+  var KEYS = [
+    ['J / K', 'Next and previous creator'],
+    ['Enter', 'Open the report'],
+    ['P', 'Promote'],
+    ['W', 'Watch'],
+    ['X', 'Pass'],
+    ['Esc', 'Close, or back to the list'],
+    ['?', 'This list']
+  ];
+  function keysHTML() {
+    if (!state.keys) return '';
+    return '<div class="keysheet" role="dialog" aria-modal="true" aria-label="Shortcuts">' +
+      '<div class="keysbox"><div class="keyshd"><h2>Shortcuts</h2>' +
+      '<button class="btn btn--ghost btn--sm" data-act="keys">Close</button></div>' +
+      '<dl>' + KEYS.map(function (k) {
+        return '<div><dt>' + k[0].split(' / ').map(function (x) { return '<kbd>' + esc(x) + '</kbd>'; }).join(' ') +
+          '</dt><dd>' + esc(k[1]) + '</dd></div>';
+      }).join('') + '</dl></div></div>';
+  }
+  /* Focus goes into the sheet when it opens and back to the page when it
+     closes, so a keyboard user is never left behind the overlay. */
+  function toggleKeys() {
+    state.keys = !state.keys;
+    render();
+    var b = document.querySelector(state.keys ? '.keysheet button' : '.keyhint');
+    if (b) b.focus();
+  }
+  function press(root, act) {
+    var b = root && root.querySelector('[data-act="' + act + '"]');
+    if (!b) return false;
+    b.click();
+    /* A tray is a choice in progress: put focus on its first option, so the
+       next key is Enter or Tab and not a trip back to the mouse. */
+    if (act === 'passtray' || act === 'watchtray') {
+      var first = document.querySelector('.passtray button');
+      if (first) first.focus();
+    }
+    return true;
+  }
+  function moveCursor(step) {
+    var open = dropList().filter(function (c) { return !decisionFor(c.id); });
+    if (!open.length) return;
+    var i = -1;
+    open.forEach(function (c, n) { if (c.id === state.cursor) i = n; });
+    i = i === -1 ? (step > 0 ? 0 : open.length - 1) : Math.max(0, Math.min(open.length - 1, i + step));
+    state.cursor = open[i].id;
+    render();
+    var row = document.querySelector('.row--cur');
+    if (row) row.scrollIntoView({ block: 'nearest', behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+  }
+  document.addEventListener('keydown', function (e) {
+    if (state.phase === 'signedout' || e.metaKey || e.ctrlKey || e.altKey || typing(e.target)) return;
+    if (state.passTray || state.watchTray || state.rcp || state.menu) return;
+    var k = e.key;
+    if (k === '?') { e.preventDefault(); toggleKeys(); return; }
+    if (state.keys) return;
+    var key = k.length === 1 ? k.toLowerCase() : k;
+
+    if (state.view === 'drop') {
+      if (key === 'j' || k === 'ArrowDown') { e.preventDefault(); moveCursor(1); return; }
+      if (key === 'k' || k === 'ArrowUp') { e.preventDefault(); moveCursor(-1); return; }
+      var row = state.cursor && document.querySelector('.row[data-id="' + state.cursor + '"]');
+      if (!row) return;
+      /* Enter on a focused button is that button's; only a bare Enter opens. */
+      if (k === 'Enter' && e.target === document.body) { e.preventDefault(); row.click(); return; }
+      var act = key === 'p' ? 'promote' : key === 'w' ? 'watchtray' : key === 'x' ? 'passtray' : null;
+      if (act) { e.preventDefault(); press(row.querySelector('.acts'), act); }
+      return;
+    }
+
+    if (state.view === 'report') {
+      var s = seriesOf(state.reportId);
+      var to = s && (key === 'j' ? s.next : key === 'k' ? s.prev : null);
+      if (to) {
+        e.preventDefault();
+        var nb = document.querySelector('.rpt-nav .serbtn[data-id="' + to.id + '"]');
+        if (nb) nb.click();
+        return;
+      }
+      var head = document.querySelector('.headverbs');
+      var ract = key === 'p' ? 'promote' : key === 'w' ? 'watchtray' : key === 'x' ? 'passtray' : null;
+      if (ract && head) { e.preventDefault(); press(head, ract); }
+    }
+  });
+
   /* v5 checked only the popover and the menu, which taught you the key works
      and then dropped it two clicks later on a tray that looks the same. */
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
+    if (state.keys) { state.keys = false; render(); return; }
     if (state.rcp || state.menu) { state.rcp = null; state.menu = false; render(); return; }
     if (state.passTray || state.watchTray || state.outcomeTray) {
       state.passTray = null; state.watchTray = null; state.outcomeTray = null; render();
+      return;
     }
+    if (state.view === 'report' && !typing(e.target)) go(state.from || 'drop');
   });
 
   /* Scout deriving structure from a description. In the product this is one

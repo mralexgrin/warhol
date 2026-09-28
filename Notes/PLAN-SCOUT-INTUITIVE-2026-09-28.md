@@ -58,6 +58,18 @@ something that makes the evidence look wrong, or removes a step between the user
 | 6 | Every decision takes a mouse trip across the screen. | Keyboard: `J`/`K` to move, `Enter` to open the report, `P`/`W`/`X` to promote, watch or pass. A `?` overlay lists the keys. |
 | 7 | Clearing the drop has no ending. | A done state: the drop is clear, and here is what's due on the watchlist. |
 
+### Phase 3 — done on branch `phase3-flow`
+
+- **#6.** On the drop, `J`/`K` (or the arrow keys) move a highlighted row, `Enter` opens its report, and
+  `P`, `W` and `X` press that row's Promote, Watch and Pass. On a report, `J`/`K` step through the series,
+  `P`/`W`/`X` press the header's buttons, and `Esc` goes back to the list. A tray opens with focus on its
+  first option, so `Enter` confirms. After a decision the highlight moves to the next open name. `?` or the
+  *Shortcuts* link opens the list. Keys only press buttons the screen already shows, so a verb the screen
+  hides has no key.
+- **#7.** "Worked to zero" moved from under the list to the top. It now gives the day's tally (1 promoted,
+  2 watched, 6 passed), the next drop time, and links to Promoted and to any watchlist names due within
+  7 days.
+
 ## Phase 4 — Wayfinding and copy
 
 | # | Problem found | Fix |

@@ -2886,3 +2886,42 @@ blockquote.q .src .m { font-size: var(--fs-1); color: var(--text-3); }
 :root[data-theme="dark"] .toastbtn:focus-visible { outline-color: var(--slab); }
 @keyframes toastin { from { opacity: 0; transform: translate(-50%, 8px); } }
 @media (prefers-reduced-motion: reduce) { .toast { animation: none; } }
+
+/* v7 — THE KEYBOARD'S PLACE IN THE DROP. The hover tint plus a focus-coloured
+   bar on the leading edge: the tint says "this row", the bar says "the keys act
+   here", and the bar is the one mark hover never makes. */
+.row--cur { background: var(--panel-2); box-shadow: inset 3px 0 0 var(--focus); }
+.row--cur .ring .in { background: var(--panel-2); }
+
+/* The key list. A sheet over the slab, not a page: it answers "what was the
+   key for Watch" and gets out of the way. */
+.keysheet {
+  position: fixed; inset: 0; z-index: 70; display: grid; place-items: center;
+  padding: var(--s4); background: rgba(28,27,35,.32);
+}
+.keysbox {
+  width: min(380px, 100%); padding: var(--s5); border-radius: var(--r-lg);
+  background: var(--panel); color: var(--text); box-shadow: var(--el-3);
+}
+.keyshd { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--s4); }
+.keyshd h2 { font-size: var(--fs-5); }
+.keysbox dl { display: grid; gap: var(--s3); margin: 0; }
+.keysbox dl > div { display: grid; grid-template-columns: 96px 1fr; align-items: center; gap: var(--s3); }
+.keysbox dd { margin: 0; font-size: var(--fs-3); color: var(--text-2); }
+kbd {
+  display: inline-block; min-width: 24px; padding: 2px 7px; border-radius: var(--r-xs);
+  border: 1px solid var(--line-hi); border-bottom-width: 2px; background: var(--panel-2);
+  font: 600 var(--fs-2)/1.4 inherit; text-align: center; color: var(--text);
+}
+/* Nothing to press on a touch screen, so nothing to advertise. */
+@media (hover: none) { .keyhint { display: none; } }
+.keyhint {
+  display: inline-flex; align-items: center; gap: 6px; margin-left: var(--s3);
+  border: 0; background: none; padding: 0; cursor: pointer;
+  font: inherit; font-size: var(--fs-2); color: var(--text-3);
+}
+.keyhint:hover { color: var(--text); }
+.keyhint kbd { min-width: 20px; padding: 0 5px; }
+.donepanel { margin-bottom: var(--s5); padding-block: var(--s5); min-height: 0; }
+.doneacts { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s2); margin-top: var(--s4); }
+.doneacts:empty { display: none; }
