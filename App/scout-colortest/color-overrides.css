@@ -1,0 +1,51 @@
+/* ============================================================================
+   SCOUT — COLOUR PREVIEW OVERLAY   (preview build only — never ships)
+   ----------------------------------------------------------------------------
+   Layered ON TOP of scout-v52.css, which is copied here byte-for-byte and left
+   untouched. Every rule is gated behind a data-* attribute on <html>, so the
+   floating Colour Lab panel can flip options live for side-by-side feel-testing.
+   Loaded AFTER scout-v52.css, so equal-specificity ties resolve in favour of
+   these overrides. Delete this file + its <link> and the clone is stock Scout.
+
+   Defaults (set on <html> in index.html):  data-hold="amber"  data-chip="blue"
+   data-pass="off".  Baseline values (brown / teal / grey) are also selectable.
+   ============================================================================ */
+
+/* -- WATCH verb (.vbtn--hold): out of brown -------------------------------- */
+/* The brown is butter used as TEXT. Every fix below makes the warmth a FILL
+   with ink on it (or drops warmth for blue), which cannot brown. */
+
+/* A · pale amber field + ink text  (recommended) */
+:root[data-hold="amber"] .vbtn--hold        { background:#F7DE93; color:#1C1B23; border-color:transparent; }
+:root[data-hold="amber"] .vbtn--hold:hover  { background:#F1D06A; color:#1C1B23; }
+
+/* E · gold field + defining edge */
+:root[data-hold="gold"]  .vbtn--hold        { background:#F6D97A; color:#1C1B23; border:1px solid #E0B44A; }
+:root[data-hold="gold"]  .vbtn--hold:hover  { background:#F0CE5E; color:#1C1B23; }
+
+/* C · blue field ("later / cool it") */
+:root[data-hold="blue"]  .vbtn--hold        { background:#B6CDF3; color:#1C1B23; border-color:transparent; }
+:root[data-hold="blue"]  .vbtn--hold:hover  { background:#A2C0EE; color:#1C1B23; }
+
+/* data-hold="brown" = stock scout-v52.css, no override needed. */
+
+
+/* -- FILTER CHIP (.chipbtn on-state): stop overloading teal ---------------- */
+/* Teal already means "the gap is real"; a toggle isn't evidence, so its
+   selected state should carry no field meaning. */
+
+:root[data-chip="ink"]  .chipbtn[aria-pressed="true"],
+:root[data-chip="ink"]  .chipbtn.on   { background:var(--ink);  border-color:var(--ink);  color:var(--on-ink); }
+
+:root[data-chip="blue"] .chipbtn[aria-pressed="true"],
+:root[data-chip="blue"] .chipbtn.on   { background:#2E67CC; border-color:#2E67CC; color:#FFFFFF; }
+
+/* data-chip="teal" = stock. */
+
+
+/* -- PASS verb (.vbtn--no): optional decisive red -------------------------- */
+:root[data-pass="red"] .vbtn--no        { color:#C33A2C; border-color:#E29187; }
+:root[data-pass="red"] .vbtn--no:hover  { background:rgba(195,58,44,.08); color:#B23020; }
+:root[data-theme="dark"][data-pass="red"] .vbtn--no       { color:#EC9184; border-color:#8A3A30; }
+:root[data-theme="dark"][data-pass="red"] .vbtn--no:hover { background:rgba(236,145,132,.12); color:#F2A99E; }
+/* data-pass="off" = stock grey ghost. */

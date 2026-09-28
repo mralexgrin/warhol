@@ -1,0 +1,1432 @@
+{
+  "creatorId": "techmeme",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:06:24.693Z",
+  "observationCount": 216,
+  "brief": "Writers and media people with a large audience and no business around it — newsletters, tech and culture commentary",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": true,
+  "escalatedWhy": "store — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 1,
+      "avatar": {
+        "url": "https://p19-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/7334408606496948229~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=15feae7e&x-expires=1786885200&x-signature=bGSVNy5GN%2BR%2BBZ29xy4ELQ%2FJmow%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@techmeme",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 1,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIdro_n_VQE8WjfMDG9E4OsqpgSt8z_SNx3CZArEGUNnRO5hVmw=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@techmeme",
+      "why": "Gabe Rivera — the YouTube Data API resolved @techmeme"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/techmeme/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": true,
+      "followers": 51220,
+      "avatar": {
+        "url": "https://cdn.bsky.app/img/avatar/plain/did:plc:pv7fudnt4dspurzdnyq73pfe/bafkreiavbjobguhof5eh2ddkj2dzzh6eoj53wd2bfcp77np7dz4esydeiu",
+        "expires": null,
+        "host": "bsky.app"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://bsky.app/profile/techmeme.com",
+      "why": "techmeme.com — techmeme.com carries their name and they publish it, and it is their handle, and the AppView resolved it to did:plc:pv7fudnt4dspurzdnyq73pfe"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@techmeme",
+      "evidence": "https://www.youtube.com/@techmeme",
+      "placesLooked": 2,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@techmeme",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:33:13.476Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/techmeme",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:33:13.476Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/techmeme",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:33:13.476Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@techmeme",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:48.768Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/techmeme",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:48.768Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/techmeme",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:48.768Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@techmeme",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:07.785Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/techmeme",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:07.785Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/techmeme",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:07.786Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/techmeme",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:07.786Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@techmeme",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:07.787Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by the feed it publishes — the publication title reads \"Techmeme\"",
+      "why": "found it — techmeme.com/newsletter",
+      "evidence": "https://techmeme.com/newsletter",
+      "placesLooked": 15,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://techmeme.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:13.476Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/techmeme?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/techmeme",
+          "advisory": false,
+          "at": "2026-08-12T15:33:13.476Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://techmeme.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:13.476Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/techmeme",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:13.476Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://techmeme.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:13.476Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://techmeme.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:48.768Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/techmeme?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/techmeme",
+          "advisory": false,
+          "at": "2026-08-14T12:55:48.769Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://techmeme.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:48.769Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/techmeme",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:48.769Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://techmeme.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:48.769Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://techmeme.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.386Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://techmeme.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.386Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://techmeme.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.386Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://techmeme.com/feed.xml",
+          "status": 200,
+          "why": "15 posts read from Techmeme — the publication title reads \"Techmeme\"",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.386Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://techmeme.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.387Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/techmeme?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/techmeme",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.387Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://techmeme.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.387Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/techmeme",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.387Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://techmeme.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.387Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://techmeme.com/newsletter",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.387Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 4 places · 2 wouldn't answer",
+      "evidence": null,
+      "placesLooked": 10,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://techmeme.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:13.476Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/techmeme",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:13.476Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/techmeme",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:33:13.476Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:33:13.476Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/techmeme",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:33:13.476Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://techmeme.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:48.769Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/techmeme",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:48.769Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/techmeme",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:55:48.769Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:55:48.769Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/techmeme",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:55:48.769Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://techmeme.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.387Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/techmeme",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.388Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/techmeme",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:06:09.388Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.388Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/techmeme",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:06:09.388Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.techmeme.com/331520/p490",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.388Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 7,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/techmeme",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:13.477Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/techmeme",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:13.477Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/techmeme",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:48.770Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/techmeme",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:48.770Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/techmeme",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.388Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/techmeme",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.388Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://techmeme.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.388Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 5,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Tech%20Meme&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-12T15:33:13.704Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Tech%20Meme&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-14T12:55:49.050Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Tech%20Meme&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.928Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcast.techmeme.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.929Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://techmeme.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:09.930Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by the feed it publishes — the publication title reads \"Techmeme\"",
+      "why": "found it — techmeme.com",
+      "evidence": "https://techmeme.com/",
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://techmeme.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:33:15.070Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://techmeme.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:33:15.071Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://techmeme.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:33:15.071Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://techmeme.com/feed.xml",
+          "status": 200,
+          "why": "15 posts read from Techmeme — the publication title reads \"Techmeme\"",
+          "advisory": false,
+          "at": "2026-08-12T15:33:15.071Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://techmeme.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:33:15.073Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://techmeme.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:33:15.073Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://techmeme.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:50.409Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://techmeme.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:50.409Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://techmeme.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:50.409Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://techmeme.com/feed.xml",
+          "status": 200,
+          "why": "15 posts read from Techmeme — the publication title reads \"Techmeme\"",
+          "advisory": false,
+          "at": "2026-08-14T12:55:50.409Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://techmeme.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:50.410Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://techmeme.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:55:50.410Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://techmeme.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:11.500Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://techmeme.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:11.501Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://techmeme.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:11.501Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://techmeme.com/feed.xml",
+          "status": 200,
+          "why": "15 posts read from Techmeme — the publication title reads \"Techmeme\"",
+          "advisory": false,
+          "at": "2026-08-14T13:06:11.501Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://techmeme.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:11.503Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "hit",
+          "url": "https://techmeme.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:11.503Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://techmeme.com/archive",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:11.503Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:33:15.073Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:55:50.411Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:06:11.504Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:33:15.074Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:55:50.411Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:06:11.504Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:33:15.074Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:55:50.411Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:06:11.504Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": false,
+    "why": "they post often enough that 15 posts only reach back 0 days — not far enough behind the last 90 to compare against"
+  },
+  "samples": [
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Sources: stablecoin payments company RedotPay delays plans for a US IPO to 2027 or later, as it seeks regulato",
+      "url": "https://bsky.app/profile/techmeme.com/post/3mszzspghbi2n",
+      "at": "2026-08-14T11:15:48Z",
+      "thumbnail": null,
+      "excerpt": "Sources: stablecoin payments company RedotPay delays plans for a US IPO to 2027 or later, as it seeks regulatory approvals and deals with legal issues (Bloomberg) Main Link | Techmeme Permalink",
+      "metric": 2,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:01.201Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Techmeme",
+      "kind": "writing",
+      "title": "Sources: stablecoin payments company RedotPay delays plans for a US IPO to 2027 or later, as it seeks regulatory approvals and deals with legal issues (Bloomberg)",
+      "url": "https://www.techmeme.com/260814/p12#a260814p12",
+      "at": "2026-08-14T11:15:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Bloomberg : \n Sources: stablecoin payments company RedotPay delays plans for a US IPO to 2027 or later, as it seeks regulatory approvals and deals with legal issues &mdash; RedotPay has delayed plans for an initial public offering in the US as the stablecoin payments company seeks regulatory approva",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:06:11.505Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Chip equipment maker Lam Research plans to invest $3B+ over five years to expand its global R&D network, aimin",
+      "url": "https://bsky.app/profile/techmeme.com/post/3mszzb6nfgn2r",
+      "at": "2026-08-14T11:06:00Z",
+      "thumbnail": null,
+      "excerpt": "Chip equipment maker Lam Research plans to invest $3B+ over five years to expand its global R&D network, aiming to increase its experiment capacity by 50%+ (Anzar Mehraj/Reuters) Main Link | Techmeme Permalink",
+      "metric": 3,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:01.201Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Techmeme",
+      "kind": "writing",
+      "title": "Chip equipment maker Lam Research plans to invest $3B+ over five years to expand its global R&D network, aiming to increase its experiment capacity by 50%+ (Anzar Mehraj/Reuters)",
+      "url": "https://www.techmeme.com/260814/p11#a260814p11",
+      "at": "2026-08-14T11:05:13.000Z",
+      "thumbnail": null,
+      "excerpt": "Anzar Mehraj / Reuters : \n Chip equipment maker Lam Research plans to invest $3B+ over five years to expand its global R&D network, aiming to increase its experiment capacity by 50%+ &mdash; Lam Research (LRCX.O) said on Thursday it intends to invest more than $3 billion in the next five years to ex",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:06:11.505Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "DeepSeek releases DeepSeek Harness under the MIT license in developer preview, touting a design where \"every c",
+      "url": "https://bsky.app/profile/techmeme.com/post/3mszxu455bs27",
+      "at": "2026-08-14T10:40:48Z",
+      "thumbnail": null,
+      "excerpt": "DeepSeek releases DeepSeek Harness under the MIT license in developer preview, touting a design where \"every capability is a plugin\" that can be swapped out (Carl Franzen/VentureBeat) Main Link | Techmeme Permalink",
+      "metric": 6,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:01.201Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Techmeme",
+      "kind": "writing",
+      "title": "DeepSeek debuts DeepSeek Harness under the MIT license in developer preview, touting a design where \"everything is a plugin\" that can be swapped out as a plugin (Carl Franzen/VentureBeat)",
+      "url": "https://www.techmeme.com/260814/p10#a260814p10",
+      "at": "2026-08-14T10:40:01.000Z",
+      "thumbnail": null,
+      "excerpt": "Carl Franzen / VentureBeat : \n DeepSeek debuts DeepSeek Harness under the MIT license in developer preview, touting a design where &ldquo;everything is a plugin&rdquo; that can be swapped out as a plugin &mdash; DeepSeek is expanding beyond the model layer and deeper into the software developers use",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:06:11.505Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Sources: Alibaba is nearing a deal to sell its Lingxi Games to PE firm Trustar Capital at a potential $1.5B+ v",
+      "url": "https://bsky.app/profile/techmeme.com/post/3mszwqmcjma2q",
+      "at": "2026-08-14T10:20:57Z",
+      "thumbnail": null,
+      "excerpt": "Sources: Alibaba is nearing a deal to sell its Lingxi Games to PE firm Trustar Capital at a potential $1.5B+ valuation, as Alibaba continues its reorganization (Bloomberg) Main Link | Techmeme Permalink",
+      "metric": 3,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:01.202Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Epic v. Google: in a compliance hearing, a judge orders Google to remove \"anticompetitive friction\" for instal",
+      "url": "https://bsky.app/profile/techmeme.com/post/3mszvvlmk5m2q",
+      "at": "2026-08-14T10:05:50Z",
+      "thumbnail": null,
+      "excerpt": "Epic v. Google: in a compliance hearing, a judge orders Google to remove \"anticompetitive friction\" for installing third-party app stores from its Play Store (Sean Hollister/The Verge) Main Link | Techmeme Permalink",
+      "metric": 3,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:01.202Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "ClearJet, whose AI-enabled logistics service connects shippers with unused cargo capacity on commercial flight",
+      "url": "https://bsky.app/profile/techmeme.com/post/3msvgts5b372v",
+      "at": "2026-08-12T15:25:45Z",
+      "thumbnail": null,
+      "excerpt": "ClearJet, whose AI-enabled logistics service connects shippers with unused cargo capacity on commercial flights, raised a $25M Series B led by Edison Partners (Mary Ann Azevedo/Crunchbase News) Main Link | Techmeme Permalink",
+      "metric": 0,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:32:54.417Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Techmeme",
+      "kind": "writing",
+      "title": "ClearJet, whose AI-enabled logistics service connects shippers with unused cargo capacity on commercial flights, raised a $25M Series B led by Edison Partners (Mary Ann Azevedo/Crunchbase News)",
+      "url": "https://www.techmeme.com/260812/p38#a260812p38",
+      "at": "2026-08-12T15:25:02.000Z",
+      "thumbnail": null,
+      "excerpt": "Mary Ann Azevedo / Crunchbase News : \n ClearJet, whose AI-enabled logistics service connects shippers with unused cargo capacity on commercial flights, raised a $25M Series B led by Edison Partners &mdash; ClearJet, an AI-enabled logistics technology startup, has raised a $25 million Series B, it te",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-12T15:33:15.076Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "FlightAware withdraws its lawsuit against Kalshi, a day after it alleged Kalshi is using its data without perm",
+      "url": "https://bsky.app/profile/techmeme.com/post/3msvfz4fryo2w",
+      "at": "2026-08-12T15:10:49Z",
+      "thumbnail": null,
+      "excerpt": "FlightAware withdraws its lawsuit against Kalshi, a day after it alleged Kalshi is using its data without permission to let users bet on flight cancellations (Sumedha Mukherjee/Reuters) Main Link | Techmeme Permalink",
+      "metric": 5,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:32:54.418Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Techmeme",
+      "kind": "writing",
+      "title": "FlightAware withdraws its lawsuit against Kalshi, a day after it alleged Kalshi is using its data without permission to let users bet on flight cancellations (Sumedha Mukherjee/Reuters)",
+      "url": "https://www.techmeme.com/260812/p37#a260812p37",
+      "at": "2026-08-12T15:10:06.000Z",
+      "thumbnail": null,
+      "excerpt": "Sumedha Mukherjee / Reuters : \n FlightAware withdraws its lawsuit against Kalshi, a day after it alleged Kalshi is using its data without permission to let users bet on flight cancellations &mdash; Flight-tracking company FlightAware withdrew its lawsuit against Kalshi on Tuesday, a day after it fil",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-12T15:33:15.076Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Google's Pixel 11 introduces Camera Looks, a total rethink of how the camera captures and styles an image, as ",
+      "url": "https://bsky.app/profile/techmeme.com/post/3msvelaj2uf22",
+      "at": "2026-08-12T14:45:10Z",
+      "thumbnail": null,
+      "excerpt": "Google's Pixel 11 introduces Camera Looks, a total rethink of how the camera captures and styles an image, as users seek \"more authentic or traditional\" photos (David Imel/The Verge) Main Link | Techmeme Permalink",
+      "metric": 5,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:32:54.418Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Techmeme",
+      "kind": "writing",
+      "title": "Google's Pixel 11 introduces Camera Looks, a total rethink of how the camera captures and styles an image, as users seek \"more authentic or traditional\" photos (David Imel/The Verge)",
+      "url": "https://www.techmeme.com/260812/p36#a260812p36",
+      "at": "2026-08-12T14:44:29.000Z",
+      "thumbnail": null,
+      "excerpt": "David Imel / The Verge : \n Google's Pixel 11 introduces Camera Looks, a total rethink of how the camera captures and styles an image, as users seek &ldquo;more authentic or traditional&rdquo; photos &mdash; If you look at a photo taken by a smartphone today, it's hard to find much that's technically",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-12T15:33:15.076Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Google says the Pixel 11 Pro and Pro XL are its most durable Pixel phones yet, using spacecraft-grade aluminum",
+      "url": "https://bsky.app/profile/techmeme.com/post/3msvebrcoug2v",
+      "at": "2026-08-12T14:39:52Z",
+      "thumbnail": null,
+      "excerpt": "Google says the Pixel 11 Pro and Pro XL are its most durable Pixel phones yet, using spacecraft-grade aluminum frames and a more scratch-resistant coating (Mariella Moon/Engadget) Main Link | Techmeme Permalink",
+      "metric": 1,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:32:54.418Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Google is cutting the Google One AI Pro trial bundled with Pixel 11 Pro and other handsets from 12 to 6 months",
+      "url": "https://bsky.app/profile/techmeme.com/post/3msvdrcjyuv2a",
+      "at": "2026-08-12T14:30:40Z",
+      "thumbnail": null,
+      "excerpt": "Google is cutting the Google One AI Pro trial bundled with Pixel 11 Pro and other handsets from 12 to 6 months, and removes the free trial from the Pixel 11 (Damien Wilde/9to5Google) Main Link | Techmeme Permalink",
+      "metric": 2,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:32:54.418Z",
+      "status": null
+    }
+  ],
+  "headline": {
+    "sentence": "Techmeme posts short tech news items to 51,220 Bluesky followers and runs a newsletter, YouTube channel, and its own website, with no store, membership, or podcast to sell against.",
+    "restsOn": "51,220 on Bluesky · YouTube channel · Newsletter · Own website · they do not have: Store, Membership, Podcast · \"Google's Pixel 11 introduces Camera Looks, a total rethink of how the camera captures and styles an image, as \" (5 likes) · \"FlightAware withdraws its lawsuit against Kalshi, a day after it alleged Kalshi is using its data without perm\" (5 likes)"
+  },
+  "samplesSearched": {
+    "count": 6,
+    "why": "6 pieces of their own work"
+  },
+  "commentsRead": 5,
+  "audienceHistory": [
+    {
+      "audience": 51217,
+      "at": "2026-08-12T15:32:54.415Z"
+    },
+    {
+      "audience": 51220,
+      "at": "2026-08-14T12:55:31.511Z"
+    },
+    {
+      "audience": 51220,
+      "at": "2026-08-14T13:06:01.201Z"
+    }
+  ],
+  "audience": 51220,
+  "audienceWhy": "Bluesky alone — nothing links the TikTok or YouTube to it",
+  "audienceSeparate": [
+    {
+      "id": "tiktok_profile",
+      "followers": 1,
+      "url": "https://www.tiktok.com/@techmeme",
+      "why": "nothing on either page links the TikTok to the Bluesky, so it is not added in"
+    },
+    {
+      "id": "youtube_profile",
+      "followers": 1,
+      "url": "https://www.youtube.com/@techmeme",
+      "why": "nothing on either page links the YouTube to the Bluesky, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 13,
+    "brief": "Writers and media people with a large audience and no business around it — newsletters, tech and culture commentary",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 12.7,
+      "max": 35,
+      "lines": [
+        {
+          "item": "store",
+          "label": "Store",
+          "half": "built",
+          "base": 9,
+          "effective": 9,
+          "demandAligned": false,
+          "why": "not there · we looked in 4 places · 2 wouldn't answer"
+        },
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        },
+        {
+          "item": "podcast",
+          "label": "Podcast",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        }
+      ],
+      "share": 0.361,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 12.7,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 22,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "unavailable": true,
+          "line": "we could not read their posting rate — they post often enough that 15 posts only reach back 0 days — not far enough behind the last 90 to compare against",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "fail",
+      "because": "Techmeme is an automated headline-aggregation feed, not a writer or media person with a personal audience and commentary — its posts are just syndicated links with no original voice."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 2 days apart, the trend needs 90",
+      "why": "our two looks are 2 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 1,
+      "resolved": 6,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 0
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "fail",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 90,
+    "places": 31,
+    "from": "2026-08-12T15:32:28.463Z",
+    "to": "2026-08-14T13:06:24.693Z"
+  }
+}

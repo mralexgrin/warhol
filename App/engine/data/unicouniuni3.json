@@ -1,0 +1,1509 @@
+{
+  "creatorId": "unicouniuni3",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:11:35.877Z",
+  "observationCount": 273,
+  "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": true,
+  "escalatedWhy": "newsletter — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 5,
+      "avatar": {
+        "url": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-avt-0068/f3977615ccf62a06aeb8b532b28dfb2b~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=b6b41e1f&x-expires=1786885200&x-signature=jNc1KB64MMpPKf%2FXD4ZCf6wiFCc%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@unicouniuni3",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 714000,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIdro_lxtaLJ4g4XZYT9D_iQwTQL3c2lzJza3Icy1vHyvKClkg=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@unicouniuni3",
+      "why": "うにうに絵日記 — the YouTube Data API resolved @unicouniuni3"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/unicouniuni3/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": true,
+      "followers": 166489,
+      "avatar": {
+        "url": "https://cdn.bsky.app/img/avatar/plain/did:plc:5ysft3tkkncrn3xohxwqybxl/bafkreiesortaml4n4fy4unnkf3qkynynzapl6nwrsmomye5u5yneseuzka",
+        "expires": null,
+        "host": "bsky.app"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://bsky.app/profile/unicouniuni3.bsky.social",
+      "why": "unicouniuni3.bsky.social — the profile goes by \"I'm Uni :3\", the same name as their Bluesky, and the AppView resolved it to did:plc:5ysft3tkkncrn3xohxwqybxl"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@unicouniuni3",
+      "evidence": "https://www.youtube.com/@unicouniuni3",
+      "placesLooked": 8,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@unicouniuni3",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.701Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/unicouniuni3",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.701Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/unicouniuni3",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.701Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@unicouniuni3",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.748Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.748Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.748Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@unicouniuni3",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:54:00.984Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:00.984Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:00.984Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@unicouniuni3",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.389Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.390Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.390Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.390Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/channel/unicouniuni",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.390Z"
+        },
+        {
+          "place": "proposed_5",
+          "outcome": "hit",
+          "url": "https://www.tiktok.com/@unicouniuni3",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.390Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 6 places",
+      "evidence": null,
+      "placesLooked": 21,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.701Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/unicouniuni3?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/unicouniuni3",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.701Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.701Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.701Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.701Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.748Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/unicouniuni3?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/unicouniuni3",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.748Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.748Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.748Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.748Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:00.985Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/unicouniuni3?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/unicouniuni3",
+          "advisory": false,
+          "at": "2026-08-14T12:54:00.985Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:00.985Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:00.985Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:00.985Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.390Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/unicouniuni3?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/unicouniuni3",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.390Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.390Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.390Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.391Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://youni.store/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.391Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by a link back to their YouTube",
+      "why": "found it — youni.store/shop · that page links back to their YouTube",
+      "evidence": "https://youni.store/shop",
+      "placesLooked": 12,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.701Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.701Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/unicouniuni3",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:58:02.701Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.701Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/unicouniuni3",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:58:02.701Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.748Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.748Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/unicouniuni3",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:27:33.748Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.748Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/unicouniuni3",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:27:33.748Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:00.985Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:00.985Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/unicouniuni3",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:54:00.985Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:54:00.985Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/unicouniuni3",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:54:00.985Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.393Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.393Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/unicouniuni3",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:11:13.393Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.393Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/unicouniuni3",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:11:13.393Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://youni.store/shop",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.393Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 9,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.702Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.702Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.749Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.749Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:00.985Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:00.985Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.393Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/unicouniuni3",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.393Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://youni.store/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.394Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 1 place",
+      "evidence": null,
+      "placesLooked": 4,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=U%E3%81%A8I&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.885Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=U%E3%81%A8I&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.836Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=U%E3%81%A8I&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-14T12:54:01.104Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=U%E3%81%A8I&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-14T13:11:13.646Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by a link back to their YouTube",
+      "why": "found it — lit.link/unicouniuni3 · that page links back to their YouTube",
+      "evidence": "https://lit.link/unicouniuni3",
+      "placesLooked": 8,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.885Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.885Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.836Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.836Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:54:01.104Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:54:01.104Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://lit.link/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:11:17.518Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://lit.link/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:11:17.518Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://lit.link/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:11:17.519Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://lit.link/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:11:17.519Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://lit.link/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:11:17.519Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://lit.link/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:11:17.520Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:11:17.522Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://unicouniuni3.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:11:17.523Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://lit.link/unicouniuni3",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:11:17.523Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://linktr.ee/unicouniuni3",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T13:11:17.524Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.886Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.836Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:54:01.104Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:11:17.526Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.886Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.836Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:54:01.104Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:11:17.527Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:58:02.886Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T20:27:33.836Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:54:01.105Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:11:17.528Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": -0.149,
+    "recentPerMonth": 21,
+    "baselinePerMonth": 18.27,
+    "recentCount": 63,
+    "baselineCount": 137,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 225,
+    "sampled": 200,
+    "truncated": true,
+    "recentMedianViews": 114258,
+    "baselineMedianViews": 144174,
+    "unit": "videos",
+    "line": "21 videos a month now, against 18 before that — up 15%, they are posting more; the recent ones are getting 21% fewer views"
+  },
+  "samples": [
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Very excited Uni! :3",
+      "url": "https://bsky.app/profile/unicouniuni3.bsky.social/post/3msyxb5wm6s2v",
+      "at": "2026-08-14T00:57:33.124Z",
+      "thumbnail": null,
+      "excerpt": "Very excited Uni! :3",
+      "metric": 4684,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:11:03.848Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Uni passed his final follow-up test, and he has fully recovered from his cystitis! It’s been a long few months",
+      "url": "https://bsky.app/profile/unicouniuni3.bsky.social/post/3msxpyhru422b",
+      "at": "2026-08-13T13:14:45.533Z",
+      "thumbnail": null,
+      "excerpt": "Uni passed his final follow-up test, and he has fully recovered from his cystitis! It’s been a long few months, and now we’re just hoping it never comes back. Thank you all so much for your kind words and for caring about Uni! It really meant a lot to us!",
+      "metric": 8704,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:11:03.848Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "We demand treats!",
+      "url": "https://bsky.app/profile/unicouniuni3.bsky.social/post/3mswfpruygk2r",
+      "at": "2026-08-13T00:38:16.978Z",
+      "thumbnail": null,
+      "excerpt": "We demand treats!",
+      "metric": 5229,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:11:03.849Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Everyday moments with Uni",
+      "url": "https://www.youtube.com/watch?v=F5w_lLv2j4k",
+      "at": "2026-08-12T14:32:16Z",
+      "thumbnail": "https://i.ytimg.com/vi/F5w_lLv2j4k/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 71267,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:11:03.847Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "That squish under his chin… the cutest!",
+      "url": "https://bsky.app/profile/unicouniuni3.bsky.social/post/3msv7ouscj22a",
+      "at": "2026-08-12T13:17:44.295Z",
+      "thumbnail": null,
+      "excerpt": "That squish under his chin… the cutest!",
+      "metric": 4683,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:11:03.849Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "He senses danger! The strongest is ready to fight",
+      "url": "https://bsky.app/profile/unicouniuni3.bsky.social/post/3msttkdvsls2v",
+      "at": "2026-08-12T00:07:47.726Z",
+      "thumbnail": null,
+      "excerpt": "He senses danger! The strongest is ready to fight",
+      "metric": 7480,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:11:03.849Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "He sleeps better with his friend",
+      "url": "https://www.youtube.com/watch?v=AnyZwLdjnkg",
+      "at": "2026-08-11T13:40:14Z",
+      "thumbnail": "https://i.ytimg.com/vi/AnyZwLdjnkg/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 47495,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:11:03.848Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "After Dad left for work, Uni went to sleep in his bed. We’ll work hard for you, so you just relax and sleep",
+      "url": "https://bsky.app/profile/unicouniuni3.bsky.social/post/3msspmnm6zc2o",
+      "at": "2026-08-11T13:24:50.305Z",
+      "thumbnail": null,
+      "excerpt": "After Dad left for work, Uni went to sleep in his bed. We’ll work hard for you, so you just relax and sleep",
+      "metric": 4969,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T20:27:32.427Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "The other day, the vet couldn’t believe Uni is already 6. He has a baby face, but this boy is middle-aged! :3",
+      "url": "https://bsky.app/profile/unicouniuni3.bsky.social/post/3msqzaugf4s2x",
+      "at": "2026-08-10T21:11:52.741Z",
+      "thumbnail": null,
+      "excerpt": "The other day, the vet couldn’t believe Uni is already 6. He has a baby face, but this boy is middle-aged! :3",
+      "metric": 5364,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T20:27:32.427Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Small box? No problem",
+      "url": "https://www.youtube.com/watch?v=nRxc1BqTeJ8",
+      "at": "2026-08-10T13:49:09Z",
+      "thumbnail": "https://i.ytimg.com/vi/nRxc1BqTeJ8/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 62854,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:11:03.848Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "I looked over and saw Uni like this… I couldn’t help but laugh",
+      "url": "https://bsky.app/profile/unicouniuni3.bsky.social/post/3msq6qijgzk2x",
+      "at": "2026-08-10T13:17:26.103Z",
+      "thumbnail": null,
+      "excerpt": "I looked over and saw Uni like this… I couldn’t help but laugh",
+      "metric": 3573,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T20:27:32.427Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Why he so :3",
+      "url": "https://www.youtube.com/watch?v=BCQ6AEhoh4E",
+      "at": "2026-08-07T14:10:55Z",
+      "thumbnail": "https://i.ytimg.com/vi/BCQ6AEhoh4E/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 77768,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:11:03.848Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "His way of saying, “I love you”",
+      "url": "https://www.youtube.com/watch?v=1miQfg1Z_6o",
+      "at": "2026-08-06T13:57:16Z",
+      "thumbnail": "https://i.ytimg.com/vi/1miQfg1Z_6o/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 145696,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:11:03.848Z",
+      "status": null
+    }
+  ],
+  "headline": {
+    "sentence": "Unicouniuni3 posts short cat videos to 714,000 YouTube subscribers and 166,489 followers on Bluesky, and sells through a store and their own site, but has no newsletter, membership, or podcast, so there is no owned channel to reach those viewers directly even as output rose to 21 videos a month and recent views fell 21%.",
+    "restsOn": "714,000 on YouTube · 166,489 on Bluesky · YouTube channel · Store · Own website · Newsletter · Membership · Podcast · 21 videos a month now · the recent ones are getting 21% fewer views · \"He sleeps better with his friend\" (37,675 views) · \"Why he so :3\" (68,655 views) · \"His way of saying, \n\"I love you\"\" (131,380 views)"
+  },
+  "samplesSearched": {
+    "count": 0,
+    "why": "they link none of their own posts anywhere we can read"
+  },
+  "commentsRead": 543,
+  "audienceHistory": [
+    {
+      "audience": 713000,
+      "at": "2026-08-12T15:57:51.641Z"
+    },
+    {
+      "audience": 713000,
+      "at": "2026-08-12T20:27:32.426Z"
+    },
+    {
+      "audience": 714000,
+      "at": "2026-08-14T12:53:59.960Z"
+    },
+    {
+      "audience": 714000,
+      "at": "2026-08-14T13:11:03.846Z"
+    }
+  ],
+  "audience": 714000,
+  "audienceWhy": "YouTube alone — nothing links the TikTok or Bluesky to it",
+  "audienceSeparate": [
+    {
+      "id": "tiktok_profile",
+      "followers": 5,
+      "url": "https://www.tiktok.com/@unicouniuni3",
+      "why": "nothing on either page links the TikTok to the YouTube, so it is not added in"
+    },
+    {
+      "id": "bluesky_profile",
+      "followers": 166489,
+      "url": "https://bsky.app/profile/unicouniuni3.bsky.social",
+      "why": "nothing on either page links the Bluesky to the YouTube, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 14,
+    "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+    "demand": {
+      "points": 0.2,
+      "max": 25,
+      "signalCount": 2,
+      "signals": [
+        {
+          "points_at": "youtube_channel",
+          "quote": "btw I subbed!",
+          "at": "2026-08-14T13:11:22.837Z"
+        },
+        {
+          "points_at": "store",
+          "quote": "We need a loaf plush of him or with paws that does the same :3",
+          "at": "2026-08-14T13:11:22.837Z"
+        }
+      ]
+    },
+    "missing": {
+      "points": 13.5,
+      "max": 35,
+      "lines": [
+        {
+          "item": "newsletter",
+          "label": "Newsletter",
+          "half": "built",
+          "base": 10,
+          "effective": 10,
+          "demandAligned": false,
+          "why": "not there · we looked in 6 places"
+        },
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        },
+        {
+          "item": "podcast",
+          "label": "Podcast",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 1 place"
+        }
+      ],
+      "share": 0.386,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 13.7,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "line": "21 videos a month now, against 18 before that — up 15%, they are posting more; the recent ones are getting 21% fewer views",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "pass",
+      "because": "A cat channel built around named, recurring characters with 714K YouTube subscribers is clippable, endlessly repeatable, and pet content is a category people plainly want."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 2 days apart, the trend needs 90",
+      "why": "our two looks are 2 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 1,
+      "resolved": 6,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 0
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "pass",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 110,
+    "places": 33,
+    "from": "2026-08-12T15:57:38.738Z",
+    "to": "2026-08-14T13:11:35.877Z"
+  }
+}

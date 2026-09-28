@@ -1,0 +1,16 @@
+{
+  "name": "warhol-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "The Warhol engine — the service that finds creators and checks them. Scout is the interface to it.",
+  "bin": { "warhol": "./bin/warhol.js" },
+  "scripts": {
+    "check": "node bin/warhol.js check",
+    "cost": "node bin/warhol.js cost"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0"
+  },
+  "engines": { "node": ">=20" }
+}

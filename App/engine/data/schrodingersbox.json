@@ -1,0 +1,3795 @@
+{
+  "creatorId": "schrodingersbox",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:08:24.084Z",
+  "observationCount": 806,
+  "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": true,
+  "escalatedWhy": "newsletter — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 0,
+      "avatar": {
+        "url": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/7324163600040656901~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=696ff0c3&x-expires=1786885200&x-signature=FDy5D7dGcvqvsxdfQGli1Oglsik%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@schrodingersbox",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 302000,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIdro_kP4aSo1P6OyrtDTooWQvhPoslPg9rwdAS5S8XQN_78DpM=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@schrodingersbox",
+      "why": "Schrodingers Box — the YouTube Data API resolved @schrodingersbox"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/schrodingersbox/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://bsky.app/profile/schrodingersbox.bsky.social",
+      "why": "there is a Bluesky profile at schrodingersbox.bsky.social and the handle is their name and nothing on the profile ties it to them — in a namespace where the name is first-come, that is not enough to call it theirs"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@schrodingersbox",
+      "evidence": "https://www.youtube.com/@schrodingersbox",
+      "placesLooked": 11,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.769Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.769Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.769Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.769Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.324Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.324Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.324Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/SchrodingersBox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.324Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.433Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.433Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.434Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/SchrodingersBox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.434Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.298Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.298Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.298Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.298Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.479Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.479Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.479Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/SchrodingersBox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.479Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:27:31.303Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:27:31.303Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:31.303Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:34:42.294Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:34:42.294Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:42.295Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@schrodingersbox",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:24:39.409Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:24:39.409Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/schrodingersbox",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:24:39.409Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@schrodingersbox",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.204Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.205Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/schrodingersbox",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.205Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:58:46.096Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:58:46.098Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:46.098Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:26:19.986Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:26:19.986Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:19.986Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:52:40.194Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:52:40.194Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:40.194Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.068Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.068Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.068Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.068Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "not there · we looked in 6 places",
+      "evidence": null,
+      "placesLooked": 69,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.770Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/schrodingersbox?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/schrodingersbox",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.770Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.770Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.770Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.770Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.770Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.324Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/schrodingersbox?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/schrodingersbox",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.324Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.325Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.325Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.325Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.325Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.434Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/schrodingersbox?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/schrodingersbox",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.434Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.434Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.434Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.434Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.434Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.299Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/schrodingersbox?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/schrodingersbox",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.299Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.299Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.299Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.299Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.299Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.299Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.480Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/schrodingersbox?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/schrodingersbox",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.480Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.480Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.480Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.480Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.480Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.480Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:31.303Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/schrodingersbox?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/schrodingersbox",
+          "advisory": false,
+          "at": "2026-08-10T21:27:31.304Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:31.304Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:31.304Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:31.304Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:42.296Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/schrodingersbox?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/schrodingersbox",
+          "advisory": false,
+          "at": "2026-08-10T21:34:42.296Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:42.296Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:42.296Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:42.296Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:24:39.409Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/schrodingersbox?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/schrodingersbox",
+          "advisory": false,
+          "at": "2026-08-12T15:24:39.409Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:24:39.409Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:24:39.410Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:24:39.410Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.206Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/schrodingersbox?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/schrodingersbox",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.207Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.207Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.207Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.207Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:46.100Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/schrodingersbox?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/schrodingersbox",
+          "advisory": false,
+          "at": "2026-08-12T19:58:46.101Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:46.101Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:46.101Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:46.101Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:19.986Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/schrodingersbox?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/schrodingersbox",
+          "advisory": false,
+          "at": "2026-08-12T20:26:19.986Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:19.986Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:19.987Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:19.987Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "inconclusive",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T12:52:40.195Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@schrodingersbox",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T12:52:40.195Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:40.195Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:40.195Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:40.195Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.069Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/schrodingersbox?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/schrodingersbox",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.069Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.069Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.069Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.069Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.069Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at hugedomains.com/domain_profile.cfm — not confirmed as theirs",
+      "evidence": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+      "placesLooked": 42,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.771Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.771Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:21:32.771Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.771Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:21:32.771Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.shop",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.771Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.771Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.325Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.325Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:52:43.326Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.326Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:52:43.326Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.schrodingersbox.shop",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.326Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.326Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.435Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.435Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:56:46.435Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.435Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:56:46.435Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.435Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/SchrodingersBox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.435Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.299Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.299Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:44:12.300Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.300Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:44:12.300Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.300Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.300Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.481Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.481Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:47:49.481Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.481Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:47:49.481Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.481Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:31.304Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:31.304Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:27:31.304Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-10T21:27:31.304Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:27:31.304Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:42.296Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:42.296Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:34:42.296Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-10T21:34:42.296Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:34:42.297Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:24:39.410Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:24:39.410Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:24:39.410Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:24:39.410Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:24:39.410Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.208Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.208Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:26:56.208Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.208Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:26:56.208Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:46.101Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:46.101Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:58:46.101Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T19:58:46.102Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:58:46.102Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:19.987Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:19.987Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:26:19.987Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T20:26:19.987Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:26:19.987Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:40.195Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:40.195Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:52:40.195Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:52:40.195Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:52:40.195Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.070Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.070Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:08:02.070Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.070Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/schrodingersbox",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:08:02.070Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.schrodingersboxshop.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.070Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.071Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 32,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.772Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.772Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:21:32.772Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.326Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.326Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.326Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.436Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.436Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.436Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.300Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.300Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.300Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.481Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.481Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.481Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:31.304Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:31.304Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:42.297Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:42.297Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:24:39.410Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:24:39.410Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.208Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.208Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:46.102Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:46.102Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:19.987Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:19.987Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:40.195Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:40.195Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.071Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.071Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/schrodingersbox",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:08:02.071Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at hugedomains.com/domain_profile.cfm — not confirmed as theirs",
+      "evidence": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+      "placesLooked": 15,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Schrodinger%27s%20Box&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-06T20:21:33.172Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:21:33.172Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:21:33.172Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Schrodinger%27s%20Box&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.561Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "hit",
+          "url": "https://creators.spotify.com/pod/show/schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.561Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://open.spotify.com/show/schrodingersbox",
+          "status": 400,
+          "why": "HTTP 400 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.561Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Schrodinger%27s%20Box&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.464Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Schrodinger%27s%20Box&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.937Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Schrodinger%27s%20Box&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.505Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.schrodingersboxpodcast.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.505Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Schrodinger%27s%20Box&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-10T21:27:31.695Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Schrodinger%27s%20Box&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-10T21:34:42.320Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Schrodinger%27s%20Box&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-12T15:24:40.008Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Schrodinger%27s%20Box&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.558Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Schrodinger%27s%20Box&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-12T19:58:46.195Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Schrodinger%27s%20Box&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-12T20:26:20.074Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Schrodinger%27s%20Box&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-14T12:52:40.548Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:08:04.391Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:08:04.391Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:08:04.392Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:08:04.392Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:08:04.392Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:08:04.393Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Schrodinger%27s%20Box&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-14T13:08:04.394Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.schrodingersboxpodcast.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:08:04.395Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:08:04.395Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at hugedomains.com/domain_profile.cfm — not confirmed as theirs",
+      "evidence": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+      "placesLooked": 15,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:21:33.172Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:21:33.172Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:21:33.173Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.562Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.562Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.562Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.465Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.465Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.465Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://www.instagram.com/schrodingersbox",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.465Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.tiktok.com/@schrodingersbox",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.466Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.938Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.938Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.938Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://www.instagram.com/schrodingersbox",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.938Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.506Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.506Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.506Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:27:34.012Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:27:34.012Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:27:34.012Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:27:34.012Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:27:34.012Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:27:34.012Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:27:34.013Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-10T21:27:34.013Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:34:45.453Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:34:45.453Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:34:45.454Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:34:45.455Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:34:45.455Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:34:45.456Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:34:45.458Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-10T21:34:45.458Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:24:40.009Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:24:40.010Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.560Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.560Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:58:48.523Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:58:48.523Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:58:48.523Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:58:48.523Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:58:48.524Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:58:48.524Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:58:48.524Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T19:58:48.524Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:26:22.606Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:26:22.606Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:26:22.606Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:26:22.606Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:26:22.607Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:26:22.607Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:26:22.614Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T20:26:22.614Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:52:42.858Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:52:42.858Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:52:42.859Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:52:42.859Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:52:42.859Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:52:42.859Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:52:42.859Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:52:42.859Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:08:06.800Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:08:06.801Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:08:06.801Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:08:06.801Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:08:06.801Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.hugedomains.com/",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:08:06.801Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:08:06.801Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://schrodingersbox.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:08:06.801Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.hugedomains.com/domain_profile.cfm?d=schrodingersbox.com",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:08:06.801Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T20:21:33.173Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.562Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.466Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.938Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.506Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:27:34.013Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:34:45.459Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:24:40.011Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.561Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T19:58:48.524Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T20:26:22.614Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:52:42.859Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:08:06.802Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T20:21:33.173Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.562Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.466Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.939Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.506Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:27:34.013Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:34:45.459Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:24:40.011Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.561Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T19:58:48.524Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T20:26:22.614Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:52:42.860Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:08:06.802Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T20:21:33.173Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:52:43.562Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:56:46.466Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:44:12.939Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:47:49.506Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:27:34.013Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:34:45.459Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:24:40.012Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:26:56.562Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T19:58:48.525Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T20:26:22.615Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:52:42.860Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:08:06.802Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": 0.206,
+    "recentPerMonth": 4.33,
+    "baselinePerMonth": 5.45,
+    "recentCount": 13,
+    "baselineCount": 50,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 275,
+    "sampled": 100,
+    "truncated": false,
+    "recentMedianViews": 2846,
+    "baselineMedianViews": 5522,
+    "unit": "videos",
+    "line": "4.3 videos a month now, against 5.5 before that — down 21%; the recent ones are getting 48% fewer views"
+  },
+  "samples": [
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "NEVER Replace A/F or O2 Sensor Til You Test This First (P015a, P015b, P014c codes)",
+      "url": "https://www.youtube.com/watch?v=EZ3mOlz_x4w",
+      "at": "2026-08-11T22:29:19Z",
+      "thumbnail": "https://i.ytimg.com/vi/EZ3mOlz_x4w/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 3756,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:07:39.238Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Which of Us Will Win World's Hottest Chocolate Bar Challenge?",
+      "url": "https://www.youtube.com/watch?v=9LO9zBBj1pc",
+      "at": "2026-07-26T02:48:16Z",
+      "thumbnail": "https://i.ytimg.com/vi/9LO9zBBj1pc/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1297,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:07:39.239Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "2021 Buick Intermittent Check Engine Light, Runs Rich, NO CODES  How Would You Fix??",
+      "url": "https://www.youtube.com/watch?v=TU0V7b_3_bg",
+      "at": "2026-07-15T23:16:47Z",
+      "thumbnail": "https://i.ytimg.com/vi/TU0V7b_3_bg/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 3752,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:07:39.239Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "I'm Back! Jeep No A/C after dealer fix, Plus 5 other problems!!",
+      "url": "https://www.youtube.com/watch?v=5rQJMedJB34",
+      "at": "2026-06-30T01:43:36Z",
+      "thumbnail": "https://i.ytimg.com/vi/5rQJMedJB34/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 3971,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:07:39.239Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Kingbolen K8 Pro Review-FREE Lifetime updates, NO FEES!!!",
+      "url": "https://www.youtube.com/watch?v=LKSswkWT4XI",
+      "at": "2026-06-18T20:54:31Z",
+      "thumbnail": "https://i.ytimg.com/vi/LKSswkWT4XI/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 6132,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:07:39.239Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Recording of LIVE STREAM EVENT Open Forum 6-11-26",
+      "url": "https://www.youtube.com/watch?v=FQ2BS41RtpA",
+      "at": "2026-06-12T18:28:05Z",
+      "thumbnail": "https://i.ytimg.com/vi/FQ2BS41RtpA/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 849,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-10T21:34:23.658Z",
+      "status": null
+    }
+  ],
+  "headline": {
+    "sentence": "schrodingersbox makes car diagnostic and tool review videos for 302,000 YouTube subscribers and already runs a store, a podcast, and an own website, but has no newsletter or membership to reach that audience directly, and posting is down to 4.3 videos a month from 5.5 with recent videos getting 48% fewer views.",
+    "restsOn": "302,000 on YouTube · YouTube channel, Store, Podcast, Own website · Newsletter, Membership · 4.3 videos a month now, against 5.5 before that \\are getgetting 48% fewer views · 2021 Buick Intermittent Check Engine Light, Runs Rich, NO CODES  How Would You Fix?? · I'm Back! Jeep No A/C after dealer fix, Plus 5 other problems!! · Kingbolen K8 Pro Review-FREE Lifetime updates, NO FEES!!!"
+  },
+  "samplesSearched": {
+    "count": 0,
+    "why": "they link none of their own posts anywhere we can read"
+  },
+  "commentsRead": 143,
+  "audienceHistory": [
+    {
+      "audience": 301000,
+      "at": "2026-08-06T20:21:11.493Z"
+    },
+    {
+      "audience": 301000,
+      "at": "2026-08-06T21:52:20.242Z"
+    },
+    {
+      "audience": 301000,
+      "at": "2026-08-06T21:56:24.179Z"
+    },
+    {
+      "audience": 301000,
+      "at": "2026-08-07T11:43:48.765Z"
+    },
+    {
+      "audience": 301000,
+      "at": "2026-08-07T11:47:27.317Z"
+    },
+    {
+      "audience": 302000,
+      "at": "2026-08-10T21:27:12.839Z"
+    },
+    {
+      "audience": 302000,
+      "at": "2026-08-10T21:34:23.657Z"
+    },
+    {
+      "audience": 302000,
+      "at": "2026-08-12T15:24:13.030Z"
+    },
+    {
+      "audience": 302000,
+      "at": "2026-08-12T15:26:29.553Z"
+    },
+    {
+      "audience": 302000,
+      "at": "2026-08-12T19:58:27.519Z"
+    },
+    {
+      "audience": 302000,
+      "at": "2026-08-12T20:26:00.526Z"
+    },
+    {
+      "audience": 302000,
+      "at": "2026-08-14T12:52:21.481Z"
+    },
+    {
+      "audience": 302000,
+      "at": "2026-08-14T13:07:39.238Z"
+    }
+  ],
+  "audience": 302000,
+  "audienceWhy": "YouTube alone",
+  "audienceSeparate": [],
+  "score": {
+    "total": 12,
+    "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+    "demand": {
+      "points": 0.3,
+      "max": 25,
+      "signalCount": 4,
+      "signals": [
+        {
+          "points_at": "store",
+          "quote": "Love the tee shirt Matt. Where can I get one?",
+          "at": "2026-08-14T13:08:10.925Z"
+        },
+        {
+          "points_at": "youtube_channel",
+          "quote": "I wish you make a detailed video about it",
+          "at": "2026-08-14T13:08:10.925Z"
+        },
+        {
+          "points_at": "membership",
+          "quote": "Could you upload the mra vaccine video to the paid channel please.",
+          "at": "2026-08-14T13:08:10.925Z"
+        },
+        {
+          "points_at": "store",
+          "quote": "Your link does not work for me in New Zealand, if I buy this thing I'd like to use your affiliate link to give a little back for the time and information you share with us.",
+          "at": "2026-08-14T13:08:10.925Z"
+        }
+      ]
+    },
+    "missing": {
+      "points": 11.4,
+      "max": 35,
+      "lines": [
+        {
+          "item": "newsletter",
+          "label": "Newsletter",
+          "half": "built",
+          "base": 10,
+          "effective": 10,
+          "demandAligned": false,
+          "why": "not there · we looked in 6 places"
+        },
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3.6,
+          "demandAligned": true,
+          "why": "not there · we looked in 3 places"
+        }
+      ],
+      "share": 0.327,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 11.7,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "line": "4.3 videos a month now, against 5.5 before that — down 21%; the recent ones are getting 48% fewer views",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "pass",
+      "because": "He runs a repeatable diagnostic-walkthrough format in a category people search constantly — DIY auto repair — and each 'here's how you actually test that part' moment is a natural clip, backed by a 302k-subscriber YouTube following."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 8 days apart, the trend needs 90",
+      "why": "our two looks are 8 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.5,
+      "resolved": 3,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 3
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": false,
+      "fit": "pass",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 380,
+    "places": 33,
+    "from": "2026-08-06T20:21:11.471Z",
+    "to": "2026-08-14T13:08:24.084Z"
+  }
+}

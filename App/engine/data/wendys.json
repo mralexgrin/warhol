@@ -1,0 +1,1161 @@
+{
+  "creatorId": "wendys",
+  "asOf": null,
+  "observedThrough": "2026-08-06T16:17:53.080Z",
+  "observationCount": 209,
+  "brief": "Anyone worth a call.",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": false,
+  "escalatedWhy": "we looked in 20 places — they already have a youtube channel, newsletter and store. We didn't go further.",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 2200000,
+      "status": 200,
+      "url": "https://www.tiktok.com/@wendys",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 151000,
+      "status": 200,
+      "url": "https://www.youtube.com/@wendys",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "status": 0,
+      "url": "https://www.instagram.com/wendys/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "beacons",
+      "platform": "beacons",
+      "read": true,
+      "status": 200,
+      "url": "https://beacons.ai/wendys",
+      "why": "link hub read"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@wendys",
+      "evidence": "https://www.youtube.com/@wendys",
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.969Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.969Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.969Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.958Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.958Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.958Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.952Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.952Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.952Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.858Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.858Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.858Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at wendys.substack.com — not confirmed as theirs",
+      "evidence": "https://wendys.substack.com/",
+      "placesLooked": 12,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://wendys.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.971Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/profile/56465100-wendy-schwartz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.972Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://wendys.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.972Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/wendys",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.972Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://wendys.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.972Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://wendys.com",
+          "status": 200,
+          "why": "no way to subscribe to anything on their own site — we read 1 page of wendys.com",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.972Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://wendys.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.961Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/profile/56465100-wendy-schwartz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.961Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://wendys.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.961Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/wendys",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.961Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://wendys.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.961Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://wendys.com",
+          "status": 200,
+          "why": "no way to subscribe to anything on their own site — we read 1 page of wendys.com",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.961Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://wendys.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.956Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/profile/56465100-wendy-schwartz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.956Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://wendys.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.956Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/wendys",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.956Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://wendys.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.956Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://wendys.com",
+          "status": 200,
+          "why": "no way to subscribe to anything on their own site — we read 1 page of wendys.com",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.956Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://wendys.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.860Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/profile/56465100-wendy-schwartz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.860Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://wendys.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.860Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/wendys",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.860Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://wendys.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.860Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://wendys.com",
+          "status": 200,
+          "why": "no way to subscribe to anything on their own site — we read 1 page of wendys.com",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.860Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at wendys.gumroad.com — not confirmed as theirs",
+      "evidence": "https://wendys.gumroad.com/",
+      "placesLooked": 12,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://wendys.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.974Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://wendys.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.974Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/wendys",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:12:05.974Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=wendys",
+          "status": 200,
+          "why": "asked for /wendys, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.974Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/wendys",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:12:05.974Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://wendys.com",
+          "status": 200,
+          "why": "nothing to buy on their own site — we read 1 page of wendys.com",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.974Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://wendys.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.963Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://wendys.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.963Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/wendys",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:15:58.964Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=wendys",
+          "status": 200,
+          "why": "asked for /wendys, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.964Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/wendys",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:15:58.964Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://wendys.com",
+          "status": 200,
+          "why": "nothing to buy on their own site — we read 1 page of wendys.com",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.964Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://wendys.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.958Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://wendys.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.958Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/wendys",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:17:41.958Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=wendys",
+          "status": 200,
+          "why": "asked for /wendys, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.958Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/wendys",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:17:41.958Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://wendys.com",
+          "status": 200,
+          "why": "nothing to buy on their own site — we read 1 page of wendys.com",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.958Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://wendys.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.861Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://wendys.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.861Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/wendys",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:17:52.862Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=wendys",
+          "status": 200,
+          "why": "asked for /wendys, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.862Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/wendys",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:17:52.862Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://wendys.com",
+          "status": 200,
+          "why": "nothing to buy on their own site — we read 1 page of wendys.com",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.862Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at buymeacoffee.com/wendys — not confirmed as theirs",
+      "evidence": "https://buymeacoffee.com/wendys",
+      "placesLooked": 4,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=37377351",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.975Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "hit",
+          "url": "https://buymeacoffee.com/wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:05.975Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=37377351",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.965Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "hit",
+          "url": "https://buymeacoffee.com/wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:15:58.965Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=37377351",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.959Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "hit",
+          "url": "https://buymeacoffee.com/wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:41.959Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=37377351",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.862Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "hit",
+          "url": "https://buymeacoffee.com/wendys",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:52.862Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by an official directory",
+      "why": "found it — https://podcasts.apple.com/us/podcast/sir-this-is-a-wendys-podcast/id1527298165?uo=4",
+      "evidence": "https://itunes.apple.com/search?term=Wendy%E2%80%99s&entity=podcast&limit=5",
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Wendy%E2%80%99s&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"SIR, THIS IS A WENDY'S PODCAST\" by Wendy's",
+          "advisory": false,
+          "at": "2026-08-06T16:12:06.340Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Wendy%E2%80%99s&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"SIR, THIS IS A WENDY'S PODCAST\" by Wendy's",
+          "advisory": false,
+          "at": "2026-08-06T16:15:59.060Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Wendy%E2%80%99s&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"SIR, THIS IS A WENDY'S PODCAST\" by Wendy's",
+          "advisory": false,
+          "at": "2026-08-06T16:17:42.119Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Wendy%E2%80%99s&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"SIR, THIS IS A WENDY'S PODCAST\" by Wendy's",
+          "advisory": false,
+          "at": "2026-08-06T16:17:53.001Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by a link they publish",
+      "why": "found it — wendys.com",
+      "evidence": "https://www.wendys.com/",
+      "placesLooked": 4,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.wendys.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:06.340Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://wendys.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:12:06.341Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.wendys.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:15:59.060Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://wendys.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:15:59.061Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.wendys.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:42.119Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://wendys.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:17:42.119Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.wendys.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:53.001Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://wendys.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:17:53.002Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T16:12:06.341Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T16:15:59.061Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T16:17:42.119Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T16:17:53.002Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T16:12:06.341Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T16:15:59.061Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T16:17:42.119Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T16:17:53.002Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 23 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T16:12:06.341Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T16:15:59.061Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 23 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T16:17:42.120Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T16:17:53.002Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": false,
+    "why": "no YOUTUBE_API_KEY in the environment"
+  },
+  "commentsRead": null,
+  "audienceHistory": [
+    {
+      "audience": 2200000,
+      "at": "2026-08-06T16:12:03.051Z"
+    },
+    {
+      "audience": 2200000,
+      "at": "2026-08-06T16:15:53.615Z"
+    },
+    {
+      "audience": 2200000,
+      "at": "2026-08-06T16:17:39.299Z"
+    },
+    {
+      "audience": 2200000,
+      "at": "2026-08-06T16:17:50.984Z"
+    }
+  ],
+  "audience": 2200000,
+  "audienceWhy": "TikTok alone — nothing links the YouTube to it",
+  "audienceSeparate": [
+    {
+      "id": "youtube_profile",
+      "followers": 151000,
+      "url": "https://www.youtube.com/@wendys",
+      "why": "nothing on either page links the YouTube to the TikTok, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 0,
+    "brief": "Anyone worth a call.",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 0,
+      "max": 35,
+      "lines": [],
+      "share": 0,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 0,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 22,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "unavailable": true,
+          "line": "we could not read their posting rate — no YOUTUBE_API_KEY in the environment",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "not_judged",
+      "because": "the model pass did not run, and Fit is a judgment — no model, no verdict"
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "why": "our two looks are 0 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.5,
+      "resolved": 3,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 3
+    },
+    "threshold": 78,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": false,
+      "fit": "not_judged",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 96,
+    "places": 19,
+    "from": "2026-08-06T16:12:02.757Z",
+    "to": "2026-08-06T16:17:53.080Z"
+  }
+}

@@ -1,0 +1,698 @@
+{
+  "creatorId": "chiptowers",
+  "asOf": null,
+  "observedThrough": "2026-08-14T17:52:02.632Z",
+  "observationCount": 72,
+  "brief": "Southern college football insiders. Beat writers and people close to local coaches and recruits. Modest following is fine, but their stuff has to land consistently.",
+  "source": "proposed",
+  "sourceWhy": "a model proposed this handle from a brief — Longtime Georgia Bulldogs beat writer in Atlanta; close to the program day to day.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity.",
+  "escalated": true,
+  "escalatedWhy": "youtube channel, store — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 190,
+      "avatar": {
+        "url": "https://p19-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/7334466010419740678~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=eaf8567f&x-expires=1786899600&x-signature=bl%2F1yEXUVCkd2sEUNpDEudKj7h4%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T17:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@chiptowers",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 404,
+      "url": "https://www.youtube.com/@chiptowers",
+      "why": "HTTP 404"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/chiptowers/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 400,
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=chiptowers.bsky.social",
+      "why": "page says it is not there"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 4 places",
+      "evidence": null,
+      "placesLooked": 4,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/@chiptowers",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.186Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/chiptowers",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.186Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/chiptowers",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.186Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/@chiptowers",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.186Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by the feed it publishes — the feed author reads \"Chip Towers\"",
+      "why": "found it — chiptowers.substack.com",
+      "evidence": "https://chiptowers.substack.com/",
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://chiptowers.substack.com/feed",
+          "status": 200,
+          "why": "4 posts read from Chip’s Substack — the feed author reads \"Chip Towers\"",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.281Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://chiptowers.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.282Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@towerstake",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.282Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://chiptowers.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.282Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/chiptowers",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.282Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://chiptowers.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.282Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://chiptowers.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.282Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 4 places · 2 wouldn't answer",
+      "evidence": null,
+      "placesLooked": 4,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://chiptowers.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.282Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/chiptowers",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.282Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/chiptowers",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T17:51:45.282Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.282Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/chiptowers",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T17:51:45.282Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://chiptowers.gumroad.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.282Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/chiptowers",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.282Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/chiptowers",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.283Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/chiptowers",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.283Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Chip%20Towers&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.557Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcast.chiptowers.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.557Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://chiptowers.transistor.fm/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.557Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 4 places",
+      "evidence": null,
+      "placesLooked": 4,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://chiptowers.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.557Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://chiptowers.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.557Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://chiptowers.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.557Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.chiptowers.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.558Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.558Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.558Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T17:51:45.558Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": false,
+    "why": "only 4 dated posts came back — not enough to read a posting rate"
+  },
+  "samples": [
+    {
+      "platform": "Newsletter",
+      "publication": "Chip’s Substack",
+      "kind": "writing",
+      "title": "Don't count out the 2026 Diamond Dawgs",
+      "url": "https://chiptowers.substack.com/p/dont-count-out-the-2026-diamond-dawgs",
+      "at": "2026-06-12T19:24:59.000Z",
+      "thumbnail": null,
+      "excerpt": "Georgia catcher Dan Jackson follows through on his game-winning home run to defeat Mississippi State 11-9 in NCAA Athens Super Regional on June 7, 2026. (Photo by Ken Ward/DawgTime.com) \n ATHENS – I haven’t covered every Super Regional appearance by the Georgia Bulldogs, but I’ve been around all of ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their newsletter",
+      "seenAt": "2026-08-14T17:51:45.558Z",
+      "status": null
+    },
+    {
+      "platform": "Newsletter",
+      "publication": "Chip’s Substack",
+      "kind": "writing",
+      "title": "Gunner Stockton's 'Stache' the talk of Georgia's football camp",
+      "url": "https://chiptowers.substack.com/p/gunner-stocktons-stache-the-talk",
+      "at": "2025-08-20T00:07:12.000Z",
+      "thumbnail": null,
+      "excerpt": "Georgia coach Kirby Smart grins ever so slightly as he answers a question during a press conference in Athens this week. (Photo by Chip Towers) \n ATHENS, Ga. — Gunner Stockton is sporting a new mustache.\n That was the big news coming out of the Georgia Bulldogs’ camp on Tuesday. This is a good thing",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their newsletter",
+      "seenAt": "2026-08-14T17:51:45.558Z",
+      "status": null
+    },
+    {
+      "platform": "Newsletter",
+      "publication": "Chip’s Substack",
+      "kind": "writing",
+      "title": "What's next?",
+      "url": "https://chiptowers.substack.com/p/whats-next",
+      "at": "2025-02-28T16:43:36.000Z",
+      "thumbnail": null,
+      "excerpt": "Writers write.\n That has been the most profound truth I’ve discovered two months into retirement. When you have written as much as I have over the last 40 years, it becomes secondary nature to want, or perhaps need, to write.\n Thanks for reading Chip’s Substack! Subscribe for free to receive new pos",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their newsletter",
+      "seenAt": "2026-08-14T17:51:45.558Z",
+      "status": null
+    }
+  ],
+  "headline": {
+    "sentence": "chiptowers covers Georgia football and baseball in a newsletter and for 190 followers on TikTok, with no YouTube channel, store, membership, podcast, or website of their own.",
+    "restsOn": "190 on TikTok · Newsletter · YouTube channel · Store · Membership · Podcast · Own website · \"Don't count out the 2026 Diamond Dawgs\" · \"Gunner Stockton's 'Stache' the talk of Georgia's football camp\""
+  },
+  "samplesSearched": {
+    "count": 3,
+    "why": "3 pieces of their own work"
+  },
+  "commentsRead": 0,
+  "audienceHistory": [
+    {
+      "audience": 190,
+      "at": "2026-08-14T17:51:38.964Z"
+    }
+  ],
+  "audience": 190,
+  "audienceWhy": "TikTok alone",
+  "audienceSeparate": [],
+  "score": {
+    "total": 19,
+    "brief": "Southern college football insiders. Beat writers and people close to local coaches and recruits. Modest following is fine, but their stuff has to land consistently.",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 19.4,
+      "max": 35,
+      "lines": [
+        {
+          "item": "store",
+          "label": "Store",
+          "half": "built",
+          "base": 9,
+          "effective": 9,
+          "demandAligned": false,
+          "why": "not there · we looked in 4 places · 2 wouldn't answer"
+        },
+        {
+          "item": "youtube_channel",
+          "label": "YouTube channel",
+          "half": "built",
+          "base": 4,
+          "effective": 4,
+          "demandAligned": false,
+          "why": "not there · we looked in 4 places"
+        },
+        {
+          "item": "website",
+          "label": "Own website",
+          "half": "built",
+          "base": 4,
+          "effective": 4,
+          "demandAligned": false,
+          "why": "not there · we looked in 4 places"
+        },
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        },
+        {
+          "item": "podcast",
+          "label": "Podcast",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        }
+      ],
+      "share": 0.554,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 19.4,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 22,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "unavailable": true,
+          "line": "we could not read their posting rate — only 4 dated posts came back — not enough to read a posting rate",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "fail",
+      "because": "The only thing visible here is a near-dormant TikTok account with 57 likes, more following than followers, and no actual posts to look at, so the brief's one hard requirement — that the work lands consistently — is contradicted rather than just unconfirmed, even though the name plausibly belongs to a Georgia football beat writer."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "first look — no trend yet, we check back in 90 days",
+      "why": "we have seen them once. A trend needs two looks at least 90 days apart, and inventing one from a single point is the failure this gate exists to prevent."
+    },
+    "confidence": {
+      "value": 1,
+      "resolved": 6,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 0
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "fail",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 33,
+    "places": 23,
+    "from": "2026-08-14T17:51:33.136Z",
+    "to": "2026-08-14T17:52:02.632Z"
+  }
+}

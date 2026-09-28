@@ -1,0 +1,871 @@
+{
+  "creatorId": "cookingwithdog",
+  "asOf": null,
+  "observedThrough": "2026-08-07T17:17:39.899Z",
+  "observationCount": 128,
+  "brief": "Home cooking — people who cook one dish start to finish on camera, in a kitchen, in a format they repeat every video.",
+  "source": "proposed",
+  "sourceWhy": "a model proposed this handle from a brief — Long-running Japanese home cooking channel where one recipe is made start to finish in the same kitchen setup each episode.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity.",
+  "escalated": true,
+  "escalatedWhy": "store — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 383,
+      "avatar": {
+        "url": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-avt-0068/556558edf2c31314819c6f75d6016e21~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=762d7a6d&x-expires=1786294800&x-signature=HmKZOtAQ4%2F8po8jjtTyrfzHJLyU%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-09T17:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@cookingwithdog",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 1630000,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIdro_lYLr6W75jL9lDxHaUlvvLgBPc3xBc_IBBV2fiJrEv54QQ=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@cookingwithdog",
+      "why": "Cooking with Dog — the YouTube Data API resolved @cookingwithdog"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/cookingwithdog/",
+      "why": "robots.txt asks us not to look here"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@cookingwithdog",
+      "evidence": "https://www.youtube.com/@cookingwithdog",
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@cookingwithdog",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.822Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/cookingwithdog",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.822Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/cookingwithdog",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.822Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/cookingwithdog",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.822Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@cookingwithdog",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.521Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/cookingwithdog",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.521Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/cookingwithdog",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.521Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at cookingwithdog.substack.com — not confirmed as theirs",
+      "evidence": "https://cookingwithdog.substack.com/",
+      "placesLooked": 7,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://cookingwithdog.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@carleyrosalierich",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://cookingwithdog.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/cookingwithdog",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://cookingwithdog.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://cookingwithdog.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://cookingwithdog.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.522Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@carleyrosalierich",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.522Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://cookingwithdog.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.522Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/cookingwithdog",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.522Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://cookingwithdog.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.523Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://newsletter.cookingwithdog.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.523Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://cookingwithdog.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.523Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 5 places · 2 wouldn't answer",
+      "evidence": null,
+      "placesLooked": 10,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://cookingwithdog.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/cookingwithdog",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/cookingwithdog",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/cookingwithdog",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://cookingwithdog.shop",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://shop.cookingwithdog.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://cookingwithdog.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.523Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/cookingwithdog",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.523Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/cookingwithdog",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:17:33.523Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.523Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/cookingwithdog",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:17:33.524Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.cookingwithdog.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.524Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://cookingwithdog.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.524Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 7,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/cookingwithdog",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/cookingwithdog",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/cookingwithdog",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/cookingwithdog",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:06:09.823Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/cookingwithdog",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.524Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/cookingwithdog",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.524Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/cookingwithdog",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.524Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by an official directory",
+      "why": "found it — https://podcasts.apple.com/us/podcast/cooking-with-dog/id1698195757?uo=4",
+      "evidence": "https://itunes.apple.com/search?term=cookingwithdog&entity=podcast&limit=5",
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=cookingwithdog&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Cooking With Dog\" by Cooking With Dog",
+          "advisory": false,
+          "at": "2026-08-07T17:06:10.400Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=cookingwithdog&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Cooking With Dog\" by Cooking With Dog",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.548Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "4 of 5 places wouldn't answer; only 1 of the 2 places we need actually answered",
+      "evidence": null,
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "inconclusive",
+          "url": "https://cookingwithdog.com/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-07T17:06:10.400Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://cookingwithdog.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:06:10.400Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://www.cookingwithdog.com/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-07T17:06:10.400Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://cookingwithdog.jp",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:06:10.400Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "inconclusive",
+          "url": "https://cookingwithdog.com/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.548Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://cookingwithdog.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.548Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://www.cookingwithdog.com/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.548Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://cookingwithdog.com/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.548Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "inconclusive",
+          "url": "https://www.instagram.com/cookingwithdog",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.548Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:06:10.400Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.549Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 6 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 6 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:06:10.401Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 6 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.549Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:06:10.401Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:17:33.549Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": false,
+    "why": "only 0 uploads in the 275 days before that — too few to call it a rate"
+  },
+  "commentsRead": 298,
+  "audienceHistory": [
+    {
+      "audience": 1630000,
+      "at": "2026-08-07T17:05:40.028Z"
+    },
+    {
+      "audience": 1630000,
+      "at": "2026-08-07T17:17:24.328Z"
+    }
+  ],
+  "audience": 1630000,
+  "audienceWhy": "YouTube alone — nothing links the TikTok to it",
+  "audienceSeparate": [
+    {
+      "id": "tiktok_profile",
+      "followers": 383,
+      "url": "https://www.tiktok.com/@cookingwithdog",
+      "why": "nothing on either page links the TikTok to the YouTube, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 10,
+    "brief": "Home cooking — people who cook one dish start to finish on camera, in a kitchen, in a format they repeat every video.",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 10.1,
+      "max": 35,
+      "lines": [
+        {
+          "item": "store",
+          "label": "Store",
+          "half": "built",
+          "base": 9,
+          "effective": 9,
+          "demandAligned": false,
+          "why": "not there · we looked in 5 places · 2 wouldn't answer"
+        },
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        }
+      ],
+      "share": 0.289,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 10.1,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 22,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "unavailable": true,
+          "line": "we could not read their posting rate — only 0 uploads in the 275 days before that — too few to call it a rate",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "pass",
+      "because": "Every episode is Chef cooking a single Japanese dish start to finish in her kitchen with Francis narrating — the exact repeatable one-dish format the brief asks for."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 0 days apart, the trend needs 90",
+      "why": "our two looks are 0 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.667,
+      "resolved": 4,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 1
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "pass",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 58,
+    "places": 25,
+    "from": "2026-08-07T17:05:39.471Z",
+    "to": "2026-08-07T17:17:39.899Z"
+  }
+}

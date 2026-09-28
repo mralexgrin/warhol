@@ -1,0 +1,5979 @@
+{
+  "creatorId": "emmymade",
+  "asOf": null,
+  "observedThrough": "2026-08-07T17:25:31.978Z",
+  "observationCount": 1337,
+  "brief": "Home cooking — people who cook one dish start to finish on camera, in a kitchen, in a format they repeat every video.",
+  "source": "proposed",
+  "sourceWhy": "a model proposed this handle from a brief — Long-running creator who makes one recipe or tasting per video from her kitchen with the same intro and closing every time.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity.",
+  "escalated": false,
+  "escalatedWhy": "we looked in 28 places — they already have a youtube channel, newsletter and store. We didn't go further.",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 0,
+      "avatar": {
+        "url": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-avt-0068/smgc66338088467bd0e69b16954b6641cb5~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=6e6aa4d4&x-expires=1786294800&x-signature=lTJS1lNT3E6yoVHNYkQPCTryQdE%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-09T17:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@emmymade",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 3150000,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/M7VzpQNl1ZyRzanTjgXqJaG_96xCUSCEuauwragf_R3P-khtUEr3cKFVluZcj-WawfiCBbpwpA=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@emmymade",
+      "why": "emmymade — the YouTube Data API resolved @emmymade"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/emmymade/",
+      "why": "robots.txt asks us not to look here"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@emmymade",
+      "evidence": "https://www.youtube.com/@emmymade",
+      "placesLooked": 24,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.744Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.745Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.745Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.081Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.082Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.082Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.046Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.046Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.046Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.309Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.309Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.309Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.169Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.169Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.169Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.169Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.139Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.139Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.139Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.345Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.345Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.345Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/extras",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.345Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.889Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.889Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.889Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/youtube",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.889Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.333Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.333Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.333Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.334Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.505Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.506Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.506Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.121Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.121Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.121Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.697Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.697Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.697Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.548Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.548Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.548Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/youtube",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.548Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.422Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.422Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.422Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.724Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.724Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.724Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.104Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.104Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.104Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.787Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.787Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.787Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/extras",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.787Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.293Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.293Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.293Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.139Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.139Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.139Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.952Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.952Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.952Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — emmymade.com",
+      "evidence": "https://www.emmymade.com/",
+      "placesLooked": 138,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.746Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.746Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.746Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.746Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.746Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.746Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.746Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/subscribe",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.747Z"
+        },
+        {
+          "place": "proposed_8",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/contact/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.747Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.083Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.083Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.083Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.083Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.083Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.083Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.083Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.083Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.048Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.048Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.048Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.048Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.048Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.048Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.048Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/subscribe",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.048Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.310Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.311Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.311Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.311Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.311Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.311Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.311Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.312Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.172Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.173Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.173Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.173Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.173Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.173Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.174Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.175Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.140Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.140Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.141Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.141Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.141Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.141Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.141Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.141Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.346Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.346Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.346Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.346Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.346Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.346Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.346Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.346Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.891Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.891Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.891Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.891Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.891Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.891Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.891Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.335Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.335Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.336Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.336Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.336Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.336Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.336Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.336Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.506Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.506Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.506Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.506Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.506Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.506Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.506Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.506Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.122Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.122Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.122Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.123Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.123Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.123Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.123Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.123Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.699Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.699Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.699Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.699Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.699Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.699Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.699Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.699Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.550Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.550Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.550Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.550Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.550Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.550Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.550Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.550Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.423Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.423Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.423Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.424Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.424Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.424Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.424Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.424Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.726Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.726Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.726Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.726Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.726Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.726Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.726Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.727Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.106Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.106Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.106Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.106Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.106Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.106Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.106Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.789Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.789Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.789Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.789Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.789Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.789Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.789Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.789Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.293Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.293Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.293Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.293Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.293Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.293Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.293Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.293Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.141Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.141Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.141Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.141Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.141Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.141Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.141Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.141Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.954Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/emmymade?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/emmymade",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.955Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://emmymade.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.955Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.955Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://emmymade.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.955Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"convertkit.com\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.955Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.955Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://emmymade.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.955Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — emmymade.com",
+      "evidence": "https://www.emmymade.com/",
+      "placesLooked": 71,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.749Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.749Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T16:55:19.749Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.749Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T16:55:19.749Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.749Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.749Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://shop.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.749Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.084Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.084Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T16:57:29.084Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.084Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T16:57:29.084Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.084Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/merch",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.085Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://shop.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.085Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.051Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.051Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T16:57:35.051Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.051Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T16:57:35.051Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.051Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.bonfire.com/store/emmymade/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.051Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.315Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.315Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T16:59:10.315Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.315Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T16:59:10.315Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.315Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://shop.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.315Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.315Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.176Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.176Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:00:03.176Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.176Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:00:03.176Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.176Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.176Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.143Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.143Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:02:03.143Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.143Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:02:03.143Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.143Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.143Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://shop.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.143Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.347Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.347Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:05:14.347Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.347Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:05:14.347Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.347Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.347Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://shop.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.347Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.894Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.894Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:07:39.894Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.894Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:07:39.894Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.894Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.bonfire.com/store/emmymade/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.895Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.339Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.339Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:11:14.339Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.339Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:11:14.339Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.339Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.bonfire.com/store/emmymade/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.339Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.508Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.508Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:12:21.508Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.508Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:12:21.508Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.508Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.508Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.125Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.125Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:12:41.125Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.125Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:12:41.125Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.125Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.125Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.701Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.701Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:13:20.702Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.702Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:13:20.702Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.702Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.702Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.553Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.553Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:14:27.553Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.553Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:14:27.553Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.553Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.bonfire.com/store/emmymade/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.553Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.426Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.426Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:15:19.426Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.426Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:15:19.426Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.426Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://emmymade.creator-spring.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.426Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.729Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.729Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:16:34.729Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.729Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:16:34.730Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.730Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://shop.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.730Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.730Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.109Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.109Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:18:11.109Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.109Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:18:11.110Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.110Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.bonfire.com/store/emmymade/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.110Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.791Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.791Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:22:24.791Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.791Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:22:24.791Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.791Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.bonfire.com/store/emmymade/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.791Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://shop.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.791Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.295Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.295Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:23:18.295Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.295Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:23:18.295Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.295Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.144Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.144Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:24:38.144Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.144Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:24:38.144Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.144Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.bonfire.com/store/emmymade/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.144Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://emmymade.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.958Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.958Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:25:31.958Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.958Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/emmymade",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:25:31.958Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "their own site says \"woocommerce\" — emmymade.com",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.958Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.bonfire.com/store/emmymade/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.958Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.958Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 4 places",
+      "evidence": null,
+      "placesLooked": 77,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.749Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.749Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.749Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/support",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.749Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.085Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.085Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.085Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/extras",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.085Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.051Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.051Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.051Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.052Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.316Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.316Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.316Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.316Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.177Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.177Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.177Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://emmymade.patreon.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.177Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.143Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.143Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.143Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.347Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.347Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.347Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.347Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.895Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.895Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.895Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.895Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.339Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.339Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.339Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/members",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.340Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.508Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.508Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.508Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.508Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.126Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.126Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.126Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.126Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.702Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.702Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.702Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.702Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.553Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.553Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.553Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.553Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.426Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.426Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.426Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.730Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.730Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.730Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.730Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.110Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.110Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.110Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.110Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.792Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.792Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:22:24.792Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.295Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.295Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.295Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.295Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.145Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.145Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.145Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.145Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.959Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.959Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.959Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.959Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 57,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.973Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.973Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.185Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.185Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.185Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.333Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcast.emmymade.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.333Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.333Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.348Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.348Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://podcast.emmymade.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.348Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.191Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.191Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://podcast.emmymade.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.191Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.156Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.156Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast/feed",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.156Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://creators.spotify.com/pod/show/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.156Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.395Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.395Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.944Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.944Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.944Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.363Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.364Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.364Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.682Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.682Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://podcast.emmymade.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.682Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.378Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.378Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/podcast/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.379Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://open.spotify.com/show/emmymade",
+          "status": 400,
+          "why": "HTTP 400 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.380Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.728Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.728Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.588Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.588Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://emmymade.buzzsprout.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.588Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.436Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.436Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.podbean.com/login?url=https%3A%2F%2Femmymade.podbean.com%2F&error=Invalid%20Podbean%20Site(2)",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.436Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.436Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "inconclusive",
+          "url": "https://open.spotify.com/show/emmymade",
+          "status": 400,
+          "why": "HTTP 400 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.436Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.744Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.744Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://emmymadepodcast.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.744Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.121Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.121Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.122Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:22:25.048Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:22:25.048Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.306Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.306Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast/feed.xml",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.306Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/emmymade",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.306Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "inconclusive",
+          "url": "https://open.spotify.com/show/emmymade",
+          "status": 400,
+          "why": "HTTP 400 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.306Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.190Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://emmymade.buzzsprout.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.190Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://creators.spotify.com/pod/show/emmymade",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.191Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.191Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=emmymade&entity=podcast&limit=5",
+          "status": 200,
+          "why": "5 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.975Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.emmymade.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.976Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://emmymadepodcast.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.976Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at emmymade.com — not confirmed as theirs",
+      "evidence": "https://www.emmymade.com/",
+      "placesLooked": 21,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.974Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.974Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.186Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.186Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.335Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.335Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://linktr.ee/emmymade",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.335Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.350Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.350Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.192Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.192Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.157Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.157Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.396Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.396Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.945Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.945Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.365Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.365Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.683Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.683Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/recipes/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.683Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.383Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.383Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.730Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.730Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://linktr.ee/emmymade",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.730Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.591Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.591Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.437Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.437Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.746Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.746Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.123Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.123Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/contact/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.123Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:22:25.051Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:22:25.052Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.emmymadeinjapan.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:22:25.052Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.307Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.307Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.193Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.193Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.emmymade.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.977Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://emmymade.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.977Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.974Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.186Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.335Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.350Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.193Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.158Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.396Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.946Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.365Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.684Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.383Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.730Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.591Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.438Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.746Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.123Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:22:25.053Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.307Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.193Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.978Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.974Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.187Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.335Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.350Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.193Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.158Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.396Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.946Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.365Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.684Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.383Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.730Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.591Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.438Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.746Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.123Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:22:25.054Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.308Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.193Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.978Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T16:55:19.975Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T16:57:29.187Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T16:57:35.336Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T16:59:10.351Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:00:03.193Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:02:03.158Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:05:14.396Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:07:39.946Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:11:14.365Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:12:21.684Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:12:41.383Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:13:20.730Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:14:27.591Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:15:19.438Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:16:34.746Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:18:11.124Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:22:25.055Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:23:18.308Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:24:38.193Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:25:31.978Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": -0.209,
+    "recentPerMonth": 12.67,
+    "baselinePerMonth": 10.47,
+    "recentCount": 38,
+    "baselineCount": 96,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 275,
+    "sampled": 150,
+    "truncated": false,
+    "recentMedianViews": 53618,
+    "baselineMedianViews": 67180,
+    "line": "13 videos a month now, against 10 before that — up 21%, they are posting more; the recent ones are getting 20% fewer views"
+  },
+  "commentsRead": null,
+  "audienceHistory": [
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T16:55:04.643Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T16:57:08.348Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T16:57:12.623Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T16:58:42.776Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T16:59:52.621Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:01:49.969Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:05:02.777Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:07:32.306Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:10:55.455Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:12:09.213Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:12:19.549Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:13:09.967Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:14:02.647Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:15:10.018Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:16:16.045Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:18:00.051Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:22:06.376Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:22:53.578Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:24:23.325Z"
+    },
+    {
+      "audience": 3150000,
+      "at": "2026-08-07T17:25:15.277Z"
+    }
+  ],
+  "audience": 3150000,
+  "audienceWhy": "TikTok + YouTube — one audience, because their pages link to each other",
+  "audienceSeparate": [],
+  "score": {
+    "total": 5,
+    "brief": "Home cooking — people who cook one dish start to finish on camera, in a kitchen, in a format they repeat every video.",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 5.1,
+      "max": 35,
+      "lines": [
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 4 places"
+        },
+        {
+          "item": "podcast",
+          "label": "Podcast",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        }
+      ],
+      "share": 0.145,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 5.1,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "line": "13 videos a month now, against 10 before that — up 21%, they are posting more; the recent ones are getting 20% fewer views",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "not_judged",
+      "because": "the model pass did not run, and Fit is a judgment — no model, no verdict"
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 0 days apart, the trend needs 90",
+      "why": "our two looks are 0 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.833,
+      "resolved": 5,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 1
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "not_judged",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 677,
+    "places": 46,
+    "from": "2026-08-07T16:55:04.610Z",
+    "to": "2026-08-07T17:25:31.978Z"
+  }
+}

@@ -1,0 +1,3847 @@
+{
+  "creatorId": "detailgroove",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:07:11.293Z",
+  "observationCount": 817,
+  "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": true,
+  "escalatedWhy": "newsletter, store — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 152,
+      "avatar": {
+        "url": "https://p19-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/7321576095327748101~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=1fb367d9&x-expires=1786885200&x-signature=wEUEP4x551NFvrkmtUg6X4ARUdI%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@detailgroove",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 252000,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIdro_nE6A6ydVDHJ9FONG2zKnvDEsUcLXL-DPPcBeb6kx3CeAY=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@detailgroove",
+      "why": "Detail Groove — the YouTube Data API resolved @detailgroove"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/detailgroove/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 400,
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=detailgroove.bsky.social",
+      "why": "page says it is not there"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@detailgroove",
+      "evidence": "https://www.youtube.com/@detailgroove",
+      "placesLooked": 11,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.357Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.357Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.357Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.357Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.609Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.004Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.004Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.004Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.004Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.989Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.989Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.990Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.990Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.042Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.042Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.042Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.042Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.042Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:27:03.477Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:27:03.477Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:03.477Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:34:11.413Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:34:11.413Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:11.413Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:23:34.806Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/detailgroove",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:23:34.806Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/detailgroove",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:23:34.806Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:25:51.635Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/detailgroove",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:25:51.635Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/detailgroove",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:25:51.636Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:58:12.514Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:58:12.514Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:12.514Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:25:47.726Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:25:47.726Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:25:47.726Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:52:13.261Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:52:13.261Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:13.261Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.426Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.426Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.426Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.426Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "not there · we looked in 7 places",
+      "evidence": null,
+      "placesLooked": 72,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.358Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/detailgroove?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/detailgroove",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.358Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://detailgroove.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.358Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.358Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.358Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.358Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/newsletter",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.358Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/detailgroove?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/detailgroove",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://detailgroove.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.detailgroove.com/newsletter",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.005Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/detailgroove?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/detailgroove",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.005Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://detailgroove.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.005Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.005Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.005Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.detailgroove.com/newsletter",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.005Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.005Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.990Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/detailgroove?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/detailgroove",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.990Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://detailgroove.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.990Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.990Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.990Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.990Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.043Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/detailgroove?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/detailgroove",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.043Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://detailgroove.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.043Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.043Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.043Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.043Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:03.478Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/detailgroove?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/detailgroove",
+          "advisory": false,
+          "at": "2026-08-10T21:27:03.478Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://detailgroove.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:03.478Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:03.478Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:03.478Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:11.414Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/detailgroove?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/detailgroove",
+          "advisory": false,
+          "at": "2026-08-10T21:34:11.414Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://detailgroove.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:11.414Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:11.414Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:11.414Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:23:34.806Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/detailgroove?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/detailgroove",
+          "advisory": false,
+          "at": "2026-08-12T15:23:34.806Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://detailgroove.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:23:34.806Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:23:34.806Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:23:34.806Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:25:51.637Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/detailgroove?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/detailgroove",
+          "advisory": false,
+          "at": "2026-08-12T15:25:51.637Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://detailgroove.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:25:51.637Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:25:51.638Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:25:51.638Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:12.514Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/detailgroove?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/detailgroove",
+          "advisory": false,
+          "at": "2026-08-12T19:58:12.514Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://detailgroove.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:12.514Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:12.514Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:12.514Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:25:47.727Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/detailgroove?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/detailgroove",
+          "advisory": false,
+          "at": "2026-08-12T20:25:47.727Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://detailgroove.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:25:47.727Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:25:47.727Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:25:47.727Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:13.261Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/detailgroove?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/detailgroove",
+          "advisory": false,
+          "at": "2026-08-14T12:52:13.261Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://detailgroove.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:13.261Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:13.261Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:13.261Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.426Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/detailgroove?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/detailgroove",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.426Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://detailgroove.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.426Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.426Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://detailgroove.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.426Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://newsletter.detailgroove.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.426Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://detailgroove.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.426Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "not there · we looked in 6 places · 2 wouldn't answer",
+      "evidence": null,
+      "placesLooked": 50,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://detailgroove.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.359Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.359Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:20:36.359Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=detailgroove",
+          "status": 200,
+          "why": "asked for /detailgroove, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.359Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:20:36.359Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.detailgroove.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.359Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://detailgroove.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=detailgroove",
+          "status": 200,
+          "why": "asked for /detailgroove, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.detailgroove.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://detailgroove.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.005Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.005Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:56:05.006Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=detailgroove",
+          "status": 200,
+          "why": "asked for /detailgroove, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.006Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:56:05.006Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.detailgroove.com/shop",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.006Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://detailgroove.gumroad.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.006Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://detailgroove.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.991Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.991Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:43:23.991Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=detailgroove",
+          "status": 200,
+          "why": "asked for /detailgroove, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.991Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:43:23.991Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.detailgroove.shop",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.991Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://shop.detailgroove.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.991Z"
+        },
+        {
+          "place": "proposed_8",
+          "outcome": "miss",
+          "url": "https://detailgroove.gumroad.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.992Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://detailgroove.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.043Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.043Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:46:59.043Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=detailgroove",
+          "status": 200,
+          "why": "asked for /detailgroove, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.043Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:46:59.043Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.detailgroove.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.043Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://detailgroove.gumroad.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.043Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://detailgroove.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:03.478Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:03.478Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:27:03.478Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=detailgroove",
+          "status": 200,
+          "why": "asked for /detailgroove, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-10T21:27:03.478Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:27:03.478Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://detailgroove.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:11.415Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:11.415Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:34:11.416Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=detailgroove",
+          "status": 200,
+          "why": "asked for /detailgroove, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-10T21:34:11.416Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:34:11.416Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://detailgroove.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:23:34.806Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:23:34.806Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:23:34.806Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=detailgroove",
+          "status": 200,
+          "why": "asked for /detailgroove, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-12T15:23:34.806Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:23:34.807Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://detailgroove.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:25:51.639Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:25:51.639Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:25:51.640Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=detailgroove",
+          "status": 200,
+          "why": "asked for /detailgroove, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-12T15:25:51.640Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:25:51.640Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://detailgroove.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:12.515Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:12.515Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:58:12.515Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=detailgroove",
+          "status": 200,
+          "why": "asked for /detailgroove, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-12T19:58:12.515Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:58:12.515Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://detailgroove.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:25:47.727Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:25:47.727Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:25:47.727Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=detailgroove",
+          "status": 200,
+          "why": "asked for /detailgroove, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-12T20:25:47.727Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:25:47.727Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://detailgroove.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:13.261Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:13.261Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:52:13.261Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=detailgroove",
+          "status": 200,
+          "why": "asked for /detailgroove, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-14T12:52:13.261Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:52:13.261Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://detailgroove.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.427Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.427Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:06:55.427Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=detailgroove",
+          "status": 200,
+          "why": "asked for /detailgroove, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.427Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/detailgroove",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:06:55.427Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://detailgroove.shop",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.427Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://detailgroove.store",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.427Z"
+        },
+        {
+          "place": "proposed_8",
+          "outcome": "miss",
+          "url": "https://detailgroove.gumroad.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.427Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "not there · we looked in 2 places",
+      "evidence": null,
+      "placesLooked": 28,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.360Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.360Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.360Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/courses",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.610Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.006Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.006Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.detailgroove.com/membership",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.006Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.992Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.992Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://members.detailgroove.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:43:23.992Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.044Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.044Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:03.478Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:27:03.478Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:11.417Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:34:11.417Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:23:34.807Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:23:34.807Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:25:51.641Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:25:51.641Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:12.515Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:58:12.515Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:25:47.728Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:25:47.728Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:13.261Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:52:13.262Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.427Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/detailgroove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.427Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "not there · we looked in 1 place",
+      "evidence": null,
+      "placesLooked": 17,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=detailgroove&entity=podcast&limit=5",
+          "status": 200,
+          "why": "4 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.522Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "hit",
+          "url": "https://creators.spotify.com/pod/show/detailgroove",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.522Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=detailgroove&entity=podcast&limit=5",
+          "status": 200,
+          "why": "4 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.826Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/detail-groove",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.826Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=detailgroove&entity=podcast&limit=5",
+          "status": 200,
+          "why": "4 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.060Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://detailgroove.transistor.fm/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.060Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=detailgroove&entity=podcast&limit=5",
+          "status": 200,
+          "why": "4 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T11:43:24.188Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://detailgroove.podfirma.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:43:24.188Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=detailgroove&entity=podcast&limit=5",
+          "status": 200,
+          "why": "4 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.063Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://detailgroove.captivate.fm/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.063Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=detailgroove&entity=podcast&limit=5",
+          "status": 200,
+          "why": "4 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-10T21:27:03.819Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=detailgroove&entity=podcast&limit=5",
+          "status": 200,
+          "why": "4 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-10T21:34:11.436Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=detailgroove&entity=podcast&limit=5",
+          "status": 200,
+          "why": "4 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-12T15:23:35.028Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=detailgroove&entity=podcast&limit=5",
+          "status": 200,
+          "why": "4 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-12T15:25:51.709Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=detailgroove&entity=podcast&limit=5",
+          "status": 200,
+          "why": "4 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-12T19:58:12.624Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=detailgroove&entity=podcast&limit=5",
+          "status": 200,
+          "why": "4 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-12T20:25:47.917Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=detailgroove&entity=podcast&limit=5",
+          "status": 200,
+          "why": "4 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-14T12:52:13.421Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=detailgroove&entity=podcast&limit=5",
+          "status": 200,
+          "why": "4 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-14T13:06:55.445Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at detailgroove.com — not confirmed as theirs",
+      "evidence": "https://detailgroove.com/",
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.523Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "hit",
+          "url": "https://detailgroove.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.523Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.523Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://www.instagram.com/detailgroove",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.523Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.827Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "hit",
+          "url": "https://detailgroove.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.827Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.827Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://linktr.ee/detailgroove",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.827Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.060Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "hit",
+          "url": "https://detailgroove.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.060Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.060Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:43:24.188Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "hit",
+          "url": "https://detailgroove.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:43:24.189Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:43:24.189Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.063Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "hit",
+          "url": "https://detailgroove.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.063Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.063Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.064Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:27:05.834Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:27:05.834Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:27:05.834Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:27:05.834Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:27:05.834Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:27:05.834Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:27:05.835Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "hit",
+          "url": "https://detailgroove.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:27:05.835Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:34:13.458Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:34:13.458Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:34:13.458Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:34:13.459Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:34:13.459Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:34:13.459Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:34:13.459Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "hit",
+          "url": "https://detailgroove.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:34:13.459Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:23:37.067Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:23:37.067Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:23:37.067Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:23:37.067Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:23:37.067Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:23:37.067Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:23:37.068Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "hit",
+          "url": "https://detailgroove.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:23:37.068Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:25:53.740Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:25:53.740Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:25:53.740Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:25:53.740Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:25:53.740Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:25:53.740Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:25:53.741Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "hit",
+          "url": "https://detailgroove.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:25:53.741Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:58:14.643Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:58:14.644Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:58:14.644Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:58:14.644Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:58:14.644Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:58:14.644Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:58:14.644Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "hit",
+          "url": "https://detailgroove.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:58:14.644Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:25:49.934Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:25:49.934Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:25:49.934Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:25:49.934Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:25:49.934Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:25:49.934Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:25:49.934Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "hit",
+          "url": "https://detailgroove.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:25:49.934Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:52:15.450Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:52:15.450Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:52:15.450Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:52:15.450Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:52:15.450Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:52:15.450Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:52:15.450Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "hit",
+          "url": "https://detailgroove.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:52:15.450Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:06:57.478Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:06:57.479Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:06:57.479Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:06:57.479Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:06:57.480Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://detailgroove.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:06:57.480Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:57.481Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "hit",
+          "url": "https://detailgroove.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:57.481Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:57.481Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.detailgroove.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:57.481Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.524Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.828Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.060Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:43:24.189Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.064Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:27:05.835Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:34:13.460Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:23:37.068Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:25:53.741Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T19:58:14.644Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T20:25:49.934Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:52:15.450Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:06:57.482Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.524Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.828Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.060Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:43:24.189Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.064Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:27:05.835Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:34:13.460Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:23:37.068Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:25:53.741Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T19:58:14.644Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T20:25:49.934Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:52:15.450Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:06:57.483Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T20:20:36.524Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:51:57.828Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:56:05.061Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:43:24.189Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:46:59.064Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:27:05.836Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:34:13.460Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:23:37.069Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:25:53.741Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T19:58:14.644Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T20:25:49.935Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:52:15.451Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:06:57.483Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": 0.217,
+    "recentPerMonth": 13.33,
+    "baselinePerMonth": 17.02,
+    "recentCount": 40,
+    "baselineCount": 156,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 275,
+    "sampled": 200,
+    "truncated": false,
+    "recentMedianViews": 1854,
+    "baselineMedianViews": 3892,
+    "unit": "videos",
+    "line": "13 videos a month now, against 17 before that — down 22%; the recent ones are getting 52% fewer views"
+  },
+  "samples": [
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "The ONE Thing Every Pro Detailer Ignores (You're Bleeding Money)",
+      "url": "https://www.youtube.com/watch?v=Qg__FLULcdI",
+      "at": "2026-08-07T22:56:10Z",
+      "thumbnail": "https://i.ytimg.com/vi/Qg__FLULcdI/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 687,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:43.990Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "The REAL Math Behind Growing Your Detailing Business",
+      "url": "https://www.youtube.com/watch?v=1bkV4JjJga8",
+      "at": "2026-08-05T14:11:05Z",
+      "thumbnail": "https://i.ytimg.com/vi/1bkV4JjJga8/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 597,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:43.990Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Why Every Pro Detailer Should Use These Two Tools",
+      "url": "https://www.youtube.com/watch?v=bL03mSCwhjY",
+      "at": "2026-07-31T23:31:21Z",
+      "thumbnail": "https://i.ytimg.com/vi/bL03mSCwhjY/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 477,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:43.991Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "How To Detail Cars in EXTREME Heat (Must Do For Mobile Detailers)",
+      "url": "https://www.youtube.com/watch?v=AcVq6qYPhEA",
+      "at": "2026-07-29T12:22:25Z",
+      "thumbnail": "https://i.ytimg.com/vi/AcVq6qYPhEA/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1391,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:43.991Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "This Will RUIN Your Mobile Detailing Business (Don't Do It)",
+      "url": "https://www.youtube.com/watch?v=zSvB9p9U7uk",
+      "at": "2026-07-28T15:26:35Z",
+      "thumbnail": "https://i.ytimg.com/vi/zSvB9p9U7uk/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 2013,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:43.991Z",
+      "status": null
+    }
+  ],
+  "headline": {
+    "sentence": "detailgroove makes YouTube videos on running a mobile detailing business for 252,000 subscribers and has a website, but no newsletter, store, or membership, and posting has slipped to 13 videos a month from 17 with recent views down 52%.",
+    "restsOn": "252,000 on YouTube · YouTube channel · Own website · Newsletter · Store · Membership · 13 videos a month now, against 17 before that · the recent ones are getting 52% fewer views · \"How To Detail Cars in EXTREME Heat (Must Do For Mobile Detailers)\" (1,364 views) · \"This Will RUIN Your Mobile Detailing Business (Don't Do It)\" (1,928 views) · \"The REAL Math Behind Growing Your Detailing Business\" (514 views)"
+  },
+  "samplesSearched": {
+    "count": 0,
+    "why": "they link none of their own posts anywhere we can read"
+  },
+  "commentsRead": 21,
+  "audienceHistory": [
+    {
+      "audience": 252000,
+      "at": "2026-08-06T20:20:28.706Z"
+    },
+    {
+      "audience": 252000,
+      "at": "2026-08-06T21:51:47.454Z"
+    },
+    {
+      "audience": 252000,
+      "at": "2026-08-06T21:55:50.433Z"
+    },
+    {
+      "audience": 252000,
+      "at": "2026-08-07T11:43:10.417Z"
+    },
+    {
+      "audience": 252000,
+      "at": "2026-08-07T11:46:48.270Z"
+    },
+    {
+      "audience": 252000,
+      "at": "2026-08-10T21:26:54.816Z"
+    },
+    {
+      "audience": 252000,
+      "at": "2026-08-10T21:34:06.636Z"
+    },
+    {
+      "audience": 252000,
+      "at": "2026-08-12T15:23:23.894Z"
+    },
+    {
+      "audience": 252000,
+      "at": "2026-08-12T15:25:40.249Z"
+    },
+    {
+      "audience": 252000,
+      "at": "2026-08-12T19:58:09.346Z"
+    },
+    {
+      "audience": 252000,
+      "at": "2026-08-12T20:25:41.741Z"
+    },
+    {
+      "audience": 252000,
+      "at": "2026-08-14T12:52:05.106Z"
+    },
+    {
+      "audience": 252000,
+      "at": "2026-08-14T13:06:43.989Z"
+    }
+  ],
+  "audience": 252000,
+  "audienceWhy": "YouTube alone — nothing links the TikTok to it",
+  "audienceSeparate": [
+    {
+      "id": "tiktok_profile",
+      "followers": 152,
+      "url": "https://www.tiktok.com/@detailgroove",
+      "why": "nothing on either page links the TikTok to the YouTube, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 21,
+    "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 21.1,
+      "max": 35,
+      "lines": [
+        {
+          "item": "newsletter",
+          "label": "Newsletter",
+          "half": "built",
+          "base": 10,
+          "effective": 10,
+          "demandAligned": false,
+          "why": "not there · we looked in 7 places"
+        },
+        {
+          "item": "store",
+          "label": "Store",
+          "half": "built",
+          "base": 9,
+          "effective": 9,
+          "demandAligned": false,
+          "why": "not there · we looked in 6 places · 2 wouldn't answer"
+        },
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 2 places"
+        },
+        {
+          "item": "podcast",
+          "label": "Podcast",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 1 place"
+        }
+      ],
+      "share": 0.602,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 21.1,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "line": "13 videos a month now, against 17 before that — down 22%; the recent ones are getting 52% fewer views",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "pass",
+      "because": "Car detailing satisfaction videos are inherently clippable, the before/after detail format repeats endlessly, and the 252k YouTube following confirms real demand in a proven category."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 8 days apart, the trend needs 90",
+      "why": "our two looks are 8 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.833,
+      "resolved": 5,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 1
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "pass",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 387,
+    "places": 44,
+    "from": "2026-08-06T20:20:28.678Z",
+    "to": "2026-08-14T13:07:11.293Z"
+  }
+}

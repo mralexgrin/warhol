@@ -1,0 +1,2103 @@
+/* ==========================================================================
+   SCOUT v5 — application shell, state and views.
+   Classic script, no modules, no fetch. Runs from file://.
+
+   PRD v1.3. What changed from v4, and why:
+
+   · WARHOL IS THE ENGINE; SCOUT IS THE PRODUCT. The interface says Scout.
+     "Scout Report" became the report, "Warhol Score" became the score, the
+     Ledger became the check record. Warhol survives in the footer (§4.6).
+   · THE CARD IS THREE CLAIMS — Demand / Missing / Pressure, with Pressure
+     carrying two lines and the creator's quote on the card. The expand
+     collapsed away; nothing behind it was worth hiding.
+   · THE REPORT IS THE CARD, EXPANDED. Same claims, same order, same words.
+     "How it scored" is gone as a drawer — its arithmetic attaches to each
+     claim. Recommended play and Fit came out of drawers onto the page.
+   · BRIEFS ARE TABS AND THEY ARE PARALLEL. The house brief is first and there
+     is no All view. Fit is per brief, so a creator outside a brief has no gate
+     and therefore no honest score to put on a card.
+   · ONE USER TYPE. The Scout/Spotter toggle, referrals and everything
+     role-dependent are gone. Admin is a permission, four knobs.
+   · TRACK RECORD IS CUT AS A SCREEN. What survives is what-happened-next on one
+     creator's report, and the rewound cohort as a first-run moment (§6.9).
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  var W = window.WARHOL;
+  var S = window.SCOUT;
+  var U = window.UI;
+  var esc = U.esc;
+  var DOT = U.DOT;
+
+  /* ------------------------------------------------------------------ state */
+  var state = {
+    phase: 'signedout',
+    view: 'drop',
+    briefId: 'b_house',
+    asOf: null,                 // always today. The rewind is removed.
+    firstRun: false,            // was: show January 2024 once. Nothing reads it now.
+    reportId: null,
+    from: 'drop',
+    outreachId: null,
+    sources: {},                // source id -> on/off, §6.13. Absent = the source's own default
+    decisions: {},              // creator id -> { verb, reasonCode, at, window }
+    outcomeState: {},           // creator id -> { code, at, declineCode }
+    open: {},                   // disclosure id -> open
+    passTray: null,
+    watchTray: null,
+    watchWindow: null,          // a longer window, awaiting its reason (§5.8)
+    outcomeTray: null,
+    rcp: null,                  // { key, id, x, y } — the receipts popover
+    userBriefs: [],
+    draft: null,                // the brief being written
+    briefStage: 'write',        // write -> read
+    paused: { b_workshop: true },
+    admin: {
+      threshold: S.THRESHOLD,
+      ceiling: S.admin.budget.ceiling,
+      platforms: S.admin.platforms.map(function (p) { return { name: p.name, on: p.on }; })
+    },
+    run: { stage: 'idle', query: '', step: 0 },
+    copied: false,
+    menu: false,
+    animate: true
+  };
+
+  /* v5 kept every decision in memory only, so a trackpad back-swipe mid-demo
+     reset the session to the sign-in gate with no warning. Persisting the
+     decided state is enough — the seed rebuilds everything else.
+
+     Keyed per version. Every prototype is served from one origin so the index
+     can toggle between them, which means one key is one shared session: opening
+     v5.1 and v5.2 in turn had each restore the other's half-worked drop. */
+  var PERSIST = ['phase', 'view', 'briefId', 'asOf', 'firstRun', 'reportId', 'from',
+    'outreachId', 'decisions', 'outcomeState', 'userBriefs', 'paused', 'admin', 'sources'];
+  function persist() {
+    try {
+      var out = {};
+      PERSIST.forEach(function (k) { out[k] = state[k]; });
+      sessionStorage.setItem('scout-v52', JSON.stringify(out));
+    } catch (e) { /* private mode, or file:// — the app still works, it just forgets */ }
+  }
+  function restore() {
+    try {
+      var raw = sessionStorage.getItem('scout-v52');
+      if (!raw) return;
+      var saved = JSON.parse(raw);
+      PERSIST.forEach(function (k) { if (saved[k] !== undefined) state[k] = saved[k]; });
+    } catch (e) { /* corrupt or unavailable: start fresh rather than fail */ }
+  }
+
+  var timers = [];
+  function clearTimers() { timers.forEach(clearTimeout); timers = []; }
+  function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* ------------------------------------------------------------ derivations */
+  function me() { return S.me; }
+  /* `asOf` survives the rewind's removal and is NOT the same idea. Every fact
+     Scout holds is stamped with when it was observed, which is what makes a
+     stale fact showable as stale and the check record readable at all. What was
+     deleted is the ability to WIND IT BACK — the as-of date is now always today
+     and nothing sets it to anything else. */
+  function asOf() { return state.asOf || S.TODAY; }
+  /* Hard false. Kept as a function rather than ripped out of twenty call sites
+     the week of a demo — each `rewound() ? a : b` now collapses to `b`, which is
+     the live path and the one that was always exercised. Delete the branches in
+     the reconciliation session, not before. */
+  function rewound() { return false; }
+  function allBriefs() {
+    return S.briefs.concat(state.userBriefs).filter(function (b) { return !b.archived; });
+  }
+  function brief(id) {
+    var b = null;
+    allBriefs().forEach(function (x) { if (x.id === id) b = x; });
+    return b || S.briefs[0];
+  }
+  function isPaused(b) { return !!state.paused[b.id]; }
+  function dropList(b) {
+    return S.dropFor(asOf(), b || brief(state.briefId), state.admin.threshold);
+  }
+  function decisionFor(id) { return state.decisions[id] || null; }
+  function creator(id) { return id === W.runANameResult.id ? W.runANameResult : W.byId[id]; }
+  function score(c) { return S.score13(c); }
+  function remaining() {
+    return dropList().filter(function (c) { return !decisionFor(c.id); }).length;
+  }
+  function stateLabel(v) {
+    return v === 'pass' ? 'Passed' : v === 'watch' ? 'Watched' : 'Promoted';
+  }
+  function watchlist() {
+    var seeded = W.candidates.filter(function (c) { return c.status === 'watched'; });
+    var added = [];
+    Object.keys(state.decisions).forEach(function (id) {
+      if (state.decisions[id].verb !== 'watch') return;
+      var c = creator(id);
+      if (c && seeded.indexOf(c) === -1) added.push(c);
+    });
+    return added.concat(seeded);
+  }
+  function passedList() {
+    var rows = S.passedSeed.map(function (p) {
+      return { c: creator(p.id), at: p.at, code: p.code, by: p.by, trigger: p.trigger, brief: p.brief };
+    }).filter(function (r) { return r.c; });
+    Object.keys(state.decisions).forEach(function (id) {
+      var d = state.decisions[id];
+      if (d.verb !== 'pass') return;
+      var c = creator(id);
+      if (!c) return;
+      var r = S.reasonFor(d.reasonCode) || {};
+      var oc = d.reasonCode === 'declined' ? outcomeOf(c.id) : null;
+      var why = oc && oc.declineCode ? declineLabel(oc.declineCode) : null;
+      rows.unshift({ c: c, at: d.at, code: d.reasonCode, by: me().name,
+        trigger: why || r.suppression, brief: state.briefId, fresh: true });
+    });
+    /* Newest first. The screen exists to answer "I passed someone in March and
+       now I cannot find them" on a surface with no search box, so scanning is
+       the only mechanism — and scanning needs an order you can stop reading at. */
+    return rows.sort(function (a, b) { return a.at < b.at ? 1 : a.at > b.at ? -1 : 0; });
+  }
+
+  function declineLabel(code) {
+    var hit = null;
+    S.declineReasons.forEach(function (x) { if (x.code === code) hit = x.label; });
+    return hit;
+  }
+  function promotedList() {
+    var rows = [];
+    Object.keys(S.promotedSeed).forEach(function (id) {
+      var c = creator(id);
+      if (c) rows.push({ c: c, at: S.promotedSeed[id].at, by: S.promotedSeed[id].by });
+    });
+    Object.keys(state.decisions).forEach(function (id) {
+      if (state.decisions[id].verb !== 'promote') return;
+      var c = creator(id);
+      if (c) rows.unshift({ c: c, at: state.decisions[id].at, by: me().name, fresh: true });
+    });
+    return rows;
+  }
+  function outcomeOf(id) {
+    if (state.outcomeState[id]) return state.outcomeState[id];
+    return S.promotedSeed[id] ? { code: S.promotedSeed[id].state, at: S.promotedSeed[id].at } : null;
+  }
+
+  /* ------------------------------------------------------------------ rail */
+  function railHTML() {
+    var who = me();
+    var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+    return '<nav class="railcol railcol--wide" aria-label="Sections">' +
+      '<div class="brandrow"><span class="me">S</span>' +
+      '<span><span class="wm">Scout</span><span class="sub-t">Origination desk</span></span></div>' +
+
+      '<button class="btn btn--primary newbrief" data-act="newbrief">' + U.icon('plus') + 'New brief</button>' +
+
+      '<div class="nav">' +
+      /* String(remaining() || total) printed the full count at zero remaining,
+         at the exact moment the page says "Worked to zero". */
+      navBtn('drop', 'drop', "Today's drop", String(dropList().length ? remaining() : 0)) +
+      navBtn('watchlist', 'watch', 'Watchlist', String(watchlist().length)) +
+      navBtn('passed', 'passed', 'Passed', String(passedList().length)) +
+      navBtn('runname', 'run', 'Run a name', '') +
+      navBtn('sources', 'sources', 'Sources', '') +
+      (who.admin ? navBtn('admin', 'admin', 'Admin', '') : '') +
+      '</div>' +
+
+      /* One account control, not two. The rail already carried the identity at
+         the bottom and the top bar carried a second avatar that did the same
+         job — so the identity is now the control, where it already was. */
+      '<div class="acct acct--rail">' +
+      '<button class="whoami" data-act="menu" aria-expanded="' + state.menu + '" aria-haspopup="true">' +
+      '<span class="ini ini--lilac ini--xs">' + esc(who.initials) + '</span>' +
+      '<span class="who"><b>' + esc(who.name) + '</b><span>' + esc(who.email) + '</span></span>' +
+      '</button>' +
+      (state.menu ? acctMenu(who, dark) : '') +
+      '</div>' +
+      /* Warhol is the engine. Strategy documents and a footer (§4.6). */
+      '<p class="engineft">Warhol engine ' + DOT + ' Paradium</p>' +
+      '</nav>';
+  }
+
+  function navBtn(view, ic, label, n) {
+    var on = state.view === view ||
+      (view === 'drop' && state.view === 'report' && state.from === 'drop') ||
+      (view === 'watchlist' && state.view === 'report' && state.from === 'watchlist') ||
+      (view === 'passed' && state.view === 'report' && state.from === 'passed');
+    return '<button class="rnav" data-act="view" data-view="' + view + '"' +
+      (on ? ' aria-current="page"' : '') + '>' +
+      '<span class="ic">' + U.icon(ic) + '</span><span class="tx">' + esc(label) + '</span>' +
+      (n ? '<span class="pill"><span class="sr-only">, </span>' + esc(n) + '</span>' : '') + '</button>';
+  }
+
+  /* --------------------------------------------------------------- top bar */
+  function topHTML() {
+    var tail = state.view === 'report' ? 'The report'
+      : state.view === 'outreach' ? 'Outreach package'
+        : state.view === 'watchlist' ? 'Watchlist'
+          : state.view === 'passed' ? 'Passed'
+            : state.view === 'sources' ? 'Sources'
+            : state.view === 'runname' ? 'Run a name'
+              : state.view === 'admin' ? 'Admin'
+                : state.view === 'newbrief' ? 'New brief' : 'Drop';
+    return '<div class="top">' +
+      '<div class="crumb"><button data-act="view" data-view="drop"><b>Scout</b></button>' +
+      '<span>/</span>' + esc(tail) + '</div></div>';
+  }
+
+  function acctMenu(who, dark) {
+    return '<div class="acctmenu">' +
+      '<div class="who"><b>' + esc(who.name) + '</b><span>' + esc(who.email) + '</span></div>' +
+      '<span class="lab">Theme</span>' +
+      '<div class="tsw"><button data-act="theme" data-set="light" aria-pressed="' + (!dark) + '">Light</button>' +
+      '<button data-act="theme" data-set="dark" aria-pressed="' + dark + '">Dark</button></div>' +
+      '<span class="lab">Digest</span>' +
+      '<div class="seg"><button data-act="noop" aria-pressed="true">Daily</button>' +
+      '<button data-act="noop" aria-pressed="false">Weekly</button></div>' +
+      '<p class="menunote">Daily includes the empty days. The empty day is the signal.</p>' +
+      '<button class="btn btn--ghost btn--sm out" data-act="signout">Sign out</button>' +
+      '</div>';
+  }
+
+  /* ================================================================== DROP */
+  function dropView() {
+    var b = brief(state.briefId);
+    var list = dropList(b);
+    var left = list.left || {};
+    var done = list.length - remaining();
+
+    /* THE JANUARY 2024 REWIND IS GONE. Signing in lands on today's drop.
+
+       It was justified by decision 33 — a new member's scan takes overnight, so
+       do not hand them an empty app. v3 deleted the wizard, decision 89 deleted
+       the Scout/Spotter split, and the house brief now ships populated, so every
+       premise it rested on had been removed underneath it and nobody pulled the
+       feature back out. What finally decided it: nobody could tell what the
+       screen was for. The "if Scout had existed two years ago" argument moves
+       out of the product and into the pitch, where it does not have to be a
+       mode. */
+    var lens = '';
+
+    var head = '<header class="pagehead"><h1>Today&rsquo;s drop</h1>' +
+      '<p class="deck">' + (list.length
+        ? U.plural(list.length, 'creator') + ' cleared the bar for <b>' + esc(b.name) + '</b>. ' +
+          'Enough on each card to kill it without opening; backing one needs the report.'
+        : 'Nothing cleared the bar for <b>' + esc(b.name) + '</b> today.') + '</p>' +
+      '</header>';
+
+    var chips = briefTabs();
+
+    if (isPaused(b)) {
+      return lens + head + chips + '<section class="p zero">' +
+        '<h2>This brief is paused.</h2>' +
+        '<p>Scout has stopped looking, so nothing new arrives. Every decision you made under it is still here, ' +
+        'and one click starts it again.</p>' +
+        '<p><button class="btn btn--primary" data-act="resume" data-b="' + esc(b.id) + '">Resume this brief</button></p>' +
+        '</section>';
+    }
+
+    if (b.fresh) {
+      /* The state the guardrails screen promised, kept verbatim so the two
+         screens agree: Scout goes looking tonight, first names tomorrow. */
+      return lens + head + chips + '<section class="p zero">' +
+        '<h2>Scout is looking.</h2>' +
+        '<p>Nobody in Scout matched <b>' + esc(b.name) + '</b> when you wrote it, so it went out looking ' +
+        'tonight. First names tomorrow morning — and every morning after that, until you pause it.</p>' +
+        '<p class="lifecycle">A brief returns nobody today, starts a standing job, reports tomorrow, ' +
+        'stays gated and capped, and is allowed to find nothing. That is the whole difference between ' +
+        'a brief and a search.</p></section>';
+    }
+
+    if (!list.length) {
+      /* "Scout found nothing worth your time today" is a feature. A fixed daily
+         ten forces filler on thin days and quietly teaches you the list is
+         arbitrary (§5.4). The argument attaches on the empty day (§6.11). */
+      return lens + head + chips + '<section class="p zero">' +
+        '<h2>Scout found nothing worth your time today.</h2>' +
+        '<p>' + left.pool + ' people were looked at for this brief. ' +
+        (left.wrongFit ? left.wrongFit + ' did not match it. ' : '') +
+        (left.fading ? left.fading + ' were fading rather than rising. ' : '') +
+        (left.below ? left.below + ' scored under ' + state.admin.threshold + '. ' : '') +
+        (left.thin ? left.thin + ' had too little resolved to argue from. ' : '') +
+        'The bar protects your trust and the cap protects your attention &mdash; so some days this is empty, ' +
+        'and that is the machine working rather than the scan failing.</p>' +
+        '</section>';
+    }
+
+    var progress = '<div class="worked"><span class="lab">Worked</span>' +
+      '<span class="pill">' + done + ' / ' + list.length + '</span>' +
+      U.track(list.length ? (done / list.length) * 100 : 0) +
+      '<span class="sub-t">bar at ' + state.admin.threshold + ' ' + DOT + ' capped at ' + S.CAP + '</span></div>';
+
+    var rows = list.map(function (c, i) {
+      var d = decisionFor(c.id);
+      return d ? decidedRow(c, d) : card(c, i + 1, b);
+    }).join('');
+
+    /* What the gates left out, stated rather than implied. Trajectory and the
+       confidence floor are named too — they used to reject people silently,
+       which made this line an incomplete account of the same arithmetic. */
+    var leftParts = [
+      left.below ? left.below + ' who scored under ' + state.admin.threshold : '',
+      left.wrongFit ? left.wrongFit + ' who did not match this brief' : '',
+      left.fading ? left.fading + ' who are fading rather than rising' : '',
+      left.thin ? left.thin + ' we had read too little of to argue from' : ''
+    ].filter(Boolean);
+    var below = leftParts.length ? '<p class="leftout">' +
+      'Scout also looked at ' +
+      (leftParts.length === 1 ? leftParts[0]
+        : leftParts.slice(0, -1).join(', ') + ' and ' + leftParts[leftParts.length - 1]) +
+      '. They are not gone &mdash; they are just not worth your morning.</p>' : '';
+
+    below += whoElse(b);
+
+    var done0 = remaining() === 0 ? '<div class="p p--teal zero mt-5">' +
+      '<h2>Worked to zero.</h2>' +
+      '<p>Every name has a decision and an owner. Close Scout; it will have the next one at 06:00.</p></div>' : '';
+
+    return lens + head + chips + progress + '<div class="listwrap">' + rows + '</div>' + below + done0;
+  }
+
+  /* Briefs are tabs, and they are parallel: the house brief first, then each
+     brief you have written, then + New brief. There is no All view — the
+     population is the sum of every brief ever written, so "All" would be a pile
+     whose contents are an accident of who wrote what, and Fit is per brief, so a
+     creator outside any brief has no gate and no honest score (§6.1). */
+  function briefTabs() {
+    return '<div class="views">' + allBriefs().map(function (x) {
+      var on = state.briefId === x.id;
+      var n = isPaused(x) ? '' : String(S.dropFor(asOf(), x, state.admin.threshold).length);
+      return '<button class="vchip' + (x.house ? ' vchip--house' : '') +
+        (isPaused(x) ? ' vchip--paused' : '') + '" data-act="brief" data-b="' + x.id +
+        '" aria-pressed="' + on + '">' + esc(x.name) +
+        (isPaused(x) ? '<span class="c">paused</span>' : '<span class="c">' + n + '</span>') +
+        '</button>';
+    }).join('') +
+      '<button class="vchip vchip--new" data-act="newbrief">' + U.icon('plus') + 'New brief</button>' +
+      '</div>' +
+      /* The house brief's words were hardcoded HERE as well as in the brief
+         record, so correcting the record left the old text on screen — a third
+         copy of the sentence that caused §5.4c. It now reads its own brief like
+         every other tab, and only the "nobody wrote it" clause is fixed copy. */
+      (brief(state.briefId).house
+        ? '<p class="tabnote">Nobody wrote the house brief and nobody can edit it. ' +
+          esc(brief(state.briefId).description) + '</p>'
+        : '<p class="tabnote">' + esc(brief(state.briefId).description) +
+          ' <button class="lnk" data-act="editbrief" data-b="' + esc(state.briefId) + '">See what it is made of</button></p>');
+  }
+
+  /* v5.3 — THE PLATFORM THE AUDIENCE NUMBER CAME FROM.
+     The card used platforms[0], which is whichever surface the engine happened
+     to read first. Brett Kollmann is 41k on TikTok and 459k on YouTube, and
+     `audience.total` is 459k because the TikTok is marked `separate` and is not
+     added in. So the lead card of the whole demo showed "TikTok profile · 41k"
+     beside a score built on the 459k channel — the smaller of his two accounts,
+     under a number derived from the other one.
+
+     Picking the largest keeps the headline consistent with audience.total,
+     which is the figure every gate and every sentence downstream already uses.
+     A card whose count disagrees with its own score is worse than no count. */
+  /* v5.3 — WHO PUT THIS NAME HERE.
+     The engine tags a handle `proposed` when a model suggested it and nothing
+     has checked that it belongs to the person the model meant — its own README
+     calls person verification "the next wall and it is not built". Both live
+     briefs are 100% machine-proposed. The record has carried this field all
+     along and no screen printed it, which means the demo was silently claiming
+     more than the engine does. It is a statement of provenance, so it sits with
+     the handle rather than near the score. */
+  function proposedTag(c) {
+    if (c.source !== 'proposed') return '';
+    return '<span class="proposedtag" title="A model suggested this handle. ' +
+      'Nothing has verified it belongs to the person the model meant.">proposed</span>';
+  }
+
+  function mainPlatform(c) {
+    var list = (c.platforms || []).filter(function (p) { return p && p.followers; });
+    if (!list.length) return { name: c.primaryPlatform, followers: (c.audience || {}).total };
+    return list.reduce(function (best, p) { return p.followers > best.followers ? p : best; });
+  }
+
+  /* v5.3 — WHO ELSE WAS LOOKED AT, AND WHAT STOPPED THEM.
+     The counts above say how many. This says who, and why each one — which is
+     the difference between a claim and a receipt, and the reason the engine
+     prints this same board on every run.
+
+     THREE THINGS IT DELIBERATELY DOES NOT DO:
+
+     · No avatars, no account links on these rows (Alex's call). The people who
+       cleared are worth a face; the people who did not are a working record,
+       and giving a rejected creator a portrait and a link makes the list read
+       as a directory of people we are recommending against.
+     · No colour on the score. These are not ranked candidates and a red number
+       would read as a verdict on the person rather than on a gate.
+     · The reason is the gate's OWN sentence, never a summary of it. Every time
+       this product has restated a machine's words in its own voice it has
+       drifted from them — the "we looked in N places" count did exactly that
+       in v5.1 and the two disagreed for a week before anyone opened one. */
+  function whoElse(b) {
+    var rejected = S.rejectedFor(asOf(), b, state.admin.threshold);
+    if (!rejected.length) return '';
+
+    var rows = rejected.map(function (r) {
+      var c = r.creator;
+      var plat = mainPlatform(c);
+      /* An unreadable account has no follower count, and printing a bare 0
+         claims we read it and found nobody. Say which it was. */
+      var aud = plat && plat.followers
+        ? U.followers(plat.followers)
+        : '<span class="wex-none">couldn&rsquo;t read</span>';
+      var why = r.failed.length && r.failed[0].why ? r.failed[0].why : '';
+
+      return '<tr>' +
+        '<td class="wex-nm">' + esc(c.handle || c.name) + proposedTag(c) + '</td>' +
+        '<td class="wex-num">' + r.score + '</td>' +
+        '<td class="wex-num">' + Math.round((c.confidence || 0) * 100) + '%</td>' +
+        '<td class="wex-num">' + aud + '</td>' +
+        '<td class="wex-stop">' + esc(r.words.join(', ')) +
+        (why ? '<span class="wex-why">' + esc(why) + '</span>' : '') +
+        '</td></tr>';
+    }).join('');
+
+    return '<section class="whoelse">' +
+      '<h2 class="wex-h">Who else was looked at, and what stopped them</h2>' +
+      '<p class="wex-sub">Every name that went through the full ladder for this brief. ' +
+      'The reason is the gate&rsquo;s own words.</p>' +
+      '<div class="wex-scroll"><table class="wex">' +
+      '<thead><tr><th>Creator</th><th class="wex-num">Score</th><th class="wex-num">Confidence</th>' +
+      '<th class="wex-num">Audience</th><th>What stopped them</th></tr></thead>' +
+      '<tbody>' + rows + '</tbody></table></div></section>';
+  }
+
+  /* ------------------------------------------------------------- the card */
+  /* Three claims and nothing else, in the order the report repeats. */
+  function card(c, rank, b) {
+    var plat = mainPlatform(c);
+    return '<article class="row" data-id="' + c.id + '">' +
+      '<div class="rk">' + rank + '</div>' +
+      '<div class="scorewrap">' + U.ring(c, 'sm', score(c)) + '</div>' +
+      '<div class="rowmain">' +
+      /* §6.12 — the face sits with the name, not with the score. The two things
+         a person recognises a creator by are their picture and their handle, and
+         separating them makes the row scan as a number with a caption. */
+      '<div class="idline">' + U.face(c, 'sm') +
+      '<h2 class="nm">' + esc(c.name) + '</h2>' +
+      '<span class="hd">' + esc(c.handle) + '</span>' + proposedTag(c) + '</div>' +
+      /* The audience is a count only. */
+      '<span class="plat1">' + esc(plat.name) + ' ' + DOT + ' ' + U.followers(plat.followers) + '</span>' +
+
+      U.claimList(c, asOf()) +
+
+      /* Decision 113 — a first look says so on the card. Every real creator has
+         been observed once, so without this line the drop silently implies a
+         trend behind every name in it. Set back by weight, not by fade: fading
+         advisory rows to .62 measured 2.48:1 and fails AA. */
+      (S.trajectoryOf(c).verdict === 'not_established'
+        ? '<p class="firstlook">' + esc(S.trajectoryOf(c).stated) + '</p>' : '') +
+
+      (c.resurfaced ? '<div class="resurf">' + U.icon('watch') +
+        '<span><b>Back in the drop</b> ' + DOT + ' ' + esc(S.plain(c.resurfaced.reason)) + '</span></div>' : '') +
+      (state.passTray === c.id ? passTray(c) : '') +
+      (state.watchTray === c.id ? watchTray(c) : '') +
+      '</div>' +
+
+      '<div class="acts">' +
+      '<button class="vbtn vbtn--open vbtn--sm" data-act="report" data-id="' + c.id + '">Open the report</button>' +
+      /* Pass is available inline, one click, with a reason. Promote requires
+         opening the report (§6.1). */
+      U.verbBtn('watchtray', c.id, 'Watch', 'hold', 'sm') +
+      U.verbBtn('passtray', c.id, 'Pass', 'no', 'sm') +
+      '</div></article>';
+  }
+
+  /* Watching has a window, set when you watch. Watching compounds, so the
+     watchlist needs an exit that is not a rejection — and the exit is a date
+     chosen up front rather than a rule that fires much later (§5.8). */
+  function watchTray(c) {
+    return '<div class="passtray"><div class="hd"><span class="lab">Watch, and check back in</span>' +
+      '<span class="q">A watch is a hypothesis with a date: something changes here within the window.</span></div>' +
+      '<div class="windows">' + ['1 month', '2 months', '3 months'].map(function (w, i) {
+        return '<button data-act="' + (i === 0 ? 'watch' : 'watchwhy') + '" data-id="' + c.id +
+          '" data-w="' + esc(w) + '"' +
+          (state.watchWindow === w ? ' class="on"' : i === 0 && !state.watchWindow ? ' class="on"' : '') +
+          '><b>' + esc(w) + '</b>' +
+          (i === 0 ? '<span>default</span>' : '<span>say why</span>') + '</button>';
+      }).join('') + '</div>' +
+      /* §5.8: default one month, longer only with a reason. v5 printed "needs a
+         reason" on both longer windows and then never asked for one — friction
+         promised and not delivered reads as a bug either way, so ask. */
+      (state.watchWindow ? '<form class="whyrow" data-act="watchwhy-submit" data-id="' + c.id + '">' +
+        '<label class="lab" for="watchwhy">Why ' + esc(state.watchWindow) + '?</label>' +
+        '<div class="formacts mt-2">' +
+        '<input class="inp" id="watchwhy" type="text" autocomplete="off" ' +
+        'placeholder="Rebuilding after a platform move &mdash; give it a quarter">' +
+        '<button class="btn btn--primary" type="submit">Watch for ' + esc(state.watchWindow) + '</button>' +
+        '</div></form>' : '') +
+      '<p class="traynote">Six months would contradict the whole claim &mdash; they feel this <b>this quarter</b>. ' +
+      'When the window closes the name comes back as a decision, carrying what moved.</p>' +
+      '<div class="mt-3"><button class="btn btn--ghost btn--sm" data-act="watchtray" data-id="">Cancel</button></div>' +
+      '</div>';
+  }
+
+  function passTray(c) {
+    return '<div class="passtray"><div class="hd"><span class="lab">Pass, with a reason</span>' +
+      '<span class="q">The reason is the suppression rule and the training label. Nobody vanishes.</span></div>' +
+      '<div class="reasons">' + S.passReasons.filter(function (r) { return !r.outcomeOnly; }).map(function (r) {
+        return '<button data-act="pass" data-id="' + c.id + '" data-code="' + r.code + '">' +
+          '<b>' + esc(r.label) + '</b><span>' + esc(r.suppression) + '</span></button>';
+      }).join('') + '</div>' +
+      '<div class="mt-3"><button class="btn btn--ghost btn--sm" data-act="passtray" data-id="">Cancel</button></div>' +
+      '</div>';
+  }
+
+  function decidedRow(c, d) {
+    var r = d.verb === 'pass' ? S.reasonFor(d.reasonCode) : null;
+    var oc = d.reasonCode === 'declined' ? outcomeOf(c.id) : null;
+    var why = oc && oc.declineCode ? declineLabel(oc.declineCode) : null;
+    var detail = d.verb === 'pass' ? (why ? 'Declined — ' + why.toLowerCase() + '.' : r.label + '. ' + r.suppression)
+      : d.verb === 'watch' ? 'Checking back in ' + (d.window || '1 month') + ', with what moved.'
+        : 'Outreach package generated. Tell Scout how it goes.';
+    return '<div class="decided">' +
+      '<span class="pill' + (d.verb === 'pass' ? '' : ' pill--ok') + '">' + esc(stateLabel(d.verb)) + '</span>' +
+      '<span class="nm2">' + esc(c.name) + '</span><span class="sub-t">' + esc(detail) + '</span>' +
+      '<span class="spacer"></span>' +
+      /* A decided name still has to be reachable. Promote is not the end of the
+         record — the outcome lives on the report (§8), and without a way back
+         there the field can never be filled in. */
+      '<button class="btn btn--ghost btn--sm" data-act="report" data-id="' + c.id + '">Open the report</button>' +
+      (d.verb === 'promote' ? '<button class="btn btn--sm btn--out" data-act="outreach" data-id="' + c.id + '">Outreach package</button>' : '') +
+      '<button class="btn btn--ghost btn--sm" data-act="undo" data-id="' + c.id + '">Undo</button></div>';
+  }
+
+  /* ================================================================ REPORT */
+  /* The report is the card, expanded. Same three claims, same order, same
+     words, each carrying its own number and its own proof. The previous
+     structure reorganised into Case / Quotes / Inventory / four drawers one
+     click after promising three things on the card — a continuity break, which
+     is what made it hard to follow. Volume was never the problem (§6.2). */
+  function reportView() {
+    var c = creator(state.reportId);
+    if (!c) return '<p class="sub-t">Not found.</p>';
+    var b = brief(state.briefId);
+    var cl = S.claims(c);
+    var fit = S.fitFor(c, b);
+    var d = decisionFor(c.id);
+    var call = rewound() ? S.rewindCalls[c.id] : null;
+    var sc = score(c);
+
+    var lens = rewound() ? '<div class="aslens"><b>Reading this as of ' + esc(U.longDate(S.REWIND)) + '.</b> ' +
+      'Nothing observed after that date is in it. What actually happened is at the bottom.</div>' : '';
+
+    /* The tall header is the arrival and scrolls away; this compact bar takes
+       over, so a decision can be made from anywhere in the report. It is a
+       zero-height sticky anchor with the bar itself positioned out of flow —
+       otherwise an invisible 82px block sits at the top of every report, and
+       collapsing it on activation would shove the page down mid-scroll. */
+    var out = '<div class="compact" id="compact"><div class="cbar">' +
+      '<button class="back" data-act="view" data-view="' + esc(state.from) + '" aria-label="Back">' +
+      U.icon('back') + '</button>' +
+      U.ring(c, 'xs', sc) + U.face(c, 'xs') +
+      /* The three claim numbers used to run along here, which was "How the
+         number was built" reassembled and made to follow you down the whole
+         report — the one thing decision 82 deleted. Each number is at most a
+         screen from the heading that owns it, and the ring carries the total. */
+      '<div class="who2"><b>' + esc(c.name) + '</b>' +
+      '<span>' + esc(c.handle) + '</span></div>' +
+      (d || rewound() ? '' : '<div class="verbs">' +
+        U.verbBtn('promote', c.id, 'Promote', 'go', 'sm') +
+        U.verbBtn('watchtray', c.id, 'Watch', 'hold', 'sm') +
+        U.verbBtn('passtray', c.id, 'Pass', 'no', 'sm') + '</div>') +
+      '</div></div>';
+
+    out += lens + '<header class="rpthead"><div class="who2">' +
+      '<button class="btn btn--soft btn--sm backbtn" data-act="view" data-view="' + esc(state.from) + '">' +
+      U.icon('back') + 'Back to ' + esc(state.from === 'watchlist' ? 'the watchlist'
+        : state.from === 'passed' ? 'the passed list'
+          : state.from === 'runname' ? 'Run a name' : 'the drop') + '</button>' +
+      (c.sourceTag === 'manual' || c.resurfaced || rewound() ? '<div class="rpt-tags">' +
+        (c.sourceTag === 'manual' ? '<span class="pill pill--warn">You ran this name</span>' : '') +
+        (c.resurfaced ? '<span class="pill pill--ok">Back in the drop</span>' : '') +
+        (rewound() ? '<span class="pill">' + esc(U.longDate(S.REWIND)) + '</span>' : '') + '</div>' : '') +
+      '<div class="rpt-id">' + U.face(c, 'lg') +
+      '<div><h1>' + esc(c.name) + '</h1>' +
+      '<p class="handle">' + esc(c.handle) + '</p></div></div>' +
+      /* Keep the cross-platform graph — 214k across four platforms is a
+         different business from 214k on one. The per-platform identity match
+         percentage came off; a weak match is stated in words instead (§6.2).
+         v5.3: the accounts became LINKS (§6.12). The fastest way to disbelieve
+         a report is to open the profile, and making that one click is a
+         confidence move — a list you cannot follow is an assertion. */
+      U.accounts(c) +
+      weakMatch(c) +
+      /* Decision 119. The engine writes no headline for a real creator and says
+         so in its own words; printing that sentence to a member showed them an
+         internal note instead of a finding. A first look gets countable facts,
+         labelled as a first look, or nothing at all. */
+      (function () {
+        var h = S.plain(c.headline);
+        if (h && !/^no headline/i.test(h)) return '<p class="thesis">' + esc(h) + '</p>';
+        var prelim = preliminaryHeadline(c);
+        return prelim
+          ? '<p class="thesis thesis--prelim"><span class="prelim-tag">First look</span>' + esc(prelim) + '</p>'
+          : '';
+      })() +
+      '<div class="topline">' +
+      '<div class="tl"><span class="k">Fits your brief</span><span class="v">' + esc(b.name) +
+      '<span class="why">' + esc(fit.why) + '</span></span></div>' +
+      '<div class="tl"><span class="k">Recommended play</span><span class="v">' + esc(S.plain(c.play.label)) +
+      '<span class="why">' + esc(S.plain(c.play.why)) + '</span></span></div>' +
+      '</div>' +
+      /* One set of verbs, at the top. They sit here while the header is on
+         screen and the sticky bar picks them up the moment it scrolls away, so
+         only one set is ever visible — which is what the second sticky row at
+         the bottom of the page was failing to be. */
+      (d || rewound() || outcomeOf(c.id) ? ''
+        : state.passTray === c.id ? '<div class="headtray">' + passTray(c) + '</div>'
+        : state.watchTray === c.id ? '<div class="headtray">' + watchTray(c) + '</div>'
+        : '<div class="headverbs">' +
+          U.verbBtn('promote', c.id, 'Promote', 'go') +
+          U.verbBtn('watchtray', c.id, 'Watch', 'hold') +
+          U.verbBtn('passtray', c.id, 'Pass', 'no') + '</div>') +
+      '</div>' +
+      /* The same mark the lists use, one size up. v5 invented a second
+         treatment here — a bare number in a panel — so the score looked like a
+         different quantity depending on which screen you were on. */
+      '<div class="scoreblock">' + U.ring(c, 'lg', sc) +
+      '<span class="bs-k">the score ' + U.rcp('score', c.id, 'the score') + '</span>' +
+      '<span class="bs-n">bar is ' + state.admin.threshold + '</span></div>' +
+      '</header>';
+
+    /* Brand safety surfaces on the report itself, not merely as a card
+       annotation, and blocks silent promotion (§8). */
+    out += unsafeFlag(c);
+
+    /* Why this person is not in your drop — and only then. §6.4's own screen
+       said this once and then dropped it the moment you opened the report,
+       which is the screen you actually sit with. It states the gates that
+       FAILED, in sentences; a row of five passes on someone already in the drop
+       would be a status field, and §8 says In Drop is computed, not stored. */
+    out += gateBlock(c, b);
+
+    out += '<div class="claims">';
+
+    /* ---- DEMAND ------------------------------------------------------- */
+    out += '<section class="claim claim--demand"><div class="ch">' +
+      '<h2>Demand ' + U.rcp('demand', c.id, 'Demand') + '</h2><span class="q">Do people want to buy?</span>' +
+      '<span class="pts">+' + cl.demand.points + '</span></div>' +
+      '<p class="lede">' + esc(cl.demand.line) + ', ' + esc(cl.demand.window) + '.</p>' +
+      (cl.demand.quotes.length
+        ? '<div class="quotes">' + cl.demand.quotes.map(function (e, i) {
+            return U.quoteBlock(e, asOf(), { url: false, likes: S.likesFor(c, i) });
+          }).join('') + '</div>'
+        : '<p class="sub-t mt-3">Comments could not be read on this platform, so this scores neutral ' +
+          'and pulls confidence down. It is not evidence of nothing.</p>') +
+      '</section>';
+
+    /* ---- WHY THEY'RE ON THIS LIST (Trajectory) ------------------------- */
+    /* Trajectory reads as "why they're on this list" — the answer to why the
+       machine picked this person, which nothing previously stated. It carries
+       trends, never a score: a fourth number is a fourth thing to learn. */
+    out += '<section class="claim claim--why"><div class="ch">' +
+      '<h2>Why they&rsquo;re on this list ' + U.rcp('trajectory', c.id, 'why they are on this list') + '</h2>' +
+      '<span class="q">A gate, not a score. Rising or steady, never fading.</span>' +
+      '<span class="pts pts--gate">gate ' + DOT + ' pass</span></div>' +
+      '<ul class="whylist">' + cl.trajectory.map(function (t) {
+        return '<li><span class="l">' + esc(t[0]) + '</span>' +
+          (t[1] ? '<span class="v">' + esc(t[1]) + '</span>' : '') + '</li>';
+      }).join('') + '</ul></section>';
+
+    /* ---- PRESSURE ------------------------------------------------------ */
+    /* Pressure sits above Missing. Demand and Pressure make you lean in; the
+       inventory is the proof you check second. A ten-row list in the middle
+       buried the strongest line on the page (§6.2). */
+    out += '<section class="claim claim--pressure"><div class="ch">' +
+      '<h2>Pressure ' + U.rcp('pressure', c.id, 'Pressure') + '</h2><span class="q">Will they take the call?</span>' +
+      '<span class="pts">' + cl.pressure.points + '/' + cl.pressure.max + '</span></div>' +
+      '<p class="lede">' + esc(cl.pressure.lens) + '</p>' +
+      '<ul class="preslist">' + cl.pressure.lines.map(function (l) {
+        if (l.kind === 'said') {
+          return '<li class="said"><span class="l">&ldquo;' + esc(l.text) + '&rdquo;</span>' +
+            '<span class="v">their words ' + DOT + ' ' + esc(U.shortDate(l.at)) + '</span></li>';
+        }
+        return '<li><span class="l">' + esc(l.text) + '</span>' +
+          '<span class="v">' + esc(l.when || 'last 90 days') + '</span></li>';
+      }).join('') + '</ul></section>';
+
+    /* ---- MISSING ------------------------------------------------------- */
+    /* Carries the once-per-report notes across every line, so a paragraph that
+       is true of the whole page is printed on it once. */
+    var seen = {};
+    out += '<section class="claim claim--missing"><div class="ch">' +
+      '<h2>Missing ' + U.rcp('missing', c.id, 'Missing') + '</h2><span class="q">Is there anything to buy?</span>' +
+      '<span class="pts">+' + cl.missing.points + '</span></div>' +
+      /* Weight is order, not a badge — highest-value absence first, with a
+         clause on that line only (§5.2). */
+      '<span class="subh">What they&rsquo;ve built</span>' +
+      '<ul class="invlist">' + cl.missing.built.map(function (r) {
+        return invRow(c, r, seen);
+      }).join('') + '</ul>' +
+      /* Missing everything including the trivial things is a LABEL, not a
+         number: clean slate versus partway down a road (§5.2). */
+      '<span class="subh">What they&rsquo;ve switched on <em>&mdash; ' + esc(cl.missing.onLabel) + '</em></span>' +
+      '<ul class="invlist invlist--on">' + cl.missing.on.map(function (r) {
+        return invRow(c, r, seen);
+      }).join('') + '</ul>' +
+      cantSettle(c) + '</section>';
+
+    out += '</div>';
+
+    /* Receipts and samples stay collapsed. Nobody opens receipts until they are
+       challenged — but they must exist, or "we looked in 6 places" is a claim
+       rather than a fact (§6.10). */
+    var sum = S.checkSummary(c, rewound() ? S.REWIND : null);
+    out += '<div class="p flushbox mt-5">' +
+      /* "34 checks across 11 places" only makes sense once a place has been
+         looked at more than once. On a creator seen a single time the two
+         numbers are the same number, and printing both invites the reader to
+         work out a difference that isn't there. */
+      disclosure('record', 'How we checked',
+        sum ? (sum.checks > sum.places
+          ? sum.checks + ' checks across ' + sum.places + ' places'
+          : sum.places + ' places, looked at once each') + ', ' +
+          U.shortDate(sum.first) + '&ndash;' + U.shortDate(sum.last) : '',
+        recordBody(c)) +
+      (c.samples && c.samples.length
+        ? disclosure('samples', 'What their work looks like', U.plural(c.samples.length, 'sample'), samplesBody(c))
+        : '') +
+      '</div>';
+
+    /* What happened next — only on a rewound report, and only under the case
+       that argued for it. */
+    if (rewound() && c.outcome) out += happenedNext(c, call);
+
+    if (d) {
+      out += '<div class="decide"><span class="pill' + (d.verb === 'pass' ? '' : ' pill--ok') + '">' +
+        esc(stateLabel(d.verb)) + '</span><span class="sub-t">Recorded by ' + esc(me().name) + '</span>' +
+        '<span class="spacer"></span>' +
+        (d.verb === 'promote' ? '<button class="btn btn--sm btn--out" data-act="outreach" data-id="' + c.id + '">Outreach package</button>' : '') +
+        '<button class="btn btn--ghost btn--sm" data-act="undo" data-id="' + c.id + '">Undo</button></div>';
+      /* Declining rewrites the verb to 'pass' for suppression (§8), which in v5
+         made this branch unreachable and took the decline reason with it — the
+         one fact the whole outcome field exists to capture. */
+      if (d.verb === 'promote' || outcomeOf(c.id)) out += outcomeControl(c);
+    } else if (outcomeOf(c.id)) {
+      out += outcomeControl(c);
+    } else if (!rewound()) {
+      /* The verbs live in the bar at the top and nowhere else. A second sticky
+         set at the bottom meant two identical action rows on screen at once for
+         the whole length of the report — the same decision offered twice, which
+         is one more thing to read and no more you can do. */
+      out += '<p class="recorded">Recorded as ' + esc(me().name) + ' ' + DOT + ' ' +
+        esc(U.longDate(asOf())) + '</p>';
+    }
+    return out;
+  }
+
+  /* ------------------------------------------- THE CLAIM, AND ITS RECEIPTS */
+  /* "No newsletter. We looked in 6 places" is an assertion until someone can
+     open the six (§6.10). v5.1 could open the pillar and it could open the
+     page; it could not open the line, which is where the claim actually lives.
+     So each line is its own disclosure and its body is that line's checks and
+     nothing else — the proof sits under the claim it justifies, not in one
+     drawer at the foot of the report holding everyone's proof at once.
+
+     The count in the summary comes from the rows below it (`S.lookedIn`), so a
+     line cannot claim a door its receipts cannot open. */
+  function invRow(c, r, seen) {
+    var li = S.lookedIn(c, r, rewound() ? S.REWIND : null);
+    var phrase = invPhrase(r, li);
+    if (!li.rows.length) {
+      return '<li class="inv">' + U.vmark(r.state) +
+        '<span class="it">' + esc(r.item) + '</span>' +
+        '<span class="st">' + phrase + '</span></li>';
+    }
+    var key = 'inv:' + c.id + ':' + r.item;
+    var open = !!state.open[key];
+    return '<li class="inv inv--open' + (open ? ' is-open' : '') + '">' +
+      '<button class="invbtn" data-act="disc" data-d="' + esc(key) + '"' +
+      ' aria-expanded="' + open + '" aria-controls="' + esc('d-' + key) + '">' +
+      U.vmark(r.state) +
+      '<span class="it">' + esc(r.item) + '</span>' +
+      '<span class="st">' + phrase + '</span>' +
+      '<span class="invchev">' + U.icon('chev') + '</span></button>' +
+      (open ? '<div class="invchecks" id="' + esc('d-' + key) + '">' + checkRows(li.rows) +
+        wallNote(seen) + '</div>' : '') +
+      '</li>';
+  }
+
+  /* One row per door: what came back, from where, and when. The status code is
+     doing real work here — "404 at handle.substack.com" is a different kind of
+     fact from "no publication", and it is the kind that survives a challenge. */
+  function checkRows(rows) {
+    return '<ul class="ck">' + rows.map(function (x) {
+      var badge = x.outcome === 'hit' ? 'hit' : x.outcome === 'miss' ? 'miss' : '???';
+      return '<li class="ck-r ck-r--' + esc(x.outcome) + (x.advisory ? ' ck-r--adv' : '') + '">' +
+        '<span class="ck-o">' + badge + '<span class="sr-only"> &mdash; ' +
+        (x.outcome === 'hit' ? 'found here' : x.outcome === 'miss' ? 'not here' : 'would not answer') +
+        '</span></span>' +
+        '<span class="ck-s">' + (x.status == null
+          ? '&mdash;<span class="sr-only">no response code</span>'
+          : '<span class="sr-only">HTTP </span>' + x.status) + '</span>' +
+        '<span class="ck-b"><b>' + esc(x.place) + '</b>' +
+        '<span class="ck-u">' + esc(x.url) + '</span>' +
+        '<span class="ck-w">' + esc(x.why) + '</span></span>' +
+        /* An advisory row said "Counted" next to its own sentence explaining
+           that it is excluded from the arithmetic. The engine tag is about how
+           a fact was produced, not whether it scored, and here the two read as
+           the same word. The row that does not count now says so. */
+        '<span class="ck-m">' + esc(U.shortDate(x.at)) + ' ' +
+        (x.advisory ? '<span class="eng eng--adv">Not counted</span>' : U.engTag(x.engine)) +
+        '</span></li>';
+    }).join('') + '</ul>';
+  }
+
+  /* The wall, stated where the evidence is. It is the most credible thing the
+     project owns and it appeared nowhere in the interface — v5.1 rendered the
+     rule/LLM tag per row, which is the mechanism without the policy.
+
+     Once per report, under the first line opened. Under every open line it
+     would be the same paragraph three times on one screen, which is the tell
+     v5.1 removed the coloured claim borders for. */
+  function wallNote(seen) {
+    if (seen.wall) return '';
+    seen.wall = true;
+    return '<p class="wall">Every result above was decided by a status code and a written rule. ' +
+      'No language model wrote one. Models may classify text we fetched, quote it, judge fit and ' +
+      'propose more places to look &mdash; they may not say whether something exists.</p>';
+  }
+
+  /* Q3: the count is doors that opened. Doors that would not answer are named
+     separately, because a door that never opens is not a place we looked. */
+  function invPhrase(r, li) {
+    /* A presence-only check has no places to count — it can show a thing is on
+       and can never show it is off, which is what the line under the list says.
+       Running the "we looked in N places" phrasing over it produced "we looked
+       in 0 places", which is both untrue and the opposite of the point. */
+    if (li && li.rows.length && li.rows[0].presenceOnly) {
+      return esc(r.note || U.VLABEL[r.state]);
+    }
+    var quiet = li && li.quiet ? ' ' + DOT + ' ' + li.quiet + ' wouldn&rsquo;t answer' : '';
+    if (r.state === S.STATES.A) {
+      return 'not there ' + DOT + ' we looked in ' + li.places + ' places' + quiet +
+        (r.clause ? '<em>' + esc(r.clause) + '</em>' : r.note ? '<em>' + esc(r.note) + '</em>' : '');
+    }
+    if (r.state === S.STATES.P) {
+      return 'found it' + (r.clause ? '<em>' + esc(r.clause) + '</em>' : r.note ? '<em>' + esc(r.note) + '</em>' : '');
+    }
+    if (r.state === S.STATES.NA) return esc(r.note || 'we did not need to check');
+    return 'could not resolve ' + DOT + ' scores neutral' +
+      (r.note ? '<em>' + esc(r.note) + '</em>' : '');
+  }
+
+  /* Q1, on the page. Some checks can show a thing is present and can never show
+     it is absent. Saying so is what stops confidence reading as a mark out of
+     ten — §5.3 makes confidence the thing that keeps a burned Scout trusting
+     the drop, and it only does that if its limits are stated. */
+  function cantSettle(c) {
+    var names = S.cannotSettle(c);
+    if (!names.length) return '';
+    return '<p class="cantsettle"><b>' + names.length + ' of these we cannot settle either way</b> &mdash; ' +
+      esc(names.join(', ')) + '. They can show up as present, never as absent, so they are left out ' +
+      'of the confidence figure rather than counted as gaps.</p>';
+  }
+
+  /* Move 2. Rendered only when a gate failed. */
+  function gateBlock(c, b) {
+    var g = S.gatesFor(c, b, state.admin.threshold);
+    if (g.enters) return '';
+    return '<div class="gates"><h2>Not in your drop</h2>' +
+      '<ul>' + g.failed.map(function (x) {
+        return '<li><span class="gk">' + esc(x.label) + '</span>' +
+          '<span class="gw">' + esc(x.why) + '</span></li>';
+      }).join('') + '</ul>' +
+      '<p class="gates-ft">' +
+      (c.sourceTag === 'manual'
+        ? 'This report exists because you asked for it. If they cross the bar unaided they come back in the drop like any watched name &mdash; which is how you learn whether to trust the score.'
+        : 'Nothing here is a judgement about the person. It is the four conditions in §5.4, and which of them this brief did not meet.') +
+      '</p></div>';
+  }
+
+  /* Say it in words only when the match is weak. Nobody acts on "id match 87%". */
+  function weakMatch(c) {
+    var weak = null;
+    (c.platforms || []).forEach(function (p) { if (!weak && p.matchConfidence < 0.9) weak = p; });
+    return weak ? '<p class="weakid">We are not certain the ' + esc(weak.name) +
+      ' account is the same person.</p>' : '';
+  }
+
+  function unsafeFlag(c) {
+    var d = decisionFor(c.id);
+    if (!d || d.reasonCode !== 'unsafe') return '';
+    return '<div class="unsafe"><b>Flagged brand-unsafe by ' + esc(me().name) + '.</b> ' +
+      'This only suppresses the name in your own queue &mdash; nobody can delete a creator for everyone. ' +
+      'Promoting from here means acknowledging the flag first.</div>';
+  }
+
+  function disclosure(id, title, summary, body) {
+    var open = !!state.open[id];
+    return '<div class="disc' + (open ? ' open' : '') + '">' +
+      '<button data-act="disc" data-d="' + id + '" aria-expanded="' + open +
+      '" aria-controls="disc-' + id + '">' +
+      '<span class="t">' + title + '</span><span class="s">' + summary + '</span>' +
+      '<span class="chev">' + U.icon('chev') + '</span></button>' +
+      (open ? '<div class="disc-body" id="disc-' + id + '">' + body + '</div>' : '') + '</div>';
+  }
+
+  function recordBody(c) {
+    var rows = S.recordFor(c, rewound() ? S.REWIND : null);
+    if (!rows.length) return '<p class="sub-t">No check record at this depth.</p>';
+    var e = S.effortFor(c, asOf());
+    /* The same rows the inventory lines open, in date order rather than grouped
+       by claim. Two views of one record (§6.10) — and now literally one record,
+       so the header total and the per-line totals are the same arithmetic. */
+    /* The total here is larger than the numbers on the claim lines add up to,
+       and that difference is worth one sentence rather than left for someone to
+       find. A line states the doors that decided IT: the ones we opened, and
+       separately the ones that would not answer. This table is every check on
+       the creator — including the places behind a thing we found, and the
+       study-depth reads that belong to Demand, Pressure and Fit rather than to
+       any inventory line. */
+    return '<p class="ledger-hd">Every check on this creator, in date order &mdash; the same rows ' +
+      'each claim above opens, plus the reads behind Demand, Pressure and Fit, which belong to no ' +
+      'single line. It totals more than the claim lines do: a line counts only the doors that ' +
+      'settled it.</p>' +
+      '<div class="wrapx"><table class="ct"><thead><tr>' +
+      '<th>Claim</th><th>Where we looked</th><th>What came back</th><th>Source</th><th>When</th><th>Result</th><th>Pass</th>' +
+      '</tr></thead><tbody>' + rows.map(function (r) {
+        return '<tr' + (r.advisory ? ' class="adv"' : '') + '><td>' + esc(r.item || '&mdash;') + '</td>' +
+          '<td><b>' + esc(r.place) + '</b></td>' +
+          '<td>' + (r.status == null ? '' : '<span class="code">' + r.status + '</span> ') + esc(r.why) + '</td>' +
+          '<td class="lsrc">' + esc(r.url) + '</td><td>' + esc(U.shortDate(r.at)) + '</td>' +
+          '<td>' + U.vstate(r.state) + '</td>' +
+          '<td><span class="pill">' + esc(S.DEPTH[r.depth].label) + '</span> ' + U.engTag(r.engine) + '</td></tr>';
+      }).join('') + '</tbody></table></div>' +
+      /* Creator scope shows effort, never currency. "We've spent £4.20 learning
+         about this person" is both grim and the wrong optimisation target —
+         it invites judgments about people on cost grounds (§5.8). */
+      /* The header already states the count. v5 had the footer restate it from a
+         different sum, so one disclosure carried two totals for "how thorough
+         was this" a few lines apart — on the page whose whole job is being
+         defensible. Say it once, in the heading, and let the footer explain. */
+      '<p class="ledger-ft">One row per place, tracked since ' + esc(U.shortDate(e.since)) +
+      '. Names only exist from Probe depth upward, where an actual judgment was made and a ' +
+      'result was written down.</p>';
+  }
+
+  function samplesBody(c) {
+    return '<div class="samples">' + c.samples.map(function (sm) {
+      return '<div class="sample"><div class="swatch ' + U.sampleField(sm.tone) + '">' +
+        '<span class="playtag">plays here ' + DOT + ' current</span></div>' +
+        '<div class="t">' + esc(sm.title) + '</div>' +
+        '<div class="m"><span class="pill">' + esc(sm.platform) + '</span>' +
+        '<span class="sub-t">' + esc(sm.metric) + '</span><span class="sub-t">' + esc(sm.length) + '</span></div></div>';
+    }).join('') + '</div>' +
+      '<p class="ledger-ft">Counts and thumbnails are as of the check. The clip itself plays on the ' +
+      'platform&rsquo;s own player, so it is always <b>current</b> even when the report is not.</p>';
+  }
+
+  function happenedNext(c, call) {
+    var o = c.outcome;
+    var dud = !o.built || !o.built.length;
+    return '<div class="p p--ink mt-5">' +
+      '<span class="kick">' + esc(S.plain(o.window)) + ' ' + DOT + ' what happened next</span>' +
+      '<h3 class="outcome-h outcome-h--lg">' + esc(S.plain(o.headline)) + '</h3>' +
+      '<p class="outcome-n on-ink-soft">' + esc(S.plain(o.note)) + '</p>' +
+      (dud ? '' : '<ul class="built">' + o.built.map(function (b) {
+        return '<li>' + U.vmark('verified_absent') + '<span>' + esc(S.plain(b)) + '</span></li>';
+      }).join('') + '</ul>') +
+      (call ? '<p class="calledit">The desk ' + esc(call.verb === 'pass' ? 'passed' : call.verb === 'watch' ? 'watched' : 'promoted') +
+        ' this name on ' + esc(U.longDate(S.REWIND)) + ', ' + esc(call.by) + '.' +
+        (call.note ? ' ' + esc(call.note) : '') + '</p>' : '') +
+      '</div>';
+  }
+
+  /* --------------------------------------------------------- the outcome */
+  /* Promote is not the end of the record. The label that would actually
+     validate the signal model is "they said yes", and nothing collected it.
+     Recording an outcome is not managing a relationship: no notes, no next
+     steps, no reminders, no pipeline (§8). */
+  function outcomeControl(c) {
+    var o = outcomeOf(c.id) || {};
+    var open = state.outcomeTray === c.id;
+    return '<div class="p outcomebox mt-5">' +
+      '<span class="lab">Any word?</span>' +
+      '<p class="obnote">The only thing that tells Scout whether it was right. It rides in the ' +
+      'digest too &mdash; <em>&ldquo;You promoted ' + esc(c.name.split(' ')[0]) + ' 9 days ago. Any word?&rdquo;</em> &mdash; ' +
+      'because a field nobody is prompted for is blank in a month.</p>' +
+      '<div class="ocrow">' + S.outcomes.map(function (x) {
+        return '<button class="ocbtn' + (o.code === x.code ? ' on' : '') + '" data-act="outcome" data-id="' +
+          c.id + '" data-o="' + x.code + '"><b>' + esc(x.label) + '</b><span>' + esc(x.note) + '</span></button>';
+      }).join('') + '</div>' +
+      (o.code === 'declined' || open ? '<div class="declined">' +
+        '<span class="lab">Why did they say no?</span>' +
+        '<div class="reasons mt-3">' + S.declineReasons.map(function (r) {
+          return '<button' + (o.declineCode === r.code ? ' class="on"' : '') +
+            ' data-act="decline" data-id="' + c.id + '" data-code="' + r.code + '">' +
+            '<b>' + esc(r.label) + '</b><span>' + esc(r.teaches) + '</span></button>';
+        }).join('') + '</div></div>' : '') +
+      (o.code && o.code !== 'declined'
+        ? '<p class="obstate">Recorded ' + esc(U.longDate(o.at || asOf())) + '. ' +
+          (o.code === 'signed' ? 'This is the row that validates the model.' : 'Scout will ask again in nine days.') + '</p>'
+        : '') +
+      '</div>';
+  }
+
+  /* ============================================================= WATCHLIST */
+  function watchlistView() {
+    var list = watchlist();
+    var head = '<header class="pagehead"><h1>Watchlist</h1>' +
+      '<p class="deck">Kept, not killed &mdash; and every name here is a dated check-back rather than a pile ' +
+      'that only grows. When the window closes the name comes back as a decision, carrying what moved.</p>' +
+      '<p class="lifecycle">This is the only place spend compounds. Scout recommends who to stop watching; ' +
+      'nothing leaves without a person choosing it, because a state change nobody authored throws away the label.</p>' +
+      '</header>';
+
+    if (!list.length) {
+      return head + '<section class="p zero"><h2>Nothing kept yet.</h2>' +
+        '<p>Watch a creator from the drop and they are re-checked here until the window closes.</p></section>';
+    }
+
+    var rows = list.map(function (c) {
+      var a = S.V13[c.id] || {};
+      var d = decisionFor(c.id);
+      var win = (d && d.window) || a.window || '1 month';
+      var since = c.watchedSince || asOf();
+      var days = U.daysBetween(since, asOf());
+      var due = closing(c, days, win);
+      var trend = a.trend || ['Re-checked continuously', 'nothing has moved yet'];
+
+      return '<div class="wrow">' + U.face(c, 'sm') +
+        '<div><span class="nm">' + esc(c.name) + '</span>' +
+        '<span class="hd">' + esc(c.handle) + ' ' + DOT + ' kept ' + esc(U.longDate(since)) +
+        ' ' + DOT + ' ' + esc(win) + ' window</span>' +
+        /* What the watchlist watches is the trajectory block, because those are
+           the lines that move. An alert quotes the trend, never the score
+           delta — "score dropped 4 points" says nothing a person can act on. */
+        '<ul class="trendlist">' + trend.map(function (t) {
+          return '<li>' + esc(t) + '</li>';
+        }).join('') + '</ul>' +
+        due +
+        (state.passTray === c.id ? passTray(c) : '') + '</div>' +
+        '<div class="right">' + U.ring(c, 'sm', score(c)) +
+        '<button class="btn btn--out btn--sm" data-act="report" data-id="' + c.id + '" data-from="watchlist">Open the report</button>' +
+        '</div></div>';
+    }).join('');
+
+    var cost = '<div class="wcostbar"><span class="lab">What this list costs</span>' +
+      '<span class="v">' + U.money(watchlist().length * 4.2) + ' a month to keep watching</span>' +
+      '<span class="sub-t">Effort per creator sits on the report; money sits here and in Admin, ' +
+      'because pricing one human being on screen is the wrong thing to optimise.</span></div>';
+
+    return head + '<div class="listwrap">' + rows + '</div>' + cost;
+  }
+
+  /* The window closes as a decision, never a silent expiry, carrying what
+     moved: keep watching / promote / pass (§5.8). */
+  function closing(c, days, win) {
+    var span = win === '3 months' ? 90 : win === '2 months' ? 60 : 30;
+    if (days < span) {
+      return '<p class="duein">Checking back in ' + U.plural(Math.max(1, span - days), 'day') + '.</p>';
+    }
+    var a = S.V13[c.id] || {};
+    return '<div class="checkback"><span class="k">The window has closed</span>' +
+      '<p>You kept ' + esc(c.name.split(' ')[0]) + ' ' + esc(win) + ' ago, on the hypothesis that ' +
+      'something would change. Here is what moved.</p>' +
+      '<ul class="cbdiff">' + (a.trend || []).map(function (t) {
+        return '<li>' + esc(t) + '</li>';
+      }).join('') + '</ul>' +
+      '<div class="cbacts">' +
+      '<button class="btn btn--sm btn--out" data-act="watch" data-id="' + c.id + '" data-w="1 month">Keep watching</button>' +
+      /* Decision 116 — one name for one action. This said "Read it again",
+         which is a different door to the same room: a person who has learned
+         "Open the report" on the drop has to learn it a second time here, and
+         the two names imply the report differs by where you came from. It does
+         not. Every synonym is deleted. */
+      '<button class="btn btn--sm btn--out" data-act="report" data-id="' + c.id + '" data-from="watchlist">Open the report</button>' +
+      '<button class="btn btn--sm btn--out" data-act="passtray" data-id="' + c.id + '">Stop watching</button>' +
+      '</div></div>';
+  }
+
+  /* =========================================================== PASSED LIST */
+  /* Passed creators go somewhere and it is visible. The reason and the trigger
+     together are what make a Pass read as a decision rather than a deletion.
+     Not a third holding state — that would be a fourth verb (§6.3.1). */
+  function passedView() {
+    var rows = passedList();
+    var head = '<header class="pagehead"><h1>Passed</h1>' +
+      '<p class="deck">Nobody vanishes. Every pass carries the reason you gave and the thing that would ' +
+      'bring the name back &mdash; which is what makes it a decision rather than a deletion.</p>' +
+      '<p class="lifecycle">This is not a third place to put someone you are unsure about. Watch already means that, ' +
+      'and a fourth verb is exactly what the three-verb rule exists to prevent.</p></header>';
+
+    if (!rows.length) {
+      return head + '<section class="p zero"><h2>Nothing passed yet.</h2>' +
+        '<p>Pass a creator with a reason and they appear here with what would return them.</p></section>';
+    }
+
+    var misread = 0;
+    rows.forEach(function (r) { if (r.code === 'not_asked') misread++; });
+
+    var body = '<div class="listwrap">' + rows.map(function (r) {
+      var reason = S.reasonFor(r.code) || { label: r.code };
+      return '<div class="prow' + (r.fresh ? ' prow--fresh' : '') + '">' +
+        U.face(r.c, 'sm') +
+        '<div class="pmain"><span class="pline"><b>' + esc(r.c.name) + '</b>' +
+        '<span class="sep">' + DOT + '</span>passed ' + esc(U.shortDate(r.at)) +
+        /* Lower-case the first letter only, so the reason reads as part of the
+           sentence without turning "Not what I asked for" into "i". */
+        '<span class="sep">' + DOT + '</span><span class="rsn">' +
+        esc(reason.label.charAt(0).toLowerCase() + reason.label.slice(1)) + '</span>' +
+        '<span class="sep">' + DOT + '</span><span class="trg">' + esc(r.trigger) + '</span></span></div>' +
+        '<button class="btn btn--out btn--sm" data-act="report" data-id="' + r.c.id + '" data-from="passed">Open the report</button>' +
+        '</div>';
+    }).join('') + '</div>';
+
+    /* A Pass reason that points at the brief rather than the person. Three of
+       them and Scout offers to re-read the brief with you (§6.7). */
+    var repair = misread ? '<div class="p p--butter mt-5 repair">' +
+      '<span class="kick">' + misread + ' of 3 ' + DOT + ' not what I asked for</span>' +
+      '<h3>Scout may have misread a brief.</h3>' +
+      '<p>Passing twenty people one at a time is not a repair. ' +
+      (misread >= 3 ? 'Scout can read <b>Home cooks, no store</b> back to you now and fix what it heard.'
+        : U.plural(3 - misread, 'more') + ' of these and Scout will offer to read ' +
+          '<b>Home cooks, no store</b> back to you and fix what it heard.') + '</p></div>' : '';
+
+    return head + body + repair;
+  }
+
+  /* ================================================================ BRIEFS */
+  /* A brief is a description in, editable derived structure back. Three
+     dropdowns cannot express "insider access to local coaches" (§6.7). */
+  function briefView() {
+    var d = state.draft || { text: '', chips: [], bar: '', cap: 100, runs: '3 months' };
+
+    if (state.briefStage === 'write') {
+      return '<header class="pagehead"><h1>New brief</h1>' +
+        '<p class="deck">A brief is the assignment: what we need, who we are looking for, where they post, ' +
+        'and what good looks like. Write it the way you would say it out loud.</p>' +
+        '<p class="lifecycle">This is not a search. A search returns results now, ranked by match. A brief returns ' +
+        'nobody today, starts a standing job, reports tomorrow, stays gated and capped, and is allowed to find nothing.</p>' +
+        '</header>' +
+        '<div class="form">' +
+        '<form data-act="briefsubmit">' +
+        '<label class="lab" for="bdesc">What are you looking for?</label>' +
+        '<textarea class="inp inp--area" id="bdesc" rows="5" placeholder="Someone to fill our gap in Southern college football. Insider access &mdash; beat writers, people close to local coaches and recruits. Modest following is fine, but their stuff has to land consistently.">' + esc(d.text) + '</textarea>' +
+        '<div class="formacts"><button class="btn btn--primary" type="submit">Read it back to me</button>' +
+        '<button class="btn btn--ghost" type="button" data-act="view" data-view="drop">Cancel</button></div>' +
+        '</form></div>';
+    }
+
+    /* Scout reads it back as editable structure. The derived structure has to be
+       visible: it is what the overlap check compares, it is what estimates the
+       cost, and it is the only way to tell that Scout heard "Southern" as a
+       genre. Description-only means a misread is silent and surfaces three
+       weeks later as a wrong drop (§6.7). */
+    var narrow = d.chips.length > 3;
+    return '<header class="pagehead"><h1>New brief</h1>' +
+      '<p class="deck">Scout read what you wrote. Correct anything it heard wrong before you save it.</p></header>' +
+
+      '<div class="form">' +
+      '<div class="readback"><span class="lab">You wrote</span>' +
+      '<p class="wrote">&ldquo;' + esc(d.text) + '&rdquo;</p></div>' +
+
+      '<div class="readback"><span class="lab">Scout read that as</span>' +
+      '<div class="chips mt-3">' + d.chips.map(function (ch, i) {
+        return '<button class="chipbtn on" data-act="dechip" data-i="' + i + '">' + esc(ch) +
+          ' <span class="x">' + U.icon('close') + '</span></button>';
+      }).join('') + '</div>' +
+      '<p class="qualbar">' + esc(d.bar) + '</p></div>' +
+
+      /* The brief screen states which kind of brief was just written, because
+         discovery speed differs by an order of magnitude (§5.7). */
+      '<div class="speed">' + (narrow
+        ? '<b>This is a narrow one &mdash; nobody in Scout matches it yet.</b> We will go looking tonight ' +
+          'and have first names for you tomorrow.'
+        : '<b>312 people already match.</b> Scout will start checking them now &mdash; first drop within the hour.') +
+      '</div>' +
+
+      /* Guardrails before it deploys, in human units, with money shown as the
+         consequence. Nobody knows whether $40 a month is right; everyone knows
+         whether "look for up to 100 people" is right (§6.7, decision 106). */
+      '<div class="guard"><span class="lab">Before it starts</span>' +
+      '<p class="gline">This brief will look for up to ' +
+      '<span class="stepper"><button data-act="cap" data-v="-">&minus;</button><b>' + d.cap + '</b>' +
+      '<button data-act="cap" data-v="+">+</button></span> people<br>' +
+      'and run for ' + '<span class="seg seg--inline">' + ['1 month', '3 months', '6 months'].map(function (r) {
+        return '<button data-act="runs" data-v="' + esc(r) + '" aria-pressed="' + (d.runs === r) + '">' + esc(r) + '</button>';
+      }).join('') + '</span> before checking in with you.</p>' +
+      '<p class="gcost">Roughly <b>' + U.money(d.cap * 0.18 + 4) + '</b> to start, about <b>' +
+      U.money(d.cap * 0.12) + '/month</b> to keep watching. First names tomorrow morning.</p>' +
+      '<p class="gnote">Narrow briefs are cheaper than broad ones, which is backwards from the intuition &mdash; ' +
+      'the cost driver is breadth, not specificity. The search is capped and will say so if it hits the cap.</p>' +
+      '</div>' +
+
+      overlapFor(d) +
+      '<div class="formacts"><button class="btn btn--primary" data-act="savebrief">Save and start</button>' +
+      '<button class="btn btn--ghost" data-act="briefback">Rewrite it</button></div>' +
+      '</div>';
+  }
+
+  /* Overlap is an exact category match that never blocks (§6.7) — so it has to
+     actually compare something. v5 printed the same suggestion for every brief,
+     which offered a restoration brief to someone writing about home fitness. */
+  function overlapFor(d) {
+    var cat = (d.chips[0] || '').split('›')[0].trim();
+    var hit = null;
+    S.briefs.forEach(function (b) {
+      if (b.house || !b.chips) return;
+      if ((b.chips[0] || '').split('›')[0].trim() === cat) hit = b;
+    });
+    if (!hit) return '';
+    return '<div class="overlap"><span class="kick">This looks like one you already have</span>' +
+      '<p><b>' + esc(hit.name) + '</b>, ' + (state.paused[hit.id] ? 'paused' : 'already running') +
+      '. It found 34 people &mdash; 6 promoted. Resuming beats starting fresh on both counts: the ' +
+      'population already exists, so results are immediate, and the preview is the actual people it ' +
+      'found rather than a description. Anything resumed is re-checked before you see it.</p>' +
+      '<div class="formacts mt-3">' +
+      '<button class="btn btn--out btn--sm" data-act="resume" data-b="' + esc(hit.id) + '">Resume that one instead</button>' +
+      '<span class="sub-t">Joining saves the discovery and probe spend on roughly 4,000 creators.</span></div></div>';
+  }
+
+  /* Existing brief, opened from the tab note. Pause yes, delete never. */
+  function briefDetailView() {
+    var b = brief(state.draft.editing);
+    return '<header class="pagehead"><h1>' + esc(b.name) + '</h1>' +
+      '<p class="deck">Version ' + (b.version || 1) + ', written ' + esc(U.longDate(b.created || '2026-06-12')) + '.</p></header>' +
+      '<div class="form">' +
+      '<div class="readback"><span class="lab">You wrote</span>' +
+      '<p class="wrote">&ldquo;' + esc(b.description) + '&rdquo;</p></div>' +
+      '<div class="readback"><span class="lab">Scout read that as</span>' +
+      '<div class="chips mt-3">' + b.chips.map(function (ch) {
+        return '<span class="chipbtn on">' + esc(ch) + '</span>';
+      }).join('') + '</div><p class="qualbar">' + esc(b.bar) + '</p></div>' +
+      (b.cost ? '<div class="guard"><span class="lab">What it costs</span>' +
+        '<p class="gcost">About <b>' + U.money(b.cost.monthly) + '/month</b> to keep running, ' +
+        'including its discovery pass. Looking for up to ' + b.cap + ' people, running for ' + esc(b.runs) + '.</p></div>' : '') +
+      '<div class="editnote"><b>Editing makes a version.</b> This changes tomorrow&rsquo;s drop. ' +
+      'Your ' + watchlist().length + ' watched and ' + passedList().length + ' passed creators are unaffected &mdash; ' +
+      'once you kept someone, that is your call, not the brief&rsquo;s.</div>' +
+      '<div class="formacts">' +
+      '<button class="btn btn--primary" data-act="view" data-view="drop">Leave it as it is</button>' +
+      (isPaused(b)
+        ? '<button class="btn btn--out" data-act="resume" data-b="' + esc(b.id) + '">Resume</button>'
+        : '<button class="btn btn--out" data-act="pause" data-b="' + esc(b.id) + '">' + U.icon('pause') + 'Pause it</button>') +
+      '</div>' +
+      '<p class="lifecycle">Delete does not exist. Every Promote, Watch and Pass under a brief is a training ' +
+      'label, and deleting the brief orphans them. Pausing keeps the record and greys the tab.</p>' +
+      '</div>';
+  }
+
+  /* ================================================================ SOURCES
+     §6.13, decision 125. Every place Scout can read, what each one settles, and
+     what switching it off costs.
+
+     IT IS NOT A PRICE LIST, and that was the hard part of the design. The
+     obvious version shows a cost per platform and lets you switch off the
+     expensive ones — but §11.4 measured a full run of twenty creators at 5,167
+     fetches for $0.0000, with the entire bill in model judgment. A cost column
+     would read $0.00 down its whole length and teach the opposite of the truth.
+
+     What switching a source off actually does is lower what can be PROVEN, so
+     that is the column. `costs` is written from the source's side: what stops
+     being knowable, in the words the report would otherwise have used. */
+  var SOURCES = [
+    { id: 'ownsite', name: 'Their own site', kind: 'first-party', on: true, places: 5,
+      proves: 'A store or a newsletter, on the most first-party surface there is',
+      costs: 'Absence can no longer be earned for either — both fall back to "not found"' },
+    { id: 'tiktok', name: 'TikTok profile', kind: 'first-party', on: true, places: 1,
+      proves: 'Followers, bio, captions and their picture',
+      costs: 'Most of the cohort loses its audience number entirely' },
+    { id: 'youtube', name: 'YouTube channel', kind: 'first-party', on: true, places: 3,
+      proves: 'Followers, bio, and whether a channel exists at all',
+      costs: 'One tier-one inventory item stops resolving' },
+    { id: 'ytapi', name: 'YouTube Data API', kind: 'api', on: true, places: 1,
+      proves: 'Comments — the audience asking to buy — plus post dates and views',
+      costs: 'Demand goes unreadable, and most of Pressure with it' },
+    { id: 'reddit', name: 'Reddit', kind: 'api', on: false, built: true, places: 1,
+      proves: 'What strangers say when the creator is not in the room',
+      costs: 'Demand loses its only source outside YouTube' },
+    { id: 'newsletter', name: 'Newsletter platforms', kind: 'guess', on: true, places: 6,
+      proves: 'Substack, beehiiv, Buttondown, Ghost — is there a list?',
+      costs: 'Newsletter never reaches "verified absent"' },
+    { id: 'store', name: 'Store platforms', kind: 'guess', on: true, places: 6,
+      proves: 'Shopify, Gumroad, Ko-fi, Stan, Etsy — is there anything to buy?',
+      costs: 'Store never reaches "verified absent"' },
+    { id: 'membership', name: 'Membership platforms', kind: 'guess', on: true, places: 2,
+      proves: 'Patreon, Buy Me a Coffee',
+      costs: 'A tier-two item stops resolving' },
+    { id: 'podcast', name: 'Apple Podcasts', kind: 'api', on: true, places: 1,
+      proves: 'Whether they already have a show',
+      costs: 'A tier-two item stops resolving' },
+    { id: 'hubs', name: 'Link hubs', kind: 'guess', on: true, places: 2,
+      proves: 'Linktree and Beacons — everything they point at',
+      costs: 'Harvested links dry up, so fewer real places get checked' },
+    { id: 'instagram', name: 'Instagram', kind: 'first-party', on: true, places: 1, weak: true,
+      proves: 'Links only. It answers 200 for handles that do not exist, so it can never settle anything',
+      costs: 'Nothing — which is worth seeing, and is why it is listed rather than hidden' }
+  ];
+
+  function sourceOn(s) {
+    if (state.sources[s.id] !== undefined) return !!state.sources[s.id];
+    return !!s.on;
+  }
+
+  function sourcesView() {
+    var offNames = SOURCES.filter(function (s) { return !sourceOn(s); })
+      .map(function (s) { return s.name; });
+    var places = SOURCES.filter(sourceOn).reduce(function (n, s) { return n + s.places; }, 0);
+
+    return '<header class="pagehead"><h1>Sources</h1>' +
+      '<p class="deck">Every place Scout is allowed to look, and what each one can settle.</p>' +
+      '<p class="lifecycle">Switching one off does not save money &mdash; fetching is free and the bill is ' +
+      'judgment. It lowers what can be proven, which is what each row states.</p></header>' +
+
+      '<div class="srcsum"><span class="k">Looking in</span><span class="v">' + places + ' places</span>' +
+      (offNames.length
+        ? '<span class="srcoff">' + offNames.length + ' source' + (offNames.length > 1 ? 's' : '') +
+          ' off &mdash; every report says so on its face</span>'
+        : '<span class="srcall">Everything available is on</span>') + '</div>' +
+
+      '<ul class="srclist">' + SOURCES.map(function (s) {
+        var on = sourceOn(s);
+        return '<li class="src' + (on ? '' : ' src--off') + '">' +
+          '<div class="src-h">' +
+          '<button class="tgl" role="switch" aria-checked="' + on + '" data-act="srctoggle" data-id="' + s.id + '">' +
+          '<span class="tgl-k"></span><span class="sr-only">' + esc(s.name) + '</span></button>' +
+          '<div class="src-n"><b>' + esc(s.name) + '</b>' +
+          '<span class="src-m">' + esc(s.kind) + ' ' + DOT + ' ' + s.places +
+          ' place' + (s.places > 1 ? 's' : '') + '</span></div>' +
+          (s.built && !on ? '<span class="src-tag">built, not connected</span>' : '') +
+          (s.weak ? '<span class="src-tag src-tag--weak">never conclusive</span>' : '') +
+          '</div>' +
+          '<p class="src-p">' + esc(s.proves) + '</p>' +
+          '<p class="src-c"><span class="k">Switched off</span> ' + esc(s.costs) + '</p>' +
+          '</li>';
+      }).join('') + '</ul>' +
+
+      '<p class="lifecycle">Reddit is built and waiting on a credential. It is listed rather than hidden ' +
+      'because a source we cannot read yet is a different thing from one that found nothing, and that ' +
+      'distinction is the whole of how Scout reports absence.</p>';
+  }
+
+  /* ================================================= PRELIMINARY HEADLINE */
+  /* Decision 119, and it is bounded by decision 99 without exception: Scout may
+     quote and count, it may not diagnose. So this assembles COUNTABLE FACTS
+     ONLY and joins them with full stops. There is no adjective in it, no causal
+     clause, and no version of "they are ready for a call" — every one of those
+     is the model explaining a person to you, which is the sentence §12.1 will
+     not let a real creator's report carry.
+
+     The engine legitimately writes no headline (it says so, in those words),
+     and until now the report printed that sentence to the member: an internal
+     note about the engine's remit, presented as if it were the finding.
+
+     It returns NOTHING when nothing was readable. An empty headline is honest;
+     a headline assembled from three unknowns is a sentence about our own
+     ignorance dressed as a finding. */
+  function preliminaryHeadline(c) {
+    var bits = [];
+    var plat = mainPlatform(c); /* v5.3 — was platforms[0]; see mainPlatform. */
+    if (plat && plat.followers) {
+      bits.push(U.followers(plat.followers) + ' on ' + String(plat.name).replace(/ (profile|channel)$/i, ''));
+    }
+    var cl = S.claims(c);
+    var absent = (cl.missing && cl.missing.built ? cl.missing.built : [])
+      .filter(function (x) { return x.state === S.STATES.A; });
+    if (absent.length) {
+      /* Lower-casing the item labels reads correctly mid-sentence and wrecks the
+         one proper noun in the set — "no youtube channel" is a typo on a screen
+         whose entire claim is care. Brands keep their capitals; everything else
+         is an ordinary noun and takes the sentence's case. */
+      var BRANDS = { youtube: 'YouTube', tiktok: 'TikTok', instagram: 'Instagram', patreon: 'Patreon' };
+      var names = absent.map(function (x) {
+        return String(x.item).toLowerCase().replace(/\b(youtube|tiktok|instagram|patreon)\b/g,
+          function (m) { return BRANDS[m]; });
+      });
+      bits.push('No ' + (names.length > 1
+        ? names.slice(0, -1).join(', ') + ' or ' + names[names.length - 1]
+        : names[0]));
+    }
+    if (c.commentsRead != null) {
+      bits.push(c.commentsRead
+        ? c.commentsRead + ' comments read'
+        : 'No comments we could read');
+    }
+    return bits.length ? bits.join('. ') + '.' : '';
+  }
+
+  /* ============================================================ RUN A NAME */
+  /* Decision 118 — a handle OR a URL. A person who has just found someone has
+     the profile open, and what is on their clipboard is the address bar, not a
+     handle they have retyped. Refusing the URL makes them do the engine's job.
+     Everything after the last slash, minus a query string and an @, is the
+     handle on every platform Scout reads — which is not a parser so much as an
+     observation about how these URLs are built. */
+  var RUNHOSTS = [
+    { re: /tiktok\.com/i, name: 'TikTok' },
+    { re: /youtube\.com|youtu\.be/i, name: 'YouTube' },
+    { re: /instagram\.com/i, name: 'Instagram' }
+  ];
+  function normalizeSubject(raw) {
+    var s = String(raw || '').trim();
+    if (!s) return { handle: '', platform: null, wasUrl: false };
+    if (!/^https?:\/\//i.test(s) && !/^[a-z0-9-]+\.[a-z]{2,}\//i.test(s)) {
+      return { handle: s.charAt(0) === '@' ? s : '@' + s, platform: null, wasUrl: false };
+    }
+    var host = '', path = s;
+    try {
+      var u = new URL(/^https?:\/\//i.test(s) ? s : 'https://' + s);
+      host = u.hostname; path = u.pathname;
+    } catch (e) { /* not parseable as a URL — fall through and treat it as text */ }
+    var seg = path.split('/').filter(Boolean);
+    /* youtube.com/channel/UC… and /c/name both put the name last; a bare
+       tiktok.com/@handle has it first. Last non-empty segment covers both. */
+    var last = seg.length ? seg[seg.length - 1] : '';
+    var plat = null;
+    RUNHOSTS.forEach(function (h) { if (h.re.test(host)) plat = h.name; });
+    return {
+      handle: last ? (last.charAt(0) === '@' ? last : '@' + last) : s,
+      platform: plat, wasUrl: true
+    };
+  }
+
+  function runNameView() {
+    var r = W.runANameResult;
+    /* Decision 118 — ONE line of copy. This carried a deck and two lifecycle
+       paragraphs: 78 words of justification in front of a text field, arguing
+       about pricing to someone who has not typed anything yet. The arguments
+       are all true and all belong in the PRD, not on the screen. */
+    var head = '<header class="pagehead"><h1>Run a name</h1>' +
+      '<p class="deck">Paste a handle or a profile link. Same ladder, same verbs.</p></header>';
+    var body;
+    var subj = normalizeSubject(state.run.query);
+
+    if (state.run.stage === 'idle') {
+      body = '<div class="p padbox">' +
+        '<form class="formacts" data-act="runsubmit">' +
+        '<label class="vh" for="runq">Handle or profile link</label>' +
+        '<input class="inp" id="runq" type="text" value="' + esc(state.run.query) + '" ' +
+        'placeholder="@handle or https://www.tiktok.com/@handle" autocomplete="off" spellcheck="false">' +
+        '<button class="btn btn--primary" type="submit">Run it</button></form></div>';
+    } else if (state.run.stage === 'scoring') {
+      var cl = S.claims(r);
+      body = '<div class="p padbox"><span class="lab">Looking for ' + esc(state.run.query || r.handle) + '</span>' +
+        '<ul class="invlist mt-4">' + cl.missing.built.map(function (x, i) {
+          var done = i < state.run.step;
+          return '<li>' + (done ? U.vmark(x.state) : '<span class="vmark vmark--wait"></span>') +
+            '<span class="it">' + esc(x.item) + '</span><span class="st">' +
+            (done ? (x.state === S.STATES.A ? 'not there ' + DOT + ' we looked in ' + S.lookedIn(r, x).places + ' places'
+              : x.state === S.STATES.P ? 'found it' : x.state === S.STATES.NA ? esc(x.note) : 'could not resolve')
+              : 'looking&hellip;') + '</span></li>';
+        }).join('') + '</ul></div>';
+    } else {
+      /* Decision 118 — WHAT YOU SEARCHED FOR STAYS ON SCREEN. It used to be
+         replaced by the verdict, so a person who ran three names in a row had
+         no way to tell which one they were looking at; the handle appeared once,
+         in small grey text, beside the word "Done".
+
+         The subject is now the heading, with the face, at the size the drop
+         uses. And the emphasis is inverted: the report is the primary and the
+         only thing worth doing here, while "not in your drop" is a footnote
+         rather than a red panel. A result that failed the gates is still a
+         report worth reading — that is the entire argument for Run a name — and
+         dressing the gates as an error told people the opposite. */
+      var failed = S.gatesFor(r, brief(state.briefId), state.admin.threshold).failed;
+      body = '<div class="p padbox">' +
+        '<div class="runsubj">' + U.face(r, 'lg') +
+        '<div><h2 class="runsubj-nm">' + esc(r.name) + '</h2>' +
+        '<p class="runsubj-hd">' + esc(r.handle) +
+        (subj.wasUrl && subj.platform ? ' ' + DOT + ' from a ' + esc(subj.platform) + ' link' : '') +
+        '</p></div>' +
+        '<div class="runsubj-score">' + U.ring(r, 'sm', score(r)) + '</div></div>' +
+
+        '<div class="formacts mt-4">' +
+        '<button class="btn btn--primary" data-act="report" data-id="' + r.id + '" data-from="runname">Open the report</button>' +
+        '<button class="btn btn--ghost" data-act="runreset">Run another</button></div>' +
+
+        (failed.length
+          ? '<p class="runnote">Not in your drop &mdash; ' +
+            esc(failed.map(function (x) { return x.label.toLowerCase(); }).join(' and ')) +
+            ' did not clear. The report says which, and why.</p>'
+          : '<p class="runnote">Clears every gate for <b>' + esc(brief(state.briefId).name) + '</b>.</p>') +
+        '</div>';
+    }
+    return head + body;
+  }
+
+  /* ============================================================== OUTREACH */
+  function outreachView() {
+    var c = creator(state.outreachId);
+    if (!c) return '<p class="sub-t">Not found.</p>';
+    var o = c.outreach, who = me(), cl = S.claims(c);
+    return '<header class="pagehead"><div class="rpt-tags">' +
+      '<span class="pill pill--ok">Promoted</span></div>' +
+      '<h1 class="mt-3">Outreach package: ' + esc(c.name) + '</h1>' +
+      '<p class="deck">Everything a first contact needs was already in the report, so generating this costs ' +
+      'nothing. Scout writes it. You send it.</p></header>' +
+      '<div class="p case mt-5">' +
+      '<div><span class="lab">The signals, in plain language</span>' +
+      '<ul class="invlist mt-3">' + o.bullets.map(function (b) {
+        return '<li>' + U.vmark('verified_absent') + '<span class="it">' + esc(S.plain(b)) + '</span><span class="st"></span></li>';
+      }).join('') + '</ul>' +
+      '<p class="invsum">' + esc(cl.demand.line) + ', and ' + esc(cl.missing.onLabel) + ' switched on.</p></div>' +
+      '<div><span class="lab">Draft first contact</span>' +
+      '<div class="invbox mt-3">' +
+      '<p class="draft-subj">Subject: <b>' + esc(S.plain(o.subject)) + '</b></p>' +
+      '<p class="draft-p">' + esc(S.plain(o.opener)) + '</p>' +
+      '<p class="draft-p">' + esc(S.plain(o.close)) + '</p>' +
+      '<p class="draft-sig">' + esc(who.name) + ' ' + DOT + ' Paradium</p></div>' +
+      '<div class="formacts"><button class="btn btn--primary" data-act="copy" data-id="' + c.id + '">' +
+      (state.copied ? 'Copied' : 'Copy the draft') + '</button>' +
+      '<button class="btn btn--ghost" data-act="view" data-view="drop">Back to the drop</button></div>' +
+      '<p class="lifecycle"><b>Scout never sends.</b> Owning outreach would inherit deliverability and ' +
+      'relationship problems that belong to a person, and turn a listening tool into a CRM. When you hear ' +
+      'back, tell it &mdash; that answer is the only thing that says whether the machine was right.</p></div></div>';
+  }
+
+  /* ================================================================= ADMIN */
+  /* Four controls, and no fifth. The thesis is not editable and there is no
+     prompt editor — what makes a creator interesting is hard-coded, because it
+     IS the product (decision 70). */
+  function adminView() {
+    var a = S.admin, ad = state.admin;
+    var pool = S.poolFor(asOf()).length;
+    var clearing = S.dropFor(asOf(), brief('b_house'), ad.threshold).length;
+
+    return '<header class="pagehead"><h1>Admin</h1>' +
+      '<p class="deck">Four controls: what the organisation may spend, who is in, where Scout looks, and ' +
+      'where the bar sits. Everything else about what makes a creator interesting is the product, not a setting.</p></header>' +
+
+      '<div class="adgrid">' +
+      '<section class="p adcard"><span class="lab">Budget ceiling</span>' +
+      '<div class="bigfig">' + U.money(ad.ceiling) + '<small>/month</small></div>' +
+      U.track((a.budget.spent / ad.ceiling) * 100, 'track--tall') +
+      '<p class="adnote"><b>' + U.money(a.budget.spent) + ' spent</b> in ' + esc(a.budget.period) +
+      ' ' + DOT + ' ' + esc(a.budget.trend) + '</p>' +
+      '<div class="seg seg--inline mt-3">' + [1200, 2400, 4800].map(function (n) {
+        return '<button data-act="ceiling" data-v="' + n + '" aria-pressed="' + (ad.ceiling === n) + '">' + U.money(n) + '</button>';
+      }).join('') + '</div>' +
+      '<p class="adfine">Per organisation, per month. Per-person quotas would make everyone ration their own ' +
+      'hunches, which is how you stop them entering hunches at all.</p></section>' +
+
+      '<section class="p adcard"><span class="lab">The bar</span>' +
+      '<div class="bigfig">' + ad.threshold + '</div>' +
+      '<p class="adnote"><b>' + clearing + ' of ' + pool + '</b> clear it in the house brief today.</p>' +
+      '<div class="seg seg--inline mt-3">' + [70, 74, 78, 82].map(function (n) {
+        return '<button data-act="thresh" data-v="' + n + '" aria-pressed="' + (ad.threshold === n) + '">' + n + '</button>';
+      }).join('') + '</div>' +
+      '<p class="adfine">Read off a result, not chosen. The bar is whatever produces five to ten names on a ' +
+      'good day and zero on a thin one. 78 is where it starts, and it moves when the seed says so.</p></section>' +
+
+      '<section class="p adcard"><span class="lab">Where Scout looks</span>' +
+      '<div class="chips mt-3">' + ad.platforms.map(function (p, i) {
+        return '<button class="chipbtn" data-act="plat" data-i="' + i + '" aria-pressed="' + p.on + '">' +
+          esc(p.name) + '</button>';
+      }).join('') + '</div>' +
+      '<p class="adfine">Turning a platform off stops the spend on it. It does not delete what was already ' +
+      'found there.</p></section>' +
+
+      '<section class="p adcard"><span class="lab">Who is in</span>' +
+      '<div class="wrapx"><table class="ct mt-3"><thead><tr><th>Member</th><th>Briefs</th><th>Last seen</th><th>Can spend</th></tr></thead><tbody>' +
+      a.members.map(function (m) {
+        return '<tr><td><b>' + esc(m.name) + '</b><br><span class="sub-t">' + esc(m.email) + '</span></td>' +
+          '<td>' + m.briefs + '</td><td>' + esc(U.shortDate(m.lastSeen)) + '</td>' +
+          '<td>' + (m.admin ? '<span class="pill pill--ok">Admin</span>' : '<span class="pill">Member</span>') + '</td></tr>';
+      }).join('') + '</tbody></table></div>' +
+      '<p class="adfine">First sign-in with a Paradium address creates a member. Admin is a permission on a ' +
+      'member, not a job title &mdash; in the interface nobody is a noun.</p></section>' +
+      '</div>' +
+
+      '<div class="p mt-5"><span class="lab">Where the money went</span>' +
+      '<div class="wrapx"><table class="ct mt-3"><thead><tr><th>Pass</th><th>Creators</th><th></th><th>Cost</th></tr></thead><tbody>' +
+      a.ledger.map(function (r) {
+        return '<tr><td><b>' + esc(r.label) + '</b><br><span class="sub-t">' + esc(S.DEPTH[r.depth].note) + '</span></td>' +
+          '<td>' + esc(r.creators) + '</td><td class="sub-t">' + esc(r.note) + '</td>' +
+          '<td><b>' + U.money(r.cost) + '</b></td></tr>';
+      }).join('') + '</tbody></table></div>' +
+      '<p class="adfine"><b>No names at Sweep depth.</b> A browsable list of thousands of creators evaluated ' +
+      'and silently discarded is a liability the moment it leaves the building, and noise to everyone inside ' +
+      'it. Names appear from Probe upward, where a judgment was made and a result was written down.</p>' +
+      '<p class="adfine">Budget decides how many creators reach Probe and Study. It never decides how thoroughly ' +
+      'one of them is examined &mdash; the confidence floor is not tunable downward to save money.</p></div>';
+  }
+
+  /* ================================================================== GATE */
+  /* A utility gate. Wordmark, one button. No marketing copy, no product tour,
+     no backtest teaser — building a landing page now is a second surface to
+     maintain for an audience of one company (§6.8). */
+  /* Decision 120 — real member accounts, and local mode is PICK YOUR NAME.
+     The mocked "Continue with Google" was a button that lied: it looked like an
+     identity check and was a page transition, so the first thing the product did
+     was pretend. Worse, it made every decision in the app anonymous — a Pass is
+     a training label and §8 says a state is the past tense of a verb a human
+     performed, which requires knowing which human.
+
+     THE ONE THING LOCAL MODE MUST NOT BECOME IS A PASSWORD. Nothing here is
+     secret and nothing is being protected; inventing a credential would teach
+     people that Scout holds something it does not, and would put a password
+     field in a prototype that has no business storing one. Google SSO stays the
+     target and is blocked on hosting, not on design — so this is the honest
+     shape of the same idea, not a placeholder for it. */
+  function signInView() {
+    return '<div class="signin"><div class="signin-mark">S</div>' +
+      '<h1 class="signin-wm">Scout</h1><p class="signin-sub">Origination desk</p>' +
+      '<p class="signin-who">Who is at the desk?</p>' +
+      '<ul class="memberpick">' + S.members.map(function (m, i) {
+        return '<li><button class="memberbtn" data-act="signin" data-member="' + i + '">' +
+          '<span class="ini ini--lilac ini--sm">' + esc(m.initials) + '</span>' +
+          '<span class="mb-t"><b>' + esc(m.name) + '</b><span>' + esc(m.email) + '</span></span>' +
+          (m.admin ? '<span class="mb-adm">admin</span>' : '') +
+          '</button></li>';
+      }).join('') + '</ul>' +
+      '<p class="signin-fine">Local mode &mdash; no password, because nothing here is secret. ' +
+      'Choosing a name is what puts one on every decision you make.</p>' +
+      '</div>';
+  }
+
+  function signInViewSSO() {
+    return '<div class="signin"><div class="signin-mark">S</div>' +
+      '<h1 class="signin-wm">Scout</h1><p class="signin-sub">Origination desk</p>' +
+      '<button class="btn btn--primary signin-sso" data-act="signin">' +
+      '<span class="g-g" aria-hidden="true"></span>Continue with Google</button>' +
+      '<p class="signin-fine">Paradium accounts only.</p></div>';
+  }
+
+  /* ============================================================= RENDERING */
+  /* render() replaces the whole of #app, which destroys whatever had focus.
+     Nearly every branch of the click handler ends here, so in v5 that meant
+     opening a disclosure or a tray dropped a keyboard user back to the top of
+     the document. Capture a locator for the focused control first — the node
+     itself is about to stop existing — and put focus back on its replacement. */
+  function focusKeyOf(el) {
+    if (!el || el === document.body) return null;
+    var act = el.getAttribute('data-act');
+    if (!act) return null;
+    return { act: act, id: el.getAttribute('data-id'), k: el.getAttribute('data-k'),
+      view: el.getAttribute('data-view'), b: el.getAttribute('data-b'), d: el.getAttribute('data-d') };
+  }
+  function restoreFocus(key, viewChanged) {
+    if (viewChanged) {
+      /* A view change announces itself by moving focus to the new heading —
+         which is also what tells a screen reader the page changed at all. */
+      var h = document.querySelector('#main h1');
+      if (h) { h.setAttribute('tabindex', '-1'); h.focus(); }
+      return;
+    }
+    if (!key) return;
+    var sel = '[data-act="' + key.act + '"]';
+    ['id', 'k', 'view', 'b', 'd'].forEach(function (a) {
+      if (key[a] != null && key[a] !== '') sel += '[data-' + (a === 'id' ? 'id' : a) + '="' + key[a] + '"]';
+    });
+    var el = document.querySelector(sel) || document.querySelector('[data-act="' + key.act + '"]');
+    if (el) el.focus();
+  }
+
+  /* One small live region, for the handful of things that are genuinely status
+     messages. v5 put aria-live on #app itself, which is the entire application —
+     so nudging a stepper by one looked identical to changing view. */
+  function announce(msg) {
+    var el = document.getElementById('status');
+    if (el) el.textContent = msg;
+  }
+
+  function render(viewChanged) {
+    var fade = state.animate && !reduceMotion.matches ? ' viewfade' : '';
+    state.animate = false;
+    var key = focusKeyOf(document.activeElement);
+    var html;
+
+    if (state.phase === 'signedout') {
+      html = '<div class="slab slab--solo slab--gate"><main class="main" id="main">' + signInView() + '</main></div>';
+    } else {
+      var body =
+        state.view === 'report' ? reportView() :
+          state.view === 'watchlist' ? watchlistView() :
+            state.view === 'passed' ? passedView() :
+              state.view === 'runname' ? runNameView() :
+                state.view === 'outreach' ? outreachView() :
+                  state.view === 'sources' ? sourcesView() :
+                  state.view === 'admin' ? adminView() :
+                    state.view === 'briefdetail' ? briefDetailView() :
+                      state.view === 'newbrief' ? briefView() : dropView();
+
+      html = '<div class="slab slab--app">' + railHTML() +
+        '<main class="main" id="main">' + topHTML() +
+        '<div class="wrap' + fade + '">' + body + '</div></main></div>';
+    }
+    if (state.rcp) html += rcpPop();
+
+    /* render() replaces the whole DOM, which destroys the scroll container.
+       Capture and restore; go() is the only thing that resets, because only a
+       view change should. */
+    var prev = 0;
+    var old = document.getElementById('main');
+    if (old) prev = old.scrollTop;
+
+    document.getElementById('app').innerHTML = html;
+
+    var main = document.getElementById('main');
+    if (main && prev) main.scrollTop = prev;
+    if (main) bindCompact(main);
+    restoreFocus(key, viewChanged);
+    persist();
+  }
+
+  function bindCompact(main) {
+    var bar = document.getElementById('compact');
+    if (!bar) return;
+    var head = main.querySelector('.rpthead');
+    if (!head) return;
+    function sync() {
+      /* Measured on each call: at first paint the fonts have not landed and a
+         cached threshold would show the bar at rest. */
+      var trigger = Math.max(60, head.offsetTop + head.offsetHeight - 76);
+      bar.classList.toggle('on', main.scrollTop > trigger);
+    }
+    main.addEventListener('scroll', sync);
+    sync();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(sync);
+  }
+
+  /* The `?` returns receipts, not a definition. Same component that argues the
+     creator teaches the pillar, so it is built once (§6.11). */
+  function rcpPop() {
+    var c = creator(state.rcp.id);
+    if (!c) return '';
+    var r = S.receipts(c, state.rcp.key);
+    if (!r.lines.length) return '';
+    /* Receipts are as long as the evidence is — a seven-line Missing block is
+       normal — so the popover is measured rather than assumed, and flips above
+       the `?` when it would otherwise run off the bottom. */
+    var h = 62 + r.lines.length * 26;
+    var x = Math.max(12, Math.min(window.innerWidth - 372, state.rcp.x - 180));
+    var below = state.rcp.y + 18;
+    var y = below + h > window.innerHeight - 12
+      ? Math.max(12, state.rcp.top - h - 12)
+      : below;
+    return '<div class="defpop" role="group" aria-labelledby="rcp-t" tabindex="-1"' +
+      ' style="left:' + x + 'px;top:' + y + 'px">' +
+      '<h5 id="rcp-t">' + esc(r.title) + ' ' + DOT + ' the receipts</h5>' +
+      '<ul>' + r.lines.map(function (l) { return '<li>' + esc(l) + '</li>'; }).join('') + '</ul></div>';
+  }
+
+  function go(view, from) {
+    clearTimers();
+    state.view = view;
+    state.passTray = null;
+    state.watchTray = null;
+    state.copied = false;
+    state.animate = true;
+    state.menu = false;
+    state.rcp = null;
+    if (from) state.from = from;
+    render(true);
+    var m = document.getElementById('main');
+    if (m) m.scrollTop = 0;
+  }
+
+  function setTheme(t) {
+    document.documentElement.setAttribute('data-theme', t);
+    try { localStorage.setItem('scout-v5-theme', t); } catch (e) { /* file:// */ }
+  }
+
+  /* ================================================================ EVENTS */
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest ? e.target.closest('[data-act]') : null;
+
+    if (!el) {
+      if (state.rcp || state.menu) { state.rcp = null; state.menu = false; render(); }
+      return;
+    }
+    var act = el.getAttribute('data-act');
+    var id = el.getAttribute('data-id');
+
+    if (act === 'noop') return;
+
+    if (act === 'rcp') {
+      var r = el.getBoundingClientRect();
+      var k = el.getAttribute('data-k');
+      var open = !(state.rcp && state.rcp.key === k && state.rcp.id === id);
+      state.rcp = open ? { key: k, id: id, x: r.left, y: r.bottom, top: r.top } : null;
+      render();
+      /* Focus follows the popover in, and the restore in render() puts it back on
+         the ? when it closes — otherwise the panel is invisible to anyone not
+         using a mouse, however good its contents are. */
+      if (open) { var pop = document.querySelector('.defpop'); if (pop) pop.focus(); }
+      return;
+    }
+    state.rcp = null;
+
+    if (act === 'menu') { state.menu = !state.menu; render(); return; }
+    if (act === 'theme') { setTheme(el.getAttribute('data-set')); render(); return; }
+
+    /* Sign-in lands on today's drop. The January 2024 rewind is removed. */
+    if (act === 'signin') {
+      /* Whoever was chosen becomes the person every later decision is recorded
+         against (§8) — that is the entire point of asking, so it has to stick
+         rather than being a way through the door. */
+      var mi = Number(el.getAttribute('data-member'));
+      if (!isNaN(mi) && S.members[mi]) {
+        var m = S.members[mi];
+        S.me.name = m.name; S.me.initials = m.initials;
+        S.me.email = m.email; S.me.admin = !!m.admin;
+      }
+      state.phase = 'app'; state.asOf = null; state.firstRun = false; go('drop'); return;
+    }
+    if (act === 'signout') {
+      state.phase = 'signedout'; state.decisions = {}; state.outcomeState = {};
+      state.userBriefs = []; state.briefId = 'b_house'; state.asOf = null; state.firstRun = false;
+      state.open = {}; state.menu = false; state.animate = true; render(); return;
+    }
+
+    if (act === 'view') {
+      /* The rewind attaches to the drop and the report, never to the whole desk
+         (§7). v5 left it silently active everywhere else, so the watchlist
+         reported "checking back in 838 days" and the passed list showed 2026
+         dates inside a 2024 view, with no banner anywhere to explain it. */
+      var v = el.getAttribute('data-view');
+      if (rewound() && v !== 'drop' && v !== 'report') { state.asOf = null; state.firstRun = false; }
+      go(v); return;
+    }
+    if (act === 'brief') { state.briefId = el.getAttribute('data-b'); go('drop'); return; }
+    if (act === 'newbrief') {
+      state.draft = { text: '', chips: [], bar: '', cap: 100, runs: '3 months' };
+      state.briefStage = 'write'; go('newbrief'); return;
+    }
+    if (act === 'editbrief') { state.draft = { editing: el.getAttribute('data-b') }; go('briefdetail'); return; }
+    if (act === 'briefback') { state.briefStage = 'write'; render(); return; }
+    if (act === 'dechip') { state.draft.chips.splice(Number(el.getAttribute('data-i')), 1); render(); return; }
+    if (act === 'cap') {
+      var dv = el.getAttribute('data-v') === '+' ? 25 : -25;
+      state.draft.cap = Math.max(25, Math.min(500, state.draft.cap + dv)); render(); return;
+    }
+    if (act === 'runs') { state.draft.runs = el.getAttribute('data-v'); render(); return; }
+    if (act === 'savebrief') {
+      var d = state.draft;
+      var nb = { id: 'ub_' + state.userBriefs.length, fresh: true, name: briefName(d), description: d.text,
+        chips: d.chips.slice(), bar: d.bar, cap: d.cap, runs: d.runs,
+        cost: { start: Math.round(d.cap * 0.18 + 4), monthly: Math.round(d.cap * 0.12) },
+        created: S.TODAY, version: 1 };
+      state.userBriefs.push(nb);
+      state.briefId = nb.id;
+      go('drop'); return;
+    }
+    if (act === 'pause') { state.paused[el.getAttribute('data-b')] = true; go('drop'); return; }
+    if (act === 'resume') {
+      var bid = el.getAttribute('data-b');
+      delete state.paused[bid]; state.briefId = bid; go('drop'); return;
+    }
+
+    if (act === 'disc') { var k2 = el.getAttribute('data-d'); state.open[k2] = !state.open[k2]; render(); return; }
+
+    if (act === 'report') {
+      state.reportId = id;
+      state.open = {};
+      go('report', el.getAttribute('data-from') || (state.view === 'report' ? state.from : state.view));
+      return;
+    }
+
+    if (act === 'passtray') { state.passTray = id || null; state.watchTray = null; render(); return; }
+    if (act === 'watchtray') {
+      state.watchTray = id || null; state.passTray = null; state.watchWindow = null; render(); return;
+    }
+    if (act === 'watchwhy') { state.watchWindow = el.getAttribute('data-w'); render(); return; }
+    if (act === 'pass') {
+      state.decisions[id] = { verb: 'pass', reasonCode: el.getAttribute('data-code'), at: asOf() };
+      state.passTray = null;
+      announce('Passed ' + creator(id).name + '.');
+      if (state.view === 'report') go('drop'); else render();
+      return;
+    }
+    if (act === 'watch') {
+      state.decisions[id] = { verb: 'watch', at: asOf(), window: el.getAttribute('data-w') || '1 month' };
+      state.watchTray = null; state.watchWindow = null;
+      announce('Watching ' + creator(id).name + ', checking back in ' + (el.getAttribute('data-w') || '1 month') + '.');
+      if (state.view === 'report') go('drop'); else render();
+      return;
+    }
+    if (act === 'promote') {
+      state.decisions[id] = { verb: 'promote', at: asOf() };
+      state.outreachId = id; go('outreach'); return;
+    }
+    if (act === 'outreach') { state.outreachId = id; go('outreach'); return; }
+    if (act === 'undo') { delete state.decisions[id]; delete state.outcomeState[id]; render(); return; }
+
+    if (act === 'outcome') {
+      var code = el.getAttribute('data-o');
+      state.outcomeState[id] = { code: code, at: asOf(),
+        declineCode: (state.outcomeState[id] || {}).declineCode };
+      state.outcomeTray = code === 'declined' ? id : null;
+      render(); return;
+    }
+    if (act === 'decline') {
+      state.outcomeState[id] = { code: 'declined', at: asOf(), declineCode: el.getAttribute('data-code') };
+      /* A declined creator gets a suppression rule like any Pass reason, so
+         nobody promotes them again in April for want of knowing about February. */
+      state.decisions[id] = { verb: 'pass', reasonCode: 'declined', at: asOf() };
+      state.outcomeTray = null;
+      render(); return;
+    }
+
+    if (act === 'thresh') { state.admin.threshold = Number(el.getAttribute('data-v')); render(); return; }
+    if (act === 'ceiling') { state.admin.ceiling = Number(el.getAttribute('data-v')); render(); return; }
+    if (act === 'plat') {
+      var pi = Number(el.getAttribute('data-i'));
+      state.admin.platforms[pi].on = !state.admin.platforms[pi].on; render(); return;
+    }
+
+    if (act === 'srctoggle') {
+      var sid = el.getAttribute('data-id');
+      var cur = SOURCES.filter(function (x) { return x.id === sid; })[0];
+      if (cur) state.sources[sid] = !sourceOn(cur);
+      render(); return;
+    }
+    if (act === 'runreset') { state.run = { stage: 'idle', query: '', step: 0 }; render(); return; }
+
+    if (act === 'copy') {
+      /* Through the rename layer, like the view that renders it. v5.1 recorded
+         this as fixed and it was not: the on-screen package calls S.plain() per
+         field, the clipboard handler concatenated the raw seed, and the text you
+         would actually paste into a creator's inbox still read "we checked 18
+         surfaces". The screen sweep passes either way, which is exactly how it
+         survived — so the sweep now reads the clipboard too. */
+      var c = creator(id), o = c.outreach, who = me();
+      copyText(S.plain('Subject: ' + o.subject + '\n\n' + o.opener + '\n\n' +
+        o.bullets.map(function (b) { return '- ' + b; }).join('\n') + '\n\n' + o.close + '\n\n' +
+        who.name + '\nParadium'));
+      state.copied = true; announce('Draft copied.'); render();
+      later(function () { state.copied = false; if (state.view === 'outreach') render(); }, 2200);
+      return;
+    }
+  });
+
+  document.addEventListener('submit', function (e) {
+    var run = e.target.closest ? e.target.closest('[data-act="runsubmit"]') : null;
+    if (run) {
+      e.preventDefault();
+      var i = document.getElementById('runq');
+      /* Store what they typed, not what we parsed — the results screen shows
+         "from a TikTok link" and cannot say that if the URL was thrown away at
+         the door. Normalising happens where it is read, not here. */
+      state.run.query = (i && i.value.trim()) || W.runANameResult.handle;
+      startScoring();
+      return;
+    }
+    var ww = e.target.closest ? e.target.closest('[data-act="watchwhy-submit"]') : null;
+    if (ww) {
+      e.preventDefault();
+      var wi = document.getElementById('watchwhy');
+      var id = ww.getAttribute('data-id');
+      state.decisions[id] = { verb: 'watch', at: asOf(), window: state.watchWindow,
+        why: (wi && wi.value.trim()) || 'No reason given' };
+      announce('Watching ' + creator(id).name + ' for ' + state.watchWindow + '.');
+      state.watchTray = null; state.watchWindow = null;
+      if (state.view === 'report') go('drop'); else render();
+      return;
+    }
+    var bf = e.target.closest ? e.target.closest('[data-act="briefsubmit"]') : null;
+    if (bf) {
+      e.preventDefault();
+      var ta = document.getElementById('bdesc');
+      var text = (ta && ta.value.trim()) ||
+        'Someone to fill our gap in Southern college football. Insider access — beat writers, people close to ' +
+        'local coaches and recruits. Modest following is fine, but their stuff has to land consistently.';
+      state.draft = readBack(text, state.draft);
+      state.briefStage = 'read';
+      go('newbrief');
+    }
+  });
+
+  /* v5 checked only the popover and the menu, which taught you the key works
+     and then dropped it two clicks later on a tray that looks the same. */
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (state.rcp || state.menu) { state.rcp = null; state.menu = false; render(); return; }
+    if (state.passTray || state.watchTray || state.outcomeTray) {
+      state.passTray = null; state.watchTray = null; state.outcomeTray = null; render();
+    }
+  });
+
+  /* Scout deriving structure from a description. In the product this is one
+     model call with the derived fields as a fallback path rather than an error
+     if it fails (§6.7); here it is keyword matching over the same vocabulary,
+     so the read-back is real rather than canned. */
+  function readBack(text, draft) {
+    var t = ' ' + text.toLowerCase() + ' ';
+    var chips = [];
+    var CAT = [
+      [/college football|cfb|recruit|coach/, 'Sports › College Football'],
+      [/restor|gild|machin|workshop|woodwork|trade/, 'Craft › Restoration'],
+      [/bak|bread|sourdough|pastry|cake/, 'Food › Baking'],
+      [/cook|kitchen|recipe|food|ferment|sauce/, 'Food › Home cooking'],
+      [/money|finance|invest|budget/, 'Finance › Personal'],
+      [/outdoor|trail|hike|gear|pack/, 'Outdoor › Gear']
+    ];
+    CAT.forEach(function (r) { if (!chips.length && r[0].test(t)) chips.push(r[1]); });
+    if (!chips.length) chips.push('Any category');
+
+    if (/south|sec |texas|georgia|alabama/.test(t)) chips.push('US South');
+    else if (/\buk\b|britain|london/.test(t)) chips.push('UK');
+    else if (/global|worldwide|anywhere/.test(t)) chips.push('Global EN');
+    else chips.push('US / CA');
+
+    var PLAT = [[/tiktok/, 'TikTok'], [/instagram|\big\b/, 'Instagram'], [/youtube|yt\b/, 'YouTube'],
+      [/substack|newsletter/, 'Substack'], [/reddit/, 'Reddit'], [/\bx\b|twitter/, 'X']];
+    var found = [];
+    PLAT.forEach(function (r) { if (r[0].test(t)) found.push(r[1]); });
+    if (!found.length) found = ['TikTok', 'Instagram', 'YouTube'];
+    found.forEach(function (p) { chips.push(p); });
+
+    if (/modest|small|niche|micro/.test(t)) chips.push('5k–75k');
+    else if (/large|big|million/.test(t)) chips.push('500k+');
+    else chips.push('50k–2M');
+
+    var bar = /trade press|cited|written about|quoted/.test(t)
+      ? 'Cited by the people who write about the field'
+      : /consistent|reliab|land|quality/.test(t)
+      ? 'Consistent engagement, not audience size'
+      : /insider|access|close to|source/.test(t)
+        ? 'Access other people do not have'
+        : 'Named demand in the comments, not audience size';
+
+    return { text: text, chips: chips, bar: bar,
+      cap: (draft && draft.cap) || 100, runs: (draft && draft.runs) || '3 months' };
+  }
+
+  function briefName(d) {
+    var cat = (d.chips[0] || 'Any category').split('›').pop().trim();
+    var band = d.chips[d.chips.length - 1] || '';
+    return cat + (band && /[0-9]/.test(band) ? ', ' + band : '');
+  }
+
+  function startScoring() {
+    var total = S.claims(W.runANameResult).missing.built.length;
+    state.run.stage = 'scoring'; state.run.step = 0; render();
+    if (reduceMotion.matches) { state.run.stage = 'done'; render(); return; }
+    var tick = function () {
+      state.run.step += 1; render();
+      if (state.run.step < total) later(tick, 330);
+      else later(function () { state.run.stage = 'done'; render(); }, 520);
+    };
+    later(tick, 400);
+  }
+
+  function copyText(text) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.className = 'offscreen';
+      document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+      document.body.removeChild(ta);
+    } catch (err) { /* unavailable from file://; the draft is on screen anyway */ }
+  }
+
+  /* ------------------------------------------------------------------ boot */
+  (function initTheme() {
+    var saved = null;
+    try { saved = localStorage.getItem('scout-v5-theme'); } catch (e) { /* file:// */ }
+    if (saved) { document.documentElement.setAttribute('data-theme', saved); return; }
+    /* Light is the default. The system preference no longer decides it — a
+       dark first paint for someone who never asked for one is the surprise. */
+    document.documentElement.setAttribute('data-theme', 'light');
+  })();
+
+  restore();
+  render();
+})();

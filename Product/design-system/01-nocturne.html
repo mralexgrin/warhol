@@ -1,0 +1,1028 @@
+<!doctype html>
+<!--
+DIRECTION CONTRACT — TOOLKIT 01 "NOCTURNE"   (rebuilt from the WANDER reference)
+THESIS: A black canvas that a small set of warm, fully-saturated cards sit on like lit windows.
+  The drop is a destination board: one atmospheric hero, then a tile set you read at a glance.
+OWN-WORLD: Ink-black ground. Four card colours — amber, deep green, dusty mauve, cream — each
+  owning a whole tile, never an accent. 26px card radius, pill everything else. Black pill CTAs
+  on light cards, hairline-outlined pills on colour. A circular icon rail with labels beneath.
+  Enormous numerals. Atmospheric rendered fields behind the headline and inside the hero card.
+STORY: The Scout reads colour → number → name, at arm's length, then opens one card.
+FIRST VIEWPORT: Nav rail, oversized tight headline over a dark atmospheric field, hero card
+  carrying the top candidate, tile set beneath, circular utility rail at the right edge.
+FORM: WANDER travel-guide reference, translated to an origination desk. Reference-pinned.
+-->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toolkit 01 — NOCTURNE · Warhol Scout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Hanken+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   TOOLKIT 01 — NOCTURNE   · rebuilt from the WANDER reference
+   Black canvas, warm saturated card set, circular rail, huge numerals.
+   ============================================================ */
+:root{
+  /* --- card colours: each owns a whole tile --- */
+  --amber:#FBC24A;
+  --amber-d:#8A6412;
+  --forest:#1E5F4E;
+  --forest-2:#2C7D66;
+  --mauve:#B8A8AE;
+  --cream:#EFEFE7;
+  --ember:#F2662A;          /* the FAB / single hot accent */
+
+  /* --- ground --- */
+  --bg:#0A0A0A;
+  --surf:#141414;
+  --surf-2:#1C1C1C;
+  --surf-3:#262626;
+  --line:rgba(255,255,255,.10);
+  --line-hi:rgba(255,255,255,.22);
+  --text:#F5F5F3;
+  --text-2:#A5A5A0;
+  --text-3:#6E6E6A;
+  --on-card:#111110;        /* text on amber / mauve / cream */
+  --on-forest:#F3FBF7;
+
+  --pass:#4FBF8B;
+  --hold:#FBC24A;
+  --fail:#F2664F;
+
+  /* --- geometry --- */
+  --r-sm:10px; --r-md:16px; --r-lg:26px; --r-xl:34px; --r-pill:999px;
+
+  /* --- space --- */
+  --s1:4px; --s2:8px; --s3:12px; --s4:18px; --s5:26px;
+  --s6:38px; --s7:56px; --s8:80px; --s9:116px;
+
+  /* --- elevation: real offset + blur --- */
+  --el-1:0 1px 2px rgba(0,0,0,.5), 0 3px 8px -3px rgba(0,0,0,.5);
+  --el-2:0 2px 5px rgba(0,0,0,.5), 0 14px 30px -12px rgba(0,0,0,.75);
+  --el-3:0 4px 10px rgba(0,0,0,.55), 0 34px 64px -24px rgba(0,0,0,.9);
+
+  --disp:"Familjen Grotesk",-apple-system,system-ui,sans-serif;
+  --ui:"Hanken Grotesk",-apple-system,system-ui,sans-serif;
+}
+:root[data-theme="light"]{
+  --bg:#EDEBE5;
+  --surf:#FFFFFF;
+  --surf-2:#F6F4EE;
+  --surf-3:#E8E5DC;
+  --line:rgba(17,17,16,.10);
+  --line-hi:rgba(17,17,16,.24);
+  --text:#111110;
+  --text-2:#57564F;
+  --text-3:#8B8981;
+  --amber:#F4B12E;
+  --forest:#175646;
+  --forest-2:#26775F;
+  --mauve:#C4B4BA;
+  --cream:#FBFAF4;
+  --el-1:0 1px 2px rgba(40,36,26,.06), 0 3px 8px -3px rgba(40,36,26,.10);
+  --el-2:0 2px 5px rgba(40,36,26,.07), 0 14px 30px -12px rgba(40,36,26,.20);
+  --el-3:0 4px 10px rgba(40,36,26,.08), 0 34px 64px -24px rgba(40,36,26,.30);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--ui);
+  font-size:15px;line-height:1.58;transition:background-color .2s ease,color .2s ease}
+::selection{background:var(--amber);color:#111110}
+h1,h2,h3,h4{margin:0;font-family:var(--disp);font-weight:700;letter-spacing:-.035em;line-height:1}
+
+.wrap{max-width:1400px;margin:0 auto;padding-left:var(--s5);padding-right:var(--s5)}
+section{padding-top:var(--s8);padding-bottom:var(--s8)}
+.sec-head{display:flex;align-items:flex-end;gap:var(--s5);margin-bottom:var(--s5);flex-wrap:wrap}
+.sec-title{font-size:clamp(26px,3.6vw,40px)}
+.sec-note{margin-left:auto;max-width:52ch;font-size:13.5px;color:var(--text-2);line-height:1.65}
+.kick{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--text-3)}
+.note{font-size:13.5px;color:var(--text-2);line-height:1.65;max-width:68ch}
+
+.grid{display:grid;gap:var(--s4)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g12{grid-template-columns:repeat(12,1fr)}
+@media(max-width:1080px){.g4{grid-template-columns:repeat(2,1fr)}.g12{grid-template-columns:repeat(6,1fr)}}
+@media(max-width:720px){.g2,.g3,.g4{grid-template-columns:1fr}.g12{grid-template-columns:1fr}.g12>*{grid-column:auto!important}}
+
+/* ---------- CARD: the one container ---------- */
+.card{background:var(--surf);border-radius:var(--r-lg);padding:var(--s5);box-shadow:var(--el-1)}
+.card--line{background:transparent;border:1px solid var(--line);box-shadow:none}
+.card--amber{background:var(--amber);color:var(--on-card)}
+.card--forest{background:linear-gradient(146deg,var(--forest),var(--forest-2));color:var(--on-forest)}
+.card--mauve{background:var(--mauve);color:var(--on-card)}
+.card--cream{background:var(--cream);color:var(--on-card)}
+.card--amber .kick,.card--mauve .kick,.card--cream .kick{color:rgba(17,17,16,.55)}
+.card--forest .kick{color:rgba(243,251,247,.6)}
+.card-hd{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--s3);margin-bottom:var(--s4)}
+
+/* ---------- nav ---------- */
+.nav{display:flex;align-items:center;gap:var(--s6);padding-top:var(--s5);padding-bottom:var(--s5);flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--disp);font-size:20px;
+  font-weight:700;letter-spacing:-.03em;text-transform:uppercase}
+.mark{width:30px;height:30px;border-radius:9px;background:var(--amber);position:relative;flex:none}
+.mark::before,.mark::after{content:"";position:absolute;top:6px;bottom:6px;width:5px;border-radius:3px;background:#111110}
+.mark::before{left:7px}.mark::after{right:7px}
+.navlinks{display:flex;gap:var(--s6);margin-left:var(--s6)}
+.navlinks a{color:var(--text-2);text-decoration:none;font-size:11.5px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase}
+.navlinks a:hover{color:var(--text)}
+.nav .r{margin-left:auto;display:flex;align-items:center;gap:var(--s3)}
+.tsw{display:inline-flex;background:var(--surf-2);border-radius:var(--r-pill);padding:3px;gap:2px}
+.tsw button{appearance:none;border:0;cursor:pointer;background:transparent;color:var(--text-2);
+  font:inherit;font-size:11.5px;font-weight:700;padding:7px 15px;border-radius:var(--r-pill);
+  letter-spacing:.06em;text-transform:uppercase}
+.tsw button[aria-pressed="true"]{background:var(--text);color:var(--bg)}
+.tsw button:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+
+/* ---------- hero ---------- */
+.hero{display:grid;grid-template-columns:1fr 1.28fr 92px;gap:var(--s5);padding-bottom:var(--s8)}
+@media(max-width:1080px){.hero{grid-template-columns:1fr}}
+.hero-l{position:relative;padding:var(--s5) 0 0}
+/* authored landform behind the headline — the reference puts a dark photograph here,
+   so this is drawn material, not a coloured wash */
+.ridge{position:absolute;left:-8%;right:-8%;bottom:-4%;height:58%;z-index:0;pointer-events:none;
+  -webkit-mask-image:linear-gradient(180deg,#000 54%,transparent 96%);
+  mask-image:linear-gradient(180deg,#000 54%,transparent 96%)}
+.ridge svg{display:block;width:100%;height:100%}
+.hero-l>*:not(.ridge){position:relative;z-index:1}
+.eyebrow{display:flex;align-items:center;gap:11px;color:var(--text);font-size:13.5px;font-weight:600;margin-bottom:var(--s5)}
+.eyebrow i{width:26px;height:9px;border-radius:var(--r-pill);background:var(--text);position:relative;flex:none}
+.eyebrow i::after{content:"";position:absolute;right:-9px;top:-2px;width:13px;height:13px;
+  border-radius:50%;background:var(--text)}
+.hero-l h1{font-size:clamp(46px,7.2vw,104px);letter-spacing:-.05em;line-height:.9}
+.hero-l .sub{color:var(--text-2);font-size:16px;max-width:38ch;margin-top:var(--s5);line-height:1.55}
+.rating{display:flex;align-items:center;gap:14px;margin-top:var(--s7)}
+.rating .chip{width:52px;height:52px;border-radius:50%;background:var(--surf-2);display:flex;
+  flex-direction:column;align-items:center;justify-content:center;gap:1px;flex:none;border:1px solid var(--line)}
+.rating .chip b{font-size:13px;font-weight:700;letter-spacing:-.02em}
+.rating .chip i{color:var(--amber);font-style:normal;font-size:10px;line-height:1}
+.rating .av{width:52px;height:52px;border-radius:50%;overflow:hidden;margin-left:-14px;
+  box-shadow:0 0 0 3px var(--bg);flex:none}
+.rating .av svg{display:block;width:100%;height:100%}
+.rating .t{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;line-height:1.35}
+
+/* hero card */
+.herocard{border-radius:var(--r-lg);overflow:hidden;position:relative;min-height:420px;
+  display:flex;flex-direction:column;justify-content:space-between;padding:var(--s5);
+  background:linear-gradient(168deg,#F2EDE2 0%,#EBD9BE 42%,#E8B978 74%,#DE9B4C 100%);
+  color:#181510;box-shadow:var(--el-2)}
+.herocard .range{position:absolute;left:0;right:0;bottom:0;height:62%;pointer-events:none}
+.herocard .top{display:flex;justify-content:space-between;gap:var(--s5);position:relative;z-index:2}
+.badge{width:72px;height:84px;flex:none;background:#141412;color:#F6E7C4;
+  border-radius:12px 12px 36px 36px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:2px;box-shadow:var(--el-2)}
+.badge b{font-family:var(--disp);font-size:22px;font-weight:700;line-height:1}
+.badge span{font-size:7.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.herocard .say{text-align:right;max-width:26ch;margin-left:auto}
+.herocard .say .k{font-size:12.5px;color:rgba(24,21,16,.62);margin-bottom:5px}
+.herocard .say h3{font-family:var(--disp);font-size:clamp(19px,2vw,27px);letter-spacing:-.03em;line-height:1.14}
+.herocard .foot{position:relative;z-index:2;display:flex;justify-content:flex-end}
+
+/* pills / buttons */
+.btn{appearance:none;cursor:pointer;font-family:var(--ui);font-size:14px;font-weight:600;
+  padding:14px 26px;border-radius:var(--r-pill);border:1px solid transparent;
+  background:#111110;color:#F5F5F3;
+  transition:transform .16s cubic-bezier(.2,.7,.3,1),box-shadow .16s cubic-bezier(.2,.7,.3,1),background .16s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--el-2)}
+.btn:active{transform:translateY(0)}
+.btn:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.btn--sm{padding:9px 17px;font-size:12.5px}
+.btn--amber{background:var(--amber);color:#111110}
+.btn--ember{background:var(--ember);color:#fff}
+.btn--out{background:transparent;color:currentColor;border-color:currentColor}
+.btn--out:hover{background:currentColor;color:var(--bg)}
+.card--amber .btn--out:hover,.card--cream .btn--out:hover,.card--mauve .btn--out:hover{color:var(--amber)}
+.btn--ghost{background:var(--surf-2);color:var(--text)}
+.btn[disabled]{background:var(--surf-3);color:var(--text-3);cursor:not-allowed}
+.btn[disabled]:hover{transform:none;box-shadow:none}
+.btn--busy{color:transparent;position:relative}
+.btn--busy::after{content:"";position:absolute;inset:0;margin:auto;width:15px;height:15px;
+  border:2px solid #F5F5F3;border-top-color:transparent;border-radius:50%;animation:sp .7s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+/* circular utility rail — the reference's signature */
+.rail{display:flex;flex-direction:column;gap:var(--s5);align-items:center;padding-top:var(--s6)}
+@media(max-width:1080px){.rail{flex-direction:row;justify-content:flex-start;flex-wrap:wrap;padding-top:0}}
+.railbtn{display:flex;flex-direction:column;align-items:center;gap:8px;background:none;border:0;
+  cursor:pointer;color:var(--text-3);font:inherit;font-size:11.5px;font-weight:600}
+.railbtn i{width:54px;height:54px;border-radius:50%;background:var(--surf-2);display:flex;
+  align-items:center;justify-content:center;color:var(--text);transition:background .16s ease,transform .16s cubic-bezier(.2,.7,.3,1)}
+.railbtn:hover i{background:var(--surf-3);transform:translateY(-2px)}
+.railbtn:hover{color:var(--text)}
+.railbtn:focus-visible i{outline:2px solid var(--amber);outline-offset:3px}
+.railbtn[aria-current="true"] i{background:var(--amber);color:#111110}
+.railbtn[aria-current="true"]{color:var(--text)}
+.fab{width:62px;height:62px;border-radius:50%;background:var(--ember);color:#fff;border:0;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--el-2);
+  transition:transform .16s cubic-bezier(.2,.7,.3,1)}
+.fab:hover{transform:translateY(-3px)}
+.fab:focus-visible{outline:2px solid var(--text);outline-offset:3px}
+
+/* ---------- OVERVIEW COLLAGE ---------- */
+.collage{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s3)}
+@media(max-width:1080px){.collage{grid-template-columns:repeat(6,1fr)}}
+@media(max-width:640px){.collage{grid-template-columns:repeat(2,1fr)}.collage>*{grid-column:span 2!important}}
+.tile{border-radius:var(--r-md);padding:var(--s4);background:var(--surf);box-shadow:var(--el-1);
+  display:flex;flex-direction:column;gap:9px;min-height:132px}
+.tile .k{font-size:9.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--text-3)}
+.tile .v{font-size:11.5px;color:var(--text-2);line-height:1.45;margin-top:auto}
+.tile--amber{background:var(--amber);color:var(--on-card)}
+.tile--amber .k{color:rgba(17,17,16,.55)}.tile--amber .v{color:rgba(17,17,16,.72)}
+.tile--forest{background:linear-gradient(146deg,var(--forest),var(--forest-2));color:var(--on-forest)}
+.tile--forest .k{color:rgba(243,251,247,.6)}.tile--forest .v{color:rgba(243,251,247,.78)}
+.tile--cream{background:var(--cream);color:var(--on-card)}
+.tile--cream .k{color:rgba(17,17,16,.55)}.tile--cream .v{color:rgba(17,17,16,.72)}
+.tile--mauve{background:var(--mauve);color:var(--on-card)}
+.tile--mauve .k{color:rgba(17,17,16,.55)}.tile--mauve .v{color:rgba(17,17,16,.72)}
+.aa{font-family:var(--disp);font-size:52px;font-weight:700;letter-spacing:-.05em;line-height:.86}
+.aa-ui{font-family:var(--ui);font-size:46px;font-weight:600;letter-spacing:-.03em;line-height:.9}
+.shaperow{display:flex;gap:7px;align-items:flex-end;flex-wrap:wrap}
+.shaperow b{width:56px;height:56px;background:currentColor;opacity:.9;display:block}
+.shaperow b.cap{width:84px;height:30px}
+.colrow{display:flex;gap:0;border-radius:9px;overflow:hidden;height:44px}
+.colrow span{flex:1}
+.gradrow{display:flex;gap:7px}
+.gradrow span{flex:1;height:44px;border-radius:9px}
+.elrow{display:flex;gap:9px;align-items:center}
+.elrow b{width:34px;height:34px;border-radius:9px;background:var(--surf-2);display:block}
+
+/* ---------- type ramp ---------- */
+.tr{border-bottom:1px solid var(--line);padding:var(--s5) 0;display:grid;
+  grid-template-columns:142px minmax(0,1fr);gap:var(--s5);align-items:baseline}
+@media(max-width:680px){.tr{grid-template-columns:1fr;gap:var(--s2)}}
+.tr .s{font-size:11px;color:var(--text-3);line-height:1.6;font-weight:600}
+.d1{font-family:var(--disp);font-size:clamp(40px,6.4vw,76px);font-weight:700;letter-spacing:-.05em;line-height:.94}
+.d2{font-family:var(--disp);font-size:clamp(24px,3.2vw,36px);font-weight:700;letter-spacing:-.04em}
+.h3s{font-family:var(--disp);font-size:20px;font-weight:700;letter-spacing:-.03em}
+.bd{font-size:16px;line-height:1.66;max-width:66ch;color:var(--text-2)}
+.sm{font-size:13px;color:var(--text-3);line-height:1.6}
+.bignum{font-family:var(--disp);font-size:76px;font-weight:700;letter-spacing:-.06em;
+  font-variant-numeric:tabular-nums;line-height:.86}
+
+/* ---------- shape / space ---------- */
+.rad{display:flex;gap:var(--s3);flex-wrap:wrap;align-items:flex-end}
+.rad b{width:80px;height:60px;background:var(--amber);color:#111110;display:flex;align-items:flex-end;
+  justify-content:center;padding-bottom:6px;font-size:11px;font-weight:700}
+.sp{display:flex;align-items:flex-end;gap:6px;height:116px}
+.sp span{width:24px;background:var(--forest-2);border-radius:5px 5px 0 0;position:relative}
+.sp i{position:absolute;top:calc(100% + 4px);left:0;font-style:normal;font-size:10px;color:var(--text-3);font-weight:700}
+
+/* ---------- gradients ---------- */
+.gr{height:104px;border-radius:var(--r-md)}
+.gr-dusk{background:linear-gradient(168deg,#F2EDE2 0%,#EBD9BE 42%,#E8B978 74%,#DE9B4C 100%)}
+.gr-forest{background:linear-gradient(146deg,var(--forest),var(--forest-2))}
+.gr-glow{background:
+  radial-gradient(64% 78% at 24% 82%, rgba(251,194,74,.5), transparent 72%),
+  radial-gradient(72% 82% at 80% 96%, rgba(30,95,78,.72), transparent 72%),
+  var(--surf)}
+
+/* ---------- controls ---------- */
+.inp{width:100%;font-family:var(--ui);font-size:14.5px;padding:13px 19px;border-radius:var(--r-pill);
+  border:1px solid var(--line-hi);background:var(--surf-2);color:var(--text)}
+.inp::placeholder{color:var(--text-3)}
+.inp:focus{outline:2px solid var(--amber);outline-offset:-1px;border-color:var(--amber)}
+.inp--err{border-color:var(--fail)}
+.em{color:var(--fail);font-size:12.5px;margin-top:7px;font-weight:500;padding-left:19px}
+.lab{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-3);display:block;margin-bottom:8px}
+.pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;
+  padding:7px 15px;border-radius:var(--r-pill);background:var(--surf-2);color:var(--text-2)}
+.pill--out{background:transparent;border:1px solid currentColor;color:inherit}
+.pill--pass{background:rgba(79,191,139,.16);color:var(--pass)}
+.pill--hold{background:rgba(251,194,74,.16);color:var(--hold)}
+.pill--fail{background:rgba(242,102,79,.16);color:var(--fail)}
+.pill--solid{background:var(--text);color:var(--bg)}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.seg{display:inline-flex;background:var(--surf-2);border-radius:var(--r-pill);padding:3px;gap:2px}
+.seg button{appearance:none;border:0;cursor:pointer;background:transparent;color:var(--text-2);
+  font:inherit;font-size:12.5px;font-weight:600;padding:7px 15px;border-radius:var(--r-pill)}
+.seg button[aria-pressed="true"]{background:var(--text);color:var(--bg)}
+
+/* ---------- faces ---------- */
+.faces{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--s5)}
+.face{text-align:center}
+.avatar{width:88px;height:88px;border-radius:50%;overflow:hidden;background:var(--surf-2);margin:0 auto}
+.avatar svg{display:block;width:100%;height:100%}
+.ringwrap{position:relative;width:104px;height:104px;margin:0 auto;border-radius:50%;padding:9px}
+.ringwrap::before{content:"";position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(from -90deg,var(--rc,var(--amber)) var(--pct,90%),var(--surf-3) 0)}
+.ringwrap .avatar{position:relative;z-index:1;width:100%;height:100%;box-shadow:0 0 0 3px var(--bg)}
+.face .n{font-weight:700;font-size:14px;margin-top:11px;letter-spacing:-.015em}
+.face .m{font-size:12px;color:var(--text-3);margin-top:1px}
+.stack{display:flex;align-items:center}
+.stack .avatar{width:40px;height:40px;margin:0 0 0 -13px;box-shadow:0 0 0 3px var(--surf)}
+.stack .avatar:first-child{margin-left:0}
+.stack .more{width:40px;height:40px;margin-left:-13px;border-radius:50%;background:var(--amber);
+  color:#111110;display:flex;align-items:center;justify-content:center;font-size:12px;
+  font-weight:800;box-shadow:0 0 0 3px var(--surf);flex:none}
+.avs{display:flex;align-items:flex-end;gap:var(--s4);margin-top:var(--s4)}
+
+/* ---------- data ---------- */
+.track{height:14px;border-radius:var(--r-pill);background:var(--surf-3);position:relative;overflow:hidden}
+.card--amber .track,.card--mauve .track,.card--cream .track{background:rgba(17,17,16,.16)}
+.card--forest .track{background:rgba(255,255,255,.2)}
+.track i{position:absolute;inset:0 auto 0 0;display:block;border-radius:var(--r-pill)}
+.bar-row{display:grid;grid-template-columns:112px minmax(0,1fr) 44px;gap:var(--s4);align-items:center;padding:9px 0}
+.bar-row .k{font-size:13px;opacity:.78}
+.bar-row .v{font-size:13.5px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.thr{position:absolute;top:-3px;bottom:-3px;width:2px;background:currentColor;opacity:.55;border-radius:2px}
+.emlist{list-style:none;margin:var(--s4) 0 0;padding:0}
+.emlist li{display:flex;gap:11px;padding:9px 0;font-size:14px;border-top:1px solid rgba(17,17,16,.12)}
+.emlist li:first-child{border-top:0}
+.emlist li::before{content:"—";opacity:.5;flex:none}
+.emlist li b{margin-left:auto;font-variant-numeric:tabular-nums;font-weight:700}
+
+/* ---------- in situ ---------- */
+.drop{background:var(--surf);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--el-1)}
+.drop-hd{padding:var(--s5);display:flex;justify-content:space-between;gap:var(--s4);align-items:flex-start;flex-wrap:wrap}
+.drow{display:grid;grid-template-columns:46px 66px 1fr 168px 150px 176px;gap:var(--s4);
+  align-items:center;padding:var(--s3) var(--s5);border-top:1px solid var(--line)}
+.drow--hd{background:var(--surf-2);font-size:10.5px;font-weight:800;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--text-3);padding-top:11px;padding-bottom:11px}
+.drow:hover:not(.drow--hd){background:var(--surf-2)}
+.drow .rk{font-family:var(--disp);font-size:15px;font-weight:700;color:var(--text-3)}
+.drow .sc{font-family:var(--disp);font-size:30px;font-weight:700;letter-spacing:-.05em;
+  font-variant-numeric:tabular-nums;line-height:1}
+.drow .who{display:flex;align-items:center;gap:var(--s3);min-width:0}
+.drow .who .avatar{width:38px;height:38px;flex:0 0 38px}
+.drow .who .n{font-weight:700;font-size:14.5px;letter-spacing:-.015em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.drow .who .m{font-size:12px;color:var(--text-3)}
+.drow .acts{display:flex;gap:7px;justify-content:flex-end}
+@media(max-width:1180px){.drow{grid-template-columns:40px 58px 1fr 176px}.drow>.hm{display:none}}
+@media(max-width:700px){.drow{grid-template-columns:36px 54px 1fr}.drow>.hs{display:none}}
+.empty{border-radius:var(--r-lg);background:var(--surf);padding:var(--s8) var(--s5);text-align:center;box-shadow:var(--el-1)}
+.empty h4{font-family:var(--disp);font-size:26px;margin-bottom:var(--s2)}
+.sk{background:var(--surf-3);border-radius:var(--r-pill);height:14px;animation:pl 1.3s ease-in-out infinite}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.42}}
+
+pre.tok{background:var(--surf);color:var(--text-2);border-radius:var(--r-lg);padding:var(--s5);
+  overflow:auto;font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:12px;line-height:1.8;margin:0}
+pre.tok .c{color:var(--text-3)}
+pre.tok .v{color:var(--amber)}
+footer{padding-top:var(--s6);padding-bottom:var(--s8);font-size:13px;color:var(--text-2);
+  line-height:1.7;border-top:1px solid var(--line)}
+footer b{color:var(--text);font-weight:700}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="nav">
+    <span class="brand"><span class="mark" aria-hidden="true"></span>Warhol</span>
+    <span class="navlinks">
+      <a href="#collage">Overview</a><a href="#data">Charts</a><a href="#situ">The drop</a><a href="#tokens">Tokens</a>
+    </span>
+    <span class="r">
+      <span class="kick">Toolkit 01 / 05</span>
+      <div class="tsw" role="group" aria-label="Theme">
+        <button type="button" data-set="dark" aria-pressed="true">Night</button>
+        <button type="button" data-set="light" aria-pressed="false">Day</button>
+      </div>
+    </span>
+  </nav>
+
+  <!-- ══════ HERO ══════ -->
+  <div class="hero">
+    <div class="hero-l">
+      <span class="ridge" aria-hidden="true">
+        <svg viewBox="0 0 600 300" preserveAspectRatio="none">
+          <path d="M0 300 C58 262 96 168 148 122 C186 88 214 92 252 128 C296 170 326 222 378 194
+                   C428 168 460 96 512 78 C556 63 580 112 600 134 L600 300Z" fill="var(--surf)"/>
+          <path d="M0 300 C48 276 90 216 146 184 C190 159 224 174 262 202 C310 238 348 268 396 244
+                   C450 217 486 152 538 138 C570 130 584 152 600 166 L600 300Z" fill="var(--surf-2)"/>
+          <path d="M0 300 C66 288 118 258 176 246 C238 233 282 262 342 258 C404 254 448 224 510 230
+                   C550 234 578 250 600 258 L600 300Z" fill="var(--surf-3)"/>
+        </svg>
+      </span>
+      <span class="eyebrow"><i aria-hidden="true"></i>Your origination desk</span>
+      <h1>Find who's<br>worth the<br>call</h1>
+      <p class="sub">Six names surfaced this morning from forty-seven scanned. Each one carries
+        the evidence to defend it in a room.</p>
+      <div class="rating">
+        <span class="chip"><i aria-hidden="true">★</i><b>91</b></span>
+        <span class="av"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#FBC24A"/><circle cx="50" cy="38" r="19" fill="#111110"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#111110"/></svg></span>
+        <span class="t">Top of<br>today's drop</span>
+      </div>
+    </div>
+
+    <div class="herocard">
+      <svg class="range" viewBox="0 0 600 260" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 260 C46 232 74 176 118 138 C152 110 176 112 208 140 C244 172 268 214 316 190
+                 C362 168 388 108 436 92 C486 76 520 128 560 150 C584 163 590 168 600 172 L600 260Z"
+              fill="#E9BA80" opacity=".72"/>
+        <path d="M0 260 C40 248 78 214 126 190 C164 171 194 184 228 204 C268 228 300 250 344 230
+                 C392 208 424 158 470 146 C516 134 552 176 600 198 L600 260Z"
+              fill="#DCA057" opacity=".78"/>
+        <path d="M0 260 C56 254 102 234 152 226 C206 217 246 240 300 238 C356 236 396 210 452 214
+                 C512 218 556 240 600 246 L600 260Z"
+              fill="#CB8536" opacity=".7"/>
+      </svg>
+      <div class="top">
+        <span class="badge"><b>A</b><span>Rank 1</span></span>
+        <span class="say">
+          <div class="k">Recommended play</div>
+          <h3>A vertical newsletter she already writes for free</h3>
+        </span>
+      </div>
+      <div class="foot"><button class="btn">Open Scout Report</button></div>
+    </div>
+
+    <div class="rail">
+      <button class="railbtn" aria-current="true"><i aria-hidden="true">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h12"/></svg></i>Drop</button>
+      <button class="railbtn"><i aria-hidden="true">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 21l8.8-8.3a5 5 0 0 0 0-7.1z"/></svg></i>Watchlist</button>
+      <button class="railbtn"><i aria-hidden="true">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11l5 5v11H4z"/><path d="M15 4v5h5"/></svg></i>Briefs</button>
+      <button class="fab" aria-label="New mandate"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+    </div>
+  </div>
+
+  <!-- ══════ 00 OVERVIEW COLLAGE ══════ -->
+  <section id="collage" style="padding-top:0">
+    <div class="sec-head"><h2 class="sec-title">The system at a glance</h2>
+      <p class="sec-note">Everything essential in one screen — faces, shapes, colour, gradient,
+        depth, and the world's signature component. The sections below expand each one.</p></div>
+
+    <div class="collage">
+      <div class="tile tile--cream" style="grid-column:span 3">
+        <span class="k">Display</span><span class="aa">Aa</span>
+        <span class="v">Familjen Grotesk · 700 · −0.05em</span></div>
+      <div class="tile" style="grid-column:span 3">
+        <span class="k">Interface</span><span class="aa-ui">Aa</span>
+        <span class="v">Hanken Grotesk · 400 / 600 / 800</span></div>
+      <div class="tile tile--amber" style="grid-column:span 3">
+        <span class="k">Shape</span>
+        <div class="shaperow" style="color:#111110">
+          <b style="border-radius:10px"></b><b style="border-radius:16px"></b>
+          <b style="border-radius:26px"></b><b class="cap" style="border-radius:999px"></b></div>
+        <span class="v">10 / 16 / 26 cards / pill controls</span></div>
+      <div class="tile" style="grid-column:span 3">
+        <span class="k">Colour</span>
+        <div class="colrow">
+          <span style="background:var(--amber)"></span><span style="background:var(--forest)"></span>
+          <span style="background:var(--mauve)"></span><span style="background:var(--cream)"></span>
+          <span style="background:var(--ember)"></span><span style="background:#0A0A0A"></span></div>
+        <span class="v">Four card fields + one hot accent, on ink</span></div>
+
+      <div class="tile" style="grid-column:span 4">
+        <span class="k">Gradient</span>
+        <div class="gradrow">
+          <span class="gr-dusk"></span><span class="gr-forest"></span><span class="gr-glow"></span></div>
+        <span class="v">Dusk field · forest wash · ambient glow</span></div>
+      <div class="tile" style="grid-column:span 3">
+        <span class="k">Depth</span>
+        <div class="elrow">
+          <b style="box-shadow:var(--el-1)"></b><b style="box-shadow:var(--el-2)"></b><b style="box-shadow:var(--el-3)"></b></div>
+        <span class="v">Three layered shadows, real offset + blur</span></div>
+      <div class="tile tile--forest" style="grid-column:span 2">
+        <span class="k">Numeral</span>
+        <span style="font-family:var(--disp);font-size:46px;font-weight:700;letter-spacing:-.06em;line-height:.86">91</span>
+        <span class="v">Display face, tabular</span></div>
+      <div class="tile" style="grid-column:span 3">
+        <span class="k">Signature</span>
+        <div style="display:flex;gap:13px;align-items:center">
+          <span style="width:40px;height:40px;border-radius:50%;background:var(--surf-2);display:flex;align-items:center;justify-content:center;color:var(--text)">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg></span>
+          <span style="width:40px;height:40px;border-radius:50%;background:var(--amber);color:#111110;display:flex;align-items:center;justify-content:center">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16"/></svg></span>
+          <span style="width:40px;height:40px;border-radius:50%;background:var(--ember)"></span>
+        </div>
+        <span class="v">Circular rail, labels beneath</span></div>
+    </div>
+  </section>
+
+  <!-- ══════ 01 COLOUR ══════ -->
+  <section id="colour">
+    <div class="sec-head"><h2 class="sec-title">Card colours</h2>
+      <p class="sec-note">Four fields, one hot accent, one ink ground. A colour takes a whole
+        card or it doesn't appear. Text on amber, mauve and cream is always ink; on forest it's
+        the warm off-white.</p></div>
+
+    <div class="grid g12" style="margin-bottom:var(--s4)">
+      <div class="card card--amber" style="grid-column:span 3">
+        <span class="kick">Amber · #FBC24A</span>
+        <div class="bignum" style="margin:var(--s3) 0 var(--s2)">6</div>
+        <div style="font-size:13px;font-weight:600">Surfaced today</div>
+        <p class="note" style="color:rgba(17,17,16,.7);font-size:12.5px;margin-top:var(--s3)">
+          Attention. The live drop, the top rank, anything unworked.</p></div>
+
+      <div class="card card--forest" style="grid-column:span 3">
+        <span class="kick">Forest · #1E5F4E → #2C7D66</span>
+        <svg viewBox="0 0 240 96" width="100%" height="96" style="margin:var(--s3) 0" role="img"
+          aria-label="Two dashed trajectories: estimated audience value climbing away from extracted revenue.">
+          <path d="M8 84 C64 78 120 44 232 12" fill="none" stroke="rgba(243,251,247,.95)" stroke-width="2" stroke-dasharray="6 5"/>
+          <path d="M8 88 C70 86 140 82 232 78" fill="none" stroke="rgba(243,251,247,.45)" stroke-width="2" stroke-dasharray="6 5"/>
+          <circle cx="232" cy="12" r="4.5" fill="#F3FBF7"/><circle cx="232" cy="78" r="4.5" fill="rgba(243,251,247,.55)"/>
+        </svg>
+        <div style="font-size:13px;font-weight:600">Value vs. extracted</div>
+        <p class="note" style="color:rgba(243,251,247,.76);font-size:12.5px;margin-top:var(--s3)">
+          Counted facts. Rules-engine output and the gap series.</p></div>
+
+      <div class="card card--mauve" style="grid-column:span 3">
+        <span class="kick">Mauve · #B8A8AE</span>
+        <h3 style="font-size:26px;margin:var(--s3) 0 var(--s4)">Design &amp; Built Environment</h3>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end">
+          <p class="note" style="color:rgba(17,17,16,.7);font-size:12.5px;margin:0;max-width:20ch">
+            Judgment. Mandates and model-produced calls.</p>
+          <span style="width:54px;height:54px;border-radius:50%;background:#111110;color:#fff;display:flex;align-items:center;justify-content:center;flex:none">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
+        </div></div>
+
+      <div class="card card--cream" style="grid-column:span 3">
+        <span class="kick">Cream · #EFEFE7</span>
+        <h3 style="font-size:26px;margin:var(--s3) 0 0">Evidence <span style="opacity:.5">14</span></h3>
+        <ul class="emlist">
+          <li>No paid tier <b>EV-011</b></li>
+          <li>Solo-operator language <b>EV-012</b></li>
+          <li>Sponsor churn <b>EV-013</b></li>
+        </ul></div>
+    </div>
+
+    <div class="grid g4">
+      <div class="card card--line"><span class="kick">Ember · #F2662A</span>
+        <p class="note" style="margin-top:9px;font-size:12.5px">One hot accent. The new-mandate
+          action and nothing else — it appears once per screen.</p></div>
+      <div class="card card--line"><span class="kick">Pass · #4FBF8B</span>
+        <p class="note" style="margin-top:9px;font-size:12.5px">Gate cleared. Used as a pill tint at 16%, never a field.</p></div>
+      <div class="card card--line"><span class="kick">Hold · #FBC24A</span>
+        <p class="note" style="margin-top:9px;font-size:12.5px">Watchlist. Shares amber, because watching is a form of attention.</p></div>
+      <div class="card card--line"><span class="kick">Fail · #F2664F</span>
+        <p class="note" style="margin-top:9px;font-size:12.5px">Format-fit gate refused. Distinct from ember by warmth, never adjacent to it.</p></div>
+    </div>
+  </section>
+
+  <!-- ══════ 02 TYPE ══════ -->
+  <section id="type">
+    <div class="sec-head"><h2 class="sec-title">Type</h2>
+      <p class="sec-note"><strong>Familjen Grotesk</strong> carries display — it has enough
+        irregularity to read as a voice at 100px and locks up tight at −0.05em.
+        <strong>Hanken Grotesk</strong> handles interface: large x-height, quiet, good tabular
+        figures for the score column.</p></div>
+    <div class="tr"><span class="s">Display 1 · Familjen<br>700 · −0.05em<br>40–76px</span><span class="d1">Morning drop</span></div>
+    <div class="tr"><span class="s">Display 2 · Familjen<br>700 · −0.04em<br>24–36px</span><span class="d2">Monetization gap</span></div>
+    <div class="tr"><span class="s">Heading · Familjen<br>700 · 20px</span><span class="h3s">Recommended play</span></div>
+    <div class="tr"><span class="s">Body · Hanken<br>400 · 16 / 1.66</span><span class="bd">Mara Ellison publishes long-form architecture criticism to 214,000 subscribers and monetizes none of it. Three sponsor mentions in eleven months, no paid tier, no product.</span></div>
+    <div class="tr"><span class="s">Secondary · Hanken<br>400 · 13px</span><span class="sm">Scanned 04:12 · Substack and X · rules engine v4.2</span></div>
+    <div class="tr"><span class="s">Label · Hanken<br>800 · 10.5px · .14em</span><span class="lab" style="margin:0">Pillar breakdown</span></div>
+    <div class="tr"><span class="s">Numeral · Familjen<br>700 · tabular · 76px</span><span class="bignum">700+</span></div>
+  </section>
+
+  <!-- ══════ 03 SHAPE ══════ -->
+  <section id="shape">
+    <div class="sec-head"><h2 class="sec-title">Shape</h2>
+      <p class="sec-note">Cards at 26. Controls, chips and every bar at full pill. The circle is
+        a first-class shape here, not a special case — the rail, the avatars, the rating chip and
+        the accent action are all circles.</p></div>
+    <div class="grid g3">
+      <div><span class="lab">Radius</span>
+        <div class="rad">
+          <b style="border-radius:10px">10 · tiles</b>
+          <b style="border-radius:16px;background:var(--forest);color:var(--on-forest)">16 · inner</b>
+          <b style="border-radius:26px;background:var(--mauve)">26 · cards</b>
+          <b style="border-radius:999px;background:var(--cream)">pill</b>
+          <b style="border-radius:50%;background:var(--ember);color:#fff">circle</b></div>
+        <p class="note" style="margin-top:var(--s3);font-size:12.5px">Nesting: an inner radius
+          sits at least 10 below its container's so corners stay concentric.</p></div>
+      <div><span class="lab">Lines</span>
+        <div style="display:flex;flex-direction:column;gap:var(--s3)">
+          <div style="display:flex;align-items:center;gap:var(--s3)"><span style="width:66px;font-size:12px;color:var(--text-3)">10% white</span><span style="flex:1;height:1px;background:var(--line)"></span></div>
+          <div style="display:flex;align-items:center;gap:var(--s3)"><span style="width:66px;font-size:12px;color:var(--text-3)">22% white</span><span style="flex:1;height:1px;background:var(--line-hi)"></span></div>
+        </div>
+        <p class="note" style="margin-top:var(--s3);font-size:12.5px">Lines are alpha, not a
+          fixed grey, so they hold at the same weight on every card colour.</p></div>
+      <div><span class="lab">Space — 4px base</span>
+        <div class="sp"><span style="height:4px"><i>4</i></span><span style="height:8px"><i>8</i></span>
+          <span style="height:12px"><i>12</i></span><span style="height:18px"><i>18</i></span>
+          <span style="height:26px"><i>26</i></span><span style="height:38px"><i>38</i></span>
+          <span style="height:56px"><i>56</i></span><span style="height:80px"><i>80</i></span>
+          <span style="height:116px"><i>116</i></span></div></div>
+    </div>
+  </section>
+
+  <!-- ══════ 04 DEPTH & GRADIENT ══════ -->
+  <section id="surface">
+    <div class="sec-head"><h2 class="sec-title">Depth &amp; light</h2>
+      <p class="sec-note">Three layered shadows with real vertical offset. Gradients are
+        atmospheric, not decorative: a dusk field for the hero, a forest wash for the gap card,
+        and an ambient glow that sits <em>behind</em> the headline rather than on it.</p></div>
+    <div class="grid g4" style="margin-bottom:var(--s6)">
+      <div class="card card--line"><span class="kick">Flat</span><p class="note" style="margin-top:8px;font-size:12.5px">Hairline only. Grouping, filter shelves.</p></div>
+      <div class="card"><span class="kick">el-1 · resting</span><p class="note" style="margin-top:8px;font-size:12.5px">Default card, tiles, table shell.</p></div>
+      <div class="card" style="box-shadow:var(--el-2)"><span class="kick">el-2 · raised</span><p class="note" style="margin-top:8px;font-size:12.5px">Hero card, hover, the badge.</p></div>
+      <div class="card" style="box-shadow:var(--el-3)"><span class="kick">el-3 · floating</span><p class="note" style="margin-top:8px;font-size:12.5px">Menus, drawers, the report overlay.</p></div>
+    </div>
+    <span class="lab">Gradients</span>
+    <div class="grid g3">
+      <div><div class="gr gr-dusk"></div><p class="note" style="margin-top:9px;font-size:12.5px">
+        <strong>Dusk.</strong> Cream → peach → amber on a 168° axis. The hero card's ground, and
+        the only place a rendered landform appears.</p></div>
+      <div><div class="gr gr-forest"></div><p class="note" style="margin-top:9px;font-size:12.5px">
+        <strong>Forest wash.</strong> 146°, two stops. The gap card and any chart whose subject
+        is a counted quantity.</p></div>
+      <div><div class="gr gr-glow"></div><p class="note" style="margin-top:9px;font-size:12.5px">
+        <strong>Ambient glow.</strong> Two soft radials at low alpha, always behind type at
+        arm's length — never a halo on a small element.</p></div>
+    </div>
+  </section>
+
+  <!-- ══════ 05 CONTROLS ══════ -->
+  <section id="controls">
+    <div class="sec-head"><h2 class="sec-title">Controls</h2>
+      <p class="sec-note">Every control is a pill. On a light card the primary action is a black
+        pill; on ink it's amber; on a colour field it's outlined in the field's own text colour.
+        Focus is a 2px amber ring at 3px offset, legible on all six grounds.</p></div>
+    <div class="grid g12" style="margin-bottom:var(--s4)">
+      <div class="card" style="grid-column:span 5">
+        <div class="card-hd"><h3 style="font-size:19px">On ink</h3></div>
+        <div style="display:flex;gap:var(--s2);flex-wrap:wrap">
+          <button class="btn btn--amber">Promote</button>
+          <button class="btn btn--ghost">Watch</button>
+          <button class="btn btn--out">Pass</button>
+          <button class="btn" disabled>Gate failed</button>
+          <button class="btn btn--amber btn--busy" aria-label="Scanning">Scanning</button></div>
+      </div>
+      <div class="card card--cream" style="grid-column:span 4">
+        <div class="card-hd"><h3 style="font-size:19px">On a light card</h3></div>
+        <div style="display:flex;gap:var(--s2);flex-wrap:wrap">
+          <button class="btn">Open report</button>
+          <button class="btn btn--out btn--sm">Watch</button></div>
+        <p class="note" style="color:rgba(17,17,16,.7);font-size:12.5px;margin-top:var(--s4)">
+          Black pill, exactly as the reference does it. Never amber on amber.</p>
+      </div>
+      <div class="card card--forest" style="grid-column:span 3">
+        <div class="card-hd"><h3 style="font-size:19px">On colour</h3></div>
+        <div style="display:flex;gap:var(--s2);flex-wrap:wrap">
+          <button class="btn btn--out btn--sm">Details</button>
+          <button class="btn btn--out btn--sm">Export</button></div>
+        <p class="note" style="color:rgba(243,251,247,.76);font-size:12.5px;margin-top:var(--s4)">
+          Outlined in the field's own text colour, inverting on hover.</p>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-bottom:var(--s4)">
+      <div class="card"><span class="lab">Pills &amp; segments</span>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          <span class="pill pill--solid">Rank 1</span>
+          <span class="pill pill--pass"><i class="dot"></i>Fit pass</span>
+          <span class="pill pill--hold">Watching</span>
+          <span class="pill pill--fail">Gate fail</span>
+          <span class="pill">Substack · 214K</span>
+          <span class="seg" role="group" aria-label="Range">
+            <button type="button" aria-pressed="true">Today</button>
+            <button type="button" aria-pressed="false">7d</button>
+            <button type="button" aria-pressed="false">30d</button></span>
+        </div></div>
+      <div class="card"><span class="lab">Rail states</span>
+        <div style="display:flex;gap:var(--s5);flex-wrap:wrap">
+          <button class="railbtn" aria-current="true"><i aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h12"/></svg></i>Active</button>
+          <button class="railbtn"><i aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/></svg></i>Default</button>
+          <button class="railbtn" disabled style="opacity:.4"><i aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></i>Locked</button>
+          <span class="fab" style="width:54px;height:54px" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div></div>
+    </div>
+
+    <div class="grid g3">
+      <label><span class="lab">Mandate</span><input class="inp" value="Design &amp; Built Environment" aria-label="Mandate"></label>
+      <label><span class="lab">Audience band</span><input class="inp" placeholder="50,000 – 500,000" aria-label="Audience band"></label>
+      <label><span class="lab">Score threshold</span><input class="inp inp--err" value="115" aria-label="Score threshold" aria-describedby="e1">
+        <span class="em" id="e1">Must be 0–100. Your last drop used 70.</span></label>
+    </div>
+  </section>
+
+  <!-- ══════ 06 FACES ══════ -->
+  <section id="faces">
+    <div class="sec-head"><h2 class="sec-title">Faces</h2>
+      <p class="sec-note">Circular, full colour, ringed with a conic arc that <em>is</em> the
+        Warhol Score. Ring colour follows the band: forest above 80, amber 70–79, mauve below
+        threshold. Overlapping stacks carry a ground-coloured ring so they read as depth.
+        Portraits below are authored placeholders.</p></div>
+    <div class="faces" style="margin-bottom:var(--s5)">
+      <div class="face"><div class="ringwrap" style="--rc:var(--forest-2);--pct:91%">
+        <div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#FBC24A"/><circle cx="50" cy="38" r="19" fill="#111110"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#111110"/></svg></div></div>
+        <div class="n">Mara Ellison</div><div class="m">Substack · 214K · 91</div></div>
+      <div class="face"><div class="ringwrap" style="--rc:var(--forest-2);--pct:84%">
+        <div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#1E5F4E"/><circle cx="50" cy="37" r="18" fill="#F3FBF7"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#F3FBF7"/></svg></div></div>
+        <div class="n">Dev Okonjo</div><div class="m">YouTube · 480K · 84</div></div>
+      <div class="face"><div class="ringwrap" style="--rc:var(--amber);--pct:78%">
+        <div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#B8A8AE"/><circle cx="50" cy="39" r="20" fill="#111110"/><path d="M10 100c0-22 18-33 40-33s40 11 40 33z" fill="#111110"/></svg></div></div>
+        <div class="n">Sena Ruiz</div><div class="m">TikTok · 1.2M · 78</div></div>
+      <div class="face"><div class="ringwrap" style="--rc:var(--amber);--pct:72%">
+        <div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#EFEFE7"/><circle cx="50" cy="37" r="18" fill="#57564F"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#57564F"/></svg></div></div>
+        <div class="n">Theo Brandt</div><div class="m">Podcast · 96K · 72</div></div>
+      <div class="face"><div class="ringwrap" style="--rc:var(--mauve);--pct:68%">
+        <div class="avatar" style="opacity:.6"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#262626"/><circle cx="50" cy="37" r="18" fill="#6E6E6A"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#6E6E6A"/></svg></div></div>
+        <div class="n" style="color:var(--text-3)">Iris Nakamura</div><div class="m">Gate fail · 68</div></div>
+    </div>
+    <div class="grid g2">
+      <div class="card"><span class="lab">Sizes — 26 / 34 / 42 / 58</span>
+        <div class="avs">
+          <div class="avatar" style="width:26px;height:26px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#FBC24A"/><circle cx="50" cy="38" r="19" fill="#111110"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#111110"/></svg></div>
+          <div class="avatar" style="width:34px;height:34px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#1E5F4E"/><circle cx="50" cy="38" r="19" fill="#F3FBF7"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#F3FBF7"/></svg></div>
+          <div class="avatar" style="width:42px;height:42px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#B8A8AE"/><circle cx="50" cy="38" r="19" fill="#111110"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#111110"/></svg></div>
+          <div class="avatar" style="width:58px;height:58px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#EFEFE7"/><circle cx="50" cy="38" r="19" fill="#57564F"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#57564F"/></svg></div>
+        </div>
+        <p class="note" style="margin-top:var(--s4);font-size:12.5px">The score ring drops below
+          42px — at table scale it becomes a hairline, and the score already has its own column.</p></div>
+      <div class="card"><span class="lab">Group — watchlist</span>
+        <div class="stack" style="margin-top:var(--s4)">
+          <div class="avatar" style="width:40px;height:40px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#FBC24A"/><circle cx="50" cy="38" r="19" fill="#111110"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#111110"/></svg></div>
+          <div class="avatar" style="width:40px;height:40px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#1E5F4E"/><circle cx="50" cy="38" r="19" fill="#F3FBF7"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#F3FBF7"/></svg></div>
+          <div class="avatar" style="width:40px;height:40px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#B8A8AE"/><circle cx="50" cy="38" r="19" fill="#111110"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#111110"/></svg></div>
+          <div class="avatar" style="width:40px;height:40px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#EFEFE7"/><circle cx="50" cy="38" r="19" fill="#57564F"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#57564F"/></svg></div>
+          <div class="more">+10</div></div>
+        <p class="note" style="margin-top:var(--s4);font-size:12.5px">Overlap −13px, 3px ring in
+          the card's own ground colour. The counter takes amber so the group reads as attention.</p></div>
+    </div>
+  </section>
+
+  <!-- ══════ 07 CHARTS ══════ -->
+  <section id="data">
+    <div class="sec-head"><h2 class="sec-title">Charts</h2>
+      <p class="sec-note">Charts live inside colour fields, so series are drawn in the field's
+        own text colour at varying alpha rather than in a rainbow. Dashed trajectories, pill-ended
+        bars, huge numerals. Data below is synthetic demonstration material.</p></div>
+
+    <div class="grid g12" style="margin-bottom:var(--s4)">
+      <div class="card card--amber" style="grid-column:span 4">
+        <div class="card-hd"><span class="kick">Warhol Score</span><span class="pill" style="background:rgba(17,17,16,.14);color:#111110">▲ 6.2 / 30d</span></div>
+        <div style="display:flex;align-items:flex-end;gap:var(--s4);flex-wrap:wrap">
+          <span class="bignum" style="font-size:96px">91</span>
+          <div style="padding-bottom:12px"><div style="font-size:13px;font-weight:700">Mara Ellison</div>
+            <div style="font-size:12.5px;color:rgba(17,17,16,.7)">Cleared threshold by 21</div></div></div>
+        <div style="margin-top:var(--s4)">
+          <div class="bar-row"><span class="k">Gap</span>
+            <span class="track"><i style="width:88%;background:#111110"></i><span class="thr" style="left:70%;color:#111110"></span></span><span class="v">88</span></div>
+          <div class="bar-row"><span class="k">Strain</span>
+            <span class="track"><i style="width:74%;background:var(--forest)"></i><span class="thr" style="left:70%;color:#111110"></span></span><span class="v">74</span></div>
+          <div class="bar-row"><span class="k">Fit</span>
+            <span><span class="pill" style="background:#111110;color:#F5F5F3">Gate — pass</span></span><span class="v">—</span></div>
+        </div>
+      </div>
+
+      <div class="card card--forest" style="grid-column:span 8">
+        <div class="card-hd"><span class="kick">Value vs. extracted · 11 months</span>
+          <span class="pill" style="background:rgba(255,255,255,.16);color:var(--on-forest)">Gap $87K</span></div>
+        <svg viewBox="0 0 700 250" width="100%" height="250" role="img"
+          aria-label="Estimated audience value climbs from 41 to 96 thousand dollars over eleven months while extracted revenue stays between 3 and 9 thousand. The gap widens to 87 thousand.">
+          <g stroke="rgba(255,255,255,.16)" stroke-width="1">
+            <line x1="54" y1="34" x2="688" y2="34"/><line x1="54" y1="94" x2="688" y2="94"/>
+            <line x1="54" y1="154" x2="688" y2="154"/></g>
+          <line x1="54" y1="206" x2="688" y2="206" stroke="rgba(255,255,255,.35)" stroke-width="1.5"/>
+          <path d="M66 152 C200 138 300 96 420 74 C520 56 600 42 682 30 L682 196 C600 194 520 190 420 190 C300 190 200 184 66 182 Z"
+                fill="rgba(255,255,255,.10)"/>
+          <path d="M66 152 C200 138 300 96 420 74 C520 56 600 42 682 30"
+                fill="none" stroke="#F3FBF7" stroke-width="2.5" stroke-dasharray="8 6" stroke-linecap="round"/>
+          <path d="M66 182 C200 184 300 190 420 190 C520 190 600 194 682 196"
+                fill="none" stroke="rgba(243,251,247,.5)" stroke-width="2.5" stroke-dasharray="8 6" stroke-linecap="round"/>
+          <circle cx="682" cy="30" r="6" fill="#F3FBF7"/><circle cx="682" cy="196" r="6" fill="rgba(243,251,247,.55)"/>
+          <g transform="translate(596,44)"><rect x="0" y="0" width="86" height="26" rx="13" fill="#111110"/>
+            <text x="43" y="17" font-family="Hanken Grotesk" font-size="12" font-weight="700" fill="#F5F5F3" text-anchor="middle">$96K est.</text></g>
+          <g font-family="Hanken Grotesk" font-size="11" font-weight="600" fill="rgba(243,251,247,.6)">
+            <text x="6" y="37">$100K</text><text x="16" y="97">$50K</text><text x="40" y="209">0</text>
+            <text x="62" y="230">Sep</text><text x="360" y="230">Feb</text><text x="662" y="230">Jul</text></g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="grid g12">
+      <div class="card card--cream" style="grid-column:span 4">
+        <div class="card-hd"><span class="kick">Cohort · n = 47</span></div>
+        <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:7px">
+          <span style="aspect-ratio:1;border-radius:50%;background:#1E5F4E"></span><span style="aspect-ratio:1;border-radius:50%;background:#1E5F4E"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:#1E5F4E"></span><span style="aspect-ratio:1;border-radius:50%;background:#1E5F4E"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:#1E5F4E"></span><span style="aspect-ratio:1;border-radius:50%;background:#1E5F4E"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:#FBC24A"></span><span style="aspect-ratio:1;border-radius:50%;background:#FBC24A"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:#FBC24A"></span><span style="aspect-ratio:1;border-radius:50%;background:#FBC24A"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:#FBC24A"></span><span style="aspect-ratio:1;border-radius:50%;background:#FBC24A"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:#F2664F"></span><span style="aspect-ratio:1;border-radius:50%;background:#F2664F"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:#F2664F"></span><span style="aspect-ratio:1;border-radius:50%;background:#F2664F"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:#F2664F"></span><span style="aspect-ratio:1;border-radius:50%;background:#F2664F"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span><span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span><span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span><span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span><span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span><span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span><span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span><span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span><span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span><span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span><span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span><span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span><span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span><span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span><span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+          <span style="aspect-ratio:1;border-radius:50%;background:rgba(17,17,16,.14)"></span>
+        </div>
+        <div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:var(--s4)">
+          <span class="pill" style="background:rgba(17,17,16,.08);color:#111110"><i class="dot" style="background:#1E5F4E"></i>6 surfaced</span>
+          <span class="pill" style="background:rgba(17,17,16,.08);color:#111110"><i class="dot" style="background:#FBC24A"></i>6 watching</span>
+          <span class="pill" style="background:rgba(17,17,16,.08);color:#111110"><i class="dot" style="background:#F2664F"></i>6 gate fail</span>
+          <span class="pill" style="background:rgba(17,17,16,.08);color:#111110">29 below</span></div>
+      </div>
+
+      <div class="card card--mauve" style="grid-column:span 4">
+        <div class="card-hd"><span class="kick">Strain events · 12 weeks</span></div>
+        <div style="display:flex;flex-direction:column;gap:9px;margin-top:var(--s2)">
+          <div style="display:grid;grid-template-columns:56px 1fr;gap:11px;align-items:center">
+            <span style="font-size:11.5px;font-weight:700;opacity:.62">W−08</span>
+            <span style="height:32px;border-radius:999px;background:#1E5F4E;color:#F3FBF7;display:flex;align-items:center;padding:0 14px;gap:9px;font-size:12.5px;font-weight:700;width:58%">Cadence −41%<b style="margin-left:auto;font-weight:600;opacity:.75">rules</b></span></div>
+          <div style="display:grid;grid-template-columns:56px 1fr;gap:11px;align-items:center">
+            <span style="font-size:11.5px;font-weight:700;opacity:.62">W−06</span>
+            <span style="height:32px;border-radius:999px;background:#111110;color:#F5F5F3;display:flex;align-items:center;padding:0 14px;gap:9px;font-size:12.5px;font-weight:700;width:74%">Burnout language<b style="margin-left:auto;font-weight:600;opacity:.7">model</b></span></div>
+          <div style="display:grid;grid-template-columns:56px 1fr;gap:11px;align-items:center">
+            <span style="font-size:11.5px;font-weight:700;opacity:.62">W−03</span>
+            <span style="height:32px;border-radius:999px;background:#111110;color:#F5F5F3;display:flex;align-items:center;padding:0 14px;gap:9px;font-size:12.5px;font-weight:700;width:87%">Solo-operator<b style="margin-left:auto;font-weight:600;opacity:.7">model</b></span></div>
+          <div style="display:grid;grid-template-columns:56px 1fr;gap:11px;align-items:center">
+            <span style="font-size:11.5px;font-weight:700;opacity:.62">W−01</span>
+            <span style="height:32px;border-radius:999px;background:#1E5F4E;color:#F3FBF7;display:flex;align-items:center;padding:0 14px;gap:9px;font-size:12.5px;font-weight:700;width:45%">Sponsor churn<b style="margin-left:auto;font-weight:600;opacity:.75">rules</b></span></div>
+          <div style="display:grid;grid-template-columns:56px 1fr;gap:11px;align-items:center">
+            <span style="font-size:11.5px;font-weight:700;opacity:.62">Now</span>
+            <span style="height:32px;border-radius:999px;background:#FBC24A;color:#111110;display:flex;align-items:center;padding:0 14px;gap:9px;font-size:12.5px;font-weight:700;width:96%">Surfaced to drop<b style="margin-left:auto">91</b></span></div>
+        </div>
+        <p class="note" style="color:rgba(17,17,16,.7);font-size:12.5px;margin-top:var(--s4)">
+          Bar length is recency-weighted contribution; colour is the engine that produced it.</p>
+      </div>
+
+      <div class="card" style="grid-column:span 4">
+        <div class="card-hd"><span class="kick">Distribution</span><span class="pill">Threshold 70</span></div>
+        <svg viewBox="0 0 400 210" width="100%" height="210" role="img"
+          aria-label="Score distribution. Most creators score between 40 and 65. Six clear the threshold of 70.">
+          <g fill="var(--surf-3)">
+            <rect x="12" y="152" width="36" height="42" rx="14"/><rect x="56" y="118" width="36" height="76" rx="14"/>
+            <rect x="100" y="66" width="36" height="128" rx="14"/><rect x="144" y="46" width="36" height="148" rx="14"/>
+            <rect x="188" y="94" width="36" height="100" rx="14"/></g>
+          <g fill="var(--amber)">
+            <rect x="232" y="128" width="36" height="66" rx="14"/><rect x="276" y="146" width="36" height="48" rx="14"/></g>
+          <g fill="var(--forest-2)"><rect x="320" y="160" width="36" height="34" rx="14"/></g>
+          <line x1="228" y1="18" x2="228" y2="200" stroke="var(--text-3)" stroke-width="1.5" stroke-dasharray="5 5"/>
+          <g font-family="Hanken Grotesk" font-size="11" font-weight="600" fill="var(--text-3)">
+            <text x="18" y="208">30</text><text x="106" y="208">50</text><text x="238" y="208">70</text><text x="326" y="208">90</text></g>
+        </svg>
+        <p class="note" style="font-size:12.5px;margin-top:var(--s3)">Bars are pill-ended, as
+          every bar in this world is. Below-threshold uses the neutral surface — the eye should
+          land only on what entered the drop.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ 08 IN SITU ══════ -->
+  <section id="situ">
+    <div class="sec-head"><h2 class="sec-title">The drop</h2>
+      <p class="sec-note">The whole system doing the job. Synthetic candidates.</p></div>
+
+    <div class="drop" style="margin-bottom:var(--s4)">
+      <div class="drop-hd">
+        <div><h3 style="font-size:28px">Morning drop</h3>
+          <p class="note" style="margin-top:6px;font-size:13px">Design &amp; Built Environment ·
+            scanned 04:12 · 47 seen · 6 surfaced · threshold 70</p></div>
+        <div style="display:flex;gap:var(--s2);align-items:center">
+          <span class="pill pill--hold">6 to work</span>
+          <button class="btn btn--amber btn--sm">Brief the room</button></div>
+      </div>
+      <div class="drow drow--hd"><span>#</span><span>Score</span><span>Candidate</span>
+        <span class="hm">Gap / strain</span><span class="hs">Play</span><span class="hm">Verdict</span></div>
+
+      <div class="drow"><span class="rk">01</span><span class="sc" style="color:var(--forest-2)">91</span>
+        <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#FBC24A"/><circle cx="50" cy="38" r="19" fill="#111110"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#111110"/></svg></span>
+          <span><span class="n">Mara Ellison</span><br><span class="m">Substack · 214K · architecture</span></span></span>
+        <span class="hm"><span class="track" style="height:11px"><i style="width:88%;background:var(--forest-2)"></i></span>
+          <span class="track" style="height:11px;margin-top:5px"><i style="width:74%;background:var(--mauve)"></i></span></span>
+        <span class="hs"><span class="pill">Newsletter</span></span>
+        <span class="acts hm"><button class="btn btn--amber btn--sm">Promote</button><button class="btn btn--ghost btn--sm">Watch</button></span></div>
+
+      <div class="drow"><span class="rk">02</span><span class="sc" style="color:var(--forest-2)">84</span>
+        <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#1E5F4E"/><circle cx="50" cy="37" r="18" fill="#F3FBF7"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#F3FBF7"/></svg></span>
+          <span><span class="n">Dev Okonjo</span><br><span class="m">YouTube · 480K · DIY electronics</span></span></span>
+        <span class="hm"><span class="track" style="height:11px"><i style="width:79%;background:var(--forest-2)"></i></span>
+          <span class="track" style="height:11px;margin-top:5px"><i style="width:82%;background:var(--mauve)"></i></span></span>
+        <span class="hs"><span class="pill">Course + kit</span></span>
+        <span class="acts hm"><button class="btn btn--amber btn--sm">Promote</button><button class="btn btn--ghost btn--sm">Watch</button></span></div>
+
+      <div class="drow"><span class="rk">03</span><span class="sc" style="color:var(--amber)">78</span>
+        <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#B8A8AE"/><circle cx="50" cy="39" r="20" fill="#111110"/><path d="M10 100c0-22 18-33 40-33s40 11 40 33z" fill="#111110"/></svg></span>
+          <span><span class="n">Sena Ruiz</span><br><span class="m">TikTok · 1.2M · food</span></span></span>
+        <span class="hm"><span class="track" style="height:11px"><i style="width:91%;background:var(--forest-2)"></i></span>
+          <span class="track" style="height:11px;margin-top:5px"><i style="width:51%;background:var(--mauve)"></i></span></span>
+        <span class="hs"><span class="pill">CPG line</span></span>
+        <span class="acts hm"><button class="btn btn--amber btn--sm">Promote</button><button class="btn btn--ghost btn--sm">Watch</button></span></div>
+
+      <div class="drow"><span class="rk">04</span><span class="sc" style="color:var(--amber)">72</span>
+        <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#EFEFE7"/><circle cx="50" cy="37" r="18" fill="#57564F"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#57564F"/></svg></span>
+          <span><span class="n">Theo Brandt</span><br><span class="m">Podcast · 96K · markets</span></span></span>
+        <span class="hm"><span class="track" style="height:11px"><i style="width:66%;background:var(--forest-2)"></i></span>
+          <span class="track" style="height:11px;margin-top:5px"><i style="width:69%;background:var(--mauve)"></i></span></span>
+        <span class="hs"><span class="pill">Paid research</span></span>
+        <span class="acts hm"><button class="btn btn--amber btn--sm">Promote</button><button class="btn btn--ghost btn--sm">Watch</button></span></div>
+
+      <div class="drow" style="opacity:.55"><span class="rk">—</span><span class="sc" style="color:var(--text-3)">68</span>
+        <span class="who"><span class="avatar" style="opacity:.6"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#262626"/><circle cx="50" cy="37" r="18" fill="#6E6E6A"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#6E6E6A"/></svg></span>
+          <span><span class="n">Iris Nakamura</span><br><span class="m">Medium · 61K · ML research</span></span></span>
+        <span class="hm"><span class="pill pill--fail">Format fit — gate fail</span></span>
+        <span class="hs">—</span>
+        <span class="acts hm"><button class="btn btn--sm" disabled>Gate failed</button></span></div>
+    </div>
+
+    <div class="grid g2">
+      <div class="empty">
+        <div class="gr gr-glow" style="height:96px;max-width:220px;margin:0 auto var(--s5);border-radius:var(--r-xl)"></div>
+        <h4>Worked to zero</h4>
+        <p class="note" style="max-width:44ch;margin:0 auto var(--s5)">Every candidate in today's
+          drop has a verdict. The next scan lands at 04:12 tomorrow; 14 on the watchlist are still
+          being re-scored.</p>
+        <button class="btn btn--ghost">Open watchlist</button></div>
+      <div class="card"><span class="lab">Loading</span>
+        <div style="display:flex;gap:var(--s4);align-items:center;margin:var(--s4) 0 var(--s3)">
+          <div class="sk" style="width:38px;height:38px;flex:0 0 38px;border-radius:50%"></div>
+          <div style="flex:1"><div class="sk" style="width:54%"></div><div class="sk" style="width:32%;margin-top:8px;height:11px"></div></div></div>
+        <div style="display:flex;gap:var(--s4);align-items:center">
+          <div class="sk" style="width:38px;height:38px;flex:0 0 38px;border-radius:50%"></div>
+          <div style="flex:1"><div class="sk" style="width:70%"></div><div class="sk" style="width:26%;margin-top:8px;height:11px"></div></div></div>
+        <p class="note" style="margin-top:var(--s4);font-size:12.5px">Skeletons keep the row's
+          exact geometry, circular avatar included, and pulse opacity rather than sweeping.</p></div>
+    </div>
+  </section>
+
+  <!-- ══════ 09 TOKENS ══════ -->
+  <section id="tokens">
+    <div class="sec-head"><h2 class="sec-title">Tokens</h2>
+      <p class="sec-note">Night is the default — this is a black-canvas world and the reference
+        is built that way. Day keeps the same four card colours on a warm paper ground.</p></div>
+<pre class="tok">:root{
+  <span class="c">/* card fields — each owns a whole tile, never an accent */</span>
+  --amber:<span class="v">#FBC24A</span>;   <span class="c">/* attention: live drop, top rank, unworked  */</span>
+  --forest:<span class="v">#1E5F4E</span>;  --forest-2:<span class="v">#2C7D66</span>;  <span class="c">/* counted facts, gap series */</span>
+  --mauve:<span class="v">#B8A8AE</span>;   <span class="c">/* judgment: mandates, model output          */</span>
+  --cream:<span class="v">#EFEFE7</span>;   <span class="c">/* evidence, reading surfaces                */</span>
+  --ember:<span class="v">#F2662A</span>;   <span class="c">/* ONE hot accent, once per screen           */</span>
+
+  --bg:<span class="v">#0A0A0A</span>;  --surf:<span class="v">#141414</span>;  --surf-2:<span class="v">#1C1C1C</span>;  --surf-3:<span class="v">#262626</span>;
+  --line:<span class="v">rgba(255,255,255,.10)</span>;  --line-hi:<span class="v">rgba(255,255,255,.22)</span>;
+  --text:<span class="v">#F5F5F3</span>;  --text-2:<span class="v">#A5A5A0</span>;  --text-3:<span class="v">#6E6E6A</span>;
+  --on-card:<span class="v">#111110</span>;  --on-forest:<span class="v">#F3FBF7</span>;
+  --pass:<span class="v">#4FBF8B</span>;  --hold:<span class="v">#FBC24A</span>;  --fail:<span class="v">#F2664F</span>;
+
+  <span class="c">/* shape — the circle is first-class here */</span>
+  --r-sm:<span class="v">10px</span>; --r-md:<span class="v">16px</span>; --r-lg:<span class="v">26px</span>; --r-xl:<span class="v">34px</span>; --r-pill:<span class="v">999px</span>;
+  --s1:<span class="v">4px</span>; --s2:<span class="v">8px</span>; --s3:<span class="v">12px</span>; --s4:<span class="v">18px</span>; --s5:<span class="v">26px</span>;
+  --s6:<span class="v">38px</span>; --s7:<span class="v">56px</span>; --s8:<span class="v">80px</span>; --s9:<span class="v">116px</span>;
+
+  <span class="c">/* elevation — real offset + blur, layered */</span>
+  --el-1:<span class="v">0 1px 2px rgba(0,0,0,.5), 0 3px 8px -3px rgba(0,0,0,.5)</span>;
+  --el-2:<span class="v">0 2px 5px rgba(0,0,0,.5), 0 14px 30px -12px rgba(0,0,0,.75)</span>;
+  --el-3:<span class="v">0 4px 10px rgba(0,0,0,.55), 0 34px 64px -24px rgba(0,0,0,.9)</span>;
+
+  --disp:<span class="v">"Familjen Grotesk"</span>;  <span class="c">/* 700, −0.05em */</span>
+  --ui:<span class="v">"Hanken Grotesk"</span>;      <span class="c">/* 400 / 600 / 800 */</span>
+
+  <span class="c">/* gradients — atmospheric, never decorative */</span>
+  --gr-dusk:<span class="v">linear-gradient(168deg,#F2EDE2,#EBD9BE 42%,#E8B978 74%,#DE9B4C)</span>;
+  --gr-forest:<span class="v">linear-gradient(146deg,var(--forest),var(--forest-2))</span>;
+  --gr-glow:<span class="v">2 × radial-gradient(~68% 80% at …, colour .16–.5, transparent 72%)</span>;
+
+  <span class="c">/* motion — one move, reused everywhere */</span>
+  --lift:<span class="v">translateY(-2px)</span>;  --ease:<span class="v">cubic-bezier(.2,.7,.3,1)</span>;  --dur:<span class="v">160ms</span>;
+}
+:root[data-theme="light"]{  <span class="c">/* day — warm paper, same four fields */</span>
+  --bg:<span class="v">#EDEBE5</span>;  --surf:<span class="v">#FFFFFF</span>;  --surf-2:<span class="v">#F6F4EE</span>;  --surf-3:<span class="v">#E8E5DC</span>;
+  --line:<span class="v">rgba(17,17,16,.10)</span>;  --line-hi:<span class="v">rgba(17,17,16,.24)</span>;
+  --text:<span class="v">#111110</span>;  --text-2:<span class="v">#57564F</span>;  --text-3:<span class="v">#8B8981</span>;
+  --amber:<span class="v">#F4B12E</span>;  --forest:<span class="v">#175646</span>;  --forest-2:<span class="v">#26775F</span>;
+  --mauve:<span class="v">#C4B4BA</span>; --cream:<span class="v">#FBFAF4</span>;
+}</pre>
+  </section>
+
+  <footer>
+    <p><b>Toolkit 01 — NOCTURNE.</b> Built from the WANDER reference. Best when the drop should
+      feel like a place you arrive at rather than a queue you process — colour does the sorting
+      before any number is read. Weakest at high row density: 26px cards and 56px pills cost
+      rows, so a 40-row table needs a compact variant.</p>
+    <p style="margin-bottom:0">All candidates, scores and revenue figures are synthetic
+      demonstration data. Portraits are authored placeholders.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement, btns=document.querySelectorAll('.tsw button');
+  function set(t){root.setAttribute('data-theme',t);
+    btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.set===t));});
+    try{localStorage.setItem('wt-01',t);}catch(e){}}
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set);});});
+  document.querySelectorAll('.seg').forEach(function(g){var bs=g.querySelectorAll('button');
+    bs.forEach(function(b){b.addEventListener('click',function(){
+      bs.forEach(function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');});});});
+  var saved=null; try{saved=localStorage.getItem('wt-01');}catch(e){}
+  if(saved){set(saved);}
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme:light)').matches){set('light');}
+})();
+</script>
+</body>
+</html>

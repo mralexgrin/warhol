@@ -1,0 +1,977 @@
+{
+  "creatorId": "celsiusofficial",
+  "asOf": null,
+  "observedThrough": "2026-08-06T16:18:10.471Z",
+  "observationCount": 155,
+  "brief": "US food and drink brands with a large short-form audience and nothing you can buy from them directly",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": true,
+  "escalatedWhy": "store — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 6700000,
+      "status": 200,
+      "url": "https://www.tiktok.com/@celsiusofficial",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 5380,
+      "status": 200,
+      "url": "https://www.youtube.com/@celsiusofficial",
+      "why": "CelsiusOfficial — the YouTube Data API resolved @celsiusofficial"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "status": 0,
+      "url": "https://www.instagram.com/celsiusofficial/",
+      "why": "robots.txt asks us not to look here"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@celsiusofficial",
+      "evidence": "https://www.youtube.com/@celsiusofficial",
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@celsiusofficial",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.681Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/celsiusofficial",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.681Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.681Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@celsiusofficial",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.517Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/celsiusofficial",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.517Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.517Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@celsiusofficial",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.879Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/celsiusofficial",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.879Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.879Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — celsius.com",
+      "evidence": "https://www.celsius.com/",
+      "placesLooked": 14,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.682Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@celsiusofficial",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.682Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.682Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.682Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.682Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.celsius.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — celsius.com",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.683Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.519Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/celsiusofficial?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/celsiusofficial",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.519Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.519Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.519Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.519Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.celsius.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — celsius.com",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.520Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.880Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/celsiusofficial?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/celsiusofficial",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.880Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.880Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.880Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.880Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.celsius.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — celsius.com",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.880Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 4 places including their own site · 2 wouldn't answer",
+      "evidence": null,
+      "placesLooked": 12,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.686Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.686Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/celsiusofficial",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:12:33.686Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.686Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/celsiusofficial",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:12:33.686Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://celsius.com",
+          "status": 200,
+          "why": "nothing to buy on their own site — we read 3 pages of celsius.com",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.686Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.523Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.523Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/celsiusofficial",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:16:23.523Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.523Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/celsiusofficial",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:16:23.523Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://celsius.com",
+          "status": 200,
+          "why": "nothing to buy on their own site — we read 3 pages of celsius.com",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.523Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.882Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.882Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/celsiusofficial",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:18:09.882Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.882Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/celsiusofficial",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:18:09.882Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://celsius.com",
+          "status": 200,
+          "why": "nothing to buy on their own site — we read 3 pages of celsius.com",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.882Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 2 places",
+      "evidence": null,
+      "placesLooked": 6,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.687Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.687Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.523Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.523Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.882Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/celsiusofficial",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.882Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 1 place",
+      "evidence": null,
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=CelsiusOfficial&entity=podcast&limit=5",
+          "status": 200,
+          "why": "2 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.786Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=CelsiusOfficial&entity=podcast&limit=5",
+          "status": 200,
+          "why": "2 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.691Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=CelsiusOfficial&entity=podcast&limit=5",
+          "status": 200,
+          "why": "2 shows came back, none of them theirs",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.929Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by a link they publish",
+      "why": "they link to it themselves",
+      "evidence": "https://www.celsius.com/links",
+      "placesLooked": 6,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.787Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.787Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.691Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.691Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.929Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://celsiusofficial.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.929Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.787Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.691Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.929Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.787Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.691Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.929Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T16:12:33.787Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T16:16:23.692Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T16:18:09.929Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": -0.944,
+    "recentPerMonth": 9.33,
+    "baselinePerMonth": 4.8,
+    "recentCount": 28,
+    "baselineCount": 44,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 275,
+    "sampled": 100,
+    "truncated": false,
+    "recentMedianViews": 1011,
+    "baselineMedianViews": 1503,
+    "line": "9.3 videos a month now, against 4.8 before that — up 94%, they are posting more; the recent ones are getting 33% fewer views"
+  },
+  "commentsRead": 16,
+  "audienceHistory": [
+    {
+      "audience": 6700000,
+      "at": "2026-08-06T16:12:31.812Z"
+    },
+    {
+      "audience": 6700000,
+      "at": "2026-08-06T16:16:21.846Z"
+    },
+    {
+      "audience": 6700000,
+      "at": "2026-08-06T16:18:08.056Z"
+    }
+  ],
+  "audience": 6700000,
+  "audienceWhy": "TikTok alone — nothing links the YouTube to it",
+  "audienceSeparate": [
+    {
+      "id": "youtube_profile",
+      "followers": 5380,
+      "url": "https://www.youtube.com/@celsiusofficial",
+      "why": "nothing on either page links the YouTube to the TikTok, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 10,
+    "brief": "US food and drink brands with a large short-form audience and nothing you can buy from them directly",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 10.2,
+      "max": 35,
+      "lines": [
+        {
+          "item": "store",
+          "label": "Store",
+          "half": "built",
+          "base": 9,
+          "effective": 9,
+          "demandAligned": false,
+          "why": "not there · we looked in 4 places including their own site · 2 wouldn't answer"
+        },
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 2 places"
+        },
+        {
+          "item": "podcast",
+          "label": "Podcast",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 1 place"
+        }
+      ],
+      "share": 0.291,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 10.2,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "line": "9.3 videos a month now, against 4.8 before that — up 94%, they are posting more; the recent ones are getting 33% fewer views",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "not_judged",
+      "because": "the model pass did not run, and Fit is a judgment — no model, no verdict"
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "why": "our two looks are 0 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 1,
+      "resolved": 6,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 0
+    },
+    "threshold": 78,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "not_judged",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 78,
+    "places": 23,
+    "from": "2026-08-06T16:12:31.686Z",
+    "to": "2026-08-06T16:18:10.471Z"
+  }
+}

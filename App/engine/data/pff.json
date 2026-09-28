@@ -1,0 +1,3741 @@
+{
+  "creatorId": "pff",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:11:00.488Z",
+  "observationCount": 749,
+  "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": false,
+  "escalatedWhy": "we looked in 24 places — they already have a youtube channel, newsletter and store. We didn't go further.",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@pff",
+      "why": "the page loaded and there is nothing there"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 11100,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/vO4iHqnvyNDB9IejKp4HgXjLL2aIuAazHbVEznL9reQkrntBo733nNycQq1ZseMRzpXvRtczLDE=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@pff",
+      "why": "Philly FireFeed — the YouTube Data API resolved @pff"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/pff/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 400,
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pff.bsky.social",
+      "why": "HTTP 400 with nothing recognisable on the page"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@pff",
+      "evidence": "https://www.youtube.com/@pff",
+      "placesLooked": 25,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@pff",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.781Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.782Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.782Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/@phillyfirefeeds",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.783Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@pff",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.841Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.841Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.841Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@pff",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.251Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.251Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.251Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@pff",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.944Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.944Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.944Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/@PhillyFireFeed",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.944Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@pff",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.494Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.494Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.494Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/PhillyFireFeed",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.494Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@pff",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:31.028Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:31.028Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:31.028Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@pff",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:41.525Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:41.526Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:41.526Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@pff",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:26.259Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/pff",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:26.260Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/pff",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:26.260Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@pff",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:44.612Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:44.612Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:44.612Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@pff",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:18.700Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:18.700Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:18.700Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@pff",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:43.871Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:43.871Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:43.871Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@pff",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:49.985Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:49.986Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:49.986Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/phillyfireefeed",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:49.986Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at productforfounders.com — not confirmed as theirs",
+      "evidence": "https://www.productforfounders.com/",
+      "placesLooked": 44,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "inconclusive",
+          "url": "https://pff.substack.com/",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.785Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/pff?searching=profile",
+          "status": 429,
+          "why": "redirected to substack.com/search/pff",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.786Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://www.productforfounders.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.786Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.786Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://pff.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.786Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://phillyfirefeeds.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.786Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "inconclusive",
+          "url": "https://pff.substack.com/",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.842Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@pff",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.842Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://www.productforfounders.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.842Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.842Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://pff.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.842Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://phillyfireef.com/newsletter",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.842Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://pff.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/pff?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/pff",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://www.productforfounders.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://pff.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.phillyfireedeed.com/newsletter",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://pff.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.946Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@pff",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.946Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://www.productforfounders.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.946Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.946Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://pff.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.946Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://phillyfirefeeds.com/newsletter",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.946Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://pff.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.497Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/pff?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/pff",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.497Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://www.productforfounders.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.497Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.497Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://pff.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.497Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.phillyfirefeed.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.497Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.597Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.597Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.597Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.597Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.598Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.598Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://pff.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.599Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@pff",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.599Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://www.productforfounders.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.600Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.600Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://pff.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.600Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.770Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.770Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.771Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.771Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.771Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.771Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://pff.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.774Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@pff",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.774Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://www.productforfounders.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.774Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.774Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://pff.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.774Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.725Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.725Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.726Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.727Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.728Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.728Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://pff.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.732Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/pff?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/pff",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.733Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://www.productforfounders.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.733Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.733Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://pff.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.734Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.115Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.115Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.115Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.115Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.115Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.115Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://pff.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.116Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@pff",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.116Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://www.productforfounders.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.117Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.117Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://pff.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.117Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.863Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.864Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.864Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.864Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.864Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.864Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://pff.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.869Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@pff",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.869Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://www.productforfounders.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.869Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.869Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://pff.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.869Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.377Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.377Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.378Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.378Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.378Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.378Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://pff.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.379Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@pff",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.379Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://www.productforfounders.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.379Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.379Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://pff.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.379Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.246Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.246Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.246Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.246Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.247Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.productforfounders.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.247Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://pff.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.250Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@pff",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.250Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://www.productforfounders.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.250Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.250Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://pff.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.250Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.phillyfireefeed.com/newsletter",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.250Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at pff.gumroad.com — not confirmed as theirs",
+      "evidence": "https://pff.gumroad.com/",
+      "placesLooked": 29,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://pff.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.786Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://pff.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.786Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:34:55.786Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.787Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:34:55.787Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.phillyfirefeeds.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.787Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://pff.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.842Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://pff.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.842Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:54:43.843Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.843Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:54:43.843Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://phillyfireef.com/store",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.843Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://pff.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://pff.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.phillyfireedeed.com/store",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://pff.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.947Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://pff.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.947Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:45:22.947Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.947Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:45:22.947Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.phillyfirefeeds.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.947Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://pff.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.498Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://pff.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.498Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:49:50.498Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.498Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:49:50.498Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.phillyfirefeed.com/store",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.498Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://pff.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.600Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://pff.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.600Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:28:33.600Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.600Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:28:33.600Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://pff.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.775Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://pff.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.775Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:35:43.775Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.775Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:35:43.775Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://pff.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.734Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://pff.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.734Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:30:28.734Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.734Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:30:28.734Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://pff.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.117Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://pff.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.117Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:59:47.117Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.117Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:59:47.117Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://pff.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.870Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://pff.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.870Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:27:20.870Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.870Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:27:20.870Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://pff.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.379Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://pff.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.379Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:53:46.379Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.379Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:53:46.380Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://pff.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.251Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://pff.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.251Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:11:00.251Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.251Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/pff",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:11:00.252Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.phillyfireefeed.com/store",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.252Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 29,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=25380946",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.787Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.787Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=25380946",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.843Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.843Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://phillyfireef.com/membership",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:43.843Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=25380946",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.phillyfireedeed.com/membership",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.253Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=25380946",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.947Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.947Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/phillyfirefeeds",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.947Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=25380946",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.498Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.499Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.phillyfirefeed.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.499Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=25380946",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.601Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.601Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=25380946",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.776Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.776Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=25380946",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.735Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.735Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=25380946",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.117Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.117Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=25380946",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.870Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.870Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=25380946",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.380Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.380Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=25380946",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.253Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/pff",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.253Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.phillyfireefeed.com/membership",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.253Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 2 places",
+      "evidence": null,
+      "placesLooked": 16,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Philly%20FireFeed&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.978Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Philly%20FireFeed&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-06T21:54:44.278Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Philly%20FireFeed&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.521Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.phillyfireedeed.com/podcast",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.521Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Philly%20FireFeed&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.977Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/phillyfirefeeds",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.977Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Philly%20FireFeed&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.515Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.phillyfirefeed.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.515Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Philly%20FireFeed&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.830Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Philly%20FireFeed&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.803Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Philly%20FireFeed&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.887Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Philly%20FireFeed&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.333Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Philly%20FireFeed&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.890Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Philly%20FireFeed&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.519Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Philly%20FireFeed&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.322Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.phillyfireefeed.com/podcast",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.322Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by the feed it publishes — a post byline reads \"PFF.com\"",
+      "why": "2 of 5 places wouldn't answer",
+      "evidence": null,
+      "placesLooked": 25,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.pff.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.980Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://pff.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.980Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://phillyfirefeeds.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.980Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.phillyfirefeeds.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.980Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "inconclusive",
+          "url": "https://twitter.com/phillyfirefeeds",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.980Z"
+        },
+        {
+          "place": "proposed_5",
+          "outcome": "inconclusive",
+          "url": "https://instagram.com/phillyfirefeeds",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.980Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "inconclusive",
+          "url": "https://linktr.ee/phillyfirefeeds",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.980Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.pff.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:44.279Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://pff.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:44.279Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://phillyfireef.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:44.279Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.phillyfireef.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:44.279Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "inconclusive",
+          "url": "https://twitter.com/PhillyFireFeed",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T21:54:44.279Z"
+        },
+        {
+          "place": "proposed_5",
+          "outcome": "inconclusive",
+          "url": "https://instagram.com/PhillyFireFeed",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T21:54:44.280Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "inconclusive",
+          "url": "https://twitter.com/pff",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T21:54:44.280Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.pff.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.523Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://pff.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.523Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.phillyfireedeed.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.523Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://phillyfireedeed.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.523Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "inconclusive",
+          "url": "https://twitter.com/phillyfireedeed",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.523Z"
+        },
+        {
+          "place": "proposed_5",
+          "outcome": "inconclusive",
+          "url": "https://instagram.com/phillyfireedeed",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.523Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.pff.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.978Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://pff.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.978Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.phillyfirefeeds.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.978Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://twitter.com/phillyfirefeeds",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.978Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "inconclusive",
+          "url": "https://instagram.com/phillyfirefeeds",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.978Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.pff.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.516Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://pff.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.516Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.phillyfirefeed.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.516Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://twitter.com/PhillyFireFeed",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.516Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "inconclusive",
+          "url": "https://instagram.com/PhillyFireFeed",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.516Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.pff.com/feed",
+          "status": 200,
+          "why": "25 posts read from Pro Football Focus — a post byline reads \"PFF.com\"",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.896Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.pff.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.898Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://pff.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.898Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.pff.com/feed",
+          "status": 200,
+          "why": "25 posts read from Pro Football Focus — a post byline reads \"PFF.com\"",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.865Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.pff.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.867Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://pff.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.867Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.pff.com/feed",
+          "status": 200,
+          "why": "25 posts read from Pro Football Focus — the feed is published by \"Pro Football Focus\", which is not them",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.987Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://www.pff.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one — but the feed is published by \"Pro Football Focus\", which is not them",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.988Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://pff.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.988Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.pff.com/feed",
+          "status": 200,
+          "why": "25 posts read from Pro Football Focus — the feed is published by \"Pro Football Focus\", which is not them",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.392Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://www.pff.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one — but the feed is published by \"Pro Football Focus\", which is not them",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.392Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://pff.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.392Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.pff.com/feed",
+          "status": 200,
+          "why": "25 posts read from Pro Football Focus — the feed is published by \"Pro Football Focus\", which is not them",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.951Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://www.pff.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one — but the feed is published by \"Pro Football Focus\", which is not them",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.951Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://pff.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.951Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.pff.com/feed",
+          "status": 200,
+          "why": "25 posts read from Pro Football Focus — the feed is published by \"Pro Football Focus\", which is not them",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.585Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://www.pff.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one — but the feed is published by \"Pro Football Focus\", which is not them",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.585Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://pff.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.586Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.pff.com/feed",
+          "status": 200,
+          "why": "25 posts read from Pro Football Focus — the feed is published by \"Pro Football Focus\", which is not them",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.486Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://www.pff.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one — but the feed is published by \"Pro Football Focus\", which is not them",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.486Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://pff.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.486Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.phillyfireefeed.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.486Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://twitter.com/phillyfireefeed",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.486Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "inconclusive",
+          "url": "https://instagram.com/phillyfireefeed",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.487Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.980Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:54:44.280Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.523Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.978Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.517Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.899Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.867Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.989Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.392Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.952Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.586Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.487Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.981Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:54:44.280Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.524Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.978Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.517Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.899Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.868Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "we could not read their captions",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.990Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.392Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.952Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.586Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.487Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T20:34:55.981Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:54:44.280Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:57:55.524Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:45:22.978Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:49:50.517Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:28:33.899Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:35:43.868Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:30:28.991Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T19:59:47.392Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T20:27:20.952Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:53:46.586Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:11:00.487Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": -0.012,
+    "recentPerMonth": 33,
+    "baselinePerMonth": 32.6,
+    "recentCount": 99,
+    "baselineCount": 101,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 93,
+    "sampled": 200,
+    "truncated": true,
+    "recentMedianViews": 115,
+    "baselineMedianViews": 132,
+    "unit": "videos",
+    "line": "33 videos a month, steady against 33 before that"
+  },
+  "samples": [
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "8-9-26, 3810 Old York Rd, Philadelphia, PA, All Hands Junkyard Fire",
+      "url": "https://www.youtube.com/watch?v=LrF0zqIKy68",
+      "at": "2026-08-13T11:37:42Z",
+      "thumbnail": "https://i.ytimg.com/vi/LrF0zqIKy68/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 57,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:43.249Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "8-9-26, 1236 Bayview Rd, Odessa, New Castle Co, DE, All Hands Barn Fire",
+      "url": "https://www.youtube.com/watch?v=mQ7Zo9dL-u0",
+      "at": "2026-08-13T11:37:19Z",
+      "thumbnail": "https://i.ytimg.com/vi/mQ7Zo9dL-u0/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 20,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:43.249Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "8-8-26, 1121 Terrill St, Chester, Delaware Co, PA, 2 Alarm Dwelling Fire",
+      "url": "https://www.youtube.com/watch?v=yflwY0jW1FI",
+      "at": "2026-08-13T11:36:37Z",
+      "thumbnail": "https://i.ytimg.com/vi/yflwY0jW1FI/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 56,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:43.249Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "8-7-26, 3207 Leeland Dr, Bensalem Twp, Bucks Co, PA, All Hands Dwelling Fire",
+      "url": "https://www.youtube.com/watch?v=_PW2UJCLAN0",
+      "at": "2026-08-13T11:36:11Z",
+      "thumbnail": "https://i.ytimg.com/vi/_PW2UJCLAN0/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 65,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:43.249Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Pro Football Focus",
+      "kind": "writing",
+      "title": "2026 NFL player rankings: PFF ranks the league’s best at every position",
+      "url": "https://www.pff.com/news/nfl-player-rankings/",
+      "at": "2026-08-10T12:52:52.000Z",
+      "thumbnail": null,
+      "excerpt": "PFF's 2026 NFL player rankings break down the league's best players at every position entering the new season. Josh Allen headlines the quarterback rankings, while reigning Defensive Player of the Year Myles Garrett leads the NFL's edge defenders. Explore every position using PFF grades, advanced me",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-10T21:35:43.868Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Pro Football Focus",
+      "kind": "writing",
+      "title": "Tampa Bay Buccaneers 2026 preview: New era begins without Mike Evans, Lavonte David",
+      "url": "https://www.pff.com/news/nfl-tampa-bay-buccaneers-2026-preview/",
+      "at": "2026-08-10T12:29:34.000Z",
+      "thumbnail": null,
+      "excerpt": "The Tampa Bay Buccaneers enter 2026 without franchise fixtures Mike Evans and Lavonte David, but a revamped edge group provides reason for optimism. First-round pick Rueben Bain Jr. joins YaYa Diaby and Al-Quadin Muhammad in a deep pass-rush rotation, while Emeka Egbuka leads an evolving receiving c",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-10T21:35:43.869Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Pro Football Focus",
+      "kind": "writing",
+      "title": "New Orleans Saints 2026 preview: Tyler Shough looks to build on promising rookie season",
+      "url": "https://www.pff.com/news/nfl-new-orleans-saints-2026-preview/",
+      "at": "2026-08-10T12:00:24.000Z",
+      "thumbnail": null,
+      "excerpt": "The New Orleans Saints enter 2026 with Tyler Shough looking to build on a promising rookie season after leading all first-year quarterbacks in PFF passing grade. First-round receiver Jordyn Tyson joins Chris Olave in a revamped supporting cast, while Kelvin Banks Jr. enters Year 2 as a breakout cand",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-10T21:35:43.869Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "8-3-26, 111 NJ 17, Hasbrouck Hts, Bergen Co, NJ, 3 Alarm Building Fire",
+      "url": "https://www.youtube.com/watch?v=ohWSSJVMIWw",
+      "at": "2026-08-03T16:02:12Z",
+      "thumbnail": "https://i.ytimg.com/vi/ohWSSJVMIWw/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 86,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:43.250Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "8-3-26, 2944 Jefferson Ave, Abington Twp, Montgomery Co, PA, All Hands Dwelling Fire",
+      "url": "https://www.youtube.com/watch?v=mCUxq5xdjWk",
+      "at": "2026-08-03T11:52:46Z",
+      "thumbnail": "https://i.ytimg.com/vi/mCUxq5xdjWk/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 159,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T20:27:15.928Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "8-3-26, 625 Lawn Ave, W Rockhill Twp, Bucks Co, PA, All Hands Garage Fire",
+      "url": "https://www.youtube.com/watch?v=TKSYA9Wxfxg",
+      "at": "2026-08-03T11:52:37Z",
+      "thumbnail": "https://i.ytimg.com/vi/TKSYA9Wxfxg/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 103,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T20:27:15.928Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "8-3-26, 16 Grove Ln, Bristol Twp, Bucks Co, PA, All Hands Dwelling Fire",
+      "url": "https://www.youtube.com/watch?v=NBWgdGMsa8M",
+      "at": "2026-08-03T11:52:15Z",
+      "thumbnail": "https://i.ytimg.com/vi/NBWgdGMsa8M/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 91,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T20:27:15.928Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "8-2-26, 810 6th Ave, Bristol Twp, Bucks Co, PA, All Hands Dwelling Fire",
+      "url": "https://www.youtube.com/watch?v=StzshWSMrlg",
+      "at": "2026-08-03T01:18:55Z",
+      "thumbnail": "https://i.ytimg.com/vi/StzshWSMrlg/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 180,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T20:27:15.928Z",
+      "status": null
+    }
+  ],
+  "headline": null,
+  "samplesSearched": {
+    "count": 0,
+    "why": "they link none of their own posts anywhere we can read"
+  },
+  "commentsRead": null,
+  "audienceHistory": [
+    {
+      "audience": 11100,
+      "at": "2026-08-06T20:34:49.319Z"
+    },
+    {
+      "audience": 11100,
+      "at": "2026-08-06T21:54:37.766Z"
+    },
+    {
+      "audience": 11100,
+      "at": "2026-08-06T21:57:49.073Z"
+    },
+    {
+      "audience": 11100,
+      "at": "2026-08-07T11:45:17.181Z"
+    },
+    {
+      "audience": 11100,
+      "at": "2026-08-07T11:49:45.082Z"
+    },
+    {
+      "audience": 11100,
+      "at": "2026-08-10T21:28:27.114Z"
+    },
+    {
+      "audience": 11100,
+      "at": "2026-08-10T21:35:38.258Z"
+    },
+    {
+      "audience": 11100,
+      "at": "2026-08-12T15:30:15.347Z"
+    },
+    {
+      "audience": 11100,
+      "at": "2026-08-12T19:59:41.534Z"
+    },
+    {
+      "audience": 11100,
+      "at": "2026-08-12T20:27:15.928Z"
+    },
+    {
+      "audience": 11100,
+      "at": "2026-08-14T12:53:40.835Z"
+    },
+    {
+      "audience": 11100,
+      "at": "2026-08-14T13:10:43.249Z"
+    }
+  ],
+  "audience": 11100,
+  "audienceWhy": "YouTube alone",
+  "audienceSeparate": [],
+  "score": {
+    "total": 5,
+    "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 5.1,
+      "max": 35,
+      "lines": [
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        },
+        {
+          "item": "podcast",
+          "label": "Podcast",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 2 places"
+        }
+      ],
+      "share": 0.145,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 5.1,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "line": "33 videos a month, steady against 33 before that",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "not_judged",
+      "because": "the model pass did not run, and Fit is a judgment — no model, no verdict"
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 8 days apart, the trend needs 90",
+      "why": "our two looks are 8 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.5,
+      "resolved": 3,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 2
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": false,
+      "fit": "not_judged",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 354,
+    "places": 68,
+    "from": "2026-08-06T20:34:49.292Z",
+    "to": "2026-08-14T13:11:00.488Z"
+  }
+}

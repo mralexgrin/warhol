@@ -1,0 +1,309 @@
+<!doctype html>
+<!--
+ROUGH SKETCH 6 — the last two open questions before v4.
+
+1. The "Missing" label. Demand and Missing are BOTH part of the Monetization
+   Gap pillar, which is why both came out teal — correct by the scoring model,
+   confusing on screen. Three treatments that fix the legibility differently.
+
+2. The report header handoff. The tall header is the arrival; a compact bar
+   takes over on scroll carrying back, identity, ring and the verbs. Scroll the
+   box to watch the handoff.
+-->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sketch 6 — signal colour, header handoff</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..800;1,300..800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../prototypes/v3/alloy.css">
+<style>
+  body { padding: 0; }
+  .sketchbar { position: sticky; top: 0; z-index: 60; display: flex; align-items: center; gap: var(--s4);
+    flex-wrap: wrap; padding: 12px 22px; background: var(--ink); color: var(--on-ink); }
+  .sketchbar b { font-family: var(--disp); font-size: 14px; letter-spacing: -.02em; }
+  .sketchbar .note { color: rgba(242,240,247,.72); font-size: 12.5px; margin: 0; max-width: 46ch; }
+  .sketchbar .tsw { margin-left: auto; background: rgba(255,255,255,.10); border-color: transparent; }
+  .sketchbar .tsw button { color: rgba(242,240,247,.78); }
+  .sketchbar .tsw button[aria-pressed="true"] { background: var(--on-ink); color: var(--ink); }
+  .pagewrap { padding: 22px; background:
+    radial-gradient(58% 62% at 12% 8%, var(--butter), transparent 62%),
+    radial-gradient(52% 58% at 88% 14%, var(--teal), transparent 62%),
+    radial-gradient(64% 70% at 50% 104%, var(--lilac), transparent 66%), var(--page); }
+  .page { max-width: 1140px; margin: 0 auto; padding: var(--s6) var(--s6) var(--s8);
+    background: var(--slab); border-radius: var(--r-slab); box-shadow: var(--el-slab); }
+  .sec { padding-top: var(--s7); }
+  .sec-title { font-size: clamp(22px,3vw,32px); }
+  .sec-note { max-width: 68ch; font-size: 13.5px; color: var(--text-2); line-height: 1.6; margin-top: 8px; }
+  .verdict-note { margin-top: var(--s3); font-size: 12.5px; color: var(--text-3); line-height: 1.65; max-width: 86ch; }
+  .lab2 { font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--text-3); display: block; margin-bottom: var(--s3); }
+  .opt { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); padding: var(--s5); }
+  .trio { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s4); margin-top: var(--s4); }
+  @media (max-width:980px){ .trio { grid-template-columns: 1fr } }
+
+  /* the ring, per sketch 5 option A, banded on the 75% floor */
+  .rg { position: relative; border-radius: 50%; display: grid; place-items: center; flex: none; }
+  .rg::before { content: ""; position: absolute; inset: 0; border-radius: 50%;
+    background: conic-gradient(from -90deg, var(--rc, var(--teal)) var(--pct,90%), var(--panel-3) 0); }
+  .rg .in { position: relative; z-index: 1; width: 100%; height: 100%; border-radius: 50%;
+    background: var(--panel); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .rg .in b { font-family: var(--disp); font-weight: 700; letter-spacing: -.045em; line-height: 1;
+    font-variant-numeric: tabular-nums; }
+  .rg .in span { font-size: 8.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--text-3); margin-top: 2px; }
+  .rg--xs { width: 44px; height: 44px; padding: 4px; } .rg--xs .in b { font-size: 15px; } .rg--xs .in span { display: none; }
+  .rg--sm { width: 54px; height: 54px; padding: 5px; } .rg--sm .in b { font-size: 18px; } .rg--sm .in span { display: none; }
+  .rg--lg { width: 104px; height: 104px; padding: 9px; } .rg--lg .in b { font-size: 30px; }
+  .rg--warn { --rc: var(--butter); } .rg--stop { --rc: var(--stop); }
+
+  /* ---- verbs, option A ---- */
+  .vbtn { display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 9px 16px; border-radius: var(--r-pill); border: 1px solid transparent;
+    font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+  .v-go { background: #1F7A66; color: #fff; } .v-go:hover { background: #26907a; }
+  .v-hold { background: var(--butter); color: var(--on-field); } .v-hold:hover { background: var(--butter-h); }
+  .v-no { background: transparent; color: var(--text-2); border-color: var(--line-hi); }
+  .v-no:hover { background: var(--panel-2h); color: var(--text); }
+
+  /* ---- the three signals ---- */
+  .rows { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
+  .r2 { display: grid; grid-template-columns: 24px auto minmax(0,1fr) 128px; gap: var(--s4);
+    align-items: start; padding: var(--s4) var(--s5); border-top: 1px solid var(--line); }
+  .r2:first-child { border-top: 0; }
+  .rk { font-size: 13px; font-weight: 700; color: var(--text-3); padding-top: 12px; }
+  .nm { display: block; font-family: var(--disp); font-size: 17px; font-weight: 700; letter-spacing: -.03em; }
+  .hd { display: block; font-size: 12px; color: var(--text-3); margin-top: 2px; }
+  .sigs { display: flex; flex-direction: column; gap: 7px; margin-top: 11px; }
+  .s3 { display: grid; grid-template-columns: 84px 1fr; gap: 12px; align-items: baseline; font-size: 13.5px; }
+  .s3 .k { font-size: 9.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase;
+    display: flex; align-items: center; gap: 6px; }
+  .s3 .v { font-weight: 600; }
+  .dot { width: 8px; height: 8px; border-radius: 2px; display: block; flex: none; }
+  .dot--fill { background: var(--teal-d); }
+  .dot--hollow { background: transparent; border: 1.5px solid var(--teal-d); }
+  .dot--butter { background: var(--butter-d); }
+  .dot--lilac { background: var(--lilac-d); }
+  .k-teal { color: var(--teal-d); } .k-butter { color: var(--butter-d); }
+  .k-lilac { color: var(--lilac-d); } .k-quiet { color: var(--text-3); }
+  .acts { display: flex; flex-direction: column; gap: 6px; }
+
+  /* ---- header handoff ---- */
+  .fake { height: 440px; overflow-y: auto; background: var(--panel); border: 1px solid var(--line);
+    border-radius: var(--r-lg); margin-top: var(--s4); position: relative; }
+  .tallhd { padding: var(--s5); display: flex; gap: var(--s5); align-items: flex-start; flex-wrap: wrap;
+    border-bottom: 1px solid var(--line); }
+  .tallhd h3 { font-size: clamp(24px,3vw,32px); letter-spacing: -.042em; margin-top: 10px; }
+  .tallhd .who { flex: 1; min-width: 230px; }
+  .idrow { display: flex; flex-wrap: wrap; gap: 6px; margin-top: var(--s4); }
+  .plat { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border: 1px solid var(--line);
+    border-radius: var(--r-pill); background: var(--panel); font-size: 12px; }
+  .plat .f { font-size: 11px; color: var(--text-3); }
+  .rcap { text-align: center; margin-top: 9px; }
+  .rcap .a { font-size: 12px; color: var(--text-2); }
+  .rcap .b { font-size: 12px; color: var(--text-3); margin-top: 3px; }
+  .t-gap { color: var(--teal-d); } .t-strain { color: var(--butter-d); }
+  .compact { position: sticky; top: 0; z-index: 6; display: flex; align-items: center; gap: var(--s3);
+    padding: 10px var(--s5); background: var(--panel); border-bottom: 1px solid var(--line);
+    opacity: 0; transform: translateY(-6px); pointer-events: none;
+    transition: opacity .18s ease, transform .18s var(--ease); }
+  .compact.on { opacity: 1; transform: none; pointer-events: auto; }
+  .compact .back { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line-hi);
+    background: var(--panel); color: var(--text-2); display: flex; align-items: center;
+    justify-content: center; cursor: pointer; flex: none; }
+  .compact .back:hover { background: var(--panel-2h); color: var(--text); }
+  .compact .who2 { flex: 1; min-width: 0; }
+  .compact .who2 b { display: block; font-family: var(--disp); font-size: 15px; font-weight: 700; letter-spacing: -.03em; }
+  .compact .who2 span { font-size: 11px; color: var(--text-3); }
+  .compact .verbs { display: flex; gap: 6px; flex: none; }
+  .fakebody { padding: var(--s5); }
+  .fakebody p { font-size: 14px; line-height: 1.7; color: var(--text-2); margin-top: var(--s3); max-width: 62ch; }
+  .fdisc { border-top: 1px solid var(--line); padding: var(--s4) var(--s5); display: flex;
+    align-items: center; gap: var(--s3); cursor: pointer; }
+  .fdisc:hover { background: var(--panel-2); }
+  .fdisc .t { font-size: 14px; font-weight: 600; }
+  .fdisc .s { font-size: 12px; color: var(--text-3); }
+  .fdisc .chev { margin-left: auto; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line-hi);
+    display: flex; align-items: center; justify-content: center; color: var(--text-2);
+    transition: transform var(--dur) var(--ease); }
+  .fdisc.open .chev { transform: rotate(180deg); }
+
+  /* ---- surfaces, spelled out ---- */
+  .inv { display: flex; flex-direction: column; gap: 9px; margin-top: var(--s3); }
+  .inv li { display: grid; grid-template-columns: 12px 1fr auto; gap: 10px; align-items: center; font-size: 13px; }
+  .inv i { width: 12px; height: 12px; border-radius: 3px; background: var(--teal-d); display: block; }
+  .inv .s { font-size: 11.5px; color: var(--text-3); }
+  .deft { appearance: none; border: 1px solid var(--line-hi); background: transparent; color: var(--text-3);
+    width: 16px; height: 16px; border-radius: 50%; font-size: 10px; font-weight: 700; line-height: 1;
+    cursor: pointer; padding: 0; margin-left: 5px; display: inline-flex; align-items: center; justify-content: center; }
+  .deft:hover { border-color: var(--text-3); color: var(--text); }
+</style>
+</head>
+<body>
+
+<div class="sketchbar">
+  <b>Sketch 6</b>
+  <p class="note">The “Missing” colour, and how the report header hands off.</p>
+  <div class="tsw" role="group" aria-label="Theme">
+    <button data-t="light" aria-pressed="false">Light</button>
+    <button data-t="dark" aria-pressed="true">Dark</button>
+  </div>
+</div>
+
+<div class="pagewrap"><div class="page">
+
+  <!-- ============ 1 ============ -->
+  <section class="sec" style="padding-top:var(--s5)">
+    <h2 class="sec-title">1 · Why Demand and Missing came out the same colour</h2>
+    <p class="sec-note">They are both inside the <b>Monetization Gap</b> pillar — demand is the buy signal,
+      missing is the owned-channel absence, and together with sponsorship absence they make the 55/60.
+      Only <b>Timing</b> belongs to Operator Strain. So teal-teal-butter is correct by the scoring model
+      and confusing on screen, which is what you spotted. Three ways out.</p>
+
+    <div class="opt" style="margin-top:var(--s4)"><span class="lab2">A · purple for Missing (your suggestion)</span>
+      <div class="rows"><div class="r2"><span class="rk">1</span>
+        <div class="rg rg--sm" style="--pct:92%"><span class="in"><b>87</b></span></div>
+        <div><span class="nm">Marguerite Vaillancourt</span><span class="hd">@marguerite.bakes · TikTok · 1.2M</span>
+          <div class="sigs">
+            <div class="s3"><span class="k k-teal"><i class="dot dot--fill"></i>Demand</span><span class="v">1,940 people asked to buy</span></div>
+            <div class="s3"><span class="k k-lilac"><i class="dot dot--lilac"></i>Missing</span><span class="v">No newsletter, no site, no store</span></div>
+            <div class="s3"><span class="k k-butter"><i class="dot dot--butter"></i>Timing</span><span class="v">Says she can’t keep up — 3 times in 60 days</span></div>
+          </div></div>
+        <div class="acts"><button class="vbtn v-go">Promote</button><button class="vbtn v-hold">Watch</button><button class="vbtn v-no">Pass</button></div>
+      </div></div>
+      <p class="verdict-note">Instantly distinct. The cost: lilac currently means <i>Warhol speaking about
+        itself</i> — it is the definition popovers and the dated lens. Using it here spends that meaning on
+        the most-viewed surface in the product, so those two rare surfaces would need a new colour.</p>
+    </div>
+
+    <div class="opt" style="margin-top:var(--s4)"><span class="lab2">B · same pillar, filled vs hollow</span>
+      <div class="rows"><div class="r2"><span class="rk">1</span>
+        <div class="rg rg--sm" style="--pct:92%"><span class="in"><b>87</b></span></div>
+        <div><span class="nm">Marguerite Vaillancourt</span><span class="hd">@marguerite.bakes · TikTok · 1.2M</span>
+          <div class="sigs">
+            <div class="s3"><span class="k k-teal"><i class="dot dot--fill"></i>Demand</span><span class="v">1,940 people asked to buy</span></div>
+            <div class="s3"><span class="k k-teal"><i class="dot dot--hollow"></i>Missing</span><span class="v">No newsletter, no site, no store</span></div>
+            <div class="s3"><span class="k k-butter"><i class="dot dot--butter"></i>Timing</span><span class="v">Says she can’t keep up — 3 times in 60 days</span></div>
+          </div></div>
+        <div class="acts"><button class="vbtn v-go">Promote</button><button class="vbtn v-hold">Watch</button><button class="vbtn v-no">Pass</button></div>
+      </div></div>
+      <p class="verdict-note">Filled means something is there, hollow means it is not — the same logic the
+        verification marks already use, where absence is a <i>shape</i> rather than a colour. Says
+        “these two are one pillar” and still separates them. Weakest at a glance of the three.</p>
+    </div>
+
+    <div class="opt" style="margin-top:var(--s4)"><span class="lab2">C · colour only what is coloured in the score</span>
+      <div class="rows"><div class="r2"><span class="rk">1</span>
+        <div class="rg rg--sm" style="--pct:92%"><span class="in"><b>87</b></span></div>
+        <div><span class="nm">Marguerite Vaillancourt</span><span class="hd">@marguerite.bakes · TikTok · 1.2M</span>
+          <div class="sigs">
+            <div class="s3"><span class="k k-teal"><i class="dot dot--fill"></i>Demand</span><span class="v">1,940 people asked to buy</span></div>
+            <div class="s3"><span class="k k-quiet">Missing</span><span class="v">No newsletter, no site, no store</span></div>
+            <div class="s3"><span class="k k-butter"><i class="dot dot--butter"></i>Timing</span><span class="v">Says she can’t keep up — 3 times in 60 days</span></div>
+          </div></div>
+        <div class="acts"><button class="vbtn v-go">Promote</button><button class="vbtn v-hold">Watch</button><button class="vbtn v-no">Pass</button></div>
+      </div></div>
+      <p class="verdict-note">Two coloured, one quiet — and the quiet one is the absence, which is
+        arguably right: you cannot colour a thing that is not there. Fewest colours, keeps lilac free.</p>
+    </div>
+  </section>
+
+  <!-- ============ 2 ============ -->
+  <section class="sec">
+    <h2 class="sec-title">2 · The header handoff</h2>
+    <p class="sec-note">To answer directly: the tall header is <b>not</b> sticky — at ~250px it would eat a
+      third of the viewport permanently. It is the arrival, and it scrolls away. A compact bar then takes
+      over carrying <b>back, name, ring and the two verbs</b>, so you can decide from anywhere in the
+      report. Scroll the box, then open a section — the bar holds and your position holds.</p>
+
+    <div class="fake" id="fake">
+      <div class="compact" id="cmp">
+        <button class="back" aria-label="Back to the drop"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <div class="rg rg--xs" style="--pct:92%"><span class="in"><b>87</b></span></div>
+        <div class="who2"><b>Marguerite Vaillancourt</b><span>87/100 · 92% resolved · gap 55 · strain 32</span></div>
+        <div class="verbs"><button class="vbtn v-go">Promote</button><button class="vbtn v-hold">Watch</button><button class="vbtn v-no">Pass</button></div>
+      </div>
+
+      <div class="tallhd">
+        <div class="who"><span class="pill pill--solid">Scout Report</span>
+          <h3>Marguerite Vaillancourt</h3>
+          <p class="hd">@marguerite.bakes · TikTok · 1,201,200 total audience</p>
+          <p style="font-size:15px;color:var(--text-2);margin-top:10px">Laminated dough, filmed in a single unbroken take. No music, no cuts.</p>
+          <div class="idrow"><span class="plat">TikTok <span class="f">842K</span></span>
+            <span class="plat">Instagram <span class="f">311K</span></span>
+            <span class="plat">YouTube <span class="f">48K</span></span></div></div>
+        <div><div class="rg rg--lg" style="--pct:92%"><span class="in"><b>87</b><span>score</span></span></div>
+          <div class="rcap"><div class="a">92% of checks resolved</div>
+            <div class="b">gap <b class="t-gap">55</b>/60 · strain <b class="t-strain">32</b>/40</div></div></div>
+      </div>
+
+      <div class="fakebody"><span class="lab2">The case</span>
+        <p>An audience of 1.2M is asking to buy something that does not exist. Warhol counted <b>1,940 purchase-intent comments</b> in the sampled window.</p>
+        <span class="lab2" style="margin-top:var(--s5)">Monetization inventory <button class="deft">?</button></span>
+        <ul class="inv"><li><i></i><span>Newsletter</span><span class="s">6 surfaces</span></li>
+          <li><i></i><span>Website</span><span class="s">4 surfaces</span></li>
+          <li><i></i><span>Storefront</span><span class="s">5 surfaces</span></li>
+          <li><i></i><span>Membership</span><span class="s">3 surfaces</span></li></ul>
+        <p>Keep scrolling to watch the bar take over.</p><p>&nbsp;</p>
+      </div>
+      <div class="fdisc" data-fd="1"><span class="t">How it scored</span><span class="s">gap 55/60 · strain 32/40</span>
+        <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></div>
+      <div class="fdisc" data-fd="2"><span class="t">The check record</span><span class="s">21 surfaces · 33 days</span>
+        <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></div>
+      <div style="height:220px"></div>
+    </div>
+    <p class="verdict-note">“surf.” is spelled out as <b>surfaces</b> above, with the <b>?</b> kept on the
+      section heading so the meaning is one click away without abbreviating the credibility number.</p>
+  </section>
+
+  <!-- ============ 3 ============ -->
+  <section class="sec">
+    <h2 class="sec-title">3 · The ring, banded on the 75% floor</h2>
+    <p class="sec-note">Teal at or above the minimum-confidence floor, butter below it, red under 50%.
+      Today’s drop is uniformly teal because clearing the floor is why those names are in it; the colour
+      earns its keep on the watchlist, Track record and Run-a-name.</p>
+    <div style="display:flex;gap:var(--s5);align-items:center;flex-wrap:wrap;margin-top:var(--s4)">
+      <div style="text-align:center"><div class="rg rg--sm" style="--pct:92%"><span class="in"><b>87</b></span></div>
+        <div class="lab2" style="margin-top:9px">92% · drop</div></div>
+      <div style="text-align:center"><div class="rg rg--sm" style="--pct:75%"><span class="in"><b>72</b></span></div>
+        <div class="lab2" style="margin-top:9px">75% · at the floor</div></div>
+      <div style="text-align:center"><div class="rg rg--sm rg--warn" style="--pct:58%"><span class="in"><b>68</b></span></div>
+        <div class="lab2" style="margin-top:9px">58% · watchlist</div></div>
+      <div style="text-align:center"><div class="rg rg--sm rg--stop" style="--pct:44%"><span class="in"><b>61</b></span></div>
+        <div class="lab2" style="margin-top:9px">44% · run-a-name</div></div>
+    </div>
+  </section>
+
+</div></div>
+
+<script>
+(function () {
+  var box = document.getElementById('fake'), cmp = document.getElementById('cmp');
+  var tall = box.querySelector('.tallhd');
+  function sync() {
+    /* Measured on every call rather than cached: at first paint the fonts have
+       not landed, the tall header measures near zero, and a cached trigger
+       would show the bar at rest. */
+    var trigger = Math.max(60, tall.offsetTop + tall.offsetHeight - 70);
+    cmp.classList.toggle('on', box.scrollTop > trigger);
+  }
+  box.addEventListener('scroll', sync);
+  sync();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(sync);
+  box.querySelectorAll('.fdisc').forEach(function (d) {
+    d.addEventListener('click', function () { d.classList.toggle('open'); });
+  });
+  document.querySelectorAll('.sketchbar .tsw button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.documentElement.setAttribute('data-theme', b.dataset.t);
+      document.querySelectorAll('.sketchbar .tsw button').forEach(function (x) {
+        x.setAttribute('aria-pressed', String(x === b));
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

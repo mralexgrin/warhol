@@ -1,0 +1,3590 @@
+{
+  "creatorId": "theherd",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:10:14.637Z",
+  "observationCount": 783,
+  "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": false,
+  "escalatedWhy": "we looked in 24 places — they already have a youtube channel, newsletter and store. We didn't go further.",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 997300,
+      "avatar": {
+        "url": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/7d50ac45d79d4078c01ec6b40225f33c~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=225cdd64&x-expires=1786885200&x-signature=o83BcAfyd%2BZhNf5gyIjkC4ZWUvg%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@theherd",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 3090,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/MsZJLjPe1IndjYiKVaffbCoPJ6Crq4Fuhn9qbDwTizbwlHis01rMgZqroDj8rmM6UxUu5Fut3w=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@theherd",
+      "why": "The Herd — the YouTube Data API resolved @theherd"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/theherd/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": true,
+      "followers": 27,
+      "avatar": {
+        "url": "https://cdn.bsky.app/img/avatar/plain/did:plc:lf5nu757ljrrtwme7g5ap6r7/bafkreidr4ggenavlhz54ej74kpmm5uqvw7kxieybsedzipndxgwexjf7f4",
+        "expires": null,
+        "host": "bsky.app"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://bsky.app/profile/theherd.bsky.social",
+      "why": "theherd.bsky.social — the profile goes by \"One of the Herd.\", the same name as their Bluesky, and the AppView resolved it to did:plc:lf5nu757ljrrtwme7g5ap6r7"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@theherd",
+      "evidence": "https://www.youtube.com/@theherd",
+      "placesLooked": 27,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.538Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.538Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.538Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.538Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.827Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.827Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.827Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/theherdsports",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.827Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/colincowherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.827Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.606Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.606Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.606Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.606Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.311Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.311Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.312Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.312Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/colincowherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.312Z"
+        },
+        {
+          "place": "proposed_5",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/jasonmcintyre",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.312Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.577Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.577Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.578Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.theherd.tv",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.578Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.663Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.663Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.663Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:23.139Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:23.139Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:23.140Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@theherd",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:29:32.499Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/theherd",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:29:32.499Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/theherd",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:29:32.499Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:26.995Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:26.996Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:26.996Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:26:59.519Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:59.519Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:59.519Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:25.563Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:25.563Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:25.563Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.502Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.502Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.502Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.502Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at theherd.beehiiv.com — not confirmed as theirs",
+      "evidence": "https://theherd.beehiiv.com/",
+      "placesLooked": 32,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://theherd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.538Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.539Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theherd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.539Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.539Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theherd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.539Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://theherd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.539Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://theherd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.828Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.828Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theherd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.828Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.828Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theherd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.828Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://newsletter.theherd.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.828Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://theherd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theherd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theherd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.theherdnewsletter.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://theherd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.312Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.313Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theherd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.313Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.313Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theherd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.313Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://theherd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.313Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://theherd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.579Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.579Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theherd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.579Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.579Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theherd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.579Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.theherd.substack.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.579Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "empty",
+          "url": "https://theherd.substack.com/feed",
+          "status": 200,
+          "why": "\"Evy\" is live and has nothing published in it — the feed is published by \"Evy\", which is not them",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.722Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://theherd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one — but the feed is published by \"Evy\", which is not them",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.723Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@theherd",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.723Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theherd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.724Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.724Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theherd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.724Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "empty",
+          "url": "https://theherd.substack.com/feed",
+          "status": 200,
+          "why": "\"Evy\" is live and has nothing published in it — the feed is published by \"Evy\", which is not them",
+          "advisory": false,
+          "at": "2026-08-10T21:35:23.192Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://theherd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one — but the feed is published by \"Evy\", which is not them",
+          "advisory": false,
+          "at": "2026-08-10T21:35:23.194Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:23.194Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theherd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:23.195Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:23.195Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theherd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:23.195Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "empty",
+          "url": "https://theherd.substack.com/feed",
+          "status": 200,
+          "why": "\"Evy\" is live and has nothing published in it — the feed is published by \"Evy\", which is not them",
+          "advisory": false,
+          "at": "2026-08-12T15:29:32.590Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://theherd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one — but the feed is published by \"Evy\", which is not them",
+          "advisory": false,
+          "at": "2026-08-12T15:29:32.590Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:29:32.590Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theherd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:29:32.590Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:32.590Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theherd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:32.590Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "empty",
+          "url": "https://theherd.substack.com/feed",
+          "status": 200,
+          "why": "\"Evy\" is live and has nothing published in it — the feed is published by \"Evy\", which is not them",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.054Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://theherd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one — but the feed is published by \"Evy\", which is not them",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.055Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@theherd",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.055Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theherd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.055Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.055Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theherd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.055Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://theherd.beehiiv.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:26:59.677Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "inconclusive",
+          "url": "https://theherd.substack.com/",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-12T20:26:59.679Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@theherd",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-12T20:26:59.679Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theherd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:26:59.679Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:59.679Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theherd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:59.679Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://theherd.beehiiv.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.005Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "inconclusive",
+          "url": "https://theherd.substack.com/",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.007Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@theherd",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.007Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theherd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.007Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.007Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theherd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.007Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "empty",
+          "url": "https://theherd.substack.com/feed",
+          "status": 200,
+          "why": "\"Evy\" is live and has nothing published in it — the feed is published by \"Evy\", which is not them",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.564Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://theherd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one — but the feed is published by \"Evy\", which is not them",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.566Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@theherd",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.566Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theherd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.566Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.566Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theherd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.566Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://theherd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.566Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at theherdstore.com — not confirmed as theirs",
+      "evidence": "https://www.theherdstore.com/",
+      "placesLooked": 38,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theherd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.539Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.539Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:34:19.539Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.539Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:34:19.539Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.theherd.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.539Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theherd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.828Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.829Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:54:22.829Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.829Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:54:22.829Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.theherd.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.829Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theherd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.theherdstore.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theherd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.313Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.313Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:44:50.313Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.313Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:44:50.313Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://theherdstore.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.314Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theherd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.580Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.580Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:49:31.580Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.581Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:49:31.581Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.theherd.shop/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.581Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theherd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.724Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.724Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:28:14.724Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.724Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:28:14.724Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theherd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:23.196Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:23.196Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:35:23.196Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-10T21:35:23.197Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:35:23.197Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theherd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:32.590Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:32.591Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:29:32.591Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:29:32.591Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:29:32.591Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theherd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.055Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.055Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:59:27.055Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.055Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:59:27.055Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theherd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:59.679Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:59.679Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:26:59.679Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T20:26:59.679Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:26:59.680Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theherd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.007Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.007Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:53:26.007Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.007Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:53:26.007Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theherd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.567Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.567Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:10:12.567Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.567Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theherd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:10:12.567Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.theherdstore.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.567Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "not there · we looked in 2 places",
+      "evidence": null,
+      "placesLooked": 25,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.542Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.542Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:19.542Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.830Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.830Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:22.830Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.theherdmembership.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.607Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.316Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.316Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.316Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.583Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.583Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.584Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.724Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.724Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-10T21:35:23.198Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:23.199Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-12T15:29:32.591Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:32.591Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.056Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.056Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-12T20:26:59.680Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:26:59.680Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.007Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.008Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=17334743",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.567Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.567Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by an official directory",
+      "why": "found it — https://podcasts.apple.com/us/podcast/the-herd-with-colin-cowherd/id1042368254?uo=4",
+      "evidence": "https://itunes.apple.com/search?term=The%20Herd&entity=podcast&limit=5",
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Herd&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Herd with Colin Cowherd\" by iHeartPodcasts and The Volume",
+          "advisory": false,
+          "at": "2026-08-06T20:34:20.383Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "hit",
+          "url": "https://www.twitch.tv/theherd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:20.384Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/the-herd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:20.384Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Herd&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Herd with Colin Cowherd\" by iHeartPodcasts and The Volume",
+          "advisory": false,
+          "at": "2026-08-06T21:54:23.171Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "hit",
+          "url": "https://www.theherdpodcast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:23.171Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Herd&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Herd with Colin Cowherd\" by iHeartPodcasts and The Volume",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.649Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "hit",
+          "url": "https://www.theherdpodcast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.649Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Herd&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Herd with Colin Cowherd\" by iHeartPodcasts and The Volume",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.339Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Herd&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Herd with Colin Cowherd\" by iHeartPodcasts and The Volume",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.670Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.theherd.podcast.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.670Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/1508ddb2-0c9a-42f6-aafe-ae3300346aa9/bf391792-153e-41b3-9d3d-ae3300346ad8/podcast.rss",
+          "status": 200,
+          "why": "105 posts read from The Herd with Colin Cowherd — the publication title reads \"The Herd with Colin Cowherd\"",
+          "advisory": false,
+          "at": "2026-08-10T21:28:17.485Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Herd&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Herd with Colin Cowherd\" by iHeartPodcasts and The Volume",
+          "advisory": false,
+          "at": "2026-08-10T21:28:17.485Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/1508ddb2-0c9a-42f6-aafe-ae3300346aa9/bf391792-153e-41b3-9d3d-ae3300346ad8/podcast.rss",
+          "status": 200,
+          "why": "105 posts read from The Herd with Colin Cowherd — the publication title reads \"The Herd with Colin Cowherd\"",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.587Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Herd&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Herd with Colin Cowherd\" by iHeartPodcasts and The Volume",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.587Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/1508ddb2-0c9a-42f6-aafe-ae3300346aa9/bf391792-153e-41b3-9d3d-ae3300346ad8/podcast.rss",
+          "status": 200,
+          "why": "107 posts read from The Herd with Colin Cowherd — the publication title reads \"The Herd with Colin Cowherd\"",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.130Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Herd&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Herd with Colin Cowherd\" by iHeartPodcasts and The Volume",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.130Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/1508ddb2-0c9a-42f6-aafe-ae3300346aa9/bf391792-153e-41b3-9d3d-ae3300346ad8/podcast.rss",
+          "status": 200,
+          "why": "107 posts read from The Herd with Colin Cowherd — the publication title reads \"The Herd with Colin Cowherd\"",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.330Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Herd&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Herd with Colin Cowherd\" by iHeartPodcasts and The Volume",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.331Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/1508ddb2-0c9a-42f6-aafe-ae3300346aa9/bf391792-153e-41b3-9d3d-ae3300346ad8/podcast.rss",
+          "status": 200,
+          "why": "109 posts read from The Herd with Colin Cowherd — the publication title reads \"The Herd with Colin Cowherd\"",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.872Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Herd&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Herd with Colin Cowherd\" by iHeartPodcasts and The Volume",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.873Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/1508ddb2-0c9a-42f6-aafe-ae3300346aa9/bf391792-153e-41b3-9d3d-ae3300346ad8/podcast.rss",
+          "status": 200,
+          "why": "111 posts read from The Herd with Colin Cowherd — the publication title reads \"The Herd with Colin Cowherd\"",
+          "advisory": false,
+          "at": "2026-08-14T12:53:27.981Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Herd&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Herd with Colin Cowherd\" by iHeartPodcasts and The Volume",
+          "advisory": false,
+          "at": "2026-08-14T12:53:27.981Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/1508ddb2-0c9a-42f6-aafe-ae3300346aa9/bf391792-153e-41b3-9d3d-ae3300346ad8/podcast.rss",
+          "status": 200,
+          "why": "111 posts read from The Herd with Colin Cowherd — the publication title reads \"The Herd with Colin Cowherd\"",
+          "advisory": false,
+          "at": "2026-08-14T13:10:14.635Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Herd&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Herd with Colin Cowherd\" by iHeartPodcasts and The Volume",
+          "advisory": false,
+          "at": "2026-08-14T13:10:14.635Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/the-herd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:14.635Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://open.spotify.com/show/theherd",
+          "status": 400,
+          "why": "HTTP 400 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-14T13:10:14.635Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "2 of 5 places wouldn't answer",
+      "evidence": null,
+      "placesLooked": 19,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-06T20:34:20.385Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://theherd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:20.385Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-06T20:34:20.385Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://www.instagram.com/theherd",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T20:34:20.385Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-06T21:54:23.171Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://theherd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:23.171Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.colincowherd.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:23.171Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.theherddaily.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:23.171Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.650Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://theherd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.650Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.650Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.colincowherd.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.650Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.339Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://theherd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.339Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.339Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://colincowherd.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.340Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.671Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://theherd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.671Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.671Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.colincowherd.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.671Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "miss",
+          "url": "https://www.fs1.com/shows/the-herd",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.672Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-10T21:28:17.485Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://theherd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-10T21:28:17.485Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.587Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://theherd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.587Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.130Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://theherd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.130Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.331Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://theherd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.331Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.873Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://theherd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.873Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T12:53:27.981Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://theherd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:53:27.981Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T13:10:14.636Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://theherd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:10:14.636Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://www.theherd.online/",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T13:10:14.636Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.fox.com/theherd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:14.636Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "miss",
+          "url": "https://www.foxsports.com/shows/the-herd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:14.636Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T20:34:20.386Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:54:23.172Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.650Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.340Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.672Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:28:17.485Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.588Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.130Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.331Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.873Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:53:27.982Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:10:14.636Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 5 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 5 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T20:34:20.386Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 5 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:54:23.172Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 5 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.650Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 5 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.340Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 5 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.672Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 5 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:28:17.485Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 5 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.588Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.130Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 5 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.331Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 5 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.873Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 5 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:53:27.982Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 5 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:10:14.636Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T20:34:20.386Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:54:23.172Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.650Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:44:50.340Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:49:31.672Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:28:17.485Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.588Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.130Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.331Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.873Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:53:27.982Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:10:14.636Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": 0.542,
+    "recentPerMonth": 2,
+    "baselinePerMonth": 4.36,
+    "recentCount": 6,
+    "baselineCount": 40,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 275,
+    "sampled": 50,
+    "truncated": false,
+    "recentMedianViews": 131,
+    "baselineMedianViews": 192,
+    "unit": "videos",
+    "line": "2 videos a month now, against 4.4 before that — down 54%; the recent ones are getting 32% fewer views"
+  },
+  "samples": [
+    {
+      "platform": "Podcast",
+      "publication": "The Herd with Colin Cowherd",
+      "kind": "episode",
+      "title": "The Daniel Cormier Show - Ian Garry DOUBLES DOWN on BEATING Islam Makhachev: UFC champ is \"MY DESTINY\" | Daniel Cormier",
+      "url": "https://omny.fm/shows/daniel-cormier-tv/ian-garry-doubles-down-on-beating-islam-makhachev-ufc-champ-is-my-destiny-daniel-cormier",
+      "at": "2026-08-14T00:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Daniel Cormier IS BACK at UFC 330 with fresh editions of the DC Check-In, starting with Ian Machado Garry ahead of his MASSIVE TITLE FIGHT against the UFC's pound-for-pound No. 1 Islam Makhachev. Ian doubles down on his guarantee to beat the double champ, and knows a win at Philly's UFC 330 is his \"",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:10:14.636Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Herd with Colin Cowherd",
+      "kind": "episode",
+      "title": "THE HERD – HOUR 1 – Fernando Mendoza Is Bust-Proof, BOLD NFL Predictions",
+      "url": "https://omny.fm/shows/the-herd-with-colin-cowherd/the-herd-hour-1-fernando-mendoza-is-bust-proof-bold-nfl-predictions",
+      "at": "2026-08-13T19:48:05.000Z",
+      "thumbnail": null,
+      "excerpt": "Colin Cowherd discusses Heisman Trophy winner Fernando Mendoza making his NFL preseason debut and why he checks all the boxes as a can&rsquo;t miss prospect.\n Colin shares his 5 Bold Predictions for the NFL season: Find out why he has the Broncos missing the playoffs and Caleb Williams winning the M",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:10:14.636Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Herd with Colin Cowherd",
+      "kind": "episode",
+      "title": "THE HERD – HOUR 2 – Russell Westbrook Retires, Greg Cosell: Brock Purdy Is Elite",
+      "url": "https://omny.fm/shows/the-herd-with-colin-cowherd/the-herd-hour-2-russell-westbrook-retires-greg-cosell-brock-purdy-is-elite",
+      "at": "2026-08-13T19:48:02.000Z",
+      "thumbnail": null,
+      "excerpt": "Greg Cosell from NFL Films joins the show and shocks Colin when he says Brock Purdy is an elite QB and what he does better than anyone else in the league right now.\n See omnystudio.com/listener for privacy information.",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:10:14.636Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Herd with Colin Cowherd",
+      "kind": "episode",
+      "title": "THE HERD – HOUR 3 – Lions & Cowboys Are Serious Super Bowl Contenders",
+      "url": "https://omny.fm/shows/the-herd-with-colin-cowherd/the-herd-hour-3-lions-cowboys-are-serious-super-bowl-contenders",
+      "at": "2026-08-12T20:11:34.000Z",
+      "thumbnail": null,
+      "excerpt": "NFL reporter Albert Breer joins the show to tell Colin after his training camp tour he believes the Cowboys and Lions should be taken serious as Super Bowl contenders.\n See omnystudio.com/listener for privacy information.",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T20:27:01.873Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Herd with Colin Cowherd",
+      "kind": "episode",
+      "title": "THE HERD – HOUR 1 – BREAKING NEWS: LAKERS SOLD AGAIN!",
+      "url": "https://omny.fm/shows/the-herd-with-colin-cowherd/the-herd-hour-1-breaking-news-lakers-sold-again",
+      "at": "2026-08-12T20:11:26.000Z",
+      "thumbnail": null,
+      "excerpt": "Colin Cowherd reacts to BREAKING NBA NEWS: The Lakers are being sold for the second time in 14 months. Colin discusses the shocking news and why Luka Doncic finds himself at the center of turnover after LeBron James departed in free agency.\n After the Vikings announced Kyler Murray as their starting",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T20:27:01.874Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Herd with Colin Cowherd",
+      "kind": "episode",
+      "title": "THE HERD – HOUR 2 – Why The Lakers Were Sold Again, Caleb Williams + Ben Johnson Are Elite",
+      "url": "https://omny.fm/shows/the-herd-with-colin-cowherd/the-herd-hour-2-why-the-lakers-were-sold-again-caleb-williams-ben-johnson-are-elite",
+      "at": "2026-08-12T20:11:08.000Z",
+      "thumbnail": null,
+      "excerpt": "More on why the Lakers are being sold again\n It's starting to look like from training camp that Caleb Williams and Ben Johnson are going to be elite this season\n See omnystudio.com/listener for privacy information.",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T20:27:01.874Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Herd with Colin Cowherd",
+      "kind": "episode",
+      "title": "3 and Out - Kyler Murray WINS Vikings QB1 job over J.J. McCarthy + What’s Next for Tony Romo?",
+      "url": "https://omny.fm/shows/3-and-out-with-john-middlekauff/kyler-murray-wins-vikings-qb1-job-over-j-j-mccarthy-what-s-next-for-tony-romo",
+      "at": "2026-08-12T10:01:00.000Z",
+      "thumbnail": null,
+      "excerpt": "In this episode, John reacts to the news that Kyler Murray has been named the starting QB over J.J. McCarthy in Vikings training camp. Next, John talks about what's next for McCarthy, with potential trade destinations on the horizon. Later, John reacts to news and injury updates around the NFL. John",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T19:59:29.331Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Herd with Colin Cowherd",
+      "kind": "episode",
+      "title": "Colin Cowherd Podcast - Cowboys Preview: Defense Without Parsons, Dak’s Elite Leadership, Expectations For Caleb Downs?",
+      "url": "https://omny.fm/shows/the-colin-cowherd-podcast/cowboys-preview-defense-without-parsons-dak-s-elite-leadership-expectations-for-caleb-downs",
+      "at": "2026-08-12T04:01:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Colin is joined by Matt Mosley, Cowboys insider and host of the Doomsday Podcast.\n They start by revisiting the Micah Parsons trade, and discuss Micah&rsquo;s role as a leader in the Cowboys locker room and why leadership didn&rsquo;t come naturally to him (3:30). They break down how the Cowboys wil",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T19:59:29.331Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Herd with Colin Cowherd",
+      "kind": "episode",
+      "title": "Sharp or Square - AFC WEST BETTING PREVIEW: Raiders, Chiefs, Chargers & Broncos",
+      "url": "https://omny.fm/shows/sharp-or-square/afc-west-betting-preview-raiders-chiefs-chargers-broncos",
+      "at": "2026-08-12T02:50:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Will Patrick Mahomes and the Kansas City Chiefs return to Super Bowl glory? Are the Los Angeles Chargers ready to make a leap with head coach Jim Harbaugh? Will the Denver Broncos build on the success of 2025 or fall back to Earth? And will Fernando Mendoza take the reins of the Las Vegas Raiders th",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T19:59:29.332Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Herd with Colin Cowherd",
+      "kind": "episode",
+      "title": "THE HERD – HOUR 1 – Bears Are For Real, Dodgers Are A Mess, Broncos Regression",
+      "url": "https://omny.fm/shows/the-herd-with-colin-cowherd/the-herd-hour-1-bears-are-for-real-dodgers-are-a-mess-broncos-regression",
+      "at": "2026-08-10T19:39:12.000Z",
+      "thumbnail": null,
+      "excerpt": "Colin Cowherd shares insight from his time attending Bears training camp. He pushes back against people labeling the Bears as a regression team this season and why they&rsquo;re break out team in 2026.\n He shares this week&rsquo;s edition of Where Colin Was Right, Where Colin Was Wrong: Colin says h",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-10T21:35:24.588Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Herd with Colin Cowherd",
+      "kind": "episode",
+      "title": "THE HERD – HOUR 2 – Colin Was Right About The 49ers, Hasselbeck: Mike McCarthy Deserves Respect",
+      "url": "https://omny.fm/shows/the-herd-with-colin-cowherd/the-herd-hour-2-colin-was-right-about-the-49ers-hasselbeck-mike-mccarthy-deserves-respect",
+      "at": "2026-08-10T19:38:58.000Z",
+      "thumbnail": null,
+      "excerpt": "Where Colin was right and where he was wrong\n 3-time Pro Bowl QB Matt Hasselbeck joins the show to talk about the Steelers and why head coach Mike McCarthy deserves more respect as a top NFL offensive coach.\n See omnystudio.com/listener for privacy information.",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-10T21:35:24.588Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Herd with Colin Cowherd",
+      "kind": "episode",
+      "title": "THE HERD – HOUR 3 – Notre Dame Would Win The SEC",
+      "url": "https://omny.fm/shows/the-herd-with-colin-cowherd/the-herd-hour-3-notre-dame-would-win-the-sec",
+      "at": "2026-08-10T19:38:55.000Z",
+      "thumbnail": null,
+      "excerpt": "Colin talks to college football commentator Josh Pate about the upcoming season including Notre Dame, the quarterbacks in the Big 10, and more\n See omnystudio.com/listener for privacy information.",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-10T21:35:24.588Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "I ACCIDENTALLY DESTROYED MY OWN FIELD.. | Farming Simulator 25  | Episode 13",
+      "url": "https://www.youtube.com/watch?v=GPq-fVPBPGw",
+      "at": "2026-07-07T19:30:26Z",
+      "thumbnail": "https://i.ytimg.com/vi/GPq-fVPBPGw/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 58,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:04.963Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "POTATO CHIPS AND FRIES | Farming Simulator 25  | Episode 12",
+      "url": "https://www.youtube.com/watch?v=r_iWXYILm8o",
+      "at": "2026-07-02T19:30:31Z",
+      "thumbnail": "https://i.ytimg.com/vi/r_iWXYILm8o/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 116,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:04.963Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "THE FIRST DAY OF GETTING TO WORK IN OUR TOWN | Farming Simulator 25  | Episode 11",
+      "url": "https://www.youtube.com/watch?v=i4wJ5qPzfAA",
+      "at": "2026-06-04T17:00:04Z",
+      "thumbnail": "https://i.ytimg.com/vi/i4wJ5qPzfAA/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 146,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:04.964Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "THE LAST DAY OF BUILDING BEFORE WE HAVE TO LIVE IN OUR TOWN!!! | Farming Simulator 25  | Episode 11",
+      "url": "https://www.youtube.com/watch?v=5K1RMXQ-Ddo",
+      "at": "2026-06-02T19:00:10Z",
+      "thumbnail": "https://i.ytimg.com/vi/5K1RMXQ-Ddo/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 156,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:04.964Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "BUILDING A TOWN IN FARMING SIMULATOR!!! in Farming Simulator 25  | Episode 10",
+      "url": "https://www.youtube.com/watch?v=SSsp4QBoOYc",
+      "at": "2026-05-28T19:30:00Z",
+      "thumbnail": "https://i.ytimg.com/vi/SSsp4QBoOYc/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 184,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:04.964Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": null,
+      "url": "https://bsky.app/profile/theherd.bsky.social/post/3lvw635rcos2p",
+      "at": "2025-08-08T21:10:51.408Z",
+      "thumbnail": null,
+      "excerpt": null,
+      "metric": 1,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:04.964Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Forever Lily😢😞😻😽",
+      "url": "https://bsky.app/profile/theherd.bsky.social/post/3ltq2quj5os2l",
+      "at": "2025-07-12T00:05:03.213Z",
+      "thumbnail": null,
+      "excerpt": "Forever Lily😢😞😻😽",
+      "metric": 1,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:04.965Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Flashback to the Victorian era, where parties were lit and fashion was extra. This selfie's a blast from my pa",
+      "url": "https://bsky.app/profile/theherd.bsky.social/post/3lsirezk23c2y",
+      "at": "2025-06-26T09:03:32.381Z",
+      "thumbnail": null,
+      "excerpt": "Flashback to the Victorian era, where parties were lit and fashion was extra. This selfie's a blast from my past, and I'm still rockin' after all these years. What's your fave era? #VictorianVibes #ImmortalLife #TimelessStyle #PartyLikeIts1899 #FashionForever #EraEnvy",
+      "metric": 1,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:04.965Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": null,
+      "url": "https://bsky.app/profile/theherd.bsky.social/post/3lrluu7w5zs2a",
+      "at": "2025-06-14T21:18:31.202Z",
+      "thumbnail": null,
+      "excerpt": null,
+      "metric": 0,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:04.965Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": null,
+      "url": "https://bsky.app/profile/theherd.bsky.social/post/3lra6oywtus2d",
+      "at": "2025-06-10T05:42:36.667Z",
+      "thumbnail": null,
+      "excerpt": null,
+      "metric": 0,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:04.965Z",
+      "status": null
+    }
+  ],
+  "headline": null,
+  "samplesSearched": {
+    "count": 3,
+    "why": "3 pieces of their own work"
+  },
+  "commentsRead": 22,
+  "audienceHistory": [
+    {
+      "audience": 994400,
+      "at": "2026-08-06T20:34:13.750Z"
+    },
+    {
+      "audience": 994400,
+      "at": "2026-08-06T21:54:05.651Z"
+    },
+    {
+      "audience": 994400,
+      "at": "2026-08-06T21:57:22.100Z"
+    },
+    {
+      "audience": 994900,
+      "at": "2026-08-07T11:44:41.838Z"
+    },
+    {
+      "audience": 994900,
+      "at": "2026-08-07T11:49:09.774Z"
+    },
+    {
+      "audience": 995800,
+      "at": "2026-08-10T21:28:11.679Z"
+    },
+    {
+      "audience": 995800,
+      "at": "2026-08-10T21:35:20.492Z"
+    },
+    {
+      "audience": 996300,
+      "at": "2026-08-12T15:29:21.151Z"
+    },
+    {
+      "audience": 996400,
+      "at": "2026-08-12T19:59:25.232Z"
+    },
+    {
+      "audience": 996400,
+      "at": "2026-08-12T20:26:56.821Z"
+    },
+    {
+      "audience": 997300,
+      "at": "2026-08-14T12:53:23.917Z"
+    },
+    {
+      "audience": 997300,
+      "at": "2026-08-14T13:10:04.962Z"
+    }
+  ],
+  "audience": 997300,
+  "audienceWhy": "TikTok alone — nothing links the YouTube or Bluesky to it",
+  "audienceSeparate": [
+    {
+      "id": "youtube_profile",
+      "followers": 3090,
+      "url": "https://www.youtube.com/@theherd",
+      "why": "nothing on either page links the YouTube to the TikTok, so it is not added in"
+    },
+    {
+      "id": "bluesky_profile",
+      "followers": 27,
+      "url": "https://bsky.app/profile/theherd.bsky.social",
+      "why": "nothing on either page links the Bluesky to the TikTok, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 8,
+    "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 2,
+      "max": 35,
+      "lines": [
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 2 places"
+        }
+      ],
+      "share": 0.058,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 2,
+    "pressure": {
+      "points": 6.4,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 6.4,
+          "line": "2 videos a month now, against 4.4 before that — down 54%; the recent ones are getting 32% fewer views",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "pass",
+      "because": "Whichever account this is, the visible work is short sports-take clips on a near-million-follower TikTok with 76m likes — clippable by nature, in a repeatable daily-show format, in a category with obvious demand — though the bio's stray farm-simulator line means the identity itself is unconfirmed and worth checking on the call."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 8 days apart, the trend needs 90",
+      "why": "our two looks are 8 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.5,
+      "resolved": 3,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 2
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": false,
+      "fit": "pass",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 328,
+    "places": 47,
+    "from": "2026-08-06T20:34:13.725Z",
+    "to": "2026-08-14T13:10:14.637Z"
+  }
+}

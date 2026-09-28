@@ -1,0 +1,3576 @@
+{
+  "creatorId": "thedraftnetwork",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:10:56.895Z",
+  "observationCount": 815,
+  "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": true,
+  "escalatedWhy": "store — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 3,
+      "avatar": {
+        "url": "https://p19-common-sign.tiktokcdn-us.com/tos-useast8-avt-0068-tx2/4acadc1d7690b971931cf0555a304d13~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=dbce3314&x-expires=1786885200&x-signature=SdqJ77171iRNqFlReSSiMILNdOQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@thedraftnetwork",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 15800,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/g7wmZtzs6p2hNXa2XcJvAn4d4YMm1ZUjszkWYAc95A1dq0jS_KsSdGBSB0RPzs6RsHBaD3ez=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@thedraftnetwork",
+      "why": "The Draft Network — the YouTube Data API resolved @thedraftnetwork"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/thedraftnetwork/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": true,
+      "followers": 358,
+      "avatar": {
+        "url": "https://cdn.bsky.app/img/avatar/plain/did:plc:54enmmxn5hrpwzqvm5hyi4nc/bafkreiefjrpufvcfd52mu5remgekibmxz7ip6aesudlwi2uqllj47egfue",
+        "expires": null,
+        "host": "bsky.app"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://bsky.app/profile/thedraftnetwork.bsky.social",
+      "why": "thedraftnetwork.bsky.social — the profile goes by \"The Draft Network\", the same name as their TikTok, and the AppView resolved it to did:plc:54enmmxn5hrpwzqvm5hyi4nc"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@thedraftnetwork",
+      "evidence": "https://www.youtube.com/@thedraftnetwork",
+      "placesLooked": 11,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.540Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.540Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.540Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.540Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.540Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.528Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.528Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.528Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.528Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/TheDraftNetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.529Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.836Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.836Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.836Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.836Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.411Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.411Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.411Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.411Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/TheDraftNetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.411Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.721Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.721Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.721Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.721Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.721Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.092Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.092Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.092Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.204Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.204Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.204Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:03.662Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/thedraftnetwork",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:03.662Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/thedraftnetwork",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:03.663Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.322Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.322Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.322Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:36.652Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:36.652Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:36.653Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.257Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.257Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.257Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@thedraftnetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.257Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/TheDraftNetwork",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.257Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "only 4 of the 5 places we need actually answered",
+      "evidence": null,
+      "placesLooked": 64,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/thedraftnetwork?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/thedraftnetwork",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://newsletter.thedraftnetwork.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.529Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/thedraftnetwork?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/thedraftnetwork",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.529Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.529Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.529Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.529Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.529Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.836Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/thedraftnetwork?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/thedraftnetwork",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.837Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.837Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.837Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.837Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://newsletter.thedraftnetwork.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.837Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.837Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.411Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/thedraftnetwork?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/thedraftnetwork",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.411Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.411Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.411Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.412Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://newsletter.thedraftnetwork.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.412Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.721Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/thedraftnetwork?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/thedraftnetwork",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.721Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.721Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.721Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.722Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.thedraftnetwork.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.722Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.092Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/thedraftnetwork?searching=profile",
+          "status": 429,
+          "why": "redirected to substack.com/search/thedraftnetwork",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.092Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.093Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.094Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.094Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.204Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@thedraftnetwork",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.204Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.204Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.204Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.204Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:03.664Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/thedraftnetwork?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/thedraftnetwork",
+          "advisory": false,
+          "at": "2026-08-12T15:30:03.664Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:03.665Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:03.665Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:03.665Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/thedraftnetwork?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/thedraftnetwork",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.322Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/thedraftnetwork?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/thedraftnetwork",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.322Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.322Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.322Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.322Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:36.654Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/thedraftnetwork?searching=profile",
+          "status": 429,
+          "why": "redirected to substack.com/search/thedraftnetwork",
+          "advisory": false,
+          "at": "2026-08-14T12:53:36.654Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:36.654Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:36.654Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:36.654Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "inconclusive",
+          "url": "https://thedraftnetwork.substack.com/",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.257Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@thedraftnetwork",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.257Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.257Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.257Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.257Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://newsletter.thedraftnetwork.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.257Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 5 places · 2 wouldn't answer",
+      "evidence": null,
+      "placesLooked": 45,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.thedraftnetwork.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://store.thedraftnetwork.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.529Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.529Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:54:38.529Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.530Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:54:38.530Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.thedraftnetwork.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.530Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.837Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.837Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:57:44.837Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.837Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:57:44.837Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://store.thedraftnetwork.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.838Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.412Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.412Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:45:08.412Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.412Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:45:08.412Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.thedraftnetwork.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.412Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://store.thedraftnetwork.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.412Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.722Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.722Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:49:40.722Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.722Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:49:40.722Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.thedraftnetwork.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.722Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.094Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.094Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:28:23.095Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.095Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:28:23.095Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.204Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.204Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:35:34.205Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.205Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:35:34.205Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:03.666Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:03.666Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:30:03.667Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:30:03.667Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:30:03.667Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.322Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.322Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:27:12.322Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.322Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:27:12.322Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:36.654Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:36.654Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:53:36.655Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:53:36.655Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:53:36.655Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.258Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.258Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:10:38.258Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.258Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/thedraftnetwork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:10:38.258Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.thedraftnetwork.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.258Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://store.thedraftnetwork.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.258Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 30,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://membership.thedraftnetwork.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.541Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.530Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.530Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.530Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.838Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.838Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:44.838Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.412Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.412Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.412Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.722Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.723Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.thedraftnetwork.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.723Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.095Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.095Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.205Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.205Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:03.667Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:03.667Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.542Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.323Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.323Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:36.655Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:36.655Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.258Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.258Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/thedraftnetwork",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.258Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by an official directory",
+      "why": "found it — https://podcasts.apple.com/us/podcast/commanding-the-huddle/id1614872756?uo=4",
+      "evidence": "https://itunes.apple.com/search?term=The%20Draft%20Network&entity=podcast&limit=5",
+      "placesLooked": 6,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Draft%20Network&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Commanding The Huddle\" by The Draft Network",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.886Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/the-draft-network",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.886Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Draft%20Network&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Commanding The Huddle\" by The Draft Network",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.735Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/the-draft-network",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.735Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.spotify.com/us/show/thedraftnetwork/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.735Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Draft%20Network&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Commanding The Huddle\" by The Draft Network",
+          "advisory": false,
+          "at": "2026-08-06T21:57:45.050Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/the-draft-network",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:45.050Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://open.spotify.com/show/thedraftnetwork",
+          "status": 400,
+          "why": "HTTP 400 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-06T21:57:45.050Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Draft%20Network&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Commanding The Huddle\" by The Draft Network",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.465Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcast.thedraftnetwork.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.465Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Draft%20Network&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Commanding The Huddle\" by The Draft Network",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.746Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/podcast/the-draft-network",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.746Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://open.spotify.com/show/thedraftnetwork",
+          "status": 400,
+          "why": "HTTP 400 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.746Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.simplecast.com/bP3NYKIL",
+          "status": 200,
+          "why": "200 posts read from Commanding The Huddle — the feed author reads \"The Draft Network\"",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.478Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Draft%20Network&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Commanding The Huddle\" by The Draft Network",
+          "advisory": false,
+          "at": "2026-08-10T21:28:23.478Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.simplecast.com/bP3NYKIL",
+          "status": 200,
+          "why": "200 posts read from Commanding The Huddle — the feed author reads \"The Draft Network\"",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.358Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Draft%20Network&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Commanding The Huddle\" by The Draft Network",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.359Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.simplecast.com/bP3NYKIL",
+          "status": 200,
+          "why": "200 posts read from Commanding The Huddle — the feed author reads \"The Draft Network\"",
+          "advisory": false,
+          "at": "2026-08-12T15:30:04.082Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Draft%20Network&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Commanding The Huddle\" by The Draft Network",
+          "advisory": false,
+          "at": "2026-08-12T15:30:04.083Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.simplecast.com/bP3NYKIL",
+          "status": 200,
+          "why": "200 posts read from Commanding The Huddle — the feed author reads \"The Draft Network\"",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.858Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Draft%20Network&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Commanding The Huddle\" by The Draft Network",
+          "advisory": false,
+          "at": "2026-08-12T19:59:37.859Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.simplecast.com/bP3NYKIL",
+          "status": 200,
+          "why": "200 posts read from Commanding The Huddle — the feed author reads \"The Draft Network\"",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.445Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Draft%20Network&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Commanding The Huddle\" by The Draft Network",
+          "advisory": false,
+          "at": "2026-08-12T20:27:12.445Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.simplecast.com/bP3NYKIL",
+          "status": 200,
+          "why": "200 posts read from Commanding The Huddle — the feed author reads \"The Draft Network\"",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.044Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Draft%20Network&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Commanding The Huddle\" by The Draft Network",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.044Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.simplecast.com/bP3NYKIL",
+          "status": 200,
+          "why": "200 posts read from Commanding The Huddle — the feed author reads \"The Draft Network\"",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.373Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Draft%20Network&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Commanding The Huddle\" by The Draft Network",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.373Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/podcast/the-draft-network",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.373Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by the feed it publishes — the publication title reads \"TheDraftNetwork.com\"",
+      "why": "found it — thedraftnetwork.com",
+      "evidence": "https://www.thedraftnetwork.com/",
+      "placesLooked": 12,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.887Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.887Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.887Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.736Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.736Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.736Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:45.051Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:45.051Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:45.051Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.466Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.466Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.466Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.747Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.747Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.747Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.thedraftnetwork.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.115Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.thedraftnetwork.com/rss/",
+          "status": 200,
+          "why": "10 posts read from TheDraftNetwork.com — the publication title reads \"TheDraftNetwork.com\"",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.116Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.118Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.118Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.thedraftnetwork.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.834Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.thedraftnetwork.com/rss/",
+          "status": 200,
+          "why": "10 posts read from TheDraftNetwork.com — the publication title reads \"TheDraftNetwork.com\"",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.834Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.835Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.836Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.thedraftnetwork.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:30:04.679Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.thedraftnetwork.com/rss/",
+          "status": 200,
+          "why": "10 posts read from TheDraftNetwork.com — the publication title reads \"TheDraftNetwork.com\"",
+          "advisory": false,
+          "at": "2026-08-12T15:30:04.679Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:30:04.681Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:30:04.681Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.thedraftnetwork.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.404Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.thedraftnetwork.com/rss/",
+          "status": 200,
+          "why": "10 posts read from TheDraftNetwork.com — the publication title reads \"TheDraftNetwork.com\"",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.404Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.405Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.405Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.thedraftnetwork.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.016Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.thedraftnetwork.com/rss/",
+          "status": 200,
+          "why": "10 posts read from TheDraftNetwork.com — the publication title reads \"TheDraftNetwork.com\"",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.017Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.019Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.019Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.thedraftnetwork.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.615Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.thedraftnetwork.com/rss/",
+          "status": 200,
+          "why": "10 posts read from TheDraftNetwork.com — the publication title reads \"TheDraftNetwork.com\"",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.615Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.616Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.616Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.thedraftnetwork.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.872Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.thedraftnetwork.com/rss/",
+          "status": 200,
+          "why": "10 posts read from TheDraftNetwork.com — the publication title reads \"TheDraftNetwork.com\"",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.872Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.873Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://thedraftnetwork.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.874Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.thedraftnetwork.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.874Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.887Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.736Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:57:45.051Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.466Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.747Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.118Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.836Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:30:04.681Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.406Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.021Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.616Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.874Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.887Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.736Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:57:45.051Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.466Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.747Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.119Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.837Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:30:04.682Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.406Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.022Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.616Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.874Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T20:34:41.887Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:54:38.736Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:57:45.052Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:45:08.467Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:49:40.747Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.119Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:35:34.837Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:30:04.682Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.406Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.022Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.616Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.875Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": 1,
+    "recentPerMonth": 0,
+    "baselinePerMonth": 43.51,
+    "recentCount": 0,
+    "baselineCount": 200,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 138,
+    "sampled": 200,
+    "truncated": true,
+    "recentMedianViews": null,
+    "baselineMedianViews": 937,
+    "unit": "videos",
+    "line": "nothing posted in 90 days, after 44 a month before that"
+  },
+  "samples": [
+    {
+      "platform": "Their site",
+      "publication": "TheDraftNetwork.com",
+      "kind": "writing",
+      "title": "Keyshaun Elliott: Why the Chicago Bears' 2026 Draft Pick Could Be a Steal",
+      "url": "https://www.thedraftnetwork.com/2026/05/06/keyshaun-elliott-chicago-bears-2026-draft-pick-steal",
+      "at": "2026-05-06T14:14:17.000Z",
+      "thumbnail": null,
+      "excerpt": "Keyshaun Elliott might be the best value pick in the Chicago Bears' 2026 NFL Draft class. Before you sleep on the fifth-round linebacker, watch his Draft Network interview — then tell us he's just a depth chart filler.",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:10:38.875Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "TheDraftNetwork.com",
+      "kind": "writing",
+      "title": "2026 NFL Mock Draft: Final Predictions",
+      "url": "https://www.thedraftnetwork.com/2026/04/19/2026-nfl-mock-draft-final",
+      "at": "2026-04-20T02:16:19.000Z",
+      "thumbnail": null,
+      "excerpt": "It is finally 2026 NFL Draft week. Check out my final mock draft for the 2026 NFL Draft and see which players I have teams selecting.",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:10:38.876Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "TheDraftNetwork.com",
+      "kind": "writing",
+      "title": "2026 NFL Mock Draft: What Do Betting Odds Say?",
+      "url": "https://www.thedraftnetwork.com/2026/04/12/2026-nfl-mock-draft-betting-odds",
+      "at": "2026-04-13T01:46:10.000Z",
+      "thumbnail": null,
+      "excerpt": "How would the first round of the 2026 NFL Draft look if we did an NFL mock draft solely based on the betting odds?",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:10:38.876Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Prince Dorbah's Brother The REAL MVP Behind His Success!",
+      "url": "https://www.youtube.com/watch?v=xDLp4OhZYeM",
+      "at": "2026-04-10T22:01:00Z",
+      "thumbnail": "https://i.ytimg.com/vi/xDLp4OhZYeM/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1702,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:30.859Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Prince Dorbah NFL Draft Interview: NFL Comp, Pro Day & More",
+      "url": "https://www.youtube.com/watch?v=fL-rkiG7IoI",
+      "at": "2026-04-10T22:00:55Z",
+      "thumbnail": "https://i.ytimg.com/vi/fL-rkiG7IoI/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 242,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:30.859Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "These 2 Players MUST Be 1st Rounders!",
+      "url": "https://www.youtube.com/watch?v=XJY4MjyMTZc",
+      "at": "2026-04-10T17:00:50Z",
+      "thumbnail": "https://i.ytimg.com/vi/XJY4MjyMTZc/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1081,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:30.859Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Jeff Sims & Malik McClain Talk Pro Day, NFL & More | NFL Draft Interview",
+      "url": "https://www.youtube.com/watch?v=NnbQGp0PNRE",
+      "at": "2026-04-10T14:00:41Z",
+      "thumbnail": "https://i.ytimg.com/vi/NnbQGp0PNRE/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 83,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:30.860Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Who's Going To Draft Rueben Bain Jr.?",
+      "url": "https://www.youtube.com/watch?v=99AzEisidu0",
+      "at": "2026-04-10T12:30:28Z",
+      "thumbnail": "https://i.ytimg.com/vi/99AzEisidu0/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1485,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:30.860Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Commanding The Huddle",
+      "kind": "episode",
+      "title": "Personal News... Thank you guys!!!",
+      "url": "https://bleav.com/shows/commanding-the-huddle/episodes/personal-news-thank-you-guys/",
+      "at": "2026-03-27T16:07:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Thank you guys for everything over the years!! Stay in touch. Hosted by Simplecast, an AdsWizz company. See https://pcm.adswizz.com\nfor information about our collection and use of personal data for\nadvertising.",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:10:38.875Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Commanding The Huddle",
+      "kind": "episode",
+      "title": "Okonkwo, White, Cross... diving into FA and the fits of each addition",
+      "url": "https://bleav.com/shows/commanding-the-huddle/episodes/okonkwo-white-cross-diving-into-fa-and-the-fits-of-each-addition/",
+      "at": "2026-03-16T15:43:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Ryan dives into the newest additions for the burgundy & gold in FA, the fit of each, and why Chig Okonkwo could have an electric season in Washington. Hosted by Simplecast, an AdsWizz company. See https://pcm.adswizz.com\nfor information about our collection and use of personal data for\nadvertising.",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:10:38.875Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Commanding The Huddle",
+      "kind": "episode",
+      "title": "Early FA recap and the importance of player fit",
+      "url": "https://bleav.com/shows/commanding-the-huddle/episodes/early-fa-recap-and-the-importance-of-player-fit/",
+      "at": "2026-03-11T16:09:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Ryan talks the additions on defense for the Commanders, including what makes Leo Chenal so unique, the pop of Oweh/Chaisson, and the importance of player fit in free agency. Hosted by Simplecast, an AdsWizz company. See https://pcm.adswizz.com\nfor information about our collection and use of personal",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:10:38.875Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "What kind of stats could the top rookie QBs put up in 2025? @JaimeEisner.bsky.social takes a look at what hist",
+      "url": "https://bsky.app/profile/thedraftnetwork.bsky.social/post/3lscbdvdtxf2a",
+      "at": "2025-06-23T19:00:36.086Z",
+      "thumbnail": null,
+      "excerpt": "What kind of stats could the top rookie QBs put up in 2025? @JaimeEisner.bsky.social takes a look at what history tells us to make 2025 stat projections for Cam Ward, Jaxson Dart, and Tyler Shough. thedraftnetwork.com/2025/06/23/n...",
+      "metric": 0,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:30.860Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Need help figuring out how to navigate your #FantasyFootball drafts this summer? Check out @JaimeEisner.bsky.s",
+      "url": "https://bsky.app/profile/thedraftnetwork.bsky.social/post/3lsbtxqyt7r2h",
+      "at": "2025-06-23T15:01:09.500Z",
+      "thumbnail": null,
+      "excerpt": "Need help figuring out how to navigate your #FantasyFootball drafts this summer? Check out @JaimeEisner.bsky.social's first set of half-PPR rankings for single-QB and Superflex leagues. thedraftnetwork.com/2025/06/23/f...",
+      "metric": 1,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:30.861Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Despite using a fairly high draft pick on him, 2025 looks like a make-or-break season for this second-year Ram",
+      "url": "https://bsky.app/profile/thedraftnetwork.bsky.social/post/3lrivxdraik2w",
+      "at": "2025-06-13T17:00:09.883Z",
+      "thumbnail": null,
+      "excerpt": "Despite using a fairly high draft pick on him, 2025 looks like a make-or-break season for this second-year Rams player. #RamsHouse thedraftnetwork.com/2025/06/13/r...",
+      "metric": 0,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:30.861Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "WR Gabe Davis has been on a bit of a free agent tour as of late. Which teams should try to sign him? thedraftn",
+      "url": "https://bsky.app/profile/thedraftnetwork.bsky.social/post/3lripb7b5672z",
+      "at": "2025-06-13T15:00:24.567Z",
+      "thumbnail": null,
+      "excerpt": "WR Gabe Davis has been on a bit of a free agent tour as of late. Which teams should try to sign him? thedraftnetwork.com/2025/06/13/g...",
+      "metric": 0,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:30.861Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Which Falcons player is facing a make-or-break season in 2025? #DirtyBirds thedraftnetwork.com/2025/06/12/f...",
+      "url": "https://bsky.app/profile/thedraftnetwork.bsky.social/post/3lrgfiwfero2r",
+      "at": "2025-06-12T17:00:26.707Z",
+      "thumbnail": null,
+      "excerpt": "Which Falcons player is facing a make-or-break season in 2025? #DirtyBirds thedraftnetwork.com/2025/06/12/f...",
+      "metric": 0,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:30.862Z",
+      "status": null
+    }
+  ],
+  "headline": {
+    "sentence": "He makes NFL draft and free agency analysis on a YouTube channel with 15,800 subscribers, a podcast, and his own site, but he has posted nothing in 90 days after 44 a month, and his last upload was titled \"Personal News... Thank you guys!!!\", so the call is worth making to learn what changed; there is no store or membership yet.",
+    "restsOn": "15,800 on YouTube · YouTube channel · Podcast · Own website · nothing posted in 90 days, after 44 a month before that · \"Personal News... Thank you guys!!!\" · \"2026 NFL Mock Draft: Final Predictions\" · \"Early FA recap and the importance of player fit\" · Store · Membership"
+  },
+  "samplesSearched": {
+    "count": 6,
+    "why": "6 pieces of their own work"
+  },
+  "commentsRead": 6,
+  "audienceHistory": [
+    {
+      "audience": 15800,
+      "at": "2026-08-06T20:34:35.200Z"
+    },
+    {
+      "audience": 15800,
+      "at": "2026-08-06T21:54:31.837Z"
+    },
+    {
+      "audience": 15800,
+      "at": "2026-08-06T21:57:37.664Z"
+    },
+    {
+      "audience": 15800,
+      "at": "2026-08-07T11:45:01.377Z"
+    },
+    {
+      "audience": 15800,
+      "at": "2026-08-07T11:49:34.435Z"
+    },
+    {
+      "audience": 15800,
+      "at": "2026-08-10T21:28:20.263Z"
+    },
+    {
+      "audience": 15800,
+      "at": "2026-08-10T21:35:31.434Z"
+    },
+    {
+      "audience": 15800,
+      "at": "2026-08-12T15:29:52.699Z"
+    },
+    {
+      "audience": 15800,
+      "at": "2026-08-12T19:59:35.690Z"
+    },
+    {
+      "audience": 15800,
+      "at": "2026-08-12T20:27:10.824Z"
+    },
+    {
+      "audience": 15800,
+      "at": "2026-08-14T12:53:34.825Z"
+    },
+    {
+      "audience": 15800,
+      "at": "2026-08-14T13:10:30.857Z"
+    }
+  ],
+  "audience": 15800,
+  "audienceWhy": "YouTube alone — nothing links the TikTok or Bluesky to it",
+  "audienceSeparate": [
+    {
+      "id": "tiktok_profile",
+      "followers": 3,
+      "url": "https://www.tiktok.com/@thedraftnetwork",
+      "why": "nothing on either page links the TikTok to the YouTube, so it is not added in"
+    },
+    {
+      "id": "bluesky_profile",
+      "followers": 358,
+      "url": "https://bsky.app/profile/thedraftnetwork.bsky.social",
+      "why": "nothing on either page links the Bluesky to the YouTube, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 22,
+    "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 10.1,
+      "max": 35,
+      "lines": [
+        {
+          "item": "store",
+          "label": "Store",
+          "half": "built",
+          "base": 9,
+          "effective": 9,
+          "demandAligned": false,
+          "why": "not there · we looked in 5 places · 2 wouldn't answer"
+        },
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        }
+      ],
+      "share": 0.289,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 10.1,
+    "pressure": {
+      "points": 12,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 12,
+          "line": "nothing posted in 90 days, after 44 a month before that",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "pass",
+      "because": "NFL Draft film breakdowns and scouting reports are an evergreen, high-demand category, and the daily scouting-report format is inherently repeatable and easy to cut into clips — the thin post evidence here is unconfirmed rather than disqualifying."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 8 days apart, the trend needs 90",
+      "why": "our two looks are 8 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.833,
+      "resolved": 5,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 0
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "pass",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 336,
+    "places": 37,
+    "from": "2026-08-06T20:34:35.169Z",
+    "to": "2026-08-14T13:10:56.895Z"
+  }
+}

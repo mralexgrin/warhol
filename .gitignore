@@ -1,0 +1,19 @@
+# OS / editor
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Local tool state
+.vercel/
+.impeccable/
+.claude-launch-check
+
+# Secrets
+.env
+.env.*
+
+# Generated engine logs — too large for git; regenerate with the engine
+App/engine/data/observations.jsonl
+App/engine/data/costs.jsonl
+Archive/backup-2026-08-07/*.jsonl

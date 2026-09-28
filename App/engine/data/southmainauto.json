@@ -1,0 +1,1739 @@
+{
+  "creatorId": "southmainauto",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:21:25.894Z",
+  "observationCount": 314,
+  "brief": "Car detailing, DIY repair and restoration — creators who work on a machine on camera, name the specific part or product they are using, and repeat the format every video.",
+  "source": "proposed",
+  "sourceWhy": "a model proposed this handle from a brief — Eric O runs a real independent repair shop and films diagnosis-to-repair on customer cars, identifying the exact failed component each time.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity.",
+  "escalated": true,
+  "escalatedWhy": "newsletter, store — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 53,
+      "avatar": {
+        "url": "https://p16-common-sign.tiktokcdn-us.com/tos-useast2a-avt-0068-giso/093241f46dc5087e59c17184bd0fa064~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=97cb5ffa&x-expires=1786885200&x-signature=0GxSTPA538r9f2VZPwgalQEMIKw%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@southmainauto",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 1000000,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIdro_kKBdmyE-YNxjfQNDbqwLAV5kdJVLj0esBb_nTahEDFJtM=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@southmainauto",
+      "why": "South Main Auto LLC — the YouTube Data API resolved @southmainauto"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/southmainauto/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 400,
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=southmainauto.bsky.social",
+      "why": "page says it is not there"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@southmainauto",
+      "evidence": "https://www.youtube.com/@southmainauto",
+      "placesLooked": 11,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@southmainauto",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.875Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.875Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.875Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@southmainauto",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.875Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.876Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@southmainauto",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.223Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.223Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.223Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.223Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@southmainauto",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.433Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.433Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.433Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@southmainauto",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.433Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@southmainauto",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.895Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.895Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.895Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.895Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 6 places",
+      "evidence": null,
+      "placesLooked": 24,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://southmainauto.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.876Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/southmainauto?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/southmainauto",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.876Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://southmainauto.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.876Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.876Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://southmainauto.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.876Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://southmainauto.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.876Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://southmainauto.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.223Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/southmainauto?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/southmainauto",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.223Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://southmainauto.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.223Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.224Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://southmainauto.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.224Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.southmainautoblog.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.224Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://southmainauto.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.434Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/southmainauto?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/southmainauto",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.434Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://southmainauto.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.434Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.434Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://southmainauto.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.434Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://southmainauto.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.434Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://southmainauto.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.896Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/southmainauto?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/southmainauto",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.896Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://southmainauto.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.896Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.896Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://southmainauto.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.896Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://southmainauto.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.896Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 4 places · 2 wouldn't answer",
+      "evidence": null,
+      "placesLooked": 19,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://southmainauto.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.876Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.877Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/southmainauto",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T15:50:34.877Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.877Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/southmainauto",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T15:50:34.877Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://southmainauto.podia.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.877Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://shop.southmainauto.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.877Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://southmainauto.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.224Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.224Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/southmainauto",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:17:20.224Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.224Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/southmainauto",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:17:20.224Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://southmainauto.shop",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.224Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://shop.southmainauto.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.224Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://southmainauto.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.434Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.434Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/southmainauto",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:19:26.434Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.434Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/southmainauto",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:19:26.434Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.southmainauto.shop",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.434Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://shop.southmainauto.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.434Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://southmainauto.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.896Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.896Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/southmainauto",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:21:06.896Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.896Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/southmainauto",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:21:06.896Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.southmainauto.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.897Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at patreon.com/southmainauto — not confirmed as theirs",
+      "evidence": "https://www.patreon.com/southmainauto",
+      "placesLooked": 4,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/southmainauto",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.879Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.879Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://locals.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.879Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/southmainauto",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.226Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.226Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://locals.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.226Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/southmainauto",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.436Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.436Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/southmainauto",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:26.436Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/southmainauto",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.898Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/southmainauto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.898Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "not there · we looked in 2 places",
+      "evidence": null,
+      "placesLooked": 6,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Southmain%20Autoservice&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.968Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Southmain%20Autoservice&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.314Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://southmainautopodcast.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:17:20.314Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.podbean.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:28.707Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.podbean.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:28.707Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.podbean.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:28.707Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.podbean.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:28.707Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.podbean.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:28.707Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.podbean.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:28.708Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Southmain%20Autoservice&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-14T13:19:28.708Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "hit",
+          "url": "https://www.podbean.com/login?url=https%3A%2F%2Fsouthmainauto.podbean.com%2F&error=Invalid%20Podbean%20Site(2)",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:28.708Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=Southmain%20Autoservice&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.910Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/south-main-auto",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:21:06.910Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at southmainauto.com — not confirmed as theirs",
+      "evidence": "https://www.southmainauto.com/",
+      "placesLooked": 6,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.southmainauto.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.970Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://southmainauto.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.970Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.southmainauto.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.970Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.southmainautorepair.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.970Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:17:23.056Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:17:23.056Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:17:23.056Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:17:23.056Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:17:23.057Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:17:23.057Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.southmainauto.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:17:23.057Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://southmainauto.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:17:23.057Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.southmainauto.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:17:23.057Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.southmainautorepair.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:17:23.057Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:31.171Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:31.171Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:31.172Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:31.172Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:31.172Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:31.172Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.southmainauto.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:31.173Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://southmainauto.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:19:31.173Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.southmainauto.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:31.173Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://southmainautorepair.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:31.173Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.752Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.752Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.752Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.752Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.752Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.southmainauto.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.752Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.southmainauto.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.755Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://southmainauto.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.755Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.southmainautoshop.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.755Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.southmainauto.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.755Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.southmainautorepair.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.755Z"
+        },
+        {
+          "place": "proposed_5",
+          "outcome": "miss",
+          "url": "https://southmainautoshop.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.756Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.970Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:17:23.057Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:19:31.173Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.756Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 6 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 6 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.970Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 6 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:17:23.057Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 6 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:19:31.173Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 6 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.756Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T15:50:34.971Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:17:23.057Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:19:31.174Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:21:09.756Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": 0.259,
+    "recentPerMonth": 10.67,
+    "baselinePerMonth": 14.4,
+    "recentCount": 32,
+    "baselineCount": 132,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 275,
+    "sampled": 200,
+    "truncated": false,
+    "recentMedianViews": 109711,
+    "baselineMedianViews": 101613,
+    "unit": "videos",
+    "line": "11 videos a month now, against 14 before that — down 26%"
+  },
+  "samples": [
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Toyota Sienna Power Door Repair - Let's Finish This Job!",
+      "url": "https://www.youtube.com/watch?v=lr4EpMcXaz4",
+      "at": "2026-08-13T10:30:23Z",
+      "thumbnail": "https://i.ytimg.com/vi/lr4EpMcXaz4/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 40724,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:20:48.036Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Toyota Sienna Sliding Door BROKEN! Let's Fix It - Part 1",
+      "url": "https://www.youtube.com/watch?v=HQzqGk9bFl0",
+      "at": "2026-08-11T10:30:24Z",
+      "thumbnail": "https://i.ytimg.com/vi/HQzqGk9bFl0/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 74390,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:20:48.037Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Dealer Said There Was Nothing They Could Do... Really?",
+      "url": "https://www.youtube.com/watch?v=xa7wvnEQq4Q",
+      "at": "2026-08-06T10:30:05Z",
+      "thumbnail": "https://i.ytimg.com/vi/xa7wvnEQq4Q/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 222125,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:20:48.037Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "A Dealer Asked for a Second Opinion... It Saved Them $2,400",
+      "url": "https://www.youtube.com/watch?v=a3WSz0kA4XM",
+      "at": "2026-08-04T10:30:19Z",
+      "thumbnail": "https://i.ytimg.com/vi/a3WSz0kA4XM/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 223150,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:20:48.037Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "It Was Just Here For An Oil Change... Then EVERYTHING Went Dead!",
+      "url": "https://www.youtube.com/watch?v=F1EM7yLvEf4",
+      "at": "2026-07-31T10:00:02Z",
+      "thumbnail": "https://i.ytimg.com/vi/F1EM7yLvEf4/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 154165,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:20:48.037Z",
+      "status": null
+    }
+  ],
+  "headline": {
+    "sentence": "southmainauto posts car repair diagnosis videos to 1,000,000 YouTube followers, with recent uploads between 40,673 and 223,142 views, and sells memberships on its own website, but has no newsletter, store, or podcast, and output is down 26% to 11 videos a month.",
+    "restsOn": "1,000,000 on YouTube · YouTube channel · Membership · Own website · Newsletter · Store · Podcast · 11 videos a month now, against 14 before that \\u2014 down 26% · \"Toyota Sienna Power Door Repair - Let's Finish This Job!\" (40,673 views) · \"A Dealer Asked for a Second Opinion... It Saved Them $2,400\" (223,142 views) · \"Dealer Said There Was Nothing They Could Do... Really?\" (222,111 views) · \"It Was Just Here For An Oil Change... Then EVERYTHING Went Dead!\" (154,165 views) · \"Toyota Sienna Sliding Door BROKEN! Let's Fix It - Part 1\" (74,390 views)"
+  },
+  "samplesSearched": {
+    "count": 0,
+    "why": "they link none of their own posts anywhere we can read"
+  },
+  "commentsRead": 499,
+  "audienceHistory": [
+    {
+      "audience": 1000000,
+      "at": "2026-08-07T15:50:24.265Z"
+    },
+    {
+      "audience": 1000000,
+      "at": "2026-08-14T13:17:07.958Z"
+    },
+    {
+      "audience": 1000000,
+      "at": "2026-08-14T13:19:04.933Z"
+    },
+    {
+      "audience": 1000000,
+      "at": "2026-08-14T13:20:48.036Z"
+    }
+  ],
+  "audience": 1000000,
+  "audienceWhy": "YouTube alone — nothing links the TikTok to it",
+  "audienceSeparate": [
+    {
+      "id": "tiktok_profile",
+      "followers": 53,
+      "url": "https://www.tiktok.com/@southmainauto",
+      "why": "nothing on either page links the TikTok to the YouTube, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 19,
+    "brief": "Car detailing, DIY repair and restoration — creators who work on a machine on camera, name the specific part or product they are using, and repeat the format every video.",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 18.6,
+      "max": 35,
+      "lines": [
+        {
+          "item": "newsletter",
+          "label": "Newsletter",
+          "half": "built",
+          "base": 10,
+          "effective": 10,
+          "demandAligned": false,
+          "why": "not there · we looked in 6 places"
+        },
+        {
+          "item": "store",
+          "label": "Store",
+          "half": "built",
+          "base": 9,
+          "effective": 9,
+          "demandAligned": false,
+          "why": "not there · we looked in 4 places · 2 wouldn't answer"
+        },
+        {
+          "item": "podcast",
+          "label": "Podcast",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 2 places"
+        }
+      ],
+      "share": 0.53,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 18.6,
+    "pressure": {
+      "points": 0.2,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0.2,
+          "line": "11 videos a month now, against 14 before that — down 26%",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "pass",
+      "because": "Eric O. is a working mechanic filming actual diagnostic and repair jobs in his own shop, which is exactly the DIY repair format the brief asks for, and the repeat-every-video consistency is evident from a million-subscriber repair channel even though the scraped post text is thin."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 7 days apart, the trend needs 90",
+      "why": "our two looks are 7 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.667,
+      "resolved": 4,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 2
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "pass",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 149,
+    "places": 43,
+    "from": "2026-08-07T15:50:24.099Z",
+    "to": "2026-08-14T13:21:25.894Z"
+  }
+}

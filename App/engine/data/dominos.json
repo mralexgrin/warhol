@@ -1,0 +1,961 @@
+{
+  "creatorId": "dominos",
+  "asOf": null,
+  "observedThrough": "2026-08-06T16:17:50.505Z",
+  "observationCount": 155,
+  "brief": "US food and drink brands with a large short-form audience and nothing you can buy from them directly",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": false,
+  "escalatedWhy": "we looked in 20 places — they already have a youtube channel, newsletter and store. We didn't go further.",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 1400000,
+      "status": 200,
+      "url": "https://www.tiktok.com/@dominos",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 627000,
+      "status": 200,
+      "url": "https://www.youtube.com/@dominos",
+      "why": "Domino's Pizza — the YouTube Data API resolved @dominos"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "status": 0,
+      "url": "https://www.instagram.com/dominos/",
+      "why": "robots.txt asks us not to look here"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@dominos",
+      "evidence": "https://www.youtube.com/@dominos",
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@dominos",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.000Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/dominos",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.000Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/dominos",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.000Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@dominos",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.904Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/dominos",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.904Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/dominos",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.904Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@dominos",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.213Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/dominos",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.214Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/dominos",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.214Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at dominos.substack.com — not confirmed as theirs",
+      "evidence": "https://dominos.substack.com/",
+      "placesLooked": 9,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://dominos.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.005Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@dominos",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.005Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://dominos.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.005Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/dominos",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.005Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://dominos.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.005Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://dominos.com",
+          "status": 200,
+          "why": "no way to subscribe to anything on their own site — we read 2 pages of dominos.com",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.005Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://dominos.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.907Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@dominos",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.907Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://dominos.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.907Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/dominos",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.907Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://dominos.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.907Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://dominos.com",
+          "status": 200,
+          "why": "no way to subscribe to anything on their own site — we read 2 pages of dominos.com",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.907Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://dominos.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.216Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@dominos",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.217Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://dominos.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.217Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/dominos",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.217Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://dominos.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.217Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://dominos.com",
+          "status": 200,
+          "why": "no way to subscribe to anything on their own site — we read 2 pages of dominos.com",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.218Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at dominos.gumroad.com — not confirmed as theirs",
+      "evidence": "https://dominos.gumroad.com/",
+      "placesLooked": 9,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://dominos.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.008Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://dominos.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.009Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/dominos",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:12:14.009Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=dominos",
+          "status": 200,
+          "why": "asked for /dominos, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.009Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/dominos",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:12:14.009Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://dominos.com",
+          "status": 200,
+          "why": "nothing to buy on their own site — we read 2 pages of dominos.com",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.009Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://dominos.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.909Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://dominos.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.909Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/dominos",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:16:02.909Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=dominos",
+          "status": 200,
+          "why": "asked for /dominos, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.909Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/dominos",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:16:02.909Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://dominos.com",
+          "status": 200,
+          "why": "nothing to buy on their own site — we read 2 pages of dominos.com",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.909Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://dominos.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.220Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://dominos.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.220Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/dominos",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:17:50.220Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://stan.store/unavailable?username=dominos",
+          "status": 200,
+          "why": "asked for /dominos, landed on stan.store/unavailable",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.220Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/dominos",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:17:50.220Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "miss",
+          "url": "https://dominos.com",
+          "status": 200,
+          "why": "nothing to buy on their own site — we read 2 pages of dominos.com",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.220Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 2 places",
+      "evidence": null,
+      "placesLooked": 6,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=11337686",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.009Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/dominos",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.009Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=11337686",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.910Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/dominos",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:16:02.910Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=11337686",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.221Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/dominos",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.221Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by an official directory",
+      "why": "found it — https://podcasts.apple.com/us/podcast/dominos-pizza-inc-earnings-call-podcast-%24dpz/id1895902947?uo=4",
+      "evidence": "https://itunes.apple.com/search?term=Domino%E2%80%99s&entity=podcast&limit=5",
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Domino%E2%80%99s&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Domino's Pizza Inc Earnings Call Podcast ($DPZ)\" by Castify",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.288Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Domino%E2%80%99s&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Domino's Pizza Inc Earnings Call Podcast ($DPZ)\" by Castify",
+          "advisory": false,
+          "at": "2026-08-06T16:16:03.202Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Domino%E2%80%99s&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Domino's Pizza Inc Earnings Call Podcast ($DPZ)\" by Castify",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.298Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by a link they publish",
+      "why": "found it — dominos.com",
+      "evidence": "https://www.dominos.com/",
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.dominos.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.289Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://dominos.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.289Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.dominos.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:16:03.202Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://dominos.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:16:03.202Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.dominos.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.299Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://dominos.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.299Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.289Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T16:16:03.202Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.299Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.289Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T16:16:03.202Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.299Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T16:12:14.289Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T16:16:03.202Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T16:17:50.299Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": -0.833,
+    "recentPerMonth": 7,
+    "baselinePerMonth": 3.82,
+    "recentCount": 21,
+    "baselineCount": 35,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 275,
+    "sampled": 100,
+    "truncated": false,
+    "recentMedianViews": 754544,
+    "baselineMedianViews": 258586,
+    "line": "7 videos a month now, against 3.8 before that — up 83%, they are posting more; the recent ones are getting 192% more views"
+  },
+  "commentsRead": null,
+  "audienceHistory": [
+    {
+      "audience": 1400000,
+      "at": "2026-08-06T16:12:11.971Z"
+    },
+    {
+      "audience": 1400000,
+      "at": "2026-08-06T16:16:00.984Z"
+    },
+    {
+      "audience": 1400000,
+      "at": "2026-08-06T16:17:47.741Z"
+    }
+  ],
+  "audience": 1400000,
+  "audienceWhy": "TikTok alone — nothing links the YouTube to it",
+  "audienceSeparate": [
+    {
+      "id": "youtube_profile",
+      "followers": 627000,
+      "url": "https://www.youtube.com/@dominos",
+      "why": "nothing on either page links the YouTube to the TikTok, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 2,
+    "brief": "US food and drink brands with a large short-form audience and nothing you can buy from them directly",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 2,
+      "max": 35,
+      "lines": [
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 2 places"
+        }
+      ],
+      "share": 0.058,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 2,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "line": "7 videos a month now, against 3.8 before that — up 83%, they are posting more; the recent ones are getting 192% more views",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "not_judged",
+      "because": "the model pass did not run, and Fit is a judgment — no model, no verdict"
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "why": "our two looks are 0 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.667,
+      "resolved": 4,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 2
+    },
+    "threshold": 78,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "not_judged",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 75,
+    "places": 19,
+    "from": "2026-08-06T16:12:10.093Z",
+    "to": "2026-08-06T16:17:50.505Z"
+  }
+}

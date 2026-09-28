@@ -1,0 +1,408 @@
+<!doctype html>
+<!--
+ROUGH SKETCH 2 — decision aid, not a build.
+
+Covers the four questions parked in the grilling session, plus the one that
+came out of it: v2 lost Alloy's vibrancy because it put everything in plain
+.p containers with near-black ink buttons. Audit of v2: zero btn--teal, zero
+btn--butter, zero arrowbtn, zero ringwrap, zero cvchip, zero tile.
+
+The proposal here is NOT "add colour". It is: give each field a job, then let
+the job decide the colour. If a field means something, it can never be
+decoration, and it can't be sprinkled inconsistently.
+-->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sketch 2 — report shape, score, colour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..800;1,300..800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../prototypes/v2/alloy.css">
+<style>
+  body { padding: 0; }
+  .sketchbar { position: sticky; top: 0; z-index: 40; display: flex; align-items: center;
+    gap: var(--s4); flex-wrap: wrap; padding: 12px 22px; background: var(--ink); color: var(--on-ink); }
+  .sketchbar b { font-family: var(--disp); font-size: 14px; letter-spacing: -.02em; }
+  .sketchbar .note { color: rgba(242,240,247,.72); font-size: 12.5px; margin: 0; max-width: 52ch; }
+  .sketchbar .tsw { margin-left: auto; background: rgba(255,255,255,.10); border-color: transparent; }
+  .sketchbar .tsw button { color: rgba(242,240,247,.78); }
+  .sketchbar .tsw button[aria-pressed="true"] { background: var(--on-ink); color: var(--ink); }
+  /* --page is Alloy's backdrop, not a content surface: body text tokens are
+     tuned for --slab, so content sitting straight on the page loses contrast. */
+  .pagewrap { padding: 22px; }
+  .page { max-width: 1180px; margin: 0 auto; padding: var(--s6) var(--s6) var(--s8);
+    background: var(--slab); border-radius: var(--r-slab); box-shadow: var(--el-slab); }
+  .sec { padding-top: var(--s7); }
+  .sec-title { font-size: clamp(22px,3vw,32px); }
+  .sec-note { max-width: 62ch; font-size: 13.5px; color: var(--text-2); line-height: 1.6; margin-top: 8px; }
+  .switch { display: inline-flex; gap: 2px; padding: 3px; margin: var(--s4) 0 var(--s3);
+    background: var(--panel-2); border: 1px solid var(--line); border-radius: var(--r-pill); }
+  .switch button { appearance: none; border: 0; cursor: pointer; background: transparent; color: var(--text-2);
+    font: inherit; font-size: 12.5px; font-weight: 600; padding: 7px 14px; border-radius: var(--r-pill); }
+  .switch button[aria-pressed="true"] { background: var(--ink); color: var(--on-ink); }
+  [data-v] { display: none } [data-v].on { display: block }
+  .verdict-note { margin-top: var(--s3); font-size: 12.5px; color: var(--text-3); line-height: 1.6; max-width: 78ch; }
+
+  /* ---------- §1 colour legend ---------- */
+  .jobs { display: grid; grid-template-columns: repeat(4,1fr); gap: var(--s3); margin-top: var(--s4); }
+  @media (max-width: 820px) { .jobs { grid-template-columns: repeat(2,1fr) } }
+  .job { border-radius: var(--r-md); padding: var(--s4); min-height: 128px; display: flex; flex-direction: column; }
+  .job .k { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+  .job .w { font-family: var(--disp); font-size: 20px; font-weight: 700; letter-spacing: -.03em; margin-top: 6px; }
+  .job .d { font-size: 12px; line-height: 1.5; margin-top: auto; }
+  .job--teal { background: var(--teal); color: var(--on-field) }
+  .job--butter { background: var(--butter); color: var(--on-field) }
+  .job--lilac { background: var(--lilac); color: var(--on-field) }
+  .job--ink { background: var(--ink); color: var(--on-ink) }
+  .job--teal .k,.job--butter .k,.job--lilac .k { color: rgba(28,27,35,.72) }
+  .job--teal .d,.job--butter .d,.job--lilac .d { color: rgba(28,27,35,.82) }
+  .job--ink .k { color: rgba(242,240,247,.66) } .job--ink .d { color: rgba(242,240,247,.80) }
+
+  /* ---------- the row ---------- */
+  .listwrap { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden }
+  .row { display: grid; grid-template-columns: 30px 116px minmax(0,1fr) 132px; gap: var(--s4);
+    align-items: start; padding: var(--s4) var(--s5); border-top: 1px solid var(--line) }
+  .row:first-of-type { border-top: 0 }
+  .row:hover { background: var(--panel-2) }
+  .rk { font-size: 13px; font-weight: 700; color: var(--text-3); font-variant-numeric: tabular-nums; padding-top: 6px }
+  .nm { display: block; font-family: var(--disp); font-size: 18px; font-weight: 700; letter-spacing: -.03em }
+  .hd { display: block; font-size: 12px; color: var(--text-3); margin-top: 2px }
+  .thesis { font-size: 14px; color: var(--text-2); margin-top: 8px; line-height: 1.5; max-width: 60ch }
+  .quote { font-family: var(--disp); font-weight: 300; font-style: italic; font-size: 16px;
+    letter-spacing: -.02em; margin-top: 11px; line-height: 1.4; max-width: 54ch }
+  .acts { display: flex; flex-direction: column; gap: 6px }
+  .acts .btn { width: 100%; justify-content: center }
+  .more { display: block; text-align: left; margin-top: 11px; font-size: 12.5px; color: var(--text-3);
+    background: none; border: 0; padding: 0; cursor: pointer; font: inherit; text-decoration: underline; text-underline-offset: 3px }
+
+  /* the two facts, flat vs as fields */
+  .facts { display: flex; gap: var(--s2); flex-wrap: wrap; margin-top: 12px }
+  .fact-flat { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--text-2) }
+  .fact-flat i { width: 11px; height: 11px; border-radius: 3px; background: var(--teal-d); display: block }
+  .fact { display: inline-flex; align-items: center; gap: 9px; padding: 8px 14px; border-radius: var(--r-pill);
+    font-size: 12.5px; font-weight: 600 }
+  .fact--gap { background: var(--teal); color: var(--on-field) }
+  .fact--strain { background: var(--butter); color: var(--on-field) }
+  .fact b { font-weight: 700 }
+
+  /* score treatments */
+  .scoreflat { text-align: center; padding-top: 4px }
+  .scoreflat .n { font-family: var(--disp); font-size: 34px; font-weight: 700; letter-spacing: -.05em;
+    font-variant-numeric: tabular-nums; line-height: 1 }
+  .scoreflat .d { font-size: 10px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--text-3); margin-top: 4px }
+  .scoreflat .sum { font-size: 11px; color: var(--text-3); margin-top: 7px; line-height: 1.45 }
+  .scorefield { background: var(--ink); color: var(--on-ink); border-radius: var(--r-md);
+    padding: 12px 10px; text-align: center }
+  .scorefield .n { font-family: var(--disp); font-size: 34px; font-weight: 700; letter-spacing: -.05em; line-height: 1 }
+  .scorefield .n small { font-size: 14px; opacity: .6 }
+  .scorefield .d { font-size: 9.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: rgba(242,240,247,.66); margin-top: 5px }
+  .scorefield .bits { display: flex; gap: 4px; margin-top: 10px }
+  .scorefield .bits span { flex: 1; height: 5px; border-radius: 3px; display: block }
+  .ringwrap { width: 92px; height: 92px; margin: 0 auto; padding: 8px }
+  .ringwrap::before { background: conic-gradient(from -90deg, var(--rc,var(--teal)) var(--pct,90%), var(--panel-3) 0) }
+  .ringnum { position: relative; z-index: 1; width: 100%; height: 100%; border-radius: 50%;
+    background: var(--panel); box-shadow: 0 0 0 3px var(--panel);
+    display: flex; flex-direction: column; align-items: center; justify-content: center }
+  .ringnum b { font-family: var(--disp); font-size: 26px; font-weight: 700; letter-spacing: -.045em; line-height: 1 }
+  .ringnum span { font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); margin-top: 2px }
+  .ringcap { text-align: center; font-size: 11px; color: var(--text-3); margin-top: 8px; line-height: 1.4 }
+  .trio { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s4); margin-top: var(--s4) }
+  @media (max-width: 820px) { .trio { grid-template-columns: 1fr } }
+  .trio > div { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); padding: var(--s5) }
+  .trio .lab { margin-bottom: var(--s4) }
+
+  /* ---------- report ---------- */
+  .rpt { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; margin-top: var(--s4) }
+  .rpt-hd { padding: var(--s5); display: flex; gap: var(--s5); align-items: flex-start; flex-wrap: wrap }
+  .rpt-hd h2 { font-size: clamp(24px,3vw,34px); letter-spacing: -.042em }
+  .disc { border-top: 1px solid var(--line) }
+  .disc > button { width: 100%; display: flex; align-items: center; gap: var(--s3); padding: var(--s4) var(--s5);
+    background: none; border: 0; cursor: pointer; font: inherit; color: var(--text); text-align: left }
+  .disc > button:hover { background: var(--panel-2) }
+  .disc .t { font-size: 14px; font-weight: 600 }
+  .disc .s { font-size: 12px; color: var(--text-3); margin-left: 6px }
+  .disc .arrowbtn { margin-left: auto; width: 32px; height: 32px }
+  .disc-body { padding: 0 var(--s5) var(--s5); display: none } .disc.open .disc-body { display: block }
+  .case { padding: var(--s5); display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--s5) }
+  @media (max-width: 900px) { .case { grid-template-columns: 1fr } }
+  .argument { font-size: 16.5px; line-height: 1.62; max-width: 52ch }
+  .invbox { background: var(--panel-2); border-radius: var(--r-md); padding: var(--s4) }
+  .inv { display: flex; flex-direction: column; gap: 9px; margin-top: 10px }
+  .inv li { display: grid; grid-template-columns: 12px 1fr auto; gap: 10px; align-items: center; font-size: 13px }
+  .inv i { width: 12px; height: 12px; border-radius: 3px; background: var(--teal-d); display: block }
+  .inv .s { font-size: 11.5px; color: var(--text-3) }
+  .tabs { display: flex; gap: 2px; padding: 3px; margin: 0 var(--s5) var(--s4); background: var(--panel-2);
+    border: 1px solid var(--line); border-radius: var(--r-pill); width: max-content }
+  .tabs button { appearance: none; border: 0; cursor: pointer; background: transparent; color: var(--text-2);
+    font: inherit; font-size: 12.5px; font-weight: 600; padding: 8px 16px; border-radius: var(--r-pill) }
+  .tabs button[aria-pressed="true"] { background: var(--panel); color: var(--text); box-shadow: var(--el-1) }
+  .pillcard { border-radius: var(--r-md); padding: var(--s4); }
+  .pillcard .k { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase }
+  .pillcard .n { font-family: var(--disp); font-size: 30px; font-weight: 700; letter-spacing: -.045em; margin-top: 5px }
+  .pillcard .n small { font-size: 14px; opacity: .55 }
+  .pillcard .d { font-size: 12.5px; line-height: 1.5; margin-top: 7px }
+  .pillrow { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3) }
+  @media (max-width: 700px) { .pillrow { grid-template-columns: 1fr } }
+
+  /* ---------- referral states ---------- */
+  .refrow { display: flex; align-items: center; gap: var(--s4); padding: var(--s4) var(--s5);
+    border-top: 1px solid var(--line); flex-wrap: wrap }
+  .refrow:first-of-type { border-top: 0 }
+  .refrow .who2 { min-width: 190px }
+  .refrow .who2 b { font-family: var(--disp); font-size: 16px; font-weight: 700; letter-spacing: -.028em; display: block }
+  .refrow .who2 span { font-size: 12px; color: var(--text-3) }
+  .refrow .msg { font-size: 13px; color: var(--text-2); flex: 1; min-width: 220px }
+</style>
+</head>
+<body>
+
+<div class="sketchbar">
+  <b>Sketch 2</b>
+  <p class="note">The four parked questions, plus bringing Alloy's energy back with a job attached.</p>
+  <div class="tsw" role="group" aria-label="Theme">
+    <button data-t="light" aria-pressed="false">Light</button>
+    <button data-t="dark" aria-pressed="true">Dark</button>
+  </div>
+</div>
+
+<div class="pagewrap"><div class="page">
+
+  <!-- ============ 1. COLOUR HAS A JOB ============ -->
+  <section class="sec">
+    <h2 class="sec-title">1 · Colour has a job</h2>
+    <p class="sec-note">v2 lost Alloy's energy because it put everything in plain containers. The fix isn't sprinkling
+      colour back — it's giving each field one meaning and then using it every single time that meaning appears.
+      A field that means something can't be decoration, and can't be applied inconsistently.</p>
+    <div class="jobs">
+      <div class="job job--teal"><span class="k">Teal</span><span class="w">The gap is real</span>
+        <span class="d">Verified absence. Nothing owned, N surfaces checked. The buy signal.</span></div>
+      <div class="job job--butter"><span class="k">Butter</span><span class="w">The timing</span>
+        <span class="d">Operator strain. They said out loud they can't keep up. Why now, not someday.</span></div>
+      <div class="job job--lilac"><span class="k">Lilac</span><span class="w">Warhol speaking</span>
+        <span class="d">The machine describing itself — definitions, provenance, what it did and didn't check.</span></div>
+      <div class="job job--ink"><span class="k">Ink</span><span class="w">Your call</span>
+        <span class="d">Decisions and their consequences. The score, the verbs, what you committed to.</span></div>
+    </div>
+  </section>
+
+  <!-- ============ 2. THE CARD ============ -->
+  <section class="sec">
+    <h2 class="sec-title">2 · The card</h2>
+    <p class="sec-note">Same content, three levels of energy. B is the argument: gap and strain stop being
+      numbers on the report and become the two coloured facts on the card — which is also how a first-time
+      user learns what the two pillars are without reading a definition.</p>
+    <div class="switch" data-group="card">
+      <button data-set="a" aria-pressed="true">A · flat (today)</button>
+      <button data-set="b" aria-pressed="false">B · facts as fields</button>
+      <button data-set="c" aria-pressed="false">C · + score field</button>
+    </div>
+
+    <div class="listwrap">
+      <article class="row">
+        <div class="rk">1</div>
+        <div data-v="card-a" class="on"><div class="scoreflat"><div class="n">87</div><div class="d">score</div></div></div>
+        <div data-v="card-b"><div class="scoreflat"><div class="n">87<small style="font-size:15px;opacity:.5">/100</small></div><div class="d">score</div>
+          <div class="sum">gap 55/60<br>strain 32/40</div></div></div>
+        <div data-v="card-c"><div class="scorefield"><div class="n">87<small>/100</small></div><div class="d">Warhol score</div>
+          <div class="bits"><span style="background:var(--teal);flex:55"></span><span style="background:var(--butter);flex:32"></span><span style="background:rgba(255,255,255,.16);flex:13"></span></div></div></div>
+
+        <div>
+          <span class="nm">Marguerite Vaillancourt</span>
+          <span class="hd">@marguerite.bakes · TikTok · 340K across 3</span>
+          <p class="thesis">Laminated pastry in a rented kitchen. Three hundred thousand people watch her fold butter and nobody can buy anything.</p>
+          <p class="quote">“do you have a newsletter?? i need these written down somewhere”</p>
+
+          <div data-v="card-a" class="on"><div class="facts">
+            <span class="fact-flat"><i></i> Nothing owned — 21 surfaces checked</span></div></div>
+          <div data-v="card-b"><div class="facts">
+            <span class="fact fact--gap">Nothing owned · <b>21 surfaces checked</b></span>
+            <span class="fact fact--strain">“one person with one oven” · <b>said 4 Jan</b></span></div></div>
+          <div data-v="card-c"><div class="facts">
+            <span class="fact fact--gap">Nothing owned · <b>21 surfaces checked</b></span>
+            <span class="fact fact--strain">“one person with one oven” · <b>said 4 Jan</b></span></div></div>
+
+          <button class="more">Show the other 6 quotes and the full inventory</button>
+        </div>
+
+        <div class="acts">
+          <div data-v="card-a" class="on"><button class="btn" style="width:100%;justify-content:center">Open report</button></div>
+          <div data-v="card-b"><button class="btn btn--teal" style="width:100%;justify-content:center">Open report</button></div>
+          <div data-v="card-c"><button class="btn btn--teal" style="width:100%;justify-content:center">Open report</button></div>
+          <button class="btn btn--out">Watch</button>
+          <button class="btn btn--ghost">Pass…</button>
+        </div>
+      </article>
+    </div>
+    <p class="verdict-note"><b>What changes between A and B:</b> the two pillars become legible without a definition,
+      the primary button stops being near-black on a near-black panel, and the card gains Alloy's field vocabulary
+      without a single decorative element. <b>C</b> adds a scored ink block whose bar shows the split — more energy,
+      but it competes with the creator's name for first read.</p>
+  </section>
+
+  <!-- ============ 3. THE SCORE ============ -->
+  <section class="sec">
+    <h2 class="sec-title">3 · Making 87 mean something</h2>
+    <p class="sec-note">Today it's <b>87</b> with no denominator and no explanation anywhere. Three ways to fix it —
+      and the third also answers the Confidence question, since a ring shows "how much of the checking resolved"
+      without spending a second number on it.</p>
+    <div class="trio">
+      <div><span class="lab">i · the arithmetic</span>
+        <div class="scoreflat" style="text-align:left">
+          <div class="n" style="font-size:44px">87<small style="font-size:18px;opacity:.5">/100</small></div>
+          <div class="sum" style="font-size:12.5px;margin-top:10px">monetization gap <b style="color:var(--teal-d)">55</b>/60<br>
+            operator strain <b style="color:var(--butter-d)">32</b>/40</div>
+        </div>
+        <p class="ringcap" style="text-align:left;margin-top:14px">Teaches the two pillars every time it's read. No click, no tooltip.</p></div>
+
+      <div><span class="lab">ii · confidence as a ring</span>
+        <div class="ringwrap" style="--pct:92%;--rc:var(--teal)"><div class="ringnum"><b>87</b><span>score</span></div></div>
+        <p class="ringcap">Ring = 92% of checks resolved. One glanceable mark, one number, no second figure to confuse it with.</p></div>
+
+      <div><span class="lab">iii · both</span>
+        <div class="ringwrap" style="--pct:92%;--rc:var(--teal)"><div class="ringnum"><b>87</b><span>score</span></div></div>
+        <div class="sum" style="font-size:12px;color:var(--text-3);text-align:center;margin-top:12px;line-height:1.5">
+          gap <b style="color:var(--teal-d)">55</b>/60 · strain <b style="color:var(--butter-d)">32</b>/40</div>
+        <p class="ringcap" style="margin-top:10px">Densest. Everything the number means, in ~110px.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ 4. THE REPORT ============ -->
+  <section class="sec">
+    <h2 class="sec-title">4 · Report shape</h2>
+    <p class="sec-note">Eight sections now that scoring moved here. The case always open; everything else earns its
+      expansion — or three tabs. Note the disclosure rows use Alloy's circular ↗, which v2 never used once.</p>
+    <div class="switch" data-group="rpt">
+      <button data-set="a" aria-pressed="true">A · case open, rest collapsed</button>
+      <button data-set="b" aria-pressed="false">B · tabs</button>
+    </div>
+
+    <div data-v="rpt-a" class="on">
+      <div class="rpt">
+        <div class="rpt-hd">
+          <div style="flex:1;min-width:240px">
+            <span class="pill pill--solid">Scout Report</span>
+            <h2 style="margin-top:10px">Marguerite Vaillancourt</h2>
+            <p class="hd">@marguerite.bakes · TikTok · 340K across 3</p>
+          </div>
+          <div class="ringwrap" style="--pct:92%;--rc:var(--teal)"><div class="ringnum"><b>87</b><span>score</span></div></div>
+        </div>
+        <div class="case" style="border-top:1px solid var(--line)">
+          <div>
+            <span class="lab">The case</span>
+            <p class="argument">An audience of 340K is asking to buy something that does not exist. Warhol counted
+              <b>840 purchase-intent comments</b> in the sampled window. Against that, 5 of 5 monetization lines came
+              back verified absent across 21 surfaces.</p>
+            <p class="quote" style="margin-top:var(--s4)">“do you have a newsletter?? i need these written down somewhere”</p>
+          </div>
+          <div class="invbox"><span class="lab">Monetization inventory</span>
+            <ul class="inv">
+              <li><i></i><span>Newsletter</span><span class="s">6 surf.</span></li>
+              <li><i></i><span>Website</span><span class="s">4 surf.</span></li>
+              <li><i></i><span>Storefront</span><span class="s">5 surf.</span></li>
+              <li><i></i><span>Membership</span><span class="s">3 surf.</span></li>
+              <li><i></i><span>Book / product</span><span class="s">3 surf.</span></li>
+            </ul>
+            <p style="font-size:12.5px;color:var(--text-2);margin-top:12px;line-height:1.5">Nothing owned. 21 surfaces checked.</p></div>
+        </div>
+
+        <div class="disc"><button><span class="t">How it scored</span><span class="s">gap 55/60 · strain 32/40 · format fit passed</span>
+          <span class="arrowbtn">↗</span></button>
+          <div class="disc-body"><div class="pillrow">
+            <div class="pillcard job--teal"><span class="k">Monetization gap</span><div class="n">55<small>/60</small></div>
+              <p class="d">The buy signal. Demand that has nowhere to go.</p></div>
+            <div class="pillcard job--butter"><span class="k">Operator strain</span><div class="n">32<small>/40</small></div>
+              <p class="d">The timing trigger. Why now rather than someday.</p></div>
+          </div></div>
+        </div>
+        <div class="disc"><button><span class="t">The check record</span><span class="s">21 surfaces · 33 days tracked · Sweep, Probe, Study</span>
+          <span class="arrowbtn">↗</span></button><div class="disc-body"><p class="sec-note">Nine rows: surface, what was found, source, date, state, depth.</p></div></div>
+        <div class="disc"><button><span class="t">What the work looks like</span><span class="s">3 samples</span>
+          <span class="arrowbtn">↗</span></button><div class="disc-body"><p class="sec-note">Gradient abstractions, not thumbnails.</p></div></div>
+        <div class="disc"><button><span class="t">Recommended play</span><span class="s">Newsletter + sponsorship slate</span>
+          <span class="arrowbtn">↗</span></button><div class="disc-body"><p class="sec-note">One play, from what Paradium actually operates.</p></div></div>
+      </div>
+    </div>
+
+    <div data-v="rpt-b">
+      <div class="rpt">
+        <div class="rpt-hd">
+          <div style="flex:1;min-width:240px">
+            <span class="pill pill--solid">Scout Report</span>
+            <h2 style="margin-top:10px">Marguerite Vaillancourt</h2>
+            <p class="hd">@marguerite.bakes · TikTok · 340K across 3</p>
+          </div>
+          <div class="ringwrap" style="--pct:92%;--rc:var(--teal)"><div class="ringnum"><b>87</b><span>score</span></div></div>
+        </div>
+        <div class="tabs" role="group"><button aria-pressed="true">The case</button><button aria-pressed="false">Scoring</button><button aria-pressed="false">Receipts</button></div>
+        <div class="case" style="padding-top:0">
+          <div><p class="argument">An audience of 340K is asking to buy something that does not exist…</p></div>
+          <div class="invbox"><span class="lab">Monetization inventory</span>
+            <ul class="inv"><li><i></i><span>Newsletter</span><span class="s">6 surf.</span></li>
+              <li><i></i><span>Website</span><span class="s">4 surf.</span></li></ul></div>
+        </div>
+      </div>
+    </div>
+    <p class="verdict-note"><b>A</b> keeps the evidence and the score readable together, which is the product's whole
+      claim — and each disclosure line is itself informative, so a closed report still says gap 55/60.
+      <b>B</b> is shorter but separates the argument from the number that summarises it, and you can't read across them.</p>
+  </section>
+
+  <!-- ============ 5. REFERRAL STATUS ============ -->
+  <section class="sec">
+    <h2 class="sec-title">5 · What happened to what I referred</h2>
+    <p class="sec-note">Status follows the creator, so a Spotter learns whether their judgment was any good without
+      a fourth destination. Ink for the decision, because a decision is somebody's call.</p>
+    <div class="listwrap">
+      <div class="refrow"><span class="pill pill--warn">Referred</span>
+        <span class="who2"><b>Marguerite Vaillancourt</b><span>you · 31 Jul</span></span>
+        <span class="msg">With the desk. Referring is also the request to authorize a Study.</span></div>
+      <div class="refrow"><span class="pill pill--ok">Promoted</span>
+        <span class="who2"><b>DeShawn Aliotta-Pryce</b><span>Alex Grinshpoon · 2 Aug</span></span>
+        <span class="msg">Backed. Outreach package generated and a Phase Two record created.</span></div>
+      <div class="refrow"><span class="pill">Passed</span>
+        <span class="who2"><b>Junie Castellanos</b><span>Marisol Vega · 1 Aug</span></span>
+        <span class="msg">Already monetized — a storefront went live after your referral.</span></div>
+    </div>
+    <p class="verdict-note">The third row is the important one: it tells the Spotter <i>why</i> they were wrong, which is
+      the only version of this that improves anyone's judgment.</p>
+  </section>
+
+</div></div>
+
+<script>
+(function () {
+  document.querySelectorAll('.switch').forEach(function (sw) {
+    var g = sw.dataset.group, btns = sw.querySelectorAll('button');
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        btns.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+        document.querySelectorAll('[data-v^="' + g + '-"]').forEach(function (el) {
+          el.classList.toggle('on', el.getAttribute('data-v') === g + '-' + b.dataset.set);
+        });
+      });
+    });
+  });
+  document.querySelectorAll('.disc > button').forEach(function (b) {
+    b.addEventListener('click', function () { b.parentNode.classList.toggle('open'); });
+  });
+  document.querySelectorAll('.tabs button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      b.parentNode.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+    });
+  });
+  document.querySelectorAll('.sketchbar .tsw button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.documentElement.setAttribute('data-theme', b.dataset.t);
+      document.querySelectorAll('.sketchbar .tsw button').forEach(function (x) {
+        x.setAttribute('aria-pressed', String(x === b));
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

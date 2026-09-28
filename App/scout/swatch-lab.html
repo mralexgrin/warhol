@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scout — Colour & Chip Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..800;1,300..800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Real Scout CSS for button/chip geometry + base tokens. Candidate colours
+     below are scoped to this file only — production is untouched. -->
+<link rel="stylesheet" href="alloy.css">
+<link rel="stylesheet" href="scout-v52.css">
+<style>
+  html, body { margin: 0; }
+  body { font-family: var(--ui, "Be Vietnam Pro", system-ui, sans-serif);
+    color: var(--text, #1c1b23); background: var(--page, #f4f2ef);
+    background-attachment: fixed; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 40px 32px 140px; }
+  .top { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  h1.t { font-family: var(--disp,"Epilogue",sans-serif); font-weight: 800; letter-spacing: -.03em;
+    font-size: 34px; line-height: 1.05; margin: 0; }
+  .sub { color: var(--text-2,#55525f); font-size: 14.5px; line-height: 1.55; max-width: 66ch; margin: 10px 0 0; }
+  .sub code { font-size: 12.5px; }
+  .themebar { display: inline-flex; gap: 4px; background: var(--panel,#fff);
+    border: 1px solid var(--line,#e4e1db); border-radius: 999px; padding: 4px; }
+  .themebar button { appearance: none; border: 0; cursor: pointer; font: inherit; font-size: 13px;
+    font-weight: 600; padding: 7px 14px; border-radius: 999px; background: transparent; color: var(--text-2,#55525f); }
+  .themebar button[aria-pressed="true"] { background: var(--ink,#1c1b23); color: var(--on-ink,#fff); }
+
+  .sec { margin-top: 52px; }
+  .sec > h2 { font-family: var(--disp,"Epilogue",sans-serif); font-weight: 700; font-size: 22px;
+    letter-spacing: -.02em; margin: 0 0 4px; padding-bottom: 10px; border-bottom: 2px solid var(--line-hi,#d9d5ce); }
+  .sec > .lead { color: var(--text-2,#55525f); font-size: 13.5px; line-height: 1.55; margin: 12px 0 0; max-width: 74ch; }
+
+  /* swatch ramp */
+  .ramp { margin-top: 22px; background: var(--panel,#fff); border: 1px solid var(--line,#e4e1db);
+    border-radius: 16px; padding: 20px; }
+  .ramp-h { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+  .ramp-h b { font-size: 15px; font-weight: 700; }
+  .ramp-h .job { font-size: 12.5px; color: var(--text-2,#55525f); }
+  .ramp-h .warn { font-size: 11.5px; font-weight: 700; color: #B23A2A; letter-spacing: .02em; }
+  .chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-top: 14px; }
+  .sw { border-radius: 12px; padding: 14px 14px 12px; min-height: 88px; display: flex; flex-direction: column;
+    justify-content: space-between; border: 1px solid rgba(0,0,0,.06); }
+  .sw .lab { font-size: 12.5px; font-weight: 700; }
+  .sw .hex { font-family: ui-monospace,"SF Mono",Menlo,monospace; font-size: 11.5px; opacity: .82; margin-top: 2px; }
+  .sw .cr { font-family: ui-monospace,"SF Mono",Menlo,monospace; font-size: 11px; margin-top: 10px;
+    display: inline-flex; align-items: center; gap: 6px; }
+  .cbadge { font-family: var(--ui); font-size: 9.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+    padding: 2px 6px; border-radius: 999px; }
+  .cbadge.AAA { background: #1F7A66; color: #fff; }
+  .cbadge.AA { background: #2E67CC; color: #fff; }
+  .cbadge.lg { background: #C6871B; color: #1c1b23; }
+  .cbadge.fail { background: #C33A2C; color: #fff; }
+
+  /* context cards */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-top: 20px; }
+  .cell { background: var(--panel,#fff); border: 1px solid var(--line,#e4e1db); border-radius: 14px; padding: 18px;
+    display: flex; flex-direction: column; gap: 14px; }
+  .cell.wide { grid-column: 1 / -1; }
+  .stage { min-height: 48px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .cap { border-top: 1px dashed var(--line-hi,#d9d5ce); padding-top: 10px; }
+  .cap b { font-size: 12.5px; }
+  .cap .n { font-size: 12px; color: var(--text-2,#55525f); line-height: 1.5; margin-top: 3px; }
+  .base { outline: 2px solid var(--line-hi,#d9d5ce); outline-offset: 3px; }
+  .tagpill { font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 999px; }
+
+  /* a realistic filter row */
+  .filterrow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; width: 100%;
+    padding: 12px; border-radius: 12px; background: var(--panel-2,#f0eee9); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <div>
+      <h1 class="t">Scout — Colour &amp; Chip Lab</h1>
+      <p class="sub">Candidate colours for a richer palette, plus the filter chip rethink. Every hue carries a <b>proposed job</b> (Scout's rule: colour means one thing) and a <b>live WCAG contrast ratio</b> against the text it would carry — because the app ships against a contrast audit. Nothing here touches production. Flip the theme to sanity-check both.</p>
+    </div>
+    <div class="themebar" role="group" aria-label="Theme">
+      <button data-theme-set="light" aria-pressed="true">Light</button>
+      <button data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+  </div>
+
+  <!-- ================================================= CURRENT PALETTE -->
+  <section class="sec">
+    <h2>Where we are today</h2>
+    <p class="lead">Five hues, each with a job. The complaint is real: <b>Watch</b> uses butter pushed to its dark tint, which muddies to brown. And there's no dedicated <b>negative</b> colour — Pass is just grey.</p>
+    <div id="current"></div>
+  </section>
+
+  <!-- ================================================= NEW CANDIDATES -->
+  <section class="sec">
+    <h2>Candidate hues to introduce</h2>
+    <p class="lead">Each ramp = a pale <b>field</b> (dark ink text sits on it) and a <b>solid</b> (white text sits on it), with the contrast each pairing actually scores. Pick jobs; don't adopt a colour without one.</p>
+    <div id="candidates"></div>
+  </section>
+
+  <!-- ================================================= WATCH IN CONTEXT -->
+  <section class="sec">
+    <h2>The Watch verb — five ways out of brown</h2>
+    <p class="lead">Same button, different colour strategy. Brown is just dark yellow used as <i>text</i>; the fixes are to lighten it into a field, shift the hue toward orange, or drop warmth entirely for blue. Full verb trio shown so you judge it against Promote &amp; Pass, not in isolation.</p>
+    <div class="grid">
+
+      <div class="cell wide">
+        <div class="stage">
+          <button class="vbtn vbtn--go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg>Promote</button>
+          <button class="vbtn base" style="background:transparent;color:#8A5A00;border:1px solid #B07D16">Watch</button>
+          <button class="vbtn" style="background:transparent;color:var(--text-2);border:1px solid var(--line-ctl)">Pass</button>
+          <span style="font-size:12px;color:var(--text-2)">← today's trio (Watch outlined in brown)</span>
+        </div>
+        <div class="cap"><b>Baseline</b><div class="n">The current build. Watch's amber-brown outline is the tone you don't like.</div></div>
+      </div>
+
+      <div class="cell">
+        <div class="stage">
+          <button class="vbtn" style="background:#F7DE93;color:#1c1b23;border-color:transparent">Watch</button>
+        </div>
+        <div class="cap"><b>A · Pale amber field</b><div class="n">Warmth kept, but as a filled pastel with ink text — never brown. Reads like the vgroup tabs.</div></div>
+      </div>
+
+      <div class="cell">
+        <div class="stage">
+          <button class="vbtn" style="background:transparent;color:#C05A1E;border:1px solid #E08A46">Watch</button>
+        </div>
+        <div class="cap"><b>B · Terracotta outline</b><div class="n">Hue shifted toward orange, so even deep it reads orange, not mud.</div></div>
+      </div>
+
+      <div class="cell">
+        <div class="stage">
+          <button class="vbtn" style="background:#B6CDF3;color:#1c1b23;border-color:transparent">Watch</button>
+        </div>
+        <div class="cap"><b>C · Blue field</b><div class="n">Drops warmth entirely. "Later / cool it" reads as blue. Breaks butter=timing elsewhere though.</div></div>
+      </div>
+
+      <div class="cell">
+        <div class="stage">
+          <button class="vbtn" style="background:transparent;color:#2E67CC;border:1px solid #7FA6E6">Watch</button>
+        </div>
+        <div class="cap"><b>D · Blue outline</b><div class="n">Same idea, quieter — matches the current outlined weight exactly.</div></div>
+      </div>
+
+      <div class="cell">
+        <div class="stage">
+          <button class="vbtn" style="background:#F6D97A;color:#1c1b23;border:1px solid #E0B44A">Watch</button>
+        </div>
+        <div class="cap"><b>E · Gold field + edge</b><div class="n">Amber field with a defining edge — a touch more structured than A.</div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================= PASS / RED IN CONTEXT -->
+  <section class="sec">
+    <h2>Introducing red — the negative signal</h2>
+    <p class="lead">Red's job = <b>a real negative</b> (declining trajectory, risk), or a decisive Pass. Careful: a low-stakes Pass in loud red can feel punishing. Shown both as a verb and as a signal tag.</p>
+    <div class="grid">
+      <div class="cell">
+        <div class="stage">
+          <button class="vbtn base" style="background:transparent;color:var(--text-2);border:1px solid var(--line-ctl)">Pass</button>
+        </div>
+        <div class="cap"><b>Today</b><div class="n">Neutral grey ghost. Reversible, low-drama — but says nothing.</div></div>
+      </div>
+      <div class="cell">
+        <div class="stage">
+          <button class="vbtn" style="background:transparent;color:#C33A2C;border:1px solid #E29187">Pass</button>
+        </div>
+        <div class="cap"><b>Red outline Pass</b><div class="n">Decisive without shouting. My pick if Pass goes red.</div></div>
+      </div>
+      <div class="cell">
+        <div class="stage">
+          <button class="vbtn" style="background:#C33A2C;color:#fff;border-color:transparent">Reject</button>
+        </div>
+        <div class="cap"><b>Solid red</b><div class="n">Reserve for a genuine hard "no", not routine passing.</div></div>
+      </div>
+      <div class="cell">
+        <div class="stage">
+          <span class="tagpill" style="background:#F2C3BB;color:#8C2A1E">DECLINING</span>
+          <span class="tagpill" style="background:#F7DE93;color:#7A5300">COOLING</span>
+          <span class="tagpill" style="background:#B6CDF3;color:#22468C">EARLY</span>
+        </div>
+        <div class="cap"><b>Red/amber/blue as signal tags</b><div class="n">Where new colour pays off most — a legible trajectory vocabulary the current lilac-only tags can't express.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= FILTER CHIP -->
+  <section class="sec">
+    <h2>The filter chip, rethought</h2>
+    <p class="lead">Today the selected chip fills <b>teal</b> — which already means "the gap is real." A toggle isn't evidence, so its selected state should carry <i>no</i> field meaning. Each row: two off, one on. Pick a selection language.</p>
+    <div class="grid">
+
+      <div class="cell wide">
+        <div class="stage"><div class="filterrow">
+          <span style="font-size:12px;font-weight:600;color:var(--text-2)">Sources</span>
+          <span class="chipbtn on base">YouTube</span>
+          <button class="chipbtn">TikTok</button>
+          <button class="chipbtn">Bluesky</button>
+        </div></div>
+        <div class="cap"><b>Today · teal fill</b><div class="n">Overloads teal. Reads like a claim about the source, not a filter state.</div></div>
+      </div>
+
+      <div class="cell">
+        <div class="stage"><div class="filterrow">
+          <span class="chipbtn on" style="background:var(--ink);border-color:var(--ink);color:var(--on-ink)">YouTube</span>
+          <button class="chipbtn">TikTok</button>
+        </div></div>
+        <div class="cap"><b>A · Ink fill</b><div class="n">Neutral, decisive, borrows no field meaning. Safest.</div></div>
+      </div>
+
+      <div class="cell">
+        <div class="stage"><div class="filterrow">
+          <span class="chipbtn on" style="background:#2E67CC;border-color:#2E67CC;color:#fff">YouTube</span>
+          <button class="chipbtn">TikTok</button>
+        </div></div>
+        <div class="cap"><b>B · Blue = "UI selection"</b><div class="n">Adopt blue as the interface-selection colour (no data meaning). Ties chips, and possibly Watch, together.</div></div>
+      </div>
+
+      <div class="cell">
+        <div class="stage"><div class="filterrow">
+          <span class="chipbtn on" style="background:transparent;border-color:var(--ink);color:var(--text);box-shadow:inset 0 0 0 1px var(--ink)">YouTube</span>
+          <button class="chipbtn">TikTok</button>
+        </div></div>
+        <div class="cap"><b>C · Ink outline</b><div class="n">Selection = a ring, not a fill. Quietest; keeps the row calm when several are on.</div></div>
+      </div>
+
+      <div class="cell">
+        <div class="stage"><div class="filterrow">
+          <span class="chipbtn on" style="background:var(--ink);border-color:var(--ink);color:var(--on-ink)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="margin-right:5px"><path d="M5 12l5 5 9-11"/></svg>YouTube</span>
+          <button class="chipbtn">TikTok</button>
+        </div></div>
+        <div class="cap"><b>D · Ink + check</b><div class="n">Adds a checkmark so "on" is unmistakable, not just darker. Best for accessibility.</div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <p style="margin-top:48px;font-size:12.5px;color:var(--text-3);line-height:1.6;max-width:74ch">
+    <b>Two cautions the lab enforces:</b> yellow can only ever be a <i>fill</i> with dark text — as text on a light panel it fails contrast every time. And a second purple would collide with lilac (Scout's self-voice), so it's left out unless you give it a distinct job.
+  </p>
+
+</div>
+
+<script>
+  // ---- WCAG contrast ----
+  function lum(hex){hex=hex.replace('#','');if(hex.length===3)hex=hex.split('').map(c=>c+c).join('');
+    const v=[0,2,4].map(i=>parseInt(hex.substr(i,2),16)/255).map(c=>c<=0.03928?c/12.92:Math.pow((c+0.055)/1.055,2.4));
+    return 0.2126*v[0]+0.7152*v[1]+0.0722*v[2];}
+  function ratio(a,b){const L1=lum(a),L2=lum(b),hi=Math.max(L1,L2),lo=Math.min(L1,L2);return (hi+0.05)/(lo+0.05);}
+  function badge(r){return r>=7?['AAA','AAA']:r>=4.5?['AA','AA']:r>=3?['lg','AA·lg']:['fail','FAIL'];}
+  const INK='#1c1b23', WHITE='#ffffff';
+
+  function swatch(o){
+    // o: {lab, bg, text}
+    const r = ratio(o.bg,o.text), b = badge(r);
+    const tc = o.text===INK ? 'ink' : 'white';
+    return '<div class="sw" style="background:'+o.bg+';color:'+o.text+'">'+
+      '<div><div class="lab">'+o.lab+'</div><div class="hex">'+o.bg.toUpperCase()+' · '+tc+' text</div></div>'+
+      '<div class="cr">'+r.toFixed(2)+':1 <span class="cbadge '+b[0]+'">'+b[1]+'</span></div></div>';
+  }
+  function ramp(host, title, job, warn, sws){
+    const el=document.createElement('div'); el.className='ramp';
+    el.innerHTML='<div class="ramp-h"><b>'+title+'</b><span class="job">'+job+'</span>'+
+      (warn?'<span class="warn">'+warn+'</span>':'')+'</div>'+
+      '<div class="chips">'+sws.map(swatch).join('')+'</div>';
+    document.getElementById(host).appendChild(el);
+  }
+
+  // ---- current palette ----
+  ramp('current','Teal','opportunity is real','', [
+    {lab:'field',bg:'#67BCAA',text:INK},{lab:'solid (Promote green)',bg:'#1F7A66',text:WHITE}]);
+  ramp('current','Butter → the brown problem','timing','muddies to brown as text', [
+    {lab:'field',bg:'#F6E1A8',text:INK},{lab:'dark tint (Watch text)',bg:'#8A5A00',text:WHITE}]);
+  ramp('current','Lilac','Scout’s own voice','', [
+    {lab:'field',bg:'#D7D2E9',text:INK},{lab:'deep (tag text)',bg:'#5A4CA3',text:WHITE}]);
+  ramp('current','Ink','weight / decided','', [
+    {lab:'solid',bg:'#1C1B23',text:WHITE}]);
+
+  // ---- candidates ----
+  ramp('candidates','Amber / Gold','proposed: retune "timing" so Watch stops browning','', [
+    {lab:'pale field',bg:'#F7DE93',text:INK},{lab:'gold field',bg:'#F6D97A',text:INK},
+    {lab:'solid',bg:'#C6871B',text:WHITE},{lab:'deep text-on-light',bg:'#F4F2EF',text:'#8A5A00'}]);
+  ramp('candidates','Terracotta / Orange','proposed: warm without brown','', [
+    {lab:'pale field',bg:'#F3CDB4',text:INK},{lab:'solid',bg:'#C85A2B',text:WHITE},
+    {lab:'outline text',bg:'#F4F2EF',text:'#C05A1E'}]);
+  ramp('candidates','Blue','proposed: "later" OR UI-selection accent (no data meaning)','', [
+    {lab:'pale field',bg:'#B6CDF3',text:INK},{lab:'solid',bg:'#2E67CC',text:WHITE},
+    {lab:'outline text',bg:'#F4F2EF',text:'#2E67CC'}]);
+  ramp('candidates','Red','proposed: the negative signal / hard Pass','', [
+    {lab:'pale field',bg:'#F2C3BB',text:INK},{lab:'solid',bg:'#C33A2C',text:WHITE},
+    {lab:'outline text',bg:'#F4F2EF',text:'#C33A2C'}]);
+  ramp('candidates','Yellow','proposed: highlight only — fill, never text','fill-only', [
+    {lab:'field (ink text ok)',bg:'#F4C430',text:INK},{lab:'as text (don’t)',bg:'#F4F2EF',text:'#E0B000'}]);
+  ramp('candidates','Periwinkle','caution: sits next to lilac — needs a distinct job','collision risk', [
+    {lab:'field',bg:'#9AA2EC',text:INK},{lab:'solid',bg:'#5B63D6',text:WHITE}]);
+
+  // ---- theme toggle ----
+  const bar=document.querySelector('.themebar');
+  bar.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+    document.documentElement.setAttribute('data-theme',b.dataset.themeSet);
+    bar.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));});
+</script>
+</body>
+</html>

@@ -1,0 +1,1441 @@
+{
+  "creatorId": "anildash",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:06:34.530Z",
+  "observationCount": 231,
+  "brief": "Writers and media people with a large audience and no business around it — newsletters, tech and culture commentary",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": false,
+  "escalatedWhy": "we looked in 26 places — they already have a youtube channel, newsletter and store. We didn't go further.",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 18,
+      "avatar": {
+        "url": "https://p16-common-sign.tiktokcdn-us.com/tos-alisg-avt-0068/smga338305350f80f74c87ca470fa33a21d~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=46c4d2c9&x-expires=1786885200&x-signature=HOQm81O86UrymIxhfDOwEQstQhw%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@anildash",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 845,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/RdGj8TR4w-fnwDLYHfZflSKcXdJuZWWv99tvLoOJL_M0wnO6sl4ioIFbG1idXIPJ6Xz_lUaBRg=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@anildash",
+      "why": "Anil Dash — the YouTube Data API resolved @anildash"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/anildash/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": true,
+      "followers": 101026,
+      "avatar": {
+        "url": "https://cdn.bsky.app/img/avatar/plain/did:plc:sg2e2kqdsdp2q2zl44txadbp/bafkreicnvqv3tg434bghscobifd6fqltjrvq6li4qo4zmujjvtbefqfgxy",
+        "expires": null,
+        "host": "bsky.app"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://bsky.app/profile/anildash.com",
+      "why": "anildash.com — anildash.com carries their name and they publish it, and it is their handle, and the AppView resolved it to did:plc:sg2e2kqdsdp2q2zl44txadbp"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@anildash",
+      "evidence": "https://www.youtube.com/@anildash",
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@anildash",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:33:33.692Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/anildash",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:33:33.692Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/anildash",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:33:33.692Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@anildash",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.632Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/anildash",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.632Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/anildash",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.633Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@anildash",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.002Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/anildash",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.002Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/anildash",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.003Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@anildash",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.003Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "miss",
+          "url": "https://www.anildash.com/youtube",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.004Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by the feed it publishes — the publication title reads \"Anil Dash\"",
+      "why": "found it — buttondown.com/anildash",
+      "evidence": "https://buttondown.com/anildash",
+      "placesLooked": 14,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "empty",
+          "url": "https://buttondown.com/anildash/rss",
+          "status": 200,
+          "why": "\"Anil Dash\" is live and has nothing published in it — the publication title reads \"Anil Dash\"",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.025Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://anildash.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.027Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/anildash?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/anildash",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.027Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://anildash.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.027Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "hit",
+          "url": "https://buttondown.com/anildash",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.027Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://anildash.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.027Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "empty",
+          "url": "https://buttondown.com/anildash/rss",
+          "status": 200,
+          "why": "\"Anil Dash\" is live and has nothing published in it — the publication title reads \"Anil Dash\"",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.753Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://anildash.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.753Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/anildash?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/anildash",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.753Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://anildash.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.753Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "hit",
+          "url": "https://buttondown.com/anildash",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.754Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://anildash.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.754Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "empty",
+          "url": "https://buttondown.com/anildash/rss",
+          "status": 200,
+          "why": "\"Anil Dash\" is live and has nothing published in it — the publication title reads \"Anil Dash\"",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.130Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://anildash.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.131Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/anildash?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/anildash",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.131Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://anildash.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.131Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "hit",
+          "url": "https://buttondown.com/anildash",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.131Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://anildash.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.131Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.anildash.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.131Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://anildash.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.131Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at anildash.gumroad.com — not confirmed as theirs",
+      "evidence": "https://anildash.gumroad.com/",
+      "placesLooked": 7,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://anildash.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.027Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://anildash.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.027Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/anildash",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:33:34.027Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.028Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/anildash",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:33:34.028Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://anildash.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.754Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://anildash.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.754Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/anildash",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:55:41.754Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.754Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/anildash",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:55:41.754Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://anildash.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.132Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://anildash.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.132Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/anildash",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:06:34.132Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.132Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/anildash",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:06:34.132Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.anildash.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.132Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 7,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/anildash",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.028Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/anildash",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.028Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/anildash",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.754Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/anildash",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.754Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/anildash",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.132Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/anildash",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.132Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.anildash.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.132Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by an official directory",
+      "why": "found it — https://podcasts.apple.com/us/podcast/function-with-anil-dash/id1439658455?uo=4",
+      "evidence": "https://itunes.apple.com/search?term=Anil%20Dash&entity=podcast&limit=5",
+      "placesLooked": 2,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.megaphone.fm/function",
+          "status": 200,
+          "why": "25 posts read from Function with Anil Dash — the publication title reads \"Function with Anil Dash\"",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.519Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Anil%20Dash&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Function with Anil Dash\" by Vox Media",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.521Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.megaphone.fm/function",
+          "status": 200,
+          "why": "25 posts read from Function with Anil Dash — the publication title reads \"Function with Anil Dash\"",
+          "advisory": false,
+          "at": "2026-08-14T12:55:42.195Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Anil%20Dash&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Function with Anil Dash\" by Vox Media",
+          "advisory": false,
+          "at": "2026-08-14T12:55:42.195Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.megaphone.fm/function",
+          "status": 200,
+          "why": "25 posts read from Function with Anil Dash — the publication title reads \"Function with Anil Dash\"",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.416Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Anil%20Dash&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Function with Anil Dash\" by Vox Media",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.417Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://www.anildash.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.417Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.anildash.com/podcast/feed",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.418Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by the feed it publishes — the publication title reads \"Anil Dash\"",
+      "why": "found it — anildash.com",
+      "evidence": "https://www.anildash.com/",
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.anildash.com/feed.xml",
+          "status": 200,
+          "why": "12 posts read from Anil Dash — the publication title reads \"Anil Dash\"",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.802Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.anildash.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.804Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://anildash.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.804Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.anildash.com/feed.xml",
+          "status": 200,
+          "why": "12 posts read from Anil Dash — the publication title reads \"Anil Dash\"",
+          "advisory": false,
+          "at": "2026-08-14T12:55:42.544Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.anildash.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:42.544Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://anildash.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:55:42.544Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.anildash.com/feed.xml",
+          "status": 200,
+          "why": "12 posts read from Anil Dash — the publication title reads \"Anil Dash\"",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.522Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.anildash.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.524Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://anildash.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.525Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.805Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:55:42.545Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.526Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.805Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:55:42.545Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.526Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:33:34.806Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:55:42.545Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:06:34.527Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": 0.618,
+    "recentPerMonth": 0.33,
+    "baselinePerMonth": 0.87,
+    "recentCount": 1,
+    "baselineCount": 8,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 275,
+    "sampled": 28,
+    "truncated": false,
+    "recentMedianViews": 1048,
+    "baselineMedianViews": 467,
+    "unit": "videos",
+    "line": "0.3 videos a month now, against 0.9 before that — down 62%; the recent ones are getting 124% more views"
+  },
+  "samples": [
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "So, a couple weeks ago, we rented a car, and randomly, it was one of the BMWs with the Spider-Man ad in the da",
+      "url": "https://bsky.app/profile/anildash.com/post/3msy5fc5jbk2v",
+      "at": "2026-08-13T17:14:34.475Z",
+      "thumbnail": null,
+      "excerpt": "So, a couple weeks ago, we rented a car, and randomly, it was one of the BMWs with the Spider-Man ad in the dashboard. I am a sicko, and it’s not a car we own, so I was just enjoying it as “give me the enshittiffirrific thing!” and it played the in-car Advertising Experience for Brand New Day. Okay.",
+      "metric": 51,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:25.853Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Matt Ygkesias knows that the MAGA base enthusiastically supports child sexual abuse. His advice to Dems? Drop ",
+      "url": "https://bsky.app/profile/anildash.com/post/3msy23nlpt22h",
+      "at": "2026-08-13T16:15:29.703Z",
+      "thumbnail": null,
+      "excerpt": "Matt Ygkesias knows that the MAGA base enthusiastically supports child sexual abuse. His advice to Dems? Drop the “woke” stuff and start touching kids without consent.",
+      "metric": 84,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:25.853Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "interesting to learn that the NYT CMS can be operated with one hand",
+      "url": "https://bsky.app/profile/anildash.com/post/3msvmlnojzc22",
+      "at": "2026-08-12T17:08:34.817Z",
+      "thumbnail": null,
+      "excerpt": "interesting to learn that the NYT CMS can be operated with one hand",
+      "metric": 101,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:25.854Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "It's important to understand: social networks are not meant to be one-size-fits all! When Meta (which makes Th",
+      "url": "https://bsky.app/profile/anildash.com/post/3msvlb7nvpk2z",
+      "at": "2026-08-12T16:44:50.830Z",
+      "thumbnail": null,
+      "excerpt": "It's important to understand: social networks are not meant to be one-size-fits all! When Meta (which makes Threads, as well as Facebook and Instagram) creates platforms that have hundreds of millions of users, they do things like enable genocides, where tens of thousands of innocent people die.",
+      "metric": 535,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:25.854Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "I keep trying to find a way to put ideas from normal, reasonable people in circulation amongst those who are s",
+      "url": "https://bsky.app/profile/anildash.com/post/3msvkwhdlrk2z",
+      "at": "2026-08-12T16:38:49.783Z",
+      "thumbnail": null,
+      "excerpt": "I keep trying to find a way to put ideas from normal, reasonable people in circulation amongst those who are steeped in the absolutely BANANAS world of business \"Thought Leadership\", which these days is largely openly-fascist extremists sharing things like \"10 Slack tips for firing workers faster\" …",
+      "metric": 59,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:25.854Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "At a great @beta.nyc event this morning where folks from NYC’s new PIT (Public Interest Technology) Crew are t",
+      "url": "https://bsky.app/profile/anildash.com/post/3msvatw3ktk25",
+      "at": "2026-08-12T13:38:27.163Z",
+      "thumbnail": null,
+      "excerpt": "At a great @beta.nyc event this morning where folks from NYC’s new PIT (Public Interest Technology) Crew are talking through how they’ll be making tech that actually serves the people of the city — starting with Click to Cancel, for services that make it too hard to cancel subscriptions.",
+      "metric": 28,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:33:22.265Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Genuine question: how do we get one of these reporters who likes to ask those “some have concerns” questions a",
+      "url": "https://bsky.app/profile/anildash.com/post/3msv7iez34k25",
+      "at": "2026-08-12T13:14:06.417Z",
+      "thumbnail": null,
+      "excerpt": "Genuine question: how do we get one of these reporters who likes to ask those “some have concerns” questions about politicians to ask Christian politicians, “what do you say to those who are worried about your ties to organized child sexual abuse?” What’s the number of people it takes to qualify?",
+      "metric": 156,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:33:22.265Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "The Republican platform is simple: they want to sexually abuse children, and they want you to pay for it.",
+      "url": "https://bsky.app/profile/anildash.com/post/3msuzcbpiqc2z",
+      "at": "2026-08-12T11:23:19.179Z",
+      "thumbnail": null,
+      "excerpt": "The Republican platform is simple: they want to sexually abuse children, and they want you to pay for it.",
+      "metric": 253,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:33:22.265Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "I’m pretty handy, but every time I try to solder something, I am reminded anew that I am really goddamn terrib",
+      "url": "https://bsky.app/profile/anildash.com/post/3msrakiqo2k2z",
+      "at": "2026-08-10T23:22:32.235Z",
+      "thumbnail": null,
+      "excerpt": "I’m pretty handy, but every time I try to solder something, I am reminded anew that I am really goddamn terrible at tiny fiddly soldering tasks",
+      "metric": 97,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:33:22.265Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Any story “sourced” from The Hill is fucking playing right into the facsists hands and you are a goddamn patsy",
+      "url": "https://bsky.app/profile/anildash.com/post/3msrabcsvok2z",
+      "at": "2026-08-10T23:17:24.026Z",
+      "thumbnail": null,
+      "excerpt": "Any story “sourced” from The Hill is fucking playing right into the facsists hands and you are a goddamn patsy if you play along.",
+      "metric": 132,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:33:22.266Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Who do you have to kill to become a partner at A16Z?",
+      "url": "https://www.youtube.com/watch?v=9xciZefxIow",
+      "at": "2026-06-01T19:19:10Z",
+      "thumbnail": "https://i.ytimg.com/vi/9xciZefxIow/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1048,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:25.853Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Why did @hankschannelget those Artemis photos from Flickr?",
+      "url": "https://www.youtube.com/watch?v=6RP7uYcicAU",
+      "at": "2026-05-01T14:32:34Z",
+      "thumbnail": "https://i.ytimg.com/vi/6RP7uYcicAU/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 221,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:25.853Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Anil Dash",
+      "kind": "writing",
+      "title": "Actually, people love to work hard",
+      "url": "https://anildash.com/2026/04/06/people-love-to-work-hard/",
+      "at": "2026-04-07T00:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "One of the most infuriating tropes that I see repeated in media is executives (usually from boring old companies) insisting that their employees don’t want to work hard. Media outlets dutifully repeat this pernicious lie, despite there being no evidence to back it up, and then cultural commentators ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:06:34.529Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Anil Dash",
+      "kind": "writing",
+      "title": "On the Vergecast, On Video",
+      "url": "https://anildash.com/2026/04/01/vergecast-video/",
+      "at": "2026-04-01T00:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "I finally got the chance to drop by one of my favorite podcasts, The Vergecast, where David Pierce had me on to talk about the recent conversation about Apple's moves around video podcasts , as well as the much broader big-picture considerations around keeping podcasts open. We started with groundin",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:06:34.529Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Anil Dash",
+      "kind": "writing",
+      "title": "Defending Privacy, Daily",
+      "url": "https://anildash.com/2026/03/31/defending-privacy-daily/",
+      "at": "2026-03-31T00:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Yesterday, I had the chance to witness someone who's one of the most dedicated, competent advocates for privacy and digital rights bring that message to a whole new platform. It turns out, it's pretty delightful, especially in a moment when our civil liberties and rights online couldn't matter more!",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:06:34.529Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Will tech workers pay a price for speaking up about ICE? Yes. Do it anyway.",
+      "url": "https://www.youtube.com/watch?v=srmhGVypKuw",
+      "at": "2026-01-28T17:03:39Z",
+      "thumbnail": "https://i.ytimg.com/vi/srmhGVypKuw/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 954,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:25.853Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Wikipedia at 25: More important than ever — and at risk",
+      "url": "https://www.youtube.com/watch?v=8ulx8GjzCdY",
+      "at": "2026-01-16T02:28:36Z",
+      "thumbnail": "https://i.ytimg.com/vi/8ulx8GjzCdY/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 248,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:25.853Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "How the hell do you have a tech career in 2026?",
+      "url": "https://www.youtube.com/watch?v=VM76c-ve9_o",
+      "at": "2026-01-11T03:20:07Z",
+      "thumbnail": "https://i.ytimg.com/vi/VM76c-ve9_o/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 430,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:25.853Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Function with Anil Dash",
+      "kind": "episode",
+      "title": "Bonus: Why Online Safety is a Human Rights Issue",
+      "url": null,
+      "at": "2020-03-06T18:12:10.000Z",
+      "thumbnail": null,
+      "excerpt": "In keeping with our season long discussion of trust on the internet, on this bonus episode of Function - we explore online safety. \n Writer and activist Feminista Jones talks about the lasting effects of online harassment. \n Then, Anil talks with Tarah Demant of Amnesty International about an Amnest",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:06:34.528Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Function with Anil Dash",
+      "kind": "episode",
+      "title": "Bonus: Live from Texas Tribune Fest: Reclaiming Community on the Web",
+      "url": null,
+      "at": "2019-12-19T11:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "The integrity of the internet is at stake -- what have we lost and how do we get it back?\n At the 2019 Texas Tribune Festival, Anil spoke with web scholars and writers about reclaiming the internet through historical context, how we are tethered to social media and the inventive ways marginalized pe",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:06:34.528Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Function with Anil Dash",
+      "kind": "episode",
+      "title": "How To Save the 2020 Election: Stopping Fake News",
+      "url": null,
+      "at": "2019-11-27T11:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Are social networks downplaying their complicity in the problem that is “fake news?”Anil talks to Fadi Quran of the people powered social advocacy group, Avaaz , about how tech is used to target groups of people and spread disinformation that affects our elections, relationships, and social justice ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:06:34.528Z",
+      "status": null
+    }
+  ],
+  "headline": null,
+  "samplesSearched": {
+    "count": 6,
+    "why": "6 pieces of their own work"
+  },
+  "commentsRead": null,
+  "audienceHistory": [
+    {
+      "audience": 101015,
+      "at": "2026-08-12T15:33:22.262Z"
+    },
+    {
+      "audience": 101026,
+      "at": "2026-08-14T12:55:39.880Z"
+    },
+    {
+      "audience": 101026,
+      "at": "2026-08-14T13:06:25.853Z"
+    }
+  ],
+  "audience": 101026,
+  "audienceWhy": "Bluesky alone — nothing links the TikTok or YouTube to it",
+  "audienceSeparate": [
+    {
+      "id": "tiktok_profile",
+      "followers": 18,
+      "url": "https://www.tiktok.com/@anildash",
+      "why": "nothing on either page links the TikTok to the Bluesky, so it is not added in"
+    },
+    {
+      "id": "youtube_profile",
+      "followers": 845,
+      "url": "https://www.youtube.com/@anildash",
+      "why": "nothing on either page links the YouTube to the Bluesky, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 11,
+    "brief": "Writers and media people with a large audience and no business around it — newsletters, tech and culture commentary",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 2.5,
+      "max": 35,
+      "lines": [
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        }
+      ],
+      "share": 0.072,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 2.5,
+    "pressure": {
+      "points": 8,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 8,
+          "line": "0.3 videos a month now, against 0.9 before that — down 62%; the recent ones are getting 124% more views",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "not_judged",
+      "because": "the model pass did not run, and Fit is a judgment — no model, no verdict"
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 2 days apart, the trend needs 90",
+      "why": "our two looks are 2 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.833,
+      "resolved": 5,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 1
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "not_judged",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 83,
+    "places": 28,
+    "from": "2026-08-12T15:33:12.485Z",
+    "to": "2026-08-14T13:06:34.530Z"
+  }
+}

@@ -1,0 +1,814 @@
+/* ==========================================================================
+   WARHOL SCOUT v2 — application layer over the ALLOY toolkit.
+   --------------------------------------------------------------------------
+   alloy.css is a vendored dependency and is never edited. Its contract is
+   56/56 measured WCAG pairs, at rest and on hover, in both themes. Everything
+   here is either (a) structure Alloy has no primitive for, or (b) a scoped
+   extension of an Alloy primitive.
+
+   Two faces only: Epilogue (--disp) and Be Vietnam Pro (--ui). v1's third
+   register is gone; the human/machine distinction is carried by field colour
+   and the Rule/LLM badge instead of by typeface.
+
+   Renames forced by collisions with Alloy:
+     v1 .pill  (pillar stat)      -> .pstat    (Alloy .pill is a badge)
+     v1 .sub   (subsignal row)    -> .sig      (Alloy .sub is a nested panel)
+     v1 .top   (zero/outcome hd)  -> .zhead    (Alloy .top is the top bar)
+     v1 .lbl                      -> Alloy .lab
+     v1 .chip                     -> Alloy .pill
+     v1 .panel                    -> Alloy .p
+   ========================================================================== */
+
+/* ------------------------------------------------------------------ shell */
+#app { display: block; }
+
+/* Alloy's .p is `display:flex; flex-direction:column`. Anything that wears .p
+   but lays out in a row has to say so, or its children silently stack. This
+   is the single most common way to get a broken layout on top of Alloy. */
+.rewound, .wcost, .trigger { flex-direction: row; }
+.lens { display: block; }
+
+/* Alloy's .sub is designed to nest INSIDE a colour field, so its label is dark
+   ink at 72%. Used standalone on --panel-2 that is dark-on-dark in the dark
+   theme and unreadable. Anywhere we use .sub outside a field, the label takes
+   the normal secondary-text token instead. */
+.scorebox .sub .k,
+.wcost-n .sub .k { color: var(--text-3); }
+
+.slab--app  { grid-template-columns: 248px minmax(0, 1fr); height: calc(100dvh - 44px); }
+.slab--solo { grid-template-columns: minmax(0, 1fr); }
+.slab--gate { max-width: 560px; margin: 12vh auto; }
+
+@media (max-width: 960px) {
+  .slab--app { grid-template-columns: 1fr; height: auto; }
+}
+@media (max-width: 900px) {
+  .slab--app { height: calc(100dvh - 22px); }
+  .slab--gate { margin: 6vh auto; }
+}
+
+/* The slab is the scroll container, not the page: Alloy clips at the radius,
+   so a sticky rail inside it would be clipped too. */
+.slab--app > .main { overflow-y: auto; }
+.slab--app > .railcol--wide { overflow-y: auto; }
+@media (max-width: 960px) {
+  .slab--app > .main,
+  .slab--app > .railcol--wide { overflow-y: visible; }
+}
+
+/* -------------------------------------------------------------- wide rail */
+.railcol--wide {
+  align-items: stretch;
+  padding: var(--s5) var(--s4) var(--s4);
+  gap: var(--s5);
+}
+
+/* Below the slab's collapse point the rail sits above the work, so it has to
+   earn its height. Nav becomes a horizontal row, identity folds into the brand
+   line, and the desk trail — ambient context, not navigation — is dropped
+   rather than pushed through as a screenful of scrolling. */
+@media (max-width: 960px) {
+  .railcol--wide {
+    flex-direction: row; flex-wrap: wrap; align-items: center;
+    gap: var(--s3); padding: var(--s3) var(--s4);
+    overflow-x: visible; border-bottom: 1px solid var(--line);
+  }
+  .railcol--wide .brandrow { padding: 0; }
+  .railcol--wide .brandrow .sub-t { display: none; }
+  .railcol--wide .nav { flex-direction: row; flex-wrap: wrap; gap: var(--s2); margin-left: auto; }
+  .railcol--wide .rnav { width: auto; padding: 8px 14px; }
+  .railcol--wide .rnav .tx { flex: none; }
+  .railcol--wide .railsec { display: none; }
+  .railcol--wide .whoami { border-top: 0; padding-top: 0; }
+  .railcol--wide .whoami .who { display: none; }
+  .railcol .grow { margin-left: 0; }
+}
+@media (max-width: 620px) {
+  .railcol--wide { gap: var(--s2); }
+  .railcol--wide .whoami { margin-left: auto; order: 1; }
+  .railcol--wide .nav { order: 2; margin-left: 0; width: 100%; flex-wrap: nowrap; }
+  .railcol--wide .rnav { flex: 1 1 0; min-width: 0; justify-content: center; gap: 7px; padding: 9px 6px; }
+  .railcol--wide .rnav .tx { display: none; }
+  .railcol--wide .rnav .pill { margin-left: 0; }
+}
+
+.brandrow { display: flex; align-items: center; gap: 11px; padding: 0 4px; }
+.brandrow .wm { font-family: var(--disp); font-size: 19px; font-weight: 700; letter-spacing: -.03em; }
+.brandrow .sub-t { display: block; font-size: 11.5px; color: var(--text-3); line-height: 1.3; }
+
+.nav { display: flex; flex-direction: column; gap: 3px; }
+
+/* .rnav borrows .rbtn's state vocabulary at full width. .rbtn itself is a
+   fixed 44x44 icon target and is left untouched. */
+.rnav {
+  display: flex; align-items: center; gap: 11px; width: 100%;
+  padding: 10px 12px; border: 0; border-radius: 14px; cursor: pointer;
+  background: transparent; color: var(--text-2);
+  font: inherit; font-size: 13.5px; font-weight: 600; text-align: left;
+  transition: background var(--dur) ease, color var(--dur) ease;
+}
+.rnav:hover:not([aria-current="page"]) { background: var(--panel-2h); color: var(--text); }
+.rnav[aria-current="page"] { background: var(--teal); color: var(--on-field); }
+/* Alloy's rule: a hovered field LIGHTENS, never darkens — darkening a pastel
+   under dark ink costs ratio every time. */
+.rnav[aria-current="page"]:hover { background: var(--teal-h); }
+.rnav .ic { display: flex; flex: none; }
+.rnav .tx { flex: 1; min-width: 0; }
+.rnav .pill { margin-left: auto; flex: none; }
+.rnav[aria-current="page"] .pill { background: rgba(28, 27, 35, .16); color: var(--on-field); }
+.rnav[disabled] { opacity: .5; cursor: not-allowed; }
+.rnav[disabled]:hover { background: transparent; color: var(--text-2); }
+
+.railsec { display: flex; flex-direction: column; gap: 9px; }
+.trail { display: flex; flex-direction: column; gap: 10px; }
+.trail li { display: flex; flex-direction: column; gap: 2px; font-size: 12px; line-height: 1.4; color: var(--text-2); }
+.trail .t { font-size: 10.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+
+.whoami {
+  display: flex; align-items: center; gap: 10px; min-width: 0;
+  padding-top: var(--s4); border-top: 1px solid var(--line);
+}
+.whoami .who { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.whoami .who b { font-size: 13px; font-weight: 600; }
+.whoami .who span { font-size: 11.5px; color: var(--text-3); }
+
+/* --------------------------------------------------------------- top bar */
+.crumb button {
+  appearance: none; border: 0; background: none; padding: 0; cursor: pointer;
+  font: inherit; color: var(--text-3); letter-spacing: inherit;
+  border-radius: var(--r-xs);
+}
+.crumb button:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ------------------------------------------------------------- work column */
+.wrap { min-width: 0; }
+
+/* Rewound. Not a global token layer — three in-palette signals instead:
+   this band, the as-of .seg in the top bar, and the lens disclosure. */
+.rewound {
+  display: flex; align-items: center; gap: var(--s4); flex-wrap: wrap;
+  margin-bottom: var(--s3); padding: var(--s4) var(--s5);
+}
+.rewound .rw-l { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.rewound .rw-t { font-family: var(--disp); font-size: 18px; font-weight: 700; letter-spacing: -.032em; }
+.rewound .rw-d { font-size: 13px; color: rgba(28, 27, 35, .80); }
+.rewound .r { margin-left: auto; display: flex; gap: var(--s2); align-items: center; }
+
+/* The mandate-lens disclosure (PRD §7): the brief is today's, the evidence is
+   January's. One line — any longer and it reads as defensiveness rather than
+   disclosure. Lilac is otherwise unused in the app, so it consistently means
+   "a statement about the machine itself"; the hints use it too. */
+.lens {
+  margin-bottom: var(--s5); padding: var(--s3) var(--s5);
+  font-size: 13px; line-height: 1.6; max-width: none;
+  color: rgba(28, 27, 35, .82);
+}
+.lens .lens-b { font-weight: 700; color: var(--on-field); }
+
+.pagehead { padding-bottom: var(--s5); border-bottom: 1px solid var(--line); margin-bottom: var(--s5); }
+.pagehead h1 { font-size: clamp(28px, 4vw, 42px); letter-spacing: -.04em; }
+.pagehead .deck { margin-top: 10px; color: var(--text-2); font-size: 14.5px; max-width: 64ch; line-height: 1.6; }
+.pagehead .meta { margin-top: var(--s4); display: flex; flex-wrap: wrap; gap: var(--s2) var(--s4); align-items: center; }
+.brief { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; margin-top: var(--s3); }
+
+.mandates { display: flex; gap: 6px; flex-wrap: wrap; margin-top: var(--s4); }
+.mandates button {
+  appearance: none; cursor: pointer; font: inherit; font-size: 13px; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 8px 15px; border-radius: var(--r-pill);
+  border: 1px solid var(--line-hi); background: var(--panel); color: var(--text-2);
+  transition: background var(--dur) ease, color var(--dur) ease;
+}
+.mandates button:hover:not([aria-pressed="true"]) { background: var(--panel-2h); color: var(--text); }
+.mandates button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
+/* The ink button is the one surface that lifts toward its text — it starts at
+   16.4:1 and can afford it. */
+.mandates button[aria-pressed="true"]:hover { background: var(--ink-h); border-color: var(--ink-h); }
+.mandates button .c { font-variant-numeric: tabular-nums; opacity: .7; }
+.mandates button[aria-pressed="true"] .c { opacity: .85; }
+.mandates button[data-zero="true"] .c { color: var(--warn); opacity: 1; }
+.mandates button[aria-pressed="true"][data-zero="true"] .c { color: var(--butter); }
+
+.worked { display: flex; align-items: center; gap: var(--s4); flex-wrap: wrap; padding: var(--s4) 0; }
+.worked .track { flex: 1; max-width: 320px; height: 8px; }
+.worked .track i { background: var(--teal); transition: width .3s var(--ease); }
+
+/* ---------------------------------------------------------------- the card */
+.card { margin-top: var(--s4); padding: 0; overflow: hidden; transition: box-shadow var(--dur) var(--ease); }
+.card:hover { box-shadow: var(--el-2); }
+
+.flag {
+  display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+  padding: 11px var(--s5); font-size: 13px;
+}
+.flag b { font-size: 10.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.flag[data-t="resurfaced"] { background: var(--teal); color: var(--on-field); }
+.flag[data-t="alert"] { background: var(--stop-bg); color: var(--stop); }
+.flag .why { opacity: .9; }
+
+.cardtop { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--s5); padding: var(--s5) var(--s5) 0; }
+.ident { display: flex; gap: var(--s3); min-width: 0; }
+
+/* Creator identity mark. Four audited fields instead of v1's per-creator
+   accent solved for white text — Alloy's palette is closed by design. */
+.ini {
+  width: 44px; height: 44px; flex: none; border-radius: 15px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--disp); font-size: 14px; font-weight: 700; letter-spacing: .01em;
+}
+.ini--butter { background: var(--butter); color: var(--on-field); }
+.ini--teal   { background: var(--teal);   color: var(--on-field); }
+.ini--lilac  { background: var(--lilac);  color: var(--on-field); }
+.ini--ink    { background: var(--ink);    color: var(--on-ink); }
+.ini--sm { width: 34px; height: 34px; border-radius: 12px; font-size: 12px; }
+
+.namebits { min-width: 0; }
+.namebits h3 { font-size: 20px; letter-spacing: -.03em; line-height: 1.2; }
+.namebits .handle { font-size: 12.5px; color: var(--text-3); margin-top: 2px; }
+.namebits .thesis { font-size: 15px; line-height: 1.55; color: var(--text-2); margin-top: 9px; max-width: 60ch; }
+
+/* Score and confidence: side by side, never merged (PRD §4.3). Alloy's .sub
+   .k/.v pair is exactly this shape, tabular figures included. */
+.scorebox { display: flex; gap: var(--s2); height: max-content; flex: none; }
+.scorebox .sub {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  width: 112px; flex: none; padding: var(--s3) var(--s3) var(--s4); background: var(--panel-2);
+}
+.scorebox .sub .v { font-size: 30px; margin-top: 2px; }
+.scorebox .conf .v { color: var(--text-2); font-size: 25px; }
+.scorebox[data-low="true"] .conf .v { color: var(--warn); }
+.scorebox .dl { font-size: 11px; font-weight: 700; color: var(--text-3); margin-top: 3px; }
+.scorebox .dl[data-d="up"] { color: var(--ok); }
+
+/* The money shot: the quote beside the empty inventory. */
+.evidence { display: grid; grid-template-columns: 1.45fr 1fr; gap: var(--s4); padding: var(--s5); }
+.evidence > * { min-width: 0; }
+.invbox { background: var(--panel-2); border-radius: var(--r-md); padding: var(--s4); }
+
+/* Human speech. Epilogue italic in a lilac field — the register that was a
+   serif in v1 is now a face-weight-and-field combination. */
+blockquote.q { margin: 0; }
+blockquote.q p {
+  font-family: var(--disp); font-weight: 300; font-style: italic;
+  font-size: 20px; line-height: 1.42; letter-spacing: -.02em; color: var(--text);
+  text-indent: -.4em;
+}
+blockquote.q .src,
+.obs .src { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+blockquote.q .src .m,
+.obs .src .m { font-size: 11px; color: var(--text-3); }
+.q + .q, .q + .obs, .obs + .q, .obs + .obs {
+  margin-top: var(--s4); padding-top: var(--s4); border-top: 1px solid var(--line);
+}
+.qmore { margin-top: var(--s3); font-size: 11.5px; color: var(--text-3); }
+
+/* A crawler observation is not a voice: no quote marks, no italic, and an
+   explicit label. The label is the whole signal — an accent rule down the side
+   would be a second, weaker way of saying the same thing. */
+.obs p { font-size: 13px; line-height: 1.55; color: var(--text-2); margin-top: 6px; max-width: 56ch; }
+
+.invstrip { display: flex; flex-direction: column; gap: 9px; }
+.invstrip li { display: grid; grid-template-columns: 12px 1fr auto; gap: 10px; align-items: center; font-size: 13px; }
+.invstrip li .it { color: var(--text-2); }
+.invstrip li .sf { font-size: 11.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.invsum { margin-top: var(--s3); padding-top: var(--s3); border-top: 1px solid var(--line); font-size: 13px; color: var(--text-2); line-height: 1.5; }
+.invsum b { font-weight: 700; color: var(--text); }
+
+/* pillar strip — v1's .pill, renamed to clear Alloy's badge */
+.pillars {
+  display: flex; flex-wrap: wrap; gap: var(--s3) var(--s5); align-items: center;
+  padding: var(--s3) var(--s5); border-top: 1px solid var(--line);
+}
+.pstat { display: flex; align-items: center; gap: 9px; }
+.pstat .k { font-size: 10.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--text-3); }
+.pstat .v { font-size: 13.5px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.pstat .track { width: 62px; height: 7px; }
+.pstat .track i { background: var(--text-2); }
+
+/* Format Fit is a gate, not a pillar. Dashed everywhere it appears. */
+.gate { display: flex; align-items: center; gap: 8px; padding: 5px 11px; border: 1px dashed var(--line-hi); border-radius: var(--r-pill); }
+.gate .k { font-size: 10px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--text-3); }
+.gate .v { font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ok); }
+
+.playline { padding: var(--s3) var(--s5); border-top: 1px solid var(--line); display: flex; gap: var(--s3); align-items: center; flex-wrap: wrap; }
+.playline .lab { margin-bottom: 0; flex: none; }
+.playline .pv { font-size: 14px; font-weight: 600; }
+
+.acts { display: flex; gap: var(--s2); align-items: center; padding: var(--s3) var(--s5); border-top: 1px solid var(--line); background: var(--panel-2); flex-wrap: wrap; }
+.acts .spacer { flex: 1; }
+.acts .note { font-size: 11.5px; color: var(--text-3); max-width: none; }
+
+/* member annotations — never a removal, never a greying (PRD §6.7) */
+.annots { display: flex; flex-direction: column; gap: 7px; padding: var(--s3) var(--s5); border-top: 1px solid var(--line); }
+.annot { display: flex; align-items: center; gap: 9px; font-size: 12.5px; color: var(--text-2); flex-wrap: wrap; }
+.annot .who { font-weight: 600; color: var(--text); }
+.annot .av {
+  width: 22px; height: 22px; border-radius: 50%; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9.5px; font-weight: 700; font-family: var(--disp);
+  background: var(--panel-3); color: var(--text-2);
+}
+
+/* inline pass */
+.passtray { padding: var(--s4) var(--s5); border-top: 1px solid var(--line); background: var(--panel-2); }
+.passtray .hd { display: flex; align-items: center; gap: var(--s3); margin-bottom: var(--s3); flex-wrap: wrap; }
+.passtray .hd .q { font-size: 13.5px; color: var(--text-2); }
+.reasons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s2); }
+.reasons button {
+  appearance: none; cursor: pointer; font: inherit; text-align: left;
+  padding: 11px 13px; border: 1px solid var(--line-hi); border-radius: var(--r-md);
+  background: var(--panel); color: var(--text);
+  display: flex; flex-direction: column; gap: 3px;
+  transition: background var(--dur) ease;
+}
+.reasons button:hover { background: var(--panel-2h); }
+.reasons button b { font-size: 13px; font-weight: 600; }
+.reasons button span { font-size: 11px; color: var(--text-3); line-height: 1.45; }
+
+.decided {
+  display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap;
+  padding: var(--s3) var(--s5); margin-top: var(--s3);
+  border-radius: var(--r-lg); background: var(--panel-2);
+  font-size: 13px; color: var(--text-2);
+}
+.decided .nm { font-weight: 700; color: var(--text); }
+.decided .sup { font-size: 11.5px; color: var(--text-3); }
+.decided .spacer { flex: 1; }
+
+/* ------------------------------------------------------------ empty state */
+/* Not Alloy's .empty — this is a full designed argument, not a shrug. */
+.zero { margin-top: var(--s5); padding: 0; overflow: hidden; }
+.zero .zhead { padding: var(--s8) var(--s7) var(--s7); }
+.zero h2 { font-size: clamp(28px, 4.4vw, 44px); letter-spacing: -.042em; max-width: 22ch; }
+.zero .say { margin-top: var(--s4); font-size: 15.5px; color: var(--text-2); max-width: 70ch; line-height: 1.68; }
+.zero .say + .say { margin-top: var(--s3); }
+.zero .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); }
+.zero .cols > div { padding: var(--s5) var(--s7) var(--s6); background: var(--panel); }
+.zero .cols > div:last-child { background: var(--panel-2); }
+
+.kv { display: flex; flex-direction: column; gap: 9px; margin-top: var(--s3); }
+.kv li { display: flex; gap: var(--s4); justify-content: space-between; font-size: 13px; align-items: baseline; }
+.kv li .k { color: var(--text-3); }
+.kv li .v { font-variant-numeric: tabular-nums; text-align: right; font-weight: 600; }
+
+.go { display: flex; flex-direction: column; gap: var(--s2); margin-top: var(--s3); }
+.go button {
+  appearance: none; cursor: pointer; font: inherit; font-size: 13.5px;
+  display: flex; align-items: center; justify-content: space-between; gap: var(--s3);
+  padding: 12px 15px; border: 1px solid var(--line-hi); border-radius: var(--r-md);
+  background: var(--panel); color: var(--text);
+  transition: background var(--dur) ease;
+}
+.go button:hover { background: var(--panel-2h); }
+.go button .c { font-size: 12px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+
+.done { margin-top: var(--s5); padding: var(--s7) var(--s6); }
+.done h2 { font-size: 28px; letter-spacing: -.038em; }
+.done p { margin-top: var(--s3); font-size: 14px; max-width: 58ch; line-height: 1.6; }
+
+/* ------------------------------------------------------------------ report */
+.rpthead { padding-bottom: var(--s5); border-bottom: 1px solid var(--line); margin-bottom: var(--s2); }
+.rpthead .row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--s6); align-items: start; }
+.rpthead h1 { font-size: clamp(28px, 4vw, 40px); letter-spacing: -.042em; line-height: 1.08; }
+.rpthead .handle { font-size: 13px; color: var(--text-3); margin-top: 5px; }
+.rpthead .thesis { font-size: 17px; line-height: 1.55; color: var(--text-2); margin-top: var(--s3); max-width: 56ch; }
+.rpthead .idrow { display: flex; flex-wrap: wrap; gap: var(--s2); margin-top: var(--s4); }
+
+.plat {
+  display: inline-flex; align-items: center; gap: 9px; padding: 7px 13px;
+  border: 1px solid var(--line); border-radius: var(--r-pill); background: var(--panel); font-size: 12.5px;
+}
+.plat .n { font-weight: 600; }
+.plat .f, .plat .mc { font-size: 11.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.plat[data-weak="true"] .mc { color: var(--warn); font-weight: 700; }
+
+.sect { padding-top: var(--s6); }
+.sect > .hd { display: flex; align-items: baseline; gap: var(--s4); flex-wrap: wrap; padding-bottom: var(--s3); }
+.sect > .hd h2 { font-family: var(--disp); font-size: 22px; font-weight: 700; letter-spacing: -.032em; }
+.sect > .hd .n { font-size: 12.5px; color: var(--text-3); }
+.sect > .hd .r { margin-left: auto; display: flex; gap: var(--s2); align-items: center; }
+
+.case { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1px; background: var(--line); }
+.case > * { padding: var(--s5); background: var(--panel); min-width: 0; }
+.case > *:last-child { background: var(--panel-2); }
+.argument { font-size: 17px; line-height: 1.62; color: var(--text); max-width: 54ch; }
+.quotes { margin-top: var(--s5); padding-top: var(--s5); border-top: 1px solid var(--line); }
+.quotes blockquote.q p { font-size: 21px; }
+
+.invtable { display: flex; flex-direction: column; }
+.invrow { padding: var(--s3) 0; border-bottom: 1px solid var(--line); }
+.invrow:last-child { border-bottom: 0; padding-bottom: 0; }
+.invrow:first-child { padding-top: 0; }
+.invrow .r1 { display: flex; align-items: center; gap: 10px; }
+.invrow .r1 .it { font-size: 14px; font-weight: 600; flex: 1; }
+.invrow .note { font-size: 12.5px; color: var(--text-2); margin-top: 5px; line-height: 1.5; max-width: none; }
+.invrow .prov { display: flex; flex-wrap: wrap; gap: 5px 10px; margin-top: 7px; align-items: center; }
+.prov .m { font-size: 11px; color: var(--text-3); }
+.prov .stale {
+  font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--warn); background: var(--warn-bg); border-radius: var(--r-pill); padding: 2px 8px;
+}
+
+/* scoring */
+.scoring { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); }
+.scoring > * { padding: var(--s5); background: var(--panel); min-width: 0; }
+.pillhd { display: flex; align-items: baseline; gap: var(--s3); flex-wrap: wrap; padding-bottom: var(--s2); }
+.pillhd h3 { font-size: 17px; letter-spacing: -.028em; }
+.pillhd .sc { font-family: var(--disp); font-size: 27px; font-weight: 700; letter-spacing: -.045em; margin-left: auto; font-variant-numeric: tabular-nums; }
+.pillhd .sc small { font-size: 14px; color: var(--text-3); font-weight: 600; }
+.pillbar { position: relative; margin: var(--s3) 0 var(--s2); }
+.pillbar i { background: var(--ink); }
+.pillrole { font-size: 14px; color: var(--text-2); line-height: 1.55; }
+
+.subs { margin-top: var(--s4); display: flex; flex-direction: column; }
+.sig { padding: var(--s3) 0; border-top: 1px solid var(--line); }
+.sig .r1 { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.sig .r1 .l { font-size: 13.5px; font-weight: 600; }
+.sig .r1 .w { font-size: 11px; color: var(--text-3); margin-left: auto; font-variant-numeric: tabular-nums; }
+.sig .val { font-size: 14px; margin-top: 5px; color: var(--text); font-weight: 600; }
+/* Judgment is labelled as judgment: LLM values read as speech, not as fact. */
+.sig[data-e="llm"] .val { font-family: var(--disp); font-weight: 300; font-style: italic; font-size: 16px; letter-spacing: -.02em; }
+.sig .det { font-size: 12.5px; color: var(--text-2); margin-top: 5px; line-height: 1.55; max-width: 54ch; }
+
+/* the gate: visibly not a scored pillar */
+.p--dash { background: transparent; border: 1px dashed var(--line-hi); }
+.gatepanel { margin-top: var(--s4); padding: 0; overflow: hidden; }
+.gatepanel .hd { display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap; padding: var(--s4) var(--s5); border-bottom: 1px dashed var(--line-hi); }
+.gatepanel .hd h3 { font-size: 17px; letter-spacing: -.028em; }
+.gatepanel .hd .nopts { font-size: 11.5px; color: var(--text-3); }
+.gatepanel .hd .verdict { margin-left: auto; }
+.gategrid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.gategrid > div { padding: var(--s4); }
+.gategrid > div + div { border-left: 1px dashed var(--line-hi); }
+.gategrid .l { font-size: 13px; font-weight: 600; }
+.gategrid .v { font-family: var(--disp); font-weight: 300; font-style: italic; font-size: 15px; margin-top: 4px; letter-spacing: -.02em; }
+.gategrid .d { font-size: 12px; color: var(--text-2); margin-top: 5px; line-height: 1.5; }
+
+/* confidence — beside the score, never folded into it */
+.confpanel { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); }
+.confpanel > div { padding: var(--s5); background: var(--panel); }
+.confpanel .big { font-family: var(--disp); font-size: 34px; font-weight: 700; letter-spacing: -.045em; line-height: 1; font-variant-numeric: tabular-nums; }
+.confpanel .cap { font-size: 12.5px; color: var(--text-2); margin-top: 8px; line-height: 1.5; }
+.confpanel[data-gate="fail"] .gatecell .big { color: var(--warn); }
+
+/* samples — Alloy's gradients stand in for the work, selected by tone */
+.samples { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); }
+.samples > * { background: var(--panel); }
+.sample .swatch { height: 104px; }
+.sample .body { padding: var(--s4); }
+.sample .t { font-size: 15.5px; font-weight: 600; line-height: 1.35; }
+.sample .m { display: flex; flex-wrap: wrap; gap: 5px 10px; margin-top: var(--s3); align-items: center; }
+
+.playpanel { padding: var(--s5); display: grid; grid-template-columns: auto 1fr; gap: var(--s5); align-items: start; }
+.playpanel .badge { max-width: 250px; }
+.playpanel .badge .p2 { font-size: 16px; font-weight: 700; margin-top: 5px; line-height: 1.3; }
+.playpanel .why { font-size: 16.5px; line-height: 1.6; color: var(--text); max-width: 58ch; }
+.playpanel .caveat { margin-top: var(--s3); font-size: 12px; color: var(--text-3); }
+
+/* decision bar */
+.decide {
+  position: sticky; bottom: 0; margin-top: var(--s6); z-index: 5;
+  background: var(--panel); border: 1px solid var(--line-hi); border-radius: var(--r-lg);
+  padding: var(--s3) var(--s4); display: flex; align-items: center; gap: var(--s2); flex-wrap: wrap;
+  box-shadow: var(--el-3);
+}
+.decide .who { font-size: 11.5px; color: var(--text-3); }
+.decide .spacer { flex: 1; }
+
+/* outcome reveal */
+.outcome { margin-top: var(--s6); }
+.revealbtn {
+  width: 100%; padding: var(--s7) var(--s5); cursor: pointer; font: inherit;
+  border: 1px dashed var(--line-hi); border-radius: var(--r-lg); background: transparent; color: var(--text);
+  display: flex; flex-direction: column; align-items: center; gap: 7px;
+  transition: background var(--dur) ease, border-color var(--dur) ease;
+}
+.revealbtn:hover { background: var(--panel-2h); border-color: var(--text-3); }
+.revealbtn .t { font-family: var(--disp); font-size: 24px; font-weight: 700; letter-spacing: -.035em; }
+.revealbtn .s { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--text-3); }
+
+.outcomecard { padding: 0; overflow: hidden; }
+.outcomecard .zhead { padding: var(--s6); }
+.outcomecard .win { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(242, 240, 247, .72); }
+.outcomecard h3 { font-size: clamp(26px, 3.6vw, 36px); letter-spacing: -.04em; line-height: 1.1; margin-top: var(--s3); max-width: 24ch; }
+.outcomecard .note { margin-top: var(--s3); font-size: 14.5px; max-width: 58ch; line-height: 1.6; }
+.outcomecard .cols { display: grid; grid-template-columns: 250px 1fr; }
+.outcomecard .cols > div { padding: var(--s5) var(--s6) var(--s6); }
+.outcomecard .cols > div + div { border-left: 1px solid rgba(255, 255, 255, .14); }
+.outcomecard .now { font-family: var(--disp); font-size: 27px; font-weight: 700; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.built { display: flex; flex-direction: column; gap: 10px; margin-top: var(--s3); }
+.built li { display: grid; grid-template-columns: 12px 1fr; gap: 11px; align-items: start; font-size: 14px; line-height: 1.5; }
+.built li .vmark { margin-top: 6px; }
+.nothing { font-family: var(--disp); font-weight: 300; font-style: italic; font-size: 18px; margin-top: var(--s3); }
+
+/* --------------------------------------------------------------- watchlist */
+.wrow { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: var(--s4); padding: var(--s5); border-top: 1px solid var(--line); align-items: start; }
+.wrow:first-child { border-top: 0; }
+.wrow .nm { font-family: var(--disp); font-size: 19px; font-weight: 700; letter-spacing: -.03em; }
+.wrow .handle { font-size: 12px; color: var(--text-3); margin-top: 1px; }
+.wrow .kept { font-size: 15px; color: var(--text-2); margin-top: 8px; line-height: 1.55; max-width: 58ch; }
+.wrow .right { display: flex; flex-direction: column; align-items: flex-end; gap: var(--s2); }
+.trigger { margin-top: var(--s3); padding: 11px 14px; border-radius: var(--r-md); display: flex; gap: 11px; align-items: baseline; flex-wrap: wrap; }
+.trigger .k { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.trigger .v { font-size: 13.5px; }
+
+/* -------------------------------------------------------------- run a name */
+.runbox { padding: var(--s6); }
+.runform { display: flex; gap: var(--s2); margin-top: var(--s4); max-width: 620px; flex-wrap: wrap; }
+.runform .inp { flex: 1; min-width: 260px; width: auto; }
+.runhint { margin-top: var(--s3); font-size: 13px; color: var(--text-2); max-width: 62ch; line-height: 1.55; }
+.resolving { margin-top: var(--s5); border-top: 1px solid var(--line); padding-top: var(--s4); }
+.resolving li { display: grid; grid-template-columns: 12px 1fr auto; gap: 11px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; }
+.resolving li .st { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); }
+.resolving li[data-done="false"] .st { opacity: .55; }
+.resolving li[data-done="false"] .vmark { background: var(--panel-3); border: 1px solid var(--line-hi); }
+.override { padding: var(--s4) var(--s5); margin-top: var(--s4); }
+.override .t { font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.override p { font-size: 14px; margin-top: 7px; line-height: 1.55; max-width: 66ch; }
+
+/* ---------------------------------------------------------------- outreach */
+.pkg { display: grid; grid-template-columns: 1fr 1.15fr; gap: 1px; background: var(--line); }
+.pkg > * { padding: var(--s5) var(--s6); background: var(--panel); min-width: 0; }
+.pkg > *:last-child { background: var(--panel-2); }
+.plain { display: flex; flex-direction: column; gap: var(--s3); margin-top: var(--s3); }
+.plain li { display: grid; grid-template-columns: 12px 1fr; gap: 11px; align-items: start; font-size: 14.5px; line-height: 1.55; }
+.plain li .vmark { margin-top: 6px; }
+.draft { border-radius: var(--r-lg); background: var(--panel); border: 1px solid var(--line); overflow: hidden; }
+.draft .subj { padding: var(--s3) var(--s4); border-bottom: 1px solid var(--line); display: flex; gap: var(--s3); align-items: baseline; }
+.draft .subj .v { font-weight: 700; font-size: 14px; }
+.draft .msg { padding: var(--s5) var(--s4); font-size: 15.5px; line-height: 1.68; }
+.draft .msg ul { margin: var(--s4) 0; display: flex; flex-direction: column; gap: 9px; list-style: none; padding: 0; }
+.draft .msg ul li { padding-left: 18px; position: relative; }
+.draft .msg ul li::before { content: ""; position: absolute; left: 0; top: .68em; width: 8px; height: 2px; border-radius: 2px; background: var(--text-3); }
+.draft .msg p + p { margin-top: var(--s3); }
+.neversend { margin-top: var(--s4); padding: var(--s3) var(--s4); border-radius: var(--r-md); background: var(--panel-2); font-size: 13px; color: var(--text-2); line-height: 1.55; }
+.neversend b { color: var(--text); font-weight: 700; }
+.handoff { display: flex; gap: var(--s3); align-items: center; flex-wrap: wrap; margin-top: var(--s4); }
+
+/* =============================================================== SIGN-IN ==
+   A utility gate. Wordmark, one button. Nothing else. */
+.signin { padding: var(--s8) var(--s6) var(--s6); text-align: center; }
+.signin-mark {
+  width: 62px; height: 62px; margin: 0 auto var(--s5); border-radius: 20px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--ink); color: var(--on-ink);
+  font-family: var(--disp); font-size: 28px; font-weight: 700; letter-spacing: -.04em;
+}
+.signin-wm { font-size: 38px; letter-spacing: -.045em; }
+.signin-sub { margin-top: 7px; font-size: 14px; color: var(--text-3); }
+.signin-sso { margin-top: var(--s6); width: 100%; justify-content: center; padding: 14px 20px; font-size: 14.5px; }
+.signin-sso .g-g {
+  width: 22px; height: 22px; border-radius: 50%; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--on-ink); color: var(--ink);
+  font-family: var(--disp); font-weight: 700; font-size: 13px;
+}
+.signin-fine { margin-top: var(--s3); font-size: 12.5px; color: var(--text-3); }
+.signin-demo {
+  margin-top: var(--s7); padding-top: var(--s5); border-top: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: var(--s3); align-items: center;
+}
+.signin-demo .sub-t { font-size: 12.5px; color: var(--text-3); max-width: 42ch; line-height: 1.55; }
+.signin-roles { display: flex; gap: var(--s2); flex-wrap: wrap; justify-content: center; }
+
+/* ================================================================ WIZARD ==
+   Three prompts about outcomes. The mechanics are derived, not asked. */
+.wiz { max-width: 780px; margin: 0 auto; padding: var(--s6) 0 var(--s7); }
+.wiz--sum { max-width: 860px; }
+.wiz-prog { display: flex; gap: 7px; margin-bottom: var(--s5); }
+.wiz-dot { width: 34px; height: 5px; border-radius: var(--r-pill); background: var(--panel-3); }
+.wiz-dot[data-on="true"] { background: var(--teal); }
+.wiz-q { font-size: clamp(28px, 4.2vw, 42px); letter-spacing: -.042em; line-height: 1.08; max-width: 20ch; }
+.wiz-help { margin-top: var(--s3); font-size: 15px; color: var(--text-2); max-width: 60ch; line-height: 1.6; }
+
+.wiz-opts { display: flex; flex-direction: column; gap: var(--s2); margin-top: var(--s5); }
+.wiz-opts--grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 700px) { .wiz-opts--grid { grid-template-columns: 1fr; } }
+
+.wiz-opt, .wiz-wild {
+  appearance: none; cursor: pointer; font: inherit; text-align: left; width: 100%;
+  display: flex; flex-direction: column; gap: 4px;
+  padding: var(--s4) var(--s5); border-radius: var(--r-lg);
+  border: 1px solid var(--line-hi); background: var(--panel); color: var(--text);
+  transition: background var(--dur) ease, border-color var(--dur) ease;
+}
+.wiz-opt:hover:not([aria-pressed="true"]),
+.wiz-wild:hover:not([aria-pressed="true"]) { background: var(--panel-2h); }
+.wiz-opt[aria-pressed="true"], .wiz-wild[aria-pressed="true"] {
+  background: var(--teal); border-color: var(--teal); color: var(--on-field);
+}
+/* Lighten, never darken. */
+.wiz-opt[aria-pressed="true"]:hover,
+.wiz-wild[aria-pressed="true"]:hover { background: var(--teal-h); border-color: var(--teal-h); }
+.wiz-opt-l { font-size: 15.5px; font-weight: 600; line-height: 1.35; }
+.wiz-opt-b { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+.wiz-opt-n { font-size: 11.5px; font-weight: 700; color: var(--text-3); margin-top: 3px; }
+.wiz-opt[aria-pressed="true"] .wiz-opt-b,
+.wiz-opt[aria-pressed="true"] .wiz-opt-n,
+.wiz-wild[aria-pressed="true"] .wiz-opt-b { color: rgba(28, 27, 35, .80); }
+.wiz-wild { margin-top: var(--s2); border-style: dashed; }
+
+.wiz-free { margin-top: var(--s5); }
+.wiz-free .inp { margin-top: 2px; }
+.wiz-free .sub-t { display: block; margin-top: 8px; font-size: 12.5px; color: var(--text-3); }
+.wiz-acts { display: flex; align-items: center; gap: var(--s2); margin-top: var(--s6); }
+.wiz-acts .spacer { flex: 1; }
+
+/* The overlap prompt. Never blocks: it renders beneath the grid and Continue
+   stays enabled the entire time, so a missed overlap is a mediocre
+   suggestion rather than a blocked user. */
+.overlap { margin-top: var(--s4); }
+.overlap-hd { display: flex; align-items: center; gap: var(--s3); margin-bottom: var(--s3); }
+.overlap-hd .stack { margin-left: auto; }
+.overlap h3 { font-size: clamp(19px, 2.4vw, 25px); letter-spacing: -.034em; line-height: 1.2; max-width: 26ch; }
+.overlap .note { margin-top: var(--s3); }
+.overlap-acts { display: flex; gap: var(--s2); align-items: center; margin-top: var(--s4); flex-wrap: wrap; }
+
+/* The derived-mandate summary: a wizard that produces a mandate, not a form
+   that collects one. */
+.sumcard { margin-top: var(--s5); }
+.sum-hd { display: flex; align-items: flex-start; gap: var(--s4); flex-wrap: wrap; }
+.sum-hd h2 { font-size: clamp(22px, 3vw, 30px); letter-spacing: -.038em; margin-top: 5px; }
+.sum-hd .pill { margin-left: auto; }
+.sum-said { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s4); margin-top: var(--s5); }
+.sum-said p { font-size: 15px; margin-top: 2px; line-height: 1.5; }
+.sum-said .sum-free { font-family: var(--disp); font-weight: 300; font-style: italic; font-size: 16px; }
+@media (max-width: 700px) { .sum-said { grid-template-columns: 1fr; } }
+.sum-derived { margin-top: var(--s5); padding-top: var(--s5); border-top: 1px solid var(--line); }
+.sum-rows { display: flex; flex-direction: column; gap: var(--s2); margin-top: var(--s2); }
+.sum-row { display: flex; align-items: center; gap: var(--s4); }
+.sum-row .k { font-size: 13.5px; color: var(--text-2); width: 130px; flex: none; }
+.sum-row .selector { flex: 1; justify-content: space-between; }
+.sum-fixed { flex: 1; font-size: 13.5px; font-weight: 600; }
+.inp--sm { padding: 8px 13px; font-size: 13.5px; }
+
+/* ================================================================= HINTS ==
+   One at a time, never two. Lilac: a statement about the machine itself. */
+.hint { margin: var(--s4) 0; }
+.hint-hd { display: flex; align-items: center; gap: var(--s3); margin-bottom: var(--s2); }
+.hint-x {
+  appearance: none; border: 0; cursor: pointer; margin-left: auto; padding: 5px;
+  border-radius: 50%; background: rgba(28, 27, 35, .10); color: var(--on-field);
+  display: flex; transition: background var(--dur) ease;
+}
+.hint-x:hover { background: rgba(28, 27, 35, .20); }
+.hint h4 { font-size: 19px; letter-spacing: -.03em; line-height: 1.25; max-width: 34ch; }
+.hint .note { margin-top: 7px; max-width: 74ch; }
+.hint-ft { display: flex; align-items: center; gap: var(--s3); margin-top: var(--s4); flex-wrap: wrap; }
+.hint-ft .sub-t { font-size: 12px; }
+
+/* ================================================================ LEDGER ==
+   The receipts behind the argument. Effort at creator scope, never currency. */
+/* Its own block under the case panel, at full width. A six-column check
+   record squeezed into the inventory column is unreadable. */
+.ledger { margin-top: var(--s3); }
+.ledger-tog {
+  appearance: none; cursor: pointer; font: inherit; text-align: left; width: 100%;
+  display: flex; align-items: center; gap: var(--s3);
+  padding: var(--s3) var(--s4); border-radius: var(--r-md);
+  border: 1px solid var(--line-hi); background: var(--panel); color: var(--text);
+  transition: background var(--dur) ease;
+}
+.ledger-tog:hover { background: var(--panel-2h); }
+.ledger-tog .ic { display: flex; flex: none; color: var(--text-3); }
+.ledger-tog .lt { display: flex; flex-direction: column; min-width: 0; }
+.ledger-tog .lt b { font-size: 13.5px; font-weight: 600; }
+.ledger-tog .lt .sub-t { font-size: 12px; color: var(--text-3); }
+.ledger-tog .ipill { margin-left: auto; flex: none; }
+.ledger-t { margin-top: var(--s4); font-size: 12.5px; }
+.ledger-t td { vertical-align: top; padding-top: 11px; padding-bottom: 11px; }
+.ledger-t .lsrc { color: var(--text-3); word-break: break-word; max-width: 22ch; }
+.ledger-ft { margin-top: var(--s3); font-size: 12px; line-height: 1.55; }
+
+/* ============================================================== FIRST RUN ==
+   Hatching means "not real yet" in this system, so the pending live drop
+   wears it too. */
+.wire { margin-bottom: var(--s3); padding: var(--s4) var(--s5); }
+.wire > div { position: relative; }
+.wire .note { margin-top: 5px; max-width: 78ch; }
+/* Hatching says "not real yet", but at full strength it out-shouts the copy
+   sitting on top of it. */
+.wire.hatched::after { opacity: .35; }
+
+/* ===================================================== WATCHLIST COST/PRUNE */
+.wcost { display: flex; align-items: center; gap: var(--s5); flex-wrap: wrap; margin-top: var(--s5); }
+.wcost .note { margin-top: 6px; max-width: 56ch; }
+.wcost-n { display: flex; gap: var(--s2); margin-left: auto; }
+.wcost-n .sub { background: var(--panel); min-width: 108px; text-align: center; }
+.wcost-n .sub .v { font-size: 27px; }
+
+/* Warhol recommends; a human decides. Nothing leaves without somebody
+   choosing it. Pruning is a Pass reason, never a fourth verb. */
+.prune { margin-top: var(--s3); padding: var(--s4); border-radius: var(--r-md); position: relative; overflow: hidden; }
+.prune--stop { background: var(--warn-bg); }
+.prune--keep { background: var(--ok-bg); }
+.prune--stop .kick, .prune--stop .note { position: relative; }
+.prune--stop .kick { color: var(--warn); }
+.prune--keep .kick { color: var(--ok); }
+.prune .note { margin-top: 5px; max-width: 60ch; position: relative; }
+.prune .btn { margin-top: var(--s3); position: relative; }
+.prune.hatched::after { opacity: .5; }
+
+/* ============================================================= UTILITIES ==
+   Named classes, so nothing needs an inline style it can lose silently. */
+.lab--gap { margin-top: var(--s5); }
+.rpt-tags { display: flex; gap: var(--s2); flex-wrap: wrap; margin-bottom: var(--s3); }
+.flag--solo { margin-top: var(--s4); border-radius: var(--r-md); }
+.dec-t { font-size: 13.5px; color: var(--text-2); }
+.passwrap { margin-top: var(--s5); padding: 0; overflow: hidden; }
+.passtray-ft { margin-top: var(--s3); }
+.zero-line { margin-top: var(--s4); font-size: 11.5px; }
+.zero-note { margin-top: var(--s4); }
+.wlist { margin-top: var(--s5); padding: 0; overflow: hidden; }
+.run-done { display: flex; gap: var(--s3); align-items: center; flex-wrap: wrap; }
+.run-acts { display: flex; gap: var(--s2); margin-top: var(--s4); flex-wrap: wrap; }
+.pkg-play { font-family: var(--disp); font-size: 18px; font-weight: 700; letter-spacing: -.03em; margin-top: 6px; }
+.sig-off { margin-top: var(--s5); }
+.pstat .v[data-low="true"] { color: var(--warn); }
+.avatar--ini {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 50%; flex: none;
+  font-family: var(--disp); font-weight: 700; font-size: 12px; letter-spacing: .01em;
+  background: var(--panel-3); color: var(--text-2);
+}
+.avatar--ini.ini--lilac { background: var(--lilac); color: var(--on-field); }
+.avatar--ini.ini--teal { background: var(--teal); color: var(--on-field); }
+.stack .avatar--ini { width: 32px; height: 32px; font-size: 11px; margin-left: -10px; box-shadow: 0 0 0 3px var(--butter); }
+.stack .avatar--ini:first-child { margin-left: 0; }
+.brandrow .me { margin-bottom: 0; }
+.circ .avatar--ini { width: 28px; height: 28px; font-size: 10.5px; }
+.offscreen { position: fixed; left: -9999px; }
+
+/* ------------------------------------------------------------- primitives */
+/* Verification state: three states, three SHAPES. A shape survives a
+   projector and a colourblind viewer; a colour does not. */
+.vmark { width: 12px; height: 12px; border-radius: 3px; flex: none; display: inline-block; }
+.vmark[data-s="verified_absent"] { background: var(--teal-d); }
+.vmark[data-s="present"] { background: transparent; border: 2px solid var(--line-hi); }
+.vmark[data-s="not_found"] { background: var(--warn-bg); border: 1px solid var(--warn); position: relative; overflow: hidden; }
+.vmark[data-s="not_found"]::after {
+  content: ""; position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(45deg, var(--warn) 0 1.5px, transparent 1.5px 5px);
+}
+.vstate { display: inline-flex; align-items: center; gap: 7px; }
+.vstate .txt { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.vstate[data-s="verified_absent"] .txt { color: var(--teal-d); }
+.vstate[data-s="present"] .txt { color: var(--text-3); }
+.vstate[data-s="not_found"] .txt { color: var(--warn); }
+
+/* Engine badge. The interface shows Rule vs LLM without naming the concept. */
+.eng {
+  display: inline-flex; align-items: center; font-size: 9.5px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase; white-space: nowrap;
+  padding: 3px 8px; border-radius: var(--r-pill);
+  border: 1px solid var(--line-hi); color: var(--text-3);
+}
+.eng[data-e="rule"] { background: var(--panel-2); color: var(--text-2); border-color: transparent; }
+.eng[data-e="llm"] { border-style: dashed; background: transparent; }
+.eng[data-e="mixed"] { background: linear-gradient(100deg, var(--panel-2) 0 50%, transparent 50%); color: var(--text-2); }
+
+/* Computed geometry is the only thing that stays inline, as a variable. */
+.track i { width: var(--w, 0%); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-anim { animation: rev .5s cubic-bezier(.16, 1, .3, 1) both; }
+  @keyframes rev { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .viewfade { animation: vf .18s ease-out both; }
+  @keyframes vf { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+}
+
+/* -------------------------------------------------------------- responsive */
+/* Alloy's breakpoints only: 1180 / 960 / 760 / 700. */
+/* The evidence split holds down to a much narrower column than the prose
+   panels do, and it is the whole thesis of the card — quote beside empty
+   inventory. It gets its own, later, breakpoint rather than collapsing with
+   everything else at 1180, where a 248px rail still leaves ~840px of card. */
+@media (max-width: 880px) {
+  .evidence { grid-template-columns: 1fr; }
+}
+@media (max-width: 1180px) {
+  .case, .scoring, .pkg, .zero .cols { grid-template-columns: 1fr; }
+  .gategrid { grid-template-columns: 1fr 1fr; }
+  .gategrid > div:nth-child(3), .gategrid > div:nth-child(4) { border-top: 1px dashed var(--line-hi); }
+  .gategrid > div:nth-child(3) { border-left: 0; }
+  .reasons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 960px) {
+  .cardtop { grid-template-columns: 1fr; }
+  .rpthead .row { grid-template-columns: 1fr; }
+  .samples, .confpanel, .outcomecard .cols { grid-template-columns: 1fr; }
+  .outcomecard .cols > div + div { border-left: 0; border-top: 1px solid rgba(255, 255, 255, .14); }
+  .playpanel { grid-template-columns: 1fr; }
+  .whoami { padding-top: var(--s3); }
+}
+@media (max-width: 760px) {
+  .zero .zhead { padding: var(--s6) var(--s5) var(--s5); }
+  .zero .cols > div { padding: var(--s5); }
+  .gategrid { grid-template-columns: 1fr; }
+  .gategrid > div + div { border-left: 0; border-top: 1px dashed var(--line-hi); }
+}
+@media (max-width: 700px) {
+  .reasons { grid-template-columns: 1fr; }
+  .wrow { grid-template-columns: 1fr; }
+  .wrow .right { align-items: flex-start; }
+}

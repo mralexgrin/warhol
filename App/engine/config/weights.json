@@ -1,0 +1,397 @@
+{
+  "_comment": [
+    "PRD 10.6: absences are weighted, and the weight is data. This file is that data.",
+    "Nothing here is settled — PRD 14.13 says the numbers are unknown. These are",
+    "starting figures, in one place, changeable without touching engine code.",
+    "",
+    "Tier shares come out roughly 2/3 : 1/3 : rounding error, per decision 102."
+  ],
+  "pillars": {
+    "opportunityMax": 60,
+    "demandMax": 25,
+    "missingMax": 35,
+    "pressureMax": 40
+  },
+  "_threshold": [
+    "78 -> 25, read off a real result on 6 Aug 2026 per decisions 101 and 114.",
+    "",
+    "78 was tuned against the 24 FICTIONAL seed creators, who were written to",
+    "demonstrate the model and therefore scored like the model's best case. Run",
+    "against 20 real creators the distribution is 0-34, median 19. A bar of 25",
+    "lets 5 through (25%), which is the read of 'about a quarter clear it'.",
+    "",
+    "READ THE SECOND PARAGRAPH OF _effortSupport BEFORE TRUSTING THIS NUMBER.",
+    "A first attempt read the bar at 27 off a run where every classify call was",
+    "400ing silently. This figure is from the re-run with the classifiers live,",
+    "which moved several scores by 5-7 points in BOTH directions — propose_places",
+    "started working, more places got checked, and creators who looked like they",
+    "were missing things turned out to have them. A measurement is only worth",
+    "the error rows you checked before reading it.",
+    "",
+    "READ THIS BEFORE REUSING THE NUMBER. 25 is not a general threshold — it is",
+    "the threshold for a cohort whose DEMAND IS STRUCTURALLY ZERO. All 20 scored",
+    "0 of 25 on Demand, with a signal count of 0, on the run where the classifier",
+    "was verified working — so this is the honest 'no readable comments' result",
+    "and not the silent failure above. 14 of the 20 have no YouTube channel, and",
+    "YouTube is the only place comments can legitimately be read (decision 110).",
+    "The ceiling for this cohort is Missing 35 + Pressure 34 = 69, so 78 was not",
+    "merely high, it was UNREACHABLE.",
+    "",
+    "The consequence: a future cohort with readable comments carries up to 25",
+    "points this one cannot, and 25 would wave through creators this measurement",
+    "never looked at. Re-read the bar the first time a cohort has real Demand.",
+    "It is an admin setting precisely so nobody has to be right on day one."
+  ],
+  "threshold": 25,
+  "minimumConfidence": 0.6,
+  "houseBrief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+  "_houseBrief": [
+    "Q20: Fit is a gate and a gate has two values. `unknown` existed only because the",
+    "CLI let you leave --brief out. Scout PRD 6.1 says the house brief always exists, so",
+    "this is the floor rather than a default — the engine refuses to score without one.",
+    "Change the words here, not in the code.",
+    "",
+    "6 Aug 2026 — THE WORDS AFTER THE DASH ARE LEAD, NOT DECORATION. PRD 6.1 names the",
+    "house brief 'Anyone worth a call' and describes it as 'big audience, no business,",
+    "under pressure'. That description is what the SCORE measures — Missing is 35 points",
+    "of no business, Pressure is 40 points of under pressure. Run against real people on",
+    "6 Aug it was handed to the Fit judge as the brief, and Fit stopped being a gate and",
+    "became a second, eyeballed copy of the score: creators were failed for 'only 12k",
+    "followers' and 'no sign of pressure', which are the exact facts the score had",
+    "already counted. The two highest scorers on the board, 34 and 32, both failed.",
+    "",
+    "PRD 194 says what belongs here instead: the old global Format Fit — clippability, a",
+    "repeatable format, category demand. Distinctiveness is deliberately NOT in the list;",
+    "PRD 269 moved it to Trajectory, and putting it back would be the same bug again.",
+    "A gate must test something the score does not, or it is not a gate."
+  ],
+  "run": {
+    "_comment": [
+      "Task 4, 6 Aug 2026 — a brief, a handful of candidates, a drop.",
+      "",
+      "DEMO-SCOPED, AND THE NUMBERS SAY SO. Q24 defers discovery at scale and that",
+      "still holds: maxCandidates is 20 because one model call over one brief is the",
+      "whole of the finding step here. This is not a crawler and nothing downstream",
+      "should read it as one.",
+      "",
+      "creatorConcurrency parallelises across PEOPLE. It is safe to raise because the",
+      "per-host politeness delay is reserved synchronously in lib/http.js, so twenty",
+      "creators all wanting substack.com still arrive perHostDelayMs apart. Raising it",
+      "makes the drop finish sooner without making anyone's server busier — the host",
+      "queue, not this number, is the binding constraint, and `warhol drop` prints how",
+      "much of the wall clock went to waiting on it.",
+      "",
+      "dropCap is Scout PRD 5.4's cap of about ten: the cap protects attention, the",
+      "threshold protects trust. Some days three names, some days zero."
+    ],
+    "maxCandidates": 20,
+    "creatorConcurrency": 5,
+    "dropCap": 10
+  },
+  "retention": {
+    "_comment": "Q18 / Scout PRD 12.1: keep the decisions, drop the evidence. Evidence for a creator who never surfaced in a drop ages out after this many days; conclusions never do. Run: warhol forget --confirm.",
+    "evidenceDays": 90
+  },
+  "absenceWeights": {
+    "youtube_channel": 14,
+    "newsletter": 10,
+    "store": 9,
+    "representation": 4,
+    "website": 4,
+    "membership": 3,
+    "podcast": 3,
+    "sponsorships": 3,
+    "affiliate_links": 0.5,
+    "shopping_tags": 0.5,
+    "platform_subscriptions": 0.5
+  },
+  "_tierCheck": {
+    "tier1": 33,
+    "tier2": 17,
+    "tier3": 1.5,
+    "shares": "0.64 / 0.33 / 0.03"
+  },
+  "demandAlignment": {
+    "_comment": "Decision 102: an absence counts more when the demand points straight at it. An item with every demand signal aimed at it is worth 1.75x its base weight.",
+    "maxMultiplier": 1.75
+  },
+  "demandCurve": {
+    "_comment": "Saturating: points = demandMax * n / (n + halfPoint). 1,940 signals ~= 87% of the maximum; 200 ~= 40%; 50 ~= 14%.",
+    "halfPoint": 300
+  },
+  "pressureWeights": {
+    "_comment": [
+      "Q6, 6 Aug 2026: cadence_decay flipped to needsHistory:false, because with the",
+      "YouTube Data API it genuinely computes on a FIRST look. YouTube stamps every",
+      "upload with its publish date, so the change over time is already in the data —",
+      "one visit reads it. Nobody stamps a follower count, which is why",
+      "unanswered_audience stays true and Trajectory still needs two looks.",
+      "",
+      "So one of these four is unavailable on day one, not two, and the day-one",
+      "Pressure ceiling is 34 of 40 rather than 22. The ceiling printed on a report is",
+      "per creator, not this figure: a creator with no readable YouTube has no posting",
+      "history either, and their report says 22 and why.",
+      "",
+      "declineFloor/declineFull scale the cadence points: no points until the posting",
+      "rate is down declineFloor, full max at declineFull. A quarter off is inside",
+      "ordinary variance for a person who makes things; four fifths off is a different",
+      "sentence about their life."
+    ],
+    "cadence_decay": {
+      "max": 12,
+      "needsHistory": false,
+      "declineFloor": 0.25,
+      "declineFull": 0.8
+    },
+    "abandonment_markers": {
+      "max": 12,
+      "needsHistory": false
+    },
+    "self_reported_strain": {
+      "max": 10,
+      "needsHistory": false
+    },
+    "unanswered_audience": {
+      "max": 6,
+      "needsHistory": true
+    }
+  },
+  "youtube": {
+    "_comment": [
+      "Q6: the sampling window for posting cadence, and how much of the comment",
+      "section to read. These are quota decisions as much as accuracy ones — a list",
+      "call costs 1 unit whatever maxResults says, so the bill is PAGES, not videos.",
+      "A full sweep is at most 1 + maxPages + maxPages = 9 units against a free tier",
+      "of 10,000/day, and Study adds one per video whose comments we read.",
+      "",
+      "maxPages caps the upload walk at 200 videos. A creator who posts more often",
+      "than that in a year does not get a cadence reading — the sample cannot reach",
+      "back far enough behind the recent window to compare against, and the report",
+      "says exactly that rather than comparing against a window it never saw."
+    ],
+    "recentWindowDays": 90,
+    "baselineWindowDays": 365,
+    "minBaselineSpanDays": 60,
+    "minVideosInBaseline": 6,
+    "maxPages": 4,
+    "commentVideos": 5,
+    "commentsPerVideo": 100,
+    "_budget": [
+      "A YouTube comment can be 10,000 characters, and 500 of them would be a 5MB",
+      "prompt on a paid call. Purchase intent is short — 'where do I buy this' is 20",
+      "characters — so a comment is cut at maxCommentChars and the whole demand input",
+      "at maxDemandChars, comments first because they are the better signal. Both",
+      "trims are logged: a cap nobody can see reads as 'we looked at everything'."
+    ],
+    "maxCommentChars": 300,
+    "_maxDemandChars": [
+      "Lowered 60000 -> 20000 on 6 Aug 2026. 60k was sized for a creator with a busy",
+      "YouTube comment section; measured against the real cohort, 14 of 20 have no",
+      "readable comment section at all and the rest are thin, so the cap was paying",
+      "for headroom nobody used. Purchase intent is short and comments are sorted",
+      "best-first, so the signal is at the top of the input and the tail is where",
+      "the money went. Raise it again the day a cohort actually hits the cap — the",
+      "trim is logged, so that day is visible rather than guessed at."
+    ],
+    "maxDemandChars": 20000
+  },
+  "reddit": {
+    "_comment": [
+      "6 Aug 2026 — the second demand source, and the reason the first one was not",
+      "enough. Measured across the real cohort, 14 of 20 creators had no readable",
+      "comment section anywhere and Demand read a flat zero for all of them, which",
+      "capped the whole board at 34 of 100. Reddit is where people talk about a",
+      "creator when the creator is not in the room — unmoderated by the person being",
+      "discussed, which makes it a better demand source than a comment section.",
+      "",
+      "Needs REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET (a free 'script' app at",
+      "reddit.com/prefs/apps). The keyless JSON endpoints are gone — verified 6 Aug,",
+      "www.reddit.com/.json, old.reddit.com and api.reddit.com all answer 403 to any",
+      "client. Without the credential this source reports itself unavailable and the",
+      "report says we could not read, never that there was nothing to read.",
+      "",
+      "minHandleChars IS THE SAFETY RULE, not a tuning knob. A short handle matches",
+      "other people's conversations, and attributing a stranger's demand to this",
+      "creator would put a fabricated quote on a report through a door that neither",
+      "keepOnlyRealQuotes nor the wall watches. 6 characters is the point below which",
+      "a word-boundary match stops being evidence. An unread creator scores neutral;",
+      "a misread one scores somebody else's audience, so refusing is the cheap error."
+    ],
+    "minHandleChars": 5,
+    "window": "year",
+    "maxPosts": 25,
+    "maxThreads": 5,
+    "commentsPerThread": 100,
+    "maxCommentChars": 300
+  },
+  "bluesky": {
+    "_comment": [
+      "12 Aug 2026 — the first new enumerable source since YouTube, and the only",
+      "one on the shortlist that needs no key, no credential and no quota.",
+      "public.api.bsky.app/robots.txt grants crawling in writing and uses 429 as",
+      "its backoff signal, so this goes through lib/http.js like every other read",
+      "rather than around it like youtube.js and reddit.js.",
+      "",
+      "maxFeedPages IS THE CADENCE LEVER. RSS ships 10-15 items and cannot reach",
+      "back the ~150 days the baseline arithmetic needs, which is why feed cadence",
+      "only computes for monthly publishers. getAuthorFeed is paginated, so this",
+      "cap is a BACKSTOP, not the plan: the walk stops as soon as it holds a post",
+      "older than youtube.baselineWindowDays, because the arithmetic clamps its",
+      "baseline to the oldest post in hand and every page after that cannot change",
+      "the answer. Measured live 12 Aug 2026, that is 2 pages for a creator who",
+      "posts weekly and 20 for 404 Media, rather than 20 for both.",
+      "",
+      "20 x 100 is what it takes for the busiest accounts to reach back past the",
+      "90-day window plus its 60-day baseline: 404 Media posts ~157 a month, and at",
+      "6 x 50 their 300 posts only reached back 30 days -- cadence came back",
+      "unreadable for exactly the prolific creators this feature exists to read.",
+      "When the cursor runs out first we hold every post the account has, and",
+      "lib/bluesky.js passes truncated:false so the report may say 'their whole",
+      "account is N days old'. Otherwise it passes truncated:true.",
+      "",
+      "maxBodyBytes is raised over the 600KB default because a page of 50 posts",
+      "with embeds runs past it, and a truncated body is a JSON syntax error --",
+      "which reads as a broken endpoint rather than as a read we cut short.",
+      "",
+      "replyPosts/maxReplies bound the demand read. These are REPLIES UNDER THEIR",
+      "OWN POSTS, which is a comment section: searchPosts answers 403 without a",
+      "session, so there is no keyless route to what strangers say when the",
+      "creator is not in the room. Reddit is still the only source for that.",
+      "",
+      "minHandleChars guards the CONSTRUCTED domain handles, {handle}.com and",
+      ".co. Those are earned rather than guessed because Bluesky binds a domain",
+      "handle with a DNS TXT record at _atproto.<domain> that only the domain's",
+      "controller can set -- so a domain handle that resolves proves control.",
+      "What it does not prove is that the domain is THIS creator's, and for a",
+      "short or ordinary handle it very often is not: 'cnn' would hand us a large",
+      "company's account and print its followers as this creator's.",
+      "",
+      "5, NOT reddit.js's 6, AND MKBHD IS WHY. At 6 the floor excluded 'mkbhd' --",
+      "five characters, and mkbhd.com is the case this whole path was built for.",
+      "The two numbers guard different things: reddit.js is refusing a word that",
+      "matches other people's prose, and length is a good proxy for that. Here the",
+      "question is whether a domain belongs to somebody else, where length is only",
+      "a crude stand-in for how ordinary the word is. 4 and under is where the",
+      "handles stop being names and start being initials -- cnn, espn, hbo."
+    ],
+    "minHandleChars": 5,
+    "maxFeedPages": 20,
+    "postsPerPage": 100,
+    "maxBodyBytes": 2000000,
+    "maxSamples": 5,
+    "maxTitleChars": 110,
+    "maxTextChars": 2000,
+    "replyPosts": 5,
+    "maxReplies": 100,
+    "maxReplyChars": 300
+  },
+  "trajectoryGate": {
+    "_comment": "Decision 104: test the audience, never the posting rate. Fail only when down over 12 months AND still falling over 3. Needs two observations at least 90 days apart, so a first look returns not_established — which is not a pass and not a fail.",
+    "yearDeclineFail": -0.1,
+    "quarterMustAlsoBeFalling": true,
+    "minObservationGapDays": 90
+  },
+  "youtubeGap": {
+    "_comment": "PRD 5.2: no YouTube against a LARGE short-form audience is the highest-value line. Below this floor the absence is not worth the top weight, so it is demoted to tier 2 weighting.",
+    "shortFormAudienceFloor": 50000
+  },
+  "llm": {
+    "_models": [
+      "Two jobs, two models, split 6 Aug 2026. The split already existed as an",
+      "EFFORT setting; this makes it a model setting too, for the same reason.",
+      "",
+      "CLASSIFY is extraction. 'Pull the comments that ask where to buy' and 'pull",
+      "the lines where they say they cannot keep up' are find-the-string tasks, and",
+      "keepOnlyRealQuotes throws away anything the model did not copy verbatim from",
+      "the text we supplied — so a weaker model cannot smuggle in a fabrication, it",
+      "can only miss one. The failure mode is a missed signal, which scores neutral",
+      "and lowers confidence, which is the behaviour PRD 11.3 already specifies for",
+      "a signal we could not read.",
+      "",
+      "JUDGE is a judgment and stays on the strongest model. judgeFit decides",
+      "whether a person matches a brief, and Fit is a GATE (5.4) — a wrong verdict",
+      "here does not lower confidence, it silently admits or excludes someone. Same",
+      "for proposeCandidates, which is 11.1's one genuinely model-shaped job.",
+      "",
+      "Measured reason for the split: the real cohort is 20 creators x 3 calls, and",
+      "on Opus that is roughly $1-3.50 a run when a run has to happen several times",
+      "before the threshold is read. On this split it is well under a dollar.",
+      "",
+      "Do NOT collapse these back to one model to simplify the config. The line",
+      "between them is the same line the wall is drawn on (store.js): a model may",
+      "propose and it may extract, but the things it is trusted to DECIDE are few",
+      "and they are worth paying for."
+    ],
+    "models": {
+      "classify": "claude-haiku-4-5-20251001",
+      "judge": "claude-opus-5"
+    },
+    "_effortSupport": [
+      "Not every model takes the effort parameter, and sending it to one that",
+      "does not is a 400 — not a degraded call, a REJECTED one. Found 6 Aug 2026",
+      "the expensive way: the classify job had just moved to Haiku 4.5, every",
+      "classify_demand, classify_strain and propose_places call 400'd with 'This",
+      "model does not support the effort parameter', and the run still completed",
+      "and still printed scores. Demand read 0 across all 20 creators and looked",
+      "exactly like the honest 'no readable comments' result it was supposed to",
+      "be. A threshold was read off that run before anyone noticed.",
+      "",
+      "The lesson is not about this parameter. A model call that fails silently",
+      "and scores neutral is indistinguishable from a model call that ran and",
+      "found nothing — and §11.3 makes 'found nothing' a legitimate outcome, so",
+      "the failure wears the costume of a designed behaviour. Anything added",
+      "here must be checked against the error rows in costs.jsonl, not against",
+      "whether the run finished."
+    ],
+    "effortSupported": {
+      "claude-opus-5": true,
+      "claude-haiku-4-5-20251001": false,
+      "claude-sonnet-5": true
+    },
+    "pricing": {
+      "claude-haiku-4-5-20251001": {
+        "input": 1,
+        "output": 5
+      },
+      "claude-opus-5": {
+        "input": 5,
+        "output": 25
+      },
+      "claude-sonnet-5": {
+        "input": 3,
+        "output": 15
+      }
+    },
+    "effort": {
+      "classify": "low",
+      "judge": "medium"
+    },
+    "_sonnet": [
+      "claude-sonnet-5 added 11 Aug 2026, and the reason it was missing matters.",
+      "The 6 Aug split reasoned about ONE choice: is this job extraction (Haiku) or",
+      "judgment (Opus)? Fit is a gate — a wrong verdict silently admits or excludes a",
+      "person — so it went to the strongest model available, and the note above says",
+      "do not collapse it back.",
+      "",
+      "That note still holds against HAIKU. It was never tested against a MIDDLE tier,",
+      "because this file had none. Sonnet 5 is ~40% of Opus per token on this workload",
+      "and reaches Opus-tier quality on judgment work, so the question the split",
+      "answered is now three-way and the old answer is an assumption, not a finding.",
+      "",
+      "Listed here so it can be MEASURED. Nothing routes to it until the Fit A/B shows",
+      "the verdicts agree — bin/fit-ab.js. Priced at the STANDARD rate, not the",
+      "introductory one ending 31 Aug 2026: a bill that quietly rises when a promotion",
+      "lapses is worse than one that was never cheap."
+    ]
+  },
+  "http": {
+    "timeoutMs": 12000,
+    "concurrency": 4,
+    "perHostDelayMs": 400,
+    "maxBodyBytes": 600000,
+    "respectRobots": true,
+    "identify": true,
+    "userAgentIdentified": "WarholScout/0.1 (+internal sourcing research; contact: set WARHOL_CONTACT env var)",
+    "userAgentBrowser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+  }
+}

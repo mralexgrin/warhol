@@ -1,0 +1,319 @@
+<!doctype html>
+<!--
+ROUGH SKETCH 4 — where Alloy's gradients can go without the legibility quietly
+leaving. Alloy's own header: "Refuses the usual blend failure, where the
+gradients arrive and the legibility quietly leaves." So every option here is
+measured, live, in both themes — the numbers in the table are computed from the
+actual composited pixels, not asserted.
+
+The load-bearing detail: gr-veil is
+  linear-gradient(180deg, transparent 18%, rgba(28,27,35,.80))
+so the veil FADES IN top-to-bottom. It is built for a tall element with its
+text low down. On a short block or a button, the text sits in the unveiled
+zone — straight on raw butter — which is exactly how blends fail.
+-->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sketch 4 — gradients, measured</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..800;1,300..800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../prototypes/v3/alloy.css">
+<style>
+  body { padding: 0; }
+  .sketchbar { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: var(--s4);
+    flex-wrap: wrap; padding: 12px 22px; background: var(--ink); color: var(--on-ink); }
+  .sketchbar b { font-family: var(--disp); font-size: 14px; letter-spacing: -.02em; }
+  .sketchbar .note { color: rgba(242,240,247,.72); font-size: 12.5px; margin: 0; max-width: 48ch; }
+  .sketchbar .tsw { margin-left: auto; background: rgba(255,255,255,.10); border-color: transparent; }
+  .sketchbar .tsw button { color: rgba(242,240,247,.78); }
+  .sketchbar .tsw button[aria-pressed="true"] { background: var(--on-ink); color: var(--ink); }
+
+  /* the page itself is the demo for option 1 */
+  .pagewrap { padding: 22px; min-height: 60vh; }
+  body[data-bg="mesh"] .pagewrap { background:
+    radial-gradient(58% 62% at 12% 8%, var(--butter), transparent 62%),
+    radial-gradient(52% 58% at 88% 14%, var(--teal), transparent 62%),
+    radial-gradient(64% 70% at 50% 104%, var(--lilac), transparent 66%),
+    var(--page); }
+  .page { max-width: 1140px; margin: 0 auto; padding: var(--s6) var(--s6) var(--s8);
+    background: var(--slab); border-radius: var(--r-slab); box-shadow: var(--el-slab); }
+  .sec { padding-top: var(--s7); }
+  .sec-title { font-size: clamp(22px,3vw,32px); }
+  .sec-note { max-width: 68ch; font-size: 13.5px; color: var(--text-2); line-height: 1.6; margin-top: 8px; }
+  .verdict-note { margin-top: var(--s3); font-size: 12.5px; color: var(--text-3); line-height: 1.65; max-width: 84ch; }
+  .lab2 { font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--text-3); display: block; margin-bottom: var(--s3); }
+  .opt { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg);
+    padding: var(--s5); }
+  .trio { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s4); margin-top: var(--s4); }
+  .duo2 { display: grid; grid-template-columns: repeat(2,1fr); gap: var(--s4); margin-top: var(--s4); }
+  @media (max-width:900px){ .trio,.duo2 { grid-template-columns: 1fr } }
+
+  /* ---- score field variants ---- */
+  .sf { border-radius: var(--r-md); padding: 14px 12px 13px; text-align: center; width: 128px; color: var(--on-ink); }
+  .sf .n { font-family: var(--disp); font-size: 32px; font-weight: 700; letter-spacing: -.05em; line-height: 1; }
+  .sf .n small { font-size: 13px; opacity: .6; }
+  .sf .d { font-size: 9.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: rgba(242,240,247,.7); margin-top: 5px; }
+  .sf .bits { display: flex; gap: 4px; margin-top: 10px; }
+  .sf .bits span { height: 5px; border-radius: 3px; display: block; }
+  .sf--flat { background: var(--ink); }
+  /* the veil as Alloy ships it — fades in from the top */
+  .sf--alloyveil { background:
+    linear-gradient(180deg, transparent 18%, rgba(28,27,35,.80)),
+    linear-gradient(118deg, var(--butter), var(--teal)); }
+  /* a veil strong enough for a short block: near-opaque, gradient reads as tint */
+  .sf--tint { background:
+    linear-gradient(180deg, rgba(28,27,35,.90), rgba(28,27,35,.96)),
+    linear-gradient(135deg, var(--teal) 0%, var(--teal) var(--split,60%), var(--butter) 100%); }
+
+  /* ---- CTA variants ---- */
+  .cta { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: var(--r-pill);
+    border: 1px solid transparent; font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; }
+  .cta--inv { background: var(--text); color: var(--slab); }
+  .cta--duo { background: linear-gradient(118deg, var(--lilac), var(--teal)); color: var(--on-field); }
+  .cta--veil { background: linear-gradient(180deg, rgba(28,27,35,.88), rgba(28,27,35,.94)),
+    linear-gradient(118deg, var(--lilac), var(--teal)); color: var(--on-ink); }
+
+  /* ---- payoff surface ---- */
+  .payoff { border-radius: var(--r-lg); padding: var(--s5); color: var(--on-ink); }
+  .payoff h4 { font-family: var(--disp); font-size: 21px; font-weight: 700; letter-spacing: -.035em; margin-top: 8px; }
+  .payoff p { font-size: 13.5px; line-height: 1.6; margin-top: 8px; color: rgba(242,240,247,.82); max-width: 52ch; }
+  .payoff .k { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: rgba(242,240,247,.66); }
+  .payoff--flat { background: var(--ink); }
+  .payoff--veil { background: linear-gradient(180deg, transparent 14%, rgba(28,27,35,.88) 78%),
+    linear-gradient(118deg, var(--butter), var(--teal)); }
+
+  /* ---- measured table ---- */
+  .ct { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-top: var(--s4); }
+  .ct th { text-align: left; font-size: 10px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--text-3); padding: 0 var(--s4) 9px 0; border-bottom: 1px solid var(--line-hi); }
+  .ct td { padding: 9px var(--s4) 9px 0; border-bottom: 1px solid var(--line); }
+  .ct .r { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+  .pass { color: var(--ok); font-weight: 700; } .fail { color: var(--stop); font-weight: 700; }
+  .swatchrow { display: flex; gap: var(--s3); flex-wrap: wrap; align-items: center; margin-top: var(--s4); }
+  .gswatch { width: 132px; height: 76px; border-radius: var(--r-md); }
+  .gswatch--mesh { background:
+    radial-gradient(70% 115% at 16% 18%, var(--butter), transparent 72%),
+    radial-gradient(64% 105% at 86% 26%, var(--teal), transparent 72%),
+    radial-gradient(72% 118% at 50% 106%, var(--lilac), transparent 72%), var(--panel-2); }
+  .gswatch--duo { background: linear-gradient(118deg, var(--lilac), var(--teal)); }
+  .gswatch--veil { background: linear-gradient(180deg, transparent 18%, rgba(28,27,35,.80)),
+    linear-gradient(118deg, var(--butter), var(--teal)); }
+</style>
+</head>
+<body data-bg="flat">
+
+<div class="sketchbar">
+  <b>Sketch 4</b>
+  <p class="note">Gradients, with every option measured live. Toggle the theme — the table recomputes.</p>
+  <div class="tsw" role="group" aria-label="Theme">
+    <button data-t="light" aria-pressed="false">Light</button>
+    <button data-t="dark" aria-pressed="true">Dark</button>
+  </div>
+</div>
+
+<div class="pagewrap"><div class="page">
+
+  <section class="sec" style="padding-top:var(--s5)">
+    <h2 class="sec-title">The three gradients, as Alloy ships them</h2>
+    <p class="sec-note">v3 uses these in exactly one place — the sample swatches on a Scout Report.
+      Everywhere else is flat. Note what <b>veil</b> actually does: the dark layer starts at
+      <code>transparent 18%</code> and fades in downward, so the top of the element is nearly raw
+      gradient. That is fine on a tall block with text at the bottom and dangerous on a short one.</p>
+    <div class="swatchrow">
+      <div><div class="gswatch gswatch--mesh"></div><span class="lab2" style="margin-top:8px">mesh</span></div>
+      <div><div class="gswatch gswatch--duo"></div><span class="lab2" style="margin-top:8px">duo</span></div>
+      <div><div class="gswatch gswatch--veil"></div><span class="lab2" style="margin-top:8px">veil</span></div>
+    </div>
+  </section>
+
+  <!-- ============ 1 · BACKGROUND ============ -->
+  <section class="sec">
+    <h2 class="sec-title">1 · The background</h2>
+    <p class="sec-note">The safest place a gradient can go, because <b>nothing sits on it</b> — the slab
+      covers the whole content area, so there is no text to lose. Toggle it and look at the edges of
+      the page.</p>
+    <div class="swatchrow">
+      <button class="btn" data-bg="flat">Flat page</button>
+      <button class="btn btn--out" data-bg="mesh">Mesh page</button>
+    </div>
+    <p class="verdict-note">Zero contrast risk, and it makes the slab read as an object sitting in a
+      space rather than a panel on a colour. The same mesh behind the sign-in gate would give the
+      product a first frame with some atmosphere, still with nothing but a centred card on top of it.</p>
+  </section>
+
+  <!-- ============ 2 · SCORE FIELD ============ -->
+  <section class="sec">
+    <h2 class="sec-title">2 · The score field</h2>
+    <p class="sec-note">This is the interesting one, because a gradient here can be <b>driven by the
+      data</b>: the mix leans teal for a gap-heavy creator and butter for a strain-heavy one. The score
+      block then looks like its own composition. The catch is that its text sits at the top, exactly
+      where Alloy's veil hasn't faded in yet.</p>
+    <div class="trio">
+      <div class="opt"><span class="lab2">A · flat ink (today)</span>
+        <div class="sf sf--flat"><div class="n">87<small>/100</small></div><div class="d">Warhol score</div>
+          <div class="bits"><span style="background:var(--teal);flex:55"></span><span style="background:var(--butter);flex:32"></span><span style="background:rgba(255,255,255,.16);flex:13"></span></div></div>
+        <p class="verdict-note">16.4:1. Nothing to argue with, nothing to look at.</p></div>
+
+      <div class="opt"><span class="lab2">B · Alloy's veil, unchanged</span>
+        <div class="sf sf--alloyveil"><div class="n">87<small>/100</small></div><div class="d">Warhol score</div>
+          <div class="bits"><span style="background:var(--teal);flex:55"></span><span style="background:var(--butter);flex:32"></span><span style="background:rgba(255,255,255,.16);flex:13"></span></div></div>
+        <p class="verdict-note">The number sits in the unveiled band — light type on raw butter. This is
+          the failure Alloy's header names, reproduced faithfully.</p></div>
+
+      <div class="opt"><span class="lab2">C · tint, weighted by the split</span>
+        <div class="sf sf--tint" style="--split:63%"><div class="n">87<small>/100</small></div><div class="d">Warhol score</div>
+          <div class="bits"><span style="background:var(--teal);flex:55"></span><span style="background:var(--butter);flex:32"></span><span style="background:rgba(255,255,255,.16);flex:13"></span></div></div>
+        <p class="verdict-note">A near-opaque veil over a teal→butter ramp whose midpoint is the gap's
+          share of the score. Reads as a tinted ink block; the colour is information, not decoration.</p></div>
+    </div>
+    <div class="opt" style="margin-top:var(--s4)"><span class="lab2">C, across three different creators</span>
+      <div class="swatchrow">
+        <div><div class="sf sf--tint" style="--split:86%"><div class="n">87<small>/100</small></div><div class="d">gap-heavy</div></div></div>
+        <div><div class="sf sf--tint" style="--split:55%"><div class="n">79<small>/100</small></div><div class="d">balanced</div></div></div>
+        <div><div class="sf sf--tint" style="--split:22%"><div class="n">74<small>/100</small></div><div class="d">strain-heavy</div></div></div>
+      </div>
+      <p class="verdict-note">Subtle by design — you would not read the split off the tint, but a column
+        of ten develops a temperature you can feel. The bar underneath stays the precise readout.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3 · THE CTA ============ -->
+  <section class="sec">
+    <h2 class="sec-title">3 · The Promote button</h2>
+    <p class="sec-note">Two problems here that the background doesn't have. Contrast is one. The other
+      is meaning: duo is lilac→teal, and in v3 lilac means <i>Warhol speaking about itself</i> and teal
+      means <i>the gap is real</i>. A duo button says both of those about an action that is neither.</p>
+    <div class="trio">
+      <div class="opt"><span class="lab2">A · inverted (today)</span>
+        <div class="swatchrow"><button class="cta cta--inv">↑ Promote</button></div>
+        <p class="verdict-note">Maximum contrast in both themes, borrows no field meaning.</p></div>
+      <div class="opt"><span class="lab2">B · raw duo</span>
+        <div class="swatchrow"><button class="cta cta--duo">↑ Promote</button></div>
+        <p class="verdict-note">Handsome, and it spends two reserved colours on a third meaning.</p></div>
+      <div class="opt"><span class="lab2">C · veiled duo</span>
+        <div class="swatchrow"><button class="cta cta--veil">↑ Promote</button></div>
+        <p class="verdict-note">Contrast recovered, but now it is a dark button again — the exact thing
+          the inversion existed to fix on a dark panel.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ 4 · THE PAYOFF SURFACE ============ -->
+  <section class="sec">
+    <h2 class="sec-title">4 · “What happened next”</h2>
+    <p class="sec-note">The one genuinely celebratory surface in the product, on Track record. It is tall,
+      its text sits low, and it is the payoff of the whole demo — which is exactly the shape Alloy's veil
+      was built for.</p>
+    <div class="duo2">
+      <div class="payoff payoff--flat"><span class="k">18 months later · what happened next</span>
+        <h4>Warhol ranked her #1 at 61K followers. She now has 2.4M.</h4>
+        <p>Everything Warhol said was missing is now the business. Someone else built it.</p></div>
+      <div class="payoff payoff--veil"><span class="k">18 months later · what happened next</span>
+        <h4>Warhol ranked her #1 at 61K followers. She now has 2.4M.</h4>
+        <p>Everything Warhol said was missing is now the business. Someone else built it.</p></div>
+    </div>
+    <p class="verdict-note">Left is v3 today. Right is the veil used as intended — text low, veil fully
+      faded in by the time it reaches the copy.</p>
+  </section>
+
+  <!-- ============ MEASURED ============ -->
+  <section class="sec">
+    <h2 class="sec-title">Measured</h2>
+    <p class="sec-note">Composited from the actual layer stack — veil alpha over the gradient endpoint,
+      against the text colour that sits on it. Worst case per surface, recomputed when you switch theme.
+      AA needs 4.5 for body text and 3.0 for large text.</p>
+    <div class="wrapx"><table class="ct" id="tbl"><thead><tr>
+      <th>Surface</th><th>Text on it</th><th>Worst-case ground</th><th class="r">Ratio</th><th>AA</th>
+    </tr></thead><tbody></tbody></table></div>
+  </section>
+
+</div></div>
+
+<script>
+(function () {
+  function rgb(c) {
+    var m = c.match(/[\d.]+/g).map(Number);
+    return [m[0], m[1], m[2]];
+  }
+  function tok(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+  function hex2rgb(h) {
+    h = h.replace('#', '');
+    return [parseInt(h.slice(0,2),16), parseInt(h.slice(2,4),16), parseInt(h.slice(4,6),16)];
+  }
+  function lum(c) {
+    var m = c.map(function (v) { v /= 255; return v <= 0.03928 ? v/12.92 : Math.pow((v+0.055)/1.055, 2.4); });
+    return 0.2126*m[0] + 0.7152*m[1] + 0.0722*m[2];
+  }
+  function ratio(a, b) {
+    var L = [lum(a), lum(b)].sort(function (x,y) { return y-x; });
+    return (L[0]+0.05)/(L[1]+0.05);
+  }
+  /* composite rgba(over, alpha) on top of base */
+  function over(base, ov, alpha) {
+    return base.map(function (v, i) { return Math.round(alpha*ov[i] + (1-alpha)*v); });
+  }
+
+  var VEIL = [28,27,35];
+
+  function rows() {
+    var butter = hex2rgb(tok('--butter')), teal = hex2rgb(tok('--teal')),
+        lilac = hex2rgb(tok('--lilac')), ink = hex2rgb(tok('--ink')),
+        onInk = hex2rgb(tok('--on-ink')), text = hex2rgb(tok('--text')),
+        slab = hex2rgb(tok('--slab'));
+
+    /* worst case = lightest endpoint, least veil coverage where the text sits */
+    var lightest = lum(butter) > lum(teal) ? butter : teal;
+    var lightestDuo = lum(lilac) > lum(teal) ? lilac : teal;
+
+    return [
+      ['Page background (mesh)', 'nothing sits on it', '—', null, 'n/a — no text'],
+      ['Score field A · flat ink', 'on-ink', 'ink', ratio(onInk, ink), null],
+      ['Score field B · Alloy veil, at the number', 'on-ink', 'butter at ~8% veil', ratio(onInk, over(lightest, VEIL, 0.08)), null],
+      ['Score field C · tint (90–96% veil)', 'on-ink', 'butter at 90% veil', ratio(onInk, over(lightest, VEIL, 0.90)), null],
+      ['CTA A · inverted', 'slab', 'text token', ratio(slab, text), null],
+      ['CTA B · raw duo', 'on-field (ink)', 'lightest of lilac/teal', ratio([28,27,35], lightestDuo), null],
+      ['CTA C · veiled duo (88%)', 'on-ink', 'duo at 88% veil', ratio(onInk, over(lightestDuo, VEIL, 0.88)), null],
+      ['Payoff · veil as intended, text at 78%', 'on-ink', 'butter at 88% veil', ratio(onInk, over(lightest, VEIL, 0.88)), null],
+      ['Payoff · veil at the kicker (14%)', 'on-ink 66%', 'butter at ~20% veil', ratio(over(onInk, lightest, 0.34), over(lightest, VEIL, 0.20)), null]
+    ];
+  }
+
+  function render() {
+    var tb = document.querySelector('#tbl tbody');
+    tb.innerHTML = rows().map(function (r) {
+      var v = r[3], note = r[4];
+      var cell = note ? '<span class="' + (note === 'n/a — no text' ? '' : 'pass') + '">' + note + '</span>'
+        : (v >= 4.5 ? '<span class="pass">AA</span>' : v >= 3 ? '<span class="pass">large only</span>' : '<span class="fail">fails</span>');
+      return '<tr><td>' + r[0] + '</td><td>' + r[1] + '</td><td>' + r[2] + '</td>' +
+        '<td class="r">' + (v ? v.toFixed(2) + ':1' : '—') + '</td><td>' + cell + '</td></tr>';
+    }).join('');
+  }
+
+  document.querySelectorAll('[data-bg]').forEach(function (b) {
+    if (b.tagName !== 'BUTTON') return;
+    b.addEventListener('click', function () {
+      document.body.setAttribute('data-bg', b.dataset.bg);
+      document.querySelectorAll('button[data-bg]').forEach(function (x) {
+        x.className = x === b ? 'btn' : 'btn btn--out';
+      });
+    });
+  });
+  document.querySelectorAll('.sketchbar .tsw button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.documentElement.setAttribute('data-theme', b.dataset.t);
+      document.querySelectorAll('.sketchbar .tsw button').forEach(function (x) {
+        x.setAttribute('aria-pressed', String(x === b));
+      });
+      render();
+    });
+  });
+  render();
+})();
+</script>
+</body>
+</html>

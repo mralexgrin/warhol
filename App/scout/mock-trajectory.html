@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scout — trajectory graph (draft)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..800;1,300..800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="alloy.css">
+<link rel="stylesheet" href="scout-v52.css">
+<style>
+/* ================================================ MOCK CHROME (review only) */
+body { background: var(--panel-2); }
+.mk { max-width: 760px; margin: 0 auto; padding: 40px 28px 96px; }
+.mk-head { padding-bottom: 20px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
+.mk-head h1 { font-family: var(--disp); font-size: 30px; font-weight: 700; letter-spacing: -.04em; line-height: 1.05; }
+.mk-head p { margin-top: 10px; font-size: 14.5px; color: var(--text-2); max-width: 66ch; line-height: 1.55; }
+.mk-head .meta { margin-top: 12px; font-size: 12px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.mk-lab { font-family: var(--disp); font-size: 12px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--text-3); margin: 40px 0 14px; }
+.mk-toggle { position: fixed; top: 18px; right: 18px; z-index: 9; display: flex; gap: 6px;
+  background: var(--panel); border: 1px solid var(--line-hi); border-radius: var(--r-pill); padding: 5px; }
+.mk-toggle button { border: 0; background: transparent; color: var(--text-2); cursor: pointer;
+  font-family: var(--body); font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: var(--r-pill); }
+.mk-toggle button.on { background: var(--text); color: var(--panel); }
+
+/* ================================================ THE PROPOSAL — trajectory */
+.traj { margin-top: var(--s4); padding-top: var(--s4); border-top: 1px solid var(--line); }
+.traj + .traj { margin-top: var(--s5); }
+.traj-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s3); }
+.traj-k { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--text-3); }
+.traj-big { font-family: var(--disp); font-size: 22px; font-weight: 700; letter-spacing: -.03em;
+  color: var(--text); font-variant-numeric: tabular-nums; line-height: 1; text-align: right; }
+.traj-big small { font-family: var(--body); font-size: 12.5px; font-weight: 500; color: var(--text-3); letter-spacing: 0; }
+.traj-read { font-size: 12.5px; color: var(--text-2); line-height: 1.5; margin-top: 3px; }
+.traj-read b { color: var(--text); font-weight: 600; }
+.traj-read .up { color: var(--text); font-weight: 600; }
+.traj-read .up::before { content: "▲ "; color: var(--teal-d); font-size: 10px; }
+.traj-read .pct { color: var(--teal-d); font-weight: 700; background: color-mix(in srgb, var(--teal) 16%, transparent);
+  padding: 1px 7px; border-radius: 999px; margin-left: 4px; }
+
+/* --- output: clickable monthly columns ------------------------------------ */
+.spark { margin-top: var(--s4); display: grid; grid-template-columns: repeat(6, 1fr);
+  align-items: end; gap: 7px; height: 92px; }
+.spark .col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+  height: 100%; gap: 6px; cursor: pointer; position: relative; }
+.spark .bar { width: 100%; max-width: 34px; border-radius: 5px 5px 2px 2px; background: var(--butter);
+  min-height: 4px; transition: height .5s cubic-bezier(.2,.7,.3,1), box-shadow .15s, opacity .15s; opacity: .82; }
+.spark .col:hover .bar { opacity: 1; }
+.spark .col.sel .bar { background: var(--lilac-d); opacity: 1; }
+.spark .cap { font-size: 10px; font-weight: 600; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.spark .col.sel .cap { color: var(--text); }
+/* the peak marker — the month with the single biggest piece */
+.spark .col .peak { position: absolute; top: -3px; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--teal-d); box-shadow: 0 0 0 3px color-mix(in srgb, var(--teal) 28%, transparent); }
+.spark-x { margin-top: 8px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 7px;
+  font-size: 10px; color: var(--text-3); text-align: center; letter-spacing: .02em; }
+.spark-x span { cursor: pointer; padding: 2px 0; border-radius: 4px; }
+.spark-x span.sel { color: var(--text); font-weight: 700; }
+
+/* --- top piece card (updates with the selected month) --------------------- */
+.peakcard { margin-top: var(--s4); display: grid; grid-template-columns: 108px 1fr; gap: var(--s4);
+  align-items: center; padding: var(--s3); border: 1px solid var(--line); border-radius: var(--r-md);
+  background: var(--panel-2); }
+.peakcard .thumb { position: relative; aspect-ratio: 16/9; border-radius: var(--r-sm); overflow: hidden;
+  background: linear-gradient(135deg, var(--lilac-d), var(--teal-d)); display: flex; align-items: center; justify-content: center; }
+.peakcard .thumb .play { width: 26px; height: 26px; border-radius: 50%; background: rgba(255,255,255,.92);
+  display: flex; align-items: center; justify-content: center; }
+.peakcard .thumb .play::after { content: ""; margin-left: 2px; border-style: solid;
+  border-width: 5px 0 5px 8px; border-color: transparent transparent transparent var(--ink); }
+.peakcard .thumb .dur { position: absolute; right: 4px; bottom: 4px; font-size: 9.5px; font-weight: 600;
+  color: #fff; background: rgba(0,0,0,.62); padding: 1px 4px; border-radius: 3px; font-variant-numeric: tabular-nums; }
+.peakcard .pc-k { font-size: 9.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--text-3); }
+.peakcard .pc-t { font-family: var(--disp); font-size: 15px; font-weight: 700; letter-spacing: -.02em;
+  line-height: 1.25; color: var(--text); margin-top: 4px; }
+.peakcard .pc-m { margin-top: 6px; font-size: 12px; color: var(--text-2); font-variant-numeric: tabular-nums; }
+.peakcard .pc-m b { color: var(--text); font-weight: 700; }
+.peakcard .pc-m .sep { color: var(--text-3); margin: 0 6px; }
+
+/* --- audience: filled line curve ------------------------------------------ */
+.curve { margin-top: var(--s4); }
+.curve svg { display: block; width: 100%; height: 96px; overflow: visible; }
+.curve-x { margin-top: 6px; display: flex; justify-content: space-between; font-size: 10px; color: var(--text-3); letter-spacing: .02em; }
+
+/* --- audience empty state (first look) ------------------------------------ */
+.curve-pending { margin-top: var(--s4); border: 1px dashed var(--line-hi); border-radius: var(--r-md);
+  padding: var(--s4) var(--s4) var(--s3); background: var(--panel-2); }
+.curve-pending .pend-dot { display: flex; align-items: center; gap: 9px; }
+.curve-pending .pend-dot i { width: 9px; height: 9px; border-radius: 50%; background: var(--teal); flex: none;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--teal) 26%, transparent); }
+.curve-pending .pend-dot span { font-size: 13px; font-weight: 600; color: var(--text); }
+.curve-pending .pend-note { margin-top: 9px; font-size: 12px; color: var(--text-2); line-height: 1.5; }
+.curve-pending .pend-track { margin-top: 12px; height: 4px; border-radius: 999px; background: var(--panel-3); position: relative; }
+.curve-pending .pend-track i { position: absolute; left: 0; top: 0; height: 100%; width: 2%; border-radius: 999px; background: var(--teal); }
+.curve-pending .pend-scale { margin-top: 6px; display: flex; justify-content: space-between; font-size: 10px; color: var(--text-3); }
+</style>
+</head>
+<body>
+
+<div class="mk-toggle">
+  <button id="tl" class="on" onclick="setTheme('light')">Light</button>
+  <button id="td" onclick="setTheme('dark')">Dark</button>
+</div>
+
+<div class="mk">
+  <div class="mk-head">
+    <h1>Trajectory graph — draft</h1>
+    <p>Slots into the <b>Pressure</b> claim on the report, under the "posting less" lines. Output over time,
+      the month's biggest piece on tap, and the audience curve. Real report CSS and tokens.</p>
+    <div class="meta">Draft · not yet in app.js · click a month to change the top piece · 2026-08-14</div>
+  </div>
+
+  <!-- ============================================================ CASE B (the star) -->
+  <div class="mk-lab">Watched 96 days — Pine Hollow Auto Diagnostics</div>
+
+  <section class="claim claim--pressure">
+    <div class="ch"><h2>Pressure</h2></div>
+    <div class="wn">
+      <span class="subh">Trajectory</span>
+
+      <!-- OUTPUT + top piece per month -->
+      <div class="traj">
+        <div class="traj-head">
+          <div>
+            <div class="traj-k">Output</div>
+            <div class="traj-read"><b>Posting less.</b> Down 40% from a year ago — but the hits got bigger.</div>
+          </div>
+          <div class="traj-big">31 <small>pieces · 180 days</small></div>
+        </div>
+
+        <div class="spark" id="spark"></div>
+        <div class="spark-x" id="sparkx"></div>
+
+        <div class="peakcard" id="peakcard">
+          <div class="thumb"><span class="play"></span><span class="dur" id="pcDur">14:02</span></div>
+          <div>
+            <div class="pc-k" id="pcK">June · biggest piece</div>
+            <div class="pc-t" id="pcT">This "ruined" engine just needed one sensor</div>
+            <div class="pc-m"><b id="pcV">1.2M views</b><span class="sep">·</span><span id="pcMeta">YouTube · 12 Jun 2026</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AUDIENCE — real snapshots now exist, so the curve is real. -->
+      <div class="traj">
+        <div class="traj-head">
+          <div>
+            <div class="traj-k">Audience</div>
+            <div class="traj-read"><span class="up">+18,400</span> since we started watching <span class="pct">+6.6%</span></div>
+          </div>
+          <div class="traj-big">295k <small>followers</small></div>
+        </div>
+        <div class="curve">
+          <svg viewBox="0 0 560 96" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="var(--teal)" stop-opacity=".28"/>
+                <stop offset="1" stop-color="var(--teal)" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M4,74 L115,66 L226,60 L337,40 L448,30 L556,18 L556,96 L4,96 Z" fill="url(#fill)"/>
+            <path d="M4,74 L115,66 L226,60 L337,40 L448,30 L556,18" fill="none"
+                  stroke="var(--teal-d)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="4" cy="74" r="3" fill="var(--teal-d)"/>
+            <circle cx="556" cy="18" r="3.5" fill="var(--teal-d)"/>
+          </svg>
+        </div>
+        <div class="curve-x"><span>96 days ago</span><span>60</span><span>30</span><span>Today</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ CASE A (first look, for contrast) -->
+  <div class="mk-lab">First look — audience has no history yet</div>
+
+  <section class="claim claim--pressure">
+    <div class="ch"><h2>Pressure</h2></div>
+    <div class="wn">
+      <span class="subh">Trajectory</span>
+      <div class="traj">
+        <div class="traj-head">
+          <div>
+            <div class="traj-k">Audience</div>
+            <div class="traj-read">277k on YouTube today — one number, no history yet.</div>
+          </div>
+          <div class="traj-big">Day 2 <small>of 90</small></div>
+        </div>
+        <div class="curve-pending">
+          <div class="pend-dot"><i></i><span>First count recorded today · 277,000</span></div>
+          <p class="pend-note">Nobody stamps a follower count, so growth can't be read on a first look.
+            Scout takes a count each visit; the curve fills in as the watch runs.</p>
+          <div class="pend-track"><i></i></div>
+          <div class="pend-scale"><span>Today</span><span>+90 days</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+/* One creator's real-shaped fixture. Each month: pieces published, and the single
+   biggest piece that month (title, metric, duration, platform, date). */
+var MONTHS = [
+  { m:'Mar', posts:8, title:'Full teardown: seized brake caliper on a 2015 F-150', v:'512K views',  dur:'22:41', meta:'YouTube · 9 Mar 2026',  peak:false },
+  { m:'Apr', posts:7, title:"Why your ABS light won't clear (and the $12 fix)",      v:'890K views',  dur:'11:08', meta:'YouTube · 3 Apr 2026',  peak:false },
+  { m:'May', posts:6, title:'Diagnosing a P0300 misfire, live on the bench',          v:'430K views',  dur:'17:55', meta:'YouTube · 21 May 2026', peak:false },
+  { m:'Jun', posts:4, title:'This "ruined" engine just needed one sensor',            v:'1.2M views',  dur:'14:02', meta:'YouTube · 12 Jun 2026', peak:true  },
+  { m:'Jul', posts:3, title:'Reading a scan tool like a mechanic, not a parts store', v:'380K views',  dur:'19:30', meta:'YouTube · 8 Jul 2026',  peak:false },
+  { m:'Aug', posts:3, title:'The cheapest OBD2 scanner that actually works',          v:'640K views',  dur:'09:47', meta:'YouTube · 5 Aug 2026',  peak:false }
+];
+var MAX = Math.max.apply(null, MONTHS.map(function(x){return x.posts;}));
+var sel = MONTHS.findIndex(function(x){return x.peak;});
+
+function paint(){
+  document.getElementById('spark').innerHTML = MONTHS.map(function(x,i){
+    return '<div class="col'+(i===sel?' sel':'')+'" data-i="'+i+'">'+
+      (x.peak?'<span class="peak" title="biggest piece"></span>':'')+
+      '<span class="cap">'+x.posts+'</span>'+
+      '<div class="bar" style="height:'+Math.round(x.posts/MAX*100)+'%"></div></div>';
+  }).join('');
+  document.getElementById('sparkx').innerHTML = MONTHS.map(function(x,i){
+    return '<span class="'+(i===sel?'sel':'')+'" data-i="'+i+'">'+x.m+'</span>';
+  }).join('');
+  var s = MONTHS[sel];
+  document.getElementById('pcK').textContent = s.m+' · biggest piece';
+  document.getElementById('pcT').textContent = s.title;
+  document.getElementById('pcV').textContent = s.v;
+  document.getElementById('pcMeta').textContent = s.meta;
+  document.getElementById('pcDur').textContent = s.dur;
+}
+document.addEventListener('click', function(e){
+  var t = e.target.closest('[data-i]');
+  if(!t) return;
+  sel = +t.getAttribute('data-i'); paint();
+});
+paint();
+
+function setTheme(t){
+  document.documentElement.setAttribute('data-theme', t);
+  document.getElementById('tl').classList.toggle('on', t==='light');
+  document.getElementById('td').classList.toggle('on', t==='dark');
+}
+</script>
+</body>
+</html>

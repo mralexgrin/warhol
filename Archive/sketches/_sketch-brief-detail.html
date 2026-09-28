@@ -1,0 +1,308 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Sketch — brief detail, pre-5.3</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: #000; background: #fff;
+    max-width: 860px; margin: 0 auto; padding: 40px 24px 120px;
+  }
+  h1 { font-size: 15px; margin: 0 0 4px; letter-spacing: .04em; }
+  .sub { color: #555; margin: 0 0 40px; }
+  section { margin: 0 0 52px; }
+  h2 {
+    font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+    border-bottom: 1px solid #000; padding-bottom: 6px; margin: 0 0 6px;
+  }
+  .note { color: #555; margin: 0 0 16px; }
+  .box { border: 1px dashed #999; padding: 14px 16px; margin: 0 0 12px; }
+  .box.solid { border-style: solid; border-color: #000; }
+  .lbl {
+    font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+    color: #555; margin: 0 0 8px;
+  }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 0; }
+  td, th { text-align: left; padding: 3px 10px 3px 0; vertical-align: top; }
+  th { font-weight: 400; color: #555; border-bottom: 1px solid #ccc; font-size: 11px; }
+  .r { text-align: right; padding-right: 18px; }
+  .dim { color: #777; }
+  .strike { text-decoration: line-through; color: #777; }
+  ul { margin: 6px 0 0; padding-left: 18px; }
+  li { margin: 0 0 4px; }
+  .q { margin: 12px 0 0; padding: 10px 14px; border-left: 3px solid #000; }
+  .flag { border: 1px solid #000; padding: 12px 16px; margin: 0 0 16px; }
+  .flag b { letter-spacing: .06em; }
+  .hatch {
+    background: repeating-linear-gradient(45deg, #eee 0 6px, #fff 6px 12px);
+  }
+  hr { border: 0; border-top: 1px solid #ddd; margin: 14px 0; }
+  .row { display: flex; gap: 24px; flex-wrap: wrap; }
+  .col { flex: 1 1 300px; }
+  code { background: #f0f0f0; padding: 1px 4px; }
+</style>
+
+<h1>WARHOL SCOUT — brief detail, rough sketch</h1>
+<p class="sub">
+  Black and white, structure only. Everything marked MEASURED is real output from
+  <code>Warhol/engine</code> today. Everything marked PROJECTED has not been run.
+</p>
+
+
+<!-- ─────────────────────────────────────────────────────── -->
+<section>
+  <h2>0 · The label question — answered</h2>
+  <p class="note">
+    <code>lib/export-seed.js:348</code> is <code>name: drop.brief.slug</code>.
+    So today the front end really does print the hyphenated slug. Not internal-only.
+  </p>
+
+  <div class="box">
+    <div class="lbl">what the tab bar renders now</div>
+    <div>
+      [ <span class="strike">southern-college-football-insiders</span> ]
+      [ <span class="strike">cover-biggest-primetime-streaming</span> ]
+      [ + ]
+    </div>
+  </div>
+
+  <div class="box solid">
+    <div class="lbl">what it should render — needs a third field on the brief</div>
+    <div>[ <b>Southern CFB insiders</b> ] &nbsp; [ Primetime streaming ] &nbsp; [ + New brief ]</div>
+    <hr>
+    <table>
+      <tr><td class="dim">slug</td><td><code>southern-college-football-insiders</code></td><td class="dim">— urls, filenames, CLI. never shown.</td></tr>
+      <tr><td class="dim">title</td><td><b>Southern CFB insiders</b></td><td class="dim">— NEW. tab, card, report header. ~24 chars.</td></tr>
+      <tr><td class="dim">text</td><td>“Southern college football — people who…”</td><td class="dim">— the brief itself. shown on the detail screen + handed to Fit.</td></tr>
+    </table>
+  </div>
+  <p class="note">
+    Title has to be authored, not derived — de-hyphenating the slug gives you
+    “Southern college football insiders” at 35 characters, which wraps the tab.
+  </p>
+</section>
+
+
+<!-- ─────────────────────────────────────────────────────── -->
+<section>
+  <h2>1 · Brief detail — Sports &nbsp;<span class="dim">MEASURED</span></h2>
+
+  <div class="box solid">
+    <div class="lbl">header</div>
+    <b>Southern CFB insiders</b> &nbsp;<span class="dim">10 of 10 checked · last run today 18:28</span><br>
+    <span class="dim">“Southern college football — people who break or explain recruiting and
+    coaching-staff news…”</span> &nbsp;[ edit ]
+
+    <hr>
+    <div class="lbl">the drop — who cleared</div>
+    <div class="box">
+      <b>(27) backseatcoach</b> &nbsp; <span class="dim">86k · confidence 100%</span>
+      <ul>
+        <li><span class="dim">○ Demand</span> &nbsp; nothing we could read asked to buy</li>
+        <li>● Missing &nbsp; no newsletter, no store</li>
+        <li>● Pressure &nbsp; 4 dead links they still publish — they tried, it broke</li>
+      </ul>
+      <div class="dim" style="margin-top:8px">[ Promote ] [ Watch ] [ Pass ] &nbsp; → Open the report</div>
+    </div>
+
+    <div class="lbl" style="margin-top:18px">who else was looked at, and what stopped them</div>
+    <table>
+      <tr><th>creator</th><th class="r">score</th><th class="r">conf</th><th class="r">audience</th><th>stopped by</th></tr>
+      <tr><td>itshunterfriesen</td><td class="r"><b>32</b></td><td class="r">83%</td><td class="r">104k</td><td>fit</td></tr>
+      <tr><td>hayesfawcett</td><td class="r">25</td><td class="r">83%</td><td class="r">4k</td><td>fit</td></tr>
+      <tr><td>brandonfwalker</td><td class="r">25</td><td class="r">83%</td><td class="r">139k</td><td>fit</td></tr>
+      <tr><td>samhartman_10</td><td class="r">20</td><td class="r">83%</td><td class="r">118k</td><td>score, fit</td></tr>
+      <tr><td>isleepwitsockson</td><td class="r">15</td><td class="r">83%</td><td class="r">115k</td><td>score</td></tr>
+      <tr class="dim"><td colspan="5">…4 more</td></tr>
+    </table>
+  </div>
+
+  <div class="flag">
+    <b>THE ROOM WILL READ THIS TABLE.</b> The top scorer (32) is rejected for
+    “audience is real but modest at ~104k” while an 86k account clears. That is
+    Fit judging size inconsistently. Fixed by the brief rewrite, not by code —
+    but only if we re-run before tomorrow.
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────────────────── -->
+<section>
+  <h2>2 · The report, one level down &nbsp;<span class="dim">MEASURED — backseatcoach</span></h2>
+  <p class="note">This is the whole product. Four blocks, in this order.</p>
+
+  <div class="box solid">
+    <b>backseatcoach</b> &nbsp; <span class="dim">TikTok 86k · YouTube 36</span><br>
+    <span class="dim">score 27 · threshold 25 · confidence 100% (6 of 6 checks we can settle either way)</span><br>
+    <span class="dim">5 we can’t settle at all: representation, sponsored posts, affiliate links,
+    subscriptions, shopping tags — they can show up as present, never as absent</span>
+
+    <hr>
+    <div class="lbl">DEMAND — do people want to buy? &nbsp;&nbsp; +0</div>
+    <div class="hatch" style="padding:8px 10px">
+      not found — nothing in the 3 comments we read asked to buy<br>
+      <span class="dim">scores neutral and lowers confidence. this is designed behaviour.</span>
+    </div>
+    <p class="note" style="margin:8px 0 0">
+      ← 25 points that have never fired. This is the box the cars brief is meant to fill.
+    </p>
+
+    <hr>
+    <div class="lbl">WHY THEY’RE ON THIS LIST</div>
+    <ul>
+      <li>Audience 86k · TikTok alone — nothing links the YouTube to it</li>
+      <li>Trajectory: no trend yet — our two looks are 0 days apart, the trend needs 90</li>
+      <li>Fit: <b>pass</b> — “He makes short sports clips… in a format he clearly repeats,
+        and 5.5m likes on 85.8k followers says the clips land.”</li>
+    </ul>
+
+    <hr>
+    <div class="lbl">PRESSURE — will they take the call? &nbsp;&nbsp; 12 / 40</div>
+    <ul>
+      <li>● 6 dead links they still publish — they tried, it broke</li>
+      <li class="dim">○ we couldn’t read their captions</li>
+      <li class="dim">· we could not read their posting rate — 0 uploads in 275 days, too few to call it a rate</li>
+      <li class="dim">· needs a second look — this is a change over time, and we have seen them once</li>
+    </ul>
+    <div class="dim">Ceiling on this look is 22 of 40 — 2 of 4 signals we can’t read yet.</div>
+
+    <hr>
+    <div class="lbl">MISSING — is there anything to buy? &nbsp;&nbsp; +15</div>
+    <div class="row">
+      <div class="col">
+        <div class="dim">WHAT THEY’VE BUILT</div>
+        <table>
+          <tr><td>✓</td><td>YouTube channel</td><td class="dim">found it</td></tr>
+          <tr><td>✗</td><td>Newsletter</td><td class="dim">not there · we looked in 6 places</td></tr>
+          <tr><td>✗</td><td>Store</td><td class="dim">not there · 4 places · 2 wouldn’t answer</td></tr>
+          <tr><td>✗</td><td>Membership</td><td class="dim">not there · 3 places</td></tr>
+          <tr><td>✓</td><td>Podcast</td><td class="dim">found it</td></tr>
+          <tr><td>✓</td><td>Own website</td><td class="dim">they link to it themselves</td></tr>
+          <tr><td>?</td><td>Representation</td><td class="dim">bio doesn’t mention it — not the same as unsigned</td></tr>
+        </table>
+      </div>
+      <div class="col">
+        <div class="dim">WHAT THEY’VE SWITCHED ON</div>
+        <div class="dim">— we couldn’t tell what they’ve switched on</div>
+        <table>
+          <tr><td>?</td><td>Sponsored posts</td></tr>
+          <tr><td>?</td><td>Affiliate links</td></tr>
+          <tr><td>?</td><td>Platform subscriptions</td></tr>
+          <tr><td>?</td><td>Shopping tags</td></tr>
+        </table>
+        <div class="dim" style="margin-top:6px">all four need partner APIs we don’t have</div>
+      </div>
+    </div>
+
+    <hr>
+    <div class="lbl">ENTERS THE DROP</div>
+    <table>
+      <tr><td>score ≥ 25</td><td><b>yes</b></td><td class="dim">(27)</td></tr>
+      <tr><td>confidence ≥ 60%</td><td><b>yes</b></td><td class="dim">(100%)</td></tr>
+      <tr><td>fit = pass</td><td><b>yes</b></td><td class="dim">(pass)</td></tr>
+      <tr class="dim"><td>trajectory</td><td>—</td><td>no reading yet — does not block</td></tr>
+    </table>
+    <div class="dim" style="margin-top:8px">How we checked · 150 checks across 27 places →</div>
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────────────────── -->
+<section>
+  <h2>3 · Brief detail — TV &nbsp;<span class="dim">MEASURED</span></h2>
+
+  <div class="box solid">
+    <b>Primetime streaming</b> &nbsp;<span class="dim">10 of 10 checked</span>
+
+    <hr>
+    <div class="lbl">the drop</div>
+    <div class="box">
+      <b>(26) thoughtswgracie2.0</b> &nbsp; <span class="dim">44k · confidence 83%</span>
+      <ul>
+        <li><span class="dim">○ Demand</span> &nbsp; nothing we could read asked to buy
+          <span class="dim">— no comment section anywhere would give us its text; TikTok gated, Instagram closed</span></li>
+        <li>● Missing &nbsp; no store, <b>no YouTube channel</b></li>
+        <li>● Pressure &nbsp; 4 dead links they still publish</li>
+      </ul>
+    </div>
+
+    <div class="lbl" style="margin-top:18px">who else</div>
+    <table>
+      <tr><th>creator</th><th class="r">score</th><th class="r">conf</th><th class="r">audience</th><th>stopped by</th></tr>
+      <tr><td>missunderstoodpod</td><td class="r"><b>34</b></td><td class="r">100%</td><td class="r">24k</td><td>fit</td></tr>
+      <tr><td>gossipgilby</td><td class="r">25</td><td class="r">83%</td><td class="r">7k</td><td>fit</td></tr>
+      <tr><td>girlwholove2gossip</td><td class="r">22</td><td class="r">100%</td><td class="r">46k</td><td>score, fit</td></tr>
+      <tr><td>clemyntine</td><td class="r">15</td><td class="r">83%</td><td class="r"><b>284k</b></td><td>score</td></tr>
+      <tr><td>blabbertok</td><td class="r">10</td><td class="r">83%</td><td class="r"><b>256k</b></td><td>score</td></tr>
+      <tr class="dim"><td colspan="5">…4 more</td></tr>
+    </table>
+  </div>
+
+  <div class="flag">
+    <b>SAME DEFECT, WORSE.</b> Top scorer (34) rejected on 24k followers, while the
+    two largest audiences on the board — 284k and 256k — fail on <i>score</i>,
+    not fit. A viewer reading the audience column sees size doing the opposite
+    thing in adjacent rows.
+    <br><br>
+    <b>ALSO:</b> this creator scores <b>26</b> here and <b>18</b> under the house brief.
+    The score moves with the brief — expected, since the brief decides which places
+    get checked — but be ready for it if two tabs are open.
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────────────────── -->
+<section>
+  <h2>4 · Cars / detailing &nbsp;<span class="dim">PROJECTED — NOT RUN</span></h2>
+  <p class="note">
+    Structurally identical screen. One block changes, and it is the block that
+    has been empty in every demo so far.
+  </p>
+
+  <div class="box solid hatch">
+    <div class="lbl">the difference — DEMAND stops reading “not found”</div>
+    <div style="background:#fff; padding:12px 14px">
+      <div class="lbl">DEMAND — do people want to buy? &nbsp;&nbsp; <b>+19 of 25</b> &nbsp;<span class="dim">(projected)</span></div>
+      <div class="q">“what polish are you using on that clear coat” <span class="dim">— YouTube, linked</span></div>
+      <div class="q">“is there a link for the pads” <span class="dim">— YouTube, linked</span></div>
+      <div class="dim" style="margin-top:8px">…and N more asking to buy</div>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="lbl">why this cohort and not the others</div>
+    <table>
+      <tr><th></th><th>Sports</th><th>TV</th><th>Cars (proj.)</th></tr>
+      <tr><td>Has YouTube</td><td>1 of 10</td><td>0 of 10</td><td><b>10 of 10</b> — brief requires it</td></tr>
+      <tr><td>Comments readable</td><td>3 read</td><td>none</td><td><b>open, by the brief</b></td></tr>
+      <tr><td>Demand ceiling</td><td class="dim">0</td><td class="dim">0</td><td><b>25</b></td></tr>
+      <tr><td>Score ceiling</td><td class="dim">69</td><td class="dim">69</td><td><b>~94</b></td></tr>
+    </table>
+  </div>
+
+  <div class="flag">
+    <b>THE CONSEQUENCE TO DECIDE ON.</b> The threshold of 25 was read off a cohort
+    whose Demand was structurally zero — <code>weights.json</code> says so and says
+    to re-read the bar the first time a cohort has real Demand. Cars creators could
+    land 45–55 against a 25 bar while TV tops out at 27. Side by side that is one
+    tab where almost everything clears and one where almost nothing does.
+    <br><br>
+    Either play it as the finding — <i>“same bar, the categories genuinely differ”</i> —
+    or re-read the bar. Not both, and not live.
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────────────────── -->
+<section>
+  <h2>5 · What to commit before 5.3</h2>
+  <div class="box solid">
+    <table>
+      <tr><td>1</td><td><b>Brief gets a <code>title</code></b></td><td class="dim">slug never reaches a screen. small, do it first.</td></tr>
+      <tr><td>2</td><td><b>Brief text states a numeric audience range</b></td><td class="dim">stops Fit freelancing on size. text edit + re-run.</td></tr>
+      <tr><td>3</td><td><b>“Stopped by” needs the number beside it</b></td><td class="dim">“fit” alone invites the question the table can’t answer.</td></tr>
+      <tr><td>4</td><td><b>Demand’s empty state is a first-class design</b></td><td class="dim">it is the most common state today, not an edge case.</td></tr>
+      <tr><td>5</td><td><b>Threshold: per-brief or global?</b></td><td class="dim">forced the moment a cohort has real Demand.</td></tr>
+    </table>
+  </div>
+</section>

@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warhol Scout — six design toolkits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0F0F11; --panel:#17171A; --panel-2:#1E1E22; --panel-3:#26262B; --line:#2A2A30;
+  --text:#F2F2F0; --dim:#9A9AA2; --faint:#7A7A82;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --focus:#FFD68D; --focus-halo:#0F0F11;
+}
+@media(prefers-color-scheme:light){
+  :root{--bg:#F7F6F2;--panel:#FFFFFF;--panel-2:#F1EFEA;--panel-3:#E6E3DC;--line:#E2DFD8;
+    --text:#1C1B23;--dim:#57555F;--faint:#75737E;--focus:#5A4CA3;--focus-halo:#FFFFFF}
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:"Onest",-apple-system,system-ui,sans-serif;font-size:15px;line-height:1.6}
+:where(a,button):focus-visible{outline:3px solid var(--focus);outline-offset:2px;
+  box-shadow:0 0 0 6px var(--focus-halo);border-radius:10px}
+.wrap{max-width:1240px;margin:0 auto;padding:64px 24px 96px}
+h1{font-size:clamp(34px,5.5vw,58px);letter-spacing:-.04em;line-height:1.02;margin:0 0 18px;font-weight:800}
+.lede{color:var(--dim);max-width:68ch;margin:0 0 12px;font-size:16px;line-height:1.65}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--faint);letter-spacing:.02em;margin:0 0 48px;line-height:1.7}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px}
+.card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .16s cubic-bezier(.2,.7,.3,1),box-shadow .16s cubic-bezier(.2,.7,.3,1),border-color .16s}
+.card:hover{transform:translateY(-3px);border-color:var(--faint);
+  box-shadow:0 4px 10px rgba(0,0,0,.14),0 22px 44px -18px rgba(0,0,0,.4)}
+.card:focus-within{border-color:var(--faint)}
+.swatch{height:96px;display:flex;flex:none}
+.swatch span{flex:1}
+.body{padding:18px 22px 22px;display:flex;flex-direction:column;flex:1}
+.kicker{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.no{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.1em;text-transform:uppercase}
+.src{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.02em;
+  border:1px solid var(--line);border-radius:999px;padding:2px 9px}
+h2{font-size:22px;letter-spacing:-.03em;margin:9px 0 8px;font-weight:800}
+.card p{margin:0;color:var(--dim);font-size:13.5px;line-height:1.6}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.tags i{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--dim);
+  background:var(--panel-2);border:1px solid var(--line);border-radius:999px;padding:3px 9px}
+/* the whole card links to the toolkit … */
+.stretch{color:inherit;text-decoration:none}
+.stretch::after{content:"";position:absolute;inset:0;z-index:1}
+
+/* … except the reference strip, which sits above it and opens the modal */
+.ref{margin-top:auto;padding-top:16px;position:relative;z-index:2;display:flex;gap:12px;align-items:stretch}
+.refbtn{flex:1;display:flex;gap:11px;align-items:center;text-align:left;cursor:pointer;
+  background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:8px;
+  color:var(--text);font:inherit;transition:background .15s ease,border-color .15s ease}
+.refbtn:hover{background:var(--panel-3);border-color:var(--faint)}
+.refthumb{width:74px;height:52px;border-radius:7px;overflow:hidden;flex:none;background:var(--panel-3);
+  display:flex;align-items:center;justify-content:center}
+.refthumb img{width:100%;height:100%;object-fit:cover;display:block}
+.refthumb .miss{font-family:var(--mono);font-size:8.5px;color:var(--faint);text-align:center;
+  line-height:1.35;padding:3px}
+.reftxt{min-width:0}
+.reftxt b{display:block;font-size:12.5px;font-weight:600;letter-spacing:-.01em}
+.reftxt span{display:block;font-family:var(--mono);font-size:10.5px;color:var(--faint);margin-top:2px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ---------- modal ---------- */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(1180px,92vw);width:100%;
+  max-height:92vh;overflow:visible;color:var(--text)}
+dialog.lb::backdrop{background:rgba(8,8,10,.82);backdrop-filter:blur(3px)}
+.lb-in{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,.3),0 48px 96px -32px rgba(0,0,0,.6);
+  display:flex;flex-direction:column;max-height:92vh}
+.lb-hd{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;border-bottom:1px solid var(--line);flex:none}
+.lb-hd h3{font-size:19px;letter-spacing:-.03em;margin:0;font-weight:800}
+.lb-hd p{margin:5px 0 0;font-size:13px;color:var(--dim);line-height:1.55;max-width:74ch}
+.lb-close{margin-left:auto;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);
+  background:var(--panel-2);color:var(--text);cursor:pointer;display:flex;align-items:center;
+  justify-content:center;flex:none;transition:background .15s ease}
+.lb-close:hover{background:var(--panel-3)}
+.lb-body{padding:20px;overflow:auto;background:var(--panel-2)}
+.lb-body img{display:block;max-width:100%;max-height:72vh;width:auto;height:auto;margin:0 auto;
+  border-radius:10px;border:1px solid var(--line)}
+.lb-missing{padding:56px 24px;text-align:center;border:1px dashed var(--faint);border-radius:10px;
+  background:var(--panel)}
+.lb-missing b{display:block;font-size:16px;margin-bottom:8px}
+.lb-missing code{font-family:var(--mono);font-size:12.5px;background:var(--panel-2);
+  border:1px solid var(--line);border-radius:6px;padding:3px 8px;color:var(--text)}
+.lb-missing p{margin:10px auto 0;max-width:52ch;font-size:13px;color:var(--dim);line-height:1.6}
+
+.foot{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+  color:var(--faint);font-size:12.5px;line-height:1.7;max-width:80ch}
+.foot b{color:var(--dim)}
+.foot + .foot{margin-top:14px;padding-top:0;border-top:0}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}
+  dialog.lb::backdrop{backdrop-filter:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Six toolkits for<br>Warhol Scout.</h1>
+  <p class="lede">Six complete, self-contained visual systems — fonts, radii, container
+    treatments, elevation, colour, gradients, light and dark themes, chart language, portrait
+    treatment, controls, states, and a copy-paste token block. Each opens with an
+    <strong>overview collage</strong> that shows the whole system in one screen, then expands
+    each part. All six are rendered against the same real job: one mandate's morning drop,
+    worked to zero.</p>
+  <p class="meta">01–04 are each a faithful read of one supplied reference · 05 is built from the
+    supplied palette · 06 blends 02 + 05 + 04's type and carries a measured contrast audit<br>
+    click any reference strip to see the source image · working light/dark switch on every
+    page · all candidate data is synthetic</p>
+
+  <div class="cards">
+
+    <!-- 01 -->
+    <div class="card">
+      <div class="swatch"><span style="background:#FBC24A"></span><span style="background:#1E5F4E"></span>
+        <span style="background:#B8A8AE"></span><span style="background:#EFEFE7"></span>
+        <span style="background:#F2662A"></span><span style="background:#0A0A0A"></span></div>
+      <div class="body"><span class="kicker"><span class="no">Toolkit 01</span><span class="src">from WANDER</span></span>
+        <h2><a class="stretch" href="01-nocturne.html">Nocturne</a></h2>
+        <p>Black canvas with warm saturated cards sitting on it like lit windows. Authored
+          landform behind the headline, black pill CTAs on colour, a circular icon rail with
+          labels beneath, enormous numerals.</p>
+        <div class="tags"><i>Familjen + Hanken Grotesk</i><i>radius 26</i><i>circular rail</i></div>
+        <div class="ref">
+          <button class="refbtn" data-ref="01-wander" data-title="WANDER"
+            data-caption="Toolkit 01 Nocturne. Taken: the black canvas, the amber / forest / mauve / cream card set, the atmospheric hero card with its shield badge, black pill CTAs sitting on light cards, the circular icon rail with labels beneath, and the star-chip plus overlapping avatar rating group.">
+            <span class="refthumb"></span>
+            <span class="reftxt"><b>View the reference</b><span>refs/01-wander</span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 -->
+    <div class="card">
+      <div class="swatch"><span style="background:#F0655A"></span><span style="background:#6C63E8"></span>
+        <span style="background:#C8E4F2"></span><span style="background:#EFEFE7"></span>
+        <span style="background:#F5C842"></span><span style="background:#1C201D"></span></div>
+      <div class="body"><span class="kicker"><span class="no">Toolkit 02</span><span class="src">from Daily Grind</span></span>
+        <h2><a class="stretch" href="02-mosaic.html">Mosaic</a></h2>
+        <p>A dark app slab floating on sage. Five fully saturated panel fields, heavy uppercase
+          titles, translucent in-panel pills, hatched projections, black tooltip pills, circular ↗
+          buttons.</p>
+        <div class="tags"><i>Archivo + Figtree</i><i>radius 24 / slab 30</i><i>hatch fills</i></div>
+        <div class="ref">
+          <button class="refbtn" data-ref="02-daily-grind" data-title="Daily Grind"
+            data-caption="Toolkit 02 Mosaic. Taken: the dark slab floating on a sage page with the page visible on all four sides, the coral / periwinkle / pale-blue / cream panel set, heavy uppercase titles, translucent pill dropdowns, hatched bars and capacity chips, black tooltip pills, nested translucent sub-panels with delta chips, and the circular arrow button.">
+            <span class="refthumb"></span>
+            <span class="reftxt"><b>View the reference</b><span>refs/02-daily-grind</span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 -->
+    <div class="card">
+      <div class="swatch"><span style="background:#C4F04E"></span><span style="background:#F5852A"></span>
+        <span style="background:#FFFFFF"></span><span style="background:#151515"></span>
+        <span style="background:#050505"></span><span style="background:#CBEA92"></span></div>
+      <div class="body"><span class="kicker"><span class="no">Toolkit 03</span><span class="src">from CHECK BOX</span></span>
+        <h2><a class="stretch" href="03-citron.html">Citron</a></h2>
+        <p>Pure-black slab on citron. Exactly three data colours, and every quantity is a capsule
+          with its own number inside it — no axis lookup, ever. Ring legend dots, "Total: N"
+          footers.</p>
+        <div class="tags"><i>Chivo, one face</i><i>radius 20</i><i>capsule marks</i></div>
+        <div class="ref">
+          <button class="refbtn" data-ref="03-check-box" data-title="CHECK BOX / Nixtio"
+            data-caption="Toolkit 03 Citron. Taken: the lime page with a pure-black slab, the three-colour data palette, the vertical capsule marks carrying their own numbers, ring-style legend dots, pill navigation and Key: Value filter pills, the timeline bars with a logo circle and a count, up/down triangle deltas, and the right-aligned Total: N card footers.">
+            <span class="refthumb"></span>
+            <span class="reftxt"><b>View the reference</b><span>refs/03-check-box</span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 -->
+    <div class="card">
+      <div class="swatch"><span style="background:#124A2C"></span><span style="background:#1D6B3F"></span>
+        <span style="background:#2E9A5C"></span><span style="background:#6ECD9A"></span>
+        <span style="background:#DCF2E6"></span><span style="background:#FBFBFA"></span></div>
+      <div class="body"><span class="kicker"><span class="no">Toolkit 04</span><span class="src">from Donezo</span></span>
+        <h2><a class="stretch" href="04-daylight.html">Daylight</a></h2>
+        <p>White slab on a pale page, one green ramp doing all the work, and hatching — never
+          opacity — marking whatever hasn't happened yet. Sidebar shell, circled-arrow
+          affordances, topographic ink cards.</p>
+        <div class="tags"><i>Epilogue + Be Vietnam Pro</i><i>radius 24</i><i>hatched remainders</i></div>
+        <div class="ref">
+          <button class="refbtn" data-ref="04-donezo" data-title="Donezo"
+            data-caption="Toolkit 04 Daylight. Taken: the white slab on a pale grey page, the sidebar with MENU / GENERAL group labels and a green active bar at the slab edge, the keyboard-shortcut chip in search, the green-filled leading stat card, circled-arrow buttons, hatched analytics bars and gauge remainder, tinted status pills, and the dark card carrying a green topographic wave.">
+            <span class="refthumb"></span>
+            <span class="reftxt"><b>View the reference</b><span>refs/04-donezo</span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 -->
+    <div class="card">
+      <div class="swatch"><span style="background:#D7D2E9"></span><span style="background:#FFD68D"></span>
+        <span style="background:#67BCAA"></span><span style="background:#1C1B23"></span>
+        <span style="background:#FFFFFF"></span></div>
+      <div class="body"><span class="kicker"><span class="no">Toolkit 05</span><span class="src">from your palette</span></span>
+        <h2><a class="stretch" href="05-pigment.html">Pigment</a></h2>
+        <p>Colour is the information architecture — a pigment owns a whole panel or isn't used.
+          Large radii, layered soft depth, and mesh gradients. Teal = counted, lilac = judged.</p>
+        <div class="tags"><i>Bricolage + Onest</i><i>radius 24</i><i>colour fields</i></div>
+        <div class="ref">
+          <button class="refbtn" data-ref="05-palette" data-title="The colour palette"
+            data-caption="Toolkit 05 Pigment. Taken verbatim: #D7D2E9 lilac, #FFD68D butter, #67BCAA teal, #1C1B23 ink and #FFFFFF. The image's green-and-purple mesh background also became Pigment's mesh gradient device, which is native there and deliberately absent from toolkits 01 through 04.">
+            <span class="refthumb"></span>
+            <span class="reftxt"><b>View the reference</b><span>refs/05-palette</span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 -->
+    <div class="card">
+      <div class="swatch"><span style="background:#FFD68D"></span><span style="background:#67BCAA"></span>
+        <span style="background:#D7D2E9"></span><span style="background:#1C1B23"></span>
+        <span style="background:#9184C4"></span></div>
+      <div class="body"><span class="kicker"><span class="no">Toolkit 06</span><span class="src">02 + 05 + 04's type</span></span>
+        <h2><a class="stretch" href="06-alloy.html">Alloy</a></h2>
+        <p>Mosaic's slab, rail, saturated fields and hatch; Pigment's mesh, veil and layered depth;
+          Daylight's Epilogue pairing. Every colour pair measured — 56/56 WCAG at rest
+          <em>and</em> on hover, both themes, with the audit as a section rather than a footnote.</p>
+        <div class="tags"><i>Epilogue + Be Vietnam Pro</i><i>mesh + veil</i><i>56/56 contrast</i></div>
+        <div class="ref" style="align-items:center">
+          <p style="font-size:12px;color:var(--faint);margin:0;line-height:1.55">
+            No single reference — this one is a blend, so its sources are toolkits 02, 05 and 04.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="foot"><b>How to read these.</b> All six live in the same contemporary family, so the
+    choice is about <em>which system</em> rather than which century. Nocturne sorts by colour before
+    you read a number. Mosaic gives every question its own saturated field. Citron removes
+    axis-reading entirely by putting the value inside the mark. Daylight is the calm one — a single
+    hue and a hatch pattern answer everything. Pigment encodes the rules-vs-model distinction in
+    colour itself. Alloy takes Mosaic's structure, Pigment's light and Daylight's voice, and holds
+    a verified contrast floor through every hover state.</p>
+  <p class="foot"><b>What's in each.</b> An overview collage, then colour, type, shape, depth and
+    gradients, controls, faces, four charts, the drop in situ with empty and loading states, and a
+    copy-paste CSS custom-property block. Same components and the same synthetic cohort throughout,
+    so they compare on craft rather than mood.</p>
+</div>
+
+<dialog class="lb" id="lb" aria-labelledby="lb-title">
+  <div class="lb-in">
+    <div class="lb-hd">
+      <div><h3 id="lb-title">Reference</h3><p id="lb-cap"></p></div>
+      <button class="lb-close" id="lb-close" aria-label="Close reference">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="lb-body" id="lb-body"></div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var EXT = ['png','jpg','jpeg','webp'];
+
+  // Try each extension in turn; call ok(src) on the first that loads, or fail().
+  function resolve(base, ok, fail){
+    var i = 0;
+    (function next(){
+      if (i >= EXT.length) return fail();
+      var src = 'refs/' + base + '.' + EXT[i++];
+      var probe = new Image();
+      probe.onload = function(){ ok(src); };
+      probe.onerror = next;
+      probe.src = src;
+    })();
+  }
+
+  // Card thumbnails
+  document.querySelectorAll('.refbtn').forEach(function(btn){
+    var base = btn.dataset.ref, thumb = btn.querySelector('.refthumb');
+    resolve(base, function(src){
+      var img = new Image();
+      img.src = src; img.alt = '';
+      thumb.appendChild(img);
+    }, function(){
+      thumb.innerHTML = '<span class="miss">not<br>added</span>';
+      btn.querySelector('.reftxt b').textContent = 'Reference not added yet';
+    });
+  });
+
+  // Modal
+  var lb = document.getElementById('lb'),
+      lbTitle = document.getElementById('lb-title'),
+      lbCap = document.getElementById('lb-cap'),
+      lbBody = document.getElementById('lb-body');
+
+  document.querySelectorAll('.refbtn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var base = btn.dataset.ref;
+      lbTitle.textContent = btn.dataset.title;
+      lbCap.textContent = btn.dataset.caption;
+      lbBody.innerHTML = '';
+      resolve(base, function(src){
+        var img = new Image();
+        img.src = src;
+        img.alt = btn.dataset.title + ' — the reference image for this toolkit.';
+        lbBody.appendChild(img);
+      }, function(){
+        lbBody.innerHTML =
+          '<div class="lb-missing"><b>This image hasn\'t been saved yet</b>' +
+          '<p>Drop it into the toolkits folder as <code>refs/' + base + '.png</code> ' +
+          '(<code>.jpg</code>, <code>.jpeg</code> and <code>.webp</code> also work) and reload. ' +
+          'See <code>refs/README.md</code> for the full list.</p></div>';
+      });
+      if (typeof lb.showModal === 'function') lb.showModal(); else lb.setAttribute('open','');
+    });
+  });
+
+  document.getElementById('lb-close').addEventListener('click', function(){ lb.close(); });
+  // click the backdrop (the dialog element itself) to dismiss
+  lb.addEventListener('click', function(e){ if (e.target === lb) lb.close(); });
+})();
+</script>
+</body>
+</html>

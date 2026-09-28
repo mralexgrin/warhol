@@ -1,0 +1,1729 @@
+{
+  "creatorId": "catsofyore",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:11:34.063Z",
+  "observationCount": 277,
+  "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": true,
+  "escalatedWhy": "newsletter, store — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 9,
+      "avatar": {
+        "url": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/7a39d417a65cd33f793c58f570a7b9ce~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=ce32de2b&x-expires=1786885200&x-signature=wYwFuY6L%2FtkttvmGz0b5FJDtYg8%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@catsofyore",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 0,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIdro_kTBZSGKEAheYsTKn4afVEwgqvCdN3xf1wRiQqkT8iMIBWaKzUggCo0tbCy2a1UTpRsTg=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@catsofyore",
+      "why": "Yore — the YouTube Data API resolved @catsofyore"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/catsofyore/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": true,
+      "followers": 340547,
+      "avatar": {
+        "url": "https://cdn.bsky.app/img/avatar/plain/did:plc:xrr5j2okn7ew2zvcwsxus3gb/bafkreig6pljjdx7aekpetnwdxmjzhcbiwsoph72wjhjzjqsey2bzrj4pz4",
+        "expires": null,
+        "host": "bsky.app"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://bsky.app/profile/catsofyore.bsky.social",
+      "why": "catsofyore.bsky.social — the profile goes by \"Cats of Yore\", the same name as their Bluesky, and the AppView resolved it to did:plc:xrr5j2okn7ew2zvcwsxus3gb"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@catsofyore",
+      "evidence": "https://www.youtube.com/@catsofyore",
+      "placesLooked": 6,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@catsofyore",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:58:15.480Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/catsofyore",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:58:15.480Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/catsofyore",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:58:15.480Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@catsofyore",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:52.295Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:52.295Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:52.295Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@catsofyore",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:54:16.863Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:16.863Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:16.863Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@catsofyore",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.915Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.915Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.915Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@catsofyore",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.915Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 6 places",
+      "evidence": null,
+      "placesLooked": 21,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://catsofyore.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:15.480Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/catsofyore?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/catsofyore",
+          "advisory": false,
+          "at": "2026-08-12T15:58:15.480Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://catsofyore.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:15.480Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:15.480Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://catsofyore.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:15.480Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://catsofyore.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:52.295Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/catsofyore?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/catsofyore",
+          "advisory": false,
+          "at": "2026-08-12T20:27:52.295Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://catsofyore.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:52.295Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:52.295Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://catsofyore.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:52.295Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://catsofyore.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:16.863Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/catsofyore?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/catsofyore",
+          "advisory": false,
+          "at": "2026-08-14T12:54:16.863Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://catsofyore.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:16.863Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:16.863Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://catsofyore.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:16.863Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://catsofyore.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.915Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/catsofyore?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/catsofyore",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.915Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://catsofyore.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.915Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.915Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://catsofyore.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.915Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://mollyhodgdon.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.915Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 4 places · 3 wouldn't answer",
+      "evidence": null,
+      "placesLooked": 13,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://catsofyore.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:15.481Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:15.481Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/catsofyore",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:58:15.481Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:58:15.481Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/catsofyore",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:58:15.481Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://catsofyore.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:52.295Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:52.295Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/catsofyore",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:27:52.296Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T20:27:52.296Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/catsofyore",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:27:52.296Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://catsofyore.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:16.863Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:16.863Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/catsofyore",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:54:16.864Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:54:16.864Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/catsofyore",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:54:16.864Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://catsofyore.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.916Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.916Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/catsofyore",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:11:07.916Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.916Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/catsofyore",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:11:07.916Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/catsofyore/?etsrc=sdt",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.916Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://catsofyore.shop",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.916Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 9,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:15.481Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:58:15.481Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:52.296Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:52.296Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:16.864Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:16.864Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.916Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.916Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.916Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 2 places",
+      "evidence": null,
+      "placesLooked": 5,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=%5Cu003E_%5Cu003C&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-12T15:58:15.733Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=%5Cu003E_%5Cu003C&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-12T20:27:52.472Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=%5Cu003E_%5Cu003C&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-14T12:54:16.945Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=%5Cu003E_%5Cu003C&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.976Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/catsofyore",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:11:07.977Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at catsofyore.com — not confirmed as theirs",
+      "evidence": "https://www.catsofyore.com/",
+      "placesLooked": 5,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:58:18.024Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:58:18.024Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:58:18.025Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:58:18.025Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:58:18.025Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:58:18.025Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.catsofyore.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:58:18.025Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://catsofyore.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:58:18.025Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:54.527Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:54.527Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:54.527Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:54.528Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:54.528Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:54.528Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.catsofyore.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:54.528Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://catsofyore.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T20:27:54.528Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:54:19.544Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:54:19.544Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:54:19.544Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:54:19.544Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:54:19.544Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:54:19.544Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.catsofyore.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:54:19.545Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://catsofyore.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:54:19.545Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:11:10.144Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:11:10.144Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:11:10.144Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:11:10.144Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:11:10.144Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.catsofyore.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:11:10.145Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.catsofyore.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:11:10.145Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://catsofyore.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:11:10.145Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.mollyhodgdon.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:11:10.145Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://www.instagram.com/catsofyore",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T13:11:10.145Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:58:18.026Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T20:27:54.528Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:54:19.545Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:11:10.145Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:58:18.026Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T20:27:54.528Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:54:19.545Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:11:10.146Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:58:18.026Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T20:27:54.528Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:54:19.545Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:11:10.146Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": -0.135,
+    "recentPerMonth": 117,
+    "baselinePerMonth": 103.13,
+    "recentCount": 351,
+    "baselineCount": 931,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 271,
+    "sampled": 1282,
+    "truncated": true,
+    "recentMedianViews": null,
+    "baselineMedianViews": null,
+    "unit": "posts",
+    "line": "117 posts a month now, against 103 before that — up 13%, they are posting more"
+  },
+  "samples": [
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Toilet Detective. Photo from my collection, no date/info.",
+      "url": "https://bsky.app/profile/catsofyore.bsky.social/post/3msz3qj74k22x",
+      "at": "2026-08-14T02:17:43.217Z",
+      "thumbnail": null,
+      "excerpt": "Toilet Detective. Photo from my collection, no date/info.",
+      "metric": 1239,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:56.270Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Entertainment center. Photo from my collection, no date/info.",
+      "url": "https://bsky.app/profile/catsofyore.bsky.social/post/3msyt7vyi3k2x",
+      "at": "2026-08-13T23:45:16.275Z",
+      "thumbnail": null,
+      "excerpt": "Entertainment center. Photo from my collection, no date/info.",
+      "metric": 1414,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:56.271Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Showing off that tum! Photo from my collection, no date/info.",
+      "url": "https://bsky.app/profile/catsofyore.bsky.social/post/3msyowiv2fc2x",
+      "at": "2026-08-13T22:28:25.581Z",
+      "thumbnail": null,
+      "excerpt": "Showing off that tum! Photo from my collection, no date/info.",
+      "metric": 1623,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:56.271Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "THURSDAY ART SHOW! If you are a working artist (i.e. you depend on income from your art) just respond to this ",
+      "url": "https://bsky.app/profile/catsofyore.bsky.social/post/3msyg5fpvhs2k",
+      "at": "2026-08-13T19:51:13.460Z",
+      "thumbnail": null,
+      "excerpt": "THURSDAY ART SHOW! If you are a working artist (i.e. you depend on income from your art) just respond to this post with your non-pornographic, non-violent, non-Al generated CAT-RELATED art/crafts and I will repost! From now until 6:00 pm EDT. Include any relevant links like your website or etsy!",
+      "metric": 220,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:56.271Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Girl, you better not be touching those beans. Photo from my collection, no date/info.",
+      "url": "https://bsky.app/profile/catsofyore.bsky.social/post/3msy6u2ox6s2i",
+      "at": "2026-08-13T17:40:43.721Z",
+      "thumbnail": null,
+      "excerpt": "Girl, you better not be touching those beans. Photo from my collection, no date/info.",
+      "metric": 2103,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:10:56.271Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "I have always called cats \"potatoes\" or \"potato bears\" and I just got an email from my vet saying she did a co",
+      "url": "https://bsky.app/profile/catsofyore.bsky.social/post/3msvpzzlrpc2k",
+      "at": "2026-08-12T18:10:18.296Z",
+      "thumbnail": null,
+      "excerpt": "I have always called cats \"potatoes\" or \"potato bears\" and I just got an email from my vet saying she did a consult with a veterinary dermatologist called Dr. Tater. HER NAME IS KATHY TATER HOW GREAT IS THAT?? 🥔",
+      "metric": 1020,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T20:27:50.622Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Gone fishin’. Photo from my collection, 1968.",
+      "url": "https://bsky.app/profile/catsofyore.bsky.social/post/3msvozm45z22i",
+      "at": "2026-08-12T17:52:10.392Z",
+      "thumbnail": null,
+      "excerpt": "Gone fishin’. Photo from my collection, 1968.",
+      "metric": 534,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T20:27:50.623Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Writing on the edge of this says “Me and my pal Kitty”. ❤️ Photo from my collection, no date.",
+      "url": "https://bsky.app/profile/catsofyore.bsky.social/post/3msvn6unvbk2i",
+      "at": "2026-08-12T17:19:19.649Z",
+      "thumbnail": null,
+      "excerpt": "Writing on the edge of this says “Me and my pal Kitty”. ❤️ Photo from my collection, no date.",
+      "metric": 1369,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T20:27:50.623Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "I’m very aware of what humans have done. For instance, they transported felis catus from their original habita",
+      "url": "https://bsky.app/profile/catsofyore.bsky.social/post/3msvkeqrhpk2n",
+      "at": "2026-08-12T16:28:55.693Z",
+      "thumbnail": null,
+      "excerpt": "I’m very aware of what humans have done. For instance, they transported felis catus from their original habitat in the Middle East to ecosystems all over the world where their introductions have frequently been devastating and not at all natural. Sorry everyone, turns out I’m a “cat-hater”. 🤷🏻‍♀️",
+      "metric": 479,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T20:27:50.623Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "The whisker admirer has logged on. Photo from my collection, no date/info.",
+      "url": "https://bsky.app/profile/catsofyore.bsky.social/post/3msvca4jcss2i",
+      "at": "2026-08-12T14:03:10.299Z",
+      "thumbnail": null,
+      "excerpt": "The whisker admirer has logged on. Photo from my collection, no date/info.",
+      "metric": 1343,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T20:27:50.623Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Showing off the little ones in 1934.",
+      "url": "https://bsky.app/profile/catsofyore.bsky.social/post/3mstyd6th6s2e",
+      "at": "2026-08-12T01:33:16.227Z",
+      "thumbnail": null,
+      "excerpt": "Showing off the little ones in 1934.",
+      "metric": 1759,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:58:04.362Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "I always take a photo of the \"Patients of the Day\" board at the vet so I can look at them later. Here are some",
+      "url": "https://bsky.app/profile/catsofyore.bsky.social/post/3mstrz3uei22h",
+      "at": "2026-08-11T23:40:15.128Z",
+      "thumbnail": null,
+      "excerpt": "I always take a photo of the \"Patients of the Day\" board at the vet so I can look at them later. Here are some of my recent favorites: Handsome Dan Trudy Noodle Shadow Lord Eddie Van Halen Professor Waffles Big Fuzzy Ketchup Towbar Starfox Enya Miss Pickles Little Guy Ron Sneaky Pete Simétrico",
+      "metric": 1196,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:58:04.362Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Marcel had a Big Medical Drama last month when he presented with an enlarged heart and something going on in h",
+      "url": "https://bsky.app/profile/catsofyore.bsky.social/post/3msth6dvnrs2h",
+      "at": "2026-08-11T20:26:20.171Z",
+      "thumbnail": null,
+      "excerpt": "Marcel had a Big Medical Drama last month when he presented with an enlarged heart and something going on in his lungs, but it disappeared. It was extremely stressful but we've done every conceivable type of follow-up and he's fine now! It was like a pseudo-hypertrophic cardiomyopathy.",
+      "metric": 514,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:58:04.362Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "This guy.",
+      "url": "https://bsky.app/profile/catsofyore.bsky.social/post/3mstgulrshc2h",
+      "at": "2026-08-11T20:20:52.876Z",
+      "thumbnail": null,
+      "excerpt": "This guy.",
+      "metric": 3693,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:58:04.362Z",
+      "status": null
+    }
+  ],
+  "headline": {
+    "sentence": "catsofyore posts vintage cat photos and vet-board finds to 340,547 followers on Bluesky at 117 posts a month, up 13% from 103, with a YouTube channel and own website but no newsletter, store, membership, or podcast to sell to that audience.",
+    "restsOn": "340,547 on Bluesky · 117 posts a month now, against 103 before that //channel, Own website · Newsletter, Store, Membership, Podcast · \"Showing off the little ones in 1934.\" (1,759 likes) · \"I always take a photo of the \"Patients of the Day\" board at the vet so I can look at them later. Here are some\" (1,196 likes)"
+  },
+  "samplesSearched": {
+    "count": 0,
+    "why": "they link none of their own posts anywhere we can read"
+  },
+  "commentsRead": 91,
+  "audienceHistory": [
+    {
+      "audience": 340350,
+      "at": "2026-08-12T15:58:04.361Z"
+    },
+    {
+      "audience": 340380,
+      "at": "2026-08-12T20:27:50.622Z"
+    },
+    {
+      "audience": 340548,
+      "at": "2026-08-14T12:54:10.208Z"
+    },
+    {
+      "audience": 340547,
+      "at": "2026-08-14T13:10:56.270Z"
+    }
+  ],
+  "audience": 340547,
+  "audienceWhy": "Bluesky alone — nothing links the TikTok to it",
+  "audienceSeparate": [
+    {
+      "id": "tiktok_profile",
+      "followers": 9,
+      "url": "https://www.tiktok.com/@catsofyore",
+      "why": "nothing on either page links the TikTok to the Bluesky, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 27,
+    "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+    "demand": {
+      "points": 0.8,
+      "max": 25,
+      "signalCount": 10,
+      "signals": [
+        {
+          "points_at": "unspecified",
+          "quote": "CATS READING BOOKS for $75. Pick a cat (YOUR cat or a friend's cat or an imaginary cat). Pick a book (a book you wrote or your friend wrote or just an old favorite)— I will draw you the digital illustration like these: www.behance.net/gallery/2291... I drew 12 last week. DM for info/to order",
+          "at": "2026-08-14T13:11:21.966Z"
+        },
+        {
+          "points_at": "store",
+          "quote": "Hi, thank you so much for sharing! ♡ I'm Lenny, I paint pet portraits and make jewelry ☆ Pet portraits are acrylic on canvas and range $50-$200, I can take a couple more so dm me to grab a spot! Placecalledbliss.bigcartel.com",
+          "at": "2026-08-14T13:11:21.966Z"
+        },
+        {
+          "points_at": "store",
+          "quote": "Hello yes I have cats Original art and prints (EU based): anaisfae.art/shop Prints only (international): www.inprnt.com/gallery/anai...",
+          "at": "2026-08-14T13:11:21.966Z"
+        },
+        {
+          "points_at": "store",
+          "quote": "Here's another W Crane inspired cat poster, with a biscuit maker, fishercat, and catnip grower. If you like my work follow me here for more and visit my print shop at nathannunart.etsy.com Thank you, Cats of Yore, for the show!",
+          "at": "2026-08-14T13:11:21.966Z"
+        },
+        {
+          "points_at": "website",
+          "quote": "Thank you @catsofyore.bsky.social for hosting the art show! This neighborhood cat likes to visit the catmint in our backyard. It's apparently on their wandering route and we are always very happy to see them. I'm a watercolorist but am practicing with pastels. More at brucewashburnart.com",
+          "at": "2026-08-14T13:11:21.966Z"
+        },
+        {
+          "points_at": "store",
+          "quote": "I make cat sofas and comfy lap mats .. if only my cat would decide which one she wants craftysharp.etsy.com",
+          "at": "2026-08-14T13:11:21.966Z"
+        },
+        {
+          "points_at": "store",
+          "quote": "Jumping here again with my ✨🐈‍⬛cat wares🐈✨ hellocloudyart.etsy.com",
+          "at": "2026-08-14T13:11:21.966Z"
+        },
+        {
+          "points_at": "store",
+          "quote": "Thank you! I have a few cat pillows for sale 🐈🐈‍⬛ www.etsy.com/shop/Raccoon...",
+          "at": "2026-08-14T13:11:21.966Z"
+        },
+        {
+          "points_at": "store",
+          "quote": "Hello Thursday Art Show!! In the market for kitty jewelry and accessories? Check out my etsy shop, Bitten Beads! Thanks always for hosting and thanks for shopping 😸 bittenbeads.etsy.com",
+          "at": "2026-08-14T13:11:21.966Z"
+        },
+        {
+          "points_at": "store",
+          "quote": "I am opening up kofi slots for kitty postcards I can mail. ko-fi.com/s/7ab42d8f6a",
+          "at": "2026-08-14T13:11:21.966Z"
+        }
+      ]
+    },
+    "missing": {
+      "points": 26.1,
+      "max": 35,
+      "lines": [
+        {
+          "item": "store",
+          "label": "Store",
+          "half": "built",
+          "base": 9,
+          "effective": 15,
+          "demandAligned": true,
+          "why": "not there · we looked in 4 places · 3 wouldn't answer"
+        },
+        {
+          "item": "newsletter",
+          "label": "Newsletter",
+          "half": "built",
+          "base": 10,
+          "effective": 10,
+          "demandAligned": false,
+          "why": "not there · we looked in 6 places"
+        },
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        },
+        {
+          "item": "podcast",
+          "label": "Podcast",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 2 places"
+        }
+      ],
+      "share": 0.747,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 26.9,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "line": "117 posts a month now, against 103 before that — up 13%, they are posting more",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "pass",
+      "because": "A 340k-follower Bluesky account posting archival cat photographs from a personal collection is a repeatable format, inherently shareable, and sits in one of the most reliably wanted categories there is — cats plus history."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 2 days apart, the trend needs 90",
+      "why": "our two looks are 2 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.833,
+      "resolved": 5,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 1
+    },
+    "threshold": 25,
+    "entersDrop": true,
+    "gates": {
+      "scoreOverThreshold": true,
+      "confidenceOverFloor": true,
+      "fit": "pass",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 128,
+    "places": 31,
+    "from": "2026-08-12T15:57:38.730Z",
+    "to": "2026-08-14T13:11:34.063Z"
+  }
+}

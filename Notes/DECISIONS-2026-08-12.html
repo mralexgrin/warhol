@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scout — five calls before Friday</title>
+<style>
+  :root{
+    --page:#9184C4; --panel:#FCFBFE; --panel2:#F2EFF8; --ink:#1C1B23;
+    --text:#1C1B23; --text2:#4A4756; --text3:#6E6A7C;
+    --line:#E4DFEE; --lineHi:#CFC7E2;
+    --teal:#67BCAA; --tealD:#1F7A66; --butter:#FFD68D; --butterD:#8A5A00;
+    --lilac:#D7D2E9; --lilacD:#5A4CA3;
+    --r:22px; --s:18px;
+    font-synthesis-weight:none;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --page:#2A2734; --panel:#1F1D28; --panel2:#272433; --text:#F3F1F8;
+      --text2:#C9C4D6; --text3:#9A94AC; --line:#343044; --lineHi:#443E58; --ink:#F3F1F8; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--text);
+    font:16px/1.6 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;
+    padding:28px 20px 80px;}
+  .wrap{max-width:1080px;margin:0 auto;background:var(--panel);
+    border-radius:30px;padding:40px 40px 48px;}
+  h1{font-size:clamp(28px,4vw,40px);line-height:1.1;letter-spacing:-.02em;margin:0 0 10px}
+  .deck{color:var(--text2);max-width:66ch;margin:0 0 6px}
+  .meta{color:var(--text3);font-size:13px;margin:0 0 34px}
+  h2{font-size:19px;letter-spacing:-.01em;margin:0 0 4px}
+  .q{color:var(--text3);font-size:13.5px;margin:0 0 16px}
+  section{border-top:1px solid var(--line);padding-top:26px;margin-top:30px}
+  section:first-of-type{border-top:0;margin-top:0}
+  .num{display:inline-flex;align-items:center;justify-content:center;
+    width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--panel);
+    font-size:13px;font-weight:700;margin-right:10px;vertical-align:2px}
+  .opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:14px}
+  .opt{border:1px solid var(--lineHi);border-radius:var(--r);padding:18px;background:var(--panel2)}
+  .opt.rec{border:2px solid var(--tealD);background:color-mix(in srgb,var(--teal) 14%,var(--panel2))}
+  .tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.09em;
+    text-transform:uppercase;padding:3px 9px;border-radius:999px;margin-bottom:9px}
+  .tag--rec{background:var(--tealD);color:#fff}
+  .tag--alt{background:var(--lineHi);color:var(--text2)}
+  .opt h3{font-size:15px;margin:0 0 7px}
+  .opt p{font-size:13.5px;color:var(--text2);margin:0 0 8px}
+  .cost{font-size:12px;color:var(--text3);border-top:1px dashed var(--lineHi);
+    padding-top:8px;margin-top:10px}
+  .now{background:var(--lilac);color:#1C1B23;border-radius:var(--r);padding:16px 18px;
+    margin:0 0 18px;font-size:14px}
+  .now b{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;
+    margin-bottom:5px;color:var(--lilacD)}
+  .flag{background:var(--butter);color:#3A2A00;border-radius:var(--r);
+    padding:20px 22px;margin:0 0 30px}
+  .flag b{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;
+    margin-bottom:7px;color:var(--butterD)}
+  .flag p{margin:0 0 8px;font-size:14.5px}
+  .flag p:last-child{margin:0}
+  code{background:var(--panel2);border:1px solid var(--line);border-radius:6px;
+    padding:1px 6px;font-size:12.5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .done{border-top:1px solid var(--line);margin-top:38px;padding-top:24px}
+  .done ul{margin:10px 0 0;padding-left:20px;color:var(--text2);font-size:14px}
+  .done li{margin-bottom:7px}
+  .done b{color:var(--text)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:12px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--text3)}
+  td b{font-weight:700}
+  .wide{overflow-x:auto}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Five calls before Friday</h1>
+  <p class="deck">All five of your tasks are built and running at <code>localhost:8171</code>.
+  These are the forks I could not decide for you — pick a lane per row and I will apply them in one pass.</p>
+  <p class="meta">12 Aug 2026 · seed re-exported from a live scan at 7:59 PM ET · 168/168 engine tests passing</p>
+
+  <div class="flag">
+    <b>Read this one first — it is not a design call</b>
+    <p><strong>The Anthropic credit balance is $0.</strong> I confirmed it with a live API call:
+    <em>"Your credit balance is too low to access the Anthropic API."</em></p>
+    <p>Fit is a model judgment, so <strong>no new name can enter any drop until this is topped up</strong> —
+    that blocks new people, not the demo. Everything on screen today is real and was judged
+    when there was balance. A full re-judge of all 76 names costs about <strong>$10</strong> at the
+    measured rate of $0.13 each.</p>
+    <p><strong>If you top it up before Friday, tell me and I will re-run the ladder properly.</strong>
+    Otherwise the demo stands as built.</p>
+  </div>
+
+  <section>
+    <h2><span class="num">1</span>How hard should the report hide the machinery?</h2>
+    <p class="q">Task 5. I fixed the outright defects — a literal <code>null</code> where TikTok had no follower
+    count, four stacked rows of "could not tell" in Trajectory, and a circular Fit verdict on looked-up names.
+    The remaining fork is order.</p>
+    <div class="now"><b>What it does now</b>
+      Name → what they make (4 real videos and posts, with thumbnails and view counts) →
+      Missing → Why now (comment quotes, Pressure, Trajectory) → score maths collapsed at the foot.</div>
+    <div class="opts">
+      <div class="opt rec">
+        <span class="tag tag--rec">My recommendation — keep</span>
+        <h3>Leave the order, keep the cleanup</h3>
+        <p>Work first, then the gap, then the audience's own words. The scoring maths is already
+        one click down at the bottom.</p>
+        <p class="cost">Done. Nothing further to do.</p>
+      </div>
+      <div class="opt">
+        <span class="tag tag--alt">Option B</span>
+        <h3>Quotes up beside the work</h3>
+        <p>Move the "546 people asked where to buy" quotes directly under the videos, so all the
+        human evidence is one block. Missing and Pressure drop below it.</p>
+        <p class="cost">~30 min. Risk: separates Demand from Pressure, which currently read as one argument.</p>
+      </div>
+      <div class="opt">
+        <span class="tag tag--alt">Option C</span>
+        <h3>Two-tier report</h3>
+        <p>A short "what you need to know" panel at the top, everything else behind
+        <em>Show the full record</em>.</p>
+        <p class="cost">~2 hrs. Risk: the receipts are the product; a fold makes them optional.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">2</span>The "Writers and media" tab is permanently empty</h2>
+    <p class="q">8 real creators, 0 clear the bar — and not by accident. Media orgs already have the
+    business Warhol looks for the absence of, so they score low by design.</p>
+    <div class="opts">
+      <div class="opt rec">
+        <span class="tag tag--rec">My recommendation</span>
+        <h3>Keep it, demo it deliberately</h3>
+        <p>It is the strongest proof that Scout will tell you "nobody today." The empty state is
+        designed and says who was looked at and what stopped each one.</p>
+        <p class="cost">Done. Free demo beat.</p>
+      </div>
+      <div class="opt">
+        <span class="tag tag--alt">Option B</span>
+        <h3>Cut the tab</h3>
+        <p>Three tabs: Anyone worth a call, Home Cooking, Tracked by hand. Nothing on screen
+        that returns nothing.</p>
+        <p class="cost">2 min. You lose the empty-day story.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">3</span>Where did the Bluesky people go?</h2>
+    <p class="q">Task 3. The Bluesky brief tab is gone and Bluesky stays a source in Admin. But its 7
+    discovered creators left with the tab — including <code>@unicouniuni3</code>, 713k on YouTube, 166k on
+    Bluesky, no store, no newsletter, held back on Fit alone. That is the exact person this product exists to find.</p>
+    <div class="opts">
+      <div class="opt rec">
+        <span class="tag tag--rec">My recommendation</span>
+        <h3>Fold the 7 into Anyone worth a call</h3>
+        <p>They stop being their own tab and become candidates in the house brief, where their
+        Bluesky signals show up on the report like any other source. Closest to what you asked for.</p>
+        <p class="cost">~20 min. Needs balance (see above) for any of them to actually enter the drop.</p>
+      </div>
+      <div class="opt">
+        <span class="tag tag--alt">Option B</span>
+        <h3>Leave them out</h3>
+        <p>Bluesky is a source and nothing more. No Bluesky chip appears in any drop, because none
+        of the 58 house creators are on Bluesky.</p>
+        <p class="cost">Done. The source is invisible in the demo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">4</span>What happens to a name you looked up, overnight?</h2>
+    <p class="q">Task 4. Looked-up names now collect in a standing <b>Tracked by hand</b> tab, ungated,
+    because you asked for them. Unspecified: whether they are re-checked with everything else.</p>
+    <div class="opts">
+      <div class="opt rec">
+        <span class="tag tag--rec">My recommendation</span>
+        <h3>Re-checked nightly, like everyone else</h3>
+        <p>"Monitoring" is what you asked for, and a name that never re-checks is a bookmark.
+        Same ladder, same 6am run.</p>
+        <p class="cost">~30 min to state on screen. The engine already re-runs every candidate.</p>
+      </div>
+      <div class="opt">
+        <span class="tag tag--alt">Option B</span>
+        <h3>One-off lookups</h3>
+        <p>The tab is a history of what you checked, not a watch list. Watch already exists for
+        "tell me if this changes."</p>
+        <p class="cost">Done. Risk: overlaps confusingly with Watch.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">5</span>Should I re-scan the morning of the demo?</h2>
+    <p class="q">Today's data is ~2 hours old. TikTok avatar URLs are signed and die in about 48 hours,
+    so by Friday some faces fall back to initials.</p>
+    <div class="opts">
+      <div class="opt rec">
+        <span class="tag tag--rec">My recommendation</span>
+        <h3>Yes — Friday morning, before you present</h3>
+        <p>Takes about 4 minutes for all 76 names and costs nothing without model calls. Fresh
+        avatars, fresh timestamp in the header tooltip.</p>
+        <p class="cost">Say the word Friday and I will run it.</p>
+      </div>
+      <div class="opt">
+        <span class="tag tag--alt">Option B</span>
+        <h3>Freeze it now</h3>
+        <p>What you saw today is what you demo. No chance of a number moving under you.</p>
+        <p class="cost">Free. Some faces will be initials by Friday.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="done">
+    <h2>What is already built and verified in the browser</h2>
+    <ul>
+      <li><b>Fresh scan.</b> 58 names re-run live at 7:59 PM ET, 105 seconds, 1,700 checks.
+      All 10 held the drop and confidence rose on several.</li>
+      <li><b>Header tooltip.</b> Now reads from the engine, not a hand-typed block that had been
+      stale for five days: names scanned, checks, this run's spend, and <b>$25.35 spent to date over
+      194 names — $0.13 each</b>.</li>
+      <li><b>Home Cooking.</b> Live brief, 10 real creators scanned, 6 cleared —
+      Chef Jean-Pierre (2.5M), Joshua Weissman (11M), Cooking With Lynja (22.2M), with 546 and 567
+      real "where do I buy this" comments behind them.</li>
+      <li><b>Brief pills.</b> Only platforms Scout can actually read. Write "Instagram" and it says
+      <em>Instagram is not in this brief — it answers for handles that do not exist</em>, rather than
+      silently dropping your word.</li>
+      <li><b>Bluesky.</b> No longer a brief; still a source in Admin.</li>
+      <li><b>Creator lookup.</b> Back, inside the <b>[+]</b> as a two-way toggle. Handle, URL or name;
+      results collect in <b>Tracked by hand</b> and survive a reload.</li>
+      <li><b>Report.</b> <code>null</code> follower bug fixed; Trajectory's four blank rows collapsed to
+      one line with the reasons one click down; looked-up names no longer claim to match a brief nobody wrote.</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,1018 @@
+<!doctype html>
+<!--
+DIRECTION CONTRACT — TOOLKIT 03 "CITRON"   (rebuilt from the CHECK BOX / Nixtio reference)
+THESIS: A pure-black slab floating on citron. Exactly three data colours, and every quantity is
+  drawn as a capsule with its own number inside it — no axis lookup, ever.
+OWN-WORLD: Citron page, #050505 slab at 26px. Cards are #151515 on black with no border, so
+  they read as shadow rather than as boxes. Lime / orange / white are the ONLY data colours.
+  Pill nav, `Key: Value ⌄` filter pills, ring-style legend dots, dashed guides, "Total: N"
+  footers, ▲▼ deltas, a circular + at the bottom of the rail. One face: Chivo.
+STORY: The Scout reads capsules — colour says which engine, the number inside says how much.
+FIRST VIEWPORT: Pill nav, oversized MORNING DROP, filter pills, then the capsule field.
+FORM: CHECK BOX analytics reference, translated to an origination desk. Reference-pinned.
+-->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toolkit 03 — CITRON · Warhol Scout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   TOOLKIT 03 — CITRON   · rebuilt from the CHECK BOX reference
+   Citron page, pure-black slab, capsule marks, three data colours.
+   ============================================================ */
+:root{
+  /* --- the only three data colours --- */
+  --lime:#C4F04E;
+  --orange:#F5852A;
+  --white:#FFFFFF;
+
+  /* --- shell --- */
+  --page:#CBEA92;
+  --slab:#050505;
+  --card:#151515;
+  --card-2:#1F1F1F;
+  --card-3:#2A2A2A;
+  --line:rgba(255,255,255,.09);
+  --line-hi:rgba(255,255,255,.20);
+  --text:#FFFFFF;
+  --text-2:#9C9C9C;
+  --text-3:#6A6A6A;
+  --on-lime:#0A0A0A;
+  --on-orange:#0A0A0A;
+
+  --pass:var(--lime);
+  --hold:var(--orange);
+  --fail:#FF4D4D;
+
+  --r-sm:8px; --r-md:14px; --r-lg:20px; --r-slab:26px; --r-pill:999px;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px;
+  --s6:34px; --s7:50px; --s8:72px; --s9:104px;
+
+  --el-1:0 1px 2px rgba(0,0,0,.5), 0 3px 8px -3px rgba(0,0,0,.5);
+  --el-2:0 2px 5px rgba(0,0,0,.5), 0 14px 30px -12px rgba(0,0,0,.7);
+  --el-3:0 4px 10px rgba(0,0,0,.55), 0 32px 60px -22px rgba(0,0,0,.85);
+  --el-slab:0 10px 24px -10px rgba(20,32,6,.4), 0 44px 88px -34px rgba(20,32,6,.55);
+
+  --f:"Chivo",-apple-system,system-ui,sans-serif;
+}
+:root[data-theme="light"]{
+  --page:#A8CF63;
+  --slab:#FBFBF7;
+  --card:#FFFFFF;
+  --card-2:#F1F1EC;
+  --card-3:#E4E4DD;
+  --line:rgba(10,10,10,.09);
+  --line-hi:rgba(10,10,10,.20);
+  --text:#0A0A0A;
+  --text-2:#5C5C5C;
+  --text-3:#8C8C8C;
+  --lime:#7FA81E;
+  --orange:#D96A10;
+  --white:#0A0A0A;
+  --pass:#5E8A12;
+  --fail:#C82F2F;
+  --el-1:0 1px 2px rgba(24,30,12,.05), 0 3px 8px -3px rgba(24,30,12,.10);
+  --el-2:0 2px 5px rgba(24,30,12,.06), 0 14px 30px -12px rgba(24,30,12,.18);
+  --el-3:0 4px 10px rgba(24,30,12,.07), 0 32px 60px -22px rgba(24,30,12,.28);
+  --el-slab:0 10px 24px -10px rgba(40,54,14,.3), 0 44px 88px -34px rgba(40,54,14,.42);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;padding:20px;background:var(--page);color:var(--text);font-family:var(--f);
+  font-size:14.5px;line-height:1.55;transition:background-color .2s ease,color .2s ease}
+@media(max-width:900px){body{padding:10px}}
+::selection{background:var(--lime);color:#0A0A0A}
+h1,h2,h3,h4{margin:0;font-family:var(--f);font-weight:900;letter-spacing:-.035em;
+  line-height:1;text-transform:uppercase}
+
+.slab{max-width:1500px;margin:0 auto;background:var(--slab);border-radius:var(--r-slab);
+  box-shadow:var(--el-slab);display:grid;grid-template-columns:84px minmax(0,1fr);overflow:hidden}
+@media(max-width:900px){.slab{grid-template-columns:1fr}}
+.railcol{padding:var(--s7) 0 var(--s5);display:flex;flex-direction:column;align-items:center;gap:var(--s3)}
+@media(max-width:900px){.railcol{flex-direction:row;justify-content:flex-start;padding:var(--s3) var(--s4);overflow-x:auto}}
+.rbtn{width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;background:var(--card);
+  color:var(--text-2);display:flex;align-items:center;justify-content:center;flex:none;
+  transition:background .15s ease,color .15s ease,transform .15s cubic-bezier(.2,.7,.3,1)}
+.rbtn:hover{background:var(--card-2);color:var(--text);transform:translateY(-2px)}
+.rbtn[aria-current="true"]{background:var(--lime);color:var(--on-lime)}
+.rbtn:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+.railcol .grow{margin-top:auto}
+@media(max-width:900px){.railcol .grow{margin-top:0;margin-left:auto}}
+.main{padding:var(--s5) var(--s5) var(--s7);min-width:0}
+
+/* ---------- top ---------- */
+.top{display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap;margin-bottom:var(--s7)}
+.logo{width:48px;height:48px;border-radius:50%;background:var(--text);color:var(--slab);
+  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;
+  letter-spacing:-.05em;flex:none}
+.navpill{display:inline-flex;align-items:center;gap:9px;background:var(--card);color:var(--text);
+  border:0;border-radius:var(--r-pill);padding:13px 20px;font:inherit;font-size:13.5px;
+  font-weight:600;cursor:pointer;transition:background .15s ease}
+.navpill:hover{background:var(--card-2)}
+.navpill[aria-current="true"]{background:var(--lime);color:var(--on-lime)}
+.navpill:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+.navpill svg{opacity:.72}
+.navpill[aria-current="true"] svg{opacity:1}
+.circ{width:48px;height:48px;border-radius:50%;border:0;cursor:pointer;background:var(--card);
+  color:var(--text);display:flex;align-items:center;justify-content:center;flex:none;
+  transition:background .15s ease}
+.circ:hover{background:var(--card-2)}
+.circ:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+.top .r{margin-left:auto;display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap}
+.who-top{text-align:right;line-height:1.25}
+.who-top b{display:block;font-size:13.5px;font-weight:700}
+.who-top span{font-size:12px;color:var(--text-2)}
+.avwrap{position:relative;flex:none}
+.avwrap .badge{position:absolute;top:-3px;right:-3px;min-width:19px;height:19px;border-radius:999px;
+  background:#FF4D4D;color:#fff;font-size:10.5px;font-weight:800;display:flex;align-items:center;
+  justify-content:center;padding:0 5px;box-shadow:0 0 0 2.5px var(--slab)}
+.tsw{display:inline-flex;background:var(--card);border-radius:var(--r-pill);padding:3px;gap:2px}
+.tsw button{appearance:none;border:0;cursor:pointer;background:transparent;color:var(--text-2);
+  font:inherit;font-size:12px;font-weight:700;padding:8px 14px;border-radius:var(--r-pill)}
+.tsw button[aria-pressed="true"]{background:var(--text);color:var(--slab)}
+.tsw button:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+
+/* title + filters */
+.titlerow{display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap;margin-bottom:var(--s5)}
+.titlerow h1{font-size:clamp(30px,4.4vw,52px);letter-spacing:-.045em}
+.filters{margin-left:auto;display:flex;gap:var(--s2);align-items:center;flex-wrap:wrap}
+.fpill{display:inline-flex;align-items:center;gap:8px;background:var(--card);color:var(--text-2);
+  border:0;border-radius:var(--r-pill);padding:11px 17px;font:inherit;font-size:13px;
+  font-weight:600;cursor:pointer}
+.fpill b{color:var(--text);font-weight:700}
+.fpill:hover{background:var(--card-2)}
+.fpill:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+.sqbtn{width:48px;height:48px;border-radius:16px;border:0;cursor:pointer;background:var(--card);
+  color:var(--text);display:flex;align-items:center;justify-content:center;flex:none}
+.sqbtn:hover{background:var(--card-2)}
+.sqbtn:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+
+/* ---------- cards ---------- */
+.grid{display:grid;gap:var(--s4)}
+.g12{grid-template-columns:repeat(12,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1180px){.g12{grid-template-columns:repeat(6,1fr)}.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.g12{grid-template-columns:1fr}.g12>*{grid-column:auto!important}
+  .g2,.g3,.g4{grid-template-columns:1fr}}
+
+.c{background:var(--card);border-radius:var(--r-lg);padding:var(--s5);display:flex;flex-direction:column}
+.c--2{background:var(--card-2)}
+.c--lime{background:var(--lime);color:var(--on-lime)}
+.c--orange{background:var(--orange);color:var(--on-orange)}
+.c--line{background:transparent;border:1px solid var(--line)}
+.c-hd{display:flex;align-items:center;gap:var(--s3);margin-bottom:var(--s4)}
+.c-hd h3{font-size:13px;font-weight:800;letter-spacing:.06em}
+.c-hd .r{margin-left:auto;display:flex;align-items:center;gap:var(--s2)}
+.dots{background:none;border:0;cursor:pointer;color:var(--text-3);font-size:17px;line-height:1;
+  padding:0 3px;letter-spacing:.06em}
+.dots:hover{color:var(--text)}
+.c-ft{margin-top:auto;padding-top:var(--s4);display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap}
+.total{margin-left:auto;font-size:12.5px;font-weight:700;color:var(--text-2)}
+.total b{color:var(--text);font-variant-numeric:tabular-nums}
+
+/* ring legend dot — the reference's legend mark */
+.ring{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--text-2)}
+.ring i{width:13px;height:13px;border-radius:50%;border:3.5px solid currentColor;flex:none;font-style:normal}
+.ring.lime i{border-color:var(--lime)}
+.ring.orange i{border-color:var(--orange)}
+.ring.white i{border-color:var(--white)}
+
+/* ---------- CAPSULE: the signature data mark ---------- */
+.cap{display:inline-flex;align-items:center;justify-content:center;border-radius:var(--r-pill);
+  font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.02em;flex:none}
+.cap--v{writing-mode:vertical-rl;text-orientation:mixed;padding:14px 0;width:30px}
+.cap--lime{background:var(--lime);color:var(--on-lime)}
+.cap--orange{background:var(--orange);color:var(--on-orange)}
+.cap--white{background:var(--white);color:var(--slab)}
+.capfield{display:flex;align-items:flex-end;justify-content:space-between;gap:6px;
+  position:relative;padding:var(--s4) 0;min-height:220px}
+.capfield .guide{position:absolute;top:0;bottom:0;width:1px;background:var(--line)}
+.capcol{display:flex;flex-direction:column;align-items:center;gap:7px;position:relative;z-index:1;flex:1}
+.smalldot{width:9px;height:9px;border-radius:50%;flex:none}
+
+/* delta triangles */
+.tri{font-size:10px;line-height:1}
+.tri--up{color:var(--lime)}
+.tri--dn{color:var(--orange)}
+.statbig{font-size:clamp(28px,3.4vw,42px);font-weight:900;letter-spacing:-.05em;
+  font-variant-numeric:tabular-nums;line-height:1}
+.statk{font-size:12px;color:var(--text-2);margin-top:5px}
+
+.kick{font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--text-3)}
+.note{font-size:13px;color:var(--text-2);line-height:1.62;max-width:66ch}
+.c--lime .note,.c--orange .note{color:rgba(10,10,10,.72)}
+.c--lime .kick,.c--orange .kick{color:rgba(10,10,10,.58)}
+.lab{font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--text-3);display:block;margin-bottom:8px}
+
+/* ---------- sections ---------- */
+.sec{padding-top:var(--s7)}
+.sec-head{display:flex;align-items:flex-end;gap:var(--s5);margin-bottom:var(--s4);flex-wrap:wrap}
+.sec-title{font-size:clamp(24px,3.2vw,36px);letter-spacing:-.04em}
+.sec-note{margin-left:auto;max-width:50ch;font-size:13px;color:var(--text-2);line-height:1.62}
+
+/* ---------- collage ---------- */
+.collage{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s3)}
+@media(max-width:1080px){.collage{grid-template-columns:repeat(6,1fr)}}
+@media(max-width:640px){.collage{grid-template-columns:repeat(2,1fr)}.collage>*{grid-column:span 2!important}}
+.tile{border-radius:var(--r-md);padding:var(--s4);background:var(--card);
+  display:flex;flex-direction:column;gap:9px;min-height:128px}
+.tile .k{font-size:9.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--text-3)}
+.tile .v{font-size:11.5px;color:var(--text-2);line-height:1.45;margin-top:auto}
+.tile--lime{background:var(--lime);color:var(--on-lime)}
+.tile--orange{background:var(--orange);color:var(--on-orange)}
+.tile--w{background:var(--white);color:var(--slab)}
+.tile--lime .k,.tile--orange .k,.tile--w .k{color:rgba(10,10,10,.56)}
+.tile--lime .v,.tile--orange .v,.tile--w .v{color:rgba(10,10,10,.74)}
+.aa{font-size:50px;font-weight:900;letter-spacing:-.05em;line-height:.86}
+.aa-l{font-size:46px;font-weight:400;letter-spacing:-.03em;line-height:.9}
+.shaperow{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.shaperow b{width:56px;height:56px;background:currentColor;opacity:.9;display:block}
+.shaperow b.pl{width:80px;height:28px}
+.colrow{display:flex;border-radius:8px;overflow:hidden;height:44px}
+.colrow span{flex:1}
+.gradrow{display:flex;gap:6px}
+.gradrow span{flex:1;height:44px;border-radius:8px}
+.elrow{display:flex;gap:9px;align-items:center}
+.elrow b{width:34px;height:34px;border-radius:8px;background:var(--card-2);display:block}
+
+/* ---------- type ---------- */
+.tr{border-bottom:1px solid var(--line);padding:var(--s5) 0;display:grid;
+  grid-template-columns:136px minmax(0,1fr);gap:var(--s5);align-items:baseline}
+@media(max-width:680px){.tr{grid-template-columns:1fr;gap:var(--s2)}}
+.tr .s{font-size:11px;color:var(--text-3);line-height:1.6;font-weight:600}
+.d1{font-size:clamp(36px,5.6vw,68px);font-weight:900;letter-spacing:-.055em;line-height:.94;text-transform:uppercase}
+.d2{font-size:clamp(23px,3vw,32px);font-weight:900;letter-spacing:-.045em;text-transform:uppercase}
+.h3s{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.bd{font-size:15.5px;line-height:1.66;max-width:66ch;color:var(--text-2);font-weight:300}
+.sm{font-size:12.5px;color:var(--text-3);line-height:1.6;font-weight:300}
+.bignum{font-size:64px;font-weight:900;letter-spacing:-.06em;font-variant-numeric:tabular-nums;line-height:.88}
+
+/* ---------- shape ---------- */
+.rad{display:flex;gap:var(--s3);flex-wrap:wrap;align-items:center}
+.rad b{width:76px;height:56px;background:var(--lime);color:var(--on-lime);display:flex;
+  align-items:flex-end;justify-content:center;padding-bottom:6px;font-size:10.5px;font-weight:700}
+.sp{display:flex;align-items:flex-end;gap:6px;height:104px}
+.sp span{width:24px;background:var(--orange);border-radius:4px 4px 0 0;position:relative}
+.sp i{position:absolute;top:calc(100% + 4px);left:0;font-style:normal;font-size:10px;color:var(--text-3);font-weight:700}
+
+/* ---------- gradients ---------- */
+.gr{height:98px;border-radius:var(--r-md)}
+.gr-cit{background:linear-gradient(120deg,var(--lime),var(--orange))}
+.gr-fade{background:linear-gradient(180deg,rgba(196,240,78,.5),rgba(196,240,78,0))}
+.gr-dim{background:linear-gradient(90deg,var(--card-3),var(--card))}
+
+/* ---------- controls ---------- */
+.btn{appearance:none;cursor:pointer;font-family:var(--f);font-size:13px;font-weight:700;
+  padding:11px 20px;border-radius:var(--r-pill);border:1px solid transparent;
+  background:var(--lime);color:var(--on-lime);
+  transition:transform .15s cubic-bezier(.2,.7,.3,1),box-shadow .15s cubic-bezier(.2,.7,.3,1),background .15s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--el-2)}
+.btn:active{transform:translateY(0)}
+.btn:focus-visible{outline:2px solid var(--white);outline-offset:3px}
+.btn--sm{padding:8px 15px;font-size:12px}
+.btn--ghost{background:var(--card-2);color:var(--text)}
+.btn--orange{background:var(--orange);color:var(--on-orange)}
+.btn--out{background:transparent;border-color:var(--line-hi);color:var(--text)}
+.btn--out:hover{background:var(--card-2)}
+.btn[disabled]{background:var(--card-2);color:var(--text-3);cursor:not-allowed}
+.btn[disabled]:hover{transform:none;box-shadow:none}
+.btn--busy{color:transparent;position:relative}
+.btn--busy::after{content:"";position:absolute;inset:0;margin:auto;width:14px;height:14px;
+  border:2px solid var(--on-lime);border-top-color:transparent;border-radius:50%;animation:sp .7s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.inp{width:100%;font-family:var(--f);font-size:14px;padding:12px 18px;border-radius:var(--r-pill);
+  border:1px solid var(--line-hi);background:var(--card);color:var(--text)}
+.inp::placeholder{color:var(--text-3)}
+.inp:focus{outline:2px solid var(--lime);outline-offset:-1px;border-color:var(--lime)}
+.inp--err{border-color:var(--fail)}
+.em{color:var(--fail);font-size:12.5px;margin-top:7px;font-weight:600;padding-left:18px}
+.pill{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;
+  padding:6px 13px;border-radius:var(--r-pill);background:var(--card-2);color:var(--text-2)}
+.pill--lime{background:var(--lime);color:var(--on-lime)}
+.pill--orange{background:var(--orange);color:var(--on-orange)}
+.pill--w{background:var(--white);color:var(--slab)}
+.pill--fail{background:rgba(255,77,77,.18);color:var(--fail)}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.seg{display:inline-flex;background:var(--card-2);border-radius:var(--r-pill);padding:3px;gap:2px}
+.seg button{appearance:none;border:0;cursor:pointer;background:transparent;color:var(--text-2);
+  font:inherit;font-size:12px;font-weight:700;padding:7px 14px;border-radius:var(--r-pill)}
+.seg button[aria-pressed="true"]{background:var(--lime);color:var(--on-lime)}
+
+/* ---------- faces ---------- */
+.faces{display:grid;grid-template-columns:repeat(auto-fit,minmax(136px,1fr));gap:var(--s5)}
+.face{text-align:center}
+.avatar{display:inline-block;vertical-align:middle;width:80px;height:80px;border-radius:50%;
+  overflow:hidden;background:var(--card-2);margin:0 auto;flex:none}
+.avatar svg{display:block;width:100%;height:100%}
+.face .n{font-weight:700;font-size:13.5px;margin-top:10px;letter-spacing:-.015em}
+.face .m{font-size:12px;color:var(--text-3);margin-top:1px}
+.scorecap{margin-top:8px;display:inline-flex}
+.stack{display:flex;align-items:center}
+.stack .avatar{width:36px;height:36px;margin:0 0 0 -12px;box-shadow:0 0 0 3px var(--card)}
+.stack .avatar:first-child{margin-left:0}
+.stack .more{width:36px;height:36px;margin-left:-12px;border-radius:50%;background:var(--lime);
+  color:var(--on-lime);display:flex;align-items:center;justify-content:center;font-size:11.5px;
+  font-weight:800;box-shadow:0 0 0 3px var(--card);flex:none}
+.avs{display:flex;align-items:flex-end;gap:var(--s4);margin-top:var(--s4)}
+
+/* ---------- timeline (pill bars with logo + count) ---------- */
+.tl{display:flex;flex-direction:column;gap:11px;position:relative}
+.tlrow{display:grid;grid-template-columns:56px minmax(0,1fr);gap:var(--s3);align-items:center}
+.tlrow .d{font-size:11.5px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:600}
+.tlbar{height:34px;border-radius:var(--r-pill);display:flex;align-items:center;padding:0 6px 0 6px;
+  gap:9px;font-size:12.5px;font-weight:800;font-variant-numeric:tabular-nums}
+.tlbar .lg{width:24px;height:24px;border-radius:50%;background:var(--slab);color:var(--text);
+  display:flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:800;flex:none}
+.tlbar .n{margin-left:auto;padding-right:9px}
+.tlwrap{position:relative}
+.tlguides{position:absolute;inset:0;display:flex;justify-content:space-between;pointer-events:none;
+  margin-left:68px}
+.tlguides span{width:1px;border-left:1px dashed var(--line-hi);opacity:.6}
+
+/* ---------- in situ ---------- */
+.drow{display:grid;grid-template-columns:42px 64px 1fr 158px 142px 168px;gap:var(--s4);
+  align-items:center;padding:var(--s3) var(--s5);border-top:1px solid var(--line)}
+.drow--hd{background:var(--card-2);font-size:10px;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--text-3);padding-top:11px;padding-bottom:11px;border-top:0}
+.drow:hover:not(.drow--hd){background:var(--card-2)}
+.drow .rk{font-size:13px;font-weight:800;color:var(--text-3);font-variant-numeric:tabular-nums}
+.drow .who{display:flex;align-items:center;gap:var(--s3);min-width:0}
+.drow .who .avatar{width:34px;height:34px;flex:0 0 34px}
+.drow .who .n{font-weight:700;font-size:14px;letter-spacing:-.015em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.drow .who .m{font-size:11.5px;color:var(--text-3)}
+.drow .acts{display:flex;gap:6px;justify-content:flex-end}
+@media(max-width:1180px){.drow{grid-template-columns:36px 58px 1fr 168px}.drow>.hm{display:none}}
+@media(max-width:700px){.drow{grid-template-columns:32px 54px 1fr}.drow>.hs{display:none}}
+.dropwrap{background:var(--card);border-radius:var(--r-lg);overflow:hidden}
+.drop-hd{padding:var(--s5);display:flex;justify-content:space-between;gap:var(--s4);align-items:flex-start;flex-wrap:wrap}
+.empty{border-radius:var(--r-lg);background:var(--card);padding:var(--s8) var(--s5);text-align:center}
+.empty h4{font-size:24px;margin-bottom:var(--s2);letter-spacing:-.04em}
+.sk{background:var(--card-2);border-radius:var(--r-pill);height:13px;animation:pl 1.3s ease-in-out infinite}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.42}}
+.fab{width:56px;height:56px;border-radius:50%;background:var(--card);color:var(--text);border:0;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--el-2);
+  transition:transform .15s cubic-bezier(.2,.7,.3,1)}
+.fab:hover{transform:translateY(-3px);background:var(--lime);color:var(--on-lime)}
+.fab:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+
+pre.tok{background:var(--card);color:var(--text-2);border-radius:var(--r-lg);padding:var(--s5);
+  overflow:auto;font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:12px;line-height:1.8;margin:0}
+pre.tok .cm{color:var(--text-3)}
+pre.tok .v{color:var(--lime)}
+footer{margin-top:var(--s7);padding-top:var(--s5);font-size:13px;color:var(--text-2);
+  line-height:1.7;border-top:1px solid var(--line);font-weight:300}
+footer b{color:var(--text);font-weight:800}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<div class="slab">
+  <nav class="railcol" aria-label="Sections">
+    <button class="rbtn" aria-current="true" aria-label="Drop"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h16M4 12h16M4 19h10"/></svg></button>
+    <button class="rbtn" aria-label="Watchlist"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 21l8.8-8.3a5 5 0 0 0 0-7.1z"/></svg></button>
+    <button class="rbtn" aria-label="Schedule"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3.5" y="5" width="17" height="16" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg></button>
+    <button class="rbtn" aria-label="Promoted"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l3 6 6 .8-4.4 4.2 1.1 6L12 17.2 6.3 20l1.1-6L3 9.8 9 9z"/></svg></button>
+    <button class="rbtn" aria-label="Settings"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></button>
+    <button class="fab grow" aria-label="New mandate"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+  </nav>
+
+  <div class="main">
+    <div class="top">
+      <span class="logo">WS</span>
+      <button class="navpill" aria-current="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5z"/><path d="M3 12l9 5 9-5M3 16l9 5 9-5"/></svg>Drop</button>
+      <button class="navpill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19h-20"/></svg>Signals</button>
+      <button class="navpill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M21 12a8 8 0 1 1-3.2-6.4"/><path d="M8 12h8M12 8v8"/></svg>Briefs</button>
+      <button class="circ" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg></button>
+      <span class="r">
+        <div class="tsw" role="group" aria-label="Theme">
+          <button type="button" data-set="dark" aria-pressed="true">Dark</button>
+          <button type="button" data-set="light" aria-pressed="false">Light</button></div>
+        <span class="who-top"><b>Alex Grinshpoon</b><span>@warhol/scout</span></span>
+        <span class="avwrap"><span class="badge">6</span>
+          <span class="avatar" style="width:48px;height:48px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#C4F04E"/><circle cx="50" cy="38" r="19" fill="#0A0A0A"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#0A0A0A"/></svg></span></span>
+      </span>
+    </div>
+
+    <div class="titlerow">
+      <h1>Morning Drop</h1>
+      <span class="filters">
+        <button class="fpill">Date: <b>Today</b> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <button class="fpill">Mandate: <b>DBE</b> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <button class="fpill">Threshold: <b>70</b> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <button class="sqbtn" aria-label="Settings"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h10M18 8h2M4 16h4M12 16h8"/><circle cx="16" cy="8" r="2.4"/><circle cx="10" cy="16" r="2.4"/></svg></button>
+      </span>
+    </div>
+
+    <!-- ══════ HERO CARDS ══════ -->
+    <div class="grid g12">
+      <div class="c" style="grid-column:span 3">
+        <div class="c-hd"><h3>Signal</h3><span class="r"><button class="dots" aria-label="Menu">•••</button></span></div>
+        <div style="display:flex;gap:var(--s5)">
+          <div><span class="tri tri--up">▲</span>
+            <div class="statbig">2,4%</div><div class="statk">Gap widening</div></div>
+          <div><span class="tri tri--dn">▼</span>
+            <div class="statbig">1,1%</div><div class="statk">Extraction</div></div>
+        </div>
+        <svg viewBox="0 0 240 68" width="100%" height="68" style="margin-top:var(--s4)" role="img"
+          aria-label="Two sparklines: gap widening in lime, extraction falling in orange.">
+          <polyline points="4,50 28,44 52,48 76,36 100,40 124,28 148,32 172,20 196,24 236,12"
+            fill="none" stroke="var(--lime)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="4,26 28,34 52,28 76,40 100,34 124,44 148,40 172,50 196,46 236,56"
+            fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="c" style="grid-column:span 3">
+        <div class="c-hd"><h3>Gate</h3><span class="r"><button class="dots" aria-label="Menu">•••</button></span></div>
+        <div style="display:flex;gap:var(--s5)">
+          <div><span class="tri tri--up">▲</span>
+            <div class="statbig">2,8%</div><div class="statk">Fit pass</div></div>
+          <div><span class="tri tri--dn">▼</span>
+            <div class="statbig">3,2%</div><div class="statk">Refused</div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(14,1fr);gap:5px;margin-top:var(--s4)">
+          <span class="smalldot" style="background:var(--lime)"></span><span class="smalldot" style="background:var(--white)"></span>
+          <span class="smalldot" style="background:var(--orange)"></span><span class="smalldot" style="background:var(--lime)"></span>
+          <span class="smalldot" style="background:var(--lime)"></span><span class="smalldot" style="background:var(--orange)"></span>
+          <span class="smalldot" style="background:var(--white)"></span><span class="smalldot" style="background:var(--lime)"></span>
+          <span class="smalldot" style="background:var(--orange)"></span><span class="smalldot" style="background:var(--lime)"></span>
+          <span class="smalldot" style="background:var(--white)"></span><span class="smalldot" style="background:var(--orange)"></span>
+          <span class="smalldot" style="background:var(--lime)"></span><span class="smalldot" style="background:var(--lime)"></span>
+          <span class="smalldot" style="background:var(--orange)"></span><span class="smalldot" style="background:var(--lime)"></span>
+          <span class="smalldot" style="background:var(--white)"></span><span class="smalldot" style="background:var(--lime)"></span>
+          <span class="smalldot" style="background:var(--orange)"></span><span class="smalldot" style="background:var(--lime)"></span>
+          <span class="smalldot" style="background:var(--lime)"></span><span class="smalldot" style="background:var(--orange)"></span>
+          <span class="smalldot" style="background:var(--white)"></span><span class="smalldot" style="background:var(--lime)"></span>
+          <span class="smalldot" style="background:var(--lime)"></span><span class="smalldot" style="background:var(--orange)"></span>
+          <span class="smalldot" style="background:var(--lime)"></span><span class="smalldot" style="background:var(--white)"></span>
+        </div>
+      </div>
+
+      <!-- THE CAPSULE FIELD — signature -->
+      <div class="c" style="grid-column:span 6">
+        <div class="c-hd"><h3>Scores · today's scan</h3><span class="r"><button class="dots" aria-label="Menu">•••</button></span></div>
+        <div class="capfield">
+          <span class="guide" style="left:8%"></span><span class="guide" style="left:24%"></span>
+          <span class="guide" style="left:40%"></span><span class="guide" style="left:56%"></span>
+          <span class="guide" style="left:72%"></span><span class="guide" style="left:88%"></span>
+          <span class="capcol"><span class="cap cap--v cap--white" style="height:74px;font-size:12px">52</span>
+            <span class="cap cap--v cap--orange" style="height:96px;font-size:12px">81</span></span>
+          <span class="capcol"><span class="cap cap--v cap--lime" style="height:112px;font-size:12px">96</span>
+            <span class="smalldot" style="background:var(--white)"></span>
+            <span class="cap cap--v cap--orange" style="height:44px;font-size:12px">25</span></span>
+          <span class="capcol"><span class="cap cap--v cap--lime" style="height:66px;font-size:12px">48</span>
+            <span class="cap cap--v cap--white" style="height:70px;font-size:12px">51</span></span>
+          <span class="capcol"><span class="cap cap--v cap--lime" style="height:98px;font-size:12px">80</span>
+            <span class="cap cap--v cap--orange" style="height:68px;font-size:12px">49</span></span>
+          <span class="capcol"><span class="cap cap--v cap--orange" style="height:52px;font-size:12px">34</span>
+            <span class="smalldot" style="background:var(--white)"></span>
+            <span class="cap cap--v cap--white" style="height:46px;font-size:12px">28</span></span>
+          <span class="capcol"><span class="cap cap--v cap--lime" style="height:118px;font-size:12px">92</span>
+            <span class="cap cap--v cap--orange" style="height:38px;font-size:12px">20</span></span>
+          <span class="capcol"><span class="cap cap--v cap--lime" style="height:78px;font-size:12px">58</span>
+            <span class="cap cap--v cap--lime" style="height:58px;font-size:12px">39</span></span>
+          <span class="capcol"><span class="cap cap--v cap--orange" style="height:104px;font-size:12px">84</span>
+            <span class="cap cap--v cap--orange" style="height:92px;font-size:12px">72</span></span>
+          <span class="capcol"><span class="cap cap--v cap--white" style="height:56px;font-size:12px">36</span>
+            <span class="smalldot" style="background:var(--lime)"></span></span>
+        </div>
+        <div class="c-ft">
+          <span class="ring white"><i></i>Scanned</span>
+          <span class="ring lime"><i></i>Cleared gate</span>
+          <span class="ring orange"><i></i>Refused</span>
+          <span class="total">Total: <b>1,012</b></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════ 00 OVERVIEW COLLAGE ══════ -->
+    <section class="sec" id="collage">
+      <div class="sec-head"><h2 class="sec-title">The system at a glance</h2>
+        <p class="sec-note">Everything essential in one screen — face, shapes, colour, gradient,
+          depth, and the world's signature mark. The sections below expand each one.</p></div>
+      <div class="collage">
+        <div class="tile tile--w" style="grid-column:span 3"><span class="k">Display</span>
+          <span class="aa">Aa</span><span class="v">Chivo · 900 · −0.055em · caps</span></div>
+        <div class="tile" style="grid-column:span 3"><span class="k">Text · same face</span>
+          <span class="aa-l">Aa</span><span class="v">Chivo · 300 / 600 / 800. One family only.</span></div>
+        <div class="tile tile--lime" style="grid-column:span 3"><span class="k">Shape</span>
+          <div class="shaperow" style="color:#0A0A0A">
+            <b style="border-radius:8px"></b><b style="border-radius:14px"></b>
+            <b style="border-radius:20px"></b><b class="pl" style="border-radius:999px"></b></div>
+          <span class="v">8 / 14 / 20 cards · 26 slab · pill</span></div>
+        <div class="tile" style="grid-column:span 3"><span class="k">Colour — only three</span>
+          <div class="colrow"><span style="background:var(--lime)"></span><span style="background:var(--orange)"></span>
+            <span style="background:var(--white)"></span><span style="background:var(--card)"></span>
+            <span style="background:var(--slab)"></span></div>
+          <span class="v">Lime · orange · white, on black</span></div>
+
+        <div class="tile tile--orange" style="grid-column:span 4"><span class="k">Signature — the capsule</span>
+          <div style="display:flex;gap:7px;align-items:flex-end">
+            <span class="cap cap--v" style="height:52px;background:#0A0A0A;color:var(--orange);font-size:11px">92</span>
+            <span class="cap cap--v" style="height:38px;background:#0A0A0A;color:var(--orange);font-size:11px">58</span>
+            <span class="cap cap--v" style="height:60px;background:#0A0A0A;color:var(--orange);font-size:11px">84</span>
+            <span class="cap" style="height:26px;padding:0 14px;background:#0A0A0A;color:var(--orange);font-size:11px">Value inside</span></div>
+          <span class="v">Every quantity carries its own number</span></div>
+        <div class="tile" style="grid-column:span 3"><span class="k">Gradient</span>
+          <div class="gradrow"><span class="gr-cit"></span><span class="gr-fade"></span><span class="gr-dim"></span></div>
+          <span class="v">Citron · series fade · card dim</span></div>
+        <div class="tile" style="grid-column:span 3"><span class="k">Depth</span>
+          <div class="elrow"><b style="box-shadow:var(--el-1)"></b><b style="box-shadow:var(--el-2)"></b><b style="box-shadow:var(--el-3)"></b></div>
+          <span class="v">Three shadows + the slab. Cards use none.</span></div>
+        <div class="tile" style="grid-column:span 2"><span class="k">Legend mark</span>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <span class="ring lime"><i></i>Lime</span><span class="ring orange"><i></i>Orange</span></div>
+          <span class="v">Rings, never filled dots</span></div>
+      </div>
+    </section>
+
+    <!-- ══════ 01 COLOUR ══════ -->
+    <section class="sec" id="colour">
+      <div class="sec-head"><h2 class="sec-title">Three colours</h2>
+        <p class="sec-note">Lime, orange, white. That is the entire data palette, and the
+          constraint is the point — a Scout learns it in one glance and never consults a key
+          again. Black and its two card tones are structure, not data.</p></div>
+      <div class="grid g4" style="margin-bottom:var(--s4)">
+        <div class="c c--lime"><span class="kick">Lime · #C4F04E</span>
+          <h3 style="font-size:22px;margin:var(--s3) 0 var(--s2);letter-spacing:-.04em">Cleared</h3>
+          <p class="note" style="font-size:12.5px">Gate pass, gap widening, anything moving the
+            right way. Also the primary action and the active nav pill.</p></div>
+        <div class="c c--orange"><span class="kick">Orange · #F5852A</span>
+          <h3 style="font-size:22px;margin:var(--s3) 0 var(--s2);letter-spacing:-.04em">Refused</h3>
+          <p class="note" style="font-size:12.5px">Gate fail, extraction falling, strain. Never
+            an action colour — orange is a reading, not a button.</p></div>
+        <div class="c" style="background:var(--white);color:var(--slab)">
+          <span class="kick" style="color:rgba(10,10,10,.56)">White · #FFFFFF</span>
+          <h3 style="font-size:22px;margin:var(--s3) 0 var(--s2);letter-spacing:-.04em">Neutral</h3>
+          <p class="note" style="font-size:12.5px;color:rgba(10,10,10,.72)">Scanned but undecided.
+            The third series, and all body text on black.</p></div>
+        <div class="c c--line"><span class="kick">Black · #050505 / #151515 / #1F1F1F</span>
+          <h3 style="font-size:22px;margin:var(--s3) 0 var(--s2);letter-spacing:-.04em">Structure</h3>
+          <p class="note" style="font-size:12.5px">Slab, card, card-2. Cards carry no border —
+            the tone step alone separates them, exactly as the reference does it.</p></div>
+      </div>
+      <div class="c c--2">
+        <p class="note" style="margin:0"><strong>The three-colour rule.</strong> If a chart needs
+          a fourth series, it is the wrong chart. Split it, or drop the least useful series. This
+          is the constraint that keeps a very dense black screen from becoming confetti — and the
+          reason the capsule carries its own number instead of relying on a colour key.</p></div>
+    </section>
+
+    <!-- ══════ 02 TYPE ══════ -->
+    <section class="sec" id="type">
+      <div class="sec-head"><h2 class="sec-title">One face</h2>
+        <p class="sec-note"><strong>Chivo</strong> at every weight from 300 to 900. Display runs
+          at 900 uppercase and −0.055em; body runs at 300 so the contrast between a title and a
+          sentence is weight, not family.</p></div>
+      <div class="tr"><span class="s">Display 1<br>900 · −0.055em<br>36–68px caps</span><span class="d1">Morning drop</span></div>
+      <div class="tr"><span class="s">Display 2<br>900 · −0.045em<br>23–32px caps</span><span class="d2">Monetization gap</span></div>
+      <div class="tr"><span class="s">Card title<br>800 · 13px · .06em</span><span class="h3s">Recommended play</span></div>
+      <div class="tr"><span class="s">Body<br>300 · 15.5 / 1.66</span><span class="bd">Mara Ellison publishes long-form architecture criticism to 214,000 subscribers and monetizes none of it. Three sponsor mentions in eleven months, no paid tier, no product.</span></div>
+      <div class="tr"><span class="s">Secondary<br>300 · 12.5px</span><span class="sm">Scanned 04:12 · Substack and X · rules engine v4.2</span></div>
+      <div class="tr"><span class="s">Label<br>800 · 10px · .15em</span><span class="lab" style="margin:0">Pillar breakdown</span></div>
+      <div class="tr"><span class="s">Numeral<br>900 · tabular · 64px</span><span class="bignum">1,012</span></div>
+      <div class="tr"><span class="s">In-capsule<br>800 · tabular · 12px</span>
+        <span style="display:flex;gap:7px;align-items:flex-end">
+          <span class="cap cap--v cap--lime" style="height:56px;font-size:12px">92</span>
+          <span class="cap cap--v cap--orange" style="height:44px;font-size:12px">58</span>
+          <span class="cap cap--v cap--white" style="height:64px;font-size:12px">84</span></span></div>
+    </section>
+
+    <!-- ══════ 03 SHAPE ══════ -->
+    <section class="sec" id="shape">
+      <div class="sec-head"><h2 class="sec-title">Shape</h2>
+        <p class="sec-note">Cards at 20, the slab at 26, everything else a pill or a circle. The
+          rounded-square exists once — the settings button beside the filters — and that single
+          exception is what makes the filter row read as a row rather than a sentence.</p></div>
+      <div class="grid g3">
+        <div><span class="lab">Radius</span>
+          <div class="rad"><b style="border-radius:8px">8 · tiles</b>
+            <b style="border-radius:14px;background:var(--orange)">14 · inner</b>
+            <b style="border-radius:16px;background:var(--white);color:var(--slab)">16 · sq btn</b>
+            <b style="border-radius:20px;background:var(--card-2);color:var(--text)">20 · cards</b>
+            <b style="border-radius:999px;width:110px;height:40px;background:var(--lime)">pill</b></div></div>
+        <div><span class="lab">Lines</span>
+          <div style="display:flex;flex-direction:column;gap:var(--s3)">
+            <div style="display:flex;align-items:center;gap:var(--s3)"><span style="width:74px;font-size:12px;color:var(--text-3)">9% white</span><span style="flex:1;height:1px;background:var(--line)"></span></div>
+            <div style="display:flex;align-items:center;gap:var(--s3)"><span style="width:74px;font-size:12px;color:var(--text-3)">20% white</span><span style="flex:1;height:1px;background:var(--line-hi)"></span></div>
+            <div style="display:flex;align-items:center;gap:var(--s3)"><span style="width:74px;font-size:12px;color:var(--text-3)">dashed</span><span style="flex:1;height:0;border-top:1px dashed var(--line-hi)"></span></div>
+          </div>
+          <p class="note" style="margin-top:var(--s3);font-size:12.5px">Solid rules separate rows.
+            Dashed verticals are chart guides only — they never appear as a container edge.</p></div>
+        <div><span class="lab">Space — 4px base</span>
+          <div class="sp"><span style="height:4px"><i>4</i></span><span style="height:8px"><i>8</i></span>
+            <span style="height:12px"><i>12</i></span><span style="height:16px"><i>16</i></span>
+            <span style="height:24px"><i>24</i></span><span style="height:34px"><i>34</i></span>
+            <span style="height:50px"><i>50</i></span><span style="height:72px"><i>72</i></span>
+            <span style="height:104px"><i>104</i></span></div></div>
+      </div>
+    </section>
+
+    <!-- ══════ 04 DEPTH ══════ -->
+    <section class="sec" id="surface">
+      <div class="sec-head"><h2 class="sec-title">Depth &amp; fill</h2>
+        <p class="sec-note">Cards carry no shadow and no border — a one-step tone lift off pure
+          black is the entire separation. Only the slab and things that truly float get a shadow.
+          Gradients are rare and never behind a number.</p></div>
+      <div class="grid g4" style="margin-bottom:var(--s6)">
+        <div class="c c--line"><span class="kick">Flat + tone</span><p class="note" style="margin-top:8px;font-size:12.5px">Every card. #151515 on #050505, no border.</p></div>
+        <div class="c" style="box-shadow:var(--el-1)"><span class="kick">el-1</span><p class="note" style="margin-top:8px;font-size:12.5px">Hover and the rail's + button.</p></div>
+        <div class="c" style="box-shadow:var(--el-2)"><span class="kick">el-2</span><p class="note" style="margin-top:8px;font-size:12.5px">Open filter menus, the profile popover.</p></div>
+        <div class="c" style="box-shadow:var(--el-3)"><span class="kick">el-3 + slab</span><p class="note" style="margin-top:8px;font-size:12.5px">Drawers. The slab uses a wider, greener pair so it reads as sitting on citron.</p></div>
+      </div>
+      <span class="lab">Gradients</span>
+      <div class="grid g3">
+        <div><div class="gr gr-cit"></div><p class="note" style="margin-top:9px;font-size:12.5px">
+          <strong>Citron.</strong> Lime → orange, 120°. Empty states and the brief header only.</p></div>
+        <div><div class="gr gr-fade"></div><p class="note" style="margin-top:9px;font-size:12.5px">
+          <strong>Series fade.</strong> Under a sparkline, vertical, to zero. The only gradient
+          allowed inside a chart.</p></div>
+        <div><div class="gr gr-dim"></div><p class="note" style="margin-top:9px;font-size:12.5px">
+          <strong>Card dim.</strong> A horizontal tone wash for scroll-fade edges on the capsule
+          field. Never coloured.</p></div>
+      </div>
+    </section>
+
+    <!-- ══════ 05 CONTROLS ══════ -->
+    <section class="sec" id="controls">
+      <div class="sec-head"><h2 class="sec-title">Controls</h2>
+        <p class="sec-note">Pills throughout. Lime is the only action colour; orange is a reading
+          and never becomes a button. Filter pills always read <code>Key: Value ⌄</code> so the
+          current state is legible without opening anything.</p></div>
+      <div class="grid g12" style="margin-bottom:var(--s4)">
+        <div class="c" style="grid-column:span 5">
+          <div class="c-hd"><h3>Actions</h3></div>
+          <div style="display:flex;gap:var(--s2);flex-wrap:wrap">
+            <button class="btn">Promote</button><button class="btn btn--ghost">Watch</button>
+            <button class="btn btn--out">Pass</button><button class="btn" disabled>Gate failed</button>
+            <button class="btn btn--busy" aria-label="Scanning">Scanning</button></div>
+          <div class="seg" style="margin-top:var(--s4)" role="group" aria-label="Range">
+            <button type="button" aria-pressed="true">Today</button>
+            <button type="button" aria-pressed="false">7d</button>
+            <button type="button" aria-pressed="false">30d</button></div>
+        </div>
+        <div class="c" style="grid-column:span 4">
+          <div class="c-hd"><h3>Filters</h3></div>
+          <div style="display:flex;gap:var(--s2);flex-wrap:wrap;align-items:center">
+            <button class="fpill">Date: <b>Today</b> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+            <button class="fpill">Platform: <b>All</b> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+            <button class="sqbtn" aria-label="Settings"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h10M18 8h2M4 16h4M12 16h8"/><circle cx="16" cy="8" r="2.4"/><circle cx="10" cy="16" r="2.4"/></svg></button></div>
+          <p class="note" style="font-size:12.5px;margin-top:var(--s4)">The label stays visible at
+            all times; only the bold value changes.</p>
+        </div>
+        <div class="c" style="grid-column:span 3">
+          <div class="c-hd"><h3>Pills</h3></div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <span class="pill pill--lime">Rank 1</span><span class="pill pill--w">Fit pass</span>
+            <span class="pill pill--orange">Refused</span><span class="pill pill--fail">Error</span>
+            <span class="pill">Substack</span></div>
+          <div style="display:flex;gap:var(--s4);flex-wrap:wrap;margin-top:var(--s4)">
+            <span class="ring lime"><i></i>Cleared</span><span class="ring orange"><i></i>Refused</span>
+            <span class="ring white"><i></i>Scanned</span></div>
+        </div>
+      </div>
+      <div class="grid g3">
+        <label><span class="lab">Mandate</span><input class="inp" value="Design &amp; Built Environment" aria-label="Mandate"></label>
+        <label><span class="lab">Audience band</span><input class="inp" placeholder="50,000 – 500,000" aria-label="Audience band"></label>
+        <label><span class="lab">Score threshold</span><input class="inp inp--err" value="115" aria-label="Score threshold" aria-describedby="e3">
+          <span class="em" id="e3">Must be 0–100. Your last drop used 70.</span></label>
+      </div>
+    </section>
+
+    <!-- ══════ 06 FACES ══════ -->
+    <section class="sec" id="faces">
+      <div class="sec-head"><h2 class="sec-title">Faces</h2>
+        <p class="sec-note">Circular, full colour, with the score as a horizontal capsule beneath
+          rather than a ring — the capsule is this world's unit, so the face uses it too.
+          Portraits are authored placeholders.</p></div>
+      <div class="faces" style="margin-bottom:var(--s5)">
+        <div class="face"><div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#C4F04E"/><circle cx="50" cy="38" r="19" fill="#0A0A0A"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#0A0A0A"/></svg></div>
+          <div class="n">Mara Ellison</div><div class="m">Substack · 214K</div>
+          <span class="scorecap cap cap--lime" style="padding:4px 14px;font-size:12px">91</span></div>
+        <div class="face"><div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#F5852A"/><circle cx="50" cy="37" r="18" fill="#0A0A0A"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#0A0A0A"/></svg></div>
+          <div class="n">Dev Okonjo</div><div class="m">YouTube · 480K</div>
+          <span class="scorecap cap cap--lime" style="padding:4px 14px;font-size:12px">84</span></div>
+        <div class="face"><div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#FFFFFF"/><circle cx="50" cy="39" r="20" fill="#0A0A0A"/><path d="M10 100c0-22 18-33 40-33s40 11 40 33z" fill="#0A0A0A"/></svg></div>
+          <div class="n">Sena Ruiz</div><div class="m">TikTok · 1.2M</div>
+          <span class="scorecap cap cap--white" style="padding:4px 14px;font-size:12px">78</span></div>
+        <div class="face"><div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#2A2A2A"/><circle cx="50" cy="37" r="18" fill="#C4F04E"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#C4F04E"/></svg></div>
+          <div class="n">Theo Brandt</div><div class="m">Podcast · 96K</div>
+          <span class="scorecap cap cap--white" style="padding:4px 14px;font-size:12px">72</span></div>
+        <div class="face"><div class="avatar" style="opacity:.55"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#1F1F1F"/><circle cx="50" cy="37" r="18" fill="#6A6A6A"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#6A6A6A"/></svg></div>
+          <div class="n" style="color:var(--text-3)">Iris Nakamura</div><div class="m">Gate fail</div>
+          <span class="scorecap cap cap--orange" style="padding:4px 14px;font-size:12px">68</span></div>
+      </div>
+      <div class="grid g2">
+        <div class="c"><span class="lab">Sizes — 22 / 30 / 38 / 54</span>
+          <div class="avs">
+            <div class="avatar" style="width:22px;height:22px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#C4F04E"/><circle cx="50" cy="38" r="19" fill="#0A0A0A"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#0A0A0A"/></svg></div>
+            <div class="avatar" style="width:30px;height:30px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#F5852A"/><circle cx="50" cy="38" r="19" fill="#0A0A0A"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#0A0A0A"/></svg></div>
+            <div class="avatar" style="width:38px;height:38px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#FFFFFF"/><circle cx="50" cy="38" r="19" fill="#0A0A0A"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#0A0A0A"/></svg></div>
+            <div class="avatar" style="width:54px;height:54px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#2A2A2A"/><circle cx="50" cy="38" r="19" fill="#C4F04E"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#C4F04E"/></svg></div></div>
+          <p class="note" style="margin-top:var(--s4);font-size:12.5px">The score capsule detaches
+            below 38px — in tables the score already sits in its own capsule column.</p></div>
+        <div class="c"><span class="lab">Group — watchlist</span>
+          <div class="stack" style="margin-top:var(--s4)">
+            <div class="avatar" style="width:36px;height:36px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#C4F04E"/><circle cx="50" cy="38" r="19" fill="#0A0A0A"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#0A0A0A"/></svg></div>
+            <div class="avatar" style="width:36px;height:36px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#F5852A"/><circle cx="50" cy="38" r="19" fill="#0A0A0A"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#0A0A0A"/></svg></div>
+            <div class="avatar" style="width:36px;height:36px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#FFFFFF"/><circle cx="50" cy="38" r="19" fill="#0A0A0A"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#0A0A0A"/></svg></div>
+            <div class="avatar" style="width:36px;height:36px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#2A2A2A"/><circle cx="50" cy="38" r="19" fill="#C4F04E"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#C4F04E"/></svg></div>
+            <div class="more">+10</div></div>
+          <p class="note" style="margin-top:var(--s4);font-size:12.5px">Overlap −12px with a 3px
+            ring in the card's own tone. Groups appear inside timeline capsules too, exactly as
+            the reference does it.</p></div>
+      </div>
+    </section>
+
+    <!-- ══════ 07 CHARTS ══════ -->
+    <section class="sec" id="data">
+      <div class="sec-head"><h2 class="sec-title">Charts</h2>
+        <p class="sec-note">Capsules first, lines second, and never more than three colours.
+          Every card closes with a right-aligned <code>Total:</code> so a glance answers "of how
+          many?". Synthetic demonstration data.</p></div>
+
+      <div class="grid g12" style="margin-bottom:var(--s4)">
+        <div class="c" style="grid-column:span 7">
+          <div class="c-hd"><h3>Evidence timeline · 12 weeks</h3><span class="r"><button class="dots" aria-label="Menu">•••</button></span></div>
+          <div class="tlwrap">
+            <div class="tlguides" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="tl">
+              <div class="tlrow"><span class="d">W−12</span>
+                <span class="tlbar cap--lime" style="width:54%"><span class="lg">SU</span>Cadence break<span class="n">16</span></span></div>
+              <div class="tlrow"><span class="d">W−09</span>
+                <span class="tlbar cap--orange" style="width:78%"><span class="lg">X</span>Sponsor churn<span class="n">29</span></span></div>
+              <div class="tlrow"><span class="d">W−07</span>
+                <span class="tlbar cap--white" style="width:46%">
+                  <span class="stack" style="margin-left:2px">
+                    <span class="avatar" style="width:22px;height:22px;box-shadow:0 0 0 2px var(--white)"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#C4F04E"/><circle cx="50" cy="38" r="19" fill="#0A0A0A"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#0A0A0A"/></svg></span>
+                    <span class="avatar" style="width:22px;height:22px;margin-left:-8px;box-shadow:0 0 0 2px var(--white)"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#F5852A"/><circle cx="50" cy="38" r="19" fill="#0A0A0A"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#0A0A0A"/></svg></span>
+                    <span class="avatar" style="width:22px;height:22px;margin-left:-8px;box-shadow:0 0 0 2px var(--white)"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#2A2A2A"/><circle cx="50" cy="38" r="19" fill="#C4F04E"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#C4F04E"/></svg></span>
+                  </span>Peer signals<span class="n">15</span></span></div>
+              <div class="tlrow"><span class="d">W−05</span>
+                <span class="tlbar cap--lime" style="width:66%"><span class="lg">SU</span>Solo-operator<span class="n">21</span></span></div>
+              <div class="tlrow"><span class="d">W−03</span>
+                <span class="tlbar cap--white" style="width:32%"><span class="lg">MD</span>Cross-post<span class="n">10</span></span></div>
+              <div class="tlrow"><span class="d">W−01</span>
+                <span class="tlbar cap--orange" style="width:44%"><span class="lg">IG</span>Burnout language<span class="n">15</span></span></div>
+              <div class="tlrow"><span class="d">Now</span>
+                <span class="tlbar cap--lime" style="width:92%"><span class="lg">WS</span>Surfaced to drop<span class="n">91</span></span></div>
+            </div>
+          </div>
+          <div class="c-ft">
+            <span class="ring lime"><i></i>Rules</span><span class="ring orange"><i></i>Model</span>
+            <span class="ring white"><i></i>Human</span>
+            <span class="total">Total: <b>284</b></span></div>
+        </div>
+
+        <div class="c" style="grid-column:span 5">
+          <div class="c-hd"><h3>Value vs. extracted</h3><span class="r"><button class="dots" aria-label="Menu">•••</button></span></div>
+          <svg viewBox="0 0 460 230" width="100%" height="230" role="img"
+            aria-label="Estimated audience value climbs from 41 to 96 thousand dollars over eleven months while extracted revenue stays between 3 and 9 thousand.">
+            <defs><linearGradient id="cfade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#C4F04E" stop-opacity=".38"/><stop offset="100%" stop-color="#C4F04E" stop-opacity="0"/></linearGradient></defs>
+            <g stroke="var(--line)" stroke-width="1" stroke-dasharray="3 4">
+              <line x1="46" y1="28" x2="450" y2="28"/><line x1="46" y1="84" x2="450" y2="84"/><line x1="46" y1="140" x2="450" y2="140"/></g>
+            <line x1="46" y1="188" x2="450" y2="188" stroke="var(--line-hi)" stroke-width="1"/>
+            <path d="M58 138 C150 124 220 90 300 70 C360 56 406 40 444 26 L444 180 C406 178 360 176 300 174 C220 172 150 168 58 166 Z" fill="url(#cfade)"/>
+            <path d="M58 138 C150 124 220 90 300 70 C360 56 406 40 444 26" fill="none" stroke="var(--lime)" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M58 166 C150 168 220 172 300 174 C360 175 406 178 444 180" fill="none" stroke="var(--orange)" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="444" cy="26" r="5" fill="var(--lime)"/><circle cx="444" cy="180" r="5" fill="var(--orange)"/>
+            <g font-family="Chivo" font-size="10" font-weight="700" fill="var(--text-3)">
+              <text x="2" y="31">$100K</text><text x="10" y="87">$50K</text><text x="34" y="191">0</text>
+              <text x="54" y="210">Sep</text><text x="236" y="210">Feb</text><text x="424" y="210">Jul</text></g>
+          </svg>
+          <div class="c-ft">
+            <span class="ring lime"><i></i>Est. value</span><span class="ring orange"><i></i>Extracted</span>
+            <span class="total">Gap: <b>$87K</b></span></div>
+        </div>
+      </div>
+
+      <div class="grid g12">
+        <div class="c" style="grid-column:span 4">
+          <div class="c-hd"><h3>Pillar breakdown</h3><span class="r"><button class="dots" aria-label="Menu">•••</button></span></div>
+          <div style="display:flex;flex-direction:column;gap:var(--s4);margin-top:var(--s2)">
+            <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:7px">
+              <span style="color:var(--text-2)">Monetization gap</span><span style="font-weight:800">88</span></div>
+              <span class="cap" style="height:26px;width:88%;background:var(--lime);color:var(--on-lime);
+                justify-content:flex-end;padding-right:11px;font-size:11.5px">rules</span></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:7px">
+              <span style="color:var(--text-2)">Operator strain</span><span style="font-weight:800">74</span></div>
+              <span class="cap" style="height:26px;width:74%;background:var(--orange);color:var(--on-orange);
+                justify-content:flex-end;padding-right:11px;font-size:11.5px">model</span></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:7px">
+              <span style="color:var(--text-2)">Format fit</span><span style="font-weight:800">gate</span></div>
+              <span class="cap" style="height:26px;width:100%;background:var(--white);color:var(--slab);
+                justify-content:flex-end;padding-right:11px;font-size:11.5px">pass · 0 pts</span></div>
+          </div>
+          <div class="c-ft"><span class="total">Composite: <b>91</b></span></div>
+        </div>
+
+        <div class="c" style="grid-column:span 4">
+          <div class="c-hd"><h3>Distribution</h3><span class="r"><button class="dots" aria-label="Menu">•••</button></span></div>
+          <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:6px;
+               min-height:170px;position:relative;padding-top:var(--s3)">
+            <span class="cap cap--v" style="height:38px;background:var(--card-3);color:var(--text-2);font-size:11px">4</span>
+            <span class="cap cap--v" style="height:62px;background:var(--card-3);color:var(--text-2);font-size:11px">7</span>
+            <span class="cap cap--v" style="height:104px;background:var(--card-3);color:var(--text-2);font-size:11px">12</span>
+            <span class="cap cap--v" style="height:120px;background:var(--card-3);color:var(--text-2);font-size:11px">14</span>
+            <span class="cap cap--v" style="height:76px;background:var(--card-3);color:var(--text-2);font-size:11px">8</span>
+            <span class="cap cap--v cap--lime" style="height:52px;font-size:11px">3</span>
+            <span class="cap cap--v cap--lime" style="height:44px;font-size:11px">2</span>
+            <span class="cap cap--v cap--lime" style="height:34px;font-size:11px">1</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:10.5px;color:var(--text-3);
+               font-weight:700;margin-top:9px"><span>30</span><span>50</span><span>70</span><span>90</span></div>
+          <div class="c-ft"><span class="ring lime"><i></i>In the drop</span>
+            <span class="total">Total: <b>47</b></span></div>
+        </div>
+
+        <div class="c" style="grid-column:span 4">
+          <div class="c-hd"><h3>Platform mix</h3><span class="r"><button class="dots" aria-label="Menu">•••</button></span></div>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:var(--s2)">
+            <span class="cap" style="height:30px;width:100%;background:var(--lime);color:var(--on-lime);
+              justify-content:space-between;padding:0 13px;font-size:12px"><span>Substack</span><span>17</span></span>
+            <span class="cap" style="height:30px;width:78%;background:var(--white);color:var(--slab);
+              justify-content:space-between;padding:0 13px;font-size:12px"><span>YouTube</span><span>13</span></span>
+            <span class="cap" style="height:30px;width:56%;background:var(--orange);color:var(--on-orange);
+              justify-content:space-between;padding:0 13px;font-size:12px"><span>TikTok</span><span>9</span></span>
+            <span class="cap" style="height:30px;width:38%;background:var(--card-3);color:var(--text);
+              justify-content:space-between;padding:0 13px;font-size:12px"><span>Podcast</span><span>6</span></span>
+            <span class="cap" style="height:30px;width:16%;background:var(--card-3);color:var(--text);
+              justify-content:space-between;padding:0 13px;font-size:12px"><span>Medium</span><span>2</span></span>
+          </div>
+          <div class="c-ft"><span class="total">Total: <b>47</b></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════ 08 IN SITU ══════ -->
+    <section class="sec" id="situ">
+      <div class="sec-head"><h2 class="sec-title">The drop</h2>
+        <p class="sec-note">The whole system doing the job. The score column is a capsule, so the
+          table and the charts speak the same language. Synthetic candidates.</p></div>
+      <div class="dropwrap" style="margin-bottom:var(--s4)">
+        <div class="drop-hd">
+          <div><h3 style="font-size:24px;letter-spacing:-.04em">Morning drop</h3>
+            <p class="note" style="margin-top:6px;font-size:12.5px">Design &amp; Built Environment ·
+              scanned 04:12 · 47 seen · 6 surfaced · threshold 70</p></div>
+          <div style="display:flex;gap:var(--s2);align-items:center">
+            <span class="pill pill--orange">6 to work</span><button class="btn btn--sm">Brief the room</button></div>
+        </div>
+        <div class="drow drow--hd"><span>#</span><span>Score</span><span>Candidate</span>
+          <span class="hm">Gap / strain</span><span class="hs">Play</span><span class="hm">Verdict</span></div>
+
+        <div class="drow"><span class="rk">01</span>
+          <span><span class="cap cap--lime" style="padding:5px 13px;font-size:13px">91</span></span>
+          <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#C4F04E"/><circle cx="50" cy="38" r="19" fill="#0A0A0A"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#0A0A0A"/></svg></span>
+            <span><span class="n">Mara Ellison</span><br><span class="m">Substack · 214K · architecture</span></span></span>
+          <span class="hm" style="display:flex;gap:5px;align-items:center">
+            <span class="cap" style="height:20px;width:88%;background:var(--lime);color:var(--on-lime);font-size:10.5px">88</span>
+            <span class="cap" style="height:20px;width:74%;background:var(--orange);color:var(--on-orange);font-size:10.5px">74</span></span>
+          <span class="hs"><span class="pill">Newsletter</span></span>
+          <span class="acts hm"><button class="btn btn--sm">Promote</button><button class="btn btn--ghost btn--sm">Watch</button></span></div>
+
+        <div class="drow"><span class="rk">02</span>
+          <span><span class="cap cap--lime" style="padding:5px 13px;font-size:13px">84</span></span>
+          <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#F5852A"/><circle cx="50" cy="37" r="18" fill="#0A0A0A"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#0A0A0A"/></svg></span>
+            <span><span class="n">Dev Okonjo</span><br><span class="m">YouTube · 480K · DIY electronics</span></span></span>
+          <span class="hm" style="display:flex;gap:5px;align-items:center">
+            <span class="cap" style="height:20px;width:79%;background:var(--lime);color:var(--on-lime);font-size:10.5px">79</span>
+            <span class="cap" style="height:20px;width:82%;background:var(--orange);color:var(--on-orange);font-size:10.5px">82</span></span>
+          <span class="hs"><span class="pill">Course + kit</span></span>
+          <span class="acts hm"><button class="btn btn--sm">Promote</button><button class="btn btn--ghost btn--sm">Watch</button></span></div>
+
+        <div class="drow"><span class="rk">03</span>
+          <span><span class="cap cap--white" style="padding:5px 13px;font-size:13px">78</span></span>
+          <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#FFFFFF"/><circle cx="50" cy="39" r="20" fill="#0A0A0A"/><path d="M10 100c0-22 18-33 40-33s40 11 40 33z" fill="#0A0A0A"/></svg></span>
+            <span><span class="n">Sena Ruiz</span><br><span class="m">TikTok · 1.2M · food</span></span></span>
+          <span class="hm" style="display:flex;gap:5px;align-items:center">
+            <span class="cap" style="height:20px;width:91%;background:var(--lime);color:var(--on-lime);font-size:10.5px">91</span>
+            <span class="cap" style="height:20px;width:51%;background:var(--orange);color:var(--on-orange);font-size:10.5px">51</span></span>
+          <span class="hs"><span class="pill">CPG line</span></span>
+          <span class="acts hm"><button class="btn btn--sm">Promote</button><button class="btn btn--ghost btn--sm">Watch</button></span></div>
+
+        <div class="drow"><span class="rk">04</span>
+          <span><span class="cap cap--white" style="padding:5px 13px;font-size:13px">72</span></span>
+          <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#2A2A2A"/><circle cx="50" cy="37" r="18" fill="#C4F04E"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#C4F04E"/></svg></span>
+            <span><span class="n">Theo Brandt</span><br><span class="m">Podcast · 96K · markets</span></span></span>
+          <span class="hm" style="display:flex;gap:5px;align-items:center">
+            <span class="cap" style="height:20px;width:66%;background:var(--lime);color:var(--on-lime);font-size:10.5px">66</span>
+            <span class="cap" style="height:20px;width:69%;background:var(--orange);color:var(--on-orange);font-size:10.5px">69</span></span>
+          <span class="hs"><span class="pill">Paid research</span></span>
+          <span class="acts hm"><button class="btn btn--sm">Promote</button><button class="btn btn--ghost btn--sm">Watch</button></span></div>
+
+        <div class="drow" style="opacity:.5"><span class="rk">—</span>
+          <span><span class="cap cap--orange" style="padding:5px 13px;font-size:13px">68</span></span>
+          <span class="who"><span class="avatar" style="opacity:.6"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#1F1F1F"/><circle cx="50" cy="37" r="18" fill="#6A6A6A"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#6A6A6A"/></svg></span>
+            <span><span class="n">Iris Nakamura</span><br><span class="m">Medium · 61K · ML research</span></span></span>
+          <span class="hm"><span class="pill pill--orange">Format fit — gate fail</span></span>
+          <span class="hs">—</span>
+          <span class="acts hm"><button class="btn btn--sm" disabled>Gate failed</button></span></div>
+      </div>
+
+      <div class="grid g2">
+        <div class="empty">
+          <div class="gr gr-cit" style="height:88px;max-width:200px;margin:0 auto var(--s5);border-radius:var(--r-lg)"></div>
+          <h4>Worked to zero</h4>
+          <p class="note" style="max-width:44ch;margin:0 auto var(--s5)">Every candidate in today's
+            drop has a verdict. Next scan lands 04:12 tomorrow; 14 on the watchlist are still
+            being re-scored.</p>
+          <button class="btn btn--ghost">Open watchlist</button></div>
+        <div class="c"><span class="lab">Loading</span>
+          <div style="display:flex;gap:var(--s4);align-items:center;margin:var(--s4) 0 var(--s3)">
+            <div class="sk" style="width:34px;height:34px;flex:0 0 34px;border-radius:50%"></div>
+            <div style="flex:1"><div class="sk" style="width:54%"></div><div class="sk" style="width:32%;margin-top:8px;height:10px"></div></div></div>
+          <div style="display:flex;gap:var(--s4);align-items:center">
+            <div class="sk" style="width:34px;height:34px;flex:0 0 34px;border-radius:50%"></div>
+            <div style="flex:1"><div class="sk" style="width:70%"></div><div class="sk" style="width:26%;margin-top:8px;height:10px"></div></div></div>
+          <p class="note" style="margin-top:var(--s4);font-size:12.5px">Skeletons are pill-shaped
+            because everything here is — including the score capsule they stand in for.</p></div>
+      </div>
+    </section>
+
+    <!-- ══════ 09 TOKENS ══════ -->
+    <section class="sec" id="tokens">
+      <div class="sec-head"><h2 class="sec-title">Tokens</h2>
+        <p class="sec-note">Black slab on citron is the default. Light flips to a bone slab on a
+          deeper citron and darkens lime and orange so both clear 4.5:1 on white.</p></div>
+<pre class="tok">:root{
+  <span class="cm">/* THE ONLY THREE DATA COLOURS. a fourth series means the wrong chart. */</span>
+  --lime:<span class="v">#C4F04E</span>;    <span class="cm">/* cleared gate, widening gap, primary action */</span>
+  --orange:<span class="v">#F5852A</span>;  <span class="cm">/* refused, falling, strain — never an action  */</span>
+  --white:<span class="v">#FFFFFF</span>;   <span class="cm">/* scanned-undecided + all body text          */</span>
+
+  <span class="cm">/* structure — cards have NO border; the tone step is the separation */</span>
+  --page:<span class="v">#CBEA92</span>;  --slab:<span class="v">#050505</span>;
+  --card:<span class="v">#151515</span>;  --card-2:<span class="v">#1F1F1F</span>;  --card-3:<span class="v">#2A2A2A</span>;
+  --line:<span class="v">rgba(255,255,255,.09)</span>;  --line-hi:<span class="v">rgba(255,255,255,.20)</span>;
+  --text:<span class="v">#FFFFFF</span>;  --text-2:<span class="v">#9C9C9C</span>;  --text-3:<span class="v">#6A6A6A</span>;
+  --on-lime:<span class="v">#0A0A0A</span>;  --on-orange:<span class="v">#0A0A0A</span>;  --fail:<span class="v">#FF4D4D</span>;
+
+  --r-sm:<span class="v">8px</span>; --r-md:<span class="v">14px</span>; --r-lg:<span class="v">20px</span>;
+  --r-slab:<span class="v">26px</span>; --r-pill:<span class="v">999px</span>;   <span class="cm">/* 16px square-btn is the ONE exception */</span>
+  --s1:<span class="v">4px</span>; --s2:<span class="v">8px</span>; --s3:<span class="v">12px</span>; --s4:<span class="v">16px</span>; --s5:<span class="v">24px</span>;
+  --s6:<span class="v">34px</span>; --s7:<span class="v">50px</span>; --s8:<span class="v">72px</span>; --s9:<span class="v">104px</span>;
+
+  --el-1:<span class="v">0 1px 2px rgba(0,0,0,.5), 0 3px 8px -3px rgba(0,0,0,.5)</span>;
+  --el-2:<span class="v">0 2px 5px rgba(0,0,0,.5), 0 14px 30px -12px rgba(0,0,0,.7)</span>;
+  --el-3:<span class="v">0 4px 10px rgba(0,0,0,.55), 0 32px 60px -22px rgba(0,0,0,.85)</span>;
+  --el-slab:<span class="v">0 10px 24px -10px rgba(20,32,6,.4), 0 44px 88px -34px rgba(20,32,6,.55)</span>;
+
+  --f:<span class="v">"Chivo"</span>;  <span class="cm">/* ONE family. 300 body · 600/800 ui · 900 display caps */</span>
+
+  <span class="cm">/* SIGNATURE — the capsule. every quantity carries its own number. */</span>
+  <span class="cm">   vertical: writing-mode:vertical-rl, width 30, radius 999, height = value */</span>
+  <span class="cm">   horizontal: height 20–34, radius 999, number pinned to the far end   */</span>
+  --gr-cit:<span class="v">linear-gradient(120deg,var(--lime),var(--orange))</span>;
+  --gr-fade:<span class="v">linear-gradient(180deg,rgba(196,240,78,.5),transparent)</span>;
+
+  --lift:<span class="v">translateY(-2px)</span>;  --ease:<span class="v">cubic-bezier(.2,.7,.3,1)</span>;  --dur:<span class="v">150ms</span>;
+}
+:root[data-theme="light"]{  <span class="cm">/* bone slab on deeper citron; hues darken for contrast */</span>
+  --page:<span class="v">#A8CF63</span>;  --slab:<span class="v">#FBFBF7</span>;
+  --card:<span class="v">#FFFFFF</span>;  --card-2:<span class="v">#F1F1EC</span>;  --card-3:<span class="v">#E4E4DD</span>;
+  --text:<span class="v">#0A0A0A</span>;  --text-2:<span class="v">#5C5C5C</span>;  --text-3:<span class="v">#8C8C8C</span>;
+  --lime:<span class="v">#7FA81E</span>;  --orange:<span class="v">#D96A10</span>;  --white:<span class="v">#0A0A0A</span>;
+}</pre>
+    </section>
+
+    <footer>
+      <p><b>Toolkit 03 — CITRON.</b> Built from the CHECK BOX reference. Best when the Scout works
+        the same screen every day and can learn a three-colour code once — the capsule removes
+        axis-reading entirely. Weakest for anything needing more than three categories, and the
+        citron page is a strong opinion that will not suit every room it's shown in.</p>
+      <p style="margin-bottom:0">All candidates, scores and revenue figures are synthetic
+        demonstration data. Portraits are authored placeholders.</p>
+    </footer>
+  </div>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement, btns=document.querySelectorAll('.tsw button');
+  function set(t){root.setAttribute('data-theme',t);
+    btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.set===t));});
+    try{localStorage.setItem('wt-03',t);}catch(e){}}
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set);});});
+  document.querySelectorAll('.seg').forEach(function(g){var bs=g.querySelectorAll('button');
+    bs.forEach(function(b){b.addEventListener('click',function(){
+      bs.forEach(function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');});});});
+  document.querySelectorAll('.rbtn').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.rbtn').forEach(function(x){x.removeAttribute('aria-current');});
+    b.setAttribute('aria-current','true');});});
+  var saved=null; try{saved=localStorage.getItem('wt-03');}catch(e){}
+  if(saved){set(saved);}
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme:light)').matches){set('light');}
+})();
+</script>
+</body>
+</html>

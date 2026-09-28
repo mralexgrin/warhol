@@ -1,0 +1,3680 @@
+{
+  "creatorId": "alexrollins",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:10:38.064Z",
+  "observationCount": 760,
+  "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": false,
+  "escalatedWhy": "we looked in 26 places — they already have a youtube channel, newsletter and store. We didn't go further.",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 3666,
+      "avatar": {
+        "url": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/34f31962b1d06a75fdb80b95c7adbef0~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=88053e0e&x-expires=1786885200&x-signature=3PSSC%2F%2F92wA6QCsY4Ye4HTbSO1Q%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@alexrollins",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 0,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIdro_n6ZBBa_3wssvZ-3uYejR-pYif7bZ3F-sJr33JSyktwwYCCLRkkFCHIjZW7Up1yAzVU4w=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@alexrollins",
+      "why": "Alex Rollins — the YouTube Data API resolved @alexrollins"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/alexrollins/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 400,
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=alexrollins.bsky.social",
+      "why": "page says it is not there"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@alexrollins",
+      "evidence": "https://www.youtube.com/@alexrollins",
+      "placesLooked": 26,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.614Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.614Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.615Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.615Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.314Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.314Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.314Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.314Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.314Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.768Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.768Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.768Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.768Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.164Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.164Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.164Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.164Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.164Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.966Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.967Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.967Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.967Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.368Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.368Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.368Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.417Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.417Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.418Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.163Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.163Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/alexrollins",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.163Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.737Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.738Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.738Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.890Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.890Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.891Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.601Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.601Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.601Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.746Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.746Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.746Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.746Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.746Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at substack.com/@alexrollins — not confirmed as theirs",
+      "evidence": "https://substack.com/@alexrollins",
+      "placesLooked": 36,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.615Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.616Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://alexrollins.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.616Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.616Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://alexrollins.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.616Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.616Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.315Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.315Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://alexrollins.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.315Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.315Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://alexrollins.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.315Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.315Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.769Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.769Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://alexrollins.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.769Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.769Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://alexrollins.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.769Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.165Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.165Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://alexrollins.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.165Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.165Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://alexrollins.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.165Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.165Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.969Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.970Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://alexrollins.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.970Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.970Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://alexrollins.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.971Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.971Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@alexrollins",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.368Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@alexrollins",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.368Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://alexrollins.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.368Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.368Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://alexrollins.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.368Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://substack.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.474Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.475Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.476Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://alexrollins.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.476Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.476Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://alexrollins.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.476Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://substack.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.278Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.280Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.281Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://alexrollins.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.281Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.282Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://alexrollins.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.282Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.substack.com/",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.738Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@alexrollins",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.738Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://alexrollins.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.738Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.738Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://alexrollins.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.738Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.substack.com/",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.891Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@alexrollins",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.891Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://alexrollins.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.891Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.891Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://alexrollins.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.891Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.substack.com/",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.602Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@alexrollins",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.602Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://alexrollins.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.602Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.602Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://alexrollins.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.602Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://substack.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.803Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.804Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.804Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://alexrollins.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.804Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.804Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://alexrollins.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.804Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://substack.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.804Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at alexrollins.gumroad.com — not confirmed as theirs",
+      "evidence": "https://alexrollins.gumroad.com/",
+      "placesLooked": 15,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.myshopify.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.616Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://alexrollins.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.616Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:34:44.616Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.617Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:34:44.617Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.alexrollins.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.617Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.myshopify.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.315Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://alexrollins.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.315Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:54:35.316Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.316Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:54:35.316Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://alexrollins.shopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.316Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.myshopify.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.770Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://alexrollins.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.770Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:57:46.770Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.770Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:57:46.770Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.770Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.myshopify.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.165Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://alexrollins.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.165Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:45:13.166Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.166Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:45:13.166Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.myshopify.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.973Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://alexrollins.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.973Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:49:36.973Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.973Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:49:36.974Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://alexrollins.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.974Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.myshopify.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.369Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://alexrollins.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.369Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:28:24.369Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.369Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:28:24.369Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.myshopify.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.477Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://alexrollins.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.477Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:35:35.477Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.477Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:35:35.477Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.myshopify.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.283Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://alexrollins.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.284Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:30:05.284Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.284Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:30:05.285Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.myshopify.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.738Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://alexrollins.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.739Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:59:38.739Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.739Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:59:38.739Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.myshopify.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.892Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://alexrollins.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.892Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:27:13.892Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.892Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:27:13.892Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.myshopify.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.602Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://alexrollins.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.602Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:53:37.602Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.602Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:53:37.602Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "inconclusive",
+          "url": "https://alexrollins.myshopify.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.805Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "hit",
+          "url": "https://alexrollins.gumroad.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.805Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:10:35.805Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.805Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/alexrollins",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:10:35.805Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.alexrollins.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.805Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 28,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.617Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.617Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.617Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.316Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.316Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.316Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.770Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.770Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.770Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.166Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.166Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.975Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:36.975Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.369Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.369Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.478Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.478Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.286Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.286Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.739Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:38.739Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.893Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:13.893Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.603Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:37.603Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.806Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.806Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/alexrollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.806Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by an official directory",
+      "why": "found it — https://podcasts.apple.com/us/podcast/the-alex-marlow-show/id1777276736?uo=4",
+      "evidence": "https://itunes.apple.com/search?term=Alex&entity=podcast&limit=5",
+      "placesLooked": 2,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Alex&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Alex Marlow Show\" by The Alex Marlow Show",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.900Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Alex&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Alex Marlow Show\" by The Alex Marlow Show",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.614Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://alexrollins.buzzsprout.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.615Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://alexrollins.podbean.com/freeze",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.615Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Alex&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Alex Marlow Show\" by The Alex Marlow Show",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.906Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/alex-rollins",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.906Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Alex&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Alex Marlow Show\" by The Alex Marlow Show",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.248Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Alex&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Alex Marlow Show\" by The Alex Marlow Show",
+          "advisory": false,
+          "at": "2026-08-07T11:49:37.022Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/5e27a451-e6e6-4c51-aa03-a7370003783c/b49c361e-714e-45bb-9ac5-b2180157213b/eed2f93f-cf50-423e-96f9-b21801575b54/podcast.rss",
+          "status": 200,
+          "why": "100 posts read from The Alex Marlow Show — the publication title reads \"The Alex Marlow Show\"",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.836Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Alex&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Alex Marlow Show\" by The Alex Marlow Show",
+          "advisory": false,
+          "at": "2026-08-10T21:28:24.837Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/5e27a451-e6e6-4c51-aa03-a7370003783c/b49c361e-714e-45bb-9ac5-b2180157213b/eed2f93f-cf50-423e-96f9-b21801575b54/podcast.rss",
+          "status": 200,
+          "why": "100 posts read from The Alex Marlow Show — the publication title reads \"The Alex Marlow Show\"",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.886Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Alex&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Alex Marlow Show\" by The Alex Marlow Show",
+          "advisory": false,
+          "at": "2026-08-10T21:35:35.887Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/5e27a451-e6e6-4c51-aa03-a7370003783c/b49c361e-714e-45bb-9ac5-b2180157213b/eed2f93f-cf50-423e-96f9-b21801575b54/podcast.rss",
+          "status": 200,
+          "why": "100 posts read from The Alex Marlow Show — the publication title reads \"The Alex Marlow Show\"",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.858Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Alex&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Alex Marlow Show\" by The Alex Marlow Show",
+          "advisory": false,
+          "at": "2026-08-12T15:30:05.859Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/5e27a451-e6e6-4c51-aa03-a7370003783c/b49c361e-714e-45bb-9ac5-b2180157213b/eed2f93f-cf50-423e-96f9-b21801575b54/podcast.rss",
+          "status": 200,
+          "why": "100 posts read from The Alex Marlow Show — the publication title reads \"The Alex Marlow Show\"",
+          "advisory": false,
+          "at": "2026-08-12T19:59:39.216Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Alex&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Alex Marlow Show\" by The Alex Marlow Show",
+          "advisory": false,
+          "at": "2026-08-12T19:59:39.217Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/5e27a451-e6e6-4c51-aa03-a7370003783c/b49c361e-714e-45bb-9ac5-b2180157213b/eed2f93f-cf50-423e-96f9-b21801575b54/podcast.rss",
+          "status": 200,
+          "why": "100 posts read from The Alex Marlow Show — the publication title reads \"The Alex Marlow Show\"",
+          "advisory": false,
+          "at": "2026-08-12T20:27:14.153Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Alex&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Alex Marlow Show\" by The Alex Marlow Show",
+          "advisory": false,
+          "at": "2026-08-12T20:27:14.154Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/5e27a451-e6e6-4c51-aa03-a7370003783c/b49c361e-714e-45bb-9ac5-b2180157213b/eed2f93f-cf50-423e-96f9-b21801575b54/podcast.rss",
+          "status": 200,
+          "why": "100 posts read from The Alex Marlow Show — the publication title reads \"The Alex Marlow Show\"",
+          "advisory": false,
+          "at": "2026-08-14T12:53:38.109Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Alex&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Alex Marlow Show\" by The Alex Marlow Show",
+          "advisory": false,
+          "at": "2026-08-14T12:53:38.110Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/5e27a451-e6e6-4c51-aa03-a7370003783c/b49c361e-714e-45bb-9ac5-b2180157213b/eed2f93f-cf50-423e-96f9-b21801575b54/podcast.rss",
+          "status": 200,
+          "why": "100 posts read from The Alex Marlow Show — the publication title reads \"The Alex Marlow Show\"",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.983Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Alex&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Alex Marlow Show\" by The Alex Marlow Show",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.983Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "hit",
+          "url": "https://creators.spotify.com/pod/show/alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:35.984Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at alexrollins.com — not confirmed as theirs",
+      "evidence": "https://alexrollins.com/",
+      "placesLooked": 15,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.900Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://alexrollins.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.900Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.900Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://alexrollins.net",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.901Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "inconclusive",
+          "url": "https://www.instagram.com/alexrollins",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.901Z"
+        },
+        {
+          "place": "proposed_5",
+          "outcome": "hit",
+          "url": "https://www.tiktok.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.901Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.615Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://alexrollins.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.615Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.615Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.907Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://alexrollins.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.907Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.907Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.907Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "miss",
+          "url": "https://alexrollinsmusic.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.907Z"
+        },
+        {
+          "place": "proposed_5",
+          "outcome": "inconclusive",
+          "url": "https://linktr.ee/alexrollins",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.908Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.248Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://alexrollins.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.248Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.248Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.alexrollins.net",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.248Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "inconclusive",
+          "url": "https://linktr.ee/alexrollins",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.248Z"
+        },
+        {
+          "place": "proposed_5",
+          "outcome": "inconclusive",
+          "url": "https://www.instagram.com/alexrollins",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.248Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.tiktok.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.248Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:37.023Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://alexrollins.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:49:37.023Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:37.023Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://www.instagram.com/alexrollins",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T11:49:37.023Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.tiktok.com/@alexrollins",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:37.023Z"
+        },
+        {
+          "place": "proposed_5",
+          "outcome": "inconclusive",
+          "url": "https://linktr.ee/alexrollins",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T11:49:37.023Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:28:26.895Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:28:26.896Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:28:26.896Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:28:26.896Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:28:26.896Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:28:26.896Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:26.897Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://alexrollins.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-10T21:28:26.897Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:35:37.915Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:35:37.915Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:35:37.915Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:35:37.915Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:35:37.915Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-10T21:35:37.916Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:37.916Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://alexrollins.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-10T21:35:37.916Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:07.930Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:07.931Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:07.931Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:07.931Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:07.932Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:30:07.932Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:30:07.933Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://alexrollins.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:30:07.933Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:59:41.280Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:59:41.280Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:59:41.281Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:59:41.281Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:59:41.281Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T19:59:41.281Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:41.281Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://alexrollins.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T19:59:41.281Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:27:16.219Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:27:16.219Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:27:16.219Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:27:16.219Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:27:16.219Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T20:27:16.220Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:16.220Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://alexrollins.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T20:27:16.220Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:53:40.170Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:53:40.170Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:53:40.170Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:53:40.170Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:53:40.170Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:53:40.170Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:40.171Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://alexrollins.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:53:40.171Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.063Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.063Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.063Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.063Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.063Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://alexrollins.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.063Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.063Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://alexrollins.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.063Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://alexrollins.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.063Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://linktr.ee/alexrollins",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.063Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.901Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.615Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.908Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.249Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:49:37.024Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:28:26.897Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:35:37.917Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:30:07.934Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T19:59:41.282Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T20:27:16.221Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:53:40.171Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.063Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.902Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.616Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.908Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.249Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:49:37.024Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:28:26.897Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:35:37.917Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:30:07.935Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T19:59:41.282Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T20:27:16.221Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:53:40.171Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.063Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T20:34:44.902Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:54:35.616Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:57:46.908Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:45:13.249Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:49:37.024Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:28:26.897Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:35:37.917Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:30:07.935Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T19:59:41.283Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T20:27:16.221Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:53:40.171Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:10:38.063Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": false,
+    "why": "they post often enough that 100 posts only reach back 93 days — not far enough behind the last 90 to compare against"
+  },
+  "samples": [
+    {
+      "platform": "Podcast",
+      "publication": "The Alex Marlow Show",
+      "kind": "episode",
+      "title": "Who Will Replace Karoline Leavitt? And, Why the WNBA Must Drop the 'W'",
+      "url": "https://omny.fm/shows/the-alex-marlow-show/who-will-replace-karoline-leavitt-and-why-the-wnba-must-drop-the-w",
+      "at": "2026-08-13T19:45:00.000Z",
+      "thumbnail": null,
+      "excerpt": "In this episode of The Alex Marlow Show, Alex dives into the recent announcement of Caroline Levitt's departure as White House Press Secretary, and the potential candidates who could fill the role. They discuss the qualifications needed for the position, including being a 24/7 workhorse, being able ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:10:38.064Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Alex Marlow Show",
+      "kind": "episode",
+      "title": "Drone Dominance, Airspace Sovereignty: Dr. Gorka On White House Plan for Emerging Military Tech",
+      "url": "https://omny.fm/shows/the-alex-marlow-show/drone-dominance-airspace-sovereignty-dr-gorka-lays-out-white-house-plan-for-emerging-military-tech",
+      "at": "2026-08-13T12:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "In this episode of The Alex Marlow Show, Alex is joined by Dr. Sebastian Gorka, Deputy Assistant to the President and Senior Director for Counter Terrorism in the National Security Council. Dr. Gorka shares his insights on the rapidly evolving landscape of drone warfare and the challenges it poses t",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:10:38.064Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Alex Marlow Show",
+      "kind": "episode",
+      "title": "Shock Upset in Wisconsin: How Francesca Hong Went Down; Prescription Drug Prices Plummeting",
+      "url": "https://omny.fm/shows/the-alex-marlow-show/shock-upset-in-wisconsin-how-francesca-hong-went-down-prescription-drug-prices-plummeting",
+      "at": "2026-08-12T19:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "On the latest edition of The Alex Marlow Show, Despite high polling, Francesca Hong falls in the WI Governor primary; Why did the polling get the Wisconsin race so wrong?; Alex takes a look at some of the bigger results from last night's primary races; AOC reportedly split from her Boyfriend; The So",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:10:38.064Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Alex Marlow Show",
+      "kind": "episode",
+      "title": "As Sharp as Ever: Dennis Prager Gives Rare Interview",
+      "url": "https://omny.fm/shows/the-alex-marlow-show/as-sharp-as-ever-dennis-prager-gives-rare-interview",
+      "at": "2026-08-12T12:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "In this episode of The Alex Marlow Show, Alex is joined by the legendary Dennis Prager! In this rare interview, Dennis shares insights on the importance of Judeo-Christian values, the battle over good and evil, and the significance of wisdom in modern society. They discusses Dennis's recovery, his i",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T20:27:16.221Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Alex Marlow Show",
+      "kind": "episode",
+      "title": "'Woke 2' Is FAR More Radical Than AOC's 'Woke 1'; Fauci  Busted Again",
+      "url": "https://omny.fm/shows/the-alex-marlow-show/woke-2-is-far-more-radical-than-aocs-woke-1-fauci-busted-again",
+      "at": "2026-08-11T19:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "On the latest edition of The Alex Marlow Show, Alex takes a look at why Socialist WI Gubernatorial candidate Francesca Hong didn&rsquo;t receive AOC&rsquo;s endorsement; Alex examines what &lsquo;Woke 1&rsquo; really is, and how recent statements by Liberals are even more radical than the 'Woke 1' e",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T20:27:16.221Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Alex Marlow Show",
+      "kind": "episode",
+      "title": "AOC IVF, WNBA Violence, GOP Gets Bad Polling News",
+      "url": "https://omny.fm/shows/the-alex-marlow-show/aoc-ivf-wnba-violence-gop-gets-bad-polling-news",
+      "at": "2026-08-10T18:30:00.000Z",
+      "thumbnail": null,
+      "excerpt": "In this episode of the Alex Marlow Show, Alex talks about the WNBA, where the he expresses frustration with the league's handling of a recent incident involving a player. He argues that the league is not doing enough to support its stars, particularly those who are making the sport more accessible t",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T15:30:07.938Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Alex Marlow Show",
+      "kind": "episode",
+      "title": "Marlow Reacts: Wild Kirk Theory, Trump Ends Birth Tourism, \"W\" NBA, Tate McRae MAGA?",
+      "url": "https://omny.fm/shows/the-alex-marlow-show/marlow-reacts-wild-kirk-theory-trump-ends-birth-tourism-w-nba-tate-mcrae-maga",
+      "at": "2026-08-08T12:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "In this episode of The Alex Marlow Show, Alex is covering topics that didn't get enough attention on his live radio show! From recent executive orders signed by the President regarding birthright citizenship and birth tourism, discussing the implications and potential consequences, to the WNBA and t",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-10T21:35:37.918Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Alex Marlow Show",
+      "kind": "episode",
+      "title": "Bizarre Jobs Report Breakdown, Blanche Nomination This Close, Abdul El-Sayed Chaos",
+      "url": "https://omny.fm/shows/the-alex-marlow-show/bizarre-jobs-report-breakdown-blanche-nomination-thisclose-abdul-el-sayed-chaos",
+      "at": "2026-08-07T19:17:35.000Z",
+      "thumbnail": null,
+      "excerpt": "The latest episode of The Alex Marlow Show, Alex breaks down the jobs report, discussing the impact of the government's focus on high-end, blue-collar to white-collar work and the effects of the border crackdown on immigration. Alex also touches on the manufacturing boom and the role of the governme",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-10T21:35:37.918Z",
+      "status": null
+    }
+  ],
+  "headline": null,
+  "samplesSearched": {
+    "count": 3,
+    "why": "3 pieces of their own work"
+  },
+  "commentsRead": null,
+  "audienceHistory": [
+    {
+      "audience": 3667,
+      "at": "2026-08-06T20:34:38.913Z"
+    },
+    {
+      "audience": 3667,
+      "at": "2026-08-06T21:54:30.617Z"
+    },
+    {
+      "audience": 3667,
+      "at": "2026-08-06T21:57:42.662Z"
+    },
+    {
+      "audience": 3667,
+      "at": "2026-08-07T11:45:07.846Z"
+    },
+    {
+      "audience": 3667,
+      "at": "2026-08-07T11:49:32.487Z"
+    },
+    {
+      "audience": 3667,
+      "at": "2026-08-10T21:28:20.671Z"
+    },
+    {
+      "audience": 3667,
+      "at": "2026-08-10T21:35:31.836Z"
+    },
+    {
+      "audience": 3667,
+      "at": "2026-08-12T15:29:54.064Z"
+    },
+    {
+      "audience": 3667,
+      "at": "2026-08-12T19:59:37.411Z"
+    },
+    {
+      "audience": 3667,
+      "at": "2026-08-12T20:27:12.326Z"
+    },
+    {
+      "audience": 3666,
+      "at": "2026-08-14T12:53:35.000Z"
+    },
+    {
+      "audience": 3666,
+      "at": "2026-08-14T13:10:30.336Z"
+    }
+  ],
+  "audience": 3666,
+  "audienceWhy": "TikTok alone",
+  "audienceSeparate": [],
+  "score": {
+    "total": 3,
+    "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 2.5,
+      "max": 35,
+      "lines": [
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        }
+      ],
+      "share": 0.072,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 2.5,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 22,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "unavailable": true,
+          "line": "we could not read their posting rate — they post often enough that 100 posts only reach back 93 days — not far enough behind the last 90 to compare against",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "not_judged",
+      "because": "the model pass did not run, and Fit is a judgment — no model, no verdict"
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 8 days apart, the trend needs 90",
+      "why": "our two looks are 8 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.5,
+      "resolved": 3,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 3
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": false,
+      "fit": "not_judged",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 366,
+    "places": 39,
+    "from": "2026-08-06T20:34:38.885Z",
+    "to": "2026-08-14T13:10:38.064Z"
+  }
+}

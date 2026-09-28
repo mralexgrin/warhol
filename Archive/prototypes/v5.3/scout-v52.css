@@ -1,0 +1,1176 @@
+/* ==========================================================================
+   SCOUT v5 — application layer over the ALLOY toolkit.
+   alloy.css is a vendored dependency and is never edited. Its 56/56 contrast
+   audit is the reason; editing it would invalidate the audit silently.
+
+   COLOUR HAS A JOB, and the job decides the colour:
+
+     teal   — the opportunity is real (Demand, Missing, verified absence)
+     butter — the timing (Pressure)
+     lilac  — Scout speaking about itself (receipts, provenance)
+     ink    — weight and summary (the score, decided states)
+
+   The primary button is NONE of these. It inverts the surface, so it can be the
+   loudest thing on screen without borrowing a field's meaning.
+
+   Traps carried forward, documented so they are not re-trodden:
+   · Alloy's .p is flex-direction:column — a row layout must say so.
+   · Alloy's .sub .k is dark ink for use INSIDE a colour field; standalone on a
+     dark panel it is invisible.
+   · --page is a backdrop, not a content surface. Body text is tuned to --slab.
+   · gr-veil fades in from transparent 18%, so on a short block the text sits in
+     the unveiled band — measured 1.54:1. It is built for a tall element with
+     its text low, and using it anywhere else reproduces that failure.
+   ========================================================================== */
+
+/* ------------------------------------------------------------------ shell */
+#app { display: block; }
+
+body { background:
+  radial-gradient(58% 62% at 12% 8%, var(--butter), transparent 62%),
+  radial-gradient(52% 58% at 88% 14%, var(--teal), transparent 62%),
+  radial-gradient(64% 70% at 50% 104%, var(--lilac), transparent 66%),
+  var(--page); background-attachment: fixed; }
+
+/* The brand mark is the one element whose job IS to be an identity rather than
+   to carry information, so decoration is honest here. 8.1:1 at both ends. */
+.railcol .me { background: linear-gradient(135deg, var(--lilac), var(--teal));
+  color: var(--on-field); }
+
+.slab--app  { grid-template-columns: 252px minmax(0, 1fr); height: calc(100dvh - 44px); }
+.slab--solo { grid-template-columns: minmax(0, 1fr); }
+.slab--gate { max-width: 520px; margin: 14vh auto; }
+.slab--app > .main,
+.slab--app > .railcol--wide { overflow-y: auto; }
+/* Below 960 the app stops being a fixed-height two-pane shell and becomes an
+   ordinary scrolling page.
+
+   `overflow: visible` is not belt-and-braces. Vendored alloy sets
+   `.slab { overflow: hidden }` unconditionally, which is dormant only while
+   nothing constrains the height — so any future height declaration here
+   silently clips the page again instead of failing visibly. v5 had exactly
+   that bug: a second query at 900px re-declared the height, won on source
+   order, and made 85% of every screen unreachable on a phone. Stating the
+   overflow means the next height declaration cannot resurrect it. */
+@media (max-width: 960px) {
+  .slab--app { grid-template-columns: 1fr; height: auto; overflow: visible; }
+  .slab--app > .main, .slab--app > .railcol--wide { overflow-y: visible; }
+}
+@media (max-width: 900px) {
+  .slab--gate { margin: 6vh auto; }
+}
+
+/* Alloy's .p is a column. Anything wearing .p that lays out in a row says so. */
+.trigger, .wcostbar, .checkback { flex-direction: row; }
+
+/* ---------------------------------------------------- the primary button */
+/* Surface-inverting. In light this is Alloy's ink button; in dark it flips to
+   cream, because an ink button on a dark panel reads as a hole. Two tiers of
+   action, deliberately distinct: .btn--primary is the neutral utility button
+   and .vbtn--go is the green Promote verb. A utility is not a decision about a
+   person, so they should not look alike. */
+.btn--primary { background: var(--ink); color: var(--on-ink); border-color: transparent; }
+.btn--primary:hover { background: var(--ink-h); }
+:root[data-theme="dark"] .btn--primary { background: var(--text); color: var(--slab); }
+:root[data-theme="dark"] .btn--primary:hover { background: #FFFFFF; }
+.btn--soft { background: transparent; color: var(--text-2); border-color: var(--line-hi); }
+.btn--soft:hover { background: var(--panel-2h); color: var(--text); }
+
+.lnk { appearance: none; border: 0; background: none; padding: 0; cursor: pointer; font: inherit;
+  color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+.lnk:hover { color: var(--teal-d); }
+
+/* -------------------------------------------------------------- wide rail */
+.railcol--wide { align-items: stretch; padding: var(--s5) var(--s4) var(--s4); gap: var(--s4); }
+.brandrow { display: flex; align-items: center; gap: 11px; padding: 0 4px; }
+.brandrow .me { margin-bottom: 0; }
+.brandrow .wm { font-family: var(--disp); font-size: 19px; font-weight: 700; letter-spacing: -.03em; }
+.brandrow .sub-t { display: block; font-size: 11.5px; color: var(--text-3); line-height: 1.3; }
+
+.newbrief { width: 100%; justify-content: center; margin-top: var(--s2); }
+
+.nav { display: flex; flex-direction: column; gap: 3px; margin-top: var(--s2); }
+.rnav {
+  display: flex; align-items: center; gap: 11px; width: 100%;
+  padding: 10px 12px; border: 0; border-radius: 14px; cursor: pointer;
+  background: transparent; color: var(--text-2);
+  font: inherit; font-size: 13.5px; font-weight: 600; text-align: left;
+  transition: background var(--dur) ease, color var(--dur) ease;
+}
+.rnav:hover:not([aria-current="page"]) { background: var(--panel-2h); color: var(--text); }
+.rnav[aria-current="page"] { background: var(--teal); color: var(--on-field); }
+.rnav[aria-current="page"]:hover { background: var(--teal-h); }
+.rnav .ic { display: flex; flex: none; }
+.rnav .tx { flex: 1; min-width: 0; }
+.rnav .pill { margin-left: auto; flex: none; }
+.rnav[aria-current="page"] .pill { background: rgba(28, 27, 35, .16); color: var(--on-field); }
+
+.whoami { width: 100%; display: flex; align-items: center; gap: 10px; min-width: 0;
+  appearance: none; border: 0; background: transparent; cursor: pointer; font: inherit;
+  text-align: left; padding: 6px; border-radius: 12px; color: inherit;
+  transition: background var(--dur) ease; }
+.whoami:hover { background: var(--panel-2h); }
+.whoami[aria-expanded=true] { background: var(--panel-2h); }
+.whoami .who { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.whoami .who b { font-size: 13px; font-weight: 600; }
+/* 11.5px at --text-3 measures 3.87:1 on the rail surface in dark. It is the
+   only line identifying the signed-in account, so it takes a token that passes. */
+.whoami .who span { font-size: 11.5px; color: var(--text-2); overflow: hidden; text-overflow: ellipsis; }
+/* Warhol is the engine. Strategy documents and a footer — never the interface. */
+.engineft { font-size: 10.5px; color: var(--text-3); letter-spacing: .06em;
+  text-transform: uppercase; padding: 0 4px; }
+
+@media (max-width: 960px) {
+  .railcol--wide { flex-direction: row; flex-wrap: wrap; align-items: center;
+    gap: var(--s3); padding: var(--s3) var(--s4); border-bottom: 1px solid var(--line); }
+  .railcol--wide .brandrow { padding: 0; }
+  .railcol--wide .brandrow .sub-t { display: none; }
+  .railcol--wide .newbrief { width: auto; margin: 0; }
+  .railcol--wide .nav { flex-direction: row; flex-wrap: wrap; gap: var(--s2); margin: 0 0 0 auto; }
+  .railcol--wide .rnav { width: auto; padding: 8px 14px; }
+  .railcol--wide .rnav .tx { flex: none; }
+  .railcol--wide .whoami { margin: 0; border-top: 0; padding-top: 0; }
+  .railcol--wide .whoami .who { display: none; }
+  .railcol--wide .engineft { display: none; }
+}
+@media (max-width: 640px) {
+  .railcol--wide .nav { width: 100%; margin-left: 0; flex-wrap: nowrap; }
+  .railcol--wide .rnav { flex: 1 1 0; min-width: 0; justify-content: center; padding: 9px 6px; }
+  .railcol--wide .rnav .tx { display: none; }
+  .railcol--wide .rnav .pill { margin-left: 0; }
+  .railcol--wide .whoami { margin-left: auto; }
+}
+
+/* --------------------------------------------------------------- top bar */
+.crumb button { appearance: none; border: 0; background: none; padding: 0; cursor: pointer;
+  font: inherit; color: var(--text-3); letter-spacing: inherit; border-radius: var(--r-xs); }
+.crumb button:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+
+.acct { position: relative; }
+/* In the rail the identity sits at the bottom, so the menu opens upward from it
+   rather than downward off the screen. */
+.acct--rail { margin-top: auto; padding-top: var(--s4); border-top: 1px solid var(--line); }
+.acct--rail .acctmenu { right: auto; left: 0; top: auto; bottom: calc(100% + 8px); width: 236px; }
+.acctmenu { position: absolute; right: 0; top: calc(100% + 8px); z-index: 30; width: 268px;
+  background: var(--panel); border: 1px solid var(--line-hi); border-radius: var(--r-lg);
+  box-shadow: var(--el-3); padding: var(--s3); }
+.acctmenu .who { padding: 6px 8px var(--s3); border-bottom: 1px solid var(--line); margin-bottom: var(--s3); }
+.acctmenu .who b { display: block; font-size: 13.5px; }
+/* The address is the only line identifying the account, and both muted tokens
+   land under 4.5:1 at 12px on the menu surface (4.22 light, 3.87 dark). It is
+   one line in a menu, not dense secondary text, so it takes full contrast. */
+.acctmenu .who span { font-size: 12px; color: var(--text); }
+.acctmenu .lab { margin: var(--s3) 0 6px; }
+.acctmenu .seg, .acctmenu .tsw { width: 100%; }
+.acctmenu .seg button, .acctmenu .tsw button { flex: 1; }
+.acctmenu .out { width: 100%; justify-content: flex-start; margin-top: var(--s3); }
+.menunote { font-size: 11.5px; color: var(--text-3); line-height: 1.5; margin-top: 8px; }
+
+/* ------------------------------------------------------------ work column */
+.wrap { min-width: 0; }
+.pagehead { padding-bottom: var(--s4); margin-bottom: var(--s4); }
+.pagehead h1 { font-size: clamp(28px, 4vw, 42px); letter-spacing: -.042em; }
+.pagehead .deck { margin-top: 10px; color: var(--text-2); font-size: 14.5px; max-width: 64ch; line-height: 1.6; }
+.pagehead .deck b { color: var(--text); font-weight: 700; }
+/* Arguments attach where they bite, never on a page about the argument. */
+.lifecycle { margin-top: var(--s3); font-size: 12.5px; color: var(--text-3); line-height: 1.6; max-width: 72ch; }
+.lifecycle b { color: var(--text-2); }
+
+/* ============================================================== BRIEF TABS */
+/* Briefs are tabs and they are parallel: the house brief first, then yours,
+   then + New brief. There is no All view. */
+.views { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin: var(--s5) 0 var(--s3); }
+.vchip { display: inline-flex; align-items: center; gap: 9px; padding: 8px 15px; border-radius: var(--r-pill);
+  border: 1px solid var(--line-hi); background: var(--panel); color: var(--text-2);
+  font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+  transition: background var(--dur) ease, color var(--dur) ease; }
+.vchip:hover:not([aria-pressed="true"]) { background: var(--panel-2h); color: var(--text); }
+.vchip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
+.vchip[aria-pressed="true"]:hover { background: var(--ink-h); border-color: var(--ink-h); }
+.vchip .c { font-variant-numeric: tabular-nums; opacity: .72; }
+/* Nobody wrote the house brief and nobody can edit it, so it is marked once
+   and never explained again. */
+.vchip--house { border-style: dashed; }
+.vchip--paused { opacity: .62; }
+.vchip--new { border-style: dashed; padding-left: 11px; }
+.vchip--new svg { width: 15px; height: 15px; }
+.tabnote { font-size: 12.5px; color: var(--text-3); line-height: 1.6; max-width: 76ch; margin-bottom: var(--s4); }
+
+.worked { display: flex; align-items: center; gap: var(--s4); flex-wrap: wrap; padding: 0 0 var(--s4); }
+.worked .track { flex: 1; max-width: 280px; height: 8px; }
+.worked .track i { background: var(--teal); transition: transform .3s var(--ease); }
+
+.leftout { margin-top: var(--s4); font-size: 12.5px; color: var(--text-3); line-height: 1.6; max-width: 72ch; }
+
+/* ================================================================ THE CARD */
+.listwrap { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
+.row { display: grid; grid-template-columns: 28px 62px minmax(0, 1fr) 168px; gap: var(--s4);
+  align-items: start; padding: var(--s4) var(--s5); border-top: 1px solid var(--line); }
+.row:first-child { border-top: 0; }
+.row:hover { background: var(--panel-2); }
+.rk { font-size: 13px; font-weight: 700; color: var(--text-3); font-variant-numeric: tabular-nums; padding-top: 20px; }
+.rowmain { min-width: 0; }
+/* baseline alignment is right for text and wrong for a 34px picture, so the
+   face opts out and centres itself against the line it sits on. */
+.idline { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.idline .face { align-self: center; }
+/* A heading, so a screen reader can jump card to card the way a sighted reader
+   scans them. Reset the UA margin so the baseline row is unchanged. */
+.nm { font-family: var(--disp); font-size: 18px; font-weight: 700; letter-spacing: -.03em;
+  margin: 0; }
+h2.nm, h3.nm { font-size: 18px; }
+.hd { font-size: 12.5px; color: var(--text-3); }
+
+/* v5.3 — provenance, not status. An outline rather than a filled chip: the
+   filled ones on this screen all mean a decision a person made, and nobody
+   decided this. Set back by weight and border, never by opacity — fading
+   advisory text to .62 measured 2.48:1 in light and fails AA outright. */
+/* v5.3 — the who-else board. A working record, set back from the drop by
+   weight and scale, never by opacity (fading advisory rows measured 2.48:1). */
+.whoelse { margin: 34px 0 0; }
+.wex-h { font-size: 15px; font-weight: 700; margin: 0 0 4px; }
+.wex-sub { font-size: 12.5px; color: var(--text-2); margin: 0 0 14px; }
+/* A five-column table on a phone must scroll inside itself; the page never
+   scrolls sideways. */
+.wex-scroll { overflow-x: auto; }
+.wex { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 620px; }
+.wex th {
+  text-align: left; font-weight: 500; font-size: 11px; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--text-3);
+  padding: 0 14px 7px 0; border-bottom: 1px solid var(--line);
+}
+.wex td { padding: 11px 14px 11px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.wex tr:last-child td { border-bottom: 0; }
+/* `color` is NOT optional here. Inheriting gave the handle a fixed light-mode
+   ink of #1C1B23, which is byte-identical to the dark panel — every creator
+   name in this table measured 1.00:1 and was invisible in dark mode. Alloy's
+   inherited inks are designed to sit inside a colour field; standalone on a
+   panel they have to name a theme-aware token. */
+.wex-nm { font-weight: 600; white-space: nowrap; color: var(--text); }
+.wex-num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+th.wex-num { padding-right: 14px; }
+.wex-none { color: var(--text-3); font-style: italic; }
+.wex-stop { color: var(--text-2); }
+/* The gate's own sentence. Its own line so a long one cannot push the columns
+   around, and it is the only place on this screen the machine speaks at length. */
+.wex-why { display: block; margin-top: 3px; font-size: 12px; color: var(--text-3); }
+
+.proposedtag {
+  font-size: 10.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--text-2); border: 1px solid var(--line-2, var(--line));
+  border-radius: 999px; padding: 1px 7px; margin-left: 8px;
+  white-space: nowrap; cursor: help;
+}
+/* The audience is a count only. */
+.plat1 { display: block; font-size: 12px; color: var(--text-3); margin-top: 3px;
+  font-variant-numeric: tabular-nums; }
+.acts { display: flex; flex-direction: column; gap: 6px; }
+.acts .btn, .acts .vbtn { width: 100%; justify-content: center; }
+
+.resurf { display: flex; align-items: center; gap: 9px; margin-top: 12px; padding: 9px 13px;
+  border-radius: var(--r-md); background: var(--teal); color: var(--on-field); font-size: 12.5px; }
+.resurf svg { width: 15px; height: 15px; flex: none; }
+
+/* ============================================================= THE CLAIMS */
+/* Three claims and nothing else, in the order the report repeats. Demand and
+   Missing are the two halves of one question, so both are teal — but Missing is
+   an ABSENCE, so its mark is hollow. Same logic as the verification marks,
+   where absence is a shape and never a colour. */
+.sigs { display: flex; flex-direction: column; gap: 7px; margin-top: 11px; }
+.sig3 { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px;
+  align-items: baseline; font-size: 13.5px; }
+.sig3 .k { font-size: 9.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 6px; }
+.sig3 .v { font-weight: 600; color: var(--text); line-height: 1.45; }
+/* The creator is strongest as a quote: one sentence in their own voice is the
+   whole Pressure signal, with no count that beats it. */
+.sig3 .said { font-family: var(--disp); font-weight: 300; font-style: italic;
+  font-size: 15.5px; letter-spacing: -.015em; }
+.sig3 .qt { font-weight: 400; color: var(--text-3); font-size: 12px; font-style: normal;
+  font-family: inherit; letter-spacing: 0; }
+.sig3 .k--fill, .sig3 .k--hollow { color: var(--teal-d); }
+.sig3 .k--butter { color: var(--butter-d); }
+.dot { width: 8px; height: 8px; border-radius: 2px; display: block; flex: none; }
+.dot--fill { background: var(--teal-d); }
+.dot--hollow { background: transparent; border: 1.5px solid var(--teal-d); }
+.dot--butter { background: var(--butter-d); }
+@media (max-width: 640px) { .sig3 { grid-template-columns: 1fr; gap: 2px; } }
+
+/* =============================================================== THE VERBS */
+/* Green go, amber hold, outlined no. Deliberately outside the four field jobs:
+   an action is not evidence, and reusing teal would say "the gap is real"
+   about a button. */
+.vbtn { display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  padding: 10px 17px; border-radius: var(--r-pill); border: 1px solid transparent;
+  font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; white-space: nowrap;
+  transition: background var(--dur) ease, color var(--dur) ease, transform var(--dur) var(--ease); }
+.vbtn:hover { transform: translateY(-1px); }
+.vbtn:active { transform: none; }
+.vbtn svg { width: 15px; height: 15px; flex: none; }
+.vbtn--sm { padding: 8px 13px; font-size: 12.5px; }
+.vbtn--go { background: #1F7A66; color: #FFFFFF; }
+.vbtn--go:hover { background: #26907A; }
+/* UAT item 8 — the card's three actions were carrying the wrong hierarchy.
+   Watch was solid butter, which made the MIDDLE-value action the loudest thing
+   on every row: a deferral drew the eye before the door to the evidence did.
+   §6.1 says a card carries enough to kill without opening, and that backing one
+   needs the report — so the report is the primary and the two decisions are
+   quiet and equal.
+
+   Butter is not abandoned, it is demoted to an outline: the colour still means
+   "the timing" and still identifies Watch, without competing for rank. Colour
+   keeps its job (§13.2) and stops doubling as emphasis. On the REPORT, where
+   Promote exists and is the point, .vbtn--go stays solid. */
+.vbtn--hold { background: transparent; color: var(--butter-d, var(--text));
+  border-color: var(--butter); }
+.vbtn--hold:hover { background: var(--butter); color: var(--on-field); }
+:root[data-theme="dark"] .vbtn--hold { color: var(--butter); }
+.vbtn--no { background: transparent; color: var(--text-2); border-color: var(--line-hi); }
+.vbtn--no:hover { background: var(--panel-2h); color: var(--text); }
+/* One step further from the surface than the row's hover, which is panel-2 —
+   in v5 they were the same value, so hovering a card made its own primary
+   action vanish into the background. */
+/* The door to the evidence is the card's primary action. It inverts the surface
+   rather than taking a field colour — the same rule the app's other primary
+   follows, and the reason is that an action is not a piece of evidence: giving
+   it teal would assert "the gap is real" about a button. */
+.vbtn--open { background: var(--text); color: var(--panel); border-color: transparent; }
+.vbtn--open:hover { background: var(--text-2); }
+.row:hover .vbtn--open { background: var(--text); }
+:root[data-theme="dark"] .vbtn--go { background: #2E9B84; color: #06120E; }
+:root[data-theme="dark"] .vbtn--go:hover { background: #3BB59B; }
+/* The compact bar is the one that matters here: it is scroll-linked, so it can
+   re-fire repeatedly around its threshold, which is the pattern vestibular
+   guidance singles out. */
+@media (prefers-reduced-motion: reduce) {
+  .vbtn:hover { transform: none; }
+  .worked .track i { transition: none; }
+  .disc .chev { transition: none; }
+  .cbar { transition: none; }
+}
+
+/* ------------------------------------------------------- inline decisions */
+.passtray { margin-top: var(--s4); padding-top: var(--s4); border-top: 1px solid var(--line); }
+.passtray .hd { display: flex; align-items: center; gap: var(--s3); margin-bottom: var(--s3); flex-wrap: wrap; }
+.passtray .hd .q { font-size: 13px; color: var(--text-2); }
+.reasons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s2); }
+.reasons button { appearance: none; cursor: pointer; font: inherit; text-align: left;
+  padding: 11px 13px; border: 1px solid var(--line-hi); border-radius: var(--r-md);
+  background: var(--panel); color: var(--text); display: flex; flex-direction: column; gap: 3px;
+  transition: background var(--dur) ease; }
+.reasons button:hover { background: var(--panel-2h); }
+.reasons button.on { border-color: var(--teal-d); background: var(--panel-2); }
+.reasons button b { font-size: 13px; font-weight: 600; }
+.reasons button span { font-size: 11px; color: var(--text-3); line-height: 1.45; }
+
+/* A watch is a hypothesis with a date, so the date is set when you watch. */
+.windows { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s2); }
+.windows button { appearance: none; cursor: pointer; font: inherit; text-align: left;
+  padding: 12px 14px; border: 1px solid var(--line-hi); border-radius: var(--r-md);
+  background: var(--panel); color: var(--text); display: flex; flex-direction: column; gap: 3px; }
+.windows button:hover { background: var(--panel-2h); }
+.windows button.on { border-color: var(--butter-d); background: var(--panel-2); }
+.windows button b { font-size: 14px; font-weight: 700; }
+.windows button span { font-size: 11px; color: var(--text-3); }
+.traynote { margin-top: var(--s3); font-size: 12px; color: var(--text-3); line-height: 1.55; max-width: 70ch; }
+.whyrow { margin-top: var(--s4); padding-top: var(--s4); border-top: 1px solid var(--line); }
+.whyrow .inp { flex: 1; min-width: 0; }
+.traynote b { color: var(--text-2); }
+
+.decided { display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap;
+  padding: var(--s4) var(--s5); border-top: 1px solid var(--line); font-size: 13px; color: var(--text-2); }
+.decided .nm2 { font-weight: 700; color: var(--text); font-size: 14px; }
+.decided .spacer { flex: 1; }
+
+/* ================================================================ RECEIPTS */
+/* The `?` returns receipts, not a definition. A definition is identical on
+   every screen, so after the first read every future `?` is a dead click.
+   Receipts differ every time, so it stays worth pressing. */
+.deft { appearance: none; border: 1px solid var(--line-hi); background: transparent; color: var(--text-3);
+  width: 16px; height: 16px; border-radius: 50%; font-size: 10px; font-weight: 700; line-height: 1;
+  cursor: pointer; padding: 0; margin-left: 6px; vertical-align: middle; flex: none;
+  display: inline-flex; align-items: center; justify-content: center; }
+.deft:hover { border-color: var(--text-3); color: var(--text); }
+/* The glyph stays 16px; the target does not. A transparent halo takes the hit
+   area to 28×28 without moving anything on screen — 16px is under WCAG 2.2's
+   24px floor, and a small circular target is the hardest kind to hit with a
+   tremor or one thumb. */
+.deft::before { content: ; position: absolute; inset: -6px; }
+.deft { position: relative; }
+.defpop { position: fixed; z-index: 60; max-width: 360px; padding: var(--s4);
+  border-radius: var(--r-md); background: var(--lilac); color: var(--on-field); box-shadow: var(--el-3); }
+.defpop h5 { font-family: var(--disp); font-size: 15px; font-weight: 700; letter-spacing: -.028em; }
+.defpop ul { margin-top: 9px; display: flex; flex-direction: column; gap: 6px; list-style: none; }
+.defpop li { font-size: 12.5px; line-height: 1.5; color: rgba(28, 27, 35, .84);
+  padding-left: 13px; position: relative; }
+.defpop li::before { content: ""; position: absolute; left: 0; top: 7px; width: 5px; height: 5px;
+  border-radius: 1px; background: rgba(28, 27, 35, .45); }
+
+/* ================================================================ THE RING */
+/* The number is the score, the sweep is confidence. Confidence stays on lists,
+   where the detail is not visible, and comes off the report, where it is. */
+.ring { position: relative; border-radius: 50%; display: grid; place-items: center;
+  flex: none; --rc: var(--teal); }
+.ring::before { content: ""; position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(from -90deg, var(--rc) var(--pct, 0%), var(--panel-3) 0); }
+.ring .in { position: relative; z-index: 1; width: 100%; height: 100%; border-radius: 50%;
+  background: var(--panel); display: flex; flex-direction: column;
+  align-items: center; justify-content: center; }
+.ring .in b { font-family: var(--disp); font-weight: 700; letter-spacing: -.045em;
+  line-height: 1; font-variant-numeric: tabular-nums; }
+.ring .in span { font-size: 8.5px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--text-3); margin-top: 2px; }
+.ring--xs { width: 40px; height: 40px; padding: 4px; }
+.ring--xs .in b { font-size: 14px; } .ring--xs .in span { display: none; }
+.ring--sm { width: 54px; height: 54px; padding: 5px; }
+.ring--sm .in b { font-size: 18px; } .ring--sm .in span { display: none; }
+.ring--lg { width: 104px; height: 104px; padding: 8px; }
+.ring--lg .in b { font-size: 34px; } .ring--lg .in span { display: none; }
+.ring--warn { --rc: var(--butter); }
+.ring--stop { --rc: var(--stop); }
+.row:hover .ring .in, .wrow:hover .ring .in { background: var(--panel-2); }
+
+/* ========================================================== THE COMPACT BAR */
+/* A zero-height sticky anchor. The bar itself is positioned out of flow, so it
+   reserves no space when hidden and shifts nothing when it appears — reserving
+   it costs 82px at the top of every report, and collapsing it on activation
+   would shove the page down while you are reading. */
+/* Sticks flush to the top of the scroll container. #main carries var(--s5) of
+   padding, and sticky offsets resolve against the padding box — so top:0 pinned
+   the bar that far down and left a strip of page scrolling visibly above it. */
+.compact { position: sticky; top: calc(var(--s5) * -1); z-index: 8; height: 0; }
+.cbar { position: absolute; top: 0; left: calc(var(--s6) * -1); right: calc(var(--s6) * -1);
+  display: flex; align-items: center; gap: var(--s3); padding: 9px var(--s5);
+  background: var(--panel); border-bottom: 1px solid var(--line);
+  opacity: 0; transform: translateY(-6px); pointer-events: none;
+  transition: opacity .18s ease, transform .18s var(--ease); }
+.compact.on .cbar { opacity: 1; transform: none; pointer-events: auto; }
+.cbar .back { width: 34px; height: 34px; border-radius: 50%; flex: none; cursor: pointer;
+  border: 1px solid var(--line-hi); background: var(--panel); color: var(--text-2);
+  display: flex; align-items: center; justify-content: center; }
+.cbar .back:hover { background: var(--panel-2h); color: var(--text); }
+
+.cbar .who2 { flex: 1; min-width: 0; }
+.cbar .who2 b { display: block; font-family: var(--disp); font-size: 15px; font-weight: 700;
+  letter-spacing: -.03em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cbar .who2 span { font-size: 11px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.cbar .verbs { display: flex; gap: 6px; flex: none; }
+@media (max-width: 760px) { .cbar .verbs .vbtn:not(.vbtn--go) { display: none; } }
+.backbtn { margin-bottom: var(--s4); }
+
+/* ================================================================= REPORT */
+.rpthead { display: flex; gap: var(--s5); align-items: flex-start; flex-wrap: wrap;
+  padding-bottom: var(--s5); border-bottom: 1px solid var(--line); }
+.rpthead .who2 { display: flex; flex-direction: column; align-items: flex-start; }
+.rpthead .who2 { flex: 1; min-width: 280px; }
+.rpthead h1 { font-size: clamp(26px, 3.6vw, 38px); letter-spacing: -.042em; line-height: 1.08; margin-top: 10px; }
+.rpthead .handle { font-size: 13px; color: var(--text-3); margin-top: 5px; }
+.rpthead .thesis { margin-top: var(--s4); font-size: 17px; max-width: 54ch; line-height: 1.5;
+  color: var(--text-2); }
+.rpt-tags { display: flex; gap: var(--s2); flex-wrap: wrap; margin-bottom: var(--s2); }
+/* Keep the cross-platform graph: 214k across four platforms is a different
+   business from 214k on one. The identity match percentage came off — nobody
+   acts on "id match 87%" — and a weak match is stated in words instead. */
+.idrow { display: flex; flex-wrap: wrap; gap: var(--s2); margin-top: var(--s4); }
+.plat { display: inline-flex; align-items: baseline; gap: 8px; padding: 7px 13px; border: 1px solid var(--line);
+  border-radius: var(--r-pill); background: var(--panel); font-size: 12.5px; }
+.plat .n { font-weight: 600; }
+.plat .f { font-size: 11.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.weakid { margin-top: 10px; font-size: 12.5px; color: var(--warn); }
+
+/* Recommended play and Fit are promoted out of drawers onto the open page. */
+.topline { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3); margin-top: var(--s5); }
+.tl { padding: var(--s4); border-radius: var(--r-md); background: var(--panel-2); }
+.tl .k { display: block; font-size: 10px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--text-3); }
+.tl .v { display: block; font-family: var(--disp); font-size: 16px; font-weight: 700;
+  letter-spacing: -.028em; margin-top: 5px; line-height: 1.25; }
+.tl .why { display: block; font-family: var(--sans, inherit); font-size: 12.5px; font-weight: 400;
+  letter-spacing: 0; color: var(--text-2); margin-top: 7px; line-height: 1.5; }
+
+/* The score, once, with no confidence percentage beside it — every Missing
+   line already says how many places we looked in. */
+.scoreblock { display: flex; flex-direction: column; align-items: center; gap: 2px; flex: none;
+  padding: var(--s4) var(--s5); border-radius: var(--r-lg); background: var(--panel-2); }
+.bs-k { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--text-3); display: flex; align-items: center; margin-top: var(--s3); }
+.bs-n { font-size: 11.5px; color: var(--text-3); margin-top: 4px; }
+
+.unsafe { margin-top: var(--s5); padding: var(--s4) var(--s5); border-radius: var(--r-md);
+  background: var(--warn-bg); color: var(--text); font-size: 13px; line-height: 1.6; }
+.unsafe b { color: var(--warn); }
+
+/* ---------------------------------------------------------- the claims */
+/* The report is the card, expanded: same three claims, same order, same words,
+   each carrying its own number and its own proof. "How it scored" is gone as a
+   drawer — the arithmetic attaches to the claim it belongs to. */
+.claims { margin-top: var(--s5); display: flex; flex-direction: column; gap: var(--s3); }
+.claim { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg);
+  padding: var(--s5); }
+/* The field colour is already carried by the claim heading and by the card dot
+   marks, so a coloured side border was the same fact a third time. The gate is
+   not a scored pillar, so it is drawn as a note rather than a card — and it
+   already says GATE · PASS in words, which is where §4 puts that meaning. */
+.claim--why { background: transparent; border-style: dashed; }
+.ch { display: flex; align-items: baseline; gap: var(--s3); flex-wrap: wrap; }
+.ch h2 { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  display: flex; align-items: center; }
+.claim--demand .ch h2, .claim--missing .ch h2 { color: var(--teal-d); }
+.claim--pressure .ch h2 { color: var(--butter-d); }
+.ch .q { font-size: 13px; color: var(--text-3); }
+.ch .pts { margin-left: auto; font-family: var(--disp); font-size: 21px; font-weight: 700;
+  letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.ch .pts--gate { font-family: inherit; font-size: 10px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--text-3); }
+.claim .lede { font-size: 17px; line-height: 1.55; max-width: 56ch; margin-top: var(--s4); }
+.claim .quotes { margin-top: var(--s4); padding-top: var(--s4); border-top: 1px solid var(--line); }
+.claim .subh { display: block; font-size: 10px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--text-3); margin-top: var(--s5); }
+.claim .subh:first-of-type { margin-top: var(--s4); }
+/* Missing everything, including the trivial things, is a LABEL and not a
+   number: clean slate, versus partway down a road. */
+.claim .subh em { font-style: normal; color: var(--text); letter-spacing: .04em; }
+
+/* Trajectory reads as "why they're on this list" — the answer to why the
+   machine picked this person, which nothing previously stated. */
+.whylist, .preslist, .invlist { display: flex; flex-direction: column; margin-top: var(--s3); }
+.whylist li, .preslist li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--s4);
+  align-items: baseline; padding: 9px 0; border-top: 1px solid var(--line); font-size: 14.5px; }
+.whylist li:first-child, .preslist li:first-child { border-top: 0; }
+.whylist .v, .preslist .v { font-size: 12px; color: var(--text-3); text-align: right;
+  font-variant-numeric: tabular-nums; white-space: nowrap; }
+/* Their own words lead, then a visible break, then their behaviour, then the
+   audience going unanswered. */
+.preslist .said { padding-bottom: var(--s4); margin-bottom: 2px; border-bottom: 1px solid var(--line); }
+.preslist .said .l { font-family: var(--disp); font-weight: 300; font-style: italic;
+  font-size: 19px; line-height: 1.4; letter-spacing: -.02em; }
+
+/* Direct children only. The list now nests a second list inside a row — the
+   checks behind that row — and a descendant selector reaches those too, where
+   it wins on specificity and silently re-columns them. */
+.invlist > li { display: grid; grid-template-columns: 12px 172px minmax(0, 1fr); gap: 12px;
+  align-items: start; padding: 9px 0; border-top: 1px solid var(--line); font-size: 13.5px; }
+.invlist > li:first-child { border-top: 0; }
+.invlist .vmark { margin-top: 5px; }
+.invlist .it { font-weight: 600; }
+.invlist .st { color: var(--text-2); line-height: 1.5; }
+/* Weight is order, not a badge — a clause on the top line only. */
+.invlist .st em { display: block; font-style: normal; color: var(--text-3); font-size: 12.5px;
+  margin-top: 3px; max-width: 62ch; }
+.invlist--on .it, .invlist--on .st { color: var(--text-3); }
+.invlist--on .it { font-weight: 500; }
+@media (max-width: 700px) {
+  .invlist > li { grid-template-columns: 12px minmax(0, 1fr); }
+  .invlist > li > .st { grid-column: 2; }
+}
+
+/* ---- The claim's own receipts, under the claim -------------------------- */
+/* Each line opens in place. The affordance has to be quiet: an inventory list
+   with eleven buttons in it stops reading as a list and starts reading as a
+   toolbar, and the list is the thing you scan first. So the row keeps its own
+   geometry exactly — the button is the row, not a control added beside it —
+   and only the chevron and the hover mark it as openable. */
+/* The row's own grid moves onto the button, so the li becomes a plain block
+   holding two stacked children — the claim and, when open, its receipts. */
+.invlist > li.inv--open { display: block; padding: 0; }
+.invbtn { display: grid; grid-template-columns: 12px 172px minmax(0, 1fr) 26px; gap: 12px;
+  align-items: start; width: 100%; padding: 9px 0; background: none; border: 0; cursor: pointer;
+  font: inherit; font-size: 13.5px; color: inherit; text-align: left; border-radius: var(--r-xs); }
+.invbtn:hover { background: var(--panel-2); box-shadow: 0 0 0 6px var(--panel-2); }
+.invbtn .it { font-weight: 600; }
+.invbtn .st { color: var(--text-2); line-height: 1.5; }
+.invbtn .st em { display: block; font-style: normal; color: var(--text-3); font-size: 12.5px;
+  margin-top: 3px; max-width: 62ch; }
+.invlist--on .invbtn .it, .invlist--on .invbtn .st { color: var(--text-3); }
+.invlist--on .invbtn .it { font-weight: 500; }
+.invbtn .vmark { margin-top: 5px; }
+.invchev { width: 26px; height: 26px; border-radius: 50%; color: var(--text-3);
+  display: flex; align-items: center; justify-content: center; margin-top: 1px;
+  transition: transform var(--dur) var(--ease), background var(--dur) ease; }
+.invbtn:hover .invchev { background: var(--panel-2h); color: var(--text); }
+.inv.is-open .invchev { transform: rotate(180deg); }
+
+/* The doors themselves. Monospaced, because every value in here came off the
+   wire — the outcome, the status code and the address are machine facts, and
+   setting them as prose invites reading them as a summary someone wrote. */
+.invchecks { padding: 2px 0 var(--s4) 24px; }
+.ck { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--line); }
+.ck-r { display: grid; grid-template-columns: 40px 34px minmax(0, 1fr) auto; gap: 10px;
+  padding: 8px 0 8px 14px; font-size: 12px; align-items: baseline; }
+.ck-r + .ck-r { border-top: 1px dashed var(--line); }
+.ck-o { font-family: var(--mono, ui-monospace, "SF Mono", Menlo, monospace);
+  font-weight: 700; font-size: 11px; letter-spacing: .04em; }
+.ck-r--hit .ck-o { color: var(--ok); }
+.ck-r--miss .ck-o { color: var(--stop); }
+.ck-r--inconclusive .ck-o { color: var(--warn); }
+.ck-s { font-family: var(--mono, ui-monospace, "SF Mono", Menlo, monospace);
+  color: var(--text-3); font-variant-numeric: tabular-nums; }
+.ck-b { min-width: 0; }
+/* A place label is an address, so it has no spaces to break at and runs
+   straight off the right edge on a phone. minmax(0,1fr) sizes the column
+   correctly; it does not make an unbreakable word wrap. */
+.ck-b b { font-weight: 600; color: var(--text); overflow-wrap: anywhere; }
+.ck-u { display: block; font-family: var(--mono, ui-monospace, "SF Mono", Menlo, monospace);
+  font-size: 11px; color: var(--text-3); word-break: break-all; margin-top: 2px; }
+.ck-w { display: block; color: var(--text-2); line-height: 1.5; margin-top: 3px; max-width: 66ch; }
+.ck-m { color: var(--text-3); font-size: 11px; white-space: nowrap; display: flex;
+  align-items: center; gap: 6px; }
+/* Advisory: kept, because a hit here would still count; set back, because a
+   door that never opens is not a place we looked.
+
+   Set back by structure, NOT by opacity. The engine's own evidence page fades
+   these to .55 and that is fine for a dev artifact; here it measured 2.48:1 in
+   light and 2.89:1 in dark against a 4.5 floor. Fading is also the weakest way
+   to say "excluded from the arithmetic" — the row says so in words instead. */
+.ck-r--adv .ck-b b { font-weight: 400; color: var(--text-2); }
+.ck-r--adv .ck-o { font-weight: 400; }
+.wall { margin: var(--s3) 0 0 14px; font-size: 11.5px; color: var(--text-3);
+  line-height: 1.6; max-width: 74ch; }
+@media (max-width: 700px) {
+  /* Placed explicitly rather than left to auto-flow: the claim text spanning
+     to the last column pushed the chevron onto a row of its own, so the control
+     that says "this opens" sat below the thing it opens. */
+  .invbtn { grid-template-columns: 12px minmax(0, 1fr) 26px; }
+  .invbtn .vmark { grid-column: 1; grid-row: 1; }
+  .invbtn .it { grid-column: 2; grid-row: 1; }
+  .invbtn .invchev { grid-column: 3; grid-row: 1; }
+  .invbtn .st { grid-column: 2 / -1; grid-row: 2; }
+  .ck-r { grid-template-columns: 40px 34px minmax(0, 1fr); }
+  .ck-m { grid-column: 2 / -1; margin-top: 2px; }
+}
+
+/* What we cannot settle either way (Q1). Not a warning — a limit, stated. */
+.cantsettle { margin-top: var(--s4); padding-top: var(--s4); border-top: 1px solid var(--line);
+  font-size: 12.5px; color: var(--text-3); line-height: 1.6; max-width: 74ch; }
+.cantsettle b { color: var(--text-2); font-weight: 600; }
+
+/* ---- Why this person is not in your drop -------------------------------- */
+/* Only ever rendered on a failure, and set as a note rather than a card: a
+   panel of five rows would read as a status field, and In Drop is computed,
+   not stored (§8). */
+.gates { margin-top: var(--s5); padding: var(--s4) 0 var(--s4) var(--s5);
+  border-left: 2px solid var(--warn); }
+.gates h2 { font-size: 13px; font-weight: 700; letter-spacing: .02em; margin: 0; color: var(--text); }
+.gates ul { list-style: none; margin: var(--s3) 0 0; padding: 0; }
+.gates li { display: grid; grid-template-columns: 172px minmax(0, 1fr); gap: 12px;
+  padding: 8px 0; border-top: 1px solid var(--line); font-size: 13px; }
+.gates li:first-child { border-top: 0; }
+.gates .gk { font-weight: 600; }
+.gates .gw { color: var(--text-2); line-height: 1.55; max-width: 62ch; }
+.gates-ft { margin-top: var(--s3); font-size: 12px; color: var(--text-3);
+  line-height: 1.6; max-width: 72ch; }
+@media (max-width: 700px) { .gates li { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+
+/* Disclosures: a down chevron, because this opens in place rather than sending
+   you elsewhere. Closed rows still state their own summary. */
+.disc { border-top: 1px solid var(--line); }
+.disc:first-child { border-top: 0; }
+.disc > button { width: 100%; display: flex; align-items: center; gap: var(--s3);
+  padding: var(--s4) var(--s5); background: none; border: 0; cursor: pointer; font: inherit;
+  color: var(--text); text-align: left; }
+.disc > button:hover { background: var(--panel-2); }
+.disc .t { font-size: 14px; font-weight: 600; flex: none; }
+.disc .s { font-size: 12px; color: var(--text-3); min-width: 0; }
+.disc .chev { margin-left: auto; width: 34px; height: 34px; border-radius: 50%; flex: none;
+  border: 1px solid var(--line-hi); display: flex; align-items: center; justify-content: center;
+  color: var(--text-2); transition: transform var(--dur) var(--ease), background var(--dur) ease; }
+.disc > button:hover .chev { background: var(--panel-2h); color: var(--text); }
+.disc.open .chev { transform: rotate(180deg); }
+.disc-body { padding: 0 var(--s5) var(--s5); }
+
+.ct td { vertical-align: top; padding-top: 11px; padding-bottom: 11px; }
+.ct .lsrc { color: var(--text-3); word-break: break-word; max-width: 24ch; }
+/* Same rule as the per-line receipts: set back by weight, never by opacity. */
+.ct tr.adv td b { font-weight: 400; color: var(--text-2); }
+.ct .code { font-family: var(--mono, ui-monospace, "SF Mono", Menlo, monospace);
+  font-size: 11px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.ledger-hd { font-size: 12px; color: var(--text-3); line-height: 1.6;
+  max-width: 78ch; margin-bottom: var(--s3); }
+.ledger-ft { margin-top: var(--s3); font-size: 12px; color: var(--text-3); line-height: 1.6; max-width: 78ch; }
+.ledger-ft b { color: var(--text-2); }
+
+/* Samples play on the platform's own player: store the thumbnail, caption,
+   counts, date and URL — kilobytes — and never host media. An embed always
+   plays NOW while a report is often dated, so the stored facts are as-of and
+   the embed is labelled current. */
+.samples { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s3); }
+.sample .swatch { height: 104px; border-radius: var(--r-md); position: relative; }
+.sample .playtag { position: absolute; left: 10px; bottom: 10px; font-size: 9.5px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; padding: 3px 9px; border-radius: var(--r-pill);
+  background: rgba(12, 12, 16, .74); color: #FFFFFF; }
+.sample .t { font-size: 15px; font-weight: 600; line-height: 1.35; margin-top: var(--s3); }
+.sample .m { display: flex; flex-wrap: wrap; gap: 5px 10px; margin-top: 8px; align-items: center; }
+
+.decide { position: sticky; bottom: 0; z-index: 5; margin-top: var(--s6);
+  background: var(--panel); border: 1px solid var(--line-hi); border-radius: var(--r-lg);
+  padding: var(--s3) var(--s4); display: flex; align-items: center; gap: var(--s2);
+  flex-wrap: wrap; box-shadow: var(--el-3); }
+.headverbs { display: flex; gap: var(--s2); flex-wrap: wrap; margin-top: var(--s5);
+  padding-top: var(--s5); border-top: 1px solid var(--line); width: 100%; }
+.headtray { margin-top: var(--s5); padding-top: var(--s4); border-top: 1px solid var(--line); width: 100%; }
+.headtray .passtray { margin-top: 0; padding-top: 0; border-top: 0; }
+/* A view change moves focus to the heading so a screen reader announces the
+   new page. The heading is not interactive, so painting a focus ring on it just
+   puts a box around every page title for mouse users — the announcement is the
+   point, and the next Tab lands on a real control with a real ring. */
+.wrap h1[tabindex="-1"]:focus, .wrap h1[tabindex="-1"]:focus-visible { outline: none; }
+.recorded { margin-top: var(--s6); font-size: 11.5px; color: var(--text-3); text-align: right; }
+.decide .spacer { flex: 1; }
+
+/* -------------------------------------------------------- what happened */
+.outcome-h { font-family: var(--disp); font-size: 17px; font-weight: 700; letter-spacing: -.03em;
+  margin-top: 10px; line-height: 1.3; max-width: 44ch; }
+.outcome-h--lg { font-size: 24px; }
+.outcome-n { font-size: 13px; color: var(--text-2); margin-top: 7px; line-height: 1.55; max-width: 62ch; }
+.on-ink-soft { color: rgba(242, 240, 247, .80); }
+.built { display: flex; flex-direction: column; gap: 8px; margin-top: var(--s4); }
+.built li { display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start;
+  font-size: 13px; line-height: 1.5; }
+.built li .vmark { margin-top: 5px; }
+.calledit { margin-top: var(--s4); padding-top: var(--s3); border-top: 1px solid rgba(242, 240, 247, .2);
+  font-size: 12.5px; color: rgba(242, 240, 247, .72); line-height: 1.6; max-width: 70ch; }
+/* The rewind is a first-run moment, not a menu item. */
+.aslens { margin-bottom: var(--s5); padding: var(--s4) var(--s5); border-radius: var(--r-md);
+  background: var(--lilac); color: var(--on-field); font-size: 13.5px; line-height: 1.65;
+  display: flex; gap: var(--s4); align-items: center; flex-wrap: wrap; }
+.aslens b { font-weight: 700; }
+.aslens .btn { margin-left: auto; flex: none; }
+
+/* ------------------------------------------------------------ the outcome */
+/* Recording an outcome is not managing a relationship: no notes, no next
+   steps, no reminders, no pipeline. Scout still does not own outreach. */
+.outcomebox { padding: var(--s5); }
+.obnote { font-size: 12.5px; color: var(--text-3); line-height: 1.6; max-width: 74ch; margin-top: 6px; }
+.obnote em { font-style: italic; color: var(--text-2); }
+.ocrow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s2); margin-top: var(--s4); }
+.ocbtn { appearance: none; cursor: pointer; font: inherit; text-align: left; padding: 12px 14px;
+  border: 1px solid var(--line-hi); border-radius: var(--r-md); background: var(--panel);
+  color: var(--text); display: flex; flex-direction: column; gap: 4px; }
+.ocbtn:hover { background: var(--panel-2h); }
+.ocbtn.on { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
+.ocbtn b { font-size: 13.5px; font-weight: 700; }
+.ocbtn span { font-size: 11px; color: var(--text-3); line-height: 1.45; }
+.ocbtn.on span { color: rgba(242, 240, 247, .72); }
+:root[data-theme="dark"] .ocbtn.on { background: var(--text); color: var(--slab); }
+:root[data-theme="dark"] .ocbtn.on span { color: rgba(28, 27, 35, .7); }
+.declined { margin-top: var(--s5); padding-top: var(--s4); border-top: 1px solid var(--line); }
+.obstate { margin-top: var(--s4); font-size: 12.5px; color: var(--text-3); }
+@media (max-width: 900px) { .ocrow { grid-template-columns: 1fr 1fr; } }
+
+/* ============================================================== WATCHLIST */
+.wrow { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: var(--s4);
+  padding: var(--s5); border-top: 1px solid var(--line); align-items: start; }
+.wrow:first-child { border-top: 0; }
+.wrow .nm { display: block; }
+.wrow .hd { display: block; margin-top: 2px; }
+.wrow .right { display: flex; flex-direction: column; align-items: flex-end; gap: var(--s2); }
+/* What the watchlist watches is the trajectory block, because those are the
+   lines that move. An alert quotes the trend, never the score delta. */
+.trendlist { display: flex; flex-direction: column; gap: 5px; margin-top: var(--s3); list-style: none; }
+.trendlist li { font-size: 13.5px; color: var(--text-2); padding-left: 15px; position: relative; }
+.trendlist li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px;
+  border-radius: 2px; background: var(--teal-d); }
+.duein { margin-top: var(--s3); font-size: 12.5px; color: var(--text-3); }
+/* The window closes as a decision, never a silent expiry, carrying what moved. */
+/* A callout, not a control. Flooding the block with butter and putting three
+   buttons inside it made the whole thing read as one enormous button — the
+   colour now marks the state and the buttons inside are allowed to look like
+   buttons. Same treatment the prune callout already uses. */
+.checkback { margin-top: var(--s3); padding: var(--s4) var(--s5); border-radius: var(--r-md);
+  background: var(--warn-bg); border: 1px solid var(--line-hi); display: block; }
+.checkback .k { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--warn); }
+.checkback p { font-size: 13.5px; line-height: 1.55; margin-top: 6px; max-width: 62ch;
+  color: var(--text-2); }
+.cbdiff { list-style: none; display: flex; flex-direction: column; gap: 4px; margin-top: var(--s3); }
+.cbdiff li { font-size: 13.5px; font-weight: 600; padding-left: 15px; position: relative; }
+.cbdiff li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px;
+  border-radius: 2px; background: var(--warn); }
+.cbacts { display: flex; gap: var(--s2); flex-wrap: wrap; margin-top: var(--s4); }
+.wcostbar { display: flex; align-items: baseline; gap: var(--s4); flex-wrap: wrap;
+  margin-top: var(--s4); padding: var(--s4) var(--s5); border-radius: var(--r-md);
+  background: var(--panel-2); }
+.wcostbar .v { font-family: var(--disp); font-size: 17px; font-weight: 700; letter-spacing: -.03em; }
+.wcostbar .sub-t { flex: 1 1 320px; line-height: 1.55; }
+
+/* =========================================================== PASSED LIST */
+/* One row states both halves: the reason and the trigger. Together they make a
+   Pass read as a decision rather than a deletion. */
+.prow { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: var(--s4);
+  align-items: center; padding: var(--s4) var(--s5); border-top: 1px solid var(--line); }
+.prow:first-child { border-top: 0; }
+.prow:hover { background: var(--panel-2); }
+.prow--fresh { background: var(--panel-2); }
+.pmain { min-width: 0; }
+.pline { font-size: 13.5px; color: var(--text-2); line-height: 1.65; }
+.pline b { color: var(--text); font-family: var(--disp); font-size: 15.5px; font-weight: 700;
+  letter-spacing: -.028em; }
+.pline .sep { color: var(--text-3); margin: 0 7px; }
+.pline .rsn { color: var(--text); font-weight: 600; }
+.pline .trg { color: var(--teal-d); }
+.repair { padding: var(--s5); }
+.repair h3 { font-size: 19px; letter-spacing: -.03em; margin-top: 6px; }
+.repair p { font-size: 13.5px; line-height: 1.6; margin-top: 8px; max-width: 66ch;
+  color: rgba(28, 27, 35, .82); }
+.repair p b { color: var(--on-field); }
+
+/* =============================================================== BRIEFS */
+.form { max-width: 720px; }
+.inp--area { width: 100%; min-height: 130px; resize: vertical; line-height: 1.6;
+  font-family: inherit; font-size: 15px; padding: var(--s4); margin-top: 8px; }
+.readback { margin-top: var(--s5); padding: var(--s5); border-radius: var(--r-lg);
+  background: var(--panel); border: 1px solid var(--line); }
+.wrote { font-family: var(--disp); font-weight: 300; font-style: italic; font-size: 18px;
+  line-height: 1.5; letter-spacing: -.02em; margin-top: 8px; max-width: 56ch; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chipbtn { appearance: none; cursor: pointer; font: inherit; font-size: 13px; font-weight: 600;
+  padding: 8px 15px; border-radius: var(--r-pill); border: 1px solid var(--line-hi);
+  background: var(--panel); color: var(--text-2); transition: background var(--dur) ease;
+  display: inline-flex; align-items: center; gap: 7px; }
+.chipbtn:hover:not([aria-pressed="true"]):not(.on) { background: var(--panel-2h); color: var(--text); }
+.chipbtn[aria-pressed="true"], .chipbtn.on { background: var(--teal); border-color: var(--teal); color: var(--on-field); }
+.chipbtn .x { display: inline-flex; opacity: .6; }
+.chipbtn .x svg { width: 12px; height: 12px; }
+.chipbtn:hover .x { opacity: 1; }
+.qualbar { margin-top: var(--s3); font-size: 13.5px; color: var(--text-2); }
+
+/* The brief screen states which kind of brief was written, because discovery
+   speed differs by an order of magnitude. */
+.speed { margin-top: var(--s5); padding: var(--s4) var(--s5); border-radius: var(--r-md);
+  background: var(--teal); color: var(--on-field); font-size: 13.5px; line-height: 1.6; }
+.speed b { font-weight: 700; }
+
+/* Guardrails in human units, with money shown as the consequence. Nobody knows
+   whether $40 a month is right; everyone knows whether 100 people is right. */
+.guard { margin-top: var(--s3); padding: var(--s5); border-radius: var(--r-lg);
+  background: var(--panel); border: 1px solid var(--line); }
+.gline { font-size: 16px; line-height: 2.1; margin-top: var(--s3); }
+.gcost { margin-top: var(--s4); font-size: 14px; color: var(--text-2); }
+.gcost b { color: var(--text); }
+.gnote { margin-top: var(--s3); font-size: 12px; color: var(--text-3); line-height: 1.6; max-width: 72ch; }
+.stepper { display: inline-flex; align-items: center; gap: 2px; vertical-align: middle;
+  border: 1px solid var(--line-hi); border-radius: var(--r-pill); padding: 2px; }
+.stepper button { appearance: none; border: 0; background: transparent; cursor: pointer;
+  width: 28px; height: 28px; border-radius: 50%; font: inherit; font-size: 15px; color: var(--text-2);
+  display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+.stepper button:hover { background: var(--panel-2h); color: var(--text); }
+.stepper b { min-width: 40px; text-align: center; font-variant-numeric: tabular-nums; }
+.seg--inline { display: inline-flex; vertical-align: middle; }
+
+.overlap { margin-top: var(--s3); padding: var(--s5); border-radius: var(--r-lg);
+  background: var(--panel-2); border: 1px dashed var(--line-hi); }
+.overlap p { font-size: 13.5px; line-height: 1.65; margin-top: 8px; max-width: 68ch; color: var(--text-2); }
+.overlap p b { color: var(--text); }
+.overlap .formacts { flex-wrap: wrap; }
+
+.editnote { margin-top: var(--s5); padding: var(--s4) var(--s5); border-radius: var(--r-md);
+  background: var(--panel-2); font-size: 13.5px; line-height: 1.65; color: var(--text-2); }
+.editnote b { color: var(--text); }
+.preview { margin-top: var(--s5); padding: var(--s4) var(--s5); border-radius: var(--r-md);
+  background: var(--panel-2); font-size: 13.5px; color: var(--text-2); }
+.formacts { display: flex; gap: var(--s2); align-items: center; margin-top: var(--s5); }
+
+/* ================================================================== ADMIN */
+/* Four controls, and no fifth. */
+/* minmax(0,·) on both the track and the card: a grid item defaults to
+   min-width:auto, so the members table blows the whole column out past the
+   viewport instead of scrolling inside its own wrapper. */
+.adgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3); }
+.adcard { padding: var(--s5); min-width: 0; }
+.bigfig { font-family: var(--disp); font-size: 42px; font-weight: 700; letter-spacing: -.045em;
+  line-height: 1; margin-top: 8px; font-variant-numeric: tabular-nums; }
+.bigfig small { font-size: 16px; color: var(--text-3); font-weight: 600; letter-spacing: -.02em; }
+.adnote { margin-top: var(--s3); font-size: 13px; color: var(--text-2); }
+.adnote b { color: var(--text); }
+.adfine { margin-top: var(--s4); font-size: 12px; color: var(--text-3); line-height: 1.65; max-width: 68ch; }
+.adfine b { color: var(--text-2); }
+.track--tall { height: 10px; margin-top: var(--s3); }
+.track--tall i { background: var(--teal); }
+@media (max-width: 1080px) { .adgrid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ============================================================ RUN A NAME */
+.prune { margin-top: var(--s3); padding: var(--s4); border-radius: var(--r-md); }
+.prune--stop { background: var(--warn-bg); }
+.prune .k { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--warn); }
+.prune p { font-size: 12.5px; color: var(--text-2); margin-top: 6px; line-height: 1.6; max-width: 70ch; }
+
+/* ================================================================== GATE */
+.signin { padding: var(--s8) var(--s6) var(--s7); text-align: center; }
+.signin-mark { width: 62px; height: 62px; margin: 0 auto var(--s5); border-radius: 20px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--lilac), var(--teal)); color: var(--on-field);
+  font-family: var(--disp); font-size: 28px; font-weight: 700; letter-spacing: -.04em; }
+.signin-wm { font-size: 36px; letter-spacing: -.045em; }
+.signin-sub { margin-top: 7px; font-size: 14px; color: var(--text-3); }
+.signin-sso { margin-top: var(--s6); width: 100%; justify-content: center; padding: 14px 20px; font-size: 14.5px; }
+.signin-sso .g-g { width: 22px; height: 22px; border-radius: 50%; flex: none; display: flex;
+  align-items: center; justify-content: center; background: currentColor; font-size: 0; }
+/* The disc takes the button's foreground and the glyph takes its background, so
+   the pair inverts correctly in both themes. Setting the glyph to --panel reads
+   as dark-on-dark in dark mode, which is how the mark disappears. */
+.signin-sso .g-g::after { content: "G"; font-family: var(--disp); font-weight: 700; font-size: 13px;
+  color: var(--ink); }
+:root[data-theme="dark"] .signin-sso .g-g { color: var(--slab); }
+:root[data-theme="dark"] .signin-sso .g-g::after { color: var(--text); }
+.signin-fine { margin-top: var(--s3); font-size: 12.5px; color: var(--text-3); }
+
+/* ============================================================ PRIMITIVES */
+/* Absence is a shape, never a colour — and "doesn't apply" is a relevance flag
+   rather than a fourth state, so it is drawn as an absence of drawing. */
+.vmark { width: 12px; height: 12px; border-radius: 3px; flex: none; display: inline-block; }
+.vmark[data-s="verified_absent"] { background: var(--teal-d); }
+.vmark[data-s="present"] { background: transparent; border: 2px solid var(--line-hi); }
+.vmark[data-s="not_found"] { background: var(--warn-bg); border: 1px solid var(--warn);
+  position: relative; overflow: hidden; }
+.vmark[data-s="not_found"]::after { content: ""; position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(45deg, var(--warn) 0 1.5px, transparent 1.5px 5px); }
+.vmark[data-s="n/a"] { background: transparent; border: 1px dashed var(--line-hi); }
+.vmark--wait { background: transparent; border: 1px dashed var(--line-hi); }
+.vstate { display: inline-flex; align-items: center; gap: 7px; }
+.vstate .txt { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.vstate[data-s="verified_absent"] .txt { color: var(--teal-d); }
+.vstate[data-s="present"] .txt { color: var(--text-3); }
+.vstate[data-s="not_found"] .txt { color: var(--warn); }
+.vstate[data-s="n/a"] .txt { color: var(--text-3); }
+
+/* Countable facts stay countable, because that is what makes them defensible.
+   Judgment is labelled as judgment, in a different voice. */
+.eng { display: inline-flex; align-items: center; font-size: 9.5px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; padding: 3px 8px;
+  border-radius: var(--r-pill); border: 1px solid var(--line-hi); color: var(--text-3); }
+.eng[data-e="rule"] { background: var(--panel-2); color: var(--text-2); border-color: transparent; }
+.eng[data-e="llm"] { border-style: dashed; background: transparent; }
+.eng[data-e="mixed"] { background: linear-gradient(100deg, var(--panel-2) 0 50%, transparent 50%); color: var(--text-2); }
+/* A door that never opens is not a place we looked. Marked on the row rather
+   than left to the reader to infer from the ??? and the sentence. */
+.eng--adv { background: transparent; border-style: dotted; color: var(--text-3); }
+
+.ini { width: 44px; height: 44px; flex: none; border-radius: 15px; display: flex;
+  align-items: center; justify-content: center; font-family: var(--disp); font-size: 14px;
+  font-weight: 700; letter-spacing: .01em; }
+.ini--butter { background: var(--butter); color: var(--on-field); }
+.ini--teal { background: var(--teal); color: var(--on-field); }
+.ini--lilac { background: var(--lilac); color: var(--on-field); }
+.ini--sm { width: 34px; height: 34px; border-radius: 12px; font-size: 12px; }
+.ini--xs { width: 26px; height: 26px; border-radius: 9px; font-size: 10px; }
+.ini--lg { width: 68px; height: 68px; border-radius: 22px; font-size: 22px; }
+
+/* ---------------------------------------------------------------- the face
+   §6.12 / decision 117. The initials are the RESTING STATE and always present;
+   the photo is layered on top and deletes itself if the link is dead. TikTok
+   avatar URLs expire in ~48h, so this is the ordinary case rather than the edge
+   one — a seed exported two days before a demo has no working photos at all,
+   and the whole screen has to keep working when that happens.
+   The image is never cached or copied: it is a link to the platform's own CDN. */
+.face { position: relative; display: inline-flex; flex: none; }
+.face .ini { position: relative; z-index: 0; }
+.face-img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%;
+  object-fit: cover; border-radius: inherit; background: var(--panel-2); }
+.face .ini { border-radius: 15px; }
+.face--sm .ini, .face--sm .face-img { border-radius: 12px; }
+.face--xs .ini, .face--xs .face-img { border-radius: 9px; }
+.face--lg .ini, .face--lg .face-img { border-radius: 22px; }
+
+/* -------------------------------------------------------- the account list
+   Every account is a link out, because the fastest way to disbelieve a report
+   is to open the profile (§6.12). A GUESSED account is never dressed as a
+   confirmed one — it is set back by weight and carries the word, never by
+   fading, which fails AA. */
+.accts { list-style: none; margin: var(--s3) 0 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 8px; }
+.acct a, .acct > span { display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 12px; border-radius: var(--r-pill); border: 1px solid var(--line);
+  background: var(--panel-2); color: var(--text); text-decoration: none;
+  font-size: 13px; line-height: 1; }
+/* Hover LIGHTENS — the pastel-under-dark-text rule from the Alloy audit. Focus
+   is deliberately not restyled here; alloy.css owns one focus treatment for the
+   whole app and a local override is how you end up with two. */
+.acct a:hover { background: var(--panel-2h); border-color: var(--text-3); }
+.acct .n { font-weight: 600; }
+.acct .h { color: var(--text-2); }
+.acct .f { color: var(--text-2); font-variant-numeric: tabular-nums; }
+.acct svg { width: 13px; height: 13px; color: var(--text-3); }
+.acct--guess a, .acct--guess > span { border-style: dashed; }
+.acct .guess { font-size: 10px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--warn); background: var(--warn-bg);
+  border-radius: var(--r-pill); padding: 3px 7px; }
+.acct--sep { width: 100%; }
+.sepwhy { display: block; margin-top: 4px; font-size: 11px; color: var(--text-2); }
+
+/* ---------------------------------------------------------------- sources
+   §6.13. The row's weight is the CLAIM, not the switch — what a source proves
+   is the thing worth reading, and the toggle is a control you use once. */
+.srcsum { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  margin: var(--s4) 0 var(--s3); padding-bottom: var(--s3); border-bottom: 1px solid var(--line); }
+.srcsum .k { font-size: 11px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--text-2); }
+.srcsum .v { font-family: var(--disp); font-size: 22px; letter-spacing: -.02em; }
+.srcoff { margin-left: auto; font-size: 12px; color: var(--butter-d); }
+:root[data-theme="dark"] .srcoff { color: var(--butter); }
+.srcall { margin-left: auto; font-size: 12px; color: var(--text-2); }
+
+.srclist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.src { padding: var(--s3); border: 1px solid var(--line); border-radius: var(--r-md);
+  background: var(--panel-2); }
+.src-h { display: flex; align-items: center; gap: 12px; }
+.src-n { display: flex; flex-direction: column; line-height: 1.25; }
+.src-n b { font-size: 14px; }
+.src-m { font-size: 11px; color: var(--text-2); }
+.src-p { margin: var(--s2) 0 0; font-size: 13px; }
+.src-c { margin: 6px 0 0; font-size: 12px; color: var(--text-2); }
+.src-c .k { font-weight: 700; }
+.src-tag { margin-left: auto; font-size: 10px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--lilac-d); border: 1px solid var(--lilac);
+  border-radius: var(--r-pill); padding: 3px 8px; }
+:root[data-theme="dark"] .src-tag { color: var(--lilac); }
+.src-tag--weak { color: var(--text-2); border-color: var(--line-hi); }
+:root[data-theme="dark"] .src-tag--weak { color: var(--text-2); }
+/* An off source is set back by its BORDER and its claim text, never by fading
+   the row — the Alloy audit measured opacity set-back as an AA failure. */
+.src--off { background: transparent; border-style: dashed; }
+.src--off .src-p { color: var(--text-2); }
+
+.tgl { flex: none; width: 40px; height: 24px; border-radius: var(--r-pill);
+  border: 1px solid var(--line-hi); background: var(--panel-3); cursor: pointer;
+  padding: 0; position: relative; transition: background .12s ease; }
+.tgl-k { position: absolute; top: 2px; left: 2px; width: 18px; height: 18px;
+  border-radius: 50%; background: var(--panel); transition: transform .12s ease; }
+.tgl[aria-checked="true"] { background: var(--teal); border-color: var(--teal); }
+.tgl[aria-checked="true"] .tgl-k { transform: translateX(16px); }
+.tgl:hover { border-color: var(--text-3); }
+
+/* Decision 120 — pick your name. Deliberately a list of people rather than a */
+   form: there is no credential to type, and a field would imply one exists. */
+.signin-who { margin: var(--s4) 0 var(--s2); font-size: 13px; color: var(--text-2); }
+.memberpick { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; width: 100%; }
+.memberbtn { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left;
+  padding: 10px 12px; border-radius: var(--r-md); border: 1px solid var(--line);
+  background: var(--panel-2); color: var(--text); cursor: pointer; font: inherit; }
+.memberbtn:hover { background: var(--panel-2h); border-color: var(--text-3); }
+.mb-t { display: flex; flex-direction: column; line-height: 1.25; }
+.mb-t b { font-size: 14px; }
+.mb-t span { font-size: 12px; color: var(--text-2); }
+.mb-adm { margin-left: auto; font-size: 10px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--text-2); border: 1px solid var(--line-hi);
+  border-radius: var(--r-pill); padding: 3px 8px; }
+
+/* A preliminary headline is labelled as one. The tag is a fact about the
+   evidence, not a warning, so it takes lilac — Scout speaking about itself —
+   rather than the amber that would read as a problem with the creator. */
+.thesis--prelim { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.prelim-tag { flex: none; font-size: 10px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--lilac-d, var(--text));
+  border: 1px solid var(--lilac); border-radius: var(--r-pill); padding: 3px 8px; }
+:root[data-theme="dark"] .prelim-tag { color: var(--lilac); }
+
+/* The field's label is removed from view, never from the accessibility tree —
+   the placeholder shows the two accepted formats and a placeholder is not a
+   label. Standard clip pattern; nothing here is display:none. */
+.vh { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Run a name, after it has run. The thing you searched for is the heading —
+   §6.4's complaint was that the verdict replaced the subject, so running three
+   names in a row left you unable to tell which one you were reading. */
+.runsubj { display: flex; align-items: center; gap: var(--s3); }
+.runsubj-nm { margin: 0; font-family: var(--disp); font-size: 24px; letter-spacing: -.02em; }
+.runsubj-hd { margin: 2px 0 0; color: var(--text-2); font-size: 13px; }
+.runsubj-score { margin-left: auto; }
+/* The gates are a footnote here, not an alarm. A result that failed them is
+   still a report worth opening — that is the whole argument for Run a name. */
+.runnote { margin: var(--s3) 0 0; font-size: 13px; color: var(--text-2); }
+
+/* Decision 113's stated condition. Set back by SIZE and by the label, never by
+   opacity — the Alloy audit measured a .62 fade at 2.48:1 light and 2.89:1 dark,
+   both failures. --text-2 is an audited pair. */
+.firstlook { margin: var(--s2) 0 0; font-size: 12px; color: var(--text-2);
+  display: flex; align-items: center; gap: 6px; }
+.firstlook::before { content: ""; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--text-3); flex: none; }
+
+/* The report's name block — the face sits with the name, at the size where a
+   person actually recognises a face rather than a coloured square. */
+.rpt-id { display: flex; align-items: center; gap: var(--s3); }
+.rpt-id h1 { margin: 0; }
+.rpt-id .handle { margin: 2px 0 0; }
+
+blockquote.q { margin: 0; }
+blockquote.q p { font-family: var(--disp); font-weight: 300; font-style: italic; font-size: 19px;
+  line-height: 1.42; letter-spacing: -.02em; color: var(--text); text-indent: -.4em; max-width: 52ch; }
+blockquote.q .src { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+blockquote.q .src .m { font-size: 11px; color: var(--text-3); }
+.q + .q { margin-top: var(--s4); padding-top: var(--s4); border-top: 1px solid var(--line); }
+.src .stale { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--warn); background: var(--warn-bg); border-radius: var(--r-pill); padding: 2px 8px; }
+
+.invbox { background: var(--panel-2); border-radius: var(--r-md); padding: var(--s4); }
+.invsum { margin-top: var(--s3); padding-top: var(--s3); border-top: 1px solid var(--line);
+  font-size: 12.5px; color: var(--text-2); line-height: 1.5; }
+.case { padding: var(--s5); display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--s5); }
+
+/* "Scout found nothing worth your time today" is a feature. No competitor's
+   feed will ever say it. */
+.zero { padding: var(--s8) var(--s6); text-align: center; }
+.zero h2 { font-size: clamp(24px, 3.4vw, 34px); letter-spacing: -.04em; max-width: 26ch; margin: 0 auto; }
+.zero p { margin: var(--s4) auto 0; font-size: 14.5px; color: var(--text-2); max-width: 62ch; line-height: 1.65; }
+
+/* The fill is full width and scaled, so it grows on transform rather than on
+   width — which keeps the bar off the layout path entirely. */
+.track i { width: 100%; transform: scaleX(var(--f, 0)); transform-origin: left center; }
+.spacer { flex: 1; }
+.offscreen { position: fixed; left: -9999px; }
+/* Available to a screen reader, absent from the page. Used wherever a mark or a
+   sweep carries meaning that only exists visually. */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* ============================================================== UTILITIES */
+.mt-2 { margin-top: 8px; }
+.mt-3 { margin-top: var(--s3); }
+.mt-4 { margin-top: var(--s4); }
+.mt-5 { margin-top: var(--s5); }
+.mt-0 { margin-top: 0; }
+.padbox { padding: var(--s6); }
+.flushbox { padding: 0; overflow: hidden; }
+.traybox { padding: var(--s5); }
+
+.draft-subj { font-size: 13px; color: var(--text-3); }
+.draft-subj b { color: var(--text); }
+.draft-p { margin-top: var(--s3); font-size: 15px; line-height: 1.65; }
+.draft-sig { margin-top: var(--s4); font-size: 13px; color: var(--text-3); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .viewfade { animation: vf .18s ease-out both; }
+  @keyframes vf { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+}
+
+/* -------------------------------------------------------------- responsive */
+@media (max-width: 1180px) {
+  .case, .topline { grid-template-columns: 1fr; }
+  .reasons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .samples { grid-template-columns: 1fr; }
+}
+/* Between roughly 900 and 1200 the content column gets tight enough that the
+   claim values wrap. Reclaim the action column by laying the verbs out
+   horizontally under the claims instead of stacking them at the right. */
+@media (max-width: 1200px) {
+  .row { grid-template-columns: 28px 62px minmax(0, 1fr); }
+  .row > .acts { grid-column: 3; flex-direction: row; flex-wrap: wrap;
+    margin-top: var(--s3); padding-top: var(--s3); border-top: 1px solid var(--line); }
+  .row > .acts .vbtn, .row > .acts .btn { width: auto; }
+}
+@media (max-width: 900px) {
+  .row { grid-template-columns: 26px 1fr; }
+  .row > .scorewrap, .row > .rowmain { grid-column: 2; }
+  .row > .acts { grid-column: 2; flex-direction: row; flex-wrap: wrap; }
+  .wrow, .prow { grid-template-columns: 1fr; }
+  .wrow .right { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+  .whylist li, .preslist li { grid-template-columns: 1fr; gap: 2px; }
+  .whylist .v, .preslist .v { text-align: left; }
+  .windows { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .reasons { grid-template-columns: 1fr; }
+  .aslens .btn { margin-left: 0; }
+}

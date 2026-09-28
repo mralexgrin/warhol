@@ -1,0 +1,3614 @@
+{
+  "creatorId": "sharpfootballanalysis",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:10:27.586Z",
+  "observationCount": 772,
+  "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": true,
+  "escalatedWhy": "store — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@sharpfootballanalysis",
+      "why": "the page loaded and there is nothing there"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 13400,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/_-O1qQ4cb9I3_Sbg3lI0qQb2iIvNFFcuWZzUKJzG-q497uJA17hKQGhZRdQJoQhjFZzlQX1ECQ=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@sharpfootballanalysis",
+      "why": "Warren Sharp — the YouTube Data API resolved @sharpfootballanalysis"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/sharpfootballanalysis/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 400,
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=sharpfootballanalysis.bsky.social",
+      "why": "page says it is not there"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@sharpfootballanalysis",
+      "evidence": "https://www.youtube.com/@sharpfootballanalysis",
+      "placesLooked": 27,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.783Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.783Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.783Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.783Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.184Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.184Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.184Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.184Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.006Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.006Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.006Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.006Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.478Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.478Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.478Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.478Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.478Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.140Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.140Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.140Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.141Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.106Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.106Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.106Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.165Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.166Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.166Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:29:41.506Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/sharpfootballanalysis",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:29:41.506Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/sharpfootballanalysis",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:29:41.506Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.590Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.590Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.590Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/SharpFootballAnalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "only 4 of the 5 places we need actually answered",
+      "evidence": null,
+      "placesLooked": 57,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.784Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sharpfootballanalysis?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sharpfootballanalysis",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.784Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.784Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.784Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.784Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/newsletter/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.784Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.785Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.184Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sharpfootballanalysis?searching=profile",
+          "status": 429,
+          "why": "redirected to substack.com/search/sharpfootballanalysis",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.184Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.184Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.184Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.184Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.185Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.007Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sharpfootballanalysis?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sharpfootballanalysis",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.007Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.007Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.007Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.007Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/newsletter/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.007Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.478Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sharpfootballanalysis?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sharpfootballanalysis",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.478Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.478Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.478Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.478Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/newsletter/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.478Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.141Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sharpfootballanalysis?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sharpfootballanalysis",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.141Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.141Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.141Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.141Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/newsletter/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.141Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.107Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@sharpfootballanalysis",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.107Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.108Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.108Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.109Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.167Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sharpfootballanalysis?searching=profile",
+          "status": 429,
+          "why": "redirected to substack.com/search/sharpfootballanalysis",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.168Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.168Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.168Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.169Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:41.507Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sharpfootballanalysis?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sharpfootballanalysis",
+          "advisory": false,
+          "at": "2026-08-12T15:29:41.507Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:41.507Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:41.507Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:41.507Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.590Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@sharpfootballanalysis",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.590Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.590Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.591Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.591Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@sharpfootballanalysis",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "inconclusive",
+          "url": "https://sharpfootballanalysis.substack.com/",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sharpfootballanalysis?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sharpfootballanalysis",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@sharpfootballanalysis",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/profile/sharpfootballanalysis",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "not there · we looked in 4 places · 2 wouldn't answer",
+      "evidence": null,
+      "placesLooked": 37,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.785Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.785Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:34:32.785Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.786Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:34:32.786Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/fantasy/tight-end-adp/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.786Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.186Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.186Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:54:16.186Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.186Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:54:16.186Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.186Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.008Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.008Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:57:36.008Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.008Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:57:36.008Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/fantasy/tight-end-adp/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.008Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.479Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.479Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:44:58.479Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.479Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:44:58.479Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/fantasy/tight-end-adp/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.479Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.142Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.142Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:49:25.142Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.142Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:49:25.142Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/fantasy/tight-end-adp/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.142Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.110Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.110Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:28:15.111Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.111Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:28:15.111Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.170Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.170Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:35:28.170Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.171Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:35:28.172Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:41.507Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:41.507Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:29:41.507Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:29:41.507Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:29:41.507Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.591Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.591Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:59:29.591Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.591Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:59:29.591Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sharpfootballanalysis",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://store.sharpfootballanalysis.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at discord.com/invite/sharpfootballanalysis — not confirmed as theirs",
+      "evidence": "https://discord.com/invite/sharpfootballanalysis",
+      "placesLooked": 26,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.786Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.786Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/membership/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:32.786Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.186Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.186Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.186Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.009Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.009Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/membership/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.009Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.479Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.479Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/membership/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.479Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.143Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.143Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/membership/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.143Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.111Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.111Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.172Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.173Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:41.507Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:41.507Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.591Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.591Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.313Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.201Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/sharpfootballanalysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.131Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://discord.com/invite/sharpfootballanalysis",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.132Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by an official directory",
+      "why": "found it — https://podcasts.apple.com/us/podcast/sharp-football-analysis-by-warren-sharp/id1485652145?uo=4",
+      "evidence": "https://itunes.apple.com/search?term=Warren%20Sharp&entity=podcast&limit=5",
+      "placesLooked": 5,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Warren%20Sharp&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Sharp Football Analysis by Warren Sharp\" by Warren Sharp",
+          "advisory": false,
+          "at": "2026-08-06T20:34:33.167Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/sharp-football-show",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:33.167Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://open.spotify.com/show/sharpfootballanalysis",
+          "status": 400,
+          "why": "HTTP 400 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-06T20:34:33.168Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Warren%20Sharp&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Sharp Football Analysis by Warren Sharp\" by Warren Sharp",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.422Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "inconclusive",
+          "url": "https://www.sharpfootballanalysis.com/podcast/",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.422Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/sharp-football-analysis",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.423Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://open.spotify.com/show/sharpfootballanalysis",
+          "status": 400,
+          "why": "HTTP 400 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.423Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Warren%20Sharp&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Sharp Football Analysis by Warren Sharp\" by Warren Sharp",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.048Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "inconclusive",
+          "url": "https://www.sharpfootballanalysis.com/podcast/",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.048Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Warren%20Sharp&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Sharp Football Analysis by Warren Sharp\" by Warren Sharp",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.527Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/sharp-football-show",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.527Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.spotify.com/us/show/sharpfootballanalysis/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.527Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Warren%20Sharp&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Sharp Football Analysis by Warren Sharp\" by Warren Sharp",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.165Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "inconclusive",
+          "url": "https://www.sharpfootballanalysis.com/podcast/",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.165Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/sharp-football-show",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.165Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://open.spotify.com/show/sharpfootballanalysis",
+          "status": 400,
+          "why": "HTTP 400 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.165Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.simplecast.com/UiNmc8XS",
+          "status": 200,
+          "why": "76 posts read from Sharp Football Analysis by Warren Sharp — the publication title reads \"Sharp Football Analysis by Warren Sharp\"",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.858Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Warren%20Sharp&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Sharp Football Analysis by Warren Sharp\" by Warren Sharp",
+          "advisory": false,
+          "at": "2026-08-10T21:28:15.859Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.simplecast.com/UiNmc8XS",
+          "status": 200,
+          "why": "76 posts read from Sharp Football Analysis by Warren Sharp — the publication title reads \"Sharp Football Analysis by Warren Sharp\"",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.510Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Warren%20Sharp&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Sharp Football Analysis by Warren Sharp\" by Warren Sharp",
+          "advisory": false,
+          "at": "2026-08-10T21:35:28.511Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.simplecast.com/UiNmc8XS",
+          "status": 200,
+          "why": "76 posts read from Sharp Football Analysis by Warren Sharp — the publication title reads \"Sharp Football Analysis by Warren Sharp\"",
+          "advisory": false,
+          "at": "2026-08-12T15:29:42.243Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Warren%20Sharp&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Sharp Football Analysis by Warren Sharp\" by Warren Sharp",
+          "advisory": false,
+          "at": "2026-08-12T15:29:42.243Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.simplecast.com/UiNmc8XS",
+          "status": 200,
+          "why": "77 posts read from Sharp Football Analysis by Warren Sharp — the publication title reads \"Sharp Football Analysis by Warren Sharp\"",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.895Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Warren%20Sharp&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Sharp Football Analysis by Warren Sharp\" by Warren Sharp",
+          "advisory": false,
+          "at": "2026-08-12T19:59:29.895Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.simplecast.com/UiNmc8XS",
+          "status": 200,
+          "why": "77 posts read from Sharp Football Analysis by Warren Sharp — the publication title reads \"Sharp Football Analysis by Warren Sharp\"",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.485Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Warren%20Sharp&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Sharp Football Analysis by Warren Sharp\" by Warren Sharp",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.486Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.simplecast.com/UiNmc8XS",
+          "status": 200,
+          "why": "77 posts read from Sharp Football Analysis by Warren Sharp — the publication title reads \"Sharp Football Analysis by Warren Sharp\"",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.650Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Warren%20Sharp&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Sharp Football Analysis by Warren Sharp\" by Warren Sharp",
+          "advisory": false,
+          "at": "2026-08-14T12:53:28.651Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.simplecast.com/UiNmc8XS",
+          "status": 200,
+          "why": "77 posts read from Sharp Football Analysis by Warren Sharp — the publication title reads \"Sharp Football Analysis by Warren Sharp\"",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.274Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Warren%20Sharp&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Sharp Football Analysis by Warren Sharp\" by Warren Sharp",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.274Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/us/podcast/sharp-football-show",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.274Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by the feed it publishes — the publication title reads \"Sharp Football Analysis\"",
+      "why": "found it — sharpfootballanalysis.com",
+      "evidence": "https://www.sharpfootballanalysis.com/",
+      "placesLooked": 12,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:33.169Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:33.169Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:33.169Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.424Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.424Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.424Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.049Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.049Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.049Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/fantasy/tight-end-adp/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.049Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/betting/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.049Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.527Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.527Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.527Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.166Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.166Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.166Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.sharpfootballanalysis.com/feed/",
+          "status": 200,
+          "why": "20 posts read from Sharp Football Analysis — the publication title reads \"Sharp Football Analysis\"",
+          "advisory": false,
+          "at": "2026-08-10T21:28:16.503Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:16.504Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-10T21:28:16.504Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.sharpfootballanalysis.com/feed/",
+          "status": 200,
+          "why": "20 posts read from Sharp Football Analysis — the publication title reads \"Sharp Football Analysis\"",
+          "advisory": false,
+          "at": "2026-08-10T21:35:29.123Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:29.124Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-10T21:35:29.124Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.sharpfootballanalysis.com/feed/",
+          "status": 200,
+          "why": "20 posts read from Sharp Football Analysis — the publication title reads \"Sharp Football Analysis\"",
+          "advisory": false,
+          "at": "2026-08-12T15:29:42.965Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:29:42.966Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:29:42.966Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.sharpfootballanalysis.com/feed/",
+          "status": 200,
+          "why": "20 posts read from Sharp Football Analysis — the publication title reads \"Sharp Football Analysis\"",
+          "advisory": false,
+          "at": "2026-08-12T19:59:30.755Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:30.755Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T19:59:30.755Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.sharpfootballanalysis.com/feed/",
+          "status": 200,
+          "why": "20 posts read from Sharp Football Analysis — the publication title reads \"Sharp Football Analysis\"",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.919Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.924Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.924Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.sharpfootballanalysis.com/feed/",
+          "status": 200,
+          "why": "20 posts read from Sharp Football Analysis — the publication title reads \"Sharp Football Analysis\"",
+          "advisory": false,
+          "at": "2026-08-14T12:53:29.094Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:29.095Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:53:29.095Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.sharpfootballanalysis.com/feed/",
+          "status": 200,
+          "why": "20 posts read from Sharp Football Analysis — the publication title reads \"Sharp Football Analysis\"",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.594Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.595Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sharpfootballanalysis.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.595Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.sharpfootballanalysis.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.595Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T20:34:33.169Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.424Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.049Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.527Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.166Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:28:16.504Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:35:29.124Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:29:42.967Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T19:59:30.755Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.924Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:53:29.095Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.596Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T20:34:33.169Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.424Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.049Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.528Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.166Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:28:16.504Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:35:29.124Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "we could not read their captions",
+          "advisory": false,
+          "at": "2026-08-12T15:29:42.967Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T19:59:30.755Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.925Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:53:29.096Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.596Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T20:34:33.169Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:54:16.424Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:57:36.050Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:44:58.528Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:49:25.167Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:28:16.504Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:35:29.124Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:29:42.968Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T19:59:30.755Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T20:27:05.925Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:53:29.096Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:10:15.596Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": 0.289,
+    "recentPerMonth": 25.67,
+    "baselinePerMonth": 36.1,
+    "recentCount": 77,
+    "baselineCount": 123,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 102,
+    "sampled": 200,
+    "truncated": true,
+    "recentMedianViews": 1632,
+    "baselineMedianViews": 1333,
+    "unit": "videos",
+    "line": "26 videos a month now, against 36 before that — down 29%; the recent ones are getting 22% more views"
+  },
+  "samples": [
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "well HELLO Fernando 👀 #nfl #raiders",
+      "url": "https://www.youtube.com/watch?v=TaEIzNumT78",
+      "at": "2026-08-14T05:34:23Z",
+      "thumbnail": "https://i.ytimg.com/vi/TaEIzNumT78/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1356,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:07.823Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Sharp Football Analysis",
+      "kind": "writing",
+      "title": "2026 NFL Running Back Prop Bets: Best Unders to Target",
+      "url": "https://www.sharpfootballanalysis.com/betting/nfl-running-back-player-prop-unders/",
+      "at": "2026-08-13T20:19:49.000Z",
+      "thumbnail": null,
+      "excerpt": "2026 NFL Unders: Best Running Back Prop Bets\n \n Jonathan Taylor — Under 1224.5 Rushing Yards (-105)\n Chuba Hubbard — Under 700 Rushing Yards (-114)\n \n Fantasy football projections, like those done by Rich Hribar , can be a guide to help identify overvalued or undervalued players in the current betti",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:10:15.597Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Fans Are Outraged at the New Bills Stadium #NFL",
+      "url": "https://www.youtube.com/watch?v=HfpWjDnA7Is",
+      "at": "2026-08-13T19:21:08Z",
+      "thumbnail": "https://i.ytimg.com/vi/HfpWjDnA7Is/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1509,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:07.824Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Sharp Football Analysis",
+      "kind": "writing",
+      "title": "Should Ben Johnson Actually Want the Highest Scoring Offense?",
+      "url": "https://www.sharpfootballanalysis.com/analysis/ben-johnson-highest-scoring-offense-history/",
+      "at": "2026-08-13T17:19:26.000Z",
+      "thumbnail": null,
+      "excerpt": "Ben Johnson says he wants the highest-scoring offense in league history, but perhaps he shouldn't.\n Scoring the most points and winning the Super Bowl have not usually gone hand in hand.\n \n Get Warren's Book for $34.99 \n Order Book \n \n Is Ben Johnson Right to Want the Highest Scoring Offense in Hist",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:10:15.597Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Sharp Football Analysis",
+      "kind": "writing",
+      "title": "2026 Fantasy Football Draft Strategy: How to Draft WRs",
+      "url": "https://www.sharpfootballanalysis.com/fantasy/wr-draft-strategy-targets-sleepers/",
+      "at": "2026-08-13T14:54:16.000Z",
+      "thumbnail": null,
+      "excerpt": "Everything this offseason has built up to this point, when I release my strategy for drafting wide receivers in 2026 fantasy football drafts.\n With the 2026 Draft Kit in place as a North Star for how to play the game of fantasy football, I also know some of you are here because you want to know how ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:10:15.597Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Stop Blaming Coaches for QB Busts #NFL",
+      "url": "https://www.youtube.com/watch?v=ap_Sc5prk5E",
+      "at": "2026-08-13T00:09:03Z",
+      "thumbnail": "https://i.ytimg.com/vi/ap_Sc5prk5E/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 964,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:07.824Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Sharp Football Analysis",
+      "kind": "writing",
+      "title": "2026 Fantasy Football Draft Strategy: How to Draft RBs",
+      "url": "https://www.sharpfootballanalysis.com/fantasy/rb-draft-strategy-targets-sleepers/",
+      "at": "2026-08-12T16:58:59.000Z",
+      "thumbnail": null,
+      "excerpt": "Everything this offseason has built up to this point, when I release my strategy for drafting running backs in 2026 fantasy football drafts.\n With the 2026 Draft Kit in place as a North Star for how to play the game of fantasy football, I also know some of you are here because you want to know how I",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-12T20:27:05.926Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "The Preseason Week 1 Storylines That Actually Matter",
+      "url": "https://www.youtube.com/watch?v=I_pMQP8sI6c",
+      "at": "2026-08-12T16:34:58Z",
+      "thumbnail": "https://i.ytimg.com/vi/I_pMQP8sI6c/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1611,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:07.824Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Sharp Football Analysis",
+      "kind": "writing",
+      "title": "SEC Win Totals 2026: Odds, Picks, Predictions & Best Bets",
+      "url": "https://www.sharpfootballanalysis.com/betting/college-football-sec-win-totals/",
+      "at": "2026-08-12T15:06:33.000Z",
+      "thumbnail": null,
+      "excerpt": "2026 SEC Win Totals\n [[[\"Team\",\"2026 Win Total\",\"Over Odds\"],[\"Georgia\",\"9.5\",\"-190\"],[\"Texas\",\"9.5\",\"+114\"],[\"Alabama\",\"8.5\",\"-119\"],[\"LSU\",\"8.5\",\"-116\"],[\"Texas A&M\",\"8.5\",\"-104\"],[\"Florida\",\"7.5\",\"+135\"],[\"Oklahoma\",\"7.5\",\"-162\"],[\"Ole Miss\",\"7.5\",\"-177\"],[\"Tennessee\",\"7.5\",\"-119\"],[\"Auburn\",\"6.5",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-12T20:27:05.926Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Watson, Yikes 💀 #nfl #browns",
+      "url": "https://www.youtube.com/watch?v=X0yes1FX1Vs",
+      "at": "2026-08-12T13:44:18Z",
+      "thumbnail": "https://i.ytimg.com/vi/X0yes1FX1Vs/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1651,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:07.825Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "No one catches Sampson in the open field #NFL #Browns",
+      "url": "https://www.youtube.com/watch?v=j-HonorHnuk",
+      "at": "2026-08-11T21:45:31Z",
+      "thumbnail": "https://i.ytimg.com/vi/j-HonorHnuk/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1546,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T20:27:03.364Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Sharp Football Analysis",
+      "kind": "writing",
+      "title": "College Football Win Totals 2026: Odds, Picks & Best Bets",
+      "url": "https://www.sharpfootballanalysis.com/betting/college-football-win-totals/",
+      "at": "2026-08-11T17:25:46.000Z",
+      "thumbnail": null,
+      "excerpt": "College football win totals for the 2026 season are on the board at every major sportsbook, and the numbers are already moving.\n Below you will find the full win total odds for all 138 FBS college football programs.\n Sharp Football's Ryan McCrystal then breaks down the college football win totals th",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-12T20:27:05.926Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Sharp Football Analysis",
+      "kind": "writing",
+      "title": "2026 NFL Running Back Prop Bets: Best Overs to Target",
+      "url": "https://www.sharpfootballanalysis.com/betting/nfl-running-back-player-prop-overs/",
+      "at": "2026-08-11T16:56:39.000Z",
+      "thumbnail": null,
+      "excerpt": "2026 NFL Overs: Best Running Back Prop Bets\n \n David Montgomery — Over 825.5 Rushing Yards (-114)\n David Montgomery — Over 7.5 Rushing Touchdowns (-102)\n Chase Brown — Over 824.5 Rushing Yards (-110)\n Chase Brown — Over 5.5 Rushing Touchdowns (-125)\n \n 2026 NFL Longshot Running Back Prop Bets\n \n Dav",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-12T15:29:42.968Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Tank's comeback training is insane 🤯 #NFL #Texans",
+      "url": "https://www.youtube.com/watch?v=s4F1MYQ4avk",
+      "at": "2026-08-11T12:00:12Z",
+      "thumbnail": "https://i.ytimg.com/vi/s4F1MYQ4avk/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 833,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T20:27:03.364Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "He made the catch but... #nfl #colts",
+      "url": "https://www.youtube.com/watch?v=yWYXln3dWWo",
+      "at": "2026-08-11T01:01:13Z",
+      "thumbnail": "https://i.ytimg.com/vi/yWYXln3dWWo/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1548,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T20:27:03.364Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Sharp Football Analysis",
+      "kind": "writing",
+      "title": "NFL Season Long Player Props: 2026 QB, RB & WR Picks",
+      "url": "https://www.sharpfootballanalysis.com/betting/nfl-season-long-player-props/",
+      "at": "2026-08-10T20:26:44.000Z",
+      "thumbnail": null,
+      "excerpt": "2026 NFL Prop Bets: Best QB, RB & WR Over/Unders\n \n Josh Allen – Over 24.5 Passing Touchdowns (-110)\n Fernando Mendoza – Under 2299.5 Passing Yards (-115)\n \n The picks above are just a sampling of the FREE player prop picks offered at Sharp Football Analysis.\n Click on any of the articles below for ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-10T21:35:29.125Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Justin Herbert's New Passing Coach 💀 #chargers #NFL",
+      "url": "https://www.youtube.com/watch?v=CkgOcGviq3w",
+      "at": "2026-08-10T20:05:07Z",
+      "thumbnail": "https://i.ytimg.com/vi/CkgOcGviq3w/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1154,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T15:29:30.396Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Sharp Football Analysis",
+      "kind": "writing",
+      "title": "Warren Sharp’s New Book “2026 Football Preview” – Now Available for Download",
+      "url": "https://www.sharpfootballanalysis.com/betting/warren-sharps-new-book-2026-football-preview-now-available/",
+      "at": "2026-08-10T13:05:38.000Z",
+      "thumbnail": null,
+      "excerpt": "Warren Sharp's new book, “ 2026 Football Preview, ” is now available for download. \n If you’ve already purchased the book, simply log in to the site and download the 600+ page PDF via your Dashboard . You'll see a red download button at the top of the page. \n Why is this year's book the best ever?\n ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-10T21:35:29.125Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Sharp Football Analysis",
+      "kind": "writing",
+      "title": "Seattle Seahawks on Hard Knocks: Everything You Need to Know",
+      "url": "https://www.sharpfootballanalysis.com/analysis/seattle-seahawks-hard-knocks-2026-nfl-season-preview-forecast-outlook/",
+      "at": "2026-08-10T13:00:58.000Z",
+      "thumbnail": null,
+      "excerpt": "The Seattle Seahawks have been chosen to star in the HBO docuseries Hard Knocks for the upcoming 2026 NFL season.\n The first episode airs Tuesday, August 4 at 9 p.m. ET. \n At over 600 pages, Warren Sharp's new book 2026 Football Preview features dedicated chapters for all 32 NFL teams, fantasy footb",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-10T21:35:29.125Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Why Diggs is the WR the Commanders desperately needed #NFL #Football #HTTR",
+      "url": "https://www.youtube.com/watch?v=z1d_lb9cptQ",
+      "at": "2026-08-10T01:56:51Z",
+      "thumbnail": "https://i.ytimg.com/vi/z1d_lb9cptQ/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 916,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-10T21:35:24.873Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Rodgers' Dumpoff Problem is Killing the Steelers Offense #steelers #nfl #aaronrodgers",
+      "url": "https://www.youtube.com/watch?v=52IdAYeW6vU",
+      "at": "2026-08-09T18:54:35Z",
+      "thumbnail": "https://i.ytimg.com/vi/52IdAYeW6vU/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 775,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-10T21:35:24.873Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Best Ball Fantasy Football: Our Full 2026 Draft Board",
+      "url": "https://www.youtube.com/watch?v=XFmPnit5hao",
+      "at": "2026-08-07T07:52:46Z",
+      "thumbnail": "https://i.ytimg.com/vi/XFmPnit5hao/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1611,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-10T21:35:24.873Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Bryce Young Who? 😤 #nfl #panthers",
+      "url": "https://www.youtube.com/watch?v=uZ0VE_oykMs",
+      "at": "2026-08-07T06:03:48Z",
+      "thumbnail": "https://i.ytimg.com/vi/uZ0VE_oykMs/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 5787,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-10T21:35:24.873Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Sharp Football Analysis by Warren Sharp",
+      "kind": "episode",
+      "title": "2026 QB Tiers: Every NFL Starting Quarterback, Ranked",
+      "url": "https://www.sharpfootballanalysis.com/?utm_source=link-bio",
+      "at": "2026-08-06T21:12:34.000Z",
+      "thumbnail": null,
+      "excerpt": "Warren Sharp ranks every NFL starting quarterback into tiers for 2026, covering all 32 teams, NFL QB rankings, quarterback tiers, betting futures and fantasy football draft value.\n Get the 2026 Football Preview Book, 619 full color pages on all 32 teams. Use code SHARPQB to save $10 on the PDF: http",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:10:15.596Z",
+      "status": null
+    }
+  ],
+  "headline": {
+    "sentence": "Sharp Football Analysis puts out NFL film and betting breakdowns for 13,400 YouTube subscribers, already sells a book by download and runs a membership, podcast, and own website, but has no store to sell merchandise or other products.",
+    "restsOn": "audience: 13,400 on YouTube · they have: YouTube channel, Membership, Podcast, Own website · they do not have: Store · \"Warren Sharp’s New Book “2026 Football Preview” – Now Available for Download\" · \"NFL Season Long Player Props: 2026 QB, RB & WR Picks\" · \"2026 QB Tiers: Every NFL Starting Quarterback, Ranked\""
+  },
+  "samplesSearched": {
+    "count": 6,
+    "why": "6 pieces of their own work"
+  },
+  "commentsRead": 66,
+  "audienceHistory": [
+    {
+      "audience": 13300,
+      "at": "2026-08-06T20:34:25.648Z"
+    },
+    {
+      "audience": 13300,
+      "at": "2026-08-06T21:54:10.192Z"
+    },
+    {
+      "audience": 13300,
+      "at": "2026-08-06T21:57:27.898Z"
+    },
+    {
+      "audience": 13300,
+      "at": "2026-08-07T11:44:51.737Z"
+    },
+    {
+      "audience": 13300,
+      "at": "2026-08-07T11:49:17.177Z"
+    },
+    {
+      "audience": 13400,
+      "at": "2026-08-10T21:28:12.621Z"
+    },
+    {
+      "audience": 13400,
+      "at": "2026-08-10T21:35:24.873Z"
+    },
+    {
+      "audience": 13400,
+      "at": "2026-08-12T15:29:30.396Z"
+    },
+    {
+      "audience": 13400,
+      "at": "2026-08-12T19:59:27.535Z"
+    },
+    {
+      "audience": 13400,
+      "at": "2026-08-12T20:27:03.364Z"
+    },
+    {
+      "audience": 13400,
+      "at": "2026-08-14T12:53:25.827Z"
+    },
+    {
+      "audience": 13400,
+      "at": "2026-08-14T13:10:07.822Z"
+    }
+  ],
+  "audience": 13400,
+  "audienceWhy": "YouTube alone",
+  "audienceSeparate": [],
+  "score": {
+    "total": 9,
+    "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 7.6,
+      "max": 35,
+      "lines": [
+        {
+          "item": "store",
+          "label": "Store",
+          "half": "built",
+          "base": 9,
+          "effective": 9,
+          "demandAligned": false,
+          "why": "not there · we looked in 4 places · 2 wouldn't answer"
+        }
+      ],
+      "share": 0.217,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 7.6,
+    "pressure": {
+      "points": 0.9,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0.9,
+          "line": "26 videos a month now, against 36 before that — down 29%; the recent ones are getting 22% more views",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "pass",
+      "because": "NFL betting and fantasy analytics is a category with huge demand, the shows run on a fixed Tuesday/Thursday/Sunday schedule, and stat-backed breakdowns and player props are naturally clippable — the empty recent-posts field is just scraper noise, not absence of output."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 8 days apart, the trend needs 90",
+      "why": "our two looks are 8 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.667,
+      "resolved": 4,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 1
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "pass",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 329,
+    "places": 35,
+    "from": "2026-08-06T20:34:25.571Z",
+    "to": "2026-08-14T13:10:27.586Z"
+  }
+}

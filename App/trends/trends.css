@@ -1,0 +1,275 @@
+/* ============================================================
+   TRENDS — concept board
+   Sits on top of alloy.css + scout-v52.css. Adds nothing that
+   the incumbent system already names; every new token below is
+   a chart token, which Scout has never needed before.
+   ============================================================ */
+
+:root{
+  /* Categorical marks. Validated (dataviz six-checks, light on #FFFFFF):
+     lightness band PASS · chroma PASS · CVD ΔE 15.2 · normal ΔE 20.6 · contrast PASS.
+     Drifted off Alloy's --teal-d / --lilac-d / --butter-d by the least the
+     chroma floor allowed, so a mark and its field still read as one family. */
+  --c1:#00806A;   /* built / present  */
+  --c2:#5A4CA3;   /* the gap          */
+  --c3:#9A6200;   /* pressure         */
+
+  /* Magnitude. One hue, light to dark. Never a rainbow. */
+  --seq1:#EDEAF7; --seq2:#CFC6EA; --seq3:#A99BD6; --seq4:#7D6BBE; --seq5:#5A4CA3;
+
+  /* The third state. Not a colour — an absence of one. */
+  --unk:#8E8A9C;
+  --grid:rgba(28,27,35,.10);
+}
+:root[data-theme="dark"]{
+  /* Re-stepped for #24222D, not flipped. Band 0.48–0.67, CVD ΔE 17.9. */
+  --c1:#1DAC8E; --c2:#8A6FE6; --c3:#C28400;
+  --seq1:#2F2B45; --seq2:#413A63; --seq3:#574C85; --seq4:#6F61A8; --seq5:#8A6FE6;
+  --unk:#7C7789;
+  --grid:rgba(242,240,247,.12);
+}
+
+/* ---------------------------------------------------- director's toggle ---
+   Not part of the product. The board's own chrome, deliberately outside the
+   slab so nothing about it can be mistaken for a Scout control.            */
+.board{max-width:1500px;margin:0 auto 18px;display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap;
+  padding:0 6px;color:#1C1B23}
+.board-t{font-family:var(--disp);font-weight:700;font-size:14px;letter-spacing:-.02em;margin-right:2px}
+.board-t span{display:block;font-family:var(--ui);font-weight:400;font-size:11.5px;letter-spacing:0;opacity:.72}
+.dirs{display:flex;gap:6px;flex-wrap:wrap}
+.dir{appearance:none;cursor:pointer;font:inherit;font-size:12.5px;font-weight:600;
+  padding:7px 14px;border-radius:var(--r-pill);border:1px solid rgba(28,27,35,.28);
+  background:rgba(255,255,255,.5);color:#1C1B23;transition:background var(--dur) var(--ease),border-color var(--dur) var(--ease)}
+.dir:hover{background:rgba(255,255,255,.85)}
+.dir[aria-pressed="true"]{background:#1C1B23;color:#FBFAFC;border-color:transparent}
+.dir b{font-weight:700;margin-right:7px;opacity:.55}
+.dir[aria-pressed="true"] b{opacity:.6}
+/* The recommendation. Solid enough to be the obvious first stop without
+   pretending the other four are unavailable. */
+.dir--rec{border-color:#1C1B23;border-width:1.5px;padding-left:12px}
+.dir--rec b{opacity:1;font-size:15px;line-height:1;position:relative;top:1px}
+.dir--rec::after{content:"recommended";margin-left:9px;font-size:10.5px;font-weight:600;
+  letter-spacing:.05em;text-transform:uppercase;opacity:.55}
+.board-r{margin-left:auto;display:flex;align-items:center;gap:10px}
+.themebtn{appearance:none;cursor:pointer;font:inherit;font-size:12px;font-weight:600;padding:7px 13px;
+  border-radius:var(--r-pill);border:1px solid rgba(28,27,35,.28);background:rgba(255,255,255,.5);color:#1C1B23}
+.board-src{font-size:11px;letter-spacing:.02em;opacity:.75}
+
+/* The board sits above the slab, so the slab's own 100dvh height would push
+   the page past the viewport and scroll the toggle out of reach of the
+   directions it switches between. Above the app breakpoint the board is
+   pinned and only the main column scrolls; below it, everything stacks and
+   the document scrolls as normal. */
+@media(min-width:961px){
+  body{height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+  .board{flex:none}
+  .slab.slab--app{flex:1 1 auto;height:auto;min-height:0}
+}
+
+/* ------------------------------------------------------------- page head ---*/
+.tr-wrap{padding:var(--s6);min-width:0;overflow-y:auto}
+@media(max-width:900px){.tr-wrap{padding:var(--s4)}}
+.tr-head{padding-bottom:var(--s5);border-bottom:1px solid var(--line);margin-bottom:var(--s6)}
+.tr-h1{font-size:31px;letter-spacing:-.045em;margin-bottom:6px}
+@media(max-width:700px){.tr-h1{font-size:25px}}
+.tr-lede{font-size:14px;color:var(--text-2);line-height:1.62;max-width:70ch;margin:0}
+.tr-thesis{margin-top:var(--s4);font-size:12.5px;color:var(--text-3);line-height:1.6;max-width:74ch}
+.tr-thesis b{color:var(--text-2);font-weight:600}
+
+/* The age of the record, stated once, at the top, in every direction.
+   Scout's reports refuse to call a trend before 90 days; the tab that is
+   named Trends cannot be the one screen that forgets. */
+.age{display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap;margin-top:var(--s5);
+  padding:13px var(--s4);background:var(--panel-2);border-radius:var(--r-md)}
+.age-bar{flex:1 1 260px;min-width:180px;height:8px;border-radius:var(--r-pill);position:relative;
+  background:var(--panel-3);overflow:hidden}
+.age-bar i{position:absolute;inset:0 auto 0 0;background:var(--c2);border-radius:var(--r-pill)}
+.age-bar u{position:absolute;inset:0;left:2.2%;text-decoration:none;
+  background-image:repeating-linear-gradient(135deg,var(--hatch-ink) 0 1px,transparent 1px 6px)}
+.age-tx{font-size:12.5px;color:var(--text-2);line-height:1.5}
+.age-tx b{color:var(--text);font-weight:600}
+
+/* --------------------------------------------------------------- shared ---*/
+.sec{margin-top:var(--s7)}
+.sec:first-of-type{margin-top:var(--s6)}
+.sec-h{font-size:19px;letter-spacing:-.035em;margin-bottom:5px}
+.sec-s{font-size:12.5px;color:var(--text-3);line-height:1.6;max-width:74ch;margin:0 0 var(--s5)}
+.sec-s b{color:var(--text-2);font-weight:600}
+
+.legend{display:flex;gap:var(--s4);flex-wrap:wrap;align-items:center;margin:0 0 var(--s4);
+  font-size:12px;color:var(--text-2)}
+.lg{display:inline-flex;align-items:center;gap:7px}
+.sw{width:12px;height:12px;border-radius:3px;flex:none;display:block}
+.sw--c1{background:var(--c1)} .sw--c2{background:var(--c2)} .sw--c3{background:var(--c3)}
+.sw--unk{background:var(--panel-2);border:1px solid var(--line-hi);
+  background-image:repeating-linear-gradient(135deg,var(--hatch-ink) 0 1px,transparent 1px 4px)}
+
+.panelbox{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--s5)}
+@media(max-width:700px){.panelbox{padding:var(--s4)}}
+.scrollx{overflow-x:auto;margin:0 calc(var(--s5) * -1);padding:0 var(--s5)}
+
+.tnote{margin-top:var(--s4);font-size:12px;color:var(--text-3);line-height:1.6;max-width:76ch}
+
+/* =========================================================== A · LEDGER ===*/
+.led{width:100%;border-collapse:collapse;font-size:13.5px;min-width:720px}
+.led th{text-align:left;font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--text-3);padding:0 var(--s3) 11px;border-bottom:1px solid var(--line);white-space:nowrap}
+.led th.n,.led td.n{text-align:right;font-variant-numeric:tabular-nums}
+.led td{padding:13px var(--s3);border-bottom:1px solid var(--line);vertical-align:middle}
+.led tr:last-child td{border-bottom:0}
+.led-nm{font-weight:600;white-space:nowrap}
+.led-why{display:block;font-size:11.5px;color:var(--text-3);font-weight:400;margin-top:2px;white-space:normal}
+.led-big{font-family:var(--disp);font-size:21px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.led-of{font-size:11.5px;color:var(--text-3);margin-left:3px;font-family:var(--ui);font-weight:400;letter-spacing:0}
+
+/* The one bar in the ledger: three states, 2px surface gaps between fills. */
+.stack{display:flex;height:16px;border-radius:4px;overflow:hidden;background:var(--panel-2);min-width:150px}
+.stack i{display:block;height:100%;box-shadow:2px 0 0 var(--panel)}
+.stack i:last-child{box-shadow:none}
+.stack .s-p{background:var(--c1)}
+.stack .s-a{background:var(--c2)}
+.stack .s-u{background:var(--panel-2);
+  background-image:repeating-linear-gradient(135deg,var(--hatch-ink) 0 1px,transparent 1px 4px)}
+
+/* The locked column. This is the whole point of direction A: the tab named
+   Trends ships with its trend column visibly unearned rather than filled
+   with two points and a line drawn through them. */
+.locked{display:inline-flex;align-items:center;gap:8px;padding:5px 11px;border-radius:var(--r-pill);
+  border:1px dashed var(--line-hi);color:var(--text-3);font-size:11.5px;white-space:nowrap;
+  background-image:repeating-linear-gradient(135deg,var(--hatch-ink) 0 1px,transparent 1px 7px)}
+.locked svg{width:12px;height:12px;flex:none}
+
+/* ========================================================== B · GAP MAP ===*/
+.map{display:grid;gap:var(--s3);align-items:center}
+.map-row{display:grid;grid-template-columns:132px minmax(0,1fr) 76px;gap:var(--s4);align-items:center}
+@media(max-width:820px){.map-row{grid-template-columns:104px minmax(0,1fr) 66px;gap:var(--s3)}}
+.map-lbl{font-size:12.5px;font-weight:600;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* The columns flex so the whole market fits the panel at any width instead of
+   scrolling sideways — the point of this direction is seeing all of it at once. */
+.map-cells{display:flex;gap:2px;min-width:0}
+.map-c{flex:1 1 0;min-width:3px;max-width:13px;height:26px;border-radius:2px;background:var(--c1)}
+.map-c[data-s="absent"]{background:var(--c2)}
+.map-c[data-s="unknown"]{background:var(--panel-2);
+  background-image:repeating-linear-gradient(135deg,var(--hatch-ink) 0 1px,transparent 1px 4px)}
+.map-c[data-s="none"]{background:transparent;box-shadow:inset 0 0 0 1px var(--line)}
+.map-n{font-size:12px;color:var(--text-2);font-variant-numeric:tabular-nums;white-space:nowrap;
+  padding-left:4px}
+.map-n b{color:var(--text);font-weight:700;font-size:14px}
+.map-axis{display:grid;grid-template-columns:132px minmax(0,1fr) 76px;gap:var(--s4);
+  font-size:11px;color:var(--text-3);margin-top:var(--s3)}
+@media(max-width:820px){.map-axis{grid-template-columns:104px minmax(0,1fr) 66px;gap:var(--s3)}}
+.map-axis span{grid-column:2}
+
+/* the pairs that travel together */
+.pairs{display:flex;flex-direction:column;gap:2px;margin-top:var(--s3)}
+.pair{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr) 54px;gap:var(--s4);align-items:center;
+  padding:9px var(--s3);border-radius:var(--r-sm)}
+.pair:nth-child(odd){background:var(--panel-2)}
+.pair-l{font-size:12.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pair-b{height:12px;border-radius:3px;background:var(--seq2);position:relative}
+.pair-b i{position:absolute;inset:0 auto 0 0;background:var(--c2);border-radius:3px}
+.pair-n{font-size:12.5px;text-align:right;font-variant-numeric:tabular-nums;color:var(--text-2)}
+.pair-n b{color:var(--text);font-weight:700}
+@media(max-width:640px){.pair{grid-template-columns:minmax(0,1fr) 54px}.pair-b{display:none}}
+
+/* =============================================================== C · ASK ===*/
+.askgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:var(--s3)}
+.ask{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--s4) var(--s4) 15px;
+  display:flex;flex-direction:column;gap:11px;break-inside:avoid}
+.ask--hero{grid-column:span 2;background:var(--lilac);border-color:transparent;color:var(--on-field)}
+@media(max-width:640px){.ask--hero{grid-column:span 1}}
+.ask-q{font-family:var(--disp);font-size:15.5px;font-weight:600;letter-spacing:-.02em;line-height:1.34;margin:0}
+.ask--hero .ask-q{font-size:20px;line-height:1.28}
+.ask-f{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:11.5px;color:var(--text-3);margin-top:auto}
+.ask--hero .ask-f{color:#3A3457}
+.ask-h{font-weight:600;color:var(--text-2)}
+.ask--hero .ask-h{color:#2A2545}
+.ask-tag{display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border-radius:var(--r-pill);
+  border:1px solid var(--line-hi);font-size:11px;font-weight:600;color:var(--text-2)}
+.ask--hero .ask-tag{border-color:rgba(42,37,69,.3);color:#2A2545}
+.ask-tag .sw{width:8px;height:8px;border-radius:2px}
+
+/* The read, step by step. The bar length is share-of-the-step-above, which is
+   the only quantity that stays legible across three orders of magnitude. */
+.funnel{display:flex;flex-direction:column;gap:1px;margin-bottom:var(--s5);
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.fn{display:grid;grid-template-columns:minmax(180px,1.1fr) minmax(90px,1.4fr) minmax(132px,auto) auto;
+  gap:var(--s4);align-items:center;padding:15px var(--s5);background:var(--panel)}
+.fn + .fn{border-top:1px solid var(--line)}
+.fn-t{font-size:13.5px;font-weight:600;color:var(--text)}
+.fn-t span{display:block;font-weight:400;font-size:11.5px;color:var(--text-3);margin-top:2px}
+.fn-bar{height:14px;border-radius:3px;background:var(--panel-2);position:relative;overflow:hidden}
+.fn-bar i{position:absolute;inset:0 auto 0 0;border-radius:3px;min-width:2px}
+.fn-seq3{background:var(--seq3)} .fn-seq4{background:var(--seq4)}
+.fn-c2{background:var(--c2)} .fn-c1{background:var(--c1)}
+.fn-s{font-size:11.5px;color:var(--text-3);white-space:nowrap}
+.fn-n{font-family:var(--disp);font-size:23px;font-weight:700;letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums;text-align:right;color:var(--text)}
+@media(max-width:820px){
+  .fn{grid-template-columns:minmax(0,1fr) auto;row-gap:8px}
+  .fn-bar{grid-column:1/-1}
+  .fn-s{grid-column:1}
+}
+
+/* ============================================================= D · DRIFT ===*/
+.drift{display:flex;gap:2px;align-items:flex-end;height:132px;min-width:640px}
+.dcol{flex:1 1 0;min-width:5px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;height:100%}
+.dcol i{display:block;border-radius:2px 2px 0 0}
+.dcol i.d-scan{background:var(--seq2)}
+.dcol i.d-esc{background:var(--c2)}
+.dcol i.d-drop{background:var(--c1);border-radius:2px}
+/* A day nobody has looked at yet. Outlined so the field reads as 88 separate
+   days rather than one grey rectangle — the count is the point. */
+.dcol.is-void{border-radius:2px;box-shadow:inset 0 0 0 1px var(--line);
+  background-image:repeating-linear-gradient(135deg,var(--hatch-ink) 0 1px,transparent 1px 7px);
+  opacity:.42}
+.dcol.is-void:hover{opacity:.72}
+.drift-x{display:flex;justify-content:space-between;font-size:11px;color:var(--text-3);
+  margin-top:10px;min-width:640px}
+.gate{position:relative;margin-top:var(--s5);padding:var(--s5);border-radius:var(--r-md);
+  background:var(--panel-2);display:flex;gap:var(--s4);align-items:flex-start;flex-wrap:wrap}
+.gate-n{font-family:var(--disp);font-size:44px;font-weight:700;letter-spacing:-.05em;line-height:.92;color:var(--c2)}
+.gate-b{flex:1 1 300px;min-width:240px}
+.gate-b p{margin:0;font-size:13px;color:var(--text-2);line-height:1.6}
+.gate-b p + p{margin-top:9px;font-size:12px;color:var(--text-3)}
+
+/* ------------------------------------------------------- the handoff card ---
+   The one place on the tab that names something it deliberately does not do. */
+.handoff{display:flex;gap:var(--s4);align-items:flex-start;padding:var(--s5);
+  border:1px dashed var(--line-hi);border-radius:var(--r-lg);background:var(--panel-2)}
+.handoff-ic{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+  background:var(--panel);color:var(--c2);border:1px solid var(--line)}
+.handoff-b{min-width:0}
+.handoff-h{font-size:17px;letter-spacing:-.03em;margin-bottom:7px}
+.handoff-b p{margin:0 0 var(--s4);font-size:13px;color:var(--text-2);line-height:1.62;max-width:70ch}
+@media(max-width:640px){.handoff{flex-direction:column}}
+
+/* ---------------------------------------------------- one authored moment --
+   Direction switch: the marks settle in place, staggered, from an already
+   visible default. Nothing fades in from nothing; nothing bounces.        */
+@media (prefers-reduced-motion:no-preference){
+  .is-entering .map-c,.is-entering .pair,.is-entering .ask,.is-entering .dcol,
+  .is-entering .led tbody tr,.is-entering .fn{
+    animation:settle 520ms cubic-bezier(.16,1,.3,1) both;
+    animation-delay:calc(var(--i,0) * 9ms)}
+}
+@keyframes settle{
+  from{opacity:.25;transform:translateY(5px);filter:blur(3px)}
+  to{opacity:1;transform:none;filter:blur(0)}
+}
+
+/* ------------------------------------------------------------- tooltip ---*/
+.tip{position:fixed;z-index:70;pointer-events:none;max-width:250px;padding:9px 12px;
+  background:var(--ink);color:var(--on-ink);border-radius:var(--r-sm);font-size:12px;line-height:1.5;
+  box-shadow:var(--el-2);opacity:0;transform:translateY(3px);
+  transition:opacity 110ms var(--ease),transform 110ms var(--ease)}
+.tip.on{opacity:1;transform:none}
+.tip b{display:block;font-size:12.5px;margin-bottom:2px}
+.tip span{color:#C9C3DC}
+
+/* --------------------------------------------------------- table escape ---*/
+.tbl-tog{margin-top:var(--s4)}
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:var(--s4)}
+.tbl th,.tbl td{text-align:left;padding:8px var(--s3);border-bottom:1px solid var(--line)}
+.tbl th{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3)}
+.tbl td.n,.tbl th.n{text-align:right;font-variant-numeric:tabular-nums}

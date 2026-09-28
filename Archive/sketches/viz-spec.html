@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scout — the data layer · spec sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..800;1,300..800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../prototypes/v4/alloy.css">
+<style>
+/* ============================================================
+   Scout — data visualization layer, spec sheet.
+   Proposal only. Nothing here is wired to the prototype.
+   alloy.css is linked unedited; everything below is additive.
+   ============================================================ */
+
+/* --- viz tokens. Derived from Alloy, both values computed not chosen. ----- */
+:root{
+  --viz-ink:    var(--text);        /* trajectory  — #1C1B23 */
+  --viz-butter: var(--butter-d);    /* pressure    — #8A5A00 */
+  --viz-teal:   var(--teal-d);      /* demand+missing — #1F7A66 */
+  --viz-d1:#4B3E93;  --viz-d2:#8175B8;  --viz-d3:#A99ECE;   /* decisions ramp */
+  --viz-grid: var(--line-hi);
+}
+:root[data-theme="dark"]{
+  --viz-ink:    var(--text-2);      /* #AFABBE — NOT --text. See C2. */
+  --viz-butter: var(--butter);      /* #FFCF78 */
+  --viz-teal:   var(--teal);        /* #63C4AF */
+  --viz-d1:#CFC7EE;  --viz-d2:#9A8FCB;  --viz-d3:#6B5FA8;
+}
+
+/* This is a spec sheet, not the app shell — it does not reproduce Alloy's
+   purple page behind the slab, so html takes the slab too. */
+html{background:var(--slab)}
+body{
+  background:var(--slab); color:var(--text); min-height:100vh;
+  font-family:var(--ui); font-size:15px; line-height:1.6;
+  margin:0; padding:0 var(--s5) var(--s9);
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:920px;margin:0 auto}
+
+/* --- masthead ------------------------------------------------------------ */
+.mast{padding:var(--s8) 0 var(--s6);border-bottom:1px solid var(--line)}
+.mast h1{font-family:var(--disp);font-size:clamp(30px,5vw,46px);line-height:1.05;
+  letter-spacing:-.02em;margin:0 0 var(--s3);font-weight:600}
+.mast p{margin:0;color:var(--text-2);max-width:62ch}
+.mast .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-3);font-weight:600;margin-bottom:var(--s3)}
+.toolbar{display:flex;gap:var(--s3);align-items:center;margin-top:var(--s5);flex-wrap:wrap}
+.tbtn{font:inherit;font-size:13px;font-weight:500;padding:7px 14px;border-radius:var(--r-pill);
+  border:1px solid var(--line-hi);background:var(--panel);color:var(--text);cursor:pointer}
+.tbtn:hover{background:var(--panel-2h)}
+.tbtn:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+
+/* --- sections ------------------------------------------------------------ */
+section{padding:var(--s8) 0 0}
+h2{font-family:var(--disp);font-size:26px;letter-spacing:-.015em;margin:0 0 var(--s2);font-weight:600}
+h2 .num{color:var(--text-3);font-weight:400;margin-right:.5em}
+.lede{color:var(--text-2);max-width:66ch;margin:0 0 var(--s5)}
+h3{font-family:var(--disp);font-size:17px;margin:0 0 var(--s2);font-weight:600;letter-spacing:-.01em}
+
+/* --- decision chips (the grill handles) ---------------------------------- */
+.d{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;
+  letter-spacing:.04em;padding:2px 8px;border-radius:var(--r-pill);
+  background:var(--panel-3);color:var(--text-2);vertical-align:2px;white-space:nowrap}
+.d.c{background:var(--warn-bg);color:var(--warn)}
+.d.p{background:var(--ok-bg);color:var(--ok)}
+
+/* --- cards --------------------------------------------------------------- */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-md);
+  padding:var(--s5);margin-bottom:var(--s4);box-shadow:var(--el-1)}
+.card > h3{display:flex;align-items:baseline;gap:var(--s3);flex-wrap:wrap}
+.card .why{color:var(--text-2);font-size:14px;margin:var(--s2) 0 var(--s4);max-width:64ch}
+.spec{font-size:12.5px;color:var(--text-3);border-top:1px solid var(--line);
+  padding-top:var(--s3);margin-top:var(--s4);display:flex;gap:var(--s5);flex-wrap:wrap}
+.spec b{color:var(--text-2);font-weight:600}
+
+.demo{background:var(--panel-2);border-radius:var(--r-sm);padding:var(--s4);
+  display:flex;gap:var(--s6);flex-wrap:wrap;align-items:flex-end}
+.demo .unit{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.demo .cap{font-size:11.5px;color:var(--text-3);letter-spacing:.02em}
+
+/* --- the mark row (label · from · mark · to) ----------------------------- */
+.row{display:grid;grid-template-columns:1fr auto;gap:var(--s4);
+  align-items:center;padding:5px 0;font-size:14.5px}
+.row .lbl{color:var(--text)}
+.row .val{display:flex;align-items:center;gap:8px;color:var(--text-2);
+  font-variant-numeric:tabular-nums;font-size:13.5px;white-space:nowrap}
+.row .val .n{color:var(--text)}
+
+/* --- report mock --------------------------------------------------------- */
+.report{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-md);
+  padding:var(--s6);box-shadow:var(--el-2)}
+.report .name{font-family:var(--disp);font-size:24px;font-weight:600;letter-spacing:-.015em;margin:0}
+.report .sub{color:var(--text-3);font-size:13.5px;margin:2px 0 0}
+.report .thesis{margin:var(--s4) 0 0;font-size:16px;max-width:56ch}
+.block{margin-top:var(--s6);border-top:1px solid var(--line);padding-top:var(--s4)}
+.block .head{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s4);
+  margin-bottom:var(--s3)}
+.block .head h4{margin:0;font-size:12px;letter-spacing:.13em;text-transform:uppercase;
+  font-weight:700;color:var(--text-2)}
+.block .head h4 span{font-weight:400;text-transform:none;letter-spacing:0;
+  color:var(--text-3);margin-left:8px;font-size:13px}
+.block .head .pts{font-variant-numeric:tabular-nums;font-size:13px;color:var(--text-3);font-weight:600}
+.quote{color:var(--text);font-size:14.5px;padding:6px 0 6px 14px;
+  border-left:2px solid var(--viz-butter);margin:var(--s2) 0}
+.quote .who{color:var(--text-3);font-size:12.5px;margin-left:8px;font-variant-numeric:tabular-nums}
+.demandq{border-left-color:var(--viz-teal)}
+.inv{display:grid;grid-template-columns:auto 172px auto 1fr;gap:0 var(--s3);
+  align-items:center;font-size:14.5px;padding:4px 0}
+.inv .item{color:var(--text)}
+.inv .note{color:var(--text-3);font-size:13px}
+.inv .tk{justify-self:start;opacity:.85;display:inline-flex;align-items:center}
+.inv.na .item,.inv.na .note{color:var(--text-3)}
+.subhead{font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--text-3);
+  font-weight:700;margin:var(--s4) 0 var(--s2)}
+.forkwrap{background:var(--panel-2);border-radius:var(--r-sm);padding:var(--s4) var(--s4) var(--s3);
+  margin:var(--s3) 0 var(--s4);display:flex;gap:var(--s5);align-items:center;flex-wrap:wrap}
+.forkwrap .read{font-size:14.5px;max-width:22ch;color:var(--text)}
+
+/* --- check-back ---------------------------------------------------------- */
+.lane{margin-top:var(--s5)}
+.lane .lanehead{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:700;color:var(--text-2);margin-bottom:var(--s2)}
+.lane.held{border-left:2px solid var(--viz-teal);padding-left:var(--s4);margin-left:-2px}
+.bet{color:var(--text-2);font-size:14px;margin:2px 0 var(--s4)}
+.verbs{display:flex;gap:var(--s3);margin-top:var(--s5);flex-wrap:wrap}
+.verb{font:inherit;font-size:13.5px;font-weight:600;padding:9px 18px;border-radius:var(--r-pill);
+  border:1px solid var(--line-hi);background:var(--panel-2);color:var(--text);cursor:default}
+
+/* --- decisions screen ---------------------------------------------------- */
+.chart{margin:var(--s4) 0}
+.crow{display:grid;grid-template-columns:52px 1fr auto;gap:var(--s3);align-items:center;
+  padding:4px 0;font-size:13px}
+.crow .k{color:var(--text-2);font-variant-numeric:tabular-nums;text-align:right}
+.crow .t{color:var(--text-3);font-variant-numeric:tabular-nums;font-size:12.5px}
+.legend{display:flex;gap:var(--s4);flex-wrap:wrap;font-size:12.5px;color:var(--text-2);
+  margin-top:var(--s3)}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;
+  vertical-align:-1px}
+.band{background:var(--panel-2);border:1px dashed var(--line-hi);border-radius:var(--r-sm);
+  padding:var(--s4);margin-top:var(--s5)}
+.band .t{font-size:13px;color:var(--text-2);margin-top:6px}
+.notenough{color:var(--text-3);font-size:13.5px;font-style:italic}
+
+/* --- lists --------------------------------------------------------------- */
+ul.tight{margin:0;padding-left:1.15em}
+ul.tight li{margin-bottom:8px;color:var(--text-2)}
+ul.tight li b{color:var(--text)}
+.refuse li{color:var(--text-2)}
+.refuse li b{color:var(--text)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;
+  background:var(--panel-2);padding:1px 5px;border-radius:4px;color:var(--text-2)}
+table.tbl{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:var(--s3)}
+table.tbl th{text-align:left;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--text-3);font-weight:700;padding:0 var(--s4) var(--s2) 0;border-bottom:1px solid var(--line)}
+table.tbl td{padding:9px var(--s4) 9px 0;border-bottom:1px solid var(--line);
+  color:var(--text-2);vertical-align:top}
+table.tbl td b{color:var(--text);font-weight:600}
+.ok{color:var(--ok);font-weight:600}
+.no{color:var(--stop);font-weight:600}
+
+@media (max-width:640px){
+  .demo{gap:var(--s4)}
+  .row{grid-template-columns:1fr;gap:2px}
+  .row .val{justify-content:flex-start}
+  .forkwrap{gap:var(--s3)}
+  /* the item column can't hold 172px here — note and tally drop to a second line */
+  .inv{grid-template-columns:auto 1fr auto;padding:7px 0}
+  .inv .item{grid-column:2;grid-row:1}
+  .inv .note{grid-column:2;grid-row:2}
+  .inv .tk{grid-column:3;grid-row:2}
+  .crow{grid-template-columns:44px 1fr;row-gap:2px}
+  .crow .t{grid-column:2}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="mast">
+  <div class="kicker">Scout · PRD v1.3 · proposal, not a build</div>
+  <h1>The data layer</h1>
+  <p>Every trend in Scout is currently a sentence. This is the smallest set of marks that turns
+  those sentences into graphics without breaking a single rule the PRD spent three grilling
+  sessions locking down. Nothing here is wired to the prototype — it exists to be argued with.</p>
+  <p style="margin-top:var(--s3)">Every proposal carries a handle (<span class="d">D1</span>) so you can
+  kill it by number. <span class="d c">C1</span> is something computed, not chosen.
+  <span class="d p">P1</span> is a consequence for the PRD.</p>
+  <div class="toolbar">
+    <button class="tbtn" id="theme">Dark mode</button>
+    <button class="tbtn" id="width">Narrow to 375px</button>
+  </div>
+</header>
+
+<!-- ================================================================= 1 -->
+<section>
+  <h2><span class="num">1</span>The reading rule</h2>
+  <p class="lede">Scout almost never has a curve. It has two points and a direction, reconstructed
+  by Probe. The form has to say which — because a sparkline drawn through two known points invents
+  the interior, and that is the same failure as an unverified absence.</p>
+
+  <div class="card">
+    <h3>Form declares evidence resolution <span class="d">D1</span></h3>
+    <p class="why">The reader learns to read <em>how well we know this</em> off the shape, without
+    being taught. Almost everything is a slope. The sparkline is rare and earned.</p>
+    <div class="demo">
+      <div class="unit"><div id="m-one"></div><div class="cap">one observation → a <b>mark</b></div></div>
+      <div class="unit"><div id="m-two"></div><div class="cap">two observations → a <b>slope</b></div></div>
+      <div class="unit"><div id="m-many"></div><div class="cap">many → a <b>sparkline</b> (watched only)</div></div>
+    </div>
+    <div class="spec">
+      <span><b>Rule</b> no interpolation is ever drawn between points we didn't observe</span>
+      <span><b>Source</b> §5.3, §10.1</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>A graphic only draws a fact <span class="d">D2</span></h3>
+    <p class="why">Every non-fact is a sentence. <em>Not found</em>, <em>doesn't apply</em>, and
+    <em>tells us little here</em> (citations at zero, #105) render as words — never a zero-height
+    mark, because a zero bar claims <em>we measured zero</em>, which is a different and false claim.</p>
+    <div class="demo" style="align-items:center">
+      <div class="unit">
+        <div class="row" style="min-width:280px"><span class="lbl">41 sites have cited her work</span>
+          <span class="val"><span class="n">29</span><span id="m-cite"></span><span class="n">41</span></span></div>
+        <div class="cap">a fact → a mark</div>
+      </div>
+      <div class="unit">
+        <div class="row" style="min-width:280px"><span class="lbl">Citations</span>
+          <span class="val">tells us little here</span></div>
+        <div class="cap">not a fact → a sentence, no mark</div>
+      </div>
+    </div>
+    <div class="spec"><span><b>Rule</b> the visual restatement of §5.3 — the doc's load-bearing wall</span></div>
+  </div>
+
+  <div class="card">
+    <h3>Direction is geometry. Colour is never valence. <span class="d">D3</span></h3>
+    <p class="why">Posting less is the <em>buy</em> signal (§5.1). A red-down / green-up convention
+    would invert the model on sight. Colour stays on the v4 field jobs and says which pillar a line
+    belongs to, never whether the news is good.</p>
+    <div class="demo">
+      <div class="unit"><div class="row" style="min-width:250px"><span class="lbl">Posting</span>
+        <span class="val"><span class="n">4/wk</span><span id="m-cad"></span><span class="n">2/wk</span></span></div>
+        <div class="cap">down · butter · <b>good for us</b></div></div>
+      <div class="unit"><div class="row" style="min-width:250px"><span class="lbl">Audience</span>
+        <span class="val"><span class="n">214k</span><span id="m-aud"></span><span class="n">296k</span></span></div>
+        <div class="cap">up · ink · <b>also good for us</b></div></div>
+    </div>
+    <div class="spec"><span><b>Consequence</b> valence lives only on the Trajectory gate and on the
+    check-back, where the product does assert good/bad</span></div>
+  </div>
+
+  <div class="card">
+    <h3>Trajectory takes ink <span class="d">D4</span></h3>
+    <p class="why">Trajectory is new in v1.3 and has no field colour. Teal is <em>the gap is real</em>,
+    butter is <em>the timing</em>, lilac is <em>Scout speaking about itself</em>. Ink — <em>weight and
+    summary</em> — is the one left, and it is the right one: Trajectory carries no score (§5.2 refuses
+    a fourth number), so ink correctly signals <em>this is the reason to believe, not a pillar</em>.</p>
+    <div class="spec">
+      <span><b>Light</b> <code>--text</code> #1C1B23</span>
+      <span><b>Dark</b> <code>--text-2</code> #AFABBE — <em>not</em> <code>--text</code>, see C2</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The graphic sits in the line, not in a block <span class="d">D5</span></h3>
+    <p class="why">The report is already two-column — claim left, number right. Every mark goes in
+    the right-hand column at text scale. Nothing gets a chart block and nothing gets a drawer, which
+    is what keeps decision #82 intact: the report stays the card expanded. <b>The fork (D7) is the
+    single exception</b>, and it earns it by replacing §6.2's Pressure lede rather than adding to it.</p>
+    <p class="why"><b>Corrected after the grill.</b> This card previously justified static SVG with
+    <em>“the digest is an email.”</em> That was wrong — Gmail and Outlook strip inline SVG, so the
+    marks are an in-app layer and email gets sentences plus a link. The principle that replaces it is
+    stronger: <b>no mark may ever be the only carrier of a fact.</b> The sentence has to stand alone,
+    which keeps §6.2's prose complete and makes the email version free.</p>
+    <div class="spec">
+      <span><b>Height budget</b> 26px — fits a 15px/1.6 row</span>
+      <span><b>Marks</b> in-app only, static SVG, no hover-gated values</span>
+      <span><b>Email</b> the sentence, and a link</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= 2 -->
+<section>
+  <h2><span class="num">2</span>The marks</h2>
+  <p class="lede">Six. One of them (the state mark) is a restyle of what v4 already draws. One of
+  them (the fork) is genuinely new and is the one I most want you to attack.</p>
+
+  <div class="card">
+    <h3>The slope <span class="d">D6</span></h3>
+    <p class="why">Two dots and a connector. Hollow left dot is the past, filled right dot is now —
+    so direction survives greyscale, print and <code>forced-colors</code>. The rise encodes sign and
+    rough size, clamped at ±60%; the numbers either side carry the precision. This is the house form,
+    because almost every claim in the product is <em>was X, now Y</em>.</p>
+    <div class="demo" id="slope-range"></div>
+    <div class="spec">
+      <span><b>Size</b> 48×26</span><span><b>Run</b> 34px</span><span><b>Rise</b> ±10, clamp ±60%</span>
+      <span><b>Stroke</b> 2px</span><span><b>Marker</b> r3.5</span><span><b>Max angle</b> 30°</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The fork <span class="d">D7</span> <span class="d c">renamed</span></h3>
+    <p class="why">Two slopes in one frame, each indexed to <em>her own</em> prior baseline = 100 —
+    which is already how §5.2 defines cadence decay, so the shared unit exists in the model and no
+    second axis is needed. Audience rises, output falls, and the gap between them <b>is the thesis</b>:
+    growing faster than she can serve. §5.1 states this as a table and no screen has ever drawn it.</p>
+    <p class="why">I called this "the crossing" in the write-up. It's wrong — both lines start at the
+    same point and open rightward. It's a fork.</p>
+    <div class="demo" style="align-items:flex-start;gap:var(--s3)">
+      <div class="unit"><div id="fork-buy"></div><div class="cap"><b>the buy signal</b> — call her</div></div>
+      <div class="unit"><div id="fork-walk"></div><div class="cap"><b>Trajectory fails</b> — walk away</div></div>
+      <div class="unit"><div id="fork-dull"></div><div class="cap"><b>no story</b> — correctly boring</div></div>
+    </div>
+    <div class="spec">
+      <span><b>Size</b> 250×76</span><span><b>Baseline</b> solid hairline at 100</span>
+      <span><b>Identity</b> direct end-labels carry the mark colour — they are the legend</span>
+      <span><b>Collision</b> labels separate at 15px and grow a leader; the dots never move</span>
+      <span><b>Never</b> a second y-axis</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The tally <span class="d">D8</span></h3>
+    <p class="why">N ticks for <em>we looked in N places</em>. Each tick is a real check with a URL
+    behind it in the check record, so it is countable rather than decorative — and it differentiates
+    four places from eleven at a glance. <b>This is the replacement for the confidence number §6.2
+    deliberately removed from the report</b>: the detail is visible, so the percentage isn't needed.</p>
+    <div class="demo" id="tally-range"></div>
+    <p class="why" style="margin-top:var(--s4)"><b>It has to be taught, once.</b> Ticks alone are a
+    label that failed (§6.11 rule 1). So the first row that would use one states it in words instead
+    — <em>“not there · we looked in 6 places”</em> — and every row below it carries ticks. That is
+    §5.2's own move for weight: <em>a clause on the top line only.</em></p>
+    <div class="spec">
+      <span><b>Tick</b> 2×9, 3px gap</span><span><b>Colour</b> teal — it belongs to Missing</span>
+      <span><b>Click</b> opens the check record (§6.10)</span>
+      <span><b>Risk</b> becomes wallpaper by week two — this is the one to argue</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The state marks <span class="d">D9</span> <span class="d">D10</span></h3>
+    <p class="why">Three shapes, one size, so nothing implies weight (#92 holds — weight is order).
+    <em>Doesn't apply</em> gets <b>no mark at all</b>, because §5.3 says it is not a verification
+    state and it must not read as one.</p>
+    <p class="why"><b>D10 — hollow always means "this didn't happen."</b> An absent inventory item
+    and an expired-undecided card in the Decisions chart get the same treatment. One rule, two places.</p>
+    <div class="demo" id="states"></div>
+    <div class="spec">
+      <span><b>Size</b> 11px all three</span>
+      <span><b>Absence is a shape, never a colour</b> — v4's existing rule, extended</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Demand gets no graphic <span class="d">D11</span></h3>
+    <p class="why">Of the four sentences you named, three want marks. Demand isn't one of them — it's
+    a count with two quotes, and a graphic for a single number is a one-bar bar chart. §6.2 already
+    settled it: <em>the audience is strongest as a number, the creator is strongest as a quote.</em></p>
+    <div class="spec"><span><b>This is the restraint finding.</b> The absence of a mark here is a design decision, not an omission</span></div>
+  </div>
+
+  <div class="card">
+    <h3>The sparkline, and where it's legal <span class="d">D13</span></h3>
+    <p class="why">Only on a watched creator, because that is the only place Scout genuinely checked
+    repeatedly. The dots are the point — they say <em>these are the checks we ran</em>, which is the
+    same argument the check record makes for <em>we looked in six places</em>.</p>
+    <div class="demo" id="spark-demo"></div>
+    <div class="spec"><span><b>Never</b> on a creator seen once</span><span><b>Never</b> extended past the last observation</span></div>
+  </div>
+</section>
+
+<!-- ================================================================= 3 -->
+<section>
+  <h2><span class="num">3</span>In the report</h2>
+  <p class="lede">§6.2's structure is untouched. Demand → why she's on this list → Pressure → Missing,
+  same words, same order. Only the value column changes — plus the fork, which is the one thing
+  asking for vertical space.</p>
+
+  <div class="report">
+    <h4 class="name" style="font-family:var(--disp)">Marisol Vega</h4>
+    <p class="sub">@marisolcooks · Instagram 214k · TikTok 61k &nbsp;·&nbsp; Fits your brief: Home cooks, no store
+      &nbsp;·&nbsp; Recommended play: Newsletter + sponsorship slate</p>
+    <p class="thesis">Sitting on a food audience that wants to buy, with nothing to sell them.</p>
+
+    <div class="block">
+      <div class="head"><h4>Demand <span>Do people want to buy?</span></h4><span class="pts">+32</span></div>
+      <div class="row"><span class="lbl">1,940 people asked where to buy, in the last 90 days.</span><span class="val"></span></div>
+      <div class="quote demandq">“where can I buy this spice blend??”<span class="who">2.1k likes · Mar 4</span></div>
+      <div class="quote demandq">“please tell me you have a newsletter”<span class="who">890 likes · Mar 11</span></div>
+    </div>
+
+    <div class="block">
+      <div class="head"><h4>Why she's on this list</h4><span class="pts">no score</span></div>
+      <div id="traj-rows"></div>
+      <div class="row"><span class="lbl">Nobody else does Oaxacan home cooking at this level</span>
+        <span class="val">judgment</span></div>
+    </div>
+
+    <div class="block">
+      <div class="head"><h4>Pressure <span>Will she take the call?</span></h4><span class="pts">31/40</span></div>
+      <div class="forkwrap">
+        <div id="fork-report"></div>
+        <div class="read">She is growing faster than she can serve it.</div>
+      </div>
+      <div class="quote">“honestly I can't keep up with this”<span class="who">her · Mar 28</span></div>
+      <div id="press-rows"></div>
+    </div>
+
+    <div class="block">
+      <div class="head"><h4>Missing <span>Is there anything to buy?</span></h4><span class="pts">+15</span></div>
+      <div class="subhead">What she's built</div>
+      <div id="inv-built"></div>
+      <div class="subhead">What she's switched on</div>
+      <div id="inv-on"></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:var(--s5)">
+    <h3>Three lines here deliberately have no mark</h3>
+    <p class="why">Which is D2 doing its job, and it caught me out while building this page. I first
+    drew <em>“her posts land reliably”</em> as a slope from <code>median 180k</code> to
+    <code>best 210k</code> — but those are two statistics, not two dated observations, so the slope
+    was claiming a measurement over time that nobody made. It's now a sentence. Same for
+    <em>“she tried to build a store”</em> (an event, not a change) and
+    <em>“nobody else does Oaxacan home cooking”</em> (a judgment).</p>
+    <p class="why"><b>Five Trajectory lines, two marks.</b> If that ratio feels thin, the argument to
+    have is whether Trajectory wanted graphics at all — not whether to loosen the rule.</p>
+  </div>
+</section>
+
+<!-- ================================================================= 4 -->
+<section>
+  <h2><span class="num">4</span>The check-back</h2>
+  <p class="lede">Watch is “a hypothesis with a date” (§5.8), so the check-back <b>grades the bet</b>.
+  It is also the only surface where Scout has a real series.</p>
+
+  <div class="card">
+    <h3>What held is not the weaker lane <span class="d">D12</span></h3>
+    <p class="why">This is the hard part. A diff where nothing moved is the most common case
+    <em>and the most important one</em> — “still no newsletter” after a month of watching isn't
+    absence of news, it's the hypothesis surviving. Most diff UIs render no-change as blank. Here it
+    gets a rule, a mark, and the same type size as the lane above it.</p>
+  </div>
+
+  <div class="report">
+    <h4 class="name">Marisol Vega</h4>
+    <p class="sub">watched 4 March, for one month · score 78 → 81</p>
+    <p class="bet">Your bet: something changes here within a month.</p>
+    <div id="checks-strip"></div>
+
+    <div class="lane">
+      <div class="lanehead">What moved</div>
+      <div id="moved-rows"></div>
+    </div>
+
+    <div class="lane held">
+      <div class="lanehead">What held</div>
+      <div id="held-rows"></div>
+    </div>
+
+    <div class="verbs">
+      <span class="verb">Keep watching</span><span class="verb">Promote</span><span class="verb">Pass</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= 5 -->
+<section>
+  <h2><span class="num">5</span>Decisions <span class="d">D20</span></h2>
+  <p class="lede">The reframe that makes §12's trends screen buildable: <b>this is the monthly
+  re-check §5.4 already demands and never gave a home</b> — <em>“the threshold is read off a result,
+  not chosen… re-check monthly once real data flows.”</em> It is an instrument, not a scoreboard.
+  That also settles the name: <em>Trends</em> would collide with creator trajectory. <b>Decisions</b>
+  is plain, accurate, and still covers outcomes when they arrive.</p>
+
+  <div class="card">
+    <h3>Everything it needs is already instrumented</h3>
+    <ul class="tight">
+      <li><b>§10.3</b> — every decision is an event with actor, timestamp, verb, reason code and the score snapshot</li>
+      <li><b>§10.5</b> — state keyed on <code>(brief_version, member, creator)</code></li>
+      <li><b>§6.4</b> — manual adds are source-tagged</li>
+      <li><b>§8</b> — outcome is an event, not a mutable field</li>
+    </ul>
+    <p class="why" style="margin-top:var(--s4)">No new collection. Same argument §6.10 makes for the
+    check record — a read view over data that has to exist anyway. <b>One exception</b>, below.</p>
+  </div>
+
+  <div class="card">
+    <h3>The decisions ramp is ordinal, not categorical <span class="d">D15</span> <span class="d c">C1</span></h3>
+    <p class="why">Promote &gt; Watch &gt; Pass is <em>ordered by conviction</em>, so it wants one hue
+    stepping dark→light, not three identities. That also sidesteps a collision I found in the tokens:
+    in dark mode <code>--ok</code> and <code>--teal</code> are byte-identical
+    (<code>#63C4AF</code>), so a chart using v4's green Promote would literally be saying
+    <em>the gap is real</em> about a decision.</p>
+    <p class="why">Hue is lilac — <em>Scout speaking about itself</em> — which is exactly what this
+    screen is. Steps validated against both surfaces; the light end had to be darkened twice to
+    clear the 2:1 floor against white.</p>
+    <div class="demo" id="ramp-demo"></div>
+    <p class="why" style="margin-top:var(--s4)">The hexes flip between themes — Promote is the
+    darkest step on white and the lightest on the slab. The rule underneath is stable and is what
+    the reader actually learns: <b>most conviction = most contrast against the surface.</b> Dark mode
+    is stepped and validated separately, never an automatic inversion.</p>
+  </div>
+
+  <div class="card">
+    <h3>1 · What happened <span class="d">D17</span></h3>
+    <p class="why">Zero-result days appear as a <b>marked series</b>, not a dip — §5.4 says they're a
+    feature, and a chart that reads them as failure teaches the desk the opposite of the doc.
+    Expired-undecided is drawn hollow (D10) because it isn't a decision.</p>
+    <div class="chart" id="months"></div>
+    <div class="legend" id="months-legend"></div>
+  </div>
+
+  <div class="card">
+    <h3>2 · Is the bar right</h3>
+    <p class="why">Score band against what the desk did. If they pass most of the 78–82s, the
+    threshold rises. This is the calibration read, and it is the reason the screen exists at all.</p>
+    <div class="chart" id="bands"></div>
+  </div>
+
+  <div class="card">
+    <h3>3 · Why they said no</h3>
+    <p class="why">Pass-reason mix, ranked, single hue — one series, so no legend. <em>“Not what I
+    asked for”</em> is broken out per brief because §6.7 acts on it at three.</p>
+    <div class="chart" id="reasons"></div>
+  </div>
+
+  <div class="card">
+    <h3>4 · The outcome band <span class="d">D19</span></h3>
+    <p class="why">Outcomes need a year. Rather than hide that, the screen carries its own
+    incompleteness as a designed state — the same ethic as <em>“Scout found nothing worth your time
+    today.”</em> It fills up over the year and becomes a real chart.</p>
+    <div class="band">
+      <div id="outcome-strip"></div>
+      <div class="t">6 promoted · 2 replied · 0 signed. Outcomes take about a year — this fills in as calls land.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Held back until n allows <span class="d">D18</span></h3>
+    <p class="why"><b>No cut is drawn below its minimum n.</b> A 100% keep-rate on n=2 is the
+    analytics version of a fabricated absence. The screen says <em>not enough yet</em> and names what
+    it's waiting for.</p>
+    <table class="tbl">
+      <tr><th>Module</th><th>Answers</th><th>Status</th></tr>
+      <tr><td><b>Which kinds convert</b></td><td>keep-rate by category, band, platform, play</td>
+        <td class="notenough">4 categories, n=3–11. Not enough yet.</td></tr>
+      <tr><td><b>Machine vs. human</b></td><td>§6.4's “does Scout find what humans miss?”</td>
+        <td class="notenough">6 manual adds. Not enough yet.</td></tr>
+    </table>
+    <p class="why" style="margin-top:var(--s4)">Machine-vs-human is the highest-value module in the
+    whole screen and the one that will take longest to mean anything. Worth building the empty state
+    for it now so the count is visible and someone feels the pull to use Run a Name.</p>
+  </div>
+</section>
+
+<!-- ================================================================= 6 -->
+<section>
+  <h2><span class="num">6</span>What this refuses to draw</h2>
+  <p class="lede">Sourced from the doc, not from taste. Each one is a chart somebody will ask for.</p>
+  <div class="card">
+    <ul class="tight refuse">
+      <li><b>No trendlines or projections</b> — §12.1, quote and count, don't diagnose</li>
+      <li><b>No sparkline without observations behind it</b> — §5.3, D1</li>
+      <li><b>No composite Trajectory index</b> — §5.2, a fourth number is a fourth thing to learn</li>
+      <li><b>No confidence gauge on the report</b> — §6.2 removed it on purpose; D8 is the replacement</li>
+      <li><b>No weight badge on inventory rows</b> — #92, weight is order</li>
+      <li><b>No good/bad colour on a creator's own trend</b> — §5.1, it inverts the model</li>
+      <li><b>No score-delta chart on the watchlist</b> — §6.3 is explicit: quote the trend, never the delta</li>
+      <li><b>No creator leaderboard or ranking chart</b> — §1, it is not a follower leaderboard</li>
+      <li><b>No revenue or value on any surface</b> — §5.5, fabricated precision is the easiest thing to shoot at</li>
+      <li><b>No dual axis, ever</b> — the fork indexes to a shared baseline instead</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================================================================= 7 -->
+<section>
+  <h2><span class="num">7</span>Computed, not eyeballed</h2>
+  <div class="card">
+    <h3><span class="d c">C1</span> &nbsp;<code>--ok</code> and <code>--teal</code> are the same hex in dark mode</h3>
+    <p class="why">Both <code>#63C4AF</code> in <code>alloy.css</code>. v4's green Promote button is
+    therefore evidence-teal after dark. Harmless on a button; a defect the moment a chart uses it for
+    a series. Resolved by D15 — decisions get their own validated ramp and never borrow a field colour.</p>
+  </div>
+  <div class="card">
+    <h3><span class="d c">C2</span> &nbsp;The fork's first draft failed in dark mode</h3>
+    <p class="why">Ink-as-<code>--text</code> <code>#F2F0F7</code> against butter <code>#FFCF78</code>
+    scores a normal-vision ΔE of <b>14.9</b> — below the hard floor of 15. Two pale lines a
+    full-colour reader struggles to separate, and direct labels don't excuse it. I would have shipped
+    that by eye.</p>
+    <table class="tbl">
+      <tr><th>Dark ink candidate</th><th>ΔE normal</th><th>ΔE protan</th><th></th></tr>
+      <tr><td><code>--text</code> #F2F0F7</td><td>14.9</td><td>14.6</td><td class="no">FAIL</td></tr>
+      <tr><td><code>--lilac</code> #B6ADDE</td><td>21.1</td><td>20.1</td><td class="ok">pass — but lilac is taken</td></tr>
+      <tr><td><b><code>--text-2</code> #AFABBE</b></td><td>19.1</td><td>17.6</td><td class="ok">pass — chosen</td></tr>
+    </table>
+    <p class="why" style="margin-top:var(--s4)">So the ink line is <code>--text</code> in light and
+    <code>--text-2</code> in dark. Semantically it still reads as ink, one step back.</p>
+  </div>
+  <div class="card">
+    <h3><span class="d p">P1</span> &nbsp;One consequence for the PRD</h3>
+    <p class="why">§4.6 says <b><em>In Drop</em> is computed, not stored</b> — “you're in the drop if
+    you cleared the gates and nobody has decided yet.” That's right as vocabulary, but it means
+    <em>how many names surfaced in March</em> is not a stored quantity, and it's the x-axis of the
+    first chart on the Decisions screen.</p>
+    <p class="why">It is probably recomputable, since §7 already mandates <code>as_of</code> queries
+    over append-only observations. But “probably” is doing work there, and the decided rows carry a
+    score snapshot while the never-decided ones may not. <b>Either §10 gains a line, or §12 accepts
+    that month-over-month volume is a derivation that has to be verified before it's charted.</b></p>
+  </div>
+</section>
+
+<!-- ================================================================= 8 -->
+<section>
+  <h2><span class="num">8</span>Open for the grill</h2>
+  <div class="card">
+    <ul class="tight">
+      <li><b>D7, the fork</b> — one new form, the only thing asking for vertical space, and the only
+        graphic that makes an argument rather than reporting a number. Worth it, or does the prose
+        already do the job?</li>
+      <li><b>D8, the tally</b> — real replacement for the removed confidence number, or wallpaper
+        nobody counts after week two?</li>
+      <li><b>D4, ink for Trajectory</b> — derived, but it makes “why she's on this list” the quietest
+        block on a page where it is arguably the most important.</li>
+      <li><b>D12, the held lane</b> — giving equal weight to “nothing changed” is right in principle
+        and may read as a bug in practice.</li>
+      <li><b>D20, the name</b> — Decisions vs. Trends vs. something else.</li>
+      <li><b>D18 vs. the demo</b> — “not enough yet” is honest and it is also two empty cards on a
+        screen someone will show in a funding room.</li>
+      <li><b>P1</b> — does drop membership get stored, or stay a derivation?</li>
+    </ul>
+  </div>
+</section>
+
+</div>
+
+<script>
+/* ==========================================================================
+   Mark generators. Every one emits STATIC SVG — no runtime, no hover dependency.
+   In-app only: Gmail and Outlook strip inline SVG, so §9's digest and check-back
+   emails carry the sentence and a link. No mark is ever the only carrier of a fact.
+   ========================================================================== */
+'use strict';
+var NS = 'http://www.w3.org/2000/svg';
+function el(t, a){ var n = document.createElementNS(NS, t);
+  for (var k in a) n.setAttribute(k, a[k]); return n; }
+function svg(w, h, cls){ var s = el('svg', {width:w, height:h, viewBox:'0 0 '+w+' '+h,
+  'aria-hidden':'true', focusable:'false'}); if (cls) s.setAttribute('class', cls); return s; }
+
+/* ---------------------------------------------------------------- D6 slope */
+/* pct clamped to +/-60. Rise +/-10 about centre. 30 degrees at the clamp. */
+function slope(pct, colour){
+  var W = 48, H = 26, x1 = 7, x2 = 41, cy = 13;
+  var r = Math.max(-1, Math.min(1, pct / 60)) * 10;
+  var y1 = cy + r / 2, y2 = cy - r / 2;
+  var s = svg(W, H); s.style.color = colour; s.style.overflow = 'visible';
+  s.appendChild(el('line', {x1:x1, y1:y1, x2:x2, y2:y2, stroke:'currentColor',
+    'stroke-width':2, 'stroke-linecap':'round'}));
+  s.appendChild(el('circle', {cx:x1, cy:y1, r:3.5, fill:'var(--panel)',
+    stroke:'currentColor', 'stroke-width':2}));
+  s.appendChild(el('circle', {cx:x2, cy:y2, r:3.5, fill:'currentColor'}));
+  return s;
+}
+
+/* ------------------------------------------------------------- D1 one mark */
+function dot(colour){
+  var s = svg(48, 26); s.style.color = colour;
+  s.appendChild(el('circle', {cx:24, cy:13, r:3.5, fill:'currentColor'}));
+  return s;
+}
+
+/* ------------------------------------------------------- D13 the sparkline */
+function spark(vals, colour){
+  var W = 64, H = 26, pad = 4;
+  var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
+  var span = (hi - lo) || 1;
+  var pts = vals.map(function(v, i){
+    return [pad + i * (W - pad*2) / (vals.length - 1), H - pad - (v - lo) / span * (H - pad*2)];
+  });
+  var s = svg(W, H); s.style.color = colour; s.style.overflow = 'visible';
+  s.appendChild(el('polyline', {points: pts.map(function(p){return p[0]+','+p[1];}).join(' '),
+    fill:'none', stroke:'currentColor', 'stroke-width':2,
+    'stroke-linejoin':'round', 'stroke-linecap':'round'}));
+  pts.forEach(function(p, i){
+    s.appendChild(el('circle', {cx:p[0], cy:p[1], r: i === pts.length-1 ? 3 : 2,
+      fill: i === pts.length-1 ? 'currentColor' : 'var(--panel)',
+      stroke:'currentColor', 'stroke-width':1.5}));
+  });
+  return s;
+}
+
+/* ----------------------------------------------------------- D7 the fork */
+/* Both series indexed to the creator's own prior baseline = 100. One axis. */
+function fork(aPct, oPct){
+  var W = 250, H = 76, x1 = 10, x2 = 118, cy = 34, SC = 24;
+  var ay = cy - Math.max(-1, Math.min(1, aPct/60)) * SC;
+  var oy = cy - Math.max(-1, Math.min(1, oPct/60)) * SC;
+
+  /* De-collide the two end-labels without moving the data. When the limbs
+     converge the labels are the only thing that has to give — the dots stay
+     where the numbers put them, and a leader line reconnects the pair. */
+  var MIN = 15, lay = ay, loy = oy, nudged = false;
+  if (Math.abs(lay - loy) < MIN){
+    var mid = (lay + loy) / 2, aUp = lay <= loy;
+    lay = mid + (aUp ? -MIN/2 :  MIN/2);
+    loy = mid + (aUp ?  MIN/2 : -MIN/2);
+    nudged = true;
+  }
+  lay = Math.max(10, Math.min(H - 8, lay));
+  loy = Math.max(10, Math.min(H - 8, loy));
+
+  var s = svg(W, H); s.style.overflow = 'visible';
+  s.appendChild(el('line', {x1:x1, y1:cy, x2:x2+5, y2:cy,
+    stroke:'var(--viz-grid)', 'stroke-width':1}));
+
+  function limb(y, ly, colour, label, val){
+    s.appendChild(el('line', {x1:x1, y1:cy, x2:x2, y2:y, stroke:colour,
+      'stroke-width':2, 'stroke-linecap':'round'}));
+    s.appendChild(el('circle', {cx:x2, cy:y, r:3.5, fill:colour}));
+    if (nudged)   /* hairline leader: the label moved, the datum did not */
+      s.appendChild(el('line', {x1:x2+4, y1:y, x2:x2+9, y2:ly-3.5,
+        stroke:colour, 'stroke-width':1, opacity:.55}));
+    var t = el('text', {x:x2+12, y:ly, fill:colour, 'font-size':11.5,
+      'font-weight':600, 'font-family':'var(--ui)'});
+    t.textContent = val + ' ' + label; s.appendChild(t);
+  }
+  function pct(v){ return (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v) + '%'; }
+  limb(ay, lay + 4, 'var(--viz-ink)',    'audience', pct(aPct));
+  limb(oy, loy + 4, 'var(--viz-butter)', 'posting',  pct(oPct));
+
+  s.appendChild(el('circle', {cx:x1, cy:cy, r:2.5, fill:'var(--viz-grid)'}));
+  var b = el('text', {x:x1-3, y:H - 6, fill:'var(--text-3)', 'font-size':10,
+    'font-family':'var(--ui)'}); b.textContent = 'her own baseline';
+  s.appendChild(b);
+  return s;
+}
+
+/* ---------------------------------------------------------- D8 the tally */
+function tally(n){
+  var W = n * 5, H = 11;
+  var s = svg(W, H); s.style.color = 'var(--viz-teal)';
+  for (var i = 0; i < n; i++)
+    s.appendChild(el('rect', {x:i*5, y:1, width:2, height:9, rx:1, fill:'currentColor'}));
+  return s;
+}
+
+/* ---------------------------------------------------- D9 the state marks */
+function state(kind){
+  var s = svg(13, 13); s.style.color = 'var(--viz-teal)';
+  if (kind === 'present')
+    s.appendChild(el('circle', {cx:6.5, cy:6.5, r:4.5, fill:'currentColor'}));
+  else if (kind === 'absent')
+    s.appendChild(el('circle', {cx:6.5, cy:6.5, r:4, fill:'none',
+      stroke:'currentColor', 'stroke-width':2}));
+  else if (kind === 'notfound')
+    s.appendChild(el('circle', {cx:6.5, cy:6.5, r:4, fill:'none', stroke:'currentColor',
+      'stroke-width':2, 'stroke-dasharray':'2.4 2.4'}));
+  return s;   /* 'na' returns an empty 13px spacer — no mark, by design */
+}
+
+/* --------------------------------------------- check-strip (the watch month) */
+function checkStrip(days, marks){
+  var W = 320, H = 26, x1 = 6, x2 = W - 6, cy = 14;
+  var s = svg(W, H); s.style.overflow = 'visible';
+  s.appendChild(el('line', {x1:x1, y1:cy, x2:x2, y2:cy, stroke:'var(--viz-grid)', 'stroke-width':1}));
+  marks.forEach(function(d){
+    var x = x1 + (d / days) * (x2 - x1);
+    s.appendChild(el('circle', {cx:x, cy:cy, r:3, fill:'var(--viz-ink)'}));
+  });
+  [[x1,'4 Mar'],[x2,'4 Apr']].forEach(function(p, i){
+    s.appendChild(el('line', {x1:p[0], y1:cy-5, x2:p[0], y2:cy+5,
+      stroke:'var(--viz-grid)', 'stroke-width':1}));
+    var t = el('text', {x:p[0], y:cy+18, fill:'var(--text-3)', 'font-size':10,
+      'font-family':'var(--ui)', 'text-anchor': i ? 'end' : 'start'});
+    t.textContent = p[1]; s.appendChild(t);
+  });
+  return s;
+}
+
+/* -------------------------------------------------- stacked bar (Decisions) */
+/* 2px surface gap between segments — a gap, never a border. */
+function stack(segs, total, width){
+  var H = 16, GAP = 2, x = 0;
+  var s = svg(width, H); s.style.overflow = 'visible';
+  /* scales down inside a narrow column; the 2px gaps scale with it */
+  s.removeAttribute('width');
+  s.setAttribute('preserveAspectRatio', 'none');
+  s.style.width = '100%'; s.style.maxWidth = width + 'px'; s.style.height = H + 'px';
+  segs.forEach(function(seg){
+    var w = (seg.v / total) * width - GAP;
+    if (w <= 0.5) { x += (seg.v / total) * width; return; }
+    var r = el('rect', {x:x, y:0, width:w, height:H, rx:3});
+    if (seg.hollow) { r.setAttribute('fill','var(--panel)');
+      r.setAttribute('stroke', seg.c); r.setAttribute('stroke-width', 1.5); }
+    else r.setAttribute('fill', seg.c);
+    s.appendChild(r);
+    x += (seg.v / total) * width;
+  });
+  return s;
+}
+
+/* ==========================================================================
+   Populate
+   ========================================================================== */
+function put(id, node){ var t = document.getElementById(id); if (t) t.appendChild(node); }
+function unit(host, node, cap){
+  var u = document.createElement('div'); u.className = 'unit';
+  u.appendChild(node);
+  var c = document.createElement('div'); c.className = 'cap'; c.textContent = cap;
+  u.appendChild(c); host.appendChild(u);
+}
+function markRow(host, label, from, node, to){
+  var r = document.createElement('div'); r.className = 'row';
+  var l = document.createElement('span'); l.className = 'lbl'; l.textContent = label;
+  var v = document.createElement('span'); v.className = 'val';
+  if (from){ var a = document.createElement('span'); a.className='n'; a.textContent = from; v.appendChild(a); }
+  if (node) v.appendChild(node);
+  if (to){ var b = document.createElement('span'); b.className='n'; b.textContent = to; v.appendChild(b); }
+  r.appendChild(l); r.appendChild(v); host.appendChild(r);
+}
+function invRow(host, kind, item, note, ticks){
+  var g = document.createElement('div'); g.className = 'inv' + (kind === 'na' ? ' na' : '');
+  g.appendChild(state(kind));
+  var i = document.createElement('span'); i.className = 'item'; i.textContent = item;
+  var n = document.createElement('span'); n.className = 'note'; n.textContent = note;
+  g.appendChild(i); g.appendChild(n);
+  var t = document.createElement('span'); t.className = 'tk';
+  if (ticks) t.appendChild(tally(ticks));
+  g.appendChild(t);
+  host.appendChild(g);
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  var INK = 'var(--viz-ink)', BUT = 'var(--viz-butter)', TEAL = 'var(--viz-teal)';
+
+  /* 1 — the reading rule */
+  put('m-one',  dot(INK));
+  put('m-two',  slope(38, INK));
+  put('m-many', spark([100,103,101,108,112,119], INK));
+  put('m-cite', slope(41, INK));
+  put('m-cad',  slope(-40, BUT));
+  put('m-aud',  slope(38, INK));
+
+  /* 2 — the marks */
+  var sr = document.getElementById('slope-range');
+  [[-58,'−58%'],[-40,'−40%'],[-12,'−12%'],[0,'flat'],
+   [14,'+14%'],[38,'+38%'],[75,'+75% · clamped']]
+    .forEach(function(p){ unit(sr, slope(p[0], INK), p[1]); });
+
+  put('fork-buy',  fork(38, -40));
+  put('fork-walk', fork(-22, -40));
+  put('fork-dull', fork(9, 6));
+
+  var tr = document.getElementById('tally-range');
+  [4,5,6,11].forEach(function(n){ unit(tr, tally(n), 'we looked in ' + n + ' places'); });
+
+  var st = document.getElementById('states');
+  unit(st, state('present'),  'present · found it');
+  unit(st, state('absent'),   'verified absent · scores as a gap');
+  unit(st, state('notfound'), "not found · neutral, lowers confidence");
+  unit(st, state('na'),       "doesn't apply · no mark, by design");
+
+  var sd = document.getElementById('spark-demo');
+  unit(sd, spark([296,299,301,306,309,314], INK), '5 checks over the watch month');
+  unit(sd, slope(6, INK), 'the same creator, before you watched');
+
+  /* 3 — the report */
+  var t = document.getElementById('traj-rows');
+  markRow(t, 'Audience up 38% this year',        '214k', slope(38, INK), '296k');
+  /* D2 in action: reliability is a property of a distribution, not a change over
+     time. A slope here would claim two dated observations we never made. No mark. */
+  markRow(t, 'Her posts land reliably',          '', null, 'median 180k, not one spike');
+  markRow(t, '41 sites have cited or linked her work', '29', slope(41, INK), '41');
+  markRow(t, 'She tried to build a store',       '', null, 'Shopify link, dead since Feb');
+
+  var p = document.getElementById('press-rows');
+  markRow(p, 'Posting 40% less than she used to', '4/wk', slope(-40, BUT), '2/wk');
+  markRow(p, 'Replies fell to almost nothing',    '22%',  slope(-58, BUT), '3%');
+  markRow(p, 'Store link dead since February — she tried, it broke', '', null, '');
+
+  put('fork-report', fork(38, -40));
+
+  /* The tally is taught in words on the row above the first one that uses it —
+     §5.2's own move for weight: "a clause on the top line only." After that the
+     ticks carry it, and there is nothing left to decode. */
+  var ib = document.getElementById('inv-built');
+  invRow(ib, 'absent',   'YouTube channel',  'nothing at all — her clips are the whole business', 0);
+  invRow(ib, 'absent',   'Newsletter',       'not there · we looked in 6 places', 0);
+  invRow(ib, 'absent',   'Store',            'not there',      5);
+  invRow(ib, 'absent',   'Representation',   'not there',      4);
+  invRow(ib, 'notfound', 'Membership',       'inconclusive',   3);
+  invRow(ib, 'na',       'Podcast',          "she doesn't talk to camera", 0);
+
+  var io = document.getElementById('inv-on');
+  invRow(io, 'absent',  'Instagram subscriptions', 'off',              2);
+  invRow(io, 'absent',  'Shopping tags',           'off',              2);
+  invRow(io, 'absent',  'Affiliate links',         'none in 90 days',  3);
+  invRow(io, 'present', 'Sponsored posts',         '2, last one Jan 2024', 0);
+
+  /* 4 — the check-back */
+  put('checks-strip', checkStrip(31, [0, 7, 14, 22, 31]));
+  var mv = document.getElementById('moved-rows');
+  markRow(mv, 'Audience',  '296k', spark([296,299,301,306,309,314], INK), '314k  +6%');
+  markRow(mv, 'Posting',   '2/wk', slope(80, BUT),  '4/wk  back up');
+  markRow(mv, 'Citations', '41',   slope(15, INK),  '47');
+  var hd = document.getElementById('held-rows');
+  invRow(hd, 'absent', 'Newsletter',     'still not there · we looked in 6 places, twice', 0);
+  invRow(hd, 'absent', 'Store',          'still dead · 404 since February', 5);
+  invRow(hd, 'absent', 'Representation', 'still none', 4);
+
+  /* 5 — Decisions */
+  var D1 = 'var(--viz-d1)', D2 = 'var(--viz-d2)', D3 = 'var(--viz-d3)';
+  var rd = document.getElementById('ramp-demo');
+  [[D1,'Promote'],[D2,'Watch'],[D3,'Pass'],[null,'Expired undecided']].forEach(function(s){
+    var box = svg(56, 16);
+    var r = el('rect', {x:0, y:0, width:56, height:16, rx:3});
+    if (s[0]) r.setAttribute('fill', s[0]);
+    else { r.setAttribute('fill','var(--panel)'); r.setAttribute('stroke', D3);
+           r.setAttribute('stroke-width', 1.5); }
+    box.appendChild(r); unit(rd, box, s[1]);
+  });
+
+  var MONTHS = [
+    {m:'Mar', p:2, w:5,  x:14, e:3,  empty:4},
+    {m:'Apr', p:4, w:8,  x:19, e:5,  empty:2},
+    {m:'May', p:3, w:6,  x:22, e:8,  empty:6},
+    {m:'Jun', p:6, w:11, x:26, e:4,  empty:1},
+    {m:'Jul', p:4, w:9,  x:31, e:7,  empty:3},
+    {m:'Aug', p:5, w:7,  x:18, e:2,  empty:5}
+  ];
+  var mx = Math.max.apply(null, MONTHS.map(function(r){ return r.p+r.w+r.x+r.e; }));
+  var host = document.getElementById('months');
+  MONTHS.forEach(function(r){
+    var tot = r.p + r.w + r.x + r.e;
+    var row = document.createElement('div'); row.className = 'crow';
+    var k = document.createElement('span'); k.className = 'k'; k.textContent = r.m;
+    var mid = document.createElement('span');
+    mid.appendChild(stack([{v:r.p,c:D1},{v:r.w,c:D2},{v:r.x,c:D3},{v:r.e,c:D3,hollow:true}],
+      mx, 420));
+    var tl = document.createElement('span'); tl.className = 't';
+    tl.textContent = tot + ' · ' + r.empty + ' quiet days';
+    row.appendChild(k); row.appendChild(mid); row.appendChild(tl);
+    host.appendChild(row);
+  });
+  var lg = document.getElementById('months-legend');
+  [[D1,'Promoted'],[D2,'Watched'],[D3,'Passed'],[null,'Expired undecided'],
+   [null,'“quiet days” = Scout found nothing. A feature (§5.4), so it is counted, not plotted as a dip.']]
+   .forEach(function(s, i){
+    var e = document.createElement('span');
+    if (i < 4){ var sw = '<i style="background:' + (s[0] || 'transparent') +
+      (s[0] ? '' : ';border:1.5px solid ' + D3) + '"></i>'; e.innerHTML = sw + s[1]; }
+    else { e.textContent = s[1]; e.style.color = 'var(--text-3)'; }
+    lg.appendChild(e);
+  });
+
+  var BANDS = [
+    {b:'90+',    p:5, w:2,  x:1},
+    {b:'86–90',  p:4, w:6,  x:3},
+    {b:'82–86',  p:2, w:9,  x:11},
+    {b:'78–82',  p:1, w:5,  x:24}
+  ];
+  var bmx = Math.max.apply(null, BANDS.map(function(r){ return r.p+r.w+r.x; }));
+  var bh = document.getElementById('bands');
+  BANDS.forEach(function(r){
+    var row = document.createElement('div'); row.className = 'crow';
+    var k = document.createElement('span'); k.className = 'k'; k.textContent = r.b;
+    var mid = document.createElement('span');
+    mid.appendChild(stack([{v:r.p,c:D1},{v:r.w,c:D2},{v:r.x,c:D3}], bmx, 420));
+    var tl = document.createElement('span'); tl.className = 't';
+    tl.textContent = Math.round(r.x / (r.p+r.w+r.x) * 100) + '% passed';
+    row.appendChild(k); row.appendChild(mid); row.appendChild(tl);
+    bh.appendChild(row);
+  });
+  var hint = document.createElement('p'); hint.className = 'notenough';
+  hint.style.marginTop = 'var(--s3)';
+  hint.textContent = 'The desk passes 80% of the 78–82 band. Read: the bar is a point or two low.';
+  bh.appendChild(hint);
+
+  var REASONS = [
+    ['Already monetized', 19], ['Too small', 14], ['Not what I asked for', 11],
+    ['No pressure / not ready', 9], ['Not distinctive', 7], ['Wrong category', 4], ['Brand-unsafe', 1]
+  ];
+  var rmx = REASONS[0][1], rh = document.getElementById('reasons');
+  REASONS.forEach(function(r){
+    var row = document.createElement('div'); row.className = 'crow';
+    row.style.gridTemplateColumns = '160px 1fr auto';
+    var k = document.createElement('span'); k.className = 'k';
+    k.style.textAlign = 'left'; k.textContent = r[0];
+    var mid = document.createElement('span');
+    mid.appendChild(stack([{v:r[1], c:D2}], rmx, 300));
+    var tl = document.createElement('span'); tl.className = 't'; tl.textContent = r[1];
+    row.appendChild(k); row.appendChild(mid); row.appendChild(tl);
+    rh.appendChild(row);
+  });
+  var rhint = document.createElement('p'); rhint.className = 'notenough';
+  rhint.style.marginTop = 'var(--s3)';
+  rhint.textContent = '“Not what I asked for” — 8 of 11 on one brief. §6.7 fires at three: offer to re-read it.';
+  rh.appendChild(rhint);
+
+  put('outcome-strip', stack([{v:4,c:D1},{v:2,c:D2},{v:0,c:D3},{v:18,c:D3,hollow:true}], 24, 420));
+
+  /* toolbar */
+  var root = document.documentElement, tb = document.getElementById('theme');
+  tb.addEventListener('click', function(){
+    var d = root.getAttribute('data-theme') === 'dark';
+    root.setAttribute('data-theme', d ? 'light' : 'dark');
+    tb.textContent = d ? 'Dark mode' : 'Light mode';
+  });
+  var wrap = document.querySelector('.wrap'), wb = document.getElementById('width'), narrow = false;
+  wb.addEventListener('click', function(){
+    narrow = !narrow;
+    wrap.style.maxWidth = narrow ? '375px' : '920px';
+    wb.textContent = narrow ? 'Back to full width' : 'Narrow to 375px';
+  });
+});
+</script>
+</body>
+</html>

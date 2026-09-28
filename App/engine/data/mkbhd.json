@@ -1,0 +1,2275 @@
+{
+  "creatorId": "mkbhd",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:05:45.490Z",
+  "observationCount": 435,
+  "brief": "Writers and media people with a large audience and no business around it — newsletters, tech and culture commentary",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": false,
+  "escalatedWhy": "we looked in 28 places — they already have a youtube channel, newsletter and store. We didn't go further.",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 2300000,
+      "avatar": {
+        "url": "https://p19-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/d3a92e5aef5d692a3218d61ef1c148bc~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=123aa1be&x-expires=1786885200&x-signature=GV9vfjJ7HYnuCQR8FOOwJauLdY4%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@mkbhd",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 21100000,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/qu4TmIaYUlS41-dJ9gZ7DUR3nilvmB5_11i6OKSdvNnBNiyOusZP1bMN6ICnuxtjFBb6ioKgRQ=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@mkbhd",
+      "why": "Marques Brownlee — the YouTube Data API resolved @mkbhd"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/mkbhd/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "beacons",
+      "platform": "beacons",
+      "read": true,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://beacons.ai/mkbhd",
+      "why": "link hub read"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": true,
+      "followers": 189899,
+      "avatar": {
+        "url": "https://cdn.bsky.app/img/avatar/plain/did:plc:ys5aypbbeqmwn42edy5t3sho/bafkreiakhq5xi4v74q2oox5nkw4cdlxjtrv2obmhklovjl3xfy2kijkhya",
+        "expires": null,
+        "host": "bsky.app"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://bsky.app/profile/mkbhd.com",
+      "why": "mkbhd.com — mkbhd.com carries their name and they publish it, and it is their handle, and the AppView resolved it to did:plc:ys5aypbbeqmwn42edy5t3sho"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@mkbhd",
+      "evidence": "https://www.youtube.com/@mkbhd",
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.258Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.258Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.259Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.438Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.438Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.438Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.955Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.956Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.956Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@mkbhd",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:32:42.439Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/mkbhd",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:32:42.439Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/mkbhd",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:32:42.439Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:54:59.598Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:54:59.598Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:54:59.598Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:39.595Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:39.595Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:39.595Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — mkbhd.com",
+      "evidence": "https://mkbhd.com/",
+      "placesLooked": 13,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://mkbhd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.261Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.261Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://mkbhd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.261Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/mkbhd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.261Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://mkbhd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.262Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://mkbhd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.439Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.440Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://mkbhd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.440Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/mkbhd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.440Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://mkbhd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.440Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "their own site says \"klaviyo\" — mkbhd.com",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.440Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://mkbhd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.958Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.958Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://mkbhd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.958Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/mkbhd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.959Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://mkbhd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.959Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "their own site says \"klaviyo\" — mkbhd.com",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.959Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.590Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.590Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.590Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.590Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.590Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.590Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://mkbhd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.591Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.591Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://mkbhd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.591Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/mkbhd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.591Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://mkbhd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.591Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "their own site says \"klaviyo\" — mkbhd.com",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.591Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.731Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.731Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.731Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.731Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.731Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.731Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://mkbhd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.731Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.731Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://mkbhd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.731Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/mkbhd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.731Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://mkbhd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.731Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "their own site says \"klaviyo\" — mkbhd.com",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.731Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.708Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.708Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.709Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.709Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.709Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.709Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://mkbhd.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.710Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.710Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://mkbhd.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.710Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/mkbhd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.710Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://mkbhd.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.710Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "their own site says \"klaviyo\" — mkbhd.com",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.710Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://mkbhd.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.710Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — mkbhd.com",
+      "evidence": "https://mkbhd.com/",
+      "placesLooked": 18,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://mkbhd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.263Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/mkbhd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.263Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/mkbhd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T15:39:47.264Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.264Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/mkbhd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T15:39:47.264Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://mkbhd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.440Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/mkbhd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.440Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/mkbhd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:13:28.441Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.441Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/mkbhd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:13:28.441Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — mkbhd.com",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.441Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://mkbhd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.960Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/mkbhd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.961Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/mkbhd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:17:10.961Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.961Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/mkbhd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T16:17:10.961Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — mkbhd.com",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.961Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://mkbhd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.592Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/mkbhd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.592Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/mkbhd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:32:44.592Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.592Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/mkbhd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:32:44.592Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — mkbhd.com",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.592Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://mkbhd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.732Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/mkbhd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.732Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/mkbhd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:55:01.732Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.732Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/mkbhd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:55:01.732Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — mkbhd.com",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.732Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://mkbhd.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.711Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/mkbhd",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.711Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/mkbhd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:05:41.711Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.711Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/mkbhd",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:05:41.712Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — mkbhd.com",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.712Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.712Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at buymeacoffee.com/mkbhd — not confirmed as theirs",
+      "evidence": "https://buymeacoffee.com/mkbhd",
+      "placesLooked": 7,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=7826470",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.266Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "hit",
+          "url": "https://buymeacoffee.com/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.266Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=7826470",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.442Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "hit",
+          "url": "https://buymeacoffee.com/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.442Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=7826470",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.964Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "hit",
+          "url": "https://buymeacoffee.com/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:10.964Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=7826470",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.594Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "hit",
+          "url": "https://buymeacoffee.com/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:32:44.594Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=7826470",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.733Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "hit",
+          "url": "https://buymeacoffee.com/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:01.733Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/profile/creators?u=7826470",
+          "status": 200,
+          "why": "redirected to patreon.com/profile/creators",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.713Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "hit",
+          "url": "https://buymeacoffee.com/mkbhd",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.713Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://mkbhd.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.713Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/profile/creators?u=7826470",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:41.714Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by an official directory",
+      "why": "found it — https://podcasts.apple.com/us/podcast/waveform-the-mkbhd-podcast/id1474429475?uo=4",
+      "evidence": "https://itunes.apple.com/search?term=Marques%20Brownlee&entity=podcast&limit=5",
+      "placesLooked": 1,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Marques%20Brownlee&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Waveform: The MKBHD Podcast\" by MKBHD",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.450Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Marques%20Brownlee&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Waveform: The MKBHD Podcast\" by MKBHD",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.546Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Marques%20Brownlee&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Waveform: The MKBHD Podcast\" by MKBHD",
+          "advisory": false,
+          "at": "2026-08-06T16:17:11.068Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.megaphone.fm/STU4418364045",
+          "status": 200,
+          "why": "102 posts read from Waveform: The MKBHD Podcast — the publication title reads \"Waveform: The MKBHD Podcast\"",
+          "advisory": false,
+          "at": "2026-08-12T15:32:45.190Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Marques%20Brownlee&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Waveform: The MKBHD Podcast\" by MKBHD",
+          "advisory": false,
+          "at": "2026-08-12T15:32:45.190Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.megaphone.fm/STU4418364045",
+          "status": 200,
+          "why": "102 posts read from Waveform: The MKBHD Podcast — the publication title reads \"Waveform: The MKBHD Podcast\"",
+          "advisory": false,
+          "at": "2026-08-14T12:55:02.308Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Marques%20Brownlee&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Waveform: The MKBHD Podcast\" by MKBHD",
+          "advisory": false,
+          "at": "2026-08-14T12:55:02.308Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.megaphone.fm/STU4418364045",
+          "status": 200,
+          "why": "102 posts read from Waveform: The MKBHD Podcast — the publication title reads \"Waveform: The MKBHD Podcast\"",
+          "advisory": false,
+          "at": "2026-08-14T13:05:42.719Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Marques%20Brownlee&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Waveform: The MKBHD Podcast\" by MKBHD",
+          "advisory": false,
+          "at": "2026-08-14T13:05:42.719Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcast.mkbhd.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:05:42.720Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by a link they publish",
+      "why": "found it — mkbhd.com",
+      "evidence": "https://mkbhd.com/",
+      "placesLooked": 6,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.451Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://mkbhd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.451Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.547Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://mkbhd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.547Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T16:17:11.068Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://mkbhd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T16:17:11.068Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:32:47.244Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:32:47.244Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:32:47.245Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:32:47.245Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:32:47.245Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:32:47.246Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:32:47.247Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://mkbhd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:32:47.247Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:04.335Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:04.335Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:04.335Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:04.335Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:04.335Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:04.335Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:04.335Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://mkbhd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:55:04.336Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:05:44.743Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:05:44.743Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:05:44.743Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:05:44.743Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:05:44.743Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://mkbhd.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:05:44.743Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:44.744Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://mkbhd.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:05:44.744Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://mkbhd.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:44.744Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://www.threads.net/@mkbhd",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T13:05:44.744Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "inconclusive",
+          "url": "https://www.instagram.com/mkbhd",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T13:05:44.744Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.453Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.547Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T16:17:11.069Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:32:47.248Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:55:04.336Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:05:44.744Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.454Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.547Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T16:17:11.069Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:32:47.249Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:55:04.337Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:05:44.744Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 21 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T15:39:47.456Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 21 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T16:13:28.547Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 21 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T16:17:11.069Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:32:47.250Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:55:04.337Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:05:44.744Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [
+    {
+      "url": "http://youtube.com/MKBHD",
+      "status": 0,
+      "at": "2026-08-12T15:33:05.257Z"
+    }
+  ],
+  "cadence": {
+    "computable": true,
+    "decline": 0.101,
+    "recentPerMonth": 6.67,
+    "baselinePerMonth": 7.42,
+    "recentCount": 20,
+    "baselineCount": 68,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 275,
+    "sampled": 100,
+    "truncated": false,
+    "recentMedianViews": 2956142,
+    "baselineMedianViews": 5344706,
+    "unit": "videos",
+    "line": "6.7 videos a month now, against 7.4 before that — down 10%; the recent ones are getting 45% fewer views"
+  },
+  "samples": [
+    {
+      "platform": "Podcast",
+      "publication": "Waveform: The MKBHD Podcast",
+      "kind": "episode",
+      "title": "We Skipped the Pixel Event",
+      "url": null,
+      "at": "2026-08-14T08:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "This week, it's all about the Google Pixel 11. First, Marques, Andrew, and David talk about the Made by Google event itself before getting into the new HiLight glow feature. Then it's all about the new Pixel 11 phones. They wrap it up talking about the new Pixel Watch 5 earbuds and the Google Pixel ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:05:45.488Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Google Pixel 11/Pro/Fold Impressions: It Is What It Is",
+      "url": "https://www.youtube.com/watch?v=o4SSoURPODY",
+      "at": "2026-08-12T14:00:35Z",
+      "thumbnail": "https://i.ytimg.com/vi/o4SSoURPODY/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 2523139,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:32.879Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Waveform: The MKBHD Podcast",
+      "kind": "episode",
+      "title": "Your Luxury Car Now Has Ads!",
+      "url": null,
+      "at": "2026-08-07T08:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "This week, Marques, Andrew, and David talk about the newest Spiderman x BMW collab that has everyone angry before debating whether the EU should make Apple share some features with Windows computers. Then it's all about CMF and their newest earbuds (modeled by AI models ) and a few quick hits about ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:05:45.489Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Galaxy Z Fold 8 Review: Honeymoon's Over",
+      "url": "https://www.youtube.com/watch?v=Z6z_feacXW8",
+      "at": "2026-08-01T00:05:00Z",
+      "thumbnail": "https://i.ytimg.com/vi/Z6z_feacXW8/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 4163477,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:32.879Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Waveform: The MKBHD Podcast",
+      "kind": "episode",
+      "title": "Framework Laptops and a Robot Cleaner?",
+      "url": null,
+      "at": "2026-07-31T08:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "This week, Marques, Andrew, and David kick things off by talking about the new Apple leasing program. After that, they get into everything from the new Framework laptop to humanoid robot cleaning services. They wrap it all up by playing a game of Keyword Search! Enjoy.\n \n Links:\n DC Rainmaker - Garm",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:05:45.489Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Framework 13 Pro: The Modular Laptop is Real!",
+      "url": "https://www.youtube.com/watch?v=_xjxwl1zLMc",
+      "at": "2026-07-27T15:38:21Z",
+      "thumbnail": "https://i.ytimg.com/vi/_xjxwl1zLMc/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 3216173,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:32.879Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Waveform: The MKBHD Podcast",
+      "kind": "episode",
+      "title": "Samsung’s Newest Foldable is Here!",
+      "url": null,
+      "at": "2026-07-24T08:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Finally, a classic gadget week! First, it's all about the Garmin Cirqa, the newest Whoop competitor to enter the fray. Then Marques, Andrew, and David debate whether the new Light Flip minimal phone is worth the asking price. Once the dust settles, it's all about the newest Samsung Z Flip 8, Z Fold ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T15:33:05.259Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Samsung Z Fold 8 (Wide) Impressions: Better Than I Thought!",
+      "url": "https://www.youtube.com/watch?v=8Hx2yvWSgs0",
+      "at": "2026-07-22T13:01:05Z",
+      "thumbnail": "https://i.ytimg.com/vi/8Hx2yvWSgs0/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 4636976,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:32.879Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "This ZOOM is Insane!",
+      "url": "https://www.youtube.com/watch?v=kUnR9dO4EnA",
+      "at": "2026-07-20T20:39:08Z",
+      "thumbnail": "https://i.ytimg.com/vi/kUnR9dO4EnA/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 3417256,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:32.879Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Shot on Pixel 10 Pro",
+      "url": "https://bsky.app/profile/mkbhd.com/post/3lyg4qfqfvs2w",
+      "at": "2025-09-09T16:19:55.974Z",
+      "thumbnail": null,
+      "excerpt": "Shot on Pixel 10 Pro",
+      "metric": 788,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:32.879Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Apple September event invites have officially gone out",
+      "url": "https://bsky.app/profile/mkbhd.com/post/3lxcv4z3etc2y",
+      "at": "2025-08-26T16:00:38.144Z",
+      "thumbnail": null,
+      "excerpt": "Apple September event invites have officially gone out",
+      "metric": 375,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:32.879Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "I always say if you’re cringing at your old work, it just means you’re getting better",
+      "url": "https://bsky.app/profile/mkbhd.com/post/3lwnqhfbbvs2a",
+      "at": "2025-08-18T06:11:03.259Z",
+      "thumbnail": null,
+      "excerpt": "I always say if you’re cringing at your old work, it just means you’re getting better",
+      "metric": 499,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:32.879Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "2025 is 50% over 🫣",
+      "url": "https://bsky.app/profile/mkbhd.com/post/3lsy4fwoq6s23",
+      "at": "2025-07-02T11:30:50.192Z",
+      "thumbnail": null,
+      "excerpt": "2025 is 50% over 🫣",
+      "metric": 447,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:32.879Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "I’m a simple man",
+      "url": "https://bsky.app/profile/mkbhd.com/post/3lsjk7iog322t",
+      "at": "2025-06-26T16:27:50.479Z",
+      "thumbnail": null,
+      "excerpt": "I’m a simple man",
+      "metric": 559,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:32.879Z",
+      "status": null
+    }
+  ],
+  "headline": null,
+  "samplesSearched": {
+    "count": 3,
+    "why": "3 pieces of their own work"
+  },
+  "commentsRead": 500,
+  "audienceHistory": [
+    {
+      "audience": 21100000,
+      "at": "2026-08-06T15:39:45.130Z"
+    },
+    {
+      "audience": 21100000,
+      "at": "2026-08-06T16:13:25.898Z"
+    },
+    {
+      "audience": 21100000,
+      "at": "2026-08-06T16:17:08.815Z"
+    },
+    {
+      "audience": 21100000,
+      "at": "2026-08-12T15:32:31.157Z"
+    },
+    {
+      "audience": 21100000,
+      "at": "2026-08-14T12:54:57.555Z"
+    },
+    {
+      "audience": 21100000,
+      "at": "2026-08-14T13:05:32.878Z"
+    }
+  ],
+  "audience": 21100000,
+  "audienceWhy": "YouTube alone — nothing links the TikTok or Bluesky to it",
+  "audienceSeparate": [
+    {
+      "id": "tiktok_profile",
+      "followers": 2300000,
+      "url": "https://www.tiktok.com/@mkbhd",
+      "why": "nothing on either page links the TikTok to the YouTube, so it is not added in"
+    },
+    {
+      "id": "bluesky_profile",
+      "followers": 189899,
+      "url": "https://bsky.app/profile/mkbhd.com",
+      "why": "nothing on either page links the Bluesky to the YouTube, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 6,
+    "brief": "Writers and media people with a large audience and no business around it — newsletters, tech and culture commentary",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 0,
+      "max": 35,
+      "lines": [],
+      "share": 0,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 0,
+    "pressure": {
+      "points": 6,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 6,
+          "line": "1 dead link they still publish — they tried, it broke",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "line": "6.7 videos a month now, against 7.4 before that — down 10%; the recent ones are getting 45% fewer views",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "not_judged",
+      "because": "the model pass did not run, and Fit is a judgment — no model, no verdict"
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 8 days apart, the trend needs 90",
+      "why": "our two looks are 8 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.833,
+      "resolved": 5,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 1
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "not_judged",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 209,
+    "places": 34,
+    "from": "2026-08-06T15:39:44.794Z",
+    "to": "2026-08-14T13:05:45.490Z"
+  }
+}

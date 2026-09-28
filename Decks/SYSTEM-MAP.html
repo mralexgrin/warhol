@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warhol — how the system works</title>
+<style>
+/* ==========================================================================
+   FIRST DRAFT — deliberately plain.
+   Every colour, radius and font below is a variable named the way Alloy
+   (App/scout/alloy.css) names it, so applying Scout's toolkit later
+   is: drop alloy.css in above this block and delete the :root here.
+   ========================================================================== */
+:root{
+  --page:#EEEDF1;
+  --slab:#FFFFFF;
+  --panel:#FFFFFF;
+  --panel-2:#F5F4F7;
+  --panel-3:#EBEAEF;
+  --line:#DDDCE3;
+  --line-hi:#C4C2CE;
+  --text:#1C1B23;
+  --text-2:#55525F;
+  --text-3:#75727F;
+
+  --ok:#166053;   --ok-bg:#DFF0EB;
+  --warn:#8A5A00; --warn-bg:#FBF0D8;
+  --stop:#A3282B; --stop-bg:#F9E5E5;
+  --model:#5A4CA3; --model-bg:#EEEBF7;
+
+  --r-sm:8px; --r-md:12px; --r-lg:18px; --r-pill:999px;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:34px; --s7:50px; --s8:72px;
+
+  --disp:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  --ui:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,monospace;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--page); color:var(--text);
+  font-family:var(--ui); font-size:16px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:var(--s8);
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 var(--s5)}
+
+/* ---------- sticky bar with the depth switch ---------- */
+.bar{
+  position:sticky; top:0; z-index:50;
+  background:rgba(238,237,241,.92); backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.bar .wrap{display:flex;align-items:center;gap:var(--s4);height:56px}
+.bar .mark{font-family:var(--disp);font-weight:700;letter-spacing:-.02em}
+.bar nav{display:flex;gap:var(--s4);margin-left:auto;flex-wrap:wrap}
+.bar nav a{color:var(--text-2);text-decoration:none;font-size:13px}
+.bar nav a:hover{color:var(--text);text-decoration:underline}
+
+.depth{
+  display:flex;align-items:center;gap:var(--s2);
+  font-size:13px;color:var(--text-2);
+  border:1px solid var(--line-hi); border-radius:var(--r-pill);
+  padding:5px 12px 5px 10px; background:var(--panel); cursor:pointer;
+}
+.depth input{accent-color:var(--model);margin:0}
+
+/* ---------- type ---------- */
+h1{font-family:var(--disp);font-size:clamp(30px,4.4vw,46px);line-height:1.1;letter-spacing:-.025em;font-weight:700}
+h2{font-family:var(--disp);font-size:clamp(21px,2.6vw,27px);line-height:1.2;letter-spacing:-.02em;font-weight:700;margin-bottom:var(--s2)}
+h3{font-size:15px;font-weight:700;letter-spacing:-.01em}
+h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--text-3)}
+p{max-width:68ch}
+.lede{font-size:18px;color:var(--text-2);max-width:64ch}
+.sub{font-size:14px;color:var(--text-2)}
+.tiny{font-size:12.5px;color:var(--text-3)}
+code,.mono{font-family:var(--mono);font-size:.88em}
+
+section{padding:var(--s7) 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:none}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:var(--s2)}
+
+/* ---------- the depth layer ---------- */
+.deep{display:none}
+body.deep-on .deep{display:block}
+body.deep-on li.deep,body.deep-on span.deep{display:list-item}
+body.deep-on span.deep{display:inline}
+.deep-note{
+  margin-top:var(--s2);padding:var(--s2) var(--s3);
+  border-left:2px solid var(--model);background:var(--model-bg);
+  border-radius:0 var(--r-sm) var(--r-sm) 0;
+  font-size:13px;color:var(--text-2);
+}
+.deep-note .mono{color:var(--model)}
+
+/* ---------- header ---------- */
+header.hero{padding:var(--s7) 0 var(--s6)}
+header.hero h1{max-width:20ch}
+header.hero .lede{margin-top:var(--s4)}
+.halves{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4);margin-top:var(--s6)}
+.half{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--s5)}
+.half h3{margin-bottom:var(--s1)}
+.half p{font-size:14px;color:var(--text-2)}
+
+/* ---------- diagram ---------- */
+.map{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--s5);margin-top:var(--s5)}
+.lane{display:grid;grid-template-columns:110px 1fr;gap:var(--s4);align-items:start;padding:var(--s4) 0}
+.lane + .lane{border-top:1px dashed var(--line)}
+.lane-label{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--text-3);padding-top:10px}
+.row{display:flex;align-items:stretch;gap:var(--s2);flex-wrap:wrap}
+.box{
+  flex:1 1 150px;min-width:145px;
+  background:var(--panel-2);border:1px solid var(--line);border-radius:var(--r-md);
+  padding:var(--s3);
+}
+.box b{display:block;font-size:14px}
+.box span{display:block;font-size:12.5px;color:var(--text-2);margin-top:2px}
+.box.model{background:var(--model-bg);border-color:#CFC7EE}
+.box.ghost{background:transparent;border-style:dashed;color:var(--text-3)}
+.box.ghost b{color:var(--text-3)}
+.arrow{display:flex;align-items:center;color:var(--line-hi);font-size:20px;padding:0 2px;flex:0 0 auto}
+
+.wall{
+  margin:var(--s4) 0;padding:var(--s3) var(--s4);
+  border:1px dashed var(--model);background:var(--model-bg);
+  border-radius:var(--r-md);
+}
+.wall b{color:var(--model)}
+.wall p{font-size:13.5px;color:var(--text-2);margin-top:2px}
+
+.legend{display:flex;gap:var(--s4);flex-wrap:wrap;margin-top:var(--s4);font-size:12.5px;color:var(--text-3)}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px;border:1px solid var(--line)}
+.legend .m{background:var(--model-bg);border-color:#CFC7EE}
+.legend .e{background:var(--panel-2)}
+.legend .g{background:transparent;border-style:dashed}
+
+/* ---------- tenets ---------- */
+.tenets{display:grid;gap:var(--s3);margin-top:var(--s4)}
+.tenet{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;
+}
+.tenet .claim{padding:var(--s4) var(--s5)}
+.tenet .guard{padding:var(--s4) var(--s5);background:var(--panel-2);border-left:1px solid var(--line)}
+.tenet h3{margin-bottom:var(--s1)}
+.tenet p{font-size:14px;color:var(--text-2)}
+.tenet .guard h4{margin-bottom:var(--s1)}
+
+/* ---------- status ---------- */
+.pill{
+  display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  padding:3px 9px;border-radius:var(--r-pill);white-space:nowrap;
+}
+.pill.done{background:var(--ok-bg);color:var(--ok)}
+.pill.today{background:var(--warn-bg);color:var(--warn)}
+.pill.not{background:var(--stop-bg);color:var(--stop)}
+.pill.design{background:var(--panel-3);color:var(--text-2)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:var(--s3);margin-top:var(--s4)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--s4) var(--s5) var(--s5)}
+.card .top{display:flex;align-items:center;gap:var(--s2);margin-bottom:var(--s2)}
+.card .n{font-family:var(--mono);font-size:12px;color:var(--text-3)}
+.card h3{margin-right:auto}
+.card p{font-size:14px;color:var(--text-2)}
+.card ul{margin:var(--s2) 0 0 var(--s4);font-size:13px;color:var(--text-2)}
+.card li{margin-top:3px}
+
+/* ---------- gap groups ---------- */
+.group{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--s5);margin-top:var(--s3)}
+.group > .top{display:flex;align-items:baseline;gap:var(--s3);margin-bottom:var(--s3);flex-wrap:wrap}
+.group h3{font-size:17px;font-family:var(--disp)}
+.group .why{font-size:13px;color:var(--text-3)}
+.items{display:grid;gap:0}
+.item{display:grid;grid-template-columns:1fr auto;gap:var(--s4);align-items:start;padding:var(--s3) 0;border-top:1px solid var(--line)}
+.item:first-child{border-top:none;padding-top:0}
+.item b{font-size:14.5px;font-weight:600;display:block}
+.item span{font-size:13px;color:var(--text-2)}
+
+/* ---------- misc ---------- */
+.rule{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--s5);margin-top:var(--s4)}
+.rule ol{margin-left:var(--s5);font-size:14.5px}
+.rule li{margin-top:var(--s2)}
+.rule li b{font-weight:700}
+pre{
+  background:var(--panel-3);border:1px solid var(--line);border-radius:var(--r-md);
+  padding:var(--s3) var(--s4);overflow-x:auto;font-family:var(--mono);font-size:12.5px;color:var(--text-2);
+  margin-top:var(--s3);
+}
+footer{padding:var(--s6) 0;color:var(--text-3);font-size:13px;border-top:1px solid var(--line)}
+
+@media (max-width:820px){
+  .halves,.tenet{grid-template-columns:1fr}
+  .tenet .guard{border-left:none;border-top:1px solid var(--line)}
+  .lane{grid-template-columns:1fr;gap:var(--s2)}
+  .lane-label{padding-top:0}
+  .bar nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <span class="mark">Warhol</span>
+    <nav>
+      <a href="#map">The system</a>
+      <a href="#tenets">Tenets</a>
+      <a href="#have">What we have</a>
+      <a href="#gaps">What's missing</a>
+    </nav>
+    <label class="depth">
+      <input type="checkbox" id="depth-toggle">
+      Engineering detail
+    </label>
+  </div>
+</div>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow">Talent origination · Paradium · August 2026</div>
+  <h1>Warhol is the engine. Scout is the product.</h1>
+  <p class="lede">
+    One system that finds creators whose audience is worth far more than they're extracting, at the
+    moment being one person stops working. <b>Warhol</b> is the machinery underneath — scanning,
+    scoring, and the observation log. <b>Scout</b> is the application a human opens. The split is
+    deliberate, and it is what makes the numbers on screen defensible.
+  </p>
+
+  <div class="halves">
+    <div class="half">
+      <h3>Scout — the product</h3>
+      <p>Briefs, a daily drop, a report per creator, a watchlist, a decision. It holds the queue
+      and the judgment. It never decides what's true about a creator.</p>
+      <div class="deep-note deep">
+        Prototype at <span class="mono">App/scout/</span> — high-fidelity, clickable, running on
+        curated data. PRD: <span class="mono">PRD-WARHOL-SCOUT.md</span> v1.3.
+      </div>
+    </div>
+    <div class="half">
+      <h3>Warhol — the engine</h3>
+      <p>Opens real URLs, reads real status codes, and writes down what came back. It returns one
+      report about one creator, and knows nothing about queues, drops or decisions.</p>
+      <div class="deep-note deep">
+        Node, no framework, at <span class="mono">engine/</span> — <span class="mono">node bin/warhol.js check @handle</span>.
+        66 assertions in <span class="mono">test.js</span>, each one a sentence the product says out loud.
+      </div>
+    </div>
+  </div>
+
+  <div class="deep-note deep" style="margin-top:var(--s4)">
+    <b>The name never reaches the interface.</b> Scout PRD §4.6 lists <i>Warhol</i> among the words
+    that must not appear in the product — it belongs in strategy documents and a footer. The
+    interface says <i>"Scout found six people today."</i> Nobody using it has to learn two names.
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<section id="map">
+  <div class="eyebrow">01 — The system</div>
+  <h2>How a name becomes a decision</h2>
+  <p class="sub">Left to right, top to bottom. The outer lanes are Scout; everything between them is
+  Warhol. Purple is where a model reasons, grey is deterministic, dashed is not built.</p>
+
+  <div class="map">
+
+    <div class="lane">
+      <div class="lane-label">Scout</div>
+      <div>
+        <div class="row">
+          <div class="box"><b>Brief</b><span>"Home cooks with no store." Plain language in.</span></div>
+          <div class="arrow">→</div>
+          <div class="box"><b>Population</b><span>Cumulative. Everything every brief ever asked for, re-checked.</span></div>
+        </div>
+        <div class="deep-note deep">
+          A brief adds people to the population; it does not create a separate feed.
+          <span class="mono">warhol brief "&lt;description&gt;"</span> · demo-scoped at 20 candidates
+          (<span class="mono">weights.json → run.maxCandidates</span>), not a crawler.
+        </div>
+      </div>
+    </div>
+
+    <div class="lane">
+      <div class="lane-label">Warhol<br>the ladder</div>
+      <div>
+        <div class="row">
+          <div class="box ghost"><b>Discovery</b><span>Finds people not in the population. Not built.</span></div>
+          <div class="arrow">→</div>
+          <div class="box"><b>Sweep</b><span>Who they are, how big, what they link to.</span></div>
+          <div class="arrow">→</div>
+          <div class="box"><b>Probe</b><span>The inventory. Where absence is earned.</span></div>
+          <div class="arrow">→</div>
+          <div class="box model"><b>Study</b><span>Demand, their own words, fit. The only paid pass.</span></div>
+        </div>
+        <div class="deep-note deep">
+          Sweep ≈ 5 requests / 1s · Probe ≈ 18 requests / 6s · both <b>$0 in model spend</b>.
+          <b>The gate between Probe and Study is the spend rule:</b> if the creator already has the
+          inventory, the engine stops and says so — <i>"we looked in 16 places — they already have a
+          YouTube channel and a newsletter. We didn't go further."</i> That is a better outcome than
+          a report and it costs nothing.
+        </div>
+      </div>
+    </div>
+
+    <div class="wall">
+      <b>The wall — inside Warhol, not between Warhol and Scout</b>
+      <p>The model proposes places to look, classifies text Warhol already fetched, and judges fit
+      against a brief. It may never say what is at a URL. This is not a convention — it is five
+      lines in the storage layer, and a test that says it in English.</p>
+      <pre class="deep">// engine/lib/store.js
+if (obs.engine === 'llm' && obs.verification_state != null) {
+  throw new Error('WALL VIOLATION: an LLM-produced observation
+                   tried to write a verification state.');
+}</pre>
+    </div>
+
+    <div class="lane">
+      <div class="lane-label">Warhol<br>the record</div>
+      <div>
+        <div class="row">
+          <div class="box"><b>Append-only log</b><span>Every observation, stamped with when it was observed.</span></div>
+          <div class="arrow">→</div>
+          <div class="box"><b>Projection</b><span>Observations + a date → a report. Nothing is updated.</span></div>
+          <div class="arrow">→</div>
+          <div class="box"><b>Score &amp; gates</b><span>Opportunity 60 · Pressure 40 · Fit and Trajectory as gates.</span></div>
+        </div>
+        <div class="deep-note deep">
+          <span class="mono">data/observations.jsonl</span> is the only source of truth; everything else is a view.
+          This is what makes the rewind free rather than impossible — ask for a report
+          <span class="mono">--as-of 2026-01-15</span> and you get what we knew then.
+          Threshold 78, minimum confidence 0.60 (<span class="mono">config/weights.json</span>).
+        </div>
+      </div>
+    </div>
+
+    <div class="lane">
+      <div class="lane-label">Scout</div>
+      <div>
+        <div class="row">
+          <div class="box"><b>Today's Drop</b><span>A handful of names, capped at ten. Zero is a legitimate day.</span></div>
+          <div class="arrow">→</div>
+          <div class="box"><b>The report</b><span>The case, in words, with the receipts under each claim.</span></div>
+          <div class="arrow">→</div>
+          <div class="box"><b>Promote · Watch · Pass</b><span>A human decides. Every decision is a label.</span></div>
+          <div class="arrow">→</div>
+          <div class="box"><b>Handoff</b><span>Outreach package, sent by a person. Phase Two picks it up.</span></div>
+        </div>
+        <div class="deep-note deep">
+          Decisions feed back as training labels — the loop is instrumented from day one
+          (<span class="mono">warhol proposals</span> prints a hit-rate table for every URL the model
+          proposed). Watched names that cross a threshold are re-injected into the drop with the
+          reason attached: the machine tells you <i>when</i>, not just <i>who</i>.
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span><i class="m"></i>Model reasoning</span>
+      <span><i class="e"></i>Deterministic — HTTP, rules, arithmetic</span>
+      <span><i class="g"></i>Not built</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="tenets">
+  <div class="eyebrow">02 — Core tenets</div>
+  <h2>The thesis, and the thing that keeps each half of it honest</h2>
+  <p class="sub">Left: why this is a business. Right: the rule in the code that stops it from being
+  a plausible-sounding lie.</p>
+
+  <div class="tenets">
+
+    <div class="tenet">
+      <div class="claim">
+        <h3>The gap is the buy signal</h3>
+        <p>High engagement, high trust, near-zero commercial infrastructure. The audience is worth
+        many times what the creator is extracting. Every other tool ranks by follower velocity and
+        therefore only finds people who already have agents.</p>
+      </div>
+      <div class="guard">
+        <h4>Absence is earned, not defaulted to</h4>
+        <p>"We didn't find it" and "it isn't there" are different sentences. Only <i>verified absent</i>
+        scores as a gap. Not found scores neutral and lowers confidence.</p>
+        <div class="deep-note deep">
+          Three conditions, all required: ≤⅓ of places inconclusive · N places empty <b>and</b> at
+          least one of the creator's own pages successfully read · no hit anywhere, including in the
+          links they publish themselves. <span class="mono">lib/resolve.js</span>.
+        </div>
+      </div>
+    </div>
+
+    <div class="tenet">
+      <div class="claim">
+        <h3>Strain is the timing trigger</h3>
+        <p>A monetization gap can sit for years. Evidence they've hit the ceiling of being one
+        person — cadence falling, abandoned side projects, "sorry I've been quiet" — means they feel
+        it this quarter and will take the call.</p>
+      </div>
+      <div class="guard">
+        <h4>Quote and count. Never diagnose.</h4>
+        <p>"She wrote 'honestly I can't keep up' on March 28" is her public words, dated. "Subject
+        exhibits capacity strain" is a clinical judgment about a stranger. Every quote is checked
+        against the source text; anything that isn't a literal substring is dropped and counted.</p>
+        <div class="deep-note deep">
+          Eight lines, costs nothing, and it is the difference between evidence and
+          plausible-sounding fiction — which matters more here because the reports are shareable and
+          about real people (Scout PRD §12.1).
+        </div>
+      </div>
+    </div>
+
+    <div class="tenet">
+      <div class="claim">
+        <h3>Finding is guessing. Deciding is not.</h3>
+        <p>A model is genuinely good at <i>"who are the beat writers close to Southern college
+        football programmes."</i> It is catastrophic at <i>"does she have a newsletter"</i> — it will
+        answer confidently either way and be wrong invisibly.</p>
+      </div>
+      <div class="guard">
+        <h4>The model proposes places; it never reports what's at them</h4>
+        <p>It's a hypothesis generator. Something else opens the URLs and reads the status codes.
+        Enforced at the storage layer, not in code review.</p>
+        <div class="deep-note deep">
+          Allowed: classify a comment as purchase intent · quote the creator's own words · judge fit
+          against a brief · propose more URLs. Forbidden: say whether a store exists · invent a
+          quote · score a pillar · say what's at a URL it proposed.
+        </div>
+      </div>
+    </div>
+
+    <div class="tenet">
+      <div class="claim">
+        <h3>Fit is the qualifier</h3>
+        <p>Their content has to suit the machine we already own — clips well, repeatable format,
+        advertiser demand, adjacent to categories we already sell. We're looking for people great at
+        making things and bad at running a business, because that's the business we're in.</p>
+      </div>
+      <div class="guard">
+        <h4>A 200 is not a hit</h4>
+        <p>The single most common way an engine like this lies. <span class="mono">substack.com/@nobody</span>
+        returns 200. So does a Patreon shell, a GoDaddy parking page, and a Stan store that
+        redirected to the front page.</p>
+        <div class="deep-note deep">
+          The most expensive bug so far: <i>"Couldn't find this account"</i> ships in TikTok's
+          localisation bundle on <b>every</b> profile page. Tested against a fake handle, it fired,
+          and it silently marked every real creator as nonexistent. <b>A signature tested in one
+          direction is not tested</b> — every one now has a positive and a negative control.
+        </div>
+      </div>
+    </div>
+
+    <div class="tenet">
+      <div class="claim">
+        <h3>Originate the asset, don't acquire it</h3>
+        <p>Same outcome as buying a media brand — a property Arena owns and operates — at a fraction
+        of the cost, in categories that are growing. We already own the CMS, the ad stack, Encore,
+        Cutter and a direct sales team. The only missing piece is sourcing.</p>
+      </div>
+      <div class="guard">
+        <h4>Nothing is stored; everything is recorded</h4>
+        <p>There is no creator record to update — only an append-only log of observations, and a
+        report computed from it. Which is why "what did we know in January 2024" is a free question
+        rather than an impossible one.</p>
+        <div class="deep-note deep">
+          Retention follows from the same shape: <b>keep the decisions, drop the evidence.</b>
+          Decisions are tiny and they are about us. Evidence is bulky, it is about them, and it goes
+          stale. <span class="mono">warhol forget</span>.
+        </div>
+      </div>
+    </div>
+
+    <div class="tenet">
+      <div class="claim">
+        <h3>Investment is earned, tier by tier</h3>
+        <p>T1 Watchlist (hundreds, costs nothing) → T2 Cultivate (dozens, costs software) →
+        T3 The Factory (10–20, costs platform config) → T4 Superstars (1–3, costs headcount).
+        Every tier gates on evidence from the one below. <b>v1 is T1 and T2.</b></p>
+      </div>
+      <div class="guard">
+        <h4>Failing honestly beats failing quietly</h4>
+        <p>A 403, a bot wall, a robots.txt that says no — the check resolves <i>not found</i>, lowers
+        confidence, and says why on the report. The alternative is an engine that gets <i>more</i>
+        confident the more it is blocked.</p>
+        <div class="deep-note deep">
+          Same reason confidence is computed over falsifiable checks only. Five of eleven inventory
+          items can never earn <i>verified absent</i>; leaving them in the denominator capped
+          confidence at 0.545 against a 0.60 floor, so nobody could ever clear the gate.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="rule">
+    <h4>The rule underneath all of it</h4>
+    <p style="margin-top:var(--s2)">A claim on a Warhol report is exactly as strong as the list of
+    places behind it — which is why the list is always one click away, and why the interface says
+    <b>"not there · we looked in 6 places"</b> rather than "verified absent."</p>
+    <ol>
+      <li><b>Reachability</b> — at most a third of the places were inconclusive. If half the doors
+      wouldn't open, we did not conduct a search.</li>
+      <li><b>Coverage</b> — enough places came back empty, <b>and</b> we successfully read at least
+      one of the creator's own pages. Guessing at platform URLs without reading what someone says
+      about themselves isn't looking; it's assuming.</li>
+      <li><b>No hit</b> — nowhere, including in the links they publish themselves.</li>
+    </ol>
+    <p class="tiny" style="margin-top:var(--s3)">It produces more quiet days than a looser rule.
+    That is the correct direction of failure: a Scout burned twice stops trusting the drop
+    permanently, and the cost of an honest "we couldn't tell" is one line.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="have">
+  <div class="eyebrow">03 — Built</div>
+  <h2>What we have, end of hackathon</h2>
+  <p class="sub">Six pieces of work. Everything below runs today against live endpoints, and
+  everything deterministic runs with no API key at all.</p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="top"><span class="n">01</span><h3>The locked decisions, applied</h3><span class="pill done">Done</span></div>
+      <p>Twenty-four decisions from the design review, in the code and in the tests.</p>
+      <ul>
+        <li>A hit on a <i>guessed</i> URL now reads "something at X — not confirmed as theirs"</li>
+        <li>Two platforms merge into one audience number only when the handle matches <b>and</b> one links to the other</li>
+        <li>Every check runs against a brief — no third gate value</li>
+      </ul>
+      <div class="deep-note deep">
+        46 assertions. Chipotle's confidence fell 100% → 67% and its audience 2.9m → 2.8m. Both are
+        the decisions working — <span class="mono">mkbhd.substack.com</span> is a real Substack
+        belonging to someone called Bharath, and must not read as MKBHD's newsletter.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="top"><span class="n">02</span><h3>YouTube Data API</h3><span class="pill done">Done</span></div>
+      <p>One key unlocked three things: comments as a demand source, posting cadence as a pressure
+      signal, and a reachable score on a first look.</p>
+      <ul>
+        <li>Day-one maximum 79 → <b>91</b>, against a threshold of 78</li>
+        <li>Live cadence: Chipotle 0.7/mo against a 2.5 baseline; Veritasium is posting <i>more</i></li>
+      </ul>
+      <div class="deep-note deep">
+        66 assertions. The pressure ceiling is now <b>per creator</b> — 34/40 for someone whose
+        posting rate we read, 22/40 for someone with no YouTube, with the reason on the line.
+        Quota, not dollars, is the binding limit: ≤14 units per creator, ~714 creators/day free tier.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="top"><span class="n">03</span><h3>The creator's own site</h3><span class="pill done">Done</span></div>
+      <p>The biggest accuracy win available. Most real stores and newsletters live on the creator's
+      own domain, not on the five platforms we were guessing at.</p>
+      <ul>
+        <li>The domain is <b>harvested</b> from what they publish, never guessed</li>
+        <li>Counts as first-party, so it can corroborate a hit</li>
+      </ul>
+      <div class="deep-note deep">
+        Homepage plus four linked pages, same domain only. A page that arrives empty and fills
+        itself in the browser resolves <b>unread</b>, not empty — the two produce opposite verdicts.
+        <span class="mono">lib/site.js</span> · <span class="mono">config/probes.json → ownSite</span>.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="top"><span class="n">04</span><h3>A brief in, a drop out</h3><span class="pill done">Done</span></div>
+      <p>The thing you actually want to see: one brief becomes a handful of candidates, the ladder
+      runs over all of them, and the day aggregates into a drop.</p>
+      <ul>
+        <li><span class="mono">warhol brief</span> → <span class="mono">run</span> → <span class="mono">drop</span></li>
+        <li>The escalation gate still applies — no paying for Study on a creator who already has the inventory</li>
+        <li>A zero-result day renders as a designed state, not an error</li>
+      </ul>
+      <div class="deep-note deep">
+        Demo-scoped and the numbers say so: 20 candidates from one model call, not a crawler.
+        Machine-proposed names carry <span class="mono">source: "proposed"</span> and the interface
+        never implies the <i>name</i> was verified — a hallucinated handle produces an empty report
+        rather than a false one.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="top"><span class="n">05</span><h3>The report, restructured</h3><span class="pill done">Done</span></div>
+      <p>The check record the engine generates has three structural moves. Two belong on the creator
+      report and one does not — and the analysis mattered more than the styling.</p>
+      <ul>
+        <li><b>Transferred:</b> the claim opens where it's made — "we looked in 6 places" is clickable in place</li>
+        <li><b>Transferred with care:</b> the gates, stated plainly — but only on a creator who <i>didn't</i> enter the drop</li>
+        <li><b>Refused:</b> "how it scored" as a drawer. The arithmetic attaches to the claim it belongs to</li>
+      </ul>
+      <div class="deep-note deep">
+        Shipped as <span class="mono">App/scout/</span>; analysis in
+        <span class="mono">REPORT-IA.md</span>. Alloy stays vendored verbatim — its 56/56 contrast
+        audit is the reason.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="top"><span class="n">06</span><h3>Scout on real data</h3><span class="pill today">Today</span></div>
+      <p>The moment the prototype stops running on fiction. An exporter writes a drop-in replacement
+      for the seed file — no prototype code changes.</p>
+      <ul>
+        <li><span class="mono">warhol export --brief food</span> → a real seed</li>
+        <li>Every field with no engine equivalent is <b>flagged as generated</b></li>
+      </ul>
+      <div class="deep-note deep">
+        Some seed fields are real product features that aren't built — samples, play, outreach,
+        headline. They're stubbed and marked, plus a console summary on export:
+        <i>"14 creators · real: inventory, checks, scores, evidence · generated: headline, play,
+        outreach."</i> A demo that can't tell you which half is real is worse than one running
+        entirely on fiction.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="deep-note deep" style="margin-top:var(--s4)">
+    <b>What the whole thing costs, measured rather than asserted.</b> Sweep and Probe are HTTP and
+    rules — $0 in model spend. The entire per-creator model bill sits in Study, and Study only runs
+    when Probe found a real gap. Wall clock ≈ 7 seconds per creator; the binding constraint is the
+    per-host politeness delay, not compute. <span class="mono">warhol cost</span> prints the table.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="gaps">
+  <div class="eyebrow">04 — Not built</div>
+  <h2>What's still missing</h2>
+  <p class="sub">Three different kinds of missing, and they should not be read the same way. Some of
+  these are <b>by design</b> — limits we chose and stated rather than hid.</p>
+
+  <div class="group">
+    <div class="top">
+      <h3>Honest limits — chosen, not overlooked</h3>
+      <span class="why">These are in the design and on the report. Closing them means changing what we're willing to claim.</span>
+    </div>
+    <div class="items">
+      <div class="item">
+        <div><b>Nothing can clear the drop gates on day one</b>
+        <span>Trajectory needs two observations 90 days apart. One data point is not a trend, and manufacturing one is the exact failure the whole system exists to prevent. A population seeded today produces its first honest drop in about three months.</span></div>
+        <span class="pill design">By design</span>
+      </div>
+      <div class="item">
+        <div><b>Representation can be found but never ruled out</b>
+        <span>A bio that mentions management proves representation. A silent bio proves nothing. So "already with an agency" stays the decline reason the model structurally cannot catch.</span></div>
+        <span class="pill design">By design</span>
+      </div>
+      <div class="item">
+        <div><b>Sponsorships and affiliate links can prove presence, never absence</b>
+        <span>Forty recent captions with no #ad is not evidence that nobody sponsors her.</span></div>
+        <span class="pill design">By design</span>
+      </div>
+      <div class="item">
+        <div><b>Comments are readable on YouTube and nowhere else</b>
+        <span>TikTok is gated, Instagram is closed. Where no comment section will give us its text, the report distinguishes "we read 500 and none asked to buy" from "we could not read any."</span></div>
+        <span class="pill design">By design</span>
+      </div>
+      <div class="item">
+        <div><b>Unanswered audience is dark on a first look</b>
+        <span>Nobody stamps a follower count with a date, which is why cadence became readable in one visit and this did not. Pressure caps at 34 of 40.</span></div>
+        <span class="pill design">By design</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="top">
+      <h3>Post-hackathon — Warhol, the engine</h3>
+      <span class="why">Real engineering, and the first one is the largest unknown in Phase One.</span>
+    </div>
+    <div class="items">
+      <div class="item">
+        <div><b>Discovery at scale</b>
+        <span>Today one brief produces at most 20 candidates from a single model call. A real sourcing pipeline that continuously reads the web is a different piece of work, and building it now would have hidden the thing the demo is supposed to prove.</span></div>
+        <span class="pill not">Not built</span>
+      </div>
+      <div class="item">
+        <div><b>Person verification</b>
+        <span>Nothing verifies that the person a model named is the person it meant. Most of the risk is absorbed — a hallucinated handle produces an empty report — but the residual is finding <i>a</i> real person who isn't the right one. This is the next wall, and it is its own project.</span></div>
+        <span class="pill not">Not built</span>
+      </div>
+      <div class="item">
+        <div><b>Comment access beyond YouTube</b>
+        <span>Unmet demand is the strongest signal in the model and the hardest to source legitimately. Reddit is next and is clean. TikTok and Instagram need an answer we don't have.</span></div>
+        <span class="pill not">Not built</span>
+      </div>
+      <div class="item">
+        <div><b>The live cost of Study, on twenty creators</b>
+        <span>Every request and every model call already writes a cost row. What's missing is running it with a key and reading the bill. Half an hour of work, not a roadmap.</span></div>
+        <span class="pill not">Not built</span>
+      </div>
+      <div class="item">
+        <div><b>Wider platform coverage, and backlink data</b>
+        <span>Shopping tags and platform subscriptions need partner APIs. Backlink data is deliberately not bought yet — the coarse version falls out of discovery for free.</span></div>
+        <span class="pill not">Not built</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="top">
+      <h3>Post-hackathon — Scout as a real product</h3>
+      <span class="why">Scout is a clickable prototype. These are the things that turn it into an app somebody uses on a Tuesday.</span>
+    </div>
+    <div class="items">
+      <div class="item">
+        <div><b>A persistent application</b>
+        <span>Sign-in, the population, briefs, drops, watchlists and decisions as stored state rather than a seed file. Today the engine returns one report; everything about queues and judgment lives above it and only exists in the prototype.</span></div>
+        <span class="pill not">Not built</span>
+      </div>
+      <div class="item">
+        <div><b>Notifications and the digest</b>
+        <span>The drop is a daily object and nothing currently tells you it arrived.</span></div>
+        <span class="pill not">Not built</span>
+      </div>
+      <div class="item">
+        <div><b>Diagnosing empty days</b>
+        <span>Five quiet days could mean a well-set threshold, a bad brief, or a broken scan — and nothing tells them apart. This is the one that quietly erodes trust fastest.</span></div>
+        <span class="pill not">Not built</span>
+      </div>
+      <div class="item">
+        <div><b>A trends screen</b>
+        <span>Which briefs produce promotes, which pass reasons dominate, where the desk and the machine disagree. Measurable in week two. Outcome trends — who actually converted — need a year.</span></div>
+        <span class="pill not">Not built</span>
+      </div>
+      <div class="item">
+        <div><b>Track record as a screen</b>
+        <span>Deliberately waiting. A list of past calls graded by reality only works on rewound data; for anyone flagged this week the outcomes don't exist until 2027. It's a read view over data we're storing anyway, so waiting costs nothing.</span></div>
+        <span class="pill design">Deferred</span>
+      </div>
+      <div class="item">
+        <div><b>Mobile</b>
+        <span>Named as a gap, not a decision. The person most likely to check a drop casually is doing it on a phone.</span></div>
+        <span class="pill not">Not built</span>
+      </div>
+      <div class="item">
+        <div><b>Real cost metering in the product</b>
+        <span>The engine measures it; Scout shows representative figures. Live per-pass accounting in the interface is v2.</span></div>
+        <span class="pill not">Not built</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="top">
+      <h3>Post-hackathon — before the first real name</h3>
+      <span class="why">Not design problems. Gates.</span>
+    </div>
+    <div class="items">
+      <div class="item">
+        <div><b>A named owner and a legal review</b>
+        <span>Warhol builds dated dossiers on people who never consented, containing a claim about their finances and a claim about their state of mind — and reports are shareable by link by design. One person, not a team, who can answer "what do you have on me," signs off before the first real name goes in. A leaked report wouldn't be embarrassing because it's wrong. It would be embarrassing because it's right.</span></div>
+        <span class="pill not">Required</span>
+      </div>
+      <div class="item">
+        <div><b>Retention, as a migration</b>
+        <span>The rule exists and runs — keep the decisions, drop the evidence. Turning ~20 lines into a real data lifecycle is the follow-on.</span></div>
+        <span class="pill not">Not built</span>
+      </div>
+      <div class="item">
+        <div><b>Cold-start provisioning on the CMS</b>
+        <span>Our platform is built to <i>operate</i> established brands. Warhol needs it to <i>originate</i> them — no content, no archive, one person. The economics of Tier 3 turn entirely on whether that's configuration or engineering.</span></div>
+        <span class="pill not">Open question</span>
+      </div>
+      <div class="item">
+        <div><b>Deal structure</b>
+        <span>Equity, rev-share or JV — deliberately unresolved pending v1 results.</span></div>
+        <span class="pill not">Open question</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="top">
+      <h3>Phase Two — cultivation</h3>
+      <span class="why">Separate app, separate PRD. The stage that de-risks everything.</span>
+    </div>
+    <div class="items">
+      <div class="item">
+        <div><b>The development track</b>
+        <span>Cutter for production, social listening for what their audience actually responds to, content design tooling, analytics. It costs software rather than headcount, which is exactly why it can run across dozens of creators at once — and it's the audition that turns Tier 3 from a bet into a promotion.</span></div>
+        <span class="pill not">Phase Two</span>
+      </div>
+      <div class="item">
+        <div><b>Outreach sending, replies, deal management</b>
+        <span>Warhol does not own outreach. A person sends the message; making the tool send it inherits deliverability and relationship problems and turns a listening tool into a CRM.</span></div>
+        <span class="pill design">Out of scope</span>
+      </div>
+      <div class="item">
+        <div><b>The Factory (T3) and Superstars (T4)</b>
+        <span>Where this goes, not what we're asking to build. T3 depends on a framework for launching standalone experiences rather than bespoke builds — that's what keeps the flywheel spinning at 50 creators instead of seizing at 5.</span></div>
+        <span class="pill design">Out of scope</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><b>Warhol</b> — talent origination for Paradium. Sources:
+  <span class="mono">WARHOL-PROPOSAL.md</span> ·
+  <span class="mono">PRD-WARHOL-SCOUT.md</span> (v1.3) ·
+  <span class="mono">PRD-WARHOL-ENGINE.md</span> ·
+  <span class="mono">HANDOFF-PROMPTS.md</span> ·
+  <span class="mono">REPORT-IA.md</span>.</p>
+  <p style="margin-top:var(--s2)">First draft — visual language is placeholder. Alloy tokens
+  (<span class="mono">App/scout/alloy.css</span>) drop in once the content is locked.</p>
+</footer>
+
+</div>
+
+<script>
+  const toggle = document.getElementById('depth-toggle');
+  const KEY = 'warhol-map-depth';
+  if (localStorage.getItem(KEY) === '1') { toggle.checked = true; document.body.classList.add('deep-on'); }
+  toggle.addEventListener('change', () => {
+    document.body.classList.toggle('deep-on', toggle.checked);
+    localStorage.setItem(KEY, toggle.checked ? '1' : '0');
+  });
+</script>
+
+</body>
+</html>

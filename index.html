@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warhol — start here</title>
+<style>
+  :root{
+    --bg:#0e0e10; --panel:#17171a; --panel-2:#1d1d21; --line:#2a2a30;
+    --ink:#f2f2f0; --dim:#9a9aa2; --faint:#65656e; --accent:#e8523f;
+    --sans: ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased;line-height:1.5}
+  .wrap{max-width:760px;margin:0 auto;padding:72px 28px 96px}
+
+  h1{font-size:30px;letter-spacing:-.02em;margin:0 0 6px}
+  .alpha{font-family:var(--mono);font-size:12px;color:var(--faint);
+         border:1px solid var(--line);border-radius:5px;padding:3px 8px;
+         display:inline-block;margin-bottom:26px}
+  .lede{color:var(--dim);font-size:15.5px;margin:0 0 40px;max-width:60ch}
+
+  .door{display:block;text-decoration:none;color:inherit;background:var(--panel);
+        border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:14px;
+        transition:border-color .12s, background .12s}
+  .door:hover{border-color:#46464f;background:var(--panel-2)}
+  .door:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .door b{display:block;font-size:17px;letter-spacing:-.01em;margin-bottom:4px}
+  .door span{display:block;color:var(--dim);font-size:14px}
+  .door.primary{background:var(--ink);border-color:var(--ink);color:#111}
+  .door.primary:hover{background:#fff;border-color:#fff}
+  .door.primary span{color:#4a4a4a}
+
+  h2{font-size:12px;font-family:var(--mono);color:var(--faint);text-transform:uppercase;
+     letter-spacing:.08em;margin:44px 0 14px;font-weight:500}
+
+  pre{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+      padding:16px 18px;font-family:var(--mono);font-size:13px;color:var(--ink);
+      overflow-x:auto;margin:0 0 10px}
+  .after{color:var(--dim);font-size:14px;margin:0 0 10px}
+  .after code{font-family:var(--mono);font-size:13px;color:var(--ink)}
+
+  ul{list-style:none;padding:0;margin:0;display:grid;
+     grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+  li a{display:block;text-decoration:none;background:var(--panel);border:1px solid var(--line);
+       border-radius:10px;padding:14px 16px;color:var(--ink);font-size:14.5px;
+       transition:border-color .12s}
+  li a:hover{border-color:#46464f}
+  li a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  li a em{display:block;font-style:normal;color:var(--faint);font-size:12.5px;margin-top:3px}
+
+  footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+         color:var(--faint);font-size:13.5px}
+  footer a{color:var(--dim)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Warhol</h1>
+  <div class="alpha">Scout 0.1 · alpha</div>
+  <p class="lede">A talent origination engine for Paradium. Scout is the app you look at;
+     the engine is what does the reading.</p>
+
+  <a class="door primary" href="App/scout/index.html">
+    <b>Open Scout →</b>
+    <span>The current build. Runs off a frozen seed — no server, no key.</span>
+  </a>
+
+  <a class="door" href="Archive/prototypes/index.html">
+    <b>Every build, side by side</b>
+    <span>The current one and the ten it came from. Needs the server below.</span>
+  </a>
+
+  <h2>Run it against the live engine</h2>
+  <pre>cd App/engine &amp;&amp; node bin/serve-live.js 8140</pre>
+  <p class="after">Then open <code>http://localhost:8140/scout/</code>. A brief written in Scout
+     starts a real run and spends real money. Without the model key it falls back to a seeded
+     scan and says so.</p>
+
+  <h2>Serve the whole folder</h2>
+  <pre>node Archive/prototypes/serve.js</pre>
+  <p class="after">Then open <code>http://localhost:4321</code> — this page, with every build
+     reachable. Pass a port number if 4321 is taken.</p>
+
+  <h2>The documents</h2>
+  <ul>
+    <li><a href="README.md">README<em>What's live, and where things are</em></a></li>
+    <li><a href="Product/">Product<em>Proposal, PRDs, copy rules, briefs</em></a></li>
+    <li><a href="Product/design-system/index.html">Design system<em>Alloy — the toolkit in force</em></a></li>
+    <li><a href="Notes/">Notes<em>Grills, audits, reviews — dated</em></a></li>
+    <li><a href="Decks/presentation.html">Presentation<em>The deck</em></a></li>
+    <li><a href="Decks/ONE-PAGER.html">One-pager<em>The short version</em></a></li>
+    <li><a href="Decks/SYSTEM-MAP.html">System map<em>How the parts connect</em></a></li>
+    <li><a href="Archive/">Archive<em>Superseded builds, sketches, backup</em></a></li>
+  </ul>
+
+  <footer>
+    The build folder is <code>App/scout</code> and carries no version number on purpose —
+    the version lives in <a href="App/scout/DESIGN-NOTES.md">its design notes</a>, so this
+    page never needs editing when a new build lands.
+  </footer>
+
+</div>
+</body>
+</html>

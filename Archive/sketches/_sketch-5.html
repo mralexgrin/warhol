@@ -1,0 +1,289 @@
+<!doctype html>
+<!--
+ROUGH SKETCH 5 — one display language for the score, and the two agreed
+gradient homes (page background, brand mark).
+
+The problem, stated precisely. v3 renders the same datum two unrelated ways:
+  drop / watchlist / track record → an ink BLOCK: 87/100 + gap-strain split bar
+  scout report                    → a RING: 87 inside, sweep = confidence
+So a user learns one language on the list and a different one on the report —
+and confidence, which §4.3 says must sit beside the score and never be folded
+into it, is invisible on every surface except the one you reach last.
+-->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sketch 5 — one score language</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..800;1,300..800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../prototypes/v3/alloy.css">
+<style>
+  body { padding: 0; }
+  .sketchbar { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: var(--s4);
+    flex-wrap: wrap; padding: 12px 22px; background: var(--ink); color: var(--on-ink); }
+  .sketchbar b { font-family: var(--disp); font-size: 14px; letter-spacing: -.02em; }
+  .sketchbar .note { color: rgba(242,240,247,.72); font-size: 12.5px; margin: 0; max-width: 46ch; }
+  .sketchbar .tsw { margin-left: auto; background: rgba(255,255,255,.10); border-color: transparent; }
+  .sketchbar .tsw button { color: rgba(242,240,247,.78); }
+  .sketchbar .tsw button[aria-pressed="true"] { background: var(--on-ink); color: var(--ink); }
+
+  .pagewrap { padding: 22px; background:
+    radial-gradient(58% 62% at 12% 8%, var(--butter), transparent 62%),
+    radial-gradient(52% 58% at 88% 14%, var(--teal), transparent 62%),
+    radial-gradient(64% 70% at 50% 104%, var(--lilac), transparent 66%),
+    var(--page); }
+  .page { max-width: 1140px; margin: 0 auto; padding: var(--s6) var(--s6) var(--s8);
+    background: var(--slab); border-radius: var(--r-slab); box-shadow: var(--el-slab); }
+  .sec { padding-top: var(--s7); }
+  .sec-title { font-size: clamp(22px,3vw,32px); }
+  .sec-note { max-width: 68ch; font-size: 13.5px; color: var(--text-2); line-height: 1.6; margin-top: 8px; }
+  .verdict-note { margin-top: var(--s3); font-size: 12.5px; color: var(--text-3); line-height: 1.65; max-width: 86ch; }
+  .lab2 { font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--text-3); display: block; margin-bottom: var(--s3); }
+  .opt { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); padding: var(--s5); }
+  .trio { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s4); margin-top: var(--s4); }
+  @media (max-width:980px){ .trio { grid-template-columns: 1fr } }
+  .scaleset { display: flex; gap: var(--s5); align-items: flex-end; flex-wrap: wrap; margin: var(--s4) 0; }
+  .scaleset > div { text-align: center; }
+  .scaleset .cap { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--text-3); margin-top: 9px; }
+
+  /* ---------- the brand mark ---------- */
+  .wsmark { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; font-family: var(--disp); font-weight: 700; font-size: 13.5px; }
+  .ws--flat { background: var(--ink); color: var(--on-ink); }
+  .ws--mesh { background:
+    radial-gradient(80% 120% at 20% 15%, var(--butter), transparent 66%),
+    radial-gradient(74% 110% at 85% 25%, var(--teal), transparent 66%),
+    radial-gradient(84% 124% at 50% 105%, var(--lilac), transparent 70%), var(--ink);
+    color: var(--on-field); }
+  .ws--duo { background: linear-gradient(135deg, var(--lilac), var(--teal)); color: var(--on-field); }
+  .ws--veil { background: linear-gradient(180deg, rgba(28,27,35,.55), rgba(28,27,35,.86)),
+    linear-gradient(135deg, var(--butter), var(--teal)); color: var(--on-ink); }
+
+  /* ---------- OPTION A · the ring, everywhere ---------- */
+  .rg { position: relative; border-radius: 50%; display: grid; place-items: center; flex: none; }
+  .rg::before { content: ""; position: absolute; inset: 0; border-radius: 50%;
+    background: conic-gradient(from -90deg, var(--teal) var(--pct,90%), var(--panel-3) 0); }
+  .rg .in { position: relative; z-index: 1; border-radius: 50%; background: var(--panel);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .rg .in b { font-family: var(--disp); font-weight: 700; letter-spacing: -.045em; line-height: 1;
+    font-variant-numeric: tabular-nums; }
+  .rg .in span { font-size: 8px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--text-3); margin-top: 2px; }
+  .rg--sm { width: 54px; height: 54px; padding: 5px; } .rg--sm .in { width: 100%; height: 100%; }
+  .rg--sm .in b { font-size: 18px; } .rg--sm .in span { display: none; }
+  .rg--md { width: 70px; height: 70px; padding: 6px; } .rg--md .in { width: 100%; height: 100%; }
+  .rg--md .in b { font-size: 22px; }
+  .rg--lg { width: 104px; height: 104px; padding: 9px; } .rg--lg .in { width: 100%; height: 100%; }
+  .rg--lg .in b { font-size: 30px; } .rg--lg .in span { font-size: 9px; }
+
+  /* ---------- OPTION B · the block, everywhere ---------- */
+  .bk { border-radius: var(--r-md); background: var(--ink); color: var(--on-ink); text-align: center; flex: none; }
+  .bk .n { font-family: var(--disp); font-weight: 700; letter-spacing: -.05em; line-height: 1;
+    font-variant-numeric: tabular-nums; }
+  .bk .n small { opacity: .55; }
+  .bk .d { font-weight: 700; letter-spacing: .13em; text-transform: uppercase;
+    color: rgba(242,240,247,.66); }
+  .bk .bits { display: flex; gap: 4px; }
+  .bk .bits span { height: 5px; border-radius: 3px; display: block; }
+  .bk .conf { display: flex; align-items: center; justify-content: center; gap: 5px;
+    color: rgba(242,240,247,.72); }
+  .bk .conf i { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); display: block; }
+  .bk--sm { width: 112px; padding: 10px 9px 9px; }
+  .bk--sm .n { font-size: 26px; } .bk--sm .n small { font-size: 11px; }
+  .bk--sm .d { font-size: 8.5px; margin-top: 4px; } .bk--sm .bits { margin-top: 8px; }
+  .bk--sm .conf { font-size: 10px; margin-top: 7px; }
+  .bk--lg { width: 150px; padding: 16px 14px 14px; }
+  .bk--lg .n { font-size: 40px; } .bk--lg .n small { font-size: 16px; }
+  .bk--lg .d { font-size: 9.5px; margin-top: 5px; } .bk--lg .bits { margin-top: 11px; }
+  .bk--lg .conf { font-size: 11.5px; margin-top: 9px; }
+
+  /* ---------- OPTION C · ring + split rail ---------- */
+  .cx { display: flex; flex-direction: column; align-items: center; gap: 8px; flex: none; }
+  .cx .bits { display: flex; gap: 3px; width: 100%; }
+  .cx .bits span { height: 5px; border-radius: 3px; display: block; }
+
+  /* ---------- in-situ rows ---------- */
+  .rows { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg);
+    overflow: hidden; margin-top: var(--s4); }
+  .r2 { display: grid; grid-template-columns: 26px auto minmax(0,1fr); gap: var(--s4);
+    align-items: center; padding: var(--s4) var(--s5); border-top: 1px solid var(--line); }
+  .r2:first-child { border-top: 0; }
+  .rk { font-size: 13px; font-weight: 700; color: var(--text-3); font-variant-numeric: tabular-nums; }
+  .nm { display: block; font-family: var(--disp); font-size: 17px; font-weight: 700; letter-spacing: -.03em; }
+  .hd { display: block; font-size: 12px; color: var(--text-3); margin-top: 2px; }
+  .sig { display: block; font-size: 12.5px; color: var(--text-2); margin-top: 6px; }
+  .rpthd { display: flex; gap: var(--s5); align-items: flex-start; padding: var(--s5);
+    background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); margin-top: var(--s4); }
+  .rpthd h3 { font-size: 26px; letter-spacing: -.04em; }
+  .rcap { text-align: center; margin-top: 10px; }
+  .rcap .a { font-size: 12px; color: var(--text-2); }
+  .rcap .b { font-size: 12px; color: var(--text-3); margin-top: 3px; font-variant-numeric: tabular-nums; }
+  .t-gap { color: var(--teal-d); } .t-strain { color: var(--butter-d); }
+  .stick { display: flex; align-items: center; gap: var(--s4); padding: var(--s3) var(--s5);
+    background: var(--panel-2); border: 1px solid var(--line); border-radius: var(--r-md); margin-top: var(--s3); }
+  .stick .who b { display: block; font-family: var(--disp); font-size: 15px; font-weight: 700; letter-spacing: -.028em; }
+  .stick .who span { font-size: 11px; color: var(--text-3); }
+</style>
+</head>
+<body>
+
+<div class="sketchbar">
+  <b>Sketch 5</b>
+  <p class="note">One display language for the score, plus the two agreed gradient homes.</p>
+  <div class="tsw" role="group" aria-label="Theme">
+    <button data-t="light" aria-pressed="false">Light</button>
+    <button data-t="dark" aria-pressed="true">Dark</button>
+  </div>
+</div>
+
+<div class="pagewrap"><div class="page">
+
+  <!-- ============ 1 · GRADIENT HOMES ============ -->
+  <section class="sec" style="padding-top:var(--s5)">
+    <h2 class="sec-title">1 · The two gradient homes</h2>
+    <p class="sec-note">The page behind this slab is the mesh — nothing sits on it, so there is nothing
+      to lose. The brand mark is the other legitimate home: it is the one element in the product whose
+      job <i>is</i> to be an identity rather than to carry information, so decoration is honest there.</p>
+    <div class="scaleset">
+      <div><span class="wsmark ws--flat">WS</span><div class="cap">flat (today)</div></div>
+      <div><span class="wsmark ws--mesh">WS</span><div class="cap">mesh</div></div>
+      <div><span class="wsmark ws--duo">WS</span><div class="cap">duo</div></div>
+      <div><span class="wsmark ws--veil">WS</span><div class="cap">veiled duo</div></div>
+    </div>
+    <p class="verdict-note">Mesh echoes the page it sits on, so the rail feels cut from the same cloth.
+      Duo is the boldest and shares its two hues with the ring's teal — worth checking they don't fight.
+      Veiled duo keeps a dark mark with a warm edge, closest to today.</p>
+  </section>
+
+  <!-- ============ 2 · ONE LANGUAGE ============ -->
+  <section class="sec">
+    <h2 class="sec-title">2 · One language for the score</h2>
+    <p class="sec-note">Each option is shown at every scale it has to survive: three list rows, a report
+      header, and the sticky bar. The test is not which looks best alone — it is whether a column of
+      ten stays comparable, and whether <b>confidence</b> makes it onto the list at all.</p>
+
+    <!-- A -->
+    <div class="opt" style="margin-top:var(--s5)"><span class="lab2">A · the ring, everywhere</span>
+      <p class="verdict-note" style="margin-top:0">Number is the score, sweep is confidence. Two
+        independent quantities in one mark, no legend. The gap/strain split drops off the list and
+        lives on the report, where there is room to state it in words.</p>
+      <div class="rows">
+        <div class="r2"><span class="rk">1</span>
+          <div class="rg rg--sm" style="--pct:92%"><span class="in"><b>87</b></span></div>
+          <div><span class="nm">Marguerite Vaillancourt</span><span class="hd">@marguerite.bakes · 1.2M</span>
+            <span class="sig">No newsletter, no site, no store · 1,940 asked to buy</span></div></div>
+        <div class="r2"><span class="rk">2</span>
+          <div class="rg rg--sm" style="--pct:74%"><span class="in"><b>84</b></span></div>
+          <div><span class="nm">DeShawn Okafor</span><span class="hd">@thesundaypot · 835K</span>
+            <span class="sig">No newsletter, no store · 1,120 asked to buy</span></div></div>
+        <div class="r2"><span class="rk">3</span>
+          <div class="rg rg--sm" style="--pct:58%"><span class="in"><b>79</b></span></div>
+          <div><span class="nm">Junie Castellanos</span><span class="hd">@junie.eats · 188K</span>
+            <span class="sig">No site, no store · 640 asked to buy</span></div></div>
+      </div>
+      <div class="rpthd">
+        <div><div class="rg rg--lg" style="--pct:92%"><span class="in"><b>87</b><span>score</span></span></div>
+          <div class="rcap"><div class="a">92% of checks resolved</div>
+            <div class="b">gap <b class="t-gap">55</b>/60 · strain <b class="t-strain">32</b>/40</div></div></div>
+        <div><span class="pill pill--solid">Scout Report</span><h3 style="margin-top:10px">Marguerite Vaillancourt</h3>
+          <p class="hd">@marguerite.bakes · TikTok · 1.2M across 3</p></div>
+      </div>
+      <div class="stick"><div class="rg rg--sm" style="--pct:92%;width:42px;height:42px;padding:4px"><span class="in"><b>87</b></span></div>
+        <div class="who"><b>Marguerite Vaillancourt</b><span>87/100 · 92% resolved · gap 55 · strain 32</span></div></div>
+      <p class="verdict-note"><b>Wins:</b> confidence finally visible on the list — you can see at a glance
+        which names are thinly checked before spending a click. One shape at three sizes.
+        <b>Costs:</b> centred numerals compare slightly worse than a left-aligned column, and the split
+        is gone from the row.</p>
+    </div>
+
+    <!-- B -->
+    <div class="opt" style="margin-top:var(--s5)"><span class="lab2">B · the block, everywhere</span>
+      <p class="verdict-note" style="margin-top:0">Today's block promoted to the report, with confidence
+        added as a line so it stops being report-only.</p>
+      <div class="rows">
+        <div class="r2"><span class="rk">1</span>
+          <div class="bk bk--sm"><div class="n">87<small>/100</small></div><div class="d">Warhol score</div>
+            <div class="bits"><span style="background:var(--teal);flex:55"></span><span style="background:var(--butter);flex:32"></span><span style="background:rgba(255,255,255,.16);flex:13"></span></div>
+            <div class="conf"><i></i>92% resolved</div></div>
+          <div><span class="nm">Marguerite Vaillancourt</span><span class="hd">@marguerite.bakes · 1.2M</span>
+            <span class="sig">No newsletter, no site, no store · 1,940 asked to buy</span></div></div>
+        <div class="r2"><span class="rk">2</span>
+          <div class="bk bk--sm"><div class="n">84<small>/100</small></div><div class="d">Warhol score</div>
+            <div class="bits"><span style="background:var(--teal);flex:49"></span><span style="background:var(--butter);flex:35"></span><span style="background:rgba(255,255,255,.16);flex:16"></span></div>
+            <div class="conf"><i></i>74% resolved</div></div>
+          <div><span class="nm">DeShawn Okafor</span><span class="hd">@thesundaypot · 835K</span>
+            <span class="sig">No newsletter, no store · 1,120 asked to buy</span></div></div>
+        <div class="r2"><span class="rk">3</span>
+          <div class="bk bk--sm"><div class="n">79<small>/100</small></div><div class="d">Warhol score</div>
+            <div class="bits"><span style="background:var(--teal);flex:44"></span><span style="background:var(--butter);flex:35"></span><span style="background:rgba(255,255,255,.16);flex:21"></span></div>
+            <div class="conf"><i></i>58% resolved</div></div>
+          <div><span class="nm">Junie Castellanos</span><span class="hd">@junie.eats · 188K</span>
+            <span class="sig">No site, no store · 640 asked to buy</span></div></div>
+      </div>
+      <div class="rpthd">
+        <div class="bk bk--lg"><div class="n">87<small>/100</small></div><div class="d">Warhol score</div>
+          <div class="bits"><span style="background:var(--teal);flex:55"></span><span style="background:var(--butter);flex:32"></span><span style="background:rgba(255,255,255,.16);flex:13"></span></div>
+          <div class="conf"><i></i>92% of checks resolved</div></div>
+        <div><span class="pill pill--solid">Scout Report</span><h3 style="margin-top:10px">Marguerite Vaillancourt</h3>
+          <p class="hd">@marguerite.bakes · TikTok · 1.2M across 3</p>
+          <p class="sig">gap <b class="t-gap">55</b>/60 · strain <b class="t-strain">32</b>/40</p></div>
+      </div>
+      <p class="verdict-note"><b>Wins:</b> the split stays visible everywhere and the numerals sit in a
+        fixed column, which is the easiest thing to compare down a list of ten.
+        <b>Costs:</b> four pieces of information in a 112px box is dense, and ten dark blocks down a
+        page is a lot of weight.</p>
+    </div>
+
+    <!-- C -->
+    <div class="opt" style="margin-top:var(--s5)"><span class="lab2">C · ring, with the split beneath it</span>
+      <p class="verdict-note" style="margin-top:0">The ring carries score and confidence; a 3-segment
+        rail under it keeps the composition. One mark, everything preserved.</p>
+      <div class="rows">
+        <div class="r2"><span class="rk">1</span>
+          <div class="cx" style="width:64px"><div class="rg rg--sm" style="--pct:92%"><span class="in"><b>87</b></span></div>
+            <div class="bits"><span style="background:var(--teal);flex:55"></span><span style="background:var(--butter);flex:32"></span><span style="background:var(--panel-3);flex:13"></span></div></div>
+          <div><span class="nm">Marguerite Vaillancourt</span><span class="hd">@marguerite.bakes · 1.2M</span>
+            <span class="sig">No newsletter, no site, no store · 1,940 asked to buy</span></div></div>
+        <div class="r2"><span class="rk">2</span>
+          <div class="cx" style="width:64px"><div class="rg rg--sm" style="--pct:74%"><span class="in"><b>84</b></span></div>
+            <div class="bits"><span style="background:var(--teal);flex:49"></span><span style="background:var(--butter);flex:35"></span><span style="background:var(--panel-3);flex:16"></span></div></div>
+          <div><span class="nm">DeShawn Okafor</span><span class="hd">@thesundaypot · 835K</span>
+            <span class="sig">No newsletter, no store · 1,120 asked to buy</span></div></div>
+        <div class="r2"><span class="rk">3</span>
+          <div class="cx" style="width:64px"><div class="rg rg--sm" style="--pct:58%"><span class="in"><b>79</b></span></div>
+            <div class="bits"><span style="background:var(--teal);flex:44"></span><span style="background:var(--butter);flex:35"></span><span style="background:var(--panel-3);flex:21"></span></div></div>
+          <div><span class="nm">Junie Castellanos</span><span class="hd">@junie.eats · 188K</span>
+            <span class="sig">No site, no store · 640 asked to buy</span></div></div>
+      </div>
+      <div class="rpthd">
+        <div><div class="cx" style="width:104px"><div class="rg rg--lg" style="--pct:92%"><span class="in"><b>87</b><span>score</span></span></div>
+          <div class="bits"><span style="background:var(--teal);flex:55"></span><span style="background:var(--butter);flex:32"></span><span style="background:var(--panel-3);flex:13"></span></div></div>
+          <div class="rcap"><div class="a">92% of checks resolved</div>
+            <div class="b">gap <b class="t-gap">55</b>/60 · strain <b class="t-strain">32</b>/40</div></div></div>
+        <div><span class="pill pill--solid">Scout Report</span><h3 style="margin-top:10px">Marguerite Vaillancourt</h3>
+          <p class="hd">@marguerite.bakes · TikTok · 1.2M across 3</p></div>
+      </div>
+      <p class="verdict-note"><b>Wins:</b> nothing is lost — score, confidence and composition at every
+        scale, in one mark. <b>Costs:</b> a 5px rail under a 54px ring is close to decoration at row
+        size; if you cannot read it, it is costing space to say nothing.</p>
+    </div>
+  </section>
+
+</div></div>
+
+<script>
+document.querySelectorAll('.sketchbar .tsw button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    document.documentElement.setAttribute('data-theme', b.dataset.t);
+    document.querySelectorAll('.sketchbar .tsw button').forEach(function (x) {
+      x.setAttribute('aria-pressed', String(x === b));
+    });
+  });
+});
+</script>
+</body>
+</html>

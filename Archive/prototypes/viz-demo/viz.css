@@ -1,0 +1,218 @@
+/* ==========================================================================
+   Scout — data-layer demo. Additive only; alloy.css is vendored unedited.
+   ========================================================================== */
+
+/* --- viz tokens. Both dark values are computed, not chosen. -------------- */
+:root{
+  --viz-ink:    var(--text);       /* Trajectory. NOT a field colour — it is
+                                      not a pillar and carries no score. */
+  --viz-butter: var(--butter-d);   /* Pressure   #8A5A00 */
+  --viz-teal:   var(--teal-d);     /* Demand + Missing #1F7A66 */
+  --viz-d1:#4B3E93; --viz-d2:#8175B8; --viz-d3:#A99ECE;   /* decisions ramp */
+  --viz-grid: var(--line-hi);
+}
+:root[data-theme="dark"]{
+  /* --text (#F2F0F7) against butter scores a normal-vision ΔE of 14.9,
+     below the hard floor of 15. --text-2 scores 19.1. This step exists
+     because of a measurement, not a preference. */
+  --viz-ink:    var(--text-2);
+  --viz-butter: var(--butter);
+  --viz-teal:   var(--teal);
+  --viz-d1:#CFC7EE; --viz-d2:#9A8FCB; --viz-d3:#6B5FA8;
+}
+
+html{background:var(--slab)}
+body{
+  background:var(--slab); color:var(--text); min-height:100vh; margin:0;
+  font-family:var(--ui); font-size:15px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:8px;top:8px;z-index:99;background:var(--panel);padding:8px 14px;border-radius:8px}
+
+/* --- shell --------------------------------------------------------------- */
+.bar{position:sticky;top:0;z-index:20;background:var(--slab);
+  border-bottom:1px solid var(--line);padding:var(--s3) var(--s5)}
+.bar .in{max-width:940px;margin:0 auto;display:flex;align-items:center;
+  gap:var(--s4);flex-wrap:wrap}
+.wm{font-family:var(--disp);font-weight:600;font-size:17px;letter-spacing:-.01em;
+  margin-right:var(--s2)}
+.wm span{color:var(--text-3);font-weight:400;font-size:12px;margin-left:8px;
+  letter-spacing:.06em;text-transform:uppercase}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav button{font:inherit;font-size:13.5px;font-weight:500;padding:6px 13px;
+  border-radius:var(--r-pill);border:1px solid transparent;background:none;
+  color:var(--text-2);cursor:pointer}
+nav button:hover{background:var(--panel-2h);color:var(--text)}
+nav button[aria-current="page"]{background:var(--panel-3);color:var(--text);font-weight:600}
+nav button:focus-visible,.tgl:focus-visible,.pick button:focus-visible{
+  outline:2px solid var(--focus);outline-offset:2px}
+.spacer{flex:1 1 auto}
+.tgl{font:inherit;font-size:12.5px;font-weight:600;padding:6px 12px;
+  border-radius:var(--r-pill);border:1px solid var(--line-hi);
+  background:var(--panel);color:var(--text);cursor:pointer;white-space:nowrap}
+.tgl[aria-pressed="true"]{background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
+.tgl .dotlead{display:inline-block;width:7px;height:7px;border-radius:50%;
+  background:currentColor;margin-right:7px;vertical-align:1px;opacity:.55}
+.tgl[aria-pressed="true"] .dotlead{opacity:1}
+
+main{max-width:940px;margin:0 auto;padding:var(--s6) var(--s5) var(--s9)}
+
+/* --- page furniture ------------------------------------------------------ */
+.ph{margin:0 0 var(--s5)}
+.ph h1{font-family:var(--disp);font-size:29px;letter-spacing:-.018em;margin:0 0 6px;font-weight:600}
+.ph p{margin:0;color:var(--text-2);max-width:66ch;font-size:14.5px}
+.pick{display:flex;gap:6px;flex-wrap:wrap;margin:var(--s4) 0 var(--s5)}
+.pick button{font:inherit;font-size:13px;padding:6px 13px;border-radius:var(--r-pill);
+  border:1px solid var(--line-hi);background:var(--panel);color:var(--text-2);cursor:pointer}
+.pick button[aria-pressed="true"]{background:var(--panel-3);color:var(--text);font-weight:600}
+.pick button:hover{background:var(--panel-2h)}
+
+.note{background:var(--panel-2);border-radius:var(--r-sm);padding:var(--s4);
+  font-size:13.5px;color:var(--text-2);margin-top:var(--s5)}
+.note b{color:var(--text)}
+.note code{font-family:ui-monospace,Menlo,monospace;font-size:.9em;
+  background:var(--panel-3);padding:1px 5px;border-radius:4px}
+
+/* --- the panel (report, check-back) ------------------------------------- */
+.panelcard{background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--r-md);padding:var(--s6);box-shadow:var(--el-2)}
+.hd{display:flex;justify-content:space-between;gap:var(--s5);align-items:flex-start}
+.hd h2{font-family:var(--disp);font-size:25px;font-weight:600;letter-spacing:-.016em;margin:0}
+.hd .sig{color:var(--text-3);font-size:13.5px;margin:3px 0 0}
+.ring{flex:0 0 auto;text-align:center}
+.ring .n{font-family:var(--disp);font-size:27px;font-weight:600;line-height:1}
+.ring .l{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);
+  margin-top:3px}
+.meta{margin:var(--s4) 0 0;font-size:13.5px;color:var(--text-2)}
+.meta b{color:var(--text);font-weight:600}
+.thesis{margin:var(--s4) 0 0;font-size:16.5px;max-width:56ch}
+
+.gatefail{background:var(--warn-bg);color:var(--warn);border-radius:var(--r-sm);
+  padding:var(--s4);margin:var(--s5) 0 0;font-size:14px}
+.gatefail b{display:block;font-size:12px;letter-spacing:.11em;text-transform:uppercase;
+  margin-bottom:5px}
+
+.blk{margin-top:var(--s6);border-top:1px solid var(--line);padding-top:var(--s4)}
+.blk .bh{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s4);
+  margin-bottom:var(--s3)}
+.blk .bh h3{margin:0;font-size:12px;letter-spacing:.13em;text-transform:uppercase;
+  font-weight:700;color:var(--text-2)}
+.blk .bh h3 em{font-weight:400;text-transform:none;letter-spacing:0;font-style:normal;
+  color:var(--text-3);margin-left:9px;font-size:13px}
+.blk .bh .pts{font-variant-numeric:tabular-nums;font-size:13px;color:var(--text-3);font-weight:600}
+
+.r{display:grid;grid-template-columns:1fr auto;gap:var(--s4);align-items:center;
+  padding:5px 0;font-size:14.5px}
+.r .lbl{color:var(--text)}
+.r .val{display:flex;align-items:center;gap:8px;color:var(--text-2);
+  font-variant-numeric:tabular-nums;font-size:13.5px;white-space:nowrap}
+.r .val .n{color:var(--text)}
+.r .val .arw{color:var(--text-3);padding:0 2px}
+.r .val .soft{color:var(--text-3);white-space:normal;text-align:right}
+
+.claim{font-size:15px;margin:0 0 var(--s2);max-width:60ch}
+.q{font-size:14.5px;padding:6px 0 6px 14px;border-left:2px solid var(--viz-butter);margin:var(--s2) 0}
+.q.dm{border-left-color:var(--viz-teal)}
+.q .who{color:var(--text-3);font-size:12.5px;margin-left:8px;font-variant-numeric:tabular-nums}
+
+.forkwrap{background:var(--panel-2);border-radius:var(--r-sm);
+  padding:var(--s4) var(--s4) var(--s3);margin:var(--s3) 0 var(--s4);
+  display:flex;gap:var(--s5);align-items:center;flex-wrap:wrap}
+.forkwrap .read{font-size:15px;max-width:24ch;color:var(--text)}
+.forkline{font-size:15px;margin:0 0 var(--s3)}
+
+.sh{font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--text-3);
+  font-weight:700;margin:var(--s5) 0 var(--s2)}
+.sh span{text-transform:none;letter-spacing:0;font-weight:400;color:var(--text-3)}
+.iv{display:grid;grid-template-columns:auto 176px auto 1fr;gap:0 var(--s3);
+  align-items:center;font-size:14.5px;padding:4px 0}
+.iv .it{color:var(--text)}
+.iv .nt{color:var(--text-3);font-size:13px}
+.iv .tk{justify-self:start;display:inline-flex;align-items:center;opacity:.85;
+  color:var(--text-3);font-size:13px;white-space:nowrap}
+.naline{color:var(--text-3);font-size:13.5px;margin:var(--s3) 0 0;padding-left:2px}
+
+.verbs{display:flex;gap:var(--s3);margin-top:var(--s6);flex-wrap:wrap}
+.vb{font:inherit;font-size:13.5px;font-weight:600;padding:9px 19px;border-radius:var(--r-pill);
+  border:1px solid var(--line-hi);background:var(--panel-2);color:var(--text);cursor:default}
+
+/* --- watchlist ----------------------------------------------------------- */
+.wl{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-md);
+  overflow:hidden;box-shadow:var(--el-1)}
+/* The mark gets its OWN fixed column. Floating it at the end of a variable-
+   length label means the slopes never line up, and a column you cannot scan
+   down is the entire argument for putting slopes here rather than in the
+   report. 48px is the mark's own width — no padding games. */
+.wrow{display:grid;grid-template-columns:1fr 48px minmax(0,240px) 118px;
+  gap:var(--s4);align-items:center;
+  padding:var(--s4) var(--s5);border-bottom:1px solid var(--line)}
+.wrow:last-child{border-bottom:0}
+.wrow:hover{background:var(--panel-2)}
+.wrow .who2 b{display:block;font-weight:600;font-size:15px}
+.wrow .who2 span{color:var(--text-3);font-size:13px}
+.wrow .mk{display:flex;align-items:center;justify-content:center}
+.wrow .mv{color:var(--text-2);font-size:13.5px}
+.wrow .due{font-size:12.5px;color:var(--text-3);white-space:nowrap;text-align:right}
+.wrow .due.now{color:var(--warn);font-weight:600}
+.wlhead{display:grid;grid-template-columns:1fr 48px minmax(0,240px) 118px;gap:var(--s4);
+  padding:var(--s3) var(--s5);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--text-3);font-weight:700;background:var(--panel-2);border-bottom:1px solid var(--line)}
+.wlhead span:nth-child(2){grid-column:2/4}
+.wlhead span:nth-child(3){text-align:right}
+
+/* --- check-back ---------------------------------------------------------- */
+.bet{color:var(--text-2);font-size:14.5px;margin:6px 0 var(--s4)}
+.lane{margin-top:var(--s5)}
+.lane .lh{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+  color:var(--text-2);margin-bottom:var(--s2)}
+.lane.held{border-left:2px solid var(--viz-teal);padding-left:var(--s4)}
+/* NOT `.empty` — alloy.css:409 owns that (a centred, 72px-padded empty-state
+   block). Third Alloy collision in this repo; the class names to avoid are
+   the generic ones. It would also have been the wrong component: a flat month
+   is a finding, not a void. */
+.nomove{font-size:15px;color:var(--text);padding:2px 0 4px}
+.nomove b{font-weight:600}
+
+/* --- decisions ----------------------------------------------------------- */
+.mod{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-md);
+  padding:var(--s5);margin-bottom:var(--s4);box-shadow:var(--el-1)}
+.mod h3{font-family:var(--disp);font-size:17px;margin:0 0 6px;font-weight:600;letter-spacing:-.01em}
+.mod p.why{color:var(--text-2);font-size:14px;margin:0 0 var(--s4);max-width:64ch}
+.crow{display:grid;grid-template-columns:56px 1fr auto;gap:var(--s3);align-items:center;
+  padding:4px 0;font-size:13px}
+.crow .k{color:var(--text-2);font-variant-numeric:tabular-nums;text-align:right}
+.crow .t{color:var(--text-3);font-variant-numeric:tabular-nums;font-size:12.5px}
+.lg{display:flex;gap:var(--s4);flex-wrap:wrap;font-size:12.5px;color:var(--text-2);
+  margin-top:var(--s3)}
+.lg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;
+  vertical-align:-1px}
+.hint{color:var(--text-3);font-size:13.5px;font-style:italic;margin:var(--s3) 0 0}
+.waiting{border-style:dashed}
+.waiting .st{color:var(--text-3);font-size:13.5px;font-style:italic}
+tbl,table{width:100%;border-collapse:collapse;font-size:13.5px}
+table th{text-align:left;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--text-3);font-weight:700;padding:0 var(--s4) var(--s2) 0;border-bottom:1px solid var(--line)}
+table td{padding:9px var(--s4) 9px 0;border-bottom:1px solid var(--line);
+  color:var(--text-2);vertical-align:top}
+table tr:last-child td{border-bottom:0}
+table td b{color:var(--text);font-weight:600}
+
+@media (max-width:680px){
+  .r{grid-template-columns:1fr;gap:2px}
+  .r .val{justify-content:flex-start}
+  .r .val .soft{text-align:left}
+  .iv{grid-template-columns:auto 1fr auto;padding:7px 0}
+  .iv .it{grid-column:2;grid-row:1}
+  .iv .nt{grid-column:2;grid-row:2}
+  .iv .tk{grid-column:3;grid-row:2}
+  .wrow,.wlhead{grid-template-columns:48px 1fr;row-gap:4px}
+  .wrow .who2{grid-column:1/-1}
+  .wrow .mk{grid-column:1;grid-row:2}
+  .wrow .mv{grid-column:2;grid-row:2}
+  .wrow .due{grid-column:2;grid-row:3;text-align:left}
+  .wlhead span:nth-child(2),.wlhead span:nth-child(3){display:none}
+  .crow{grid-template-columns:48px 1fr;row-gap:2px}
+  .crow .t{grid-column:2}
+  .forkwrap{gap:var(--s3)}
+}

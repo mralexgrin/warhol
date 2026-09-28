@@ -1,0 +1,87 @@
+<!doctype html>
+<!--
+  ============================================================================
+  WARHOL SCOUT — DIRECTION CONTRACT
+  ----------------------------------------------------------------------------
+  THESIS: An origination desk publishes a trade tip sheet. The drop is a chart,
+    the Scout Report is a one-sheet, the backtest is a back issue. Refuses the
+    analytics dashboard (sidebar, KPI tiles, sparklines, rings) that every
+    metric-ranking competitor ships, and refuses the elegant broadsheet too.
+  OWN-WORLD: Two inks on cool grey-green newsprint — press black and one trade
+    red. Heavy black rules, condensed gothic caps, tabular figures, boxed
+    quotes set in a text roman. Three drawn verification marks (solid / hollow
+    dot / diagonal hatch), chart bullets, re-entry flags, stamps.
+  STORY: The Scout opens the issue, reads a quoted comment begging to buy
+    something sitting beside an empty inventory, and kills or opens each name
+    without leaving the chart. They work it to zero and close it.
+  FIRST VIEWPORT: Masthead with issue number and date. Desk rail. Section flag
+    "THE DROP — 9 NAMES / 9 REMAINING". Then chart position 1, full width:
+    the quote box on the left, the score/pillar/inventory apparatus on the
+    right, PASS · WATCH · OPEN REPORT on the rule beneath.
+  FORM: Trade tip sheet — candidate 7 of the grounded list, assigned by
+    concept-seed (key adbdf089, direction/operate, index 7). Staging: the
+    back-issue rail, reduced from the splice-strip challenger to its
+    orientation half. Challengers weighed and lost on product clarity.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warhol Scout — Paradium Origination Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo+Narrow:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<a class="skip" href="#stage">Skip to the issue</a>
+
+<div class="edition" id="edition">
+
+  <header class="masthead">
+    <div class="masthead-bar">
+      <div class="wordmark">
+        <span class="wm-main">Warhol Scout</span>
+        <span class="wm-sub">Paradium&nbsp;·&nbsp;Origination Desk</span>
+      </div>
+      <div class="masthead-mid" id="mastheadMid"></div>
+      <div class="masthead-right">
+        <button class="wire-btn" id="wireBtn" type="button" aria-expanded="false">
+          <span class="wire-dot" aria-hidden="true"></span>06:00 Wire
+        </button>
+        <div class="whoami" id="whoami"></div>
+      </div>
+    </div>
+    <div class="masthead-rule" aria-hidden="true"></div>
+    <div class="issueline" id="issueline"></div>
+  </header>
+
+  <nav class="rail" aria-label="Sections">
+    <div class="rail-sections" id="railSections" role="tablist"></div>
+    <div class="rail-issue">
+      <span class="rail-issue-label">Issue</span>
+      <div class="issue-picker" id="issuePicker" role="group" aria-label="As-of date"></div>
+    </div>
+  </nav>
+
+  <main id="stage" class="stage" tabindex="-1"></main>
+
+  <footer class="colophon">
+    <span>Warhol Scout — prototype on a curated seed cohort. All creators are fictional.</span>
+    <span class="col-sep" aria-hidden="true">·</span>
+    <span>Threshold <b id="colThreshold"></b> · cap <b id="colCap"></b> · coverage gate <b id="colCoverage"></b></span>
+    <span class="col-sep" aria-hidden="true">·</span>
+    <span>Continuous scanning at scale is <b>deferred</b>, named as risk in the ask.</span>
+  </footer>
+
+</div>
+
+<div class="wire-panel" id="wirePanel" hidden aria-label="Daily digest"></div>
+<div class="wire-scrim" id="wireScrim" hidden></div>
+
+<script src="warhol-seed.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

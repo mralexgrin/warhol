@@ -1,0 +1,657 @@
+{
+  "creatorId": "forgottenweaponsammo",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:18:26.846Z",
+  "observationCount": 76,
+  "brief": "Car detailing, DIY repair and restoration — creators who work on a machine on camera, name the specific part or product they are using, and repeat the format every video.",
+  "source": "proposed",
+  "sourceWhy": "a model proposed this handle from a brief — Possible mismatch — skip if not automotive; listed only as a long-shot cross-reference and easy to verify.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity.",
+  "escalated": false,
+  "escalatedWhy": "we couldn't read a single one of their own pages, so there is nothing solid to build on",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@forgottenweaponsammo",
+      "why": "the page loaded and there is nothing there"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 404,
+      "url": "https://www.youtube.com/@forgottenweaponsammo",
+      "why": "HTTP 404"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/forgottenweaponsammo/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 400,
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=forgottenweaponsammo.bsky.social",
+      "why": "page says it is not there"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at youtube.com/c/ForgottenWeapons — not confirmed as theirs",
+      "evidence": "https://www.youtube.com/c/ForgottenWeapons",
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/@forgottenweaponsammo",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.347Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/forgottenweaponsammo",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.347Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/forgottenweaponsammo",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.347Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/ForgottenWeapons",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.347Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "we couldn't read any of their own pages, so we don't get to say it isn't there",
+      "evidence": null,
+      "placesLooked": 6,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://forgottenweaponsammo.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.347Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/forgottenweaponsammo?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/forgottenweaponsammo",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.347Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://forgottenweaponsammo.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.347Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/forgottenweaponsammo",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.347Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://forgottenweaponsammo.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.347Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://forgottenweapons.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.347Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "we couldn't read any of their own pages, so we don't get to say it isn't there",
+      "evidence": null,
+      "placesLooked": 5,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://forgottenweaponsammo.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.347Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/forgottenweaponsammo",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.347Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/forgottenweaponsammo",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:18:24.347Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.347Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/forgottenweaponsammo",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:18:24.348Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.forgottenweapons.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.348Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://www.forgottenweapons.shop",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.348Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at patreon.com/ForgottenWeapons — not confirmed as theirs",
+      "evidence": "https://www.patreon.com/ForgottenWeapons",
+      "placesLooked": 2,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/forgottenweaponsammo",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.349Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/forgottenweaponsammo",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.349Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/ForgottenWeapons",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:18:24.349Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by the feed it publishes — the publication title reads \"Forgotten Weapons\"",
+      "why": "found it — forgottenweapons.com/podcasts",
+      "evidence": "https://www.forgottenweapons.com/podcasts/",
+      "placesLooked": 1,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.forgottenweapons.com/feed/",
+          "status": 200,
+          "why": "10 posts read from Forgotten Weapons — the publication title reads \"Forgotten Weapons\"",
+          "advisory": false,
+          "at": "2026-08-14T13:18:25.730Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=forgottenweaponsammo&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-14T13:18:25.731Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "hit",
+          "url": "https://www.forgottenweapons.com/podcasts/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:18:25.731Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by the feed it publishes — the publication title reads \"Forgotten Weapons\"",
+      "why": "found it — forgottenweapons.com",
+      "evidence": "https://www.forgottenweapons.com/",
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.forgottenweapons.com/feed/",
+          "status": 200,
+          "why": "10 posts read from Forgotten Weapons — the publication title reads \"Forgotten Weapons\"",
+          "advisory": false,
+          "at": "2026-08-14T13:18:26.844Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://forgottenweaponsammo.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:18:26.844Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://forgottenweaponsammo.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:18:26.844Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.forgottenweapons.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:18:26.844Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://forgottenweaponsandammo.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:18:26.844Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "we could not read any of their own pages",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "we could not read any of their own pages",
+          "advisory": false,
+          "at": "2026-08-14T13:18:26.845Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "we could not read their captions",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "we could not read their captions",
+          "advisory": false,
+          "at": "2026-08-14T13:18:26.845Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "we could not read their links",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "we could not read their links",
+          "advisory": false,
+          "at": "2026-08-14T13:18:26.845Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": false,
+    "why": "they post often enough that 10 posts only reach back 11 days — not far enough behind the last 90 to compare against"
+  },
+  "samples": [
+    {
+      "platform": "Their site",
+      "publication": "Forgotten Weapons",
+      "kind": "writing",
+      "title": "Road to Finnish Brutality 2026: My Guns & Kit",
+      "url": "https://www.forgottenweapons.com/road-to-finnish-brutality-2026-my-guns-kit/",
+      "at": "2026-08-13T13:27:42.000Z",
+      "thumbnail": null,
+      "excerpt": "Tune in to watch Finnish Brutality 2026 live for free this weekend, August 15/16: \nhttps://twitch.tv/varusteleka \nhttps://varusteleka.com/en/blogs/events/finnish-brutality\n This year for Finnish Brutality I am shooting in Armored division, with a 7.62x39mm Stenzel SAK-21 as my rifle and a left-hande",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:18:26.845Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Forgotten Weapons",
+      "kind": "writing",
+      "title": "The FAMASenning: All the FAMAS from Airsoft to Centerfire",
+      "url": "https://www.forgottenweapons.com/the-famasenning-all-the-famas-from-airsoft-to-centerfire/",
+      "at": "2026-08-12T13:27:18.000Z",
+      "thumbnail": null,
+      "excerpt": "The military FAMAS has spawned several clones, and we are taking a look at each one of them today. First up is the Cybergun AEG airsoft FAMAS – a normal commercial production piece, but this one is surplus brought into the US by Navy Arms. It was used by the French National Police as a training tool",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:18:26.845Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Forgotten Weapons",
+      "kind": "writing",
+      "title": "Tiger Stripe Camouflage Pattern Book",
+      "url": "https://www.forgottenweapons.com/tiger-stripe-camouflage-pattern-book/",
+      "at": "2026-08-11T13:27:02.000Z",
+      "thumbnail": null,
+      "excerpt": "The tiger stripe pattern book is now available as an add-on item: \n https://www.kickstarter.com/projects/headstamp/tiger-stripe?ref=1n4exq \n This color swatch style reference tool has about 180 different tiger stripe and related camouflage patterns, for awesome handy reference! Now available as an a",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:18:26.845Z",
+      "status": null
+    }
+  ],
+  "headline": null,
+  "samplesSearched": {
+    "count": 6,
+    "why": "6 pieces of their own work"
+  },
+  "commentsRead": null,
+  "audienceHistory": [
+    {
+      "audience": 0,
+      "at": "2026-08-14T13:18:16.713Z"
+    }
+  ],
+  "audience": 0,
+  "audienceWhy": "no confirmed profile of theirs was readable",
+  "audienceSeparate": [],
+  "score": {
+    "total": 0,
+    "brief": "Car detailing, DIY repair and restoration — creators who work on a machine on camera, name the specific part or product they are using, and repeat the format every video.",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 0,
+      "max": 35,
+      "lines": [],
+      "share": 0,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 0,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 22,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "unavailable": true,
+          "line": "we could not read their posting rate — they post often enough that 10 posts only reach back 11 days — not far enough behind the last 90 to compare against",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "not_judged",
+      "because": "the model pass did not run, and Fit is a judgment — no model, no verdict"
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "first look — no trend yet, we check back in 90 days",
+      "why": "we have seen them once. A trend needs two looks at least 90 days apart, and inventing one from a single point is the failure this gate exists to prevent."
+    },
+    "confidence": {
+      "value": 0.333,
+      "resolved": 2,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 2
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": false,
+      "fit": "not_judged",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 34,
+    "places": 27,
+    "from": "2026-08-14T13:18:10.870Z",
+    "to": "2026-08-14T13:18:26.846Z"
+  }
+}

@@ -1,0 +1,1159 @@
+{
+  "creatorId": "richrebuilds",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:20:11.240Z",
+  "observationCount": 174,
+  "brief": "Car detailing, DIY repair and restoration — creators who work on a machine on camera, name the specific part or product they are using, and repeat the format every video.",
+  "source": "proposed",
+  "sourceWhy": "a model proposed this handle from a brief — Known for filming teardown and rebuild of cars, especially EVs, naming the specific components he replaces.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity.",
+  "escalated": true,
+  "escalatedWhy": "store — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 9,
+      "avatar": {
+        "url": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/91a0c306ee0ac9f80408c01984ae6bb1~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=921a40ab&x-expires=1786885200&x-signature=9K0qqPWTv0aiYRlWIfsj42Tkfaw%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@richrebuilds",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 1810000,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/ytc/AIdro_kC1BXJRBQcnPcdPgNYv6Xdc3817KptRkBqNVHHPU1b0RM=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@richrebuilds",
+      "why": "Rich Rebuilds — the YouTube Data API resolved @richrebuilds"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/richrebuilds/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 400,
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=richrebuilds.bsky.social",
+      "why": "page says it is not there"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@richrebuilds",
+      "evidence": "https://www.youtube.com/@richrebuilds",
+      "placesLooked": 2,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richrebuilds",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.296Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/richrebuilds",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.296Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/richrebuilds",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.296Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richrebuilds",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.296Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richrebuilds",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.853Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/richrebuilds",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.853Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/richrebuilds",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.853Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/richrebuilds",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.853Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "only 4 of the 5 places we need actually answered",
+      "evidence": null,
+      "placesLooked": 10,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://richrebuilds.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.296Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/richrebuilds?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/richrebuilds",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.297Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://richrebuilds.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.297Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/richrebuilds",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.297Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://richrebuilds.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.297Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://richrebuilds.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.297Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "inconclusive",
+          "url": "https://richrebuilds.substack.com/",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.853Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/richrebuilds?searching=profile",
+          "status": 429,
+          "why": "redirected to substack.com/search/richrebuilds",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.853Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://richrebuilds.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.853Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/richrebuilds",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.854Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://richrebuilds.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.854Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "inconclusive",
+          "url": "https://richrebuilds.substack.com/",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.854Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "not there · we looked in 3 places · 3 wouldn't answer",
+      "evidence": null,
+      "placesLooked": 6,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "inconclusive",
+          "url": "https://richrebuilds.myshopify.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.297Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/richrebuilds",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.297Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/richrebuilds",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:15:50.297Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.297Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/richrebuilds",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:15:50.297Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.richrebuilds.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.297Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://richrebuilds.myspreadshop.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.297Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "inconclusive",
+          "url": "https://richrebuilds.myshopify.com",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.854Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/richrebuilds",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.854Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/richrebuilds",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:19:52.854Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.854Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/richrebuilds",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:19:52.854Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://richrebuilds.shop",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.854Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at patreon.com/RichRebuilds — not confirmed as theirs",
+      "evidence": "https://www.patreon.com/RichRebuilds",
+      "placesLooked": 2,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/RichRebuilds",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.298Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/richrebuilds",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.299Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/RichRebuilds",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:15:50.299Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/RichRebuilds",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.856Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/richrebuilds",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.856Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/RichRebuilds",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.856Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "not there · we looked in 2 places",
+      "evidence": null,
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.podbean.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:15:52.912Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.podbean.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:15:52.912Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.podbean.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:15:52.913Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.podbean.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:15:52.913Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.podbean.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:15:52.913Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.podbean.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:15:52.913Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=richrebuilds&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-14T13:15:52.913Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "hit",
+          "url": "https://www.podbean.com/login?url=https%3A%2F%2Frichrebuilds.podbean.com%2F&error=Invalid%20Podbean%20Site(2)",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:15:52.913Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://creators.spotify.com/pod/show/richrebuilds",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:15:52.913Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=richrebuilds&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.962Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://richrebuilds.transistor.fm/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:19:52.962Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at richrebuilds.com — not confirmed as theirs",
+      "evidence": "https://www.richrebuilds.com/",
+      "placesLooked": 2,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.richrebuilds.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:15:55.142Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.richrebuilds.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:15:55.142Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.richrebuilds.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:15:55.142Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.richrebuilds.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:15:55.142Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.richrebuilds.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:15:55.142Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.richrebuilds.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:15:55.142Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.richrebuilds.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:15:55.143Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://richrebuilds.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:15:55.143Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.richrebuilds.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:15:55.143Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.richrebuilds.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:55.165Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.richrebuilds.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:55.165Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.richrebuilds.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:55.165Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.richrebuilds.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:55.165Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.richrebuilds.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:55.165Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.richrebuilds.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:19:55.165Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.richrebuilds.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:55.166Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://richrebuilds.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:19:55.166Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.richrebuilds.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:55.166Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://www.instagram.com/richrebuilds",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T13:19:55.166Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.tiktok.com/@richrebuilds",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:19:55.166Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — represented by",
+      "evidence": "represented by",
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "hit",
+          "url": null,
+          "status": null,
+          "why": "their bio says \"represented by\"",
+          "advisory": false,
+          "at": "2026-08-14T13:15:55.144Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "hit",
+          "url": null,
+          "status": null,
+          "why": "their bio says \"represented by\"",
+          "advisory": false,
+          "at": "2026-08-14T13:19:55.166Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:15:55.144Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:19:55.166Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:15:55.144Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:19:55.166Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": -0.183,
+    "recentPerMonth": 4,
+    "baselinePerMonth": 3.38,
+    "recentCount": 12,
+    "baselineCount": 31,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 275,
+    "sampled": 50,
+    "truncated": false,
+    "recentMedianViews": 963422,
+    "baselineMedianViews": 645171,
+    "unit": "videos",
+    "line": "4 videos a month now, against 3.4 before that — up 18%, they are posting more; the recent ones are getting 49% more views"
+  },
+  "samples": [
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "I Bought Amazon’s $100,000 Rivian Van for $10,000… Dealer Said It Needed a New Battery",
+      "url": "https://www.youtube.com/watch?v=rnUD-NgQrGM",
+      "at": "2026-08-11T19:33:25Z",
+      "thumbnail": "https://i.ytimg.com/vi/rnUD-NgQrGM/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 2218971,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:19:46.973Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Lucid Wants $50,000 to Unlock My $140,000 Car",
+      "url": "https://www.youtube.com/watch?v=rAUF9QGlCE8",
+      "at": "2026-07-31T19:33:47Z",
+      "thumbnail": "https://i.ytimg.com/vi/rAUF9QGlCE8/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1498508,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:19:46.973Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "I Bought a $140,000 Lucid for $4,100 Because Everyone Thought Lucid Was Going Bankrupt",
+      "url": "https://www.youtube.com/watch?v=0YVws9s7IGA",
+      "at": "2026-07-26T20:29:38Z",
+      "thumbnail": "https://i.ytimg.com/vi/0YVws9s7IGA/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1685596,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:19:46.973Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "The Junkyard Offered Me $10,000 to Give Up My Dead $300,000 Bentley… I Said NO",
+      "url": "https://www.youtube.com/watch?v=S2QDbyb1ZDc",
+      "at": "2026-07-20T18:22:27Z",
+      "thumbnail": "https://i.ytimg.com/vi/S2QDbyb1ZDc/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1344176,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:19:46.973Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "I pulled a Golden Retriever out of my Mercedes Exhaust",
+      "url": "https://www.youtube.com/watch?v=xvXyikolEs0",
+      "at": "2026-07-10T13:58:06Z",
+      "thumbnail": "https://i.ytimg.com/vi/xvXyikolEs0/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 97335,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:19:46.973Z",
+      "status": null
+    }
+  ],
+  "headline": {
+    "sentence": "Rich Rebuilds fixes salvaged EVs and luxury cars on video for 1,810,000 YouTube subscribers, and recent uploads like the $10,000 Rivian van at 2,218,223 views are pulling 49% more views while he posts more often, but he sells no merch and has no podcast, so the store and audio side is open.",
+    "restsOn": "1,810,000 on YouTube · YouTube channel · Store · Podcast · 4 videos a month now, against 3.4 before that — up 18%, they are posting more; the recent ones are getting 49% more views · \"I Bought Amazon\\u2019s $100,000 Rivian Van for $10,000\\u2026 Dealer Said It Needed a New Battery\" (2,218,223 views) · \"I Bought a $140,000 Lucid for $4,100 Because Everyone Thought Lucid Was Going Bankrupt\" (1,685,545 views)"
+  },
+  "samplesSearched": {
+    "count": 0,
+    "why": "they link none of their own posts anywhere we can read"
+  },
+  "commentsRead": 446,
+  "audienceHistory": [
+    {
+      "audience": 1810000,
+      "at": "2026-08-14T13:15:38.469Z"
+    },
+    {
+      "audience": 1810000,
+      "at": "2026-08-14T13:19:46.973Z"
+    }
+  ],
+  "audience": 1810000,
+  "audienceWhy": "YouTube alone — nothing links the TikTok to it",
+  "audienceSeparate": [
+    {
+      "id": "tiktok_profile",
+      "followers": 9,
+      "url": "https://www.tiktok.com/@richrebuilds",
+      "why": "nothing on either page links the TikTok to the YouTube, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 16,
+    "brief": "Car detailing, DIY repair and restoration — creators who work on a machine on camera, name the specific part or product they are using, and repeat the format every video.",
+    "demand": {
+      "points": 0.2,
+      "max": 25,
+      "signalCount": 2,
+      "signals": [
+        {
+          "points_at": "unspecified",
+          "quote": "I want one of these SOOOOO BAD !!! Imagine a huge rivian EV camping truck, solar, a comfy interior, what a dream this could be!",
+          "at": "2026-08-14T13:15:59.459Z"
+        },
+        {
+          "points_at": "store",
+          "quote": "I want one of these SOOOOO BAD !!! Imagine a huge rivian EV camping truck, solar, a comfy interior, what a dream this could be!",
+          "at": "2026-08-14T13:19:59.116Z"
+        }
+      ]
+    },
+    "missing": {
+      "points": 15.8,
+      "max": 35,
+      "lines": [
+        {
+          "item": "store",
+          "label": "Store",
+          "half": "built",
+          "base": 9,
+          "effective": 15.8,
+          "demandAligned": true,
+          "why": "not there · we looked in 3 places · 3 wouldn't answer"
+        },
+        {
+          "item": "podcast",
+          "label": "Podcast",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 2 places"
+        }
+      ],
+      "share": 0.452,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 16,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "line": "4 videos a month now, against 3.4 before that — up 18%, they are posting more; the recent ones are getting 49% more views",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "pass",
+      "because": "Rich Rebuilds is a well-known car rebuild and repair channel where the host works hands-on on vehicles on camera in a repeatable build-series format, which is squarely what the brief asks for; the scraped post text is thin, so the per-video part-naming habit is unconfirmed but nothing visible contradicts it."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 0 days apart, the trend needs 90",
+      "why": "our two looks are 0 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.5,
+      "resolved": 3,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 2
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": false,
+      "fit": "pass",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 82,
+    "places": 39,
+    "from": "2026-08-14T13:15:33.090Z",
+    "to": "2026-08-14T13:20:11.240Z"
+  }
+}

@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scout — UI Inventory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..800;1,300..800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- The real Scout stylesheets, linked live so every specimen below is the
+     actual production element, not a copy that can drift. -->
+<link rel="stylesheet" href="alloy.css">
+<link rel="stylesheet" href="scout-v52.css">
+<style>
+  /* Inventory scaffold only. Everything prefixed inv- so it can never collide
+     with a Scout / Alloy class. Neutral on purpose — it must not compete with
+     the specimens it frames. */
+  html, body { margin: 0; }
+  body { font-family: var(--ui, "Be Vietnam Pro", system-ui, sans-serif);
+    color: var(--text, #1c1b23); background: var(--page, #f4f2ef);
+    background-attachment: fixed; -webkit-font-smoothing: antialiased; }
+  .inv-wrap { max-width: 1080px; margin: 0 auto; padding: 40px 32px 120px; }
+  .inv-top { display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap; margin-bottom: 8px; }
+  .inv-title { font-family: var(--disp, "Epilogue", sans-serif); font-weight: 800;
+    letter-spacing: -.03em; font-size: 34px; line-height: 1.05; margin: 0; }
+  .inv-sub { color: var(--text-2, #55525f); font-size: 14.5px; line-height: 1.55;
+    max-width: 60ch; margin: 10px 0 0; }
+  .inv-themebar { display: inline-flex; gap: 4px; background: var(--panel, #fff);
+    border: 1px solid var(--line, #e4e1db); border-radius: 999px; padding: 4px; }
+  .inv-themebar button { appearance: none; border: 0; cursor: pointer; font: inherit;
+    font-size: 13px; font-weight: 600; padding: 7px 14px; border-radius: 999px;
+    background: transparent; color: var(--text-2, #55525f); }
+  .inv-themebar button[aria-pressed="true"] { background: var(--ink, #1c1b23);
+    color: var(--on-ink, #fff); }
+
+  .inv-callout { margin: 28px 0 8px; padding: 20px 22px; border-radius: 16px;
+    background: var(--panel, #fff); border: 1px solid var(--line, #e4e1db); }
+  .inv-callout h2 { font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--text-3, #8a8794); margin: 0 0 12px; }
+  .inv-callout ul { margin: 0; padding-left: 20px; }
+  .inv-callout li { font-size: 14px; line-height: 1.65; color: var(--text, #1c1b23);
+    margin: 7px 0; }
+  .inv-callout li b { font-weight: 700; }
+
+  .inv-sec { margin-top: 48px; }
+  .inv-sec > h2 { font-family: var(--disp, "Epilogue", sans-serif); font-weight: 700;
+    font-size: 22px; letter-spacing: -.02em; margin: 0 0 4px;
+    padding-bottom: 10px; border-bottom: 2px solid var(--line-hi, #d9d5ce); }
+  .inv-sec > p { color: var(--text-2, #55525f); font-size: 13.5px; margin: 10px 0 0; }
+
+  .inv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px; margin-top: 20px; }
+  .inv-cell { background: var(--panel, #fff); border: 1px solid var(--line, #e4e1db);
+    border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 14px; }
+  .inv-cell.inv-wide { grid-column: 1 / -1; }
+  .inv-stage { min-height: 52px; display: flex; align-items: center; gap: 12px;
+    flex-wrap: wrap; }
+  .inv-meta { border-top: 1px dashed var(--line-hi, #d9d5ce); padding-top: 10px; }
+  .inv-code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px;
+    font-weight: 600; color: var(--text, #1c1b23); }
+  .inv-code .mod { color: var(--teal-d, #1f7a66); }
+  .inv-job { font-size: 12.5px; color: var(--text-2, #55525f); line-height: 1.5;
+    margin-top: 4px; }
+  .inv-tagrow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    padding: 6px 10px; border: 1px solid var(--line-hi,#d9d5ce); border-radius: 10px; }
+  .inv-dupe { color: var(--lilac-d, #6a4fb0); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="inv-wrap">
+
+  <div class="inv-top">
+    <div>
+      <h1 class="inv-title">Scout — UI Inventory</h1>
+      <p class="inv-sub">Every button, toggle/tab, and tag/badge class in the live app, pulled onto one page. Each specimen is the real production element (linked straight to <code>scout-v52.css</code> + <code>alloy.css</code>), so what you see here is what ships. Flip the theme to check both.</p>
+    </div>
+    <div class="inv-themebar" role="group" aria-label="Theme">
+      <button data-theme-set="light" aria-pressed="true">Light</button>
+      <button data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+  </div>
+
+  <div class="inv-callout">
+    <h2>Why it feels all over the place</h2>
+    <ul>
+      <li><b>Two parallel button systems.</b> Alloy's <code>.btn*</code> (utility) and Scout's <code>.vbtn*</code> (verbs) are both pill-shaped and similar in size — the split is intentional and documented, but at a glance they read as one family with inconsistent colour.</li>
+      <li><b>Four different "selected" languages.</b> <code>.seg</code> marks selection with a white panel, <code>.tsw</code> with solid ink, <code>.chipbtn</code> with teal fill, and <code>.vchip/.vgroup</code> with a lilac→teal gradient. Four toggles, four visual grammars.</li>
+      <li><b>Six near-identical little labels.</b> <span class="inv-dupe">Prime consolidation target →</span> <code>.src-tag</code>, <code>.prelim-tag</code>, <code>.judged-tag</code>, <code>.proposedtag</code>, and <code>.pill</code> are all 10px bold uppercase letter-spaced tags that differ mostly by colour. This is where the "sprawl" feeling really comes from.</li>
+    </ul>
+  </div>
+
+  <!-- ============================================================ BUTTONS -->
+  <section class="inv-sec">
+    <h2>Buttons</h2>
+    <p>Two systems: Alloy utility buttons (<code>.btn</code>) and Scout decision "verbs" (<code>.vbtn</code>), plus four special-purpose button shapes.</p>
+
+    <div class="inv-grid">
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <button class="btn btn--primary">Primary action</button>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.btn <span class="mod">.btn--primary</span></div>
+          <div class="inv-job">Inverts the surface (ink). The loudest neutral action — borrows no field colour.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <button class="btn btn--soft">Soft / ghost</button>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.btn <span class="mod">.btn--soft</span></div>
+          <div class="inv-job">Transparent secondary. Quiet utility that fills on hover.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <button class="btn btn--sm btn--out">Outlined</button>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.btn <span class="mod">.btn--out .btn--sm</span></div>
+          <div class="inv-job">Outline utility, small size. Used for tertiary row actions.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <button class="btn btn--soft btn--sm backbtn">‹ Back</button>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.btn.btn--soft.btn--sm <span class="mod">.backbtn</span></div>
+          <div class="inv-job">Back navigation — a soft button plus a bottom-margin modifier.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <button class="vbtn vbtn--go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-11"/></svg>Promote</button>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.vbtn <span class="mod">.vbtn--go</span></div>
+          <div class="inv-job">The "yes" verb — solid green. Only appears on the report, where Promote is the point.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <button class="vbtn vbtn--hold">Watch</button>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.vbtn <span class="mod">.vbtn--hold</span></div>
+          <div class="inv-job">The "timing" verb — butter outline. Demoted from solid so it stops out-shouting the report door.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <button class="vbtn vbtn--no">Pass</button>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.vbtn <span class="mod">.vbtn--no</span></div>
+          <div class="inv-job">The "no" verb — quiet ghost. Fills to panel on hover.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <button class="vbtn vbtn--open">Open report ›</button>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.vbtn <span class="mod">.vbtn--open</span></div>
+          <div class="inv-job">The door to the evidence — the card's primary on the drop.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <button class="vbtn vbtn--undo vbtn--sm">Undo</button>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.vbtn <span class="mod">.vbtn--undo .vbtn--sm</span></div>
+          <div class="inv-job">Reverses a decision. Small size, appears after Promote/Pass/Watch.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <span class="chipbtn on">Filter chip <span class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span></span>
+          <button class="chipbtn">Toggle off</button>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.chipbtn <span class="mod">.on / [aria-pressed]</span></div>
+          <div class="inv-job">Toggle chip — teal when on. Used for run filters and removable sub-tokens.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell inv-wide">
+        <div class="inv-stage" style="align-items:stretch">
+          <button class="ocbtn on"><b>Backed it</b><span>Promoted to the origination desk for a full workup.</span></button>
+          <button class="ocbtn"><b>Passed</b><span>Not a fit right now — leaves the drop.</span></button>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.ocbtn <span class="mod">.on</span></div>
+          <div class="inv-job">Option card — title + description, behaves like a big radio. Used in outcome pickers.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <button class="serbtn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.serbtn</div>
+          <div class="inv-job">Icon-only square utility (search / source actions).</div>
+        </div>
+      </div>
+
+      <div class="inv-cell inv-wide">
+        <div class="inv-stage" style="align-items:stretch">
+          <button class="invbtn" style="width:100%">
+            <span class="vmark"></span>
+            <span class="it">YouTube</span>
+            <span class="st">Long-form velocity &amp; upload cadence <em>Primary signal source</em></span>
+            <span class="vmark">›</span>
+          </button>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.invbtn <span class="mod">.it / .st / .vmark</span></div>
+          <div class="inv-job">Inventory row — a 4-column grid button (mark · title · subtitle · chevron). Used in the sources list.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================== TOGGLES / TABS -->
+  <section class="inv-sec">
+    <h2>Toggles &amp; Tabs</h2>
+    <p>Four selection patterns, each with its own visual grammar for "this one is active."</p>
+
+    <div class="inv-grid">
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <div class="seg" role="group">
+            <button aria-pressed="true">Drop</button>
+            <button aria-pressed="false">Tracked</button>
+            <button aria-pressed="false">All</button>
+          </div>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.seg <span class="mod">button[aria-pressed]</span></div>
+          <div class="inv-job">Segmented control (Alloy). Selected = raised white panel.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <div class="tsw" role="group">
+            <button aria-pressed="true">Light</button>
+            <button aria-pressed="false">Dark</button>
+            <button aria-pressed="false">Auto</button>
+          </div>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.tsw <span class="mod">button[aria-pressed]</span></div>
+          <div class="inv-job">Theme switch (Alloy). Selected = solid ink. Same job as <code>.seg</code>, different look.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell inv-wide">
+        <div class="inv-stage">
+          <div class="views" style="display:flex;gap:8px;flex-wrap:wrap">
+            <span class="vgroup">
+              <button class="vchip vchip--joined" aria-pressed="true">Everything<span class="c">10</span></button>
+              <button class="briefinfo" aria-label="What this brief is"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+            </span>
+            <button class="vchip vchip--house" aria-pressed="false">House brief<span class="c">6</span></button>
+            <button class="vchip vchip--paused" aria-pressed="false">Car detailing<span class="c">paused</span></button>
+            <button class="vchip vchip--new"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>New brief</button>
+          </div>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.vchip <span class="mod">.vgroup .vchip--joined .briefinfo .vchip--house .vchip--paused .vchip--new</span></div>
+          <div class="inv-job">Brief tabs. Selected tab = <code>.vgroup</code> wrapping the chip + a chevron disclosure, on a lilac→teal gradient. House = solid border, paused = dimmed, new = dashed.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ TAGS / CHIPS / BADGES -->
+  <section class="inv-sec">
+    <h2>Tags, Chips &amp; Badges</h2>
+    <p>Small non-interactive labels. The five uppercase micro-tags are the biggest consolidation opportunity — they're the same shape in different colours.</p>
+
+    <div class="inv-grid">
+
+      <div class="inv-cell inv-wide">
+        <div class="inv-stage">
+          <span class="inv-tagrow"><span class="src-tag">YOUTUBE</span> <code style="font-size:11px">.src-tag</code></span>
+          <span class="inv-tagrow"><span class="src-tag src-tag--weak">INFERRED</span> <code style="font-size:11px">.src-tag--weak</code></span>
+          <span class="inv-tagrow"><span class="prelim-tag">PRELIMINARY</span> <code style="font-size:11px">.prelim-tag</code></span>
+          <span class="inv-tagrow"><span class="judged-tag">JUDGED</span> <code style="font-size:11px">.judged-tag</code></span>
+          <span class="inv-tagrow"><span class="proposedtag">PROPOSED</span> <code style="font-size:11px">.proposedtag</code></span>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code"><span class="inv-dupe">.src-tag · .prelim-tag · .judged-tag · .proposedtag</span></div>
+          <div class="inv-job">Four separate classes, all 10px / 700 / uppercase / letter-spaced. They differ mainly by colour (source = lilac, weak = grey) and could almost certainly collapse into one tag with modifiers.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <span class="pill">12</span>
+          <span class="pill pill--ok">Ready</span>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.pill <span class="mod">.pill--ok</span></div>
+          <div class="inv-job">Count / status badge (nav rail). <code>--ok</code> is the affirmative variant.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell">
+        <div class="inv-stage">
+          <div class="scorechip"><span class="bs-k">Score</span><span class="bs-n">82</span></div>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.scorechip <span class="mod">.bs-k / .bs-n</span></div>
+          <div class="inv-job">The composite score, shown as a compact key·number chip.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell inv-wide">
+        <div class="inv-stage" style="gap:8px">
+          <span class="chip">creator</span>
+          <span class="chipbtn on">selected sub</span>
+          <span class="chipbtn on">removable <span class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span></span>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.chip · .chips · .runpills > .chipbtn</div>
+          <div class="inv-job">Free-form chips and the run-pill toggles. Note <code>.chipbtn</code> shows up both as a button (Buttons section) and as a static tag here.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================================== BORDERLINE / DATA-VIZ (context) -->
+  <section class="inv-sec">
+    <h2>Not really controls — flagged for context</h2>
+    <p>These share the tag/chip vocabulary but are <b>data-viz</b>, not interactive UI. Included so the inventory is complete; they shouldn't be lumped in with the buttons.</p>
+
+    <div class="inv-grid">
+      <div class="inv-cell">
+        <div class="inv-stage" style="align-items:stretch">
+          <div style="display:flex;gap:2px;width:100%;height:56px">
+            <span class="hseg hseg--teal" style="--w:5"><b>Demand</b><i>5</i></span>
+            <span class="hseg hseg--teal2" style="--w:3"><b>Supply</b><i>3</i></span>
+            <span class="hseg hseg--butter" style="--w:2"><b>Timing</b><i>2</i></span>
+          </div>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.hseg <span class="mod">--teal / --teal2 / --butter</span></div>
+          <div class="inv-job">Histogram segments — a stacked bar, not a control.</div>
+        </div>
+      </div>
+
+      <div class="inv-cell">
+        <div class="inv-stage" style="align-items:stretch">
+          <div class="tage" style="width:100%">
+            <span class="tage-t"><b>Exposure</b> 62%</span>
+            <span class="tage-bar"><i style="width:62%"></i></span>
+          </div>
+        </div>
+        <div class="inv-meta">
+          <div class="inv-code">.tage <span class="mod">.tage-t / .tage-bar</span></div>
+          <div class="inv-job">Tag-exposure meter — a labelled progress bar.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  // Theme toggle — Scout keys off data-theme on <html>, exactly like the app.
+  var bar = document.querySelector('.inv-themebar');
+  bar.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    document.documentElement.setAttribute('data-theme', b.dataset.themeSet);
+    bar.querySelectorAll('button').forEach(function (x) {
+      x.setAttribute('aria-pressed', String(x === b));
+    });
+  });
+</script>
+</body>
+</html>

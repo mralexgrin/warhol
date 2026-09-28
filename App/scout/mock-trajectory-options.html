@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scout — trajectory colour options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..800;1,300..800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="alloy.css">
+<link rel="stylesheet" href="scout-v52.css">
+<style>
+body { background: var(--panel-2); }
+.mk { max-width: 900px; margin: 0 auto; padding: 40px 28px 96px; }
+.mk-head h1 { font-family: var(--disp); font-size: 30px; font-weight: 700; letter-spacing: -.04em; }
+.mk-head p { margin-top: 10px; font-size: 14.5px; color: var(--text-2); max-width: 70ch; line-height: 1.55; }
+.mk-lab { font-family: var(--disp); font-size: 12px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--text-3); margin: 44px 0 6px; }
+.mk-sub { font-size: 13px; color: var(--text-2); margin-bottom: 18px; max-width: 74ch; line-height: 1.5; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.opt { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 18px 18px 20px; }
+.opt > .tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--text-3); margin-bottom: 14px; }
+.opt > .tag b { color: var(--text); }
+.mk-toggle { position: fixed; top: 18px; right: 18px; z-index: 9; display: flex; gap: 6px;
+  background: var(--panel); border: 1px solid var(--line-hi); border-radius: var(--r-pill); padding: 5px; }
+.mk-toggle button { border: 0; background: transparent; color: var(--text-2); cursor: pointer;
+  font-family: var(--body); font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: var(--r-pill); }
+.mk-toggle button.on { background: var(--text); color: var(--panel); }
+
+/* ---- bar chart shared ---- */
+.spark { display: grid; grid-template-columns: repeat(6, 1fr); align-items: end; gap: 6px; height: 84px; }
+.spark .col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; gap: 5px; position: relative; }
+.spark .bar { width: 100%; max-width: 30px; border-radius: 5px 5px 2px 2px; min-height: 4px; }
+.spark .cap { font-size: 10px; font-weight: 600; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.spark .col.sel .cap { color: var(--text); font-weight: 700; }
+.spark-x { margin-top: 7px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px;
+  font-size: 10px; color: var(--text-3); text-align: center; }
+.spark-x .sel { color: var(--text); font-weight: 700; }
+
+/* base bar */
+.b-butter .bar { background: var(--butter); opacity: .82; }
+
+/* A — ink selected */
+.a .b-butter .col.sel .bar { background: var(--ink); opacity: 1; }
+/* B — purple selected */
+.b .b-butter .col.sel .bar { background: var(--lilac-d); opacity: 1; }
+/* C — gradient depth (all bars gradient, selected deepest + ring) */
+.c .spark .bar { background: linear-gradient(180deg, var(--butter-h), var(--butter-d)); opacity: .9; }
+.c .spark .col.sel .bar { background: linear-gradient(180deg, var(--butter), var(--butter-d));
+  opacity: 1; box-shadow: 0 0 0 2.5px color-mix(in srgb, var(--butter-d) 45%, transparent); }
+.c .spark .col.sel .cap { color: var(--butter-d); }
+
+.peakdot { position: absolute; top: -2px; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--teal-d); box-shadow: 0 0 0 3px color-mix(in srgb, var(--teal) 28%, transparent); }
+
+/* ---- delta line shared ---- */
+.dblock { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.dk { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--text-3); }
+.dbig { font-family: var(--disp); font-size: 22px; font-weight: 700; letter-spacing: -.03em;
+  color: var(--text); font-variant-numeric: tabular-nums; line-height: 1; text-align: right; }
+.dbig small { font-family: var(--body); font-size: 12px; font-weight: 500; color: var(--text-3); }
+.dread { font-size: 13px; color: var(--text-2); margin-top: 6px; }
+
+/* delta 1 — coloured + arrow, inline */
+.d1 .up { color: var(--teal-d); font-weight: 700; }
+.d1 .up::before { content: "▲ "; font-size: 10px; }
+.d1 .d-pct { color: var(--teal-d); font-weight: 700; }
+/* delta 2 — big number is the delta, coloured */
+.d2 .dbig { color: var(--teal-d); }
+.d2 .dbig .sign { font-size: 15px; vertical-align: 2px; }
+.d2 .dread b { color: var(--text); font-weight: 600; }
+/* delta 3 — soft-tint pct chip, no hard box */
+.d3 .up { color: var(--text); font-weight: 600; }
+.d3 .d-pct { color: var(--teal-d); font-weight: 700; background: color-mix(in srgb, var(--teal) 16%, transparent);
+  padding: 1px 7px; border-radius: 999px; margin-left: 4px; }
+.d3 .up::before { content: "▲ "; color: var(--teal-d); font-size: 10px; }
+</style>
+</head>
+<body>
+
+<div class="mk-toggle">
+  <button id="tl" class="on" onclick="setTheme('light')">Light</button>
+  <button id="td" onclick="setTheme('dark')">Dark</button>
+</div>
+
+<div class="mk">
+  <div class="mk-head">
+    <h1>Trajectory — colour options</h1>
+    <p>Two things to pick: how the <b>selected month</b> reads on the bars, and how the
+      <b>growth delta</b> gets its weight. Jun is the selected month in every bar sample.</p>
+  </div>
+
+  <!-- ============================ BARS ============================ -->
+  <div class="mk-lab">Selected bar — 3 ways</div>
+  <div class="mk-sub">All keep the unselected bars butter (Pressure's colour). The selected one changes.
+    No new hue introduced — ink and purple are both already in the system; the gradient stays butter.</div>
+
+  <div class="grid">
+    <div class="opt a">
+      <span class="tag"><b>A · Ink</b> — dark selected</span>
+      <div class="b-butter">
+        <div class="spark" data-sel="3"></div>
+        <div class="spark-x" data-x></div>
+      </div>
+    </div>
+    <div class="opt b">
+      <span class="tag"><b>B · Purple</b> — lilac selected</span>
+      <div class="b-butter">
+        <div class="spark" data-sel="3"></div>
+        <div class="spark-x" data-x></div>
+      </div>
+    </div>
+    <div class="opt c">
+      <span class="tag"><b>C · Gradient</b> — depth + ring</span>
+      <div class="b-butter">
+        <div class="spark" data-sel="3"></div>
+        <div class="spark-x" data-x></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ DELTA ============================ -->
+  <div class="mk-lab">Growth delta — 3 ways</div>
+  <div class="mk-sub">Colour is teal — the same green as the audience curve right below it, so growth reads
+    green without inventing a colour. No box in any of these.</div>
+
+  <div class="grid">
+    <div class="opt d1">
+      <span class="tag"><b>1 · Coloured + arrow</b></span>
+      <div class="dblock"><span class="dk">Audience</span><div class="dbig">295k <small>followers</small></div></div>
+      <p class="dread"><span class="up">+18,400</span> since we started watching · <span class="d-pct">+6.6%</span></p>
+    </div>
+    <div class="opt d2">
+      <span class="tag"><b>2 · Delta is the headline</b></span>
+      <div class="dblock"><span class="dk">Audience</span><div class="dbig"><span class="sign">+</span>18,400 <small>· +6.6%</small></div></div>
+      <p class="dread"><b>295k</b> today · since we started watching</p>
+    </div>
+    <div class="opt d3">
+      <span class="tag"><b>3 · Soft-tint % chip</b></span>
+      <div class="dblock"><span class="dk">Audience</span><div class="dbig">295k <small>followers</small></div></div>
+      <p class="dread"><span class="up">+18,400</span> since we started watching <span class="d-pct">+6.6%</span></p>
+    </div>
+  </div>
+</div>
+
+<script>
+var POSTS = [8,7,6,4,3,3], LBL=['Mar','Apr','May','Jun','Jul','Aug'], MAX=8, PEAK=3;
+document.querySelectorAll('.spark').forEach(function(s){
+  var sel=+s.getAttribute('data-sel');
+  s.innerHTML = POSTS.map(function(p,i){
+    return '<div class="col'+(i===sel?' sel':'')+'">'+(i===PEAK?'<span class="peakdot"></span>':'')+
+      '<span class="cap">'+p+'</span><div class="bar" style="height:'+Math.round(p/MAX*100)+'%"></div></div>';
+  }).join('');
+});
+document.querySelectorAll('[data-x]').forEach(function(x){
+  x.innerHTML = LBL.map(function(m,i){ return '<span class="'+(i===3?'sel':'')+'">'+m+'</span>'; }).join('');
+});
+function setTheme(t){
+  document.documentElement.setAttribute('data-theme', t);
+  document.getElementById('tl').classList.toggle('on', t==='light');
+  document.getElementById('td').classList.toggle('on', t==='dark');
+}
+</script>
+</body>
+</html>

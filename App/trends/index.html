@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scout · Trends — the tab, and the four it came from</title>
+<meta name="description" content="Concept board. The recommended Trends tab, plus the four directions it was assembled from.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..800;1,300..800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../scout/alloy.css">
+<link rel="stylesheet" href="../scout/scout-v52.css">
+<link rel="stylesheet" href="trends.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the direction on screen</a>
+
+  <!-- The board's own chrome. Outside the slab on purpose: nothing here is a
+       Scout control, and it should never be mistaken for one. -->
+  <div class="board">
+    <div class="board-t">Trends<span>The recommended tab, and the four it came from</span></div>
+    <div class="dirs" role="group" aria-label="View"></div>
+    <div class="board-r">
+      <span class="board-src"></span>
+      <button class="themebtn" data-theme-toggle type="button">Dark</button>
+    </div>
+  </div>
+
+  <div class="slab slab--app">
+    <nav class="railcol railcol--wide" aria-label="Sections">
+      <div class="brandrow"><span class="me">S</span>
+        <span><span class="wm">Scout</span><span class="sub-t">Origination desk</span></span></div>
+      <button class="btn btn--ghost newbrief" type="button" disabled>+ New brief</button>
+      <div class="nav" id="rail"></div>
+      <div class="acct acct--rail">
+        <button class="whoami" type="button" disabled>
+          <span class="ini ini--lilac ini--xs">AG</span>
+          <span class="who"><b>Alex Grinshpoon</b><span>alex.grinshpoon@thearenagroup.net</span></span>
+        </button>
+      </div>
+      <p class="engineft">Warhol engine · Paradium</p>
+    </nav>
+    <main class="wrap tr-wrap" id="main" tabindex="-1"></main>
+  </div>
+
+  <div id="status" class="sr-only" aria-live="polite"></div>
+  <div class="tip" id="tip" role="tooltip" aria-hidden="true"></div>
+
+  <script src="trends-data.js"></script>
+  <script src="trends.js"></script>
+</body>
+</html>

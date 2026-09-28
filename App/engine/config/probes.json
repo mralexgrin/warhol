@@ -1,0 +1,791 @@
+{
+  "_comment": [
+    "THE PROBE CATALOGUE. This file is data, not code — it is the list of real places",
+    "the engine goes and looks, and the rule for reading what came back.",
+    "",
+    "Every signature below was verified against live endpoints on 2026-08-05. If a",
+    "platform changes its 404 page, you fix THIS file, not the engine.",
+    "",
+    "A place resolves to one of three outcomes:",
+    "  hit          — the thing exists here (status ok AND a positive marker matched)",
+    "  miss         — the thing is not here (definitive 404/410, or a negative marker)",
+    "  inconclusive — we learned nothing (403, 429, 5xx, timeout, robots-blocked,",
+    "                 or 200 with no marker either way)",
+    "",
+    "kind:",
+    "  first_party  — the creator's own surface. At least one of these must be READ",
+    "                 before ANY item may resolve to verified_absent (see resolve.js).",
+    "  guess        — a place this kind of thing usually lives.",
+    "  api          — an official, documented, keyless API.",
+    "  harvested    — a URL found in the creator's own bio/links (added at runtime).",
+    "",
+    "neverConclusive: true means this place can be read for links but can never",
+    "decide presence or absence. Instagram is the example — a nonexistent handle",
+    "returns 200 with no distinguishing marker, so it is honestly unreadable.",
+    "",
+    "Q5, 2026-08-06: store and newsletter each gained one more place — the creator's",
+    "OWN SITE. It is kind first_party because it is the most first-party surface",
+    "there is, and its domain is harvested from what they publish rather than",
+    "guessed (see lib/site.js). Its markers were chosen against live pages on",
+    "2026-08-06 and each one is listed with the trap it had to survive."
+  ],
+
+  "ownSite": {
+    "_comment": [
+      "Q5 — how the creator's own domain is found, and how much of it is read.",
+      "",
+      "Discovery has one test and two sources: the domain has to CARRY THEIR NAME,",
+      "and they have to have published it — as a link, or as the address in their",
+      "bio. notTheirOwn removes the platforms they merely have an account on before",
+      "either source is read. minNameOverlap is the length below which a name match",
+      "is a coincidence.",
+      "",
+      "The name test is not decoration. Without it, Veritasium's TikTok bio link",
+      "(ankerfast.club, an Anker campaign URL) read as his own site on 6 Aug 2026 and",
+      "put Anker's Shopify cart on his report as his store. The link-in-bio slot is",
+      "where sponsors live.",
+      "",
+      "maxPages caps the read at the homepage plus four pages they link to from it,",
+      "on their own domain only. When the cap bites, the place resolves inconclusive",
+      "rather than absent: a search that stopped early must not read as one that",
+      "finished.",
+      "",
+      "minTextChars/minAnchors detect a page that arrives empty and fills itself in",
+      "the browser. §11.3 rules out a headless browser, so such a page is UNREAD, not",
+      "empty — the two produce opposite verdicts and the engine must not confuse them."
+    ],
+    "maxPages": 5,
+    "maxBodyBytes": 400000,
+    "minTextChars": 400,
+    "minAnchors": 5,
+    "minNameOverlap": 4,
+    "hints": ["shop", "store", "merch", "newsletter", "subscribe", "signup", "mailing"],
+    "notTheirOwn": [
+      "youtube.com", "youtu.be", "tiktok.com", "instagram.com", "twitter.com", "x.com",
+      "facebook.com", "threads.net", "snapchat.com", "twitch.tv", "linkedin.com",
+      "reddit.com", "pinterest.com", "tumblr.com", "discord.com", "discord.gg",
+      "spotify.com", "apple.com", "podcasts.apple.com", "soundcloud.com", "amazon.com",
+      "amzn.to", "linktr.ee", "beacons.ai", "bio.link", "komi.io", "stan.store",
+      "substack.com", "beehiiv.com", "buttondown.com", "ghost.io", "medium.com",
+      "patreon.com", "ko-fi.com", "buymeacoffee.com", "gumroad.com", "etsy.com",
+      "shopify.com", "myshopify.com", "bigcartel.com", "squarespace.com", "wix.com",
+      "bit.ly", "t.co", "lnk.to", "linkin.bio", "cameo.com", "paypal.com", "venmo.com",
+      "gofundme.com", "eventbrite.com", "notion.so", "google.com", "docs.google.com"
+    ],
+    "notAnAddress": [
+      "gmail.com", "googlemail.com", "yahoo.com", "hotmail.com", "outlook.com",
+      "live.com", "icloud.com", "me.com", "mac.com", "aol.com", "proton.me",
+      "protonmail.com", "pm.me", "gmx.com", "mail.com", "zoho.com", "msn.com"
+    ]
+  },
+  "identity": [
+    {
+      "id": "tiktok_profile",
+      "label": "TikTok profile",
+      "kind": "first_party",
+      "url": "https://www.tiktok.com/@{handle}",
+      "present": {
+        "status": [
+          200
+        ],
+        "bodyRegex": "\"followerCount\":\\d"
+      },
+      "absent": {
+        "status": [
+          200
+        ]
+      },
+      "extract": "tiktok",
+      "note": "TRAP, verified 2026-08-05: the string \"Couldn't find this account\" ships in TikTok's localisation bundle on EVERY profile page, real or not. Using it as a negative marker marks real accounts absent. The reliable discriminator is a followerCount in the rehydration blob. Signatures have to be tested in BOTH directions; this one was not, and it silently produced the exact failure PRD 5.3 is written to prevent."
+    },
+    {
+      "id": "youtube_profile",
+      "label": "YouTube channel",
+      "kind": "first_party",
+      "url": "https://www.youtube.com/@{handle}",
+      "absent": {
+        "status": [
+          404
+        ]
+      },
+      "present": {
+        "status": [
+          200
+        ]
+      },
+      "maxBodyBytes": 3000000,
+      "extract": "youtube",
+      "note": "A YouTube channel page is ~2.6MB and the data we want sits past the 600KB default read cap, so this place raises it. YouTube 404s cleanly for a handle that does not exist, so status alone settles presence."
+    },
+    {
+      "id": "instagram_profile",
+      "label": "Instagram profile",
+      "kind": "first_party",
+      "url": "https://www.instagram.com/{handle}/",
+      "neverConclusive": true,
+      "note": "Instagram returns 200 for handles that do not exist and exposes no reliable marker. Read for links only; never used to decide presence or absence. PRD 11.3 calls Instagram effectively closed and this is why.",
+      "extract": "generic_links",
+      "pathMustSurvive": true
+    },
+    {
+      "id": "bluesky_profile",
+      "label": "Bluesky profile",
+      "kind": "first_party",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor={handle}.bsky.social",
+      "present": {
+        "status": [200],
+        "bodyRegex": "\"did\":\"did:"
+      },
+      "absent": {
+        "bodyAny": ["Profile not found"]
+      },
+      "extract": "bluesky",
+      "note": "THE ONLY PLACE IN THIS FILE WHERE A 4xx MEANS ABSENT, AND IT IS KEYED ON THE MESSAGE RATHER THAN THE STATUS. Verified in both directions 2026-08-12: a live handle returns 200 with a DID, and a handle belonging to nobody returns 400 {\"error\":\"InvalidRequest\",\"message\":\"Profile not found\"}. The trap is that the SAME 400 comes back for a malformed actor — and a bare handle is malformed, because the AppView wants a DID or a full handle. Putting 400 in absent.status would therefore mark every creator absent the moment a guess was formatted wrong. So absence is the message, and any other 400 falls through to inconclusive, which is what asking the question wrong actually is. See lib/bluesky.js. NOTE ALSO that this entry only ever asks {handle}.bsky.social; a creator whose Bluesky handle is their own domain is found by lib/bluesky.js in sweep, whose answer overrides this one the same way the YouTube Data API overrides the channel page."
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "requiredPlaces": 2,
+      "places": [
+        {
+          "id": "yt_handle",
+          "label": "youtube.com/@handle",
+          "kind": "first_party",
+          "url": "https://www.youtube.com/@{handle}",
+          "absent": {
+            "status": [
+              404
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ]
+          },
+          "maxBodyBytes": 200000
+        },
+        {
+          "id": "yt_c",
+          "label": "youtube.com/c/handle",
+          "kind": "guess",
+          "url": "https://www.youtube.com/c/{handle}",
+          "absent": {
+            "status": [
+              404
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ]
+          },
+          "maxBodyBytes": 200000,
+          "pathMustSurvive": true
+        },
+        {
+          "id": "yt_user",
+          "label": "youtube.com/user/handle",
+          "kind": "guess",
+          "url": "https://www.youtube.com/user/{handle}",
+          "absent": {
+            "status": [
+              404
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ]
+          },
+          "maxBodyBytes": 200000,
+          "pathMustSurvive": true
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "requiredPlaces": 5,
+      "requiredPlacesWithOwnSite": 6,
+      "_requiredPlacesWithOwnSite": "Q5: the bar rises when their own site is one of the places, because 'we looked in 6 places including their own site' is a stronger claim than five platform guesses. It also means a creator whose site we could not read cannot reach verified_absent — we knew where to look and did not manage it, which is a not_found and says so.",
+      "places": [
+        {
+          "id": "substack_sub",
+          "label": "handle.substack.com",
+          "kind": "guess",
+          "url": "https://{handle}.substack.com",
+          "absent": {
+            "status": [
+              404,
+              410
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ],
+            "bodyAny": [
+              "substackcdn",
+              "subscribe",
+              "Substack"
+            ]
+          },
+          "pathMustSurvive": true
+        },
+        {
+          "id": "substack_profile",
+          "label": "substack.com/@handle",
+          "kind": "guess",
+          "url": "https://substack.com/@{handle}",
+          "absent": {
+            "status": [
+              404
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ],
+            "bodyAny": [
+              "Substack"
+            ]
+          },
+          "finalUrlNot": [
+            "/search",
+            "substack.com/home",
+            "substack.com/sign-in"
+          ],
+          "note": "TRAP: a handle that does not exist returns 200 and redirects to a search page. finalUrlNot is what stops the engine reporting a search page as a newsletter."
+        },
+        {
+          "id": "beehiiv",
+          "label": "handle.beehiiv.com",
+          "kind": "guess",
+          "url": "https://{handle}.beehiiv.com",
+          "absent": {
+            "status": [
+              404,
+              410
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ],
+            "bodyAny": [
+              "beehiiv",
+              "subscribe"
+            ]
+          },
+          "pathMustSurvive": true
+        },
+        {
+          "id": "buttondown",
+          "label": "buttondown.com/handle",
+          "kind": "guess",
+          "url": "https://buttondown.com/{handle}",
+          "absent": {
+            "status": [
+              404,
+              410
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ],
+            "bodyAny": [
+              "Subscribe",
+              "buttondown"
+            ]
+          },
+          "pathMustSurvive": true
+        },
+        {
+          "id": "ghost_sub",
+          "label": "handle.ghost.io",
+          "kind": "guess",
+          "url": "https://{handle}.ghost.io",
+          "absent": {
+            "status": [
+              404,
+              410,
+              503
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ],
+            "bodyAny": [
+              "ghost",
+              "Subscribe"
+            ]
+          },
+          "pathMustSurvive": true
+        },
+        {
+          "id": "own_site",
+          "label": "their own site",
+          "kind": "first_party",
+          "matcher": "own_site",
+          "ownSite": true,
+          "markers": [
+            "list-manage.com",
+            "mailchi.mp",
+            "substack.com/embed",
+            ".beehiiv.com",
+            "convertkit.com",
+            "ck.page",
+            "klaviyo",
+            "mailerlite",
+            "buttondown.com",
+            "newsletter",
+            "mailing list",
+            "email list"
+          ],
+          "missWhy": "no way to subscribe to anything on their own site",
+          "note": "Markers are lowercase and matched against the lowercased page source. Verified live 2026-08-06: nasa.gov and veritasium.com carry 'newsletter' and both have one; mkbhd.com and smosh.com carry a Klaviyo signup. THE TRAP is bare 'subscribe' — it is on veritasium.com and smosh.com and both times it means the YouTube button. Tested in both directions in test.js, which is what the TikTok signature was not."
+        }
+      ],
+      "signalsInLinks": [
+        "substack.com",
+        "beehiiv.com",
+        "buttondown",
+        "convertkit",
+        "ghost.io",
+        "mailchi.mp",
+        "kit.com",
+        "/newsletter",
+        "subscribe"
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "requiredPlaces": 3,
+      "requiredPlacesWithOwnSite": 4,
+      "_requiredPlacesWithOwnSite": "Q5: see the newsletter note. Three platform guesses were what said MKBHD has no store while he was selling at mkbhd.com.",
+      "places": [
+        {
+          "id": "shopify",
+          "label": "handle.myshopify.com",
+          "kind": "guess",
+          "url": "https://{handle}.myshopify.com",
+          "absent": {
+            "status": [
+              404,
+              403,
+              410
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ],
+            "bodyAny": [
+              "Shopify",
+              "cart"
+            ]
+          },
+          "note": "Shopify returns 403 for unclaimed subdomains, which here is a real negative rather than a block. Narrow exception, deliberate.",
+          "pathMustSurvive": true
+        },
+        {
+          "id": "gumroad",
+          "label": "gumroad.com/handle",
+          "kind": "guess",
+          "url": "https://gumroad.com/{handle}",
+          "absent": {
+            "status": [
+              404,
+              410
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ],
+            "bodyAny": [
+              "gumroad"
+            ]
+          },
+          "pathMustSurvive": true
+        },
+        {
+          "id": "kofi",
+          "label": "ko-fi.com/handle",
+          "kind": "guess",
+          "url": "https://ko-fi.com/{handle}",
+          "absent": {
+            "status": [
+              404,
+              410
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ],
+            "bodyAny": [
+              "Ko-fi",
+              "ko-fi"
+            ]
+          },
+          "pathMustSurvive": true,
+          "advisory": true,
+          "note": "Verified 2026-08-05: sits behind a bot wall and answers 403 to an identified client. Kept because it can still produce a hit, excluded from the absence arithmetic because a door that never opens is not a place we looked."
+        },
+        {
+          "id": "stanstore",
+          "label": "stan.store/handle",
+          "kind": "guess",
+          "url": "https://stan.store/{handle}",
+          "absent": {
+            "status": [
+              404,
+              410
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ],
+            "bodyAny": [
+              "stan.store",
+              "Stan"
+            ]
+          },
+          "pathMustSurvive": true,
+          "finalUrlNot": [
+            "stan.store/?",
+            "www.stan.store/"
+          ]
+        },
+        {
+          "id": "etsy",
+          "label": "etsy.com/shop/handle",
+          "kind": "guess",
+          "url": "https://www.etsy.com/shop/{handle}",
+          "absent": {
+            "status": [
+              404,
+              410
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ],
+            "bodyAny": [
+              "Etsy"
+            ]
+          },
+          "pathMustSurvive": true,
+          "advisory": true,
+          "note": "Verified 2026-08-05: sits behind a bot wall and answers 403 to an identified client. Kept because it can still produce a hit, excluded from the absence arithmetic because a door that never opens is not a place we looked."
+        },
+        {
+          "id": "own_site",
+          "label": "their own site",
+          "kind": "first_party",
+          "matcher": "own_site",
+          "ownSite": true,
+          "markers": [
+            "add to cart",
+            "add-to-cart",
+            "add to bag",
+            "cdn.shopify.com",
+            "myshopify.com",
+            "\"/cart\"",
+            "/checkout",
+            "woocommerce",
+            "bigcartel.com",
+            "snipcart",
+            "\"@type\":\"product\""
+          ],
+          "missWhy": "nothing to buy on their own site",
+          "note": "Markers are lowercase and matched against the lowercased page source. Verified live 2026-08-06: mkbhd.com and smosh.com hit; nasa.gov and chipotle.com do not. THE TRAPS are the bare words — chipotle.com contains 'store' twice and both are 'app-store-image' and a cookie script, and veritasium.com contains 'addtocart', 'shop', 'store' and 'merch' while carrying no store at all (a Squarespace commerce config with isLive:false). So the needle is 'add to cart' with its spaces, never the concatenation. Tested in both directions in test.js."
+        }
+      ],
+      "signalsInLinks": [
+        "shopify",
+        "gumroad",
+        "ko-fi.com",
+        "stan.store",
+        "etsy.com",
+        "bigcartel",
+        "/shop",
+        "/store",
+        "squarespace"
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "requiredPlaces": 2,
+      "places": [
+        {
+          "id": "patreon",
+          "label": "patreon.com/handle",
+          "kind": "guess",
+          "url": "https://www.patreon.com/{handle}",
+          "absent": {
+            "status": [
+              404,
+              410
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ],
+            "bodyAny": [
+              "Patreon"
+            ]
+          },
+          "pathMustSurvive": true,
+          "finalUrlNot": [
+            "/profile/creators",
+            "/search",
+            "patreon.com/home"
+          ]
+        },
+        {
+          "id": "buymeacoffee",
+          "label": "buymeacoffee.com/handle",
+          "kind": "guess",
+          "url": "https://buymeacoffee.com/{handle}",
+          "absent": {
+            "status": [
+              404,
+              410
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ],
+            "bodyAny": [
+              "Buy Me a Coffee",
+              "buymeacoffee"
+            ]
+          },
+          "pathMustSurvive": true
+        }
+      ],
+      "signalsInLinks": [
+        "patreon.com",
+        "buymeacoffee",
+        "memberful",
+        "circle.so"
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "requiredPlaces": 1,
+      "places": [
+        {
+          "id": "itunes_search",
+          "label": "Apple Podcasts directory",
+          "kind": "api",
+          "url": "https://itunes.apple.com/search?term={handleWords}&entity=podcast&limit=5",
+          "matcher": "itunes_podcast",
+          "note": "Official, documented, keyless JSON API. Presence requires a NAME match, not merely resultCount > 0 — a search for a common word returns unrelated shows."
+        }
+      ],
+      "signalsInLinks": [
+        "podcasts.apple.com",
+        "open.spotify.com/show",
+        "anchor.fm",
+        "megaphone",
+        "simplecast",
+        "buzzsprout"
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "requiredPlaces": 2,
+      "places": [
+        {
+          "id": "dotcom",
+          "label": "handle.com",
+          "kind": "guess",
+          "url": "https://{handle}.com",
+          "absent": {
+            "status": [
+              404,
+              410,
+              0
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ],
+            "bodyAny": [
+              "<html",
+              "<HTML"
+            ]
+          },
+          "note": "status 0 means DNS failure — for a domain guess that is a genuine negative, not a block.",
+          "pathMustSurvive": true
+        },
+        {
+          "id": "dotco",
+          "label": "handle.co",
+          "kind": "guess",
+          "url": "https://{handle}.co",
+          "absent": {
+            "status": [
+              404,
+              410,
+              0
+            ]
+          },
+          "present": {
+            "status": [
+              200
+            ],
+            "bodyAny": [
+              "<html",
+              "<HTML"
+            ]
+          },
+          "pathMustSurvive": true
+        }
+      ],
+      "signalsInLinks": [
+        ".com",
+        ".co",
+        ".net",
+        ".org",
+        "linktr.ee",
+        "beacons.ai"
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "requiredPlaces": 1,
+      "places": [
+        {
+          "id": "bio_markers",
+          "label": "their own bio",
+          "kind": "first_party",
+          "matcher": "bio_representation",
+          "note": "Deliberately weak. Public data can show that representation IS declared; it cannot show that none exists. This check resolves present or not_found, never verified_absent — which is why PRD 8 lists 'already with an agency' as the decline reason the Missing check cannot catch."
+        }
+      ],
+      "signalsInLinks": [],
+      "presenceOnly": true,
+      "presenceOnlyWhy": "Can show this IS there, never that it is not — the evidence is a sample or a self-declaration. Excluded from the confidence denominator (Q1); named on the report instead."
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "requiredPlaces": 1,
+      "places": [
+        {
+          "id": "caption_disclosure",
+          "label": "their own captions",
+          "kind": "first_party",
+          "matcher": "caption_sponsorship"
+        }
+      ],
+      "signalsInLinks": [],
+      "presenceOnly": true,
+      "presenceOnlyWhy": "Can show this IS there, never that it is not — the evidence is a sample or a self-declaration. Excluded from the confidence denominator (Q1); named on the report instead."
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "requiredPlaces": 1,
+      "places": [
+        {
+          "id": "link_affiliate",
+          "label": "their own links",
+          "kind": "first_party",
+          "matcher": "links_affiliate"
+        }
+      ],
+      "signalsInLinks": [],
+      "presenceOnly": true,
+      "presenceOnlyWhy": "Can show this IS there, never that it is not — the evidence is a sample or a self-declaration. Excluded from the confidence denominator (Q1); named on the report instead."
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "requiredPlaces": 0,
+      "requiresApi": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "places": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "requiredPlaces": 0,
+      "requiresApi": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "places": []
+    }
+  ],
+  "linkHubs": [
+    {
+      "id": "linktree",
+      "url": "https://linktr.ee/{handle}",
+      "absent": {
+        "status": [
+          404
+        ]
+      },
+      "present": {
+        "status": [
+          200
+        ]
+      },
+      "extract": "generic_links",
+      "pathMustSurvive": true
+    },
+    {
+      "id": "beacons",
+      "url": "https://beacons.ai/{handle}",
+      "absent": {
+        "status": [
+          404
+        ]
+      },
+      "present": {
+        "status": [
+          200
+        ]
+      },
+      "extract": "generic_links",
+      "pathMustSurvive": true
+    }
+  ]
+}

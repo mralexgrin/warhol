@@ -1,0 +1,630 @@
+/* ==========================================================================
+   WARHOL SCOUT v3 — application layer over the ALLOY toolkit.
+   alloy.css is a vendored dependency and is never edited.
+
+   COLOUR HAS A JOB. v2 lost Alloy's energy by putting everything in plain .p
+   containers with near-black ink buttons — zero btn--teal, zero arrowbtn, zero
+   ringwrap, zero cvchip in the whole app. The fix is not sprinkling colour
+   back; it is giving each field one meaning and using it every time that
+   meaning appears. A field that means something can't be decoration.
+
+     teal   — the gap is real (verified absence, the buy signal)
+     butter — the timing (operator strain)
+     lilac  — Warhol speaking about itself (definitions, provenance)
+     ink    — weight and summary (the score, decided states)
+
+   The primary button is NONE of these. It inverts the surface, so it can be
+   the loudest thing on screen without borrowing a field's meaning — and it
+   solves the v2 problem where an ink button on a dark panel was darker than
+   the panel it sat on.
+
+   Traps carried forward from v2, documented so they aren't re-trodden:
+   · Alloy's .p is flex-direction:column — a row layout must say so.
+   · Alloy's .sub .k is dark ink for use INSIDE a field; standalone on a dark
+     panel it is invisible.
+   · --page is a backdrop, not a content surface. Body text is tuned to --slab.
+   ========================================================================== */
+
+/* ------------------------------------------------------------------ shell */
+#app { display: block; }
+
+/* The one gradient with no contrast cost: the slab covers the content area, so
+   nothing sits on the mesh. It makes the slab read as an object in a space
+   rather than a panel on a colour. */
+body { background:
+  radial-gradient(58% 62% at 12% 8%, var(--butter), transparent 62%),
+  radial-gradient(52% 58% at 88% 14%, var(--teal), transparent 62%),
+  radial-gradient(64% 70% at 50% 104%, var(--lilac), transparent 66%),
+  var(--page); background-attachment: fixed; }
+
+/* The brand mark is the one element whose job IS to be an identity rather than
+   to carry information, so decoration is honest here. 8.1:1 at both endpoints. */
+.railcol .me { background: linear-gradient(135deg, var(--lilac), var(--teal));
+  color: var(--on-field); }
+.rewound-none { display: none; }
+
+.slab--app  { grid-template-columns: 252px minmax(0, 1fr); height: calc(100dvh - 44px); }
+.slab--solo { grid-template-columns: minmax(0, 1fr); }
+.slab--gate { max-width: 520px; margin: 14vh auto; }
+.slab--app > .main,
+.slab--app > .railcol--wide { overflow-y: auto; }
+@media (max-width: 960px) {
+  .slab--app { grid-template-columns: 1fr; height: auto; }
+  .slab--app > .main, .slab--app > .railcol--wide { overflow-y: visible; }
+}
+@media (max-width: 900px) {
+  .slab--app { height: calc(100dvh - 22px); }
+  .slab--gate { margin: 6vh auto; }
+}
+
+/* Alloy's .p is a column. Anything wearing .p that lays out in a row says so. */
+.trigger, .wcost, .refrow { flex-direction: row; }
+/* .sub outside a colour field needs the normal secondary-text token. */
+.scoreblock .sub .k { color: var(--text-3); }
+
+/* ---------------------------------------------------- the primary button */
+/* Surface-inverting. In light this is Alloy's ink button; in dark it flips to
+   cream, because an ink button on a dark panel reads as a hole, not a button. */
+/* Two tiers of action, deliberately distinct: .btn--primary is the neutral,
+   surface-inverting button for utilities (New brief, Save, Sign in, Back) and
+   .vbtn--go is the green Promote verb. A utility is not a decision about a
+   person, so they should not look alike. */
+.btn--primary { background: var(--ink); color: var(--on-ink); border-color: transparent; }
+.btn--primary:hover { background: var(--ink-h); }
+:root[data-theme="dark"] .btn--primary { background: var(--text); color: var(--slab); }
+:root[data-theme="dark"] .btn--primary:hover { background: #FFFFFF; }
+/* Pass reads as a button, not as text. */
+.btn--soft { background: transparent; color: var(--text-2); border-color: var(--line-hi); }
+.btn--soft:hover { background: var(--panel-2h); color: var(--text); }
+
+/* -------------------------------------------------------------- wide rail */
+.railcol--wide { align-items: stretch; padding: var(--s5) var(--s4) var(--s4); gap: var(--s4); }
+.brandrow { display: flex; align-items: center; gap: 11px; padding: 0 4px; }
+.brandrow .me { margin-bottom: 0; }
+.brandrow .wm { font-family: var(--disp); font-size: 19px; font-weight: 700; letter-spacing: -.03em; }
+.brandrow .sub-t { display: block; font-size: 11.5px; color: var(--text-3); line-height: 1.3; }
+
+/* The compose position: creation sits above navigation, never inside a
+   filter row where it reads as one more filter. */
+.newbrief { width: 100%; justify-content: center; margin-top: var(--s2); }
+
+.nav { display: flex; flex-direction: column; gap: 3px; margin-top: var(--s2); }
+.rnav {
+  display: flex; align-items: center; gap: 11px; width: 100%;
+  padding: 10px 12px; border: 0; border-radius: 14px; cursor: pointer;
+  background: transparent; color: var(--text-2);
+  font: inherit; font-size: 13.5px; font-weight: 600; text-align: left;
+  transition: background var(--dur) ease, color var(--dur) ease;
+}
+.rnav:hover:not([aria-current="page"]) { background: var(--panel-2h); color: var(--text); }
+.rnav[aria-current="page"] { background: var(--teal); color: var(--on-field); }
+.rnav[aria-current="page"]:hover { background: var(--teal-h); }
+.rnav .ic { display: flex; flex: none; }
+.rnav .tx { flex: 1; min-width: 0; }
+.rnav .pill { margin-left: auto; flex: none; }
+.rnav[aria-current="page"] .pill { background: rgba(28, 27, 35, .16); color: var(--on-field); }
+
+.whoami { margin-top: auto; display: flex; align-items: center; gap: 10px; min-width: 0;
+  padding-top: var(--s4); border-top: 1px solid var(--line); }
+.whoami .who { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.whoami .who b { font-size: 13px; font-weight: 600; }
+.whoami .who span { font-size: 11.5px; color: var(--text-3); }
+
+@media (max-width: 960px) {
+  .railcol--wide { flex-direction: row; flex-wrap: wrap; align-items: center;
+    gap: var(--s3); padding: var(--s3) var(--s4); border-bottom: 1px solid var(--line); }
+  .railcol--wide .brandrow { padding: 0; }
+  .railcol--wide .brandrow .sub-t { display: none; }
+  .railcol--wide .newbrief { width: auto; margin: 0; }
+  .railcol--wide .nav { flex-direction: row; flex-wrap: wrap; gap: var(--s2); margin: 0 0 0 auto; }
+  .railcol--wide .rnav { width: auto; padding: 8px 14px; }
+  .railcol--wide .rnav .tx { flex: none; }
+  .railcol--wide .whoami { margin: 0; border-top: 0; padding-top: 0; }
+  .railcol--wide .whoami .who { display: none; }
+}
+@media (max-width: 640px) {
+  .railcol--wide .nav { width: 100%; margin-left: 0; flex-wrap: nowrap; }
+  .railcol--wide .rnav { flex: 1 1 0; min-width: 0; justify-content: center; padding: 9px 6px; }
+  .railcol--wide .rnav .tx { display: none; }
+  .railcol--wide .rnav .pill { margin-left: 0; }
+  .railcol--wide .whoami { margin-left: auto; }
+}
+
+/* --------------------------------------------------------------- top bar */
+.crumb button { appearance: none; border: 0; background: none; padding: 0; cursor: pointer;
+  font: inherit; color: var(--text-3); letter-spacing: inherit; border-radius: var(--r-xs); }
+.crumb button:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+
+/* One identity control, holding what used to be three top-bar widgets. */
+.acct { position: relative; }
+.acctmenu { position: absolute; right: 0; top: calc(100% + 8px); z-index: 30; width: 252px;
+  background: var(--panel); border: 1px solid var(--line-hi); border-radius: var(--r-lg);
+  box-shadow: var(--el-3); padding: var(--s3); }
+.acctmenu .who { padding: 6px 8px var(--s3); border-bottom: 1px solid var(--line); margin-bottom: var(--s3); }
+.acctmenu .who b { display: block; font-size: 13.5px; }
+.acctmenu .who span { font-size: 12px; color: var(--text-3); }
+.acctmenu .lab { margin: var(--s3) 0 6px; }
+.acctmenu .seg, .acctmenu .tsw { width: 100%; }
+.acctmenu .seg button, .acctmenu .tsw button { flex: 1; }
+.acctmenu .out { width: 100%; justify-content: flex-start; margin-top: var(--s3); }
+
+/* ------------------------------------------------------------ work column */
+.wrap { min-width: 0; }
+.pagehead { padding-bottom: var(--s4); margin-bottom: var(--s4); }
+.pagehead h1 { font-size: clamp(28px, 4vw, 42px); letter-spacing: -.042em; }
+.pagehead .deck { margin-top: 10px; color: var(--text-2); font-size: 14.5px; max-width: 64ch; line-height: 1.6; }
+/* The lifecycle rule, stated. v2 never said what became of an undecided name. */
+.lifecycle { margin-top: var(--s3); font-size: 12.5px; color: var(--text-3); line-height: 1.6; max-width: 72ch; }
+
+/* Briefs are free saved filters, so they sit on the thing they filter. */
+.views { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin: var(--s5) 0 var(--s4); }
+.vchip { display: inline-flex; align-items: center; gap: 9px; padding: 8px 15px; border-radius: var(--r-pill);
+  border: 1px solid var(--line-hi); background: var(--panel); color: var(--text-2);
+  font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+  transition: background var(--dur) ease, color var(--dur) ease; }
+.vchip:hover:not([aria-pressed="true"]) { background: var(--panel-2h); color: var(--text); }
+.vchip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
+.vchip[aria-pressed="true"]:hover { background: var(--ink-h); border-color: var(--ink-h); }
+.vchip .c { font-variant-numeric: tabular-nums; opacity: .7; }
+.vchip .x { display: inline-flex; opacity: .6; }
+.vchip .x:hover { opacity: 1; }
+
+.worked { display: flex; align-items: center; gap: var(--s4); flex-wrap: wrap; padding: 0 0 var(--s4); }
+.worked .track { flex: 1; max-width: 280px; height: 8px; }
+.worked .track i { background: var(--teal); transition: transform .3s var(--ease); }
+
+/* ================================================================ THE ROW */
+.listwrap { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
+.row { display: grid; grid-template-columns: 28px 62px minmax(0, 1fr) 152px; gap: var(--s4);
+  align-items: start; padding: var(--s4) var(--s5); border-top: 1px solid var(--line); }
+.row:first-child { border-top: 0; }
+.row:hover { background: var(--panel-2); }
+.rk { font-size: 13px; font-weight: 700; color: var(--text-3); font-variant-numeric: tabular-nums; padding-top: 20px; }
+.rowmain { min-width: 0; }
+.nm { display: block; font-family: var(--disp); font-size: 18px; font-weight: 700; letter-spacing: -.03em; }
+.hd { display: block; font-size: 12px; color: var(--text-3); margin-top: 2px; }
+.thesis { font-size: 14px; color: var(--text-2); margin-top: 8px; line-height: 1.5; max-width: 60ch; }
+.quote { font-family: var(--disp); font-weight: 300; font-style: italic; font-size: 16px;
+  letter-spacing: -.02em; margin-top: 11px; line-height: 1.4; max-width: 54ch; color: var(--text); }
+.acts { display: flex; flex-direction: column; gap: 6px; }
+.acts .btn { width: 100%; justify-content: center; }
+.more { display: block; text-align: left; margin-top: 11px; font-size: 12.5px; color: var(--text-3);
+  background: none; border: 0; padding: 0; cursor: pointer; font: inherit;
+  text-decoration: underline; text-underline-offset: 3px; }
+.more:hover { color: var(--text); }
+
+/* Other people's calls on this creator. Never a removal, never a greying. */
+.annots { display: flex; flex-direction: column; gap: 7px; margin-top: 12px;
+  padding-top: 11px; border-top: 1px solid var(--line); }
+.annot { display: flex; align-items: center; gap: 9px; font-size: 12.5px; color: var(--text-2); flex-wrap: wrap; }
+.annot .who { font-weight: 600; color: var(--text); }
+.annot .av { width: 22px; height: 22px; border-radius: 50%; flex: none; display: flex;
+  align-items: center; justify-content: center; font-size: 9.5px; font-weight: 700;
+  font-family: var(--disp); background: var(--panel-3); color: var(--text-2); }
+
+/* Referral status follows the creator, so a Spotter learns whether they were right. */
+.refstate { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 12px;
+  padding: 10px 14px; border-radius: var(--r-md); background: var(--panel-2); font-size: 12.5px; color: var(--text-2); }
+
+.expand { margin-top: var(--s4); padding-top: var(--s4); border-top: 1px solid var(--line); }
+.expand .invbox { background: var(--panel-2); border-radius: var(--r-md); padding: var(--s4); margin-top: var(--s4); }
+
+/* inline pass */
+.passtray { margin-top: var(--s4); padding-top: var(--s4); border-top: 1px solid var(--line); }
+.passtray .hd { display: flex; align-items: center; gap: var(--s3); margin-bottom: var(--s3); flex-wrap: wrap; }
+.passtray .hd .q { font-size: 13px; color: var(--text-2); }
+.reasons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s2); }
+.reasons button { appearance: none; cursor: pointer; font: inherit; text-align: left;
+  padding: 11px 13px; border: 1px solid var(--line-hi); border-radius: var(--r-md);
+  background: var(--panel); color: var(--text); display: flex; flex-direction: column; gap: 3px;
+  transition: background var(--dur) ease; }
+.reasons button:hover { background: var(--panel-2h); }
+.reasons button b { font-size: 13px; font-weight: 600; }
+.reasons button span { font-size: 11px; color: var(--text-3); line-height: 1.45; }
+
+.decided { display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap;
+  padding: var(--s4) var(--s5); border-top: 1px solid var(--line); font-size: 13px; color: var(--text-2); }
+.decided .nm2 { font-weight: 700; color: var(--text); font-size: 14px; }
+.decided .spacer { flex: 1; }
+
+/* ============================================================ DEFINITIONS */
+/* Guidance beside the term, not in a queue of interruptions. */
+.deft { appearance: none; border: 1px solid var(--line-hi); background: transparent; color: var(--text-3);
+  width: 16px; height: 16px; border-radius: 50%; font-size: 10px; font-weight: 700; line-height: 1;
+  cursor: pointer; padding: 0; margin-left: 5px; vertical-align: middle; flex: none;
+  display: inline-flex; align-items: center; justify-content: center; }
+.deft:hover { border-color: var(--text-3); color: var(--text); }
+.defpop { position: fixed; z-index: 60; max-width: 340px; padding: var(--s4);
+  border-radius: var(--r-md); background: var(--lilac); color: var(--on-field); box-shadow: var(--el-3); }
+.defpop h5 { font-family: var(--disp); font-size: 15px; font-weight: 700; letter-spacing: -.028em; }
+.defpop p { font-size: 12.5px; line-height: 1.55; margin-top: 6px; color: rgba(28, 27, 35, .82); }
+
+/* ================================================================ THE RING */
+/* One mark, three sizes, on every surface. The number is the score, the sweep
+   is confidence — two independent quantities in one shape, no legend. The
+   sweep is banded on the minimum-confidence floor the product already
+   enforces, so the colour marks a real threshold rather than an invented one. */
+.ring { position: relative; border-radius: 50%; display: grid; place-items: center;
+  flex: none; --rc: var(--teal); }
+.ring::before { content: ""; position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(from -90deg, var(--rc) var(--pct, 0%), var(--panel-3) 0); }
+.ring .in { position: relative; z-index: 1; width: 100%; height: 100%; border-radius: 50%;
+  background: var(--panel); display: flex; flex-direction: column;
+  align-items: center; justify-content: center; }
+.ring .in b { font-family: var(--disp); font-weight: 700; letter-spacing: -.045em;
+  line-height: 1; font-variant-numeric: tabular-nums; }
+.ring .in span { font-size: 8.5px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--text-3); margin-top: 2px; }
+.ring--xs { width: 44px; height: 44px; padding: 4px; }
+.ring--xs .in b { font-size: 15px; } .ring--xs .in span { display: none; }
+.ring--sm { width: 54px; height: 54px; padding: 5px; }
+.ring--sm .in b { font-size: 18px; } .ring--sm .in span { display: none; }
+.ring--lg { width: 104px; height: 104px; padding: 9px; }
+.ring--lg .in b { font-size: 30px; }
+.ring--warn { --rc: var(--butter); }
+.ring--stop { --rc: var(--stop); }
+/* on a row that is hovered, the inner disc has to follow the row */
+.row:hover .ring .in, .wrow:hover .ring .in, .trow:hover .ring .in { background: var(--panel-2); }
+
+.scoreblock { display: flex; flex-direction: column; align-items: center; gap: var(--s3); flex: none; }
+.ringcap { text-align: center; }
+.rc-conf { font-size: 12px; color: var(--text-2); display: flex; align-items: center; justify-content: center; }
+.rc-sum { font-size: 12px; color: var(--text-3); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.t-gap { color: var(--teal-d); } .t-strain { color: var(--butter-d); }
+
+/* ============================================================= THE SIGNALS */
+/* Three named facts taken verbatim from the record. Demand and Missing are both
+   inside the Monetization Gap pillar, so both are teal — but Missing is an
+   ABSENCE, so its mark is hollow. Same logic as the verification marks, where
+   absence is a shape and never a colour. */
+.sigs { display: flex; flex-direction: column; gap: 7px; margin-top: 11px; }
+.sig3 { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 12px;
+  align-items: baseline; font-size: 13.5px; }
+.sig3 .k { font-size: 9.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 6px; }
+.sig3 .v { font-weight: 600; color: var(--text); }
+.sig3 .k--fill, .sig3 .k--hollow { color: var(--teal-d); }
+.sig3 .k--butter { color: var(--butter-d); }
+.dot { width: 8px; height: 8px; border-radius: 2px; display: block; flex: none; }
+.dot--fill { background: var(--teal-d); }
+.dot--hollow { background: transparent; border: 1.5px solid var(--teal-d); }
+.dot--butter { background: var(--butter-d); }
+@media (max-width: 640px) { .sig3 { grid-template-columns: 1fr; gap: 2px; } }
+
+/* =============================================================== THE VERBS */
+/* Green go, amber hold, outlined no. Deliberately outside the four field jobs:
+   an action is not evidence, and reusing teal would say "the gap is real"
+   about a button. */
+.vbtn { display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  padding: 10px 17px; border-radius: var(--r-pill); border: 1px solid transparent;
+  font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; white-space: nowrap;
+  transition: background var(--dur) ease, color var(--dur) ease, transform var(--dur) var(--ease); }
+.vbtn:hover { transform: translateY(-1px); }
+.vbtn:active { transform: none; }
+.vbtn svg { width: 15px; height: 15px; flex: none; }
+.vbtn--sm { padding: 8px 13px; font-size: 12.5px; }
+.vbtn--go { background: #1F7A66; color: #FFFFFF; }
+.vbtn--go:hover { background: #26907A; }
+.vbtn--hold { background: var(--butter); color: var(--on-field); }
+.vbtn--hold:hover { background: var(--butter-h); }
+.vbtn--no { background: transparent; color: var(--text-2); border-color: var(--line-hi); }
+.vbtn--no:hover { background: var(--panel-2h); color: var(--text); }
+.vbtn--open { background: var(--panel-2); color: var(--text); }
+.vbtn--open:hover { background: var(--panel-2h); }
+:root[data-theme="dark"] .vbtn--go { background: #2E9B84; color: #06120E; }
+:root[data-theme="dark"] .vbtn--go:hover { background: #3BB59B; }
+@media (prefers-reduced-motion: reduce) { .vbtn:hover { transform: none; } }
+
+/* ========================================================== THE COMPACT BAR */
+/* Takes over once the tall header scrolls away, carrying the way out, the
+   identity, the score and the verbs. */
+.compact { position: sticky; top: 0; z-index: 8; display: flex; align-items: center;
+  gap: var(--s3); padding: 9px var(--s5); margin: 0 calc(var(--s6) * -1) var(--s4);
+  background: var(--panel); border-bottom: 1px solid var(--line);
+  opacity: 0; transform: translateY(-6px); pointer-events: none;
+  transition: opacity .18s ease, transform .18s var(--ease); }
+.compact.on { opacity: 1; transform: none; pointer-events: auto; }
+.compact .back { width: 34px; height: 34px; border-radius: 50%; flex: none; cursor: pointer;
+  border: 1px solid var(--line-hi); background: var(--panel); color: var(--text-2);
+  display: flex; align-items: center; justify-content: center; }
+.compact .back:hover { background: var(--panel-2h); color: var(--text); }
+.compact .who2 { flex: 1; min-width: 0; }
+.compact .who2 b { display: block; font-family: var(--disp); font-size: 15px; font-weight: 700;
+  letter-spacing: -.03em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.compact .who2 span { font-size: 11px; color: var(--text-3); }
+.compact .verbs { display: flex; gap: 6px; flex: none; }
+@media (max-width: 760px) { .compact .verbs .vbtn:not(.vbtn--go) { display: none; } }
+.backbtn { margin-bottom: var(--s4); }
+
+/* ================================================================= REPORT */
+.rpthead { display: flex; gap: var(--s5); align-items: flex-start; flex-wrap: wrap;
+  padding-bottom: var(--s5); border-bottom: 1px solid var(--line); }
+.rpthead .who2 { flex: 1; min-width: 240px; }
+.rpthead h1 { font-size: clamp(26px, 3.6vw, 38px); letter-spacing: -.042em; line-height: 1.08; margin-top: 10px; }
+.rpthead .handle { font-size: 13px; color: var(--text-3); margin-top: 5px; }
+.rpthead .thesis { margin-top: var(--s3); font-size: 16px; max-width: 54ch; }
+.rpt-tags { display: flex; gap: var(--s2); flex-wrap: wrap; }
+.idrow { display: flex; flex-wrap: wrap; gap: var(--s2); margin-top: var(--s4); }
+.plat { display: inline-flex; align-items: center; gap: 9px; padding: 7px 13px; border: 1px solid var(--line);
+  border-radius: var(--r-pill); background: var(--panel); font-size: 12.5px; }
+.plat .n { font-weight: 600; }
+.plat .f, .plat .mc { font-size: 11.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.plat[data-weak="true"] .mc { color: var(--warn); font-weight: 700; }
+
+.case { padding: var(--s5); display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--s5); }
+.argument { font-size: 16.5px; line-height: 1.62; max-width: 52ch; }
+.quotes { margin-top: var(--s5); padding-top: var(--s4); border-top: 1px solid var(--line); }
+.invbox { background: var(--panel-2); border-radius: var(--r-md); padding: var(--s4); }
+.invstrip { display: flex; flex-direction: column; gap: 9px; margin-top: 10px; }
+.invstrip li { display: grid; grid-template-columns: 12px 1fr auto; gap: 10px; align-items: center; font-size: 13px; }
+.invstrip .sf { font-size: 11.5px; color: var(--text-3); }
+.invsum { margin-top: var(--s3); padding-top: var(--s3); border-top: 1px solid var(--line);
+  font-size: 12.5px; color: var(--text-2); line-height: 1.5; }
+.invsum b { color: var(--text); font-weight: 700; }
+
+/* Disclosures: a down chevron, because this opens in place rather than
+   sending you elsewhere. Closed rows still state their own summary. */
+.disc { border-top: 1px solid var(--line); }
+.disc > button { width: 100%; display: flex; align-items: center; gap: var(--s3);
+  padding: var(--s4) var(--s5); background: none; border: 0; cursor: pointer; font: inherit;
+  color: var(--text); text-align: left; }
+.disc > button:hover { background: var(--panel-2); }
+.disc .t { font-size: 14px; font-weight: 600; flex: none; }
+.disc .s { font-size: 12px; color: var(--text-3); min-width: 0; }
+.disc .chev { margin-left: auto; width: 34px; height: 34px; border-radius: 50%; flex: none;
+  border: 1px solid var(--line-hi); display: flex; align-items: center; justify-content: center;
+  color: var(--text-2); transition: transform var(--dur) var(--ease), background var(--dur) ease; }
+.disc > button:hover .chev { background: var(--panel-2h); color: var(--text); }
+.disc.open .chev { transform: rotate(180deg); }
+.disc-body { padding: 0 var(--s5) var(--s5); }
+
+.pillrow { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3); }
+.pillcard { border-radius: var(--r-md); padding: var(--s4); }
+.pillcard--gap { background: var(--teal); color: var(--on-field); }
+.pillcard--strain { background: var(--butter); color: var(--on-field); }
+.pillcard .k { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: rgba(28, 27, 35, .72); display: flex; align-items: center; }
+.pillcard .n { font-family: var(--disp); font-size: 30px; font-weight: 700; letter-spacing: -.045em;
+  margin-top: 5px; font-variant-numeric: tabular-nums; }
+.pillcard .n small { font-size: 14px; opacity: .55; }
+.pillcard .d { font-size: 12.5px; line-height: 1.5; margin-top: 7px; color: rgba(28, 27, 35, .82); }
+.pillcard .deft { border-color: rgba(28, 27, 35, .3); color: rgba(28, 27, 35, .72); }
+.sigs { margin-top: var(--s4); }
+.sig { padding: var(--s3) 0; border-top: 1px solid var(--line); }
+.sig .r1 { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.sig .r1 .l { font-size: 13.5px; font-weight: 600; }
+.sig .r1 .w { font-size: 11px; color: var(--text-3); margin-left: auto; font-variant-numeric: tabular-nums; }
+.sig .val { font-size: 14px; margin-top: 5px; font-weight: 600; }
+.sig[data-e="llm"] .val { font-family: var(--disp); font-weight: 300; font-style: italic;
+  font-size: 16px; letter-spacing: -.02em; }
+.sig .det { font-size: 12.5px; color: var(--text-2); margin-top: 5px; line-height: 1.55; max-width: 56ch; }
+
+/* Format Fit is a gate, not a pillar — dashed wherever it appears. */
+.gatepanel { border: 1px dashed var(--line-hi); border-radius: var(--r-md); margin-top: var(--s4); }
+.gatepanel .gh { display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap;
+  padding: var(--s4); border-bottom: 1px dashed var(--line-hi); }
+.gatepanel .gh h4 { font-size: 15px; letter-spacing: -.028em; display: flex; align-items: center; }
+.gatepanel .gh .nopts { font-size: 11.5px; color: var(--text-3); }
+.gatepanel .gh .verdict { margin-left: auto; }
+.gategrid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.gategrid > div { padding: var(--s4); }
+.gategrid > div + div { border-left: 1px dashed var(--line-hi); }
+.gategrid .l { font-size: 13px; font-weight: 600; }
+.gategrid .v { font-family: var(--disp); font-weight: 300; font-style: italic; font-size: 15px;
+  margin-top: 4px; letter-spacing: -.02em; }
+.gategrid .d { font-size: 12px; color: var(--text-2); margin-top: 5px; line-height: 1.5; }
+
+.ct td { vertical-align: top; padding-top: 11px; padding-bottom: 11px; }
+.ct .lsrc { color: var(--text-3); word-break: break-word; max-width: 24ch; }
+.ledger-ft { margin-top: var(--s3); font-size: 12px; color: var(--text-3); line-height: 1.55; }
+
+.samples { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s3); }
+.sample .swatch { height: 104px; border-radius: var(--r-md); }
+.sample .t { font-size: 15px; font-weight: 600; line-height: 1.35; margin-top: var(--s3); }
+.sample .m { display: flex; flex-wrap: wrap; gap: 5px 10px; margin-top: 8px; align-items: center; }
+
+.playpanel { display: grid; grid-template-columns: auto 1fr; gap: var(--s5); align-items: start; }
+.playpanel .badge { max-width: 240px; border-radius: var(--r-md); padding: var(--s4);
+  background: var(--panel-2); }
+.playpanel .badge .p2 { font-family: var(--disp); font-size: 17px; font-weight: 700;
+  letter-spacing: -.03em; margin-top: 5px; line-height: 1.25; }
+.playpanel .why { font-size: 16px; line-height: 1.6; max-width: 58ch; }
+.playpanel .caveat { margin-top: var(--s3); font-size: 12px; color: var(--text-3); }
+
+.decide { position: sticky; bottom: 0; z-index: 5; margin-top: var(--s6);
+  background: var(--panel); border: 1px solid var(--line-hi); border-radius: var(--r-lg);
+  padding: var(--s3) var(--s4); display: flex; align-items: center; gap: var(--s2);
+  flex-wrap: wrap; box-shadow: var(--el-3); }
+.decide .who3 { font-size: 11.5px; color: var(--text-3); }
+.decide .spacer { flex: 1; }
+
+/* =========================================================== TRACK RECORD */
+/* Every past call, hits and the miss. A page with no misses reads as marketing. */
+.trow { display: grid; grid-template-columns: 62px minmax(0, 1fr) auto; gap: var(--s4);
+  align-items: start; padding: var(--s5); border-top: 1px solid var(--line); }
+.trow:first-child { border-top: 0; }
+.trow:hover { background: var(--panel-2); }
+.trow .nm { font-size: 17px; }
+.outcome-h { font-family: var(--disp); font-size: 17px; font-weight: 700; letter-spacing: -.03em;
+  margin-top: 10px; line-height: 1.3; max-width: 44ch; }
+.outcome-n { font-size: 13px; color: var(--text-2); margin-top: 7px; line-height: 1.55; max-width: 62ch; }
+.built { display: flex; flex-direction: column; gap: 8px; margin-top: var(--s3); }
+.built li { display: grid; grid-template-columns: 12px 1fr; gap: 10px; align-items: start;
+  font-size: 13px; line-height: 1.5; }
+.built li .vmark { margin-top: 5px; }
+.miss { margin-top: var(--s3); padding: var(--s4); border-radius: var(--r-md);
+  background: var(--panel-2); border: 1px dashed var(--line-hi); }
+.miss .k { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--warn); }
+.miss p { font-size: 13px; color: var(--text-2); margin-top: 6px; line-height: 1.55; max-width: 60ch; }
+/* The dated lens. Rewind attaches to a creator, never to the whole desk. */
+.aslens { margin-bottom: var(--s5); padding: var(--s4) var(--s5); border-radius: var(--r-md);
+  background: var(--lilac); color: var(--on-field); font-size: 13px; line-height: 1.6; }
+.aslens b { font-weight: 700; }
+
+/* ============================================================== WATCHLIST */
+.wrow { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: var(--s4);
+  padding: var(--s5); border-top: 1px solid var(--line); align-items: start; }
+.wrow:first-child { border-top: 0; }
+.wrow .kept { font-size: 14.5px; color: var(--text-2); margin-top: 8px; line-height: 1.55; max-width: 58ch; }
+.wrow .right { display: flex; flex-direction: column; align-items: flex-end; gap: var(--s2); }
+.trigger { margin-top: var(--s3); padding: 11px 14px; border-radius: var(--r-md);
+  background: var(--teal); color: var(--on-field); display: flex; gap: 11px; align-items: baseline; flex-wrap: wrap; }
+.trigger .k { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.trigger .v { font-size: 13px; }
+/* Pruning argues from movement, not money — the watchlist shows no currency. */
+.prune { margin-top: var(--s3); padding: var(--s4); border-radius: var(--r-md); }
+.prune--stop { background: var(--warn-bg); }
+.prune--keep { background: var(--ok-bg); }
+.prune .k { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.prune--stop .k { color: var(--warn); } .prune--keep .k { color: var(--ok); }
+.prune p { font-size: 12.5px; color: var(--text-2); margin-top: 6px; line-height: 1.55; max-width: 62ch; }
+.prune .btn { margin-top: var(--s3); }
+.movement { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 12px; color: var(--text-3); }
+.movement .track { width: 120px; height: 6px; }
+
+/* ========================================================== NEW BRIEF FORM */
+.form { max-width: 640px; }
+.frow { margin-top: var(--s5); }
+.frow .lab { margin-bottom: 8px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chipbtn { appearance: none; cursor: pointer; font: inherit; font-size: 13px; font-weight: 600;
+  padding: 8px 15px; border-radius: var(--r-pill); border: 1px solid var(--line-hi);
+  background: var(--panel); color: var(--text-2); transition: background var(--dur) ease; }
+.chipbtn:hover:not([aria-pressed="true"]) { background: var(--panel-2h); color: var(--text); }
+.chipbtn[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: var(--on-field); }
+.chipbtn[aria-pressed="true"]:hover { background: var(--teal-h); border-color: var(--teal-h); }
+.preview { margin-top: var(--s5); padding: var(--s4) var(--s5); border-radius: var(--r-md);
+  background: var(--panel-2); font-size: 13.5px; color: var(--text-2); }
+.preview b { color: var(--text); font-weight: 700; }
+.formacts { display: flex; gap: var(--s2); align-items: center; margin-top: var(--s5); }
+
+/* ================================================================== GATE */
+.signin { padding: var(--s8) var(--s6) var(--s7); text-align: center; }
+.signin-mark { width: 62px; height: 62px; margin: 0 auto var(--s5); border-radius: 20px;
+  display: flex; align-items: center; justify-content: center; background: var(--ink); color: var(--on-ink);
+  font-family: var(--disp); font-size: 28px; font-weight: 700; letter-spacing: -.04em; }
+.signin-wm { font-size: 36px; letter-spacing: -.045em; }
+.signin-sub { margin-top: 7px; font-size: 14px; color: var(--text-3); }
+.signin-sso { margin-top: var(--s6); width: 100%; justify-content: center; padding: 14px 20px; font-size: 14.5px; }
+.signin-sso .g-g { width: 22px; height: 22px; border-radius: 50%; flex: none; display: flex;
+  align-items: center; justify-content: center; background: currentColor; font-size: 0; }
+.signin-sso .g-g::after { content: "G"; font-family: var(--disp); font-weight: 700; font-size: 13px; }
+:root[data-theme="dark"] .signin-sso .g-g { color: var(--slab); }
+.signin-sso .g-g::after { color: var(--panel); }
+.signin-fine { margin-top: var(--s3); font-size: 12.5px; color: var(--text-3); }
+
+/* ============================================================ PRIMITIVES */
+.vmark { width: 12px; height: 12px; border-radius: 3px; flex: none; display: inline-block; }
+.vmark[data-s="verified_absent"] { background: var(--teal-d); }
+.vmark[data-s="present"] { background: transparent; border: 2px solid var(--line-hi); }
+.vmark[data-s="not_found"] { background: var(--warn-bg); border: 1px solid var(--warn);
+  position: relative; overflow: hidden; }
+.vmark[data-s="not_found"]::after { content: ""; position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(45deg, var(--warn) 0 1.5px, transparent 1.5px 5px); }
+.vstate { display: inline-flex; align-items: center; gap: 7px; }
+.vstate .txt { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.vstate[data-s="verified_absent"] .txt { color: var(--teal-d); }
+.vstate[data-s="present"] .txt { color: var(--text-3); }
+.vstate[data-s="not_found"] .txt { color: var(--warn); }
+
+.eng { display: inline-flex; align-items: center; font-size: 9.5px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; padding: 3px 8px;
+  border-radius: var(--r-pill); border: 1px solid var(--line-hi); color: var(--text-3); }
+.eng[data-e="rule"] { background: var(--panel-2); color: var(--text-2); border-color: transparent; }
+.eng[data-e="llm"] { border-style: dashed; background: transparent; }
+.eng[data-e="mixed"] { background: linear-gradient(100deg, var(--panel-2) 0 50%, transparent 50%); color: var(--text-2); }
+
+.ini { width: 44px; height: 44px; flex: none; border-radius: 15px; display: flex;
+  align-items: center; justify-content: center; font-family: var(--disp); font-size: 14px;
+  font-weight: 700; letter-spacing: .01em; }
+.ini--butter { background: var(--butter); color: var(--on-field); }
+.ini--teal { background: var(--teal); color: var(--on-field); }
+.ini--lilac { background: var(--lilac); color: var(--on-field); }
+.ini--ink { background: var(--ink); color: var(--on-ink); }
+.ini--sm { width: 34px; height: 34px; border-radius: 12px; font-size: 12px; }
+.ini--xs { width: 26px; height: 26px; border-radius: 9px; font-size: 10px; }
+
+blockquote.q { margin: 0; }
+blockquote.q p { font-family: var(--disp); font-weight: 300; font-style: italic; font-size: 19px;
+  line-height: 1.42; letter-spacing: -.02em; color: var(--text); text-indent: -.4em; }
+blockquote.q .src, .obs .src { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+blockquote.q .src .m, .obs .src .m { font-size: 11px; color: var(--text-3); }
+.q + .q, .q + .obs, .obs + .q, .obs + .obs { margin-top: var(--s4); padding-top: var(--s4); border-top: 1px solid var(--line); }
+.obs p { font-size: 13px; line-height: 1.55; color: var(--text-2); margin-top: 6px; max-width: 56ch; }
+.prov { display: flex; flex-wrap: wrap; gap: 5px 10px; margin-top: 7px; align-items: center; }
+.prov .m { font-size: 11px; color: var(--text-3); }
+.prov .stale, .src .stale { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--warn); background: var(--warn-bg); border-radius: var(--r-pill); padding: 2px 8px; }
+
+.zero { padding: var(--s8) var(--s6); text-align: center; }
+.zero h2 { font-size: clamp(24px, 3.4vw, 34px); letter-spacing: -.04em; max-width: 24ch; margin: 0 auto; }
+.zero p { margin: var(--s4) auto 0; font-size: 14.5px; color: var(--text-2); max-width: 60ch; line-height: 1.65; }
+
+/* The fill is full width and scaled, so it grows on transform rather than on
+   width. At 8px tall the right cap's distortion under scaleX is about 1.5px of
+   geometry — invisible — so this costs nothing and keeps the bar off the
+   layout path entirely. */
+.track i { width: 100%; transform: scaleX(var(--f, 0)); transform-origin: left center; }
+.spacer { flex: 1; }
+.offscreen { position: fixed; left: -9999px; }
+
+/* ============================================================== UTILITIES */
+/* Named, so a spacing value can never quietly drift into a template string
+   where it survives every future restyle. The only inline style left in the
+   app is the definition popover's computed left/top. */
+.mt-2 { margin-top: 8px; }
+.mt-3 { margin-top: var(--s3); }
+.mt-4 { margin-top: var(--s4); }
+.mt-5 { margin-top: var(--s5); }
+.mt-0 { margin-top: 0; }
+.padbox { padding: var(--s6); }
+.flushbox { padding: 0; overflow: hidden; }
+.traybox { padding: var(--s5); }
+
+/* the outreach draft */
+.draft-subj { font-size: 13px; color: var(--text-3); }
+.draft-subj b { color: var(--text); }
+.draft-p { margin-top: var(--s3); font-size: 15px; line-height: 1.65; }
+.draft-sig { margin-top: var(--s4); font-size: 13px; color: var(--text-3); }
+
+/* what happened next, on the ink field */
+.outcome-h--lg { font-size: 24px; }
+.on-ink-soft { color: rgba(242, 240, 247, .80); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .viewfade { animation: vf .18s ease-out both; }
+  @keyframes vf { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+}
+
+/* -------------------------------------------------------------- responsive */
+@media (max-width: 1180px) {
+  .case, .pillrow, .playpanel { grid-template-columns: 1fr; }
+  .gategrid { grid-template-columns: 1fr 1fr; }
+  .gategrid > div:nth-child(3) { border-left: 0; }
+  .gategrid > div:nth-child(3), .gategrid > div:nth-child(4) { border-top: 1px dashed var(--line-hi); }
+  .reasons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .samples { grid-template-columns: 1fr; }
+}
+/* Between roughly 900 and 1200 the content column gets tight enough that the
+   signal values wrap. Reclaim the 152px action column by laying the verbs out
+   horizontally under the signals instead of stacking them at the right. */
+@media (max-width: 1200px) {
+  .row { grid-template-columns: 28px 62px minmax(0, 1fr); }
+  .row > .acts { grid-column: 3; flex-direction: row; flex-wrap: wrap;
+    margin-top: var(--s3); padding-top: var(--s3); border-top: 1px solid var(--line); }
+  .row > .acts .vbtn { width: auto; }
+}
+@media (max-width: 900px) {
+  .row { grid-template-columns: 26px 1fr; }
+  .row > .scorewrap { grid-column: 2; }
+  .row > .rowmain { grid-column: 2; }
+  .row > .acts { grid-column: 2; flex-direction: row; flex-wrap: wrap; }
+  .row > .acts .btn { width: auto; }
+  .trow, .wrow { grid-template-columns: 1fr; }
+  .wrow .right { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+}
+@media (max-width: 760px) {
+  .gategrid { grid-template-columns: 1fr; }
+  .gategrid > div + div { border-left: 0; border-top: 1px dashed var(--line-hi); }
+  .reasons { grid-template-columns: 1fr; }
+}

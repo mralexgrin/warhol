@@ -1,0 +1,377 @@
+<!doctype html>
+<!--
+ROUGH SKETCH 3 — decision aid, not a build. Four questions:
+  1. Verb colour + icons, and losing the "…"
+  2. Report chrome: a way out, and a sticky score header
+  3. The signals — the big one. The current chips say "5 of 6 lines absent",
+     which is an abstraction I computed. The seed already carries the human
+     version: "No newsletter, no site, no store" / "1,940 purchase-intent
+     comments" / "3 explicit markers". Stop summarising, start surfacing.
+  4. "surf." — nobody knows what that means.
+
+Also fixes, not options: clicking a disclosure currently resets scroll 700 → 0
+because render() replaces the whole DOM. That is a bug, not a preference.
+-->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sketch 3 — actions, signals, report chrome</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..800;1,300..800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../prototypes/v3/alloy.css">
+<style>
+  body { padding: 0; }
+  .sketchbar { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: var(--s4);
+    flex-wrap: wrap; padding: 12px 22px; background: var(--ink); color: var(--on-ink); }
+  .sketchbar b { font-family: var(--disp); font-size: 14px; letter-spacing: -.02em; }
+  .sketchbar .note { color: rgba(242,240,247,.72); font-size: 12.5px; margin: 0; max-width: 50ch; }
+  .sketchbar .tsw { margin-left: auto; background: rgba(255,255,255,.10); border-color: transparent; }
+  .sketchbar .tsw button { color: rgba(242,240,247,.78); }
+  .sketchbar .tsw button[aria-pressed="true"] { background: var(--on-ink); color: var(--ink); }
+  .pagewrap { padding: 22px; }
+  .page { max-width: 1140px; margin: 0 auto; padding: var(--s6) var(--s6) var(--s8);
+    background: var(--slab); border-radius: var(--r-slab); box-shadow: var(--el-slab); }
+  .sec { padding-top: var(--s7); }
+  .sec-title { font-size: clamp(22px,3vw,32px); }
+  .sec-note { max-width: 66ch; font-size: 13.5px; color: var(--text-2); line-height: 1.6; margin-top: 8px; }
+  .verdict-note { margin-top: var(--s3); font-size: 12.5px; color: var(--text-3); line-height: 1.65; max-width: 82ch; }
+  .lab2 { font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--text-3); display: block; margin-bottom: var(--s3); }
+  .opt { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg);
+    padding: var(--s5); margin-top: var(--s4); }
+  .trio { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s4); margin-top: var(--s4); }
+  @media (max-width:900px){ .trio { grid-template-columns: 1fr } }
+
+  /* ---------- 1. actions ---------- */
+  .vbtn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: var(--r-pill);
+    border: 1px solid transparent; font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer;
+    transition: background var(--dur) ease, transform var(--dur) var(--ease); }
+  .vbtn:hover { transform: translateY(-1px); }
+  .vrow { display: flex; gap: var(--s2); flex-wrap: wrap; margin-top: var(--s3); }
+  /* A — semantic action colours */
+  .a-go { background: #1F7A66; color: #fff; }
+  .a-go:hover { background: #26907a; }
+  .a-hold { background: var(--butter); color: var(--on-field); }
+  .a-hold:hover { background: var(--butter-h); }
+  .a-no { background: transparent; color: var(--text-2); border-color: var(--line-hi); }
+  .a-no:hover { background: var(--panel-2h); color: var(--text); }
+  /* B — hierarchy only */
+  .b-go { background: var(--text); color: var(--slab); }
+  .b-hold { background: transparent; color: var(--text); border-color: var(--line-hi); }
+  .b-no { background: transparent; color: var(--text-3); }
+  .b-no:hover { color: var(--text); background: var(--panel-2h); }
+  /* C — one accent, icons carry the rest */
+  .c-go { background: var(--teal); color: var(--on-field); }
+  .c-go:hover { background: var(--teal-h); }
+  .c-hold { background: var(--panel-2); color: var(--text); }
+  .c-no { background: transparent; color: var(--text-3); border-color: var(--line); }
+
+  /* ---------- 2. report chrome ---------- */
+  .fakerpt { height: 420px; overflow-y: auto; background: var(--panel); border: 1px solid var(--line);
+    border-radius: var(--r-lg); margin-top: var(--s4); position: relative; }
+  .stickyhd { position: sticky; top: 0; z-index: 5; background: var(--panel);
+    border-bottom: 1px solid var(--line); padding: var(--s4) var(--s5);
+    display: flex; align-items: center; gap: var(--s4); }
+  .stickyhd .back { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line-hi);
+    background: var(--panel); color: var(--text-2); display: flex; align-items: center;
+    justify-content: center; cursor: pointer; flex: none; }
+  .stickyhd .back:hover { background: var(--panel-2h); color: var(--text); }
+  .stickyhd .who { flex: 1; min-width: 0; }
+  .stickyhd .who b { display: block; font-family: var(--disp); font-size: 17px; font-weight: 700; letter-spacing: -.03em; }
+  .stickyhd .who span { font-size: 11.5px; color: var(--text-3); }
+  .miniring { width: 46px; height: 46px; padding: 4px; flex: none; }
+  .miniring .ringnum { position: relative; z-index: 1; width: 100%; height: 100%; border-radius: 50%;
+    background: var(--panel); display: flex; align-items: center; justify-content: center; }
+  .miniring .ringnum b { font-family: var(--disp); font-size: 16px; font-weight: 700; letter-spacing: -.04em; }
+  .stickyhd .verbs { display: flex; gap: 6px; flex: none; }
+  .fakebody { padding: var(--s5); }
+  .fakebody p { font-size: 14px; line-height: 1.7; color: var(--text-2); margin-top: var(--s3); max-width: 60ch; }
+  .fakedisc { border-top: 1px solid var(--line); padding: var(--s4) var(--s5); display: flex;
+    align-items: center; gap: var(--s3); cursor: pointer; }
+  .fakedisc:hover { background: var(--panel-2); }
+  .fakedisc .t { font-size: 14px; font-weight: 600; }
+  .fakedisc .s { font-size: 12px; color: var(--text-3); }
+  .fakedisc .chev { margin-left: auto; width: 32px; height: 32px; border-radius: 50%;
+    border: 1px solid var(--line-hi); display: flex; align-items: center; justify-content: center;
+    color: var(--text-2); transition: transform var(--dur) var(--ease); }
+  .fakedisc.open .chev { transform: rotate(180deg); }
+  .fakedisc-body { padding: 0 var(--s5) var(--s5); display: none; }
+  .fakedisc-body.on { display: block; }
+
+  /* ---------- 3. signals ---------- */
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg);
+    padding: var(--s5); margin-top: var(--s4); display: grid;
+    grid-template-columns: 26px 112px minmax(0,1fr) 140px; gap: var(--s4); align-items: start; }
+  @media (max-width:900px){ .card { grid-template-columns: 1fr } }
+  .rk { font-size: 13px; font-weight: 700; color: var(--text-3); padding-top: 6px; }
+  .scorefield { background: var(--ink); color: var(--on-ink); border-radius: var(--r-md);
+    padding: 12px 10px 11px; text-align: center; }
+  .scorefield .n { font-family: var(--disp); font-size: 30px; font-weight: 700; letter-spacing: -.05em; line-height: 1; }
+  .scorefield .n small { font-size: 12px; opacity: .55; }
+  .scorefield .d { font-size: 9px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: rgba(242,240,247,.66); margin-top: 5px; }
+  .scorefield .bits { display: flex; gap: 4px; margin-top: 9px; }
+  .scorefield .bits span { height: 5px; border-radius: 3px; display: block; }
+  .nm { display: block; font-family: var(--disp); font-size: 18px; font-weight: 700; letter-spacing: -.03em; }
+  .hd { display: block; font-size: 12px; color: var(--text-3); margin-top: 2px; }
+
+  /* signal treatments */
+  .sigrow { display: flex; flex-direction: column; gap: 7px; margin-top: 12px; }
+  .sig3 { display: grid; grid-template-columns: 78px 1fr; gap: 12px; align-items: baseline; font-size: 13.5px; }
+  .sig3 .k { font-size: 9.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+  .sig3 .v { font-weight: 600; }
+  .k-demand { color: var(--teal-d); } .k-missing { color: var(--teal-d); } .k-timing { color: var(--butter-d); }
+  .sigchips { display: flex; gap: var(--s2); flex-wrap: wrap; margin-top: 12px; }
+  .schip { display: inline-flex; flex-direction: column; gap: 2px; padding: 9px 15px; border-radius: var(--r-md); }
+  .schip .k { font-size: 9px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; opacity: .72; }
+  .schip .v { font-size: 13.5px; font-weight: 700; }
+  .schip--teal { background: var(--teal); color: var(--on-field); }
+  .schip--butter { background: var(--butter); color: var(--on-field); }
+  .caseline { font-size: 15px; line-height: 1.6; color: var(--text); margin-top: 10px; max-width: 60ch; }
+  .caseline b { font-weight: 700; }
+  .caseline .t-teal { color: var(--teal-d); } .caseline .t-butter { color: var(--butter-d); }
+  .evq { font-family: var(--disp); font-weight: 300; font-style: italic; font-size: 14.5px;
+    letter-spacing: -.015em; color: var(--text-2); margin-top: 8px; padding-left: 12px;
+    border-left: 2px solid var(--line-hi); line-height: 1.45; max-width: 52ch; }
+  .oldchip { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; border-radius: var(--r-pill);
+    font-size: 12.5px; font-weight: 600; }
+
+  /* ---------- 4. small labels ---------- */
+  .invdemo { display: flex; flex-direction: column; gap: 9px; margin-top: var(--s3); }
+  .invdemo li { display: grid; grid-template-columns: 12px 1fr auto; gap: 10px; align-items: center; font-size: 13px; }
+  .invdemo i { width: 12px; height: 12px; border-radius: 3px; background: var(--teal-d); display: block; }
+  .invdemo .s { font-size: 11.5px; color: var(--text-3); }
+</style>
+</head>
+<body>
+
+<div class="sketchbar">
+  <b>Sketch 3</b>
+  <p class="note">Actions, report chrome, the signals, and "surf.".</p>
+  <div class="tsw" role="group" aria-label="Theme">
+    <button data-t="light" aria-pressed="false">Light</button>
+    <button data-t="dark" aria-pressed="true">Dark</button>
+  </div>
+</div>
+
+<div class="pagewrap"><div class="page">
+
+<!-- ============ 1 ============ -->
+<section class="sec">
+  <h2 class="sec-title">1 · The three verbs</h2>
+  <p class="sec-note">Icons, no ellipsis, and a colour question. The catch: teal already means
+    “the gap is real” and butter means “the timing” — so if Promote takes teal, evidence and action
+    start sharing a colour. Each option resolves that differently.</p>
+
+  <div class="trio">
+    <div class="opt"><span class="lab2">A · semantic action colours</span>
+      <div class="vrow">
+        <button class="vbtn a-go"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>Promote</button>
+        <button class="vbtn a-hold"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>Watch</button>
+        <button class="vbtn a-no"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>Pass</button>
+      </div>
+      <p class="verdict-note">Green go, amber hold, outlined no. The most instantly readable — and it
+        introduces a second green that isn't the evidence teal, which some will read as a clash.</p></div>
+
+    <div class="opt"><span class="lab2">B · hierarchy only</span>
+      <div class="vrow">
+        <button class="vbtn b-go"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>Promote</button>
+        <button class="vbtn b-hold"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>Watch</button>
+        <button class="vbtn b-no"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>Pass</button>
+      </div>
+      <p class="verdict-note">Solid / outline / ghost, with icons doing the semantic work. Zero collision
+        with the field colours — but three greys ask you to read the label every time.</p></div>
+
+    <div class="opt"><span class="lab2">C · one accent</span>
+      <div class="vrow">
+        <button class="vbtn c-go"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>Promote</button>
+        <button class="vbtn c-hold"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>Watch</button>
+        <button class="vbtn c-no"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>Pass</button>
+      </div>
+      <p class="verdict-note">Teal for the one committing action, quiet for the rest. Fewest colours on
+        screen — at the cost of teal meaning two things.</p></div>
+  </div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="sec">
+  <h2 class="sec-title">2 · A way out, and a header that stays</h2>
+  <p class="sec-note">The report has no back or close — only a breadcrumb that doesn't read as one.
+    And the score scrolls away exactly when you're deep enough in the evidence to want it. Scroll the
+    box below, then open a section: the header holds, and <b>your scroll position holds too</b>.</p>
+
+  <div class="fakerpt" id="fake">
+    <div class="stickyhd">
+      <button class="back" aria-label="Back to the drop"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="ringwrap miniring" style="--pct:92%;--rc:var(--teal)"><div class="ringnum"><b>87</b></div></div>
+      <div class="who"><b>Marguerite Vaillancourt</b><span>87/100 · 92% of checks resolved · gap 55/60 · strain 32/40</span></div>
+      <div class="verbs">
+        <button class="vbtn b-go" style="padding:8px 14px;font-size:12.5px">Promote</button>
+        <button class="vbtn b-hold" style="padding:8px 14px;font-size:12.5px">Watch</button>
+      </div>
+    </div>
+    <div class="fakebody">
+      <span class="lab2">The case</span>
+      <p>An audience of 1.2M is asking to buy something that does not exist. Warhol counted <b>1,940 purchase-intent comments</b> in the sampled window. Against that, 5 of 6 monetization lines came back verified absent across 21 surfaces, with 1 still inconclusive.</p>
+      <p>The timing signal is 3 explicit markers of self-reported capacity strain, and posting cadence is down 41% against the 90-day baseline.</p>
+      <p>Scroll further, then open a section below — the header stays and the page does not jump.</p>
+      <p>&nbsp;</p><p>&nbsp;</p>
+    </div>
+    <div class="fakedisc" data-fd="1"><span class="t">How it scored</span><span class="s">gap 55/60 · strain 32/40</span>
+      <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></div>
+    <div class="fakedisc-body" data-fdb="1"><p class="sec-note">The two pillars, their subsignals, and the Format Fit gate.</p></div>
+    <div class="fakedisc" data-fd="2"><span class="t">The check record</span><span class="s">21 surfaces · 33 days</span>
+      <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span></div>
+    <div class="fakedisc-body" data-fdb="2"><p class="sec-note">One row per check.</p></div>
+  </div>
+  <p class="verdict-note">The sticky header carries the way out, the identity, the score and the two
+    verbs — so you can decide from anywhere in the report without scrolling back up. The scroll-jump is
+    a bug in v3 (render replaces the whole DOM, resetting scroll 700 → 0); it gets fixed regardless of
+    what you pick here.</p>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="sec">
+  <h2 class="sec-title">3 · The signals</h2>
+  <p class="sec-note">You're right that the current chips don't help. <b>“5 of 6 lines absent · 21 surfaces
+    checked”</b> is a summary I computed — and the seed already carries the human version underneath it:
+    <b>“No newsletter, no site, no store”</b>, <b>“1,940 purchase-intent comments”</b>,
+    <b>“3 explicit markers”</b>, <b>“−41% vs 90d baseline”</b>. The fix is to stop summarising and start
+    surfacing.</p>
+
+  <div class="opt" style="border-style:dashed">
+    <span class="lab2">what it says today</span>
+    <div class="sigchips">
+      <span class="oldchip" style="background:var(--teal);color:var(--on-field)">5 of 6 lines absent · <b>21 surfaces checked</b></span>
+      <span class="oldchip" style="background:var(--butter);color:var(--on-field)">“sorry for the gap — filming these in one…” · <b>said 14 Jul 26</b></span>
+    </div>
+    <p class="verdict-note">Neither tells you what is missing, how much demand there is, or why now.
+      One is an arithmetic summary; the other is a truncated sentence.</p>
+  </div>
+
+  <div class="opt"><span class="lab2">A · three named signals</span>
+    <div class="card">
+      <div class="rk">1</div>
+      <div><div class="scorefield"><div class="n">87<small>/100</small></div><div class="d">Warhol score</div>
+        <div class="bits"><span style="background:var(--teal);flex:55"></span><span style="background:var(--butter);flex:32"></span><span style="background:rgba(255,255,255,.16);flex:13"></span></div></div></div>
+      <div>
+        <span class="nm">Marguerite Vaillancourt</span>
+        <span class="hd">@marguerite.bakes · TikTok · 1.2M across 3</span>
+        <div class="sigrow">
+          <div class="sig3"><span class="k k-demand">Demand</span><span class="v">1,940 people asked to buy</span></div>
+          <div class="sig3"><span class="k k-missing">Missing</span><span class="v">No newsletter, no site, no store</span></div>
+          <div class="sig3"><span class="k k-timing">Timing</span><span class="v">Says she can’t keep up — 3 times in 60 days</span></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <button class="vbtn b-go" style="justify-content:center">Promote</button>
+        <button class="vbtn b-hold" style="justify-content:center">Watch</button>
+        <button class="vbtn b-no" style="justify-content:center">Pass</button>
+      </div>
+    </div>
+    <p class="verdict-note">Three labelled facts, straight from the data. Scannable down a column of ten —
+      your eye can compare “Missing” across creators. No quote at all; it moves to expand.</p>
+  </div>
+
+  <div class="opt"><span class="lab2">B · signals + the quote that proves one</span>
+    <div class="card">
+      <div class="rk">1</div>
+      <div><div class="scorefield"><div class="n">87<small>/100</small></div><div class="d">Warhol score</div>
+        <div class="bits"><span style="background:var(--teal);flex:55"></span><span style="background:var(--butter);flex:32"></span><span style="background:rgba(255,255,255,.16);flex:13"></span></div></div></div>
+      <div>
+        <span class="nm">Marguerite Vaillancourt</span>
+        <span class="hd">@marguerite.bakes · TikTok · 1.2M across 3</span>
+        <div class="sigchips">
+          <span class="schip schip--teal"><span class="k">Demand</span><span class="v">1,940 asked to buy</span></span>
+          <span class="schip schip--teal"><span class="k">Missing</span><span class="v">Newsletter, site, store</span></span>
+          <span class="schip schip--butter"><span class="k">Timing</span><span class="v">Cadence −41%</span></span>
+        </div>
+        <p class="evq">“i have watched this croissant video 40 times. where is the newsletter. i will pay for the newsletter.”</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <button class="vbtn b-go" style="justify-content:center">Promote</button>
+        <button class="vbtn b-hold" style="justify-content:center">Watch</button>
+        <button class="vbtn b-no" style="justify-content:center">Pass</button>
+      </div>
+    </div>
+    <p class="verdict-note">The quote stops floating and becomes the evidence for the Demand chip directly
+      above it. Colour still carries gap-vs-timing. Denser, and the chips compress the wording to fit.</p>
+  </div>
+
+  <div class="opt"><span class="lab2">C · the case is the card</span>
+    <div class="card">
+      <div class="rk">1</div>
+      <div><div class="scorefield"><div class="n">87<small>/100</small></div><div class="d">Warhol score</div>
+        <div class="bits"><span style="background:var(--teal);flex:55"></span><span style="background:var(--butter);flex:32"></span><span style="background:rgba(255,255,255,.16);flex:13"></span></div></div></div>
+      <div>
+        <span class="nm">Marguerite Vaillancourt</span>
+        <span class="hd">@marguerite.bakes · TikTok · 1.2M across 3</span>
+        <p class="caseline"><b class="t-teal">1,940 people</b> asked her where to buy. She has
+          <b class="t-teal">no newsletter, no site and no store</b> — six surfaces checked, none exist.
+          She has said <b class="t-butter">three times in sixty days</b> that she can’t keep up.</p>
+        <p class="evq">“i have watched this croissant video 40 times. where is the newsletter.”</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <button class="vbtn b-go" style="justify-content:center">Promote</button>
+        <button class="vbtn b-hold" style="justify-content:center">Watch</button>
+        <button class="vbtn b-no" style="justify-content:center">Pass</button>
+      </div>
+    </div>
+    <p class="verdict-note">The case, composed from the same three signals, as one sentence you read rather
+      than parse — with the numbers coloured by which pillar they belong to. Most persuasive to read;
+      hardest to compare across ten, because there is no fixed column to scan down.</p>
+  </div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section class="sec">
+  <h2 class="sec-title">4 · “surf.”</h2>
+  <p class="sec-note">It means surfaces — the number of distinct places Warhol looked before calling
+    something absent. It is the credibility number in the whole product and it is abbreviated to four
+    characters nobody can parse.</p>
+  <div class="trio">
+    <div class="opt"><span class="lab2">i · spell it out</span>
+      <ul class="invdemo"><li><i></i><span>Newsletter</span><span class="s">6 surfaces</span></li>
+        <li><i></i><span>Website</span><span class="s">4 surfaces</span></li>
+        <li><i></i><span>Storefront</span><span class="s">5 surfaces</span></li></ul>
+      <p class="verdict-note">Keeps the PRD's own word. Costs a little width.</p></div>
+    <div class="opt"><span class="lab2">ii · plain English</span>
+      <ul class="invdemo"><li><i></i><span>Newsletter</span><span class="s">checked 6 places</span></li>
+        <li><i></i><span>Website</span><span class="s">checked 4 places</span></li>
+        <li><i></i><span>Storefront</span><span class="s">checked 5 places</span></li></ul>
+      <p class="verdict-note">Unambiguous to anyone. Drops the term the report elsewhere relies on.</p></div>
+    <div class="opt"><span class="lab2">iii · a column header</span>
+      <div style="display:flex;justify-content:space-between;font-size:9.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--text-3);border-bottom:1px solid var(--line);padding-bottom:7px"><span>Line</span><span>Surfaces checked</span></div>
+      <ul class="invdemo"><li><i></i><span>Newsletter</span><span class="s">6</span></li>
+        <li><i></i><span>Website</span><span class="s">4</span></li>
+        <li><i></i><span>Storefront</span><span class="s">5</span></li></ul>
+      <p class="verdict-note">Says it once, then bare numbers. Tightest, and only works in a table.</p></div>
+  </div>
+</section>
+
+</div></div>
+
+<script>
+(function () {
+  document.querySelectorAll('.fakedisc').forEach(function (d) {
+    d.addEventListener('click', function () {
+      var k = d.getAttribute('data-fd');
+      var body = document.querySelector('[data-fdb="' + k + '"]');
+      d.classList.toggle('open');
+      body.classList.toggle('on');
+    });
+  });
+  document.querySelectorAll('.sketchbar .tsw button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.documentElement.setAttribute('data-theme', b.dataset.t);
+      document.querySelectorAll('.sketchbar .tsw button').forEach(function (x) {
+        x.setAttribute('aria-pressed', String(x === b));
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

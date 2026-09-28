@@ -1,0 +1,4146 @@
+{
+  "creatorId": "sipandfeast",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:04:41.974Z",
+  "observationCount": 970,
+  "brief": "Home cooking and recipe creators — people who cook one dish on camera start to finish in a repeatable format, for a US audience.",
+  "source": "proposed",
+  "sourceWhy": "a model proposed this handle from a brief — Italian-American home cook filming one family recipe per episode; frequently cited in food press.. Nothing has checked that it is the person it meant; what follows checks their inventory, not their identity.",
+  "escalated": false,
+  "escalatedWhy": "we looked in 28 places — they already have a youtube channel, newsletter and store. We didn't go further.",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 22200,
+      "avatar": {
+        "url": "https://p16-common-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/9819786409189161018eeb7328484e45~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=769d2171&x-expires=1786885200&x-signature=cTDEvipwYpR7MzuIm1Z6%2BhEpXtA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@sipandfeast",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 1180000,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/dGzB5WKzXi5GQuLtrL6YNLtuB7zZ_GrJo_4Ns8N-T8G4BgKWHftCPFfXOOOjp55IFD3_Ejsa=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@sipandfeast",
+      "why": "Sip and Feast — the YouTube Data API resolved @sipandfeast"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/sipandfeast/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 400,
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=sipandfeast.bsky.social",
+      "why": "page says it is not there"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@sipandfeast",
+      "evidence": "https://www.youtube.com/@sipandfeast",
+      "placesLooked": 13,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.485Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.485Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.485Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.485Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.485Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.257Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.257Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.257Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.257Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.835Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.835Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.835Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.835Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.835Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.139Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.139Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.139Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.139Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.139Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.542Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.543Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.543Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.543Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.851Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.851Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.851Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.851Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.851Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.124Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.124Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.124Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.124Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.124Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.959Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.960Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.960Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.960Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.960Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.156Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.156Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.156Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.156Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.156Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.591Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.591Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.591Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.591Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.591Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.004Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.004Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.004Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.178Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.178Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.178Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.906Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.906Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.906Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.906Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.906Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — sipandfeast.com",
+      "evidence": "https://www.sipandfeast.com/",
+      "placesLooked": 76,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.488Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sipandfeast?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sipandfeast",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.488Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sipandfeast.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.488Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.488Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.488Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — sipandfeast.com",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.488Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.488Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.261Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sipandfeast?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sipandfeast",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.261Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sipandfeast.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.262Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.262Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.262Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — sipandfeast.com",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.262Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.262Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.837Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sipandfeast?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sipandfeast",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.837Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sipandfeast.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.837Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.837Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.838Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — sipandfeast.com",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.838Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.838Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.141Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sipandfeast?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sipandfeast",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.141Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sipandfeast.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.141Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.141Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.141Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — sipandfeast.com",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.141Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.141Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.545Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sipandfeast?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sipandfeast",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.545Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sipandfeast.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.545Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.545Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.545Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — sipandfeast.com",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.545Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.545Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/subscribe/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.545Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.853Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sipandfeast?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sipandfeast",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.853Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sipandfeast.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.853Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.853Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.853Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — sipandfeast.com",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.853Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.853Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.853Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.127Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sipandfeast?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sipandfeast",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.127Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sipandfeast.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.127Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.127Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.127Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — sipandfeast.com",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.127Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.127Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.963Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sipandfeast?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sipandfeast",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.963Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sipandfeast.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.963Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.963Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.964Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — sipandfeast.com",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.964Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.964Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.158Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sipandfeast?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sipandfeast",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.158Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sipandfeast.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.158Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.158Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.158Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — sipandfeast.com",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.158Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.159Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.593Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sipandfeast?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sipandfeast",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.593Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sipandfeast.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.593Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.593Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.593Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — sipandfeast.com",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.593Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://sipandfeast.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.593Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.593Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.sipandfeast.com/feed/",
+          "status": 200,
+          "why": "10 posts read from Sip and Feast — the publication title reads \"Sip and Feast\"",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.072Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.073Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sipandfeast?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sipandfeast",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.073Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sipandfeast.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.073Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.073Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.073Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — sipandfeast.com",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.073Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.sipandfeast.com/feed/",
+          "status": 200,
+          "why": "10 posts read from Sip and Feast — the publication title reads \"Sip and Feast\"",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.229Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "inconclusive",
+          "url": "https://sipandfeast.substack.com/",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.229Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@sipandfeast",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.229Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sipandfeast.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.229Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.229Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.229Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — sipandfeast.com",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.229Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.sipandfeast.com/feed/",
+          "status": 200,
+          "why": "10 posts read from Sip and Feast — the publication title reads \"Sip and Feast\"",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.948Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.949Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/sipandfeast?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/sipandfeast",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.949Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://sipandfeast.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.949Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.949Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://sipandfeast.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.949Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "their own site says \"newsletter\" — sipandfeast.com",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.949Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/newsletter",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.949Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — sipandfeast.com/cookbook",
+      "evidence": "https://www.sipandfeast.com/cookbook/",
+      "placesLooked": 48,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sipandfeast.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.493Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.493Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T13:26:23.493Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.493Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T13:26:23.493Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/cookbook/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — sipandfeast.com/cookbook",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.493Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/shop",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.493Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/store-bought-pizza-dough-garlicky-sauce/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.494Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sipandfeast.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.269Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.269Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T15:58:54.269Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.269Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T15:58:54.269Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/cookbook/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — sipandfeast.com/cookbook",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.269Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/store-bought-pizza-dough-garlicky-sauce/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.269Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sipandfeast.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.842Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.842Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T16:56:19.842Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.843Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T16:56:19.843Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/cookbook/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — sipandfeast.com/cookbook",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.843Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/shop",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.843Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sipandfeast.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.147Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.147Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T16:56:22.147Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.147Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T16:56:22.147Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/cookbook/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — sipandfeast.com/cookbook",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.147Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/shop",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.147Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sipandfeast.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.549Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.549Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T16:58:52.549Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.549Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T16:58:52.549Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/cookbook/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — sipandfeast.com/cookbook",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.549Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/shop",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.549Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/store-bought-pizza-dough-garlicky-sauce/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.550Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sipandfeast.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.857Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.857Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:01:53.857Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.857Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:01:53.857Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/cookbook/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — sipandfeast.com/cookbook",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.857Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/shop",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.857Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sipandfeast.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.133Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.133Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:04:30.133Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.133Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:04:30.133Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/cookbook/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — sipandfeast.com/cookbook",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.133Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/shop",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.133Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/store-bought-pizza-dough-garlicky-sauce/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.133Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sipandfeast.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.970Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.970Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:11:10.970Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.971Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:11:10.971Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/cookbook/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — sipandfeast.com/cookbook",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.971Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/store-bought-pizza-dough-garlicky-sauce/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.971Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sipandfeast.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.163Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.163Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:18:00.163Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.163Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:18:00.163Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/cookbook/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — sipandfeast.com/cookbook",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.163Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/shop",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.163Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/store-bought-pizza-dough-garlicky-sauce/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.163Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sipandfeast.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.598Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.598Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:25:54.598Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.598Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T17:25:54.598Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/cookbook/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — sipandfeast.com/cookbook",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.599Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/shop",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.599Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sipandfeast.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.077Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.077Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:00:09.077Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.077Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:00:09.077Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/cookbook/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — sipandfeast.com/cookbook",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.077Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sipandfeast.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.233Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.233Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:54:33.233Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.233Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:54:33.233Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/cookbook/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — sipandfeast.com/cookbook",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.233Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://sipandfeast.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.956Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.956Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:04:40.956Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.956Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/sipandfeast",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:04:40.956Z"
+        },
+        {
+          "place": "own_site",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/cookbook/",
+          "status": 200,
+          "why": "their own site says \"add to cart\" — sipandfeast.com/cookbook",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.956Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/shop",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.957Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/store-bought-pizza-dough-garlicky-sauce/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.957Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at patreon.com/sipandfeast — not confirmed as theirs",
+      "evidence": "https://www.patreon.com/sipandfeast",
+      "placesLooked": 24,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.495Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.495Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.495Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.271Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.271Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.271Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.845Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.845Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:19.845Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.148Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.149Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.149Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.149Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.551Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.551Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.551Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/patreon",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.551Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.858Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.858Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:01:53.858Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.135Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.135Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.135Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.973Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.973Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.973Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.973Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.164Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.164Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.165Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.165Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.600Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.600Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/subscribe/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.600Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.078Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.078Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.236Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.236Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.959Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/sipandfeast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.959Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.sipandfeast.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.959Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/sipandfeast",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:04:40.959Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by an official directory",
+      "why": "found it — https://podcasts.apple.com/us/podcast/jim-cornette-experience/id1133194268?uo=4",
+      "evidence": "https://itunes.apple.com/search?term=Jim&entity=podcast&limit=5",
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Jim&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Jim Rome Show\" by Cumulus Podcast Network",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.916Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "inconclusive",
+          "url": "https://www.sipandfeast.com/podcast",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.917Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://sipandfeast.com/podcast",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.917Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Jim&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Jim Rome Show\" by Cumulus Podcast Network",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.294Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "inconclusive",
+          "url": "https://www.sipandfeast.com/podcast",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.294Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Jim&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Jim Rome Show\" by Cumulus Podcast Network",
+          "advisory": false,
+          "at": "2026-08-07T16:56:20.103Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "hit",
+          "url": "https://www.podbean.com/login?url=https%3A%2F%2Fsipandfeast.podbean.com%2F&error=Invalid%20Podbean%20Site(2)",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:56:20.103Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://sipandfeast.buzzsprout.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:20.104Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://open.spotify.com/show/sipandfeast",
+          "status": 400,
+          "why": "HTTP 400 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T16:56:20.104Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Jim&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Jim Rome Show\" by Cumulus Podcast Network",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.158Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "inconclusive",
+          "url": "https://sipandfeast.com/podcast",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.158Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://podcasts.apple.com/podcast/sip-and-feast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.158Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Jim&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Jim Rome Show\" by Cumulus Podcast Network",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.606Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "inconclusive",
+          "url": "https://www.sipandfeast.com/podcast",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.606Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Jim&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Jim Rome Show\" by Cumulus Podcast Network",
+          "advisory": false,
+          "at": "2026-08-07T17:01:54.040Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "inconclusive",
+          "url": "https://www.sipandfeast.com/podcast",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T17:01:54.040Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://sipandfeast.com/podcast",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T17:01:54.040Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Jim&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Jim Rome Show\" by Cumulus Podcast Network",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.146Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "inconclusive",
+          "url": "https://sipandfeast.com/podcast",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.147Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://www.sipandfeast.com/podcast",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.147Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Jim&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Jim Rome Show\" by Cumulus Podcast Network",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.989Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "inconclusive",
+          "url": "https://sipandfeast.com/podcast",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.989Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Jim&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Jim Rome Show\" by Cumulus Podcast Network",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.306Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "inconclusive",
+          "url": "https://sipandfeast.com/podcast",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.306Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Jim&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Jim Rome Show\" by Cumulus Podcast Network",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.653Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://sipandfeast.buzzsprout.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.653Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://www.sipandfeast.com/podcast",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.653Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/68d88dd8-0e46-49d6-a04b-b03b00e5dcfc/e0e75fc1-875b-4b63-846e-b03b00f9b9d0/7d080a90-b553-41d6-88a2-b03b00f9ba04/podcast.rss",
+          "status": 200,
+          "why": "100 posts read from Jim Cornette Experience — the publication title reads \"Jim Cornette Experience\"",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.709Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Jim&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Jim Cornette Experience\" by Arcadian Vanguard",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.710Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/68d88dd8-0e46-49d6-a04b-b03b00e5dcfc/e0e75fc1-875b-4b63-846e-b03b00f9b9d0/7d080a90-b553-41d6-88a2-b03b00f9ba04/podcast.rss",
+          "status": 200,
+          "why": "100 posts read from Jim Cornette Experience — the publication title reads \"Jim Cornette Experience\"",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.775Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Jim&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Jim Cornette Experience\" by Arcadian Vanguard",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.776Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.omnycontent.com/d/playlist/68d88dd8-0e46-49d6-a04b-b03b00e5dcfc/e0e75fc1-875b-4b63-846e-b03b00f9b9d0/7d080a90-b553-41d6-88a2-b03b00f9ba04/podcast.rss",
+          "status": 200,
+          "why": "100 posts read from Jim Cornette Experience — the publication title reads \"Jim Cornette Experience\"",
+          "advisory": false,
+          "at": "2026-08-14T13:04:41.240Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Jim&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Jim Cornette Experience\" by Arcadian Vanguard",
+          "advisory": false,
+          "at": "2026-08-14T13:04:41.240Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "inconclusive",
+          "url": "https://sipandfeast.com/podcast",
+          "status": 200,
+          "why": "HTTP 200 with nothing recognisable on the page",
+          "advisory": false,
+          "at": "2026-08-14T13:04:41.240Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by a link they publish",
+      "why": "found it — sipandfeast.com",
+      "evidence": "https://www.sipandfeast.com/",
+      "placesLooked": 13,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.917Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sipandfeast.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.917Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.294Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sipandfeast.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.294Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/recipes/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.294Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/about-me/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.294Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/contact/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.294Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:56:20.104Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sipandfeast.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T16:56:20.104Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.158Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sipandfeast.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.158Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.607Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sipandfeast.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.607Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:01:54.040Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sipandfeast.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:01:54.041Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.147Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sipandfeast.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.147Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.989Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sipandfeast.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.989Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://www.instagram.com/sipandfeast",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.989Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.307Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sipandfeast.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.307Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.653Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sipandfeast.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.653Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.sipandfeast.com/feed/",
+          "status": 200,
+          "why": "10 posts read from Sip and Feast — the publication title reads \"Sip and Feast\"",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.760Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.761Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sipandfeast.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.761Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.sipandfeast.com/feed/",
+          "status": 200,
+          "why": "10 posts read from Sip and Feast — the publication title reads \"Sip and Feast\"",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.817Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.817Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sipandfeast.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.817Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.sipandfeast.com/feed/",
+          "status": 200,
+          "why": "10 posts read from Sip and Feast — the publication title reads \"Sip and Feast\"",
+          "advisory": false,
+          "at": "2026-08-14T13:04:41.344Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.sipandfeast.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:04:41.344Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://sipandfeast.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:04:41.344Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.917Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.295Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T16:56:20.104Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.158Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.607Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:01:54.041Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.147Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.989Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.307Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.654Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.761Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.817Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:04:41.344Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.917Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.295Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T16:56:20.104Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.158Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.607Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:01:54.041Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.147Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.989Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.307Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.654Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.761Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.817Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:04:41.344Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T13:26:23.917Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T15:58:54.295Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T16:56:20.104Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T16:56:22.158Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T16:58:52.607Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:01:54.041Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:04:30.147Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:11:10.989Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:18:00.307Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T17:25:54.654Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T20:00:09.761Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:54:33.818Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:04:41.344Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": 0.503,
+    "recentPerMonth": 2.33,
+    "baselinePerMonth": 4.69,
+    "recentCount": 7,
+    "baselineCount": 43,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 275,
+    "sampled": 100,
+    "truncated": false,
+    "recentMedianViews": 106044,
+    "baselineMedianViews": 126701,
+    "unit": "videos",
+    "line": "2.3 videos a month now, against 4.7 before that — down 50%; the recent ones are getting 16% fewer views"
+  },
+  "samples": [
+    {
+      "platform": "Podcast",
+      "publication": "Jim Cornette Experience",
+      "kind": "episode",
+      "title": "Episode 646: Remembering Dory Funk Jr.",
+      "url": "https://omny.fm/shows/jim-cornette-experience/episode-646-remembering-dory-funk-jr",
+      "at": "2026-08-12T14:51:31.000Z",
+      "thumbnail": null,
+      "excerpt": "This week on the Experience, Jim looks back on the life & career of Dory Funk Junior! Plus Jim reviews AEW Dynamite: Grand Slam Mexico, and Dark Side Of The Ring's Renegade episode! Also, Jim talks about recent wrestler injuries, Dave Meltzer's SummerSlam star ratings, The Undertaker's hatred of pod",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:04:41.973Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Sip and Feast",
+      "kind": "writing",
+      "title": "Easy Chorizo Pasta",
+      "url": "https://www.sipandfeast.com/chorizo-pasta/",
+      "at": "2026-08-10T18:28:04.000Z",
+      "thumbnail": null,
+      "excerpt": "A little heat and tons of flavor come together effortlessly in my easy Chorizo Pasta. The perfect dish when you’re…\n The post Easy Chorizo Pasta appeared first on Sip and Feast .",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:04:41.974Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Sip and Feast",
+      "kind": "writing",
+      "title": "Creamy Pork Tenderloin with Tangy Mushroom Sauce",
+      "url": "https://www.sipandfeast.com/creamy-pork-tenderloin-mushrooms/",
+      "at": "2026-08-07T19:20:49.000Z",
+      "thumbnail": null,
+      "excerpt": "My Creamy Pork Tenderloin combines sliced medallions of pork that are seared and finished in a creamy brandy mushroom sauce…\n The post Creamy Pork Tenderloin with Tangy Mushroom Sauce appeared first on Sip and Feast .",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:04:41.974Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Jim Cornette Experience",
+      "kind": "episode",
+      "title": "Episode 645: Cursing Raw",
+      "url": "https://omny.fm/shows/jim-cornette-experience/episode-645-cursing-raw",
+      "at": "2026-08-05T16:29:54.000Z",
+      "thumbnail": null,
+      "excerpt": "This week on the Experience, Jim reviews Dark Side's Big Boss Man episode, AEW Dynamite, Grayson Waller's NXT promo, and Danhausen & Joe Hendry's concert on WWE Raw! Plus Jim talks about Bron Breakker, Dave Meltzer's star ratings for Redemption, Vince Russo's comments about Triple H & WWE creative, ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:04:41.974Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "Sip and Feast",
+      "kind": "writing",
+      "title": "Cobb Salad – Hearty and Satisfying",
+      "url": "https://www.sipandfeast.com/cobb-salad/",
+      "at": "2026-08-03T15:44:45.000Z",
+      "thumbnail": null,
+      "excerpt": "The unmistakable combination of chicken, bacon, hard-boiled egg, avocado, tomatoes, and blue cheese makes the Cobb Salad one of the…\n The post Cobb Salad – Hearty and Satisfying appeared first on Sip and Feast .",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:04:41.974Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Jim Cornette Experience",
+      "kind": "episode",
+      "title": "Episode 644: Is She Really Going Out With Him?",
+      "url": "https://omny.fm/shows/jim-cornette-experience/episode-644-is-she-really-goingout-with-him",
+      "at": "2026-07-29T18:18:44.000Z",
+      "thumbnail": null,
+      "excerpt": "This week on the Experience, Jim reviews WWE Unreal season 3, episodes 1 & 2! Plus Jim reviews AEW Dynamite & Dark Side's Samoa Joe vs. Necro Butcher episode! Also, Jim previews SummerSlam, and talks about WWE Radio, Oregon's wrestling commission, typhoons in Saipan, and much more!\n Thanks to our ep",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:04:41.974Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "The Pasta Salads I Make Every Summer",
+      "url": "https://www.youtube.com/watch?v=cw9y0eVeXZk",
+      "at": "2026-07-02T14:31:29Z",
+      "thumbnail": "https://i.ytimg.com/vi/cw9y0eVeXZk/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 70998,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:04:30.859Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "What I Actually Make With Summer Zucchini",
+      "url": "https://www.youtube.com/watch?v=QwqO8KsEccA",
+      "at": "2026-06-25T14:30:25Z",
+      "thumbnail": "https://i.ytimg.com/vi/QwqO8KsEccA/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 44982,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:04:30.859Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "3 Cold Dinners That Taste Better Than They Should",
+      "url": "https://www.youtube.com/watch?v=Szd-OnjhrAo",
+      "at": "2026-06-18T14:30:15Z",
+      "thumbnail": "https://i.ytimg.com/vi/Szd-OnjhrAo/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 100714,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:04:30.860Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "The Cheap Dinners I Made When Money Was Tight",
+      "url": "https://www.youtube.com/watch?v=f6SaDDHhvNw",
+      "at": "2026-06-11T14:30:56Z",
+      "thumbnail": "https://i.ytimg.com/vi/f6SaDDHhvNw/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 117687,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:04:30.860Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "What I Actually Eat When I Don't Feel Like Cooking",
+      "url": "https://www.youtube.com/watch?v=QryhQcRnrb0",
+      "at": "2026-06-04T14:33:53Z",
+      "thumbnail": "https://i.ytimg.com/vi/QryhQcRnrb0/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 220527,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:04:30.860Z",
+      "status": null
+    }
+  ],
+  "headline": null,
+  "samplesSearched": {
+    "count": 9,
+    "why": "9 pieces of their own work"
+  },
+  "commentsRead": null,
+  "audienceHistory": [
+    {
+      "audience": 1180000,
+      "at": "2026-08-07T13:26:07.436Z"
+    },
+    {
+      "audience": 1180000,
+      "at": "2026-08-07T15:58:46.262Z"
+    },
+    {
+      "audience": 1180000,
+      "at": "2026-08-07T16:56:01.584Z"
+    },
+    {
+      "audience": 1180000,
+      "at": "2026-08-07T16:56:02.531Z"
+    },
+    {
+      "audience": 1180000,
+      "at": "2026-08-07T16:58:38.286Z"
+    },
+    {
+      "audience": 1180000,
+      "at": "2026-08-07T17:01:25.571Z"
+    },
+    {
+      "audience": 1180000,
+      "at": "2026-08-07T17:03:56.355Z"
+    },
+    {
+      "audience": 1180000,
+      "at": "2026-08-07T17:10:29.314Z"
+    },
+    {
+      "audience": 1180000,
+      "at": "2026-08-07T17:17:26.422Z"
+    },
+    {
+      "audience": 1180000,
+      "at": "2026-08-07T17:25:19.467Z"
+    },
+    {
+      "audience": 1180000,
+      "at": "2026-08-12T20:00:05.326Z"
+    },
+    {
+      "audience": 1180000,
+      "at": "2026-08-14T12:54:30.735Z"
+    },
+    {
+      "audience": 1180000,
+      "at": "2026-08-14T13:04:30.859Z"
+    }
+  ],
+  "audience": 1180000,
+  "audienceWhy": "YouTube alone — nothing links the TikTok to it",
+  "audienceSeparate": [
+    {
+      "id": "tiktok_profile",
+      "followers": 22200,
+      "url": "https://www.tiktok.com/@sipandfeast",
+      "why": "nothing on either page links the TikTok to the YouTube, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 6,
+    "brief": "Home cooking and recipe creators — people who cook one dish on camera start to finish in a repeatable format, for a US audience.",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 0,
+      "max": 35,
+      "lines": [],
+      "share": 0,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 0,
+    "pressure": {
+      "points": 5.5,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 5.5,
+          "line": "2.3 videos a month now, against 4.7 before that — down 50%; the recent ones are getting 16% fewer views",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "not_judged",
+      "because": "the model pass did not run, and Fit is a judgment — no model, no verdict"
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 7 days apart, the trend needs 90",
+      "why": "our two looks are 7 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.833,
+      "resolved": 5,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 1
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "not_judged",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 470,
+    "places": 40,
+    "from": "2026-08-07T13:26:06.094Z",
+    "to": "2026-08-14T13:04:41.974Z"
+  }
+}

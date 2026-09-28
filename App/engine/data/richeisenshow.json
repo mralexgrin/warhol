@@ -1,0 +1,4156 @@
+{
+  "creatorId": "richeisenshow",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:10:26.089Z",
+  "observationCount": 809,
+  "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": true,
+  "escalatedWhy": "store — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@richeisenshow",
+      "why": "the page loaded and there is nothing there"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 1120000,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/hxOYtjjvrWEso3-Y80JTcGL3VHCn28ZOdPvwg0Im0X6MYTIddoC2kj3e9NaS8zgjgb8zSKNyFQ=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@richeisenshow",
+      "why": "The Rich Eisen Show — the YouTube Data API resolved @richeisenshow"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/richeisenshow/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": true,
+      "followers": 4341,
+      "avatar": {
+        "url": "https://cdn.bsky.app/img/avatar/plain/did:plc:gftntw3dqynj2digg3f7wcl3/bafkreifickjpvbihghzwyxuq5o3rcwmwufg7mxb4ho36hzwov2g4kt2fea",
+        "expires": null,
+        "host": "bsky.app"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://bsky.app/profile/richeisenshow.bsky.social",
+      "why": "richeisenshow.bsky.social — the profile goes by \"The Rich Eisen Show\", the same name as their YouTube, and the AppView resolved it to did:plc:gftntw3dqynj2digg3f7wcl3"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@richeisenshow",
+      "evidence": "https://www.youtube.com/@richeisenshow",
+      "placesLooked": 18,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.158Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.158Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.158Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/RichEisenShow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.158Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@RichEisenShow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.158Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.539Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.539Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.539Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.539Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/thericheisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.539Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.627Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.627Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.627Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/youtube",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.627Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.627Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.892Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.892Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.892Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.892Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.892Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.204Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.204Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.204Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.204Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/thericheisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.204Z"
+        },
+        {
+          "place": "proposed_5",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/youtube",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.204Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:11.677Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:11.677Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:11.677Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.823Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.823Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.823Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:29:31.499Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/richeisenshow",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:29:31.499Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/richeisenshow",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:29:31.499Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:24.373Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:24.373Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:24.373Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.668Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.668Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.668Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.180Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.180Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.180Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:07.618Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:07.618Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:07.618Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@richeisenshow",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:07.618Z"
+        },
+        {
+          "place": "proposed_4",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/c/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:07.618Z"
+        },
+        {
+          "place": "proposed_5",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/youtube",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:07.619Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at richeisenshow.com/newsletter — not confirmed as theirs",
+      "evidence": "https://richeisenshow.com/newsletter",
+      "placesLooked": 60,
+      "checks": [
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.159Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/richeisenshow?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/richeisenshow",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.159Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://richeisenshow.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.159Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.159Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.159Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/newsletter",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.159Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.539Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/richeisenshow?searching=profile",
+          "status": 429,
+          "why": "redirected to substack.com/search/richeisenshow",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.539Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://richeisenshow.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.539Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.540Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.540Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/newsletter",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.540Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.628Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/richeisenshow?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/richeisenshow",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.628Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://richeisenshow.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.628Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.628Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.628Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/newsletter",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.628Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://richeisenshow.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.628Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.892Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/richeisenshow?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/richeisenshow",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.892Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://richeisenshow.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.892Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.892Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.892Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/newsletter",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.893Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/newsletter",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.893Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.204Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/richeisenshow?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/richeisenshow",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.204Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://richeisenshow.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.204Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.204Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.205Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/newsletter",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.205Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:11.677Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/richeisenshow?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/richeisenshow",
+          "advisory": false,
+          "at": "2026-08-10T21:28:11.678Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://richeisenshow.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:11.678Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:11.678Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:11.678Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.823Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@richeisenshow",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.823Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://richeisenshow.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.824Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.824Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.824Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:31.499Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/richeisenshow?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/richeisenshow",
+          "advisory": false,
+          "at": "2026-08-12T15:29:31.499Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://richeisenshow.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:31.499Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:31.499Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:31.499Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:24.374Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/richeisenshow?searching=profile",
+          "status": 429,
+          "why": "redirected to substack.com/search/richeisenshow",
+          "advisory": false,
+          "at": "2026-08-12T19:59:24.374Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://richeisenshow.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:24.374Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:24.374Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:24.374Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.669Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/richeisenshow?searching=profile",
+          "status": 429,
+          "why": "redirected to substack.com/search/richeisenshow",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.669Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://richeisenshow.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.669Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.669Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.669Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.181Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/richeisenshow?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/richeisenshow",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.181Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://richeisenshow.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.181Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.181Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.181Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed",
+          "status": 410,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.646Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.646Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.647Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.647Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.648Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.648Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.substack.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.649Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "inconclusive",
+          "url": "https://substack.com/@richeisenshow",
+          "status": 429,
+          "why": "HTTP 429 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.649Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://richeisenshow.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.649Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.650Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://richeisenshow.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.650Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/newsletter",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.650Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/subscribe",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.650Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 4 places · 2 wouldn't answer",
+      "evidence": null,
+      "placesLooked": 42,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://richeisenshow.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.159Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.159Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:34:22.159Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.159Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T20:34:22.160Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.160Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://richeisenshow.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.540Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.540Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:54:10.540Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.540Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:54:10.540Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.540Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://richeisenshow.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.628Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.628Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:57:31.628Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.628Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-06T21:57:31.628Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.628Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://richeisenshow.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.893Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.893Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:44:51.893Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.893Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:44:51.893Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.894Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://richeisenshow.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.205Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.205Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:49:17.205Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.205Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-07T11:49:17.205Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.205Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://richeisenshow.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:11.678Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:11.678Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:28:11.678Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-10T21:28:11.678Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:28:11.678Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://richeisenshow.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.824Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.824Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:35:24.824Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.825Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-10T21:35:24.825Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://richeisenshow.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:31.499Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:31.499Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:29:31.499Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:29:31.500Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:29:31.500Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://richeisenshow.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:24.374Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:24.374Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:59:24.374Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T19:59:24.374Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T19:59:24.374Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://richeisenshow.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.669Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.669Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:27:01.669Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.669Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T20:27:01.669Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://richeisenshow.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.181Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.181Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:53:24.181Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.181Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:53:24.181Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://richeisenshow.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.651Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.651Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:10:09.651Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.651Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/richeisenshow",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:10:09.651Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/store",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.651Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 31,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.160Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.160Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.160Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.160Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.540Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.540Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.540Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.629Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.629Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:31.629Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.894Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.894Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.894Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.205Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.205Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.206Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:11.678Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:28:11.678Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.825Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-10T21:35:24.825Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:31.500Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:29:31.500Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:24.374Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T19:59:24.374Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.669Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T20:27:01.670Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.181Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.181Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.652Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.652Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:09.652Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by an official directory",
+      "why": "found it — https://podcasts.apple.com/us/podcast/the-rich-eisen-show/id926642601?uo=4",
+      "evidence": "https://itunes.apple.com/search?term=The%20Rich%20Eisen%20Show&entity=podcast&limit=5",
+      "placesLooked": 10,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Rich%20Eisen%20Show&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Rich Eisen Show\" by ESPN, Rich Eisen Productions, Rich Eisen",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.535Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.535Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Rich%20Eisen%20Show&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Rich Eisen Show\" by ESPN, Rich Eisen Productions, Rich Eisen",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.867Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.867Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/podcast/feed",
+          "status": 410,
+          "why": "HTTP 410",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.867Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Rich%20Eisen%20Show&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Rich Eisen Show\" by ESPN, Rich Eisen Productions, Rich Eisen",
+          "advisory": false,
+          "at": "2026-08-06T21:57:32.023Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:57:32.023Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/podcast/feed",
+          "status": 410,
+          "why": "HTTP 410",
+          "advisory": false,
+          "at": "2026-08-06T21:57:32.023Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Rich%20Eisen%20Show&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Rich Eisen Show\" by ESPN, Rich Eisen Productions, Rich Eisen",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.922Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.922Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.922Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Rich%20Eisen%20Show&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Rich Eisen Show\" by ESPN, Rich Eisen Productions, Rich Eisen",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.224Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.224Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.224Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.megaphone.fm/WWO9698947413",
+          "status": 200,
+          "why": "200 posts read from The Rich Eisen Show — the publication title reads \"The Rich Eisen Show\"",
+          "advisory": false,
+          "at": "2026-08-10T21:28:12.447Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Rich%20Eisen%20Show&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Rich Eisen Show\" by ESPN, Rich Eisen Productions, Rich Eisen",
+          "advisory": false,
+          "at": "2026-08-10T21:28:12.448Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.megaphone.fm/WWO9698947413",
+          "status": 200,
+          "why": "200 posts read from The Rich Eisen Show — the publication title reads \"The Rich Eisen Show\"",
+          "advisory": false,
+          "at": "2026-08-10T21:35:25.539Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Rich%20Eisen%20Show&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Rich Eisen Show\" by ESPN, Rich Eisen Productions, Rich Eisen",
+          "advisory": false,
+          "at": "2026-08-10T21:35:25.539Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.megaphone.fm/WWO9698947413",
+          "status": 200,
+          "why": "200 posts read from The Rich Eisen Show — the publication title reads \"The Rich Eisen Show\"",
+          "advisory": false,
+          "at": "2026-08-12T15:29:33.723Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Rich%20Eisen%20Show&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Rich Eisen Show\" by ESPN, Rich Eisen Productions, Rich Eisen",
+          "advisory": false,
+          "at": "2026-08-12T15:29:33.723Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.megaphone.fm/WWO9698947413",
+          "status": 200,
+          "why": "200 posts read from The Rich Eisen Show — the publication title reads \"The Rich Eisen Show\"",
+          "advisory": false,
+          "at": "2026-08-12T19:59:25.203Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Rich%20Eisen%20Show&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Rich Eisen Show\" by ESPN, Rich Eisen Productions, Rich Eisen",
+          "advisory": false,
+          "at": "2026-08-12T19:59:25.204Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.megaphone.fm/WWO9698947413",
+          "status": 200,
+          "why": "200 posts read from The Rich Eisen Show — the publication title reads \"The Rich Eisen Show\"",
+          "advisory": false,
+          "at": "2026-08-12T20:27:02.593Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Rich%20Eisen%20Show&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Rich Eisen Show\" by ESPN, Rich Eisen Productions, Rich Eisen",
+          "advisory": false,
+          "at": "2026-08-12T20:27:02.593Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.megaphone.fm/WWO9698947413",
+          "status": 200,
+          "why": "200 posts read from The Rich Eisen Show — the publication title reads \"The Rich Eisen Show\"",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.814Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Rich%20Eisen%20Show&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Rich Eisen Show\" by ESPN, Rich Eisen Productions, Rich Eisen",
+          "advisory": false,
+          "at": "2026-08-14T12:53:24.814Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.megaphone.fm/WWO9698947413",
+          "status": 200,
+          "why": "200 posts read from The Rich Eisen Show — the publication title reads \"The Rich Eisen Show\"",
+          "advisory": false,
+          "at": "2026-08-14T13:10:10.283Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=The%20Rich%20Eisen%20Show&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"The Rich Eisen Show\" by ESPN, Rich Eisen Productions, Rich Eisen",
+          "advisory": false,
+          "at": "2026-08-14T13:10:10.283Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://richeisenshow.com/podcast",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:10:10.283Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by a link back to their YouTube",
+      "why": "found it — richeisenshow.com · that page links back to their YouTube",
+      "evidence": "https://richeisenshow.com/",
+      "placesLooked": 14,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.536Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://richeisenshow.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.536Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.richeisen.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.536Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.867Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://richeisenshow.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.867Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.siriusxm.com/richeisenshow",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.867Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-06T21:57:32.024Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://richeisenshow.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-06T21:57:32.024Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.922Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://richeisenshow.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.922Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.224Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://richeisenshow.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.224Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed",
+          "status": 410,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.467Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.467Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.467Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.467Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.467Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.468Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.469Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://richeisenshow.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.469Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed",
+          "status": 410,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:35:27.560Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:35:27.560Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:35:27.561Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:35:27.561Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:35:27.561Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-10T21:35:27.562Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-10T21:35:27.565Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://richeisenshow.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-10T21:35:27.565Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed",
+          "status": 410,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.742Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.742Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.742Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.742Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.742Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.742Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.742Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://richeisenshow.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.742Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed",
+          "status": 410,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.221Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.221Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.221Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.221Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.221Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.221Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.221Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://richeisenshow.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.221Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed",
+          "status": 410,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:04.614Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:04.614Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:04.614Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:04.614Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:04.614Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T20:27:04.615Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T20:27:04.615Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://richeisenshow.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T20:27:04.615Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed",
+          "status": 410,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.836Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.836Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.836Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.836Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.837Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.837Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.837Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://richeisenshow.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.837Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed",
+          "status": 410,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.314Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.314Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.314Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.315Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.315Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://richeisenshow.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.315Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://richeisenshow.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.315Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://richeisenshow.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.315Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.536Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.868Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-06T21:57:32.024Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.922Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.224Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.469Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-10T21:35:27.567Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.743Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.222Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T20:27:04.615Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.837Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.316Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.537Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.868Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-06T21:57:32.024Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.922Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.225Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.470Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-10T21:35:27.568Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "we could not read their captions",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.743Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.222Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T20:27:04.615Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.837Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.316Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T20:34:22.537Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:54:10.868Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-06T21:57:32.025Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:44:51.923Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-07T11:49:17.225Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:28:14.471Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-10T21:35:27.568Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:29:35.743Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T19:59:27.222Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T20:27:04.615Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:53:26.837Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:10:12.316Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": false,
+    "why": "they post often enough that 200 posts only reach back 85 days — not far enough behind the last 90 to compare against"
+  },
+  "samples": [
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Emmy-Nominated Actress Karolina Wydra Talks ‘Pluribus’ with Rich Eisen | Full Interview",
+      "url": "https://www.youtube.com/watch?v=q7_LaVDWuNE",
+      "at": "2026-08-14T05:39:10Z",
+      "thumbnail": "https://i.ytimg.com/vi/q7_LaVDWuNE/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 275,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:00.724Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Actress Karolina Wydra Was “Overwhelmed” When First Getting a ‘Pluribus’ Script | Rich Eisen Show",
+      "url": "https://www.youtube.com/watch?v=yGiDgKVB1-k",
+      "at": "2026-08-14T05:39:06Z",
+      "thumbnail": "https://i.ytimg.com/vi/yGiDgKVB1-k/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 131,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:00.725Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "NFL Insider Ian Rapoport: Mahomes Looks “Really, REALLY Good’ in Chiefs Camp",
+      "url": "https://www.youtube.com/watch?v=QjEKNs9IetM",
+      "at": "2026-08-14T01:00:35Z",
+      "thumbnail": "https://i.ytimg.com/vi/QjEKNs9IetM/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 8710,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:00.725Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Bills Hall of Famer Thurman Thomas Talks Josh Allen, James Cook & More w/Rich Eisen | Full Interview",
+      "url": "https://www.youtube.com/watch?v=RYjW_aASIag",
+      "at": "2026-08-14T00:30:16Z",
+      "thumbnail": "https://i.ytimg.com/vi/RYjW_aASIag/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1110,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:00.725Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "NFL Insider Ian Rapoport Talks Vikings, Chiefs, Ravens, Rams & More with Rich Eisen | Full Interview",
+      "url": "https://www.youtube.com/watch?v=4xvRX33OVTM",
+      "at": "2026-08-14T00:00:26Z",
+      "thumbnail": "https://i.ytimg.com/vi/4xvRX33OVTM/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 12579,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:10:00.725Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Rich Eisen Show",
+      "kind": "episode",
+      "title": "Hour 3:  Steelers ‘4-Downs’ Season Preview, plus ‘Pluribus’ Star Karlina Wydra In-Studio",
+      "url": null,
+      "at": "2026-08-13T19:13:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Rich reacts to a possible move of the Bears to Indiana, debates if he’s taking the over or under on Chicago’s 9.5 wins line, and previews the Steelers ‘season with the top 4 questions facing Aaron Rodgers and new Pittsburgh head coach Mike McCarthy heading into the 2026 NFL campaign. Actress Karolin",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:10:12.317Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Rich Eisen Show",
+      "kind": "episode",
+      "title": "Hour 2: Jayden Daniels vs LSU #5 Wild Legal Beef, plus Bills Hall of Fame RB Thurman Thomas",
+      "url": null,
+      "at": "2026-08-13T19:08:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Rich and the guys react to the wild LSU #5 jersey controversy that saw Commanders QB Jayden Daniels issue a cease-and-desist order to his alma mater after the Tigers gave his old number to sophomore cornerback DJ Pickett. Bills Hall of Famer Thurman Thomas tells Rich why Buffalo RB James Cook is not",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:10:12.317Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Rich Eisen Show",
+      "kind": "episode",
+      "title": "Hour 1: NFL Insider Ian Rapoport’s Training Camps Round Up, plus Vikings’ QB Competition Aftermath",
+      "url": null,
+      "at": "2026-08-13T17:24:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Rich reacts to JJ McCarthy’s “it was out of my control” comments after losing the Minnesota Vikings QB competition to Kyler Murray.NFL Insider Ian Rapoport and Rich break down the top stories around training camps including the Vikings’ QB decision-making process, the Atlanta Falcons’ Tua Tagovailoa",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:10:12.317Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Rich Eisen Breaks Down the Latest Intrigue Surrounding the Browns’ QB Competition",
+      "url": "https://www.youtube.com/watch?v=A2CWn5ps-9E",
+      "at": "2026-08-12T20:00:38Z",
+      "thumbnail": "https://i.ytimg.com/vi/A2CWn5ps-9E/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 655,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T20:26:59.422Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Washington HC Jedd Fish: What Sets Sean McVay Apart from His Contemporaries | The Rich Eisen Show",
+      "url": "https://www.youtube.com/watch?v=bi5LRFxI6KE",
+      "at": "2026-08-12T19:30:01Z",
+      "thumbnail": "https://i.ytimg.com/vi/bi5LRFxI6KE/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 252,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T20:26:59.422Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Rich Eisen Show",
+      "kind": "episode",
+      "title": "Hour 3:  Packers ‘4-Downs’ Preview, Browns QB Competition Latest, plus Chris Hardwick In-Studio",
+      "url": null,
+      "at": "2026-08-12T19:11:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Rich breaks down the latest developments in the Shedeur Sanders vs Deshaun Watson QB competition, and previews the Packers ‘season with the top 4 questions facing Green Bay heading into the 2026 NFL campaign. Chris Hardwick joins Rich in-studio to promote the latest season of NBC’s ‘The Wall’ and re",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T20:27:04.616Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Rich Eisen’s Way-Too-Early NFL Power Rankings Heading into Preseason Week 1",
+      "url": "https://www.youtube.com/watch?v=6GHlTab5pQU",
+      "at": "2026-08-12T19:00:11Z",
+      "thumbnail": "https://i.ytimg.com/vi/6GHlTab5pQU/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 4932,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T20:26:59.422Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Rich Eisen Show",
+      "kind": "episode",
+      "title": "Hour 2:  Rich’s Way-Too-Early NFL Power Rankings, plus Cowboys LB Rashan Gary",
+      "url": null,
+      "at": "2026-08-12T18:52:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Rich breaks down why the NFC West will be a formidable force again this season with the defending Super Bowl champion Seahawks, Rams and 49ers vying for supremacy, and reveals his top ten teams in his ‘Way-Too-Early NFL Power Rankings’ heading into Week 1 of the preseason. Cowboys LB Rashan Gary joi",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T20:27:04.616Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Rashan Gary Was Surprised the Packers Traded Him to the Cowboys | The Rich Eisen Show",
+      "url": "https://www.youtube.com/watch?v=Exvxzi9keQ8",
+      "at": "2026-08-12T18:38:58Z",
+      "thumbnail": "https://i.ytimg.com/vi/Exvxzi9keQ8/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1463,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T20:26:59.422Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Can the Seahawks, Rams & 49ers Live Up to the NFC West Hype This Season? | The Rich Eisen Show",
+      "url": "https://www.youtube.com/watch?v=JJvmkIw5dL4",
+      "at": "2026-08-12T18:00:20Z",
+      "thumbnail": "https://i.ytimg.com/vi/JJvmkIw5dL4/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 4930,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T20:26:59.422Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Albert Breer: Rams Already Have a Detailed Plan for Integrating Aaron Donald",
+      "url": "https://www.youtube.com/watch?v=S6dKWNoukfA",
+      "at": "2026-08-12T18:00:03Z",
+      "thumbnail": "https://i.ytimg.com/vi/S6dKWNoukfA/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 948,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T19:59:22.609Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Rich Eisen Show",
+      "kind": "episode",
+      "title": "Hour 1:  Washington Huskies HC Jedd Fisch, plus a Vikings’ Kyler Murray Decision Deep Dive",
+      "url": null,
+      "at": "2026-08-12T17:57:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Rich reacts to Vikings Head Coach Kevin O’Connell and Kyler Murray’s comments about how Minnesota’s QB competition shook out. Washington Head Football Coach Jedd Fisch and Rich discuss the Huskies’ season outlook under QB Demond Williams Jr., the future of college football in the NIL/Transfer Portal",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T20:27:04.616Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "S.I.’s Albert Breer on Micah, Kittle & Daniel Jones' Injury Return Timelines | The Rich Eisen Show",
+      "url": "https://www.youtube.com/watch?v=knrYYx66Fbg",
+      "at": "2026-08-12T02:00:28Z",
+      "thumbnail": "https://i.ytimg.com/vi/knrYYx66Fbg/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 693,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T15:29:20.352Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Rich Eisen’s Message to JJ McCarthy after Losing the Vikings’ QB Competition to Kyler Murray",
+      "url": "https://www.youtube.com/watch?v=VXXloc_kP-Y",
+      "at": "2026-08-12T01:02:20Z",
+      "thumbnail": "https://i.ytimg.com/vi/VXXloc_kP-Y/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 108037,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T15:29:20.352Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Actor/Writer Brendan Hunt Talks ‘Ted Lasso’ New Season & Future with Rich Eisen | Full Interview",
+      "url": "https://www.youtube.com/watch?v=imdQkhM_5EY",
+      "at": "2026-08-12T01:00:22Z",
+      "thumbnail": "https://i.ytimg.com/vi/imdQkhM_5EY/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 3892,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T15:29:20.352Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Rams CB Trent McDuffie Talks Donald, Garrett, Stafford, Mahomes & More w/Rich Eisen | Full Intervie",
+      "url": "https://www.youtube.com/watch?v=MEy4NBsxs90",
+      "at": "2026-08-12T00:30:21Z",
+      "thumbnail": "https://i.ytimg.com/vi/MEy4NBsxs90/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 4449,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T15:29:20.353Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "S.I.’s Albert Breer Talks Kyler, Browns, Falcons, Aaron Donald & More w/ Rich Eisen | Full Interview",
+      "url": "https://www.youtube.com/watch?v=LaRU7vhP-Ec",
+      "at": "2026-08-12T00:00:05Z",
+      "thumbnail": "https://i.ytimg.com/vi/LaRU7vhP-Ec/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 14909,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T15:29:20.353Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Rich Eisen Show",
+      "kind": "episode",
+      "title": "Hour 3:  Panthers ‘4-Downs’ Season Preview, plus ‘Ted Lasso’ Star Brendan Hunt In-Studio",
+      "url": null,
+      "at": "2026-08-11T19:53:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Rich plays the ‘NFL Win-Loss Game’ with a Denver Broncos fan, and previews the Panthers ‘season with the top 4 questions facing Carolina heading into the 2026 NFL campaign. (2:54) \n Actor/writer Brendan Hunt joins Rich in-studio where he discusses reprising his ‘Coach Beard’ role for the new season ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T15:29:35.743Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Rich Eisen Show",
+      "kind": "episode",
+      "title": "Hour 2: ‘Overreaction Tuesday,’ Kyler Named Vikes’ QB1, plus Rams CB Trent McDuffie Talks Donald, Garrett & More",
+      "url": null,
+      "at": "2026-08-11T18:14:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Michigan alum Rich reacts to fellow Wolverine JJ McCarthy losing the Minnesota Vikings’ QB competition to Kyler Murray, and weigh in on the NFL’s preseason, the Bills new stadium obstructed view seats snafu, the Seattle Seahawks’ Super Bowl repeat chances, and more in ‘Overreaction Tuesday.’ (2:20) ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T15:29:35.743Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Rich Eisen Show",
+      "kind": "episode",
+      "title": "Hour 1: Preseason Week 1 Preview, plus the MMQB’s Albert Breer Talks Vikings, Rams and More",
+      "url": null,
+      "at": "2026-08-11T17:50:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Rich reacts to the Cowboys extending DT Quinnen Williams and how different Dallas’ defense could look in 2026, and previews the most intriguing NFL Preseason Week 1 matchups. (3:20) \n The MMQB/Sports Illustrated’s Albert Breer and Rich discuss the Minnesota Vikings naming Kyler Murray their starting",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T15:29:35.743Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "This Phillies Fan Did an Inning of Play-by-Play and Absolutely Crushed It!!! | The Rich Eisen Show",
+      "url": "https://www.youtube.com/watch?v=94ZFqw0doCk",
+      "at": "2026-08-10T21:30:28Z",
+      "thumbnail": "https://i.ytimg.com/vi/94ZFqw0doCk/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 8,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-10T21:35:21.587Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Rich Eisen Weighs In on the Latest Developments in the Cleveland Browns’ QB Competition",
+      "url": "https://www.youtube.com/watch?v=6krdg95d4bw",
+      "at": "2026-08-10T21:00:07Z",
+      "thumbnail": "https://i.ytimg.com/vi/6krdg95d4bw/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 648,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-10T21:35:21.587Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Dolphins HC Jeff Hafley: What It Will Talke to Restore Miami’s Winning Culture | The Rich Eisen Show",
+      "url": "https://www.youtube.com/watch?v=oaWGSjBrKwg",
+      "at": "2026-08-10T20:30:39Z",
+      "thumbnail": "https://i.ytimg.com/vi/oaWGSjBrKwg/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 266,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-10T21:35:21.587Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "How a Lions Key OL Injury Could Impact Newly Paid RB Jahmyr Gibbs | The Rich Eisen Show",
+      "url": "https://www.youtube.com/watch?v=96JzX_14lVY",
+      "at": "2026-08-10T20:00:36Z",
+      "thumbnail": "https://i.ytimg.com/vi/96JzX_14lVY/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1488,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-10T21:35:21.587Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Rich Eisen Show",
+      "kind": "episode",
+      "title": "Hour 3: Vikings ‘4-Downs’ Season Preview, plus Akbar Gbajabiamila & Matt Iseman Talk ‘ANW’ and Raiders",
+      "url": null,
+      "at": "2026-08-10T19:38:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Rich reacts to the latest developments in the Cleveland Browns Shedeur Sanders vs Deshaun Watson QB competition, plays the ‘NFL Win-Loss Game’ with a Washington Commanders fan, and previews the Vikings‘ season with the top 4 questions facing Minnesota heading into the 2026 NFL campaign. \n Akbar Gbaj",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-10T21:35:27.571Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Cris Carter: Ohio State WR Jeremiah Smith WILL be a Pro Football Hall of Famer | The Rich Eisen Show",
+      "url": "https://www.youtube.com/watch?v=6yCLuLRY974",
+      "at": "2026-08-10T19:30:03Z",
+      "thumbnail": "https://i.ytimg.com/vi/6yCLuLRY974/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 264,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-10T21:35:21.587Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": null,
+      "url": "https://www.youtube.com/watch?v=sMmGOAYLqsQ",
+      "at": "2026-08-10T19:00:07Z",
+      "thumbnail": "https://i.ytimg.com/vi/sMmGOAYLqsQ/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 4256,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-10T21:28:09.118Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Rich Eisen Show",
+      "kind": "episode",
+      "title": "Hour 2: Miami Dolphins Head Coach Jeff Hafley, plus Hall of Fame Induction Weekend Recap",
+      "url": null,
+      "at": "2026-08-10T18:09:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Rich recaps his weekend in Canton, Ohio hosting the 2026 Pro Football Hall of Fame jacket presentation dinner.\n Dolphins Head Coach Jeff Hafley tells Rich what it was like coaching standout CBs Darrell Revis, Ronde Barber and Richard Sherman, what it will take to reshape Miami’s locker room culture ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-10T21:35:27.572Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "The Rich Eisen Show",
+      "kind": "episode",
+      "title": "Hour 1:  Aaron Donald Latest, plus Pro Football Hall of Fame Induction Weekend Recap with Cris Carter",
+      "url": null,
+      "at": "2026-08-10T17:16:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Rich and the guys react to the latest developments in Aaron Donald’s possible return to the Los Angeles Rams, and weigh in on the Detroit Lions losing their starting Center for at least two months with a broken wrist and what that could mean for newly-paid RB Jahmyr Gibbs. \n Hall of Fame WR Cris Car",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-10T21:35:27.572Z",
+      "status": null
+    }
+  ],
+  "headline": {
+    "sentence": "Rich Eisen runs a daily sports talk show with hour-long episodes and guest interviews, reaching 1,120,000 on YouTube plus a newsletter, podcast, and own website, but he sells nothing directly yet with no store and no membership.",
+    "restsOn": "1,120,000 on YouTube · YouTube channel · Newsletter · Podcast · Own website · Store · Membership · Hour 3: Vikings \"4-Downs\" Season Preview, plus Akbar Gbajabiamila & Matt Iseman Talk \"ANW\" and Raiders · Hour 2: Miami Dolphins Head Coach Jeff Hafley, plus Hall of Fame Induction Weekend Recap · Hour 1:  Aaron Donald Latest, plus Pro Football Hall of Fame Induction Weekend Recap with Cris Carter"
+  },
+  "samplesSearched": {
+    "count": 3,
+    "why": "3 pieces of their own work"
+  },
+  "commentsRead": 40,
+  "audienceHistory": [
+    {
+      "audience": 1110000,
+      "at": "2026-08-06T20:34:10.518Z"
+    },
+    {
+      "audience": 1110000,
+      "at": "2026-08-06T21:54:03.580Z"
+    },
+    {
+      "audience": 1110000,
+      "at": "2026-08-06T21:57:21.103Z"
+    },
+    {
+      "audience": 1110000,
+      "at": "2026-08-07T11:44:43.861Z"
+    },
+    {
+      "audience": 1110000,
+      "at": "2026-08-07T11:49:09.263Z"
+    },
+    {
+      "audience": 1110000,
+      "at": "2026-08-10T21:28:09.117Z"
+    },
+    {
+      "audience": 1110000,
+      "at": "2026-08-10T21:35:21.587Z"
+    },
+    {
+      "audience": 1110000,
+      "at": "2026-08-12T15:29:20.352Z"
+    },
+    {
+      "audience": 1110000,
+      "at": "2026-08-12T19:59:22.608Z"
+    },
+    {
+      "audience": 1110000,
+      "at": "2026-08-12T20:26:59.421Z"
+    },
+    {
+      "audience": 1120000,
+      "at": "2026-08-14T12:53:22.777Z"
+    },
+    {
+      "audience": 1120000,
+      "at": "2026-08-14T13:10:00.724Z"
+    }
+  ],
+  "audience": 1120000,
+  "audienceWhy": "YouTube alone — nothing links the Bluesky to it",
+  "audienceSeparate": [
+    {
+      "id": "bluesky_profile",
+      "followers": 4341,
+      "url": "https://bsky.app/profile/richeisenshow.bsky.social",
+      "why": "nothing on either page links the Bluesky to the YouTube, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 10,
+    "brief": "Anyone worth a call — they make something clippable, in a format they can repeat, in a category people actually want.",
+    "demand": {
+      "points": 0.1,
+      "max": 25,
+      "signalCount": 1,
+      "signals": [
+        {
+          "points_at": "unspecified",
+          "quote": "people are still going to buy tickets",
+          "at": "2026-08-14T13:10:13.902Z"
+        }
+      ]
+    },
+    "missing": {
+      "points": 10.1,
+      "max": 35,
+      "lines": [
+        {
+          "item": "store",
+          "label": "Store",
+          "half": "built",
+          "base": 9,
+          "effective": 9,
+          "demandAligned": false,
+          "why": "not there · we looked in 4 places · 2 wouldn't answer"
+        },
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        }
+      ],
+      "share": 0.289,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 10.2,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 22,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "unavailable": true,
+          "line": "we could not read their posting rate — they post often enough that 200 posts only reach back 85 days — not far enough behind the last 90 to compare against",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "pass",
+      "because": "It's a daily sports talk show built on interview segments — inherently clippable, endlessly repeatable, and sports is a category with huge demand."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 8 days apart, the trend needs 90",
+      "why": "our two looks are 8 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.833,
+      "resolved": 5,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 1
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "pass",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 370,
+    "places": 40,
+    "from": "2026-08-06T20:34:10.490Z",
+    "to": "2026-08-14T13:10:26.089Z"
+  }
+}

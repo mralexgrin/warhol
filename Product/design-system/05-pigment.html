@@ -1,0 +1,957 @@
+<!doctype html>
+<!--
+DIRECTION CONTRACT — TOOLKIT 05 "PIGMENT"
+THESIS: Colour is the information architecture — a Scout learns a mandate by its field, not by
+  reading a label. Refuses accent-on-neutral: colour owns whole panels or it isn't used.
+OWN-WORLD: Warm off-white or ink #1C1B23. Four pigment fields — lilac #D7D2E9, butter #FFD68D,
+  teal #67BCAA, ink — each capable of carrying an entire panel. Large radii (8/14/22/32/pill),
+  layered soft shadows with real offset, and mesh gradients, which are native here and banned
+  in the other four toolkits. Bricolage Grotesque display, Onest UI.
+STORY: The Scout scans by colour first, number second, name third; the drop reads at arm's
+  length before it reads up close.
+FIRST VIEWPORT: A butter field carrying the wordmark at poster scale, an ink panel beside it
+  holding the day's count, and the palette laid out immediately underneath.
+FORM: Contemporary colour-field dashboard, pinned by the user's supplied palette reference.
+  Position: brief-pinned, so it beats the roll. Staging: mandate board.
+-->
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toolkit 05 — PIGMENT · Warhol Scout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Onest:wght@300..800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   TOOLKIT 05 — PIGMENT
+   Colour fields at panel scale. Big radii, soft depth, real gradients.
+   ============================================================ */
+
+:root{
+  /* --- the four pigments (from the supplied palette reference) --- */
+  --lilac:#D7D2E9;
+  --butter:#FFD68D;
+  --teal:#67BCAA;
+  --ink:#1C1B23;
+  --paper:#FFFFFF;
+
+  /* deep + soft variants, derived */
+  --lilac-d:#8B7FC4;   --lilac-s:#EEEBF6;
+  --butter-d:#C98A12;  --butter-s:#FFF0D3;
+  --teal-d:#2F8271;    --teal-s:#DCF0EB;
+
+  /* --- surfaces --- */
+  --bg:#F7F6F2;
+  --surf:#FFFFFF;
+  --surf-2:#F1EFEA;
+  --surf-3:#E6E3DC;
+  --line:#E2DFD8;
+  --line-hi:#CBC7BE;
+  --text:#1C1B23;
+  --text-2:#57555F;
+  --text-3:#8A8892;
+  --on-ink:#F7F6F2;
+  --on-pigment:#1C1B23;
+
+  --pass:#2F8271;
+  --hold:#C98A12;
+  --fail:#C93E3E;
+
+  /* --- geometry: soft and generous. this is the differentiator. --- */
+  --r-xs:6px;
+  --r-sm:10px;
+  --r-md:16px;
+  --r-lg:24px;
+  --r-xl:34px;
+  --r-pill:999px;
+  --line-w:1px;
+
+  /* --- space: 4px base --- */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px;
+  --s6:36px; --s7:52px; --s8:76px; --s9:112px;
+
+  /* --- elevation: real offset + blur, layered, neutral --- */
+  --el-1:0 1px 2px rgba(28,27,35,.05), 0 2px 6px -2px rgba(28,27,35,.06);
+  --el-2:0 2px 4px rgba(28,27,35,.05), 0 10px 22px -8px rgba(28,27,35,.13);
+  --el-3:0 4px 8px rgba(28,27,35,.06), 0 26px 52px -20px rgba(28,27,35,.24);
+
+  --disp:"Bricolage Grotesque",-apple-system,system-ui,sans-serif;
+  --ui:"Onest",-apple-system,system-ui,"Segoe UI",sans-serif;
+}
+
+:root[data-theme="dark"]{
+  --bg:#141319;
+  --surf:#1C1B23;
+  --surf-2:#26252F;
+  --surf-3:#32313D;
+  --line:#32313D;
+  --line-hi:#454351;
+  --text:#F1EFEA;
+  --text-2:#A9A6B4;
+  --text-3:#78757F;
+  --on-ink:#F1EFEA;
+  --on-pigment:#1C1B23;
+
+  --lilac:#B6ADDE;
+  --butter:#FFCF78;
+  --teal:#63C4AF;
+  --lilac-d:#8B7FC4;  --lilac-s:#2A2740;
+  --butter-d:#D8991F; --butter-s:#3A2E17;
+  --teal-d:#2F8271;   --teal-s:#173029;
+
+  --pass:#5FD0B4;
+  --hold:#F5BC4A;
+  --fail:#FF6B6B;
+
+  --el-1:0 1px 2px rgba(0,0,0,.4), 0 2px 6px -2px rgba(0,0,0,.4);
+  --el-2:0 2px 4px rgba(0,0,0,.4), 0 10px 22px -8px rgba(0,0,0,.6);
+  --el-3:0 4px 8px rgba(0,0,0,.45), 0 26px 52px -20px rgba(0,0,0,.8);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--text);font-family:var(--ui);
+  font-size:15px;line-height:1.58;font-weight:400;
+  transition:background-color .2s ease,color .2s ease;
+}
+::selection{background:var(--butter);color:var(--ink)}
+h1,h2,h3,h4{margin:0;font-family:var(--disp);font-weight:800;letter-spacing:-.035em;line-height:1}
+
+.wrap{max-width:1360px;margin:0 auto;padding:0 var(--s5)}
+section{padding:var(--s8) 0}
+.sec-head{display:flex;align-items:flex-end;gap:var(--s5);margin-bottom:var(--s5);flex-wrap:wrap}
+.sec-title{font-size:clamp(28px,4vw,44px);text-transform:uppercase}
+.sec-note{margin-left:auto;max-width:54ch;font-size:13.5px;color:var(--text-2);line-height:1.65}
+
+.grid{display:grid;gap:var(--s4)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g12{grid-template-columns:repeat(12,1fr)}
+@media(max-width:1080px){.g4{grid-template-columns:repeat(2,1fr)}
+  .g12{grid-template-columns:repeat(6,1fr)}}
+@media(max-width:720px){.g2,.g3,.g4{grid-template-columns:1fr}
+  .g12{grid-template-columns:1fr}.g12>*{grid-column:auto!important}}
+
+.lab{font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--text-3)}
+.note{font-size:13.5px;color:var(--text-2);line-height:1.65;max-width:68ch}
+.num{font-variant-numeric:tabular-nums;font-weight:600}
+
+/* CARD — one container, but colour decides what it is. */
+.card{background:var(--surf);border-radius:var(--r-lg);padding:var(--s5);box-shadow:var(--el-1)}
+.card--soft{background:var(--surf-2);box-shadow:none}
+.card--line{background:transparent;border:var(--line-w) solid var(--line);box-shadow:none}
+.card--lilac{background:var(--lilac);color:var(--on-pigment)}
+.card--butter{background:var(--butter);color:var(--on-pigment)}
+.card--teal{background:var(--teal);color:var(--on-pigment)}
+.card--ink{background:var(--ink);color:var(--on-ink)}
+:root[data-theme="dark"] .card--ink{background:var(--surf-3)}
+.card--lilac .lab,.card--butter .lab,.card--teal .lab{color:rgba(28,27,35,.58)}
+.card--ink .lab{color:rgba(241,239,234,.55)}
+.card-hd{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--s3);margin-bottom:var(--s4)}
+.card-hd h3{font-size:19px;letter-spacing:-.03em;text-transform:uppercase}
+
+/* ---------- masthead ---------- */
+.mast{padding-top:var(--s6);padding-bottom:var(--s7)}
+.mast-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:var(--s4)}
+@media(max-width:900px){.mast-grid{grid-template-columns:1fr}}
+.mast-main{
+  background:var(--butter);color:var(--ink);border-radius:var(--r-xl);
+  padding:var(--s7) var(--s6);position:relative;overflow:hidden;box-shadow:var(--el-2);
+}
+.mast-main::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.75;
+  background:
+    radial-gradient(62% 96% at 92% 6%, rgba(103,188,170,.92), transparent 72%),
+    radial-gradient(58% 88% at 74% 104%, rgba(215,210,233,.95), transparent 72%);
+}
+.mast-main>*{position:relative;z-index:1}
+.mast-main h1{font-size:clamp(52px,10vw,132px);letter-spacing:-.055em;line-height:.86;
+  text-transform:uppercase;font-variation-settings:"wdth" 92}
+.mast-main .lede{max-width:52ch;margin-top:var(--s5);font-size:16px;line-height:1.6;
+  color:rgba(28,27,35,.82);font-weight:450}
+.mast-badge{display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:var(--on-ink);
+  border-radius:var(--r-pill);padding:6px 14px;font-size:11px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;margin-bottom:var(--s5)}
+.mast-side{display:grid;gap:var(--s4);grid-template-rows:auto 1fr}
+
+.tsw{display:inline-flex;background:var(--surf-2);border-radius:var(--r-pill);padding:3px;gap:2px}
+:root[data-theme="dark"] .tsw{background:var(--surf-3)}
+.tsw button{appearance:none;border:0;cursor:pointer;background:transparent;color:var(--text-2);
+  font:inherit;font-size:12px;font-weight:600;padding:6px 15px;border-radius:var(--r-pill)}
+.tsw button[aria-pressed="true"]{background:var(--surf);color:var(--text);box-shadow:var(--el-1)}
+:root[data-theme="dark"] .tsw button[aria-pressed="true"]{background:var(--surf)}
+.tsw button:focus-visible{outline:2px solid var(--lilac-d);outline-offset:2px}
+
+/* ---------- colour ---------- */
+.pig{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--el-1);background:var(--surf)}
+.pig .f{height:130px;display:flex;align-items:flex-end;padding:var(--s4)}
+.pig .f b{font-family:var(--disp);font-size:26px;letter-spacing:-.04em;text-transform:uppercase}
+.pig .m{padding:var(--s4)}
+.pig .m .h{font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.pig .m .r{font-size:12px;color:var(--text-2);margin-top:5px;line-height:1.55}
+.tintline{display:flex;border-radius:var(--r-sm);overflow:hidden;margin-top:var(--s2)}
+.tintline span{flex:1;height:26px}
+
+/* ---------- type ---------- */
+.tr{border-bottom:var(--line-w) solid var(--line);padding:var(--s5) 0;
+  display:grid;grid-template-columns:138px minmax(0,1fr);gap:var(--s5);align-items:baseline}
+@media(max-width:680px){.tr{grid-template-columns:1fr;gap:var(--s2)}}
+.tr .s{font-size:11px;color:var(--text-3);line-height:1.6;font-weight:600}
+.d1{font-family:var(--disp);font-size:clamp(42px,7vw,80px);font-weight:800;letter-spacing:-.055em;
+  line-height:.92;text-transform:uppercase;font-variation-settings:"wdth" 92}
+.d2{font-family:var(--disp);font-size:clamp(26px,3.6vw,40px);font-weight:800;letter-spacing:-.04em;
+  text-transform:uppercase}
+.h3s{font-family:var(--disp);font-size:19px;font-weight:700;letter-spacing:-.028em;text-transform:uppercase}
+.bd{font-size:16px;line-height:1.66;max-width:68ch;color:var(--text-2)}
+.sm{font-size:13px;color:var(--text-3);line-height:1.6}
+.bignum{font-family:var(--disp);font-size:64px;font-weight:800;letter-spacing:-.055em;
+  font-variant-numeric:tabular-nums;line-height:.9}
+
+/* ---------- geometry ---------- */
+.rad{display:flex;gap:var(--s3);flex-wrap:wrap;align-items:flex-end}
+.rad b{width:82px;height:62px;background:var(--lilac);display:flex;align-items:flex-end;
+  justify-content:center;padding-bottom:6px;font-size:11px;font-weight:700;color:var(--on-pigment)}
+.sp{display:flex;align-items:flex-end;gap:6px;height:112px}
+.sp span{width:24px;background:var(--teal);border-radius:var(--r-xs) var(--r-xs) 0 0;position:relative}
+.sp i{position:absolute;top:calc(100% + 4px);left:0;font-style:normal;font-size:10px;
+  color:var(--text-3);font-weight:600}
+
+/* ---------- gradients (native here, banned in toolkits 01–04) ---------- */
+.gr{height:104px;border-radius:var(--r-md)}
+.gr-mesh{background:
+  radial-gradient(70% 115% at 16% 18%, var(--butter), transparent 72%),
+  radial-gradient(64% 105% at 86% 26%, var(--teal), transparent 72%),
+  radial-gradient(72% 118% at 50% 106%, var(--lilac), transparent 72%),
+  var(--surf-2)}
+.gr-duo{background:linear-gradient(118deg,var(--lilac),var(--teal))}
+.gr-veil{background:linear-gradient(180deg,transparent,rgba(28,27,35,.72)),
+  linear-gradient(118deg,var(--butter),var(--teal))}
+
+/* ---------- controls ---------- */
+.btn{appearance:none;cursor:pointer;font-family:var(--ui);font-size:13.5px;font-weight:600;
+  padding:10px 20px;border-radius:var(--r-pill);border:var(--line-w) solid transparent;
+  background:var(--ink);color:var(--on-ink);box-shadow:var(--el-1);
+  transition:transform .15s cubic-bezier(.2,.7,.3,1),box-shadow .15s cubic-bezier(.2,.7,.3,1),background .15s ease}
+:root[data-theme="dark"] .btn{background:var(--text);color:var(--ink)}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--el-2)}
+.btn:active{transform:translateY(0);box-shadow:var(--el-1)}
+.btn:focus-visible{outline:2px solid var(--lilac-d);outline-offset:3px}
+.btn--2{background:var(--surf);color:var(--text);border-color:var(--line-hi)}
+:root[data-theme="dark"] .btn--2{background:var(--surf-2);color:var(--text)}
+.btn--teal{background:var(--teal);color:var(--on-pigment)}
+.btn--butter{background:var(--butter);color:var(--on-pigment)}
+.btn--q{background:transparent;color:var(--text-2);box-shadow:none}
+.btn--q:hover{background:var(--surf-2);transform:none;box-shadow:none;color:var(--text)}
+.btn[disabled]{background:var(--surf-3);color:var(--text-3);cursor:not-allowed;box-shadow:none}
+.btn[disabled]:hover{transform:none;box-shadow:none}
+.btn--busy{color:transparent;position:relative}
+.btn--busy::after{content:"";position:absolute;inset:0;margin:auto;width:14px;height:14px;
+  border:2px solid currentColor;border-top-color:transparent;border-radius:50%;
+  color:var(--on-ink);animation:sp .7s linear infinite}
+:root[data-theme="dark"] .btn--busy::after{color:var(--ink)}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+.seg{display:inline-flex;background:var(--surf-2);border-radius:var(--r-pill);padding:3px;gap:2px}
+:root[data-theme="dark"] .seg{background:var(--surf-3)}
+.seg button{appearance:none;border:0;cursor:pointer;background:transparent;color:var(--text-2);
+  font:inherit;font-size:12.5px;font-weight:600;padding:6px 14px;border-radius:var(--r-pill)}
+.seg button[aria-pressed="true"]{background:var(--surf);color:var(--text);box-shadow:var(--el-1)}
+:root[data-theme="dark"] .seg button[aria-pressed="true"]{background:var(--surf)}
+
+.inp{width:100%;font-family:var(--ui);font-size:14px;padding:11px 15px;border-radius:var(--r-md);
+  border:var(--line-w) solid var(--line-hi);background:var(--surf);color:var(--text)}
+:root[data-theme="dark"] .inp{background:var(--surf-2)}
+.inp::placeholder{color:var(--text-3)}
+.inp:focus{outline:2px solid var(--lilac-d);outline-offset:-1px;border-color:var(--lilac-d)}
+.inp--err{border-color:var(--fail)}
+.em{color:var(--fail);font-size:12.5px;margin-top:6px;font-weight:500}
+
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;
+  padding:5px 12px;border-radius:var(--r-pill);background:var(--surf-2);color:var(--text-2)}
+:root[data-theme="dark"] .pill{background:var(--surf-3)}
+.pill--pass{background:var(--teal-s);color:var(--pass)}
+.pill--hold{background:var(--butter-s);color:var(--hold)}
+.pill--fail{background:color-mix(in srgb,var(--fail) 14%,transparent);color:var(--fail)}
+.pill--lilac{background:var(--lilac-s);color:var(--lilac-d)}
+.pill--solid{background:var(--ink);color:var(--on-ink)}
+:root[data-theme="dark"] .pill--solid{background:var(--text);color:var(--ink)}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+
+/* ---------- identity ---------- */
+.faces{display:grid;grid-template-columns:repeat(auto-fit,minmax(136px,1fr));gap:var(--s5)}
+.face{text-align:center}
+.avatar{position:relative;width:88px;height:88px;margin:0 auto;border-radius:50%;overflow:hidden;
+  background:var(--surf-2)}
+.avatar svg{display:block;width:100%;height:100%}
+.ring{position:relative;width:104px;height:104px;margin:0 auto;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;padding:11px}
+.ring::before{content:"";position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(from -90deg,var(--rc,var(--teal)) var(--pct,90%),var(--surf-3) 0)}
+.ring .avatar{position:relative;z-index:1;width:100%;height:100%;
+  box-shadow:0 0 0 3px var(--bg)}
+.face .n{font-weight:700;font-size:14px;margin-top:11px;letter-spacing:-.015em}
+.face .m{font-size:12px;color:var(--text-3);margin-top:1px}
+.stack{display:flex;align-items:center}
+.stack .avatar{width:38px;height:38px;margin:0 0 0 -12px;box-shadow:0 0 0 3px var(--surf)}
+.stack .avatar:first-child{margin-left:0}
+.stack .more{width:38px;height:38px;margin-left:-12px;border-radius:50%;background:var(--ink);
+  color:var(--on-ink);display:flex;align-items:center;justify-content:center;font-size:12px;
+  font-weight:700;box-shadow:0 0 0 3px var(--surf)}
+.avs{display:flex;align-items:flex-end;gap:var(--s4);margin-top:var(--s4)}
+
+/* ---------- data ---------- */
+.delta{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;
+  padding:3px 9px;border-radius:var(--r-pill);background:rgba(28,27,35,.1)}
+.bar-row{display:grid;grid-template-columns:120px minmax(0,1fr) 44px;gap:var(--s4);
+  align-items:center;padding:9px 0}
+.bar-row .k{font-size:13px;color:var(--text-2)}
+.track{height:14px;border-radius:var(--r-pill);background:var(--surf-3);position:relative;overflow:hidden}
+.card--butter .track,.card--teal .track,.card--lilac .track{background:rgba(28,27,35,.16)}
+.track i{position:absolute;inset:0 auto 0 0;display:block;border-radius:var(--r-pill)}
+.bar-row .v{font-size:13.5px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.thr{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink);opacity:.5;border-radius:2px}
+
+.dotmatrix{display:grid;grid-template-columns:repeat(16,1fr);gap:5px}
+.dotmatrix i{aspect-ratio:1;border-radius:50%;display:block;background:var(--surf-3)}
+
+.timeline{display:flex;flex-direction:column;gap:9px}
+.tl-row{display:grid;grid-template-columns:76px minmax(0,1fr);gap:var(--s3);align-items:center}
+.tl-row .d{font-size:11.5px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:600}
+.tl-bar{height:30px;border-radius:var(--r-pill);display:flex;align-items:center;
+  padding:0 12px;gap:8px;font-size:12px;font-weight:700;color:var(--on-pigment)}
+.tl-bar .c{margin-left:auto;font-variant-numeric:tabular-nums}
+
+/* ---------- in situ ---------- */
+.board{display:grid;gap:var(--s4)}
+.drop{background:var(--surf);border-radius:var(--r-lg);box-shadow:var(--el-1);overflow:hidden}
+.drop-hd{padding:var(--s5);display:flex;justify-content:space-between;gap:var(--s4);
+  align-items:flex-start;flex-wrap:wrap}
+.drow{display:grid;grid-template-columns:44px 60px 1fr 156px 148px 168px;gap:var(--s4);
+  align-items:center;padding:var(--s3) var(--s5);border-top:var(--line-w) solid var(--line)}
+.drow--hd{border-top:var(--line-w) solid var(--line);background:var(--surf-2);
+  font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--text-3);
+  padding-top:10px;padding-bottom:10px}
+:root[data-theme="dark"] .drow--hd{background:var(--surf-2)}
+.drow:hover:not(.drow--hd){background:var(--surf-2)}
+.drow .rk{font-family:var(--disp);font-size:15px;font-weight:800;color:var(--text-3)}
+.drow .sc{font-family:var(--disp);font-size:28px;font-weight:800;letter-spacing:-.05em;
+  font-variant-numeric:tabular-nums;line-height:1}
+.drow .who{display:flex;align-items:center;gap:var(--s3);min-width:0}
+.drow .who .avatar{width:36px;height:36px;flex:0 0 36px}
+.drow .who .n{font-weight:700;font-size:14.5px;letter-spacing:-.015em;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+.drow .who .m{font-size:12px;color:var(--text-3)}
+.drow .acts{display:flex;gap:6px;justify-content:flex-end}
+.drow .acts .btn{padding:7px 14px;font-size:12.5px}
+@media(max-width:1160px){.drow{grid-template-columns:38px 54px 1fr 168px}.drow>.hm{display:none}}
+@media(max-width:700px){.drow{grid-template-columns:34px 50px 1fr}.drow>.hs{display:none}}
+
+.empty{border-radius:var(--r-lg);background:var(--surf-2);padding:var(--s8) var(--s5);text-align:center}
+.empty h4{font-size:24px;text-transform:uppercase;margin-bottom:var(--s2)}
+.sk{background:var(--surf-3);border-radius:var(--r-pill);height:14px;animation:pl 1.3s ease-in-out infinite}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.42}}
+
+pre.tok{background:var(--ink);color:#E7E4DC;border-radius:var(--r-lg);padding:var(--s5);
+  overflow:auto;font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:12px;
+  line-height:1.8;margin:0}
+:root[data-theme="dark"] pre.tok{background:var(--surf-2)}
+pre.tok .c{color:#8A8892}
+pre.tok .v{color:var(--butter)}
+
+footer{padding:var(--s6) 0 var(--s8);font-size:13px;color:var(--text-2);line-height:1.7;
+  border-top:var(--line-w) solid var(--line)}
+footer b{color:var(--text);font-weight:700}
+
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap mast">
+  <div class="mast-grid">
+    <div class="mast-main">
+      <span class="mast-badge">Warhol Scout · Toolkit 05 / 05</span>
+      <h1>Pigment</h1>
+      <p class="lede">Colour is the information architecture. A mandate isn't labelled, it's
+        <em>a field</em> — and a panel either commits to a pigment entirely or stays neutral.
+        Four colours, large radii, layered soft depth, and mesh gradients, which are native
+        here and deliberately banned in the other four toolkits.</p>
+    </div>
+    <div class="mast-side">
+      <div class="card card--ink">
+        <div class="card-hd"><h3 style="color:var(--on-ink)">Today</h3>
+          <div class="tsw" role="group" aria-label="Theme">
+            <button type="button" data-set="light" aria-pressed="true">Light</button>
+            <button type="button" data-set="dark" aria-pressed="false">Dark</button>
+          </div></div>
+        <div style="display:flex;align-items:baseline;gap:var(--s4);flex-wrap:wrap">
+          <span class="bignum" style="color:var(--butter)">6</span>
+          <div><div class="lab">Surfaced</div><div class="note" style="color:rgba(241,239,234,.7);font-size:12.5px">
+            of 47 scanned · threshold 70</div></div>
+        </div>
+      </div>
+      <div class="card card--teal">
+        <div class="lab">Mandate</div>
+        <h3 style="font-size:22px;margin-top:6px">Design &amp; Built Environment</h3>
+        <div style="display:flex;gap:6px;margin-top:var(--s4);flex-wrap:wrap">
+          <span class="pill" style="background:rgba(28,27,35,.14);color:var(--on-pigment)">Substack</span>
+          <span class="pill" style="background:rgba(28,27,35,.14);color:var(--on-pigment)">YouTube</span>
+          <span class="pill" style="background:rgba(28,27,35,.14);color:var(--on-pigment)">50K–500K</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+<!-- 01 COLOUR -->
+<section>
+  <div class="sec-head"><h2 class="sec-title">Pigments</h2>
+    <p class="sec-note">Four colours, each able to carry a whole panel. Every pigment has a deep
+      variant for text and lines on neutral, and a soft variant for pill backgrounds — so a
+      colour never has to be faded with opacity to stay legible.</p></div>
+
+  <div class="grid g4" style="margin-bottom:var(--s5)">
+    <div class="pig"><div class="f" style="background:var(--lilac)"><b>Lilac</b></div>
+      <div class="m"><div class="h">#D7D2E9 · deep #8B7FC4 · soft #EEEBF6</div>
+        <div class="r">Judgment. Anything the model produced — format fit, strain classification,
+          recommended play. Also the focus ring.</div>
+        <div class="tintline"><span style="background:#EEEBF6"></span><span style="background:#D7D2E9"></span>
+          <span style="background:#B6ADDE"></span><span style="background:#8B7FC4"></span></div></div></div>
+
+    <div class="pig"><div class="f" style="background:var(--butter)"><b>Butter</b></div>
+      <div class="m"><div class="h">#FFD68D · deep #C98A12 · soft #FFF0D3</div>
+        <div class="r">Attention. The live drop, the top-ranked candidate, anything the Scout
+          has not yet worked.</div>
+        <div class="tintline"><span style="background:#FFF0D3"></span><span style="background:#FFE3B4"></span>
+          <span style="background:#FFD68D"></span><span style="background:#C98A12"></span></div></div></div>
+
+    <div class="pig"><div class="f" style="background:var(--teal)"><b>Teal</b></div>
+      <div class="m"><div class="h">#67BCAA · deep #2F8271 · soft #DCF0EB</div>
+        <div class="r">Counted fact. Rules-engine output, gate pass, the monetization-gap series.</div>
+        <div class="tintline"><span style="background:#DCF0EB"></span><span style="background:#A8DACE"></span>
+          <span style="background:#67BCAA"></span><span style="background:#2F8271"></span></div></div></div>
+
+    <div class="pig"><div class="f" style="background:var(--ink)"><b style="color:#F7F6F2">Ink</b></div>
+      <div class="m"><div class="h">#1C1B23 · on-ink #F7F6F2</div>
+        <div class="r">Primary action, all body text, and the dark theme's ground. The only
+          colour that is also a surface in both themes.</div>
+        <div class="tintline"><span style="background:#8A8892"></span><span style="background:#57555F"></span>
+          <span style="background:#32313D"></span><span style="background:#1C1B23"></span></div></div></div>
+  </div>
+
+  <div class="card card--soft">
+    <p class="note" style="margin:0"><strong>The commitment rule.</strong> A pigment owns a whole
+      panel, a whole bar, or a whole chip — never a 3px stripe on a white card. If a colour
+      can't justify the full surface, it doesn't belong on the screen. This is what keeps the
+      world from collapsing into generic accent-on-neutral SaaS.</p>
+  </div>
+</section>
+
+<!-- 02 TYPE -->
+<section>
+  <div class="sec-head"><h2 class="sec-title">Type</h2>
+    <p class="sec-note"><strong>Bricolage Grotesque</strong> for display — a variable grotesque
+      with enough irregularity to have a face, run at width 92 and −0.055em so headlines lock
+      up tight. <strong>Onest</strong> for interface: quiet, large x-height, excellent
+      tabular figures.</p></div>
+
+  <div class="tr"><span class="s">Display 1 · Bricolage<br>800 · wdth 92 · −0.055em<br>42–80px</span><span class="d1">Morning drop</span></div>
+  <div class="tr"><span class="s">Display 2 · Bricolage<br>800 · −0.04em<br>26–40px</span><span class="d2">Monetization gap</span></div>
+  <div class="tr"><span class="s">Heading · Bricolage<br>700 · 19px caps</span><span class="h3s">Recommended play</span></div>
+  <div class="tr"><span class="s">Body · Onest<br>400 · 16 / 1.66<br>measure 68ch</span><span class="bd">Mara Ellison publishes long-form architecture criticism to 214,000 subscribers and monetizes none of it. Three sponsor mentions in eleven months, no paid tier, no product. The gap is the whole case.</span></div>
+  <div class="tr"><span class="s">Secondary · Onest<br>400 · 13px</span><span class="sm">Scanned 04:12 · Substack and X · rules engine v4.2</span></div>
+  <div class="tr"><span class="s">Label · Onest<br>700 · 10.5px · .13em</span><span class="lab">Pillar breakdown</span></div>
+  <div class="tr"><span class="s">Figure · Bricolage<br>800 · tabular · 64px</span><span class="bignum">91.4</span></div>
+</section>
+
+<!-- 03 GEOMETRY -->
+<section>
+  <div class="sec-head"><h2 class="sec-title">Shape</h2>
+    <p class="sec-note">Radii are the loudest signal in this world: 24px on panels, full pill on
+      every control and every bar. Nothing here is square, which is exactly what separates it
+      from the four toolkits beside it.</p></div>
+
+  <div class="grid g3">
+    <div><span class="lab" style="display:block;margin-bottom:var(--s3)">Radius scale</span>
+      <div class="rad">
+        <b style="border-radius:6px">6 · dots</b>
+        <b style="border-radius:10px;background:var(--butter)">10 · pills-in</b>
+        <b style="border-radius:16px;background:var(--teal)">16 · inputs</b>
+        <b style="border-radius:24px;background:var(--lilac)">24 · panels</b>
+        <b style="border-radius:34px;background:var(--butter)">34 · hero</b>
+        <b style="border-radius:999px;background:var(--teal)">pill</b>
+      </div>
+      <p class="note" style="margin-top:var(--s3);font-size:12.5px">Nesting rule: an inner
+        radius is always at least 8 less than its container's, so corners stay concentric.</p></div>
+    <div><span class="lab" style="display:block;margin-bottom:var(--s3)">Lines</span>
+      <div style="display:flex;flex-direction:column;gap:var(--s3)">
+        <div style="display:flex;align-items:center;gap:var(--s3)"><span class="num" style="width:60px;font-size:12px">1px line</span><span style="flex:1;height:1px;background:var(--line)"></span></div>
+        <div style="display:flex;align-items:center;gap:var(--s3)"><span class="num" style="width:60px;font-size:12px">1px hi</span><span style="flex:1;height:1px;background:var(--line-hi)"></span></div>
+      </div>
+      <p class="note" style="margin-top:var(--s3);font-size:12.5px">There are only two line
+        weights, and most surfaces use none — separation comes from radius, ground step and
+        shadow, not from rules.</p></div>
+    <div><span class="lab" style="display:block;margin-bottom:var(--s3)">Space — 4px base</span>
+      <div class="sp"><span style="height:4px"><i>4</i></span><span style="height:8px"><i>8</i></span>
+        <span style="height:12px"><i>12</i></span><span style="height:16px"><i>16</i></span>
+        <span style="height:24px"><i>24</i></span><span style="height:36px"><i>36</i></span>
+        <span style="height:52px"><i>52</i></span><span style="height:76px"><i>76</i></span>
+        <span style="height:112px"><i>112</i></span></div></div>
+  </div>
+</section>
+
+<!-- 04 SURFACE -->
+<section>
+  <div class="sec-head"><h2 class="sec-title">Depth &amp; Blend</h2>
+    <p class="sec-note">Three layered shadows, each with a real vertical offset and a soft blur —
+      never a zero-offset halo. Gradients are legitimate in this world and only this one: mesh
+      for hero fields, duo for chart fills, veil for text over colour.</p></div>
+
+  <div class="grid g4" style="margin-bottom:var(--s6)">
+    <div class="card card--line"><span class="lab">Line · no shadow</span>
+      <p class="note" style="margin-top:8px;font-size:12.5px">Grouping only. Filters, secondary containers.</p></div>
+    <div class="card"><span class="lab">el-1 · resting</span>
+      <p class="note" style="margin-top:8px;font-size:12.5px">Default panel. Cards, rows, inputs.</p></div>
+    <div class="card" style="box-shadow:var(--el-2)"><span class="lab">el-2 · raised</span>
+      <p class="note" style="margin-top:8px;font-size:12.5px">Hover, selected candidate, hero fields.</p></div>
+    <div class="card" style="box-shadow:var(--el-3)"><span class="lab">el-3 · floating</span>
+      <p class="note" style="margin-top:8px;font-size:12.5px">Menus, drawers, the brief modal.</p></div>
+  </div>
+
+  <span class="lab" style="display:block;margin-bottom:var(--s3)">Gradients — the three permitted forms</span>
+  <div class="grid g3">
+    <div><div class="gr gr-mesh"></div><p class="note" style="margin-top:9px;font-size:12.5px">
+      <strong>Mesh.</strong> Three closest-side radial stops over a neutral. Hero fields and the
+      empty state. Never behind body text.</p></div>
+    <div><div class="gr gr-duo"></div><p class="note" style="margin-top:9px;font-size:12.5px">
+      <strong>Duo.</strong> Two pigments on a 118° axis. Chart area fills and the score arc.</p></div>
+    <div><div class="gr gr-veil"></div><p class="note" style="margin-top:9px;font-size:12.5px">
+      <strong>Veil.</strong> An ink gradient over a duo, so text on a colour field always clears
+      4.5:1 without dulling the colour.</p></div>
+  </div>
+</section>
+
+<!-- 05 CONTROLS -->
+<section>
+  <div class="sec-head"><h2 class="sec-title">Controls</h2>
+    <p class="sec-note">Everything is a pill. The primary action is ink — pigments carry meaning,
+      so spending one on a button would break the code the Scout has learned. Focus is a lilac
+      ring at 3px offset, visible on every ground including the colour fields.</p></div>
+
+  <div class="grid g2" style="margin-bottom:var(--s4)">
+    <div class="card">
+      <div class="card-hd"><h3>Actions</h3></div>
+      <div style="display:flex;gap:var(--s2);flex-wrap:wrap">
+        <button class="btn">Promote</button>
+        <button class="btn btn--2">Watch</button>
+        <button class="btn btn--q">Pass</button>
+        <button class="btn btn--teal">Brief the room</button>
+        <button class="btn" disabled>Gate failed</button>
+        <button class="btn btn--busy" aria-label="Scanning">Scanning</button>
+      </div>
+      <p class="note" style="margin-top:var(--s4);font-size:12.5px">Hover lifts 2px on an
+        exponential ease-out and deepens to el-2. That single lift is the world's whole motion
+        vocabulary — reused for rows, cards and the drawer.</p>
+    </div>
+    <div class="card">
+      <div class="card-hd"><h3>Pills</h3>
+        <div class="seg" role="group" aria-label="Range">
+          <button type="button" aria-pressed="true">Today</button>
+          <button type="button" aria-pressed="false">7d</button>
+          <button type="button" aria-pressed="false">30d</button>
+        </div></div>
+      <div style="display:flex;gap:7px;flex-wrap:wrap">
+        <span class="pill pill--solid">Rank 1</span>
+        <span class="pill pill--pass"><i class="dot"></i>Fit pass</span>
+        <span class="pill pill--hold">Watching</span>
+        <span class="pill pill--fail">Gate fail</span>
+        <span class="pill pill--lilac">Model</span>
+        <span class="pill">Substack · 214K</span>
+      </div>
+      <p class="note" style="margin-top:var(--s4);font-size:12.5px">A lilac pill always means the
+        value came from the model. Teal always means it was counted. That pairing is the
+        product's core distinction, encoded in colour.</p>
+    </div>
+  </div>
+
+  <div class="grid g3">
+    <label><span class="lab" style="display:block;margin-bottom:7px">Mandate</span>
+      <input class="inp" value="Design &amp; Built Environment" aria-label="Mandate"></label>
+    <label><span class="lab" style="display:block;margin-bottom:7px">Audience band</span>
+      <input class="inp" placeholder="50,000 – 500,000" aria-label="Audience band"></label>
+    <label><span class="lab" style="display:block;margin-bottom:7px">Score threshold</span>
+      <input class="inp inp--err" value="115" aria-label="Score threshold" aria-describedby="e5">
+      <span class="em" id="e5">Threshold must be between 0 and 100. Your last drop used 70.</span></label>
+  </div>
+</section>
+
+<!-- 06 IDENTITY -->
+<section>
+  <div class="sec-head"><h2 class="sec-title">Faces</h2>
+    <p class="sec-note">Circular, full colour, and ringed with a conic arc that <em>is</em> the
+      Warhol Score — so the number and the portrait are one object. Ring colour follows the
+      band: teal above 80, butter 70–79, lilac below threshold. Portraits are authored
+      placeholders.</p></div>
+
+  <div class="faces" style="margin-bottom:var(--s5)">
+    <div class="face">
+      <div class="ring" style="--rc:var(--teal);--pct:91%">
+        <div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#D7D2E9"/><circle cx="50" cy="38" r="19" fill="#8B7FC4"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#8B7FC4"/></svg></div></div>
+      <div class="n">Mara Ellison</div><div class="m">Substack · 214K · 91</div></div>
+    <div class="face">
+      <div class="ring" style="--rc:var(--teal);--pct:84%">
+        <div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#FFD68D"/><circle cx="50" cy="36" r="18" fill="#C98A12"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#C98A12"/></svg></div></div>
+      <div class="n">Dev Okonjo</div><div class="m">YouTube · 480K · 84</div></div>
+    <div class="face">
+      <div class="ring" style="--rc:var(--butter);--pct:78%">
+        <div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#67BCAA"/><circle cx="50" cy="39" r="20" fill="#2F8271"/><path d="M10 100c0-22 18-33 40-33s40 11 40 33z" fill="#2F8271"/></svg></div></div>
+      <div class="n">Sena Ruiz</div><div class="m">TikTok · 1.2M · 78</div></div>
+    <div class="face">
+      <div class="ring" style="--rc:var(--butter);--pct:72%">
+        <div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#D7D2E9"/><circle cx="50" cy="37" r="18" fill="#57555F"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#57555F"/></svg></div></div>
+      <div class="n">Theo Brandt</div><div class="m">Podcast · 96K · 72</div></div>
+    <div class="face">
+      <div class="ring" style="--rc:var(--lilac);--pct:68%">
+        <div class="avatar" style="opacity:.62"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#E6E3DC"/><circle cx="50" cy="37" r="18" fill="#8A8892"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#8A8892"/></svg></div></div>
+      <div class="n" style="color:var(--text-3)">Iris Nakamura</div><div class="m">Gate fail · 68</div></div>
+  </div>
+
+  <div class="grid g2">
+    <div class="card"><span class="lab">Sizes — 24 / 32 / 40 / 56</span>
+      <div class="avs">
+        <div class="avatar" style="width:24px;height:24px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#D7D2E9"/><circle cx="50" cy="38" r="19" fill="#8B7FC4"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#8B7FC4"/></svg></div>
+        <div class="avatar" style="width:32px;height:32px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#FFD68D"/><circle cx="50" cy="38" r="19" fill="#C98A12"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#C98A12"/></svg></div>
+        <div class="avatar" style="width:40px;height:40px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#67BCAA"/><circle cx="50" cy="38" r="19" fill="#2F8271"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#2F8271"/></svg></div>
+        <div class="avatar" style="width:56px;height:56px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#D7D2E9"/><circle cx="50" cy="38" r="19" fill="#57555F"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#57555F"/></svg></div>
+      </div>
+      <p class="note" style="margin-top:var(--s4);font-size:12.5px">The score ring drops below
+        40px — at table scale it becomes an unreadable hairline, and the score is already in its
+        own column.</p></div>
+    <div class="card"><span class="lab">Group — watchlist</span>
+      <div class="stack" style="margin-top:var(--s4)">
+        <div class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#D7D2E9"/><circle cx="50" cy="38" r="19" fill="#8B7FC4"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#8B7FC4"/></svg></div>
+        <div class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#FFD68D"/><circle cx="50" cy="38" r="19" fill="#C98A12"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#C98A12"/></svg></div>
+        <div class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#67BCAA"/><circle cx="50" cy="38" r="19" fill="#2F8271"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#2F8271"/></svg></div>
+        <div class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#D7D2E9"/><circle cx="50" cy="38" r="19" fill="#57555F"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#57555F"/></svg></div>
+        <div class="more">+10</div>
+      </div>
+      <p class="note" style="margin-top:var(--s4);font-size:12.5px">Overlap −12px with a 3px
+        surface-coloured ring, so the stack reads as depth rather than as a collision.</p></div>
+  </div>
+</section>
+
+<!-- 07 DATA -->
+<section>
+  <div class="sec-head"><h2 class="sec-title">Charts</h2>
+    <p class="sec-note">Rounded ends on every bar, pigment for meaning, and the threshold drawn
+      as an ink rule so it survives across all four fields. Teal = counted, lilac = judged.
+      Data below is synthetic demonstration material.</p></div>
+
+  <div class="grid g12" style="margin-bottom:var(--s4)">
+    <!-- score, on butter -->
+    <div class="card card--butter" style="grid-column:span 5">
+      <div class="card-hd"><h3>Warhol Score</h3><span class="delta">▲ 6.2 / 30d</span></div>
+      <div style="display:flex;align-items:flex-end;gap:var(--s4);flex-wrap:wrap">
+        <span class="bignum" style="font-size:88px">91</span>
+        <div style="padding-bottom:10px">
+          <div class="lab" style="color:rgba(28,27,35,.6)">Mara Ellison</div>
+          <div style="font-size:13px;font-weight:600">Cleared threshold by 21</div>
+        </div>
+      </div>
+      <div style="margin-top:var(--s5)">
+        <div class="bar-row"><span class="k" style="color:rgba(28,27,35,.72)">Gap</span>
+          <span class="track"><i style="width:88%;background:var(--ink)"></i><span class="thr" style="left:70%"></span></span>
+          <span class="v">88</span></div>
+        <div class="bar-row"><span class="k" style="color:rgba(28,27,35,.72)">Strain</span>
+          <span class="track"><i style="width:74%;background:var(--lilac-d)"></i><span class="thr" style="left:70%"></span></span>
+          <span class="v">74</span></div>
+        <div class="bar-row"><span class="k" style="color:rgba(28,27,35,.72)">Fit</span>
+          <span><span class="pill" style="background:var(--ink);color:var(--on-ink)">Gate — pass</span></span>
+          <span class="v">—</span></div>
+      </div>
+    </div>
+
+    <!-- value vs extracted -->
+    <div class="card" style="grid-column:span 7">
+      <div class="card-hd"><h3>Value vs. extracted</h3><span class="pill pill--pass">Gap $87K</span></div>
+      <svg viewBox="0 0 620 236" width="100%" height="236" role="img"
+        aria-label="Estimated audience value rises from 41 to 96 thousand dollars over eleven months while extracted revenue holds between 3 and 9 thousand. The gap widens to 87 thousand.">
+        <defs>
+          <linearGradient id="gfill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="var(--teal)" stop-opacity=".42"/>
+            <stop offset="100%" stop-color="var(--teal)" stop-opacity=".04"/>
+          </linearGradient>
+        </defs>
+        <g stroke="var(--line)" stroke-width="1">
+          <line x1="52" y1="30" x2="608" y2="30"/><line x1="52" y1="84" x2="608" y2="84"/>
+          <line x1="52" y1="138" x2="608" y2="138"/></g>
+        <line x1="52" y1="192" x2="608" y2="192" stroke="var(--line-hi)" stroke-width="1.5"/>
+        <path d="M64 140 L124 132 L184 120 L244 110 L304 96 L364 82 L424 66 L484 50 L544 34 L600 26
+                 L600 182 L544 180 L484 175 L424 177 L364 170 L304 172 L244 168 L184 170 L124 165 L64 168 Z"
+              fill="url(#gfill)"/>
+        <polyline points="64,140 124,132 184,120 244,110 304,96 364,82 424,66 484,50 544,34 600,26"
+                  fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="64,168 124,165 184,170 244,168 304,172 364,170 424,177 484,175 544,180 600,182"
+                  fill="none" stroke="var(--text-3)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="600" cy="26" r="6" fill="var(--teal)" stroke="var(--surf)" stroke-width="3"/>
+        <circle cx="600" cy="182" r="6" fill="var(--text-3)" stroke="var(--surf)" stroke-width="3"/>
+        <g font-family="Onest" font-size="11" font-weight="600" fill="var(--text-3)">
+          <text x="6" y="33">$100K</text><text x="16" y="87">$50K</text><text x="40" y="195">0</text>
+          <text x="60" y="216">Sep</text><text x="316" y="216">Feb</text><text x="576" y="216">Jul</text></g>
+        <g font-family="Onest" font-size="12" font-weight="700">
+          <text x="596" y="16" fill="var(--teal)" text-anchor="end">Est. value $96K</text>
+          <text x="596" y="204" fill="var(--text-3)" text-anchor="end">Extracted $9.1K</text></g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="grid g12">
+    <!-- dot matrix -->
+    <div class="card" style="grid-column:span 4">
+      <div class="card-hd"><h3>Cohort</h3><span class="lab">n = 47</span></div>
+      <div class="dotmatrix" role="img" aria-label="47 dots representing every creator scanned: 29 below threshold, 6 gate failed, 6 surfaced into the drop, 6 on the watchlist.">
+        <i style="background:var(--teal)"></i><i style="background:var(--teal)"></i><i style="background:var(--teal)"></i>
+        <i style="background:var(--teal)"></i><i style="background:var(--teal)"></i><i style="background:var(--teal)"></i>
+        <i style="background:var(--butter)"></i><i style="background:var(--butter)"></i><i style="background:var(--butter)"></i>
+        <i style="background:var(--butter)"></i><i style="background:var(--butter)"></i><i style="background:var(--butter)"></i>
+        <i style="background:var(--fail);opacity:.5"></i><i style="background:var(--fail);opacity:.5"></i>
+        <i style="background:var(--fail);opacity:.5"></i><i style="background:var(--fail);opacity:.5"></i>
+        <i style="background:var(--fail);opacity:.5"></i><i style="background:var(--fail);opacity:.5"></i>
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <div style="display:flex;gap:var(--s3);flex-wrap:wrap;margin-top:var(--s4)">
+        <span class="pill pill--pass">6 surfaced</span>
+        <span class="pill pill--hold">6 watching</span>
+        <span class="pill pill--fail">6 gate fail</span>
+        <span class="pill">29 below</span>
+      </div>
+    </div>
+
+    <!-- timeline -->
+    <div class="card" style="grid-column:span 4">
+      <div class="card-hd"><h3>Strain events</h3><span class="lab">12 weeks</span></div>
+      <div class="timeline">
+        <div class="tl-row"><span class="d">W−08</span>
+          <span class="tl-bar" style="background:var(--teal);width:58%">Cadence −41%<span class="c">rules</span></span></div>
+        <div class="tl-row"><span class="d">W−06</span>
+          <span class="tl-bar" style="background:var(--lilac);width:74%">Burnout language<span class="c">model</span></span></div>
+        <div class="tl-row"><span class="d">W−03</span>
+          <span class="tl-bar" style="background:var(--lilac);width:86%">Solo-operator signal<span class="c">model</span></span></div>
+        <div class="tl-row"><span class="d">W−01</span>
+          <span class="tl-bar" style="background:var(--teal);width:44%">Sponsor churn<span class="c">rules</span></span></div>
+        <div class="tl-row"><span class="d">Now</span>
+          <span class="tl-bar" style="background:var(--butter);width:96%">Surfaced to drop<span class="c">91</span></span></div>
+      </div>
+      <p class="note" style="margin-top:var(--s4);font-size:12.5px">Bar length is recency-weighted
+        contribution to strain; colour is the engine that produced it.</p>
+    </div>
+
+    <!-- distribution -->
+    <div class="card card--lilac" style="grid-column:span 4">
+      <div class="card-hd"><h3>Distribution</h3><span class="delta">Thresh 70</span></div>
+      <svg viewBox="0 0 380 200" width="100%" height="200" role="img"
+        aria-label="Score distribution. Most creators score between 40 and 65. Six clear the threshold of 70.">
+        <g fill="rgba(28,27,35,.22)">
+          <rect x="12"  y="150" width="34" height="34" rx="10"/>
+          <rect x="54"  y="118" width="34" height="66" rx="10"/>
+          <rect x="96"  y="70"  width="34" height="114" rx="10"/>
+          <rect x="138" y="52"  width="34" height="132" rx="10"/>
+          <rect x="180" y="96"  width="34" height="88"  rx="10"/></g>
+        <g fill="var(--ink)">
+          <rect x="222" y="130" width="34" height="54" rx="10"/>
+          <rect x="264" y="146" width="34" height="38" rx="10"/>
+          <rect x="306" y="160" width="34" height="24" rx="10"/></g>
+        <line x1="218" y1="20" x2="218" y2="192" stroke="var(--ink)" stroke-width="2"
+              stroke-dasharray="5 5" opacity=".55"/>
+        <g font-family="Onest" font-size="11" font-weight="600" fill="rgba(28,27,35,.62)">
+          <text x="16" y="196">30</text><text x="100" y="196">50</text>
+          <text x="226" y="196">70</text><text x="310" y="196">90</text></g>
+      </svg>
+      <p class="note" style="margin-top:var(--s3);font-size:12.5px;color:rgba(28,27,35,.72)">
+        Bars below the threshold recede into the field at 22% ink; only what enters the drop
+        goes solid.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 IN SITU -->
+<section>
+  <div class="sec-head"><h2 class="sec-title">The Drop</h2>
+    <p class="sec-note">The whole system doing the job. Score, ring, pigment-coded engine, one
+      ink action. Synthetic candidates.</p></div>
+
+  <div class="drop" style="margin-bottom:var(--s4)">
+    <div class="drop-hd">
+      <div><h3 style="font-size:26px">Morning drop</h3>
+        <p class="note" style="margin-top:6px;font-size:13px">Design &amp; Built Environment ·
+          scanned 04:12 · 47 seen · 6 surfaced · threshold 70</p></div>
+      <div style="display:flex;gap:var(--s2);align-items:center">
+        <span class="pill pill--hold">6 to work</span>
+        <button class="btn btn--teal">Brief the room</button></div>
+    </div>
+
+    <div class="drow drow--hd"><span>#</span><span>Score</span><span>Candidate</span>
+      <span class="hm">Gap / strain</span><span class="hs">Play</span><span class="hm">Verdict</span></div>
+
+    <div class="drow">
+      <span class="rk">01</span><span class="sc" style="color:var(--teal)">91</span>
+      <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#D7D2E9"/><circle cx="50" cy="38" r="19" fill="#8B7FC4"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#8B7FC4"/></svg></span>
+        <span><span class="n">Mara Ellison</span><br><span class="m">Substack · 214K · architecture</span></span></span>
+      <span class="hm"><span class="track" style="height:11px"><i style="width:88%;background:var(--teal)"></i></span>
+        <span class="track" style="height:11px;margin-top:5px"><i style="width:74%;background:var(--lilac-d)"></i></span></span>
+      <span class="hs"><span class="pill pill--lilac">Newsletter</span></span>
+      <span class="acts hm"><button class="btn">Promote</button><button class="btn btn--2">Watch</button></span>
+    </div>
+    <div class="drow">
+      <span class="rk">02</span><span class="sc" style="color:var(--teal)">84</span>
+      <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#FFD68D"/><circle cx="50" cy="36" r="18" fill="#C98A12"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#C98A12"/></svg></span>
+        <span><span class="n">Dev Okonjo</span><br><span class="m">YouTube · 480K · DIY electronics</span></span></span>
+      <span class="hm"><span class="track" style="height:11px"><i style="width:79%;background:var(--teal)"></i></span>
+        <span class="track" style="height:11px;margin-top:5px"><i style="width:82%;background:var(--lilac-d)"></i></span></span>
+      <span class="hs"><span class="pill pill--lilac">Course + kit</span></span>
+      <span class="acts hm"><button class="btn">Promote</button><button class="btn btn--2">Watch</button></span>
+    </div>
+    <div class="drow">
+      <span class="rk">03</span><span class="sc" style="color:var(--butter-d)">78</span>
+      <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#67BCAA"/><circle cx="50" cy="39" r="20" fill="#2F8271"/><path d="M10 100c0-22 18-33 40-33s40 11 40 33z" fill="#2F8271"/></svg></span>
+        <span><span class="n">Sena Ruiz</span><br><span class="m">TikTok · 1.2M · food</span></span></span>
+      <span class="hm"><span class="track" style="height:11px"><i style="width:91%;background:var(--teal)"></i></span>
+        <span class="track" style="height:11px;margin-top:5px"><i style="width:51%;background:var(--lilac-d)"></i></span></span>
+      <span class="hs"><span class="pill pill--lilac">CPG line</span></span>
+      <span class="acts hm"><button class="btn">Promote</button><button class="btn btn--2">Watch</button></span>
+    </div>
+    <div class="drow">
+      <span class="rk">04</span><span class="sc" style="color:var(--butter-d)">72</span>
+      <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#D7D2E9"/><circle cx="50" cy="37" r="18" fill="#57555F"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#57555F"/></svg></span>
+        <span><span class="n">Theo Brandt</span><br><span class="m">Podcast · 96K · markets</span></span></span>
+      <span class="hm"><span class="track" style="height:11px"><i style="width:66%;background:var(--teal)"></i></span>
+        <span class="track" style="height:11px;margin-top:5px"><i style="width:69%;background:var(--lilac-d)"></i></span></span>
+      <span class="hs"><span class="pill pill--lilac">Paid research</span></span>
+      <span class="acts hm"><button class="btn">Promote</button><button class="btn btn--2">Watch</button></span>
+    </div>
+    <div class="drow" style="opacity:.55">
+      <span class="rk">—</span><span class="sc" style="color:var(--text-3)">68</span>
+      <span class="who"><span class="avatar" style="opacity:.6"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#E6E3DC"/><circle cx="50" cy="37" r="18" fill="#8A8892"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#8A8892"/></svg></span>
+        <span><span class="n">Iris Nakamura</span><br><span class="m">Medium · 61K · ML research</span></span></span>
+      <span class="hm"><span class="pill pill--fail">Format fit — gate fail</span></span>
+      <span class="hs">—</span>
+      <span class="acts hm"><button class="btn" disabled>Gate failed</button></span>
+    </div>
+  </div>
+
+  <div class="grid g2">
+    <div class="empty" style="background:transparent">
+      <div class="gr gr-mesh" style="height:96px;max-width:220px;margin:0 auto var(--s5);border-radius:var(--r-xl)"></div>
+      <h4>Worked to zero</h4>
+      <p class="note" style="max-width:44ch;margin:0 auto var(--s5)">Every candidate in today's
+        drop has a verdict. Next scan lands 04:12 tomorrow; 14 on the watchlist are still being
+        re-scored.</p>
+      <button class="btn btn--2">Open watchlist</button>
+    </div>
+    <div class="card">
+      <span class="lab">Loading</span>
+      <div style="display:flex;gap:var(--s4);align-items:center;margin:var(--s4) 0 var(--s3)">
+        <div class="sk" style="width:36px;height:36px;flex:0 0 36px;border-radius:50%"></div>
+        <div style="flex:1"><div class="sk" style="width:54%"></div><div class="sk" style="width:32%;margin-top:8px;height:11px"></div></div></div>
+      <div style="display:flex;gap:var(--s4);align-items:center">
+        <div class="sk" style="width:36px;height:36px;flex:0 0 36px;border-radius:50%"></div>
+        <div style="flex:1"><div class="sk" style="width:70%"></div><div class="sk" style="width:26%;margin-top:8px;height:11px"></div></div></div>
+      <p class="note" style="margin-top:var(--s4);font-size:12.5px">Skeletons keep the row's exact
+        geometry, including the circular avatar, and pulse opacity rather than sweeping — a
+        shimmer would be a fourth gradient, and there are only three.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 09 TOKENS -->
+<section>
+  <div class="sec-head"><h2 class="sec-title">Tokens</h2>
+    <p class="sec-note">Light is the default — this desk is worked in a lit office in the
+      morning. Dark reuses #1C1B23 from the source palette as its ground, so the pigments sit on
+      a colour that was always part of the system.</p></div>
+<pre class="tok">:root{
+  <span class="c">/* the four pigments — each owns whole surfaces, never 3px stripes */</span>
+  --lilac:<span class="v">#D7D2E9</span>;   --lilac-d:<span class="v">#8B7FC4</span>;  --lilac-s:<span class="v">#EEEBF6</span>;   <span class="c">/* JUDGED (model) */</span>
+  --butter:<span class="v">#FFD68D</span>;  --butter-d:<span class="v">#C98A12</span>; --butter-s:<span class="v">#FFF0D3</span>;  <span class="c">/* ATTENTION     */</span>
+  --teal:<span class="v">#67BCAA</span>;    --teal-d:<span class="v">#2F8271</span>;   --teal-s:<span class="v">#DCF0EB</span>;    <span class="c">/* COUNTED (rules)*/</span>
+  --ink:<span class="v">#1C1B23</span>;     --paper:<span class="v">#FFFFFF</span>;
+
+  --bg:<span class="v">#F7F6F2</span>;  --surf:<span class="v">#FFFFFF</span>;  --surf-2:<span class="v">#F1EFEA</span>;  --surf-3:<span class="v">#E6E3DC</span>;
+  --line:<span class="v">#E2DFD8</span>; --line-hi:<span class="v">#CBC7BE</span>;
+  --text:<span class="v">#1C1B23</span>; --text-2:<span class="v">#57555F</span>;  --text-3:<span class="v">#8A8892</span>;
+  --pass:<span class="v">#2F8271</span>; --hold:<span class="v">#C98A12</span>;  --fail:<span class="v">#C93E3E</span>;
+
+  <span class="c">/* radius — the loudest signal in this world. nothing is square. */</span>
+  --r-xs:<span class="v">6px</span>;  --r-sm:<span class="v">10px</span>;  --r-md:<span class="v">16px</span>;
+  --r-lg:<span class="v">24px</span>; --r-xl:<span class="v">34px</span>;  --r-pill:<span class="v">999px</span>;
+  <span class="c">/* nesting: inner radius = outer − 8, minimum, so corners stay concentric */</span>
+
+  --s1:<span class="v">4px</span>; --s2:<span class="v">8px</span>; --s3:<span class="v">12px</span>; --s4:<span class="v">16px</span>; --s5:<span class="v">24px</span>;
+  --s6:<span class="v">36px</span>; --s7:<span class="v">52px</span>; --s8:<span class="v">76px</span>; --s9:<span class="v">112px</span>;
+
+  <span class="c">/* elevation — real offset + blur, layered. never a zero-offset halo. */</span>
+  --el-1:<span class="v">0 1px 2px rgba(28,27,35,.05), 0 2px 6px -2px rgba(28,27,35,.06)</span>;
+  --el-2:<span class="v">0 2px 4px rgba(28,27,35,.05), 0 10px 22px -8px rgba(28,27,35,.13)</span>;
+  --el-3:<span class="v">0 4px 8px rgba(28,27,35,.06), 0 26px 52px -20px rgba(28,27,35,.24)</span>;
+
+  --disp:<span class="v">"Bricolage Grotesque"</span>;  <span class="c">/* 800, wdth 92, −0.055em, caps */</span>
+  --ui:<span class="v">"Onest"</span>;                  <span class="c">/* 400/600/700 */</span>
+
+  <span class="c">/* gradients — legitimate HERE and nowhere else in this set */</span>
+  --gr-mesh:<span class="v">3 × radial-gradient(~70% 115% at …, colour, transparent 72%) over --surf-2</span>;
+  --gr-duo:<span class="v">linear-gradient(118deg, var(--lilac), var(--teal))</span>;
+  --gr-veil:<span class="v">linear-gradient(180deg,transparent,rgba(28,27,35,.72)) over --gr-duo</span>;
+
+  <span class="c">/* motion — one move, reused everywhere */</span>
+  --lift:<span class="v">translateY(-2px)</span>;  --ease:<span class="v">cubic-bezier(.2,.7,.3,1)</span>;  --dur:<span class="v">150ms</span>;
+}
+:root[data-theme="dark"]{
+  --bg:<span class="v">#141319</span>;  --surf:<span class="v">#1C1B23</span>;  --surf-2:<span class="v">#26252F</span>;  --surf-3:<span class="v">#32313D</span>;
+  --line:<span class="v">#32313D</span>; --line-hi:<span class="v">#454351</span>;
+  --text:<span class="v">#F1EFEA</span>; --text-2:<span class="v">#A9A6B4</span>;  --text-3:<span class="v">#78757F</span>;
+  <span class="c">/* pigments lift slightly so they hold on the dark ground */</span>
+  --lilac:<span class="v">#B6ADDE</span>; --butter:<span class="v">#FFCF78</span>; --teal:<span class="v">#63C4AF</span>;
+  --pass:<span class="v">#5FD0B4</span>;  --hold:<span class="v">#F5BC4A</span>;   --fail:<span class="v">#FF6B6B</span>;
+}</pre>
+</section>
+
+<footer>
+  <p><b>Toolkit 05 — PIGMENT.</b> Colour-field dashboard, built on the supplied palette. Best
+    when the drop should read at arm's length and the rules/model distinction needs to be
+    learnable without labels. Weakest at extreme density — the radii and panel padding cost
+    rows, so a 40-row table wants Terminal or Ledger instead.</p>
+  <p style="margin-bottom:0">All candidates, scores and revenue figures are synthetic
+    demonstration data. Portraits are authored placeholders.</p>
+</footer>
+
+</main>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var btns=document.querySelectorAll('.tsw button');
+  function set(t){
+    root.setAttribute('data-theme',t);
+    btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.set===t));});
+    try{localStorage.setItem('wt-05',t);}catch(e){}
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set);});});
+  document.querySelectorAll('.seg').forEach(function(g){
+    var bs=g.querySelectorAll('button');
+    bs.forEach(function(b){b.addEventListener('click',function(){
+      bs.forEach(function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');});});
+  });
+  var saved=null; try{saved=localStorage.getItem('wt-05');}catch(e){}
+  if(saved){set(saved);}
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches){set('dark');}
+})();
+</script>
+</body>
+</html>

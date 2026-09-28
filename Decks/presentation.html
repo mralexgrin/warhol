@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warhol — Talent Origination Engine</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #f2f0ed;
+    --ink-dim: #8b8781;
+    --ink-faint: #4a4643;
+    --bg: #0b0b0c;
+    --accent: #ff2d55;
+    --accent-2: #ffd400;
+    --line: #232326;
+    --sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+
+  /* ---------- deck chrome ---------- */
+
+  .deck { position: relative; height: 100vh; width: 100vw; }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(2.5rem, 7vw, 8rem);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(14px);
+    transition: opacity .5s ease, transform .5s ease, visibility .5s;
+    overflow-y: auto;
+  }
+  .slide.active { opacity: 1; visibility: visible; transform: none; }
+
+  .bar {
+    position: fixed; top: 0; left: 0; height: 2px; width: 100%;
+    background: var(--accent);
+    transform: scaleX(0); transform-origin: 0 50%;
+    transition: transform .45s ease;
+    z-index: 20;
+  }
+
+  .meta {
+    position: fixed; bottom: clamp(1.5rem, 3vw, 2.5rem);
+    left: clamp(2.5rem, 7vw, 8rem);
+    right: clamp(2.5rem, 7vw, 8rem);
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-family: var(--mono); font-size: .68rem;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--ink-faint);
+    z-index: 20; pointer-events: none;
+  }
+
+  .nav { position: fixed; inset: 0; display: flex; z-index: 10; }
+  .nav button { flex: 1; background: none; border: 0; cursor: pointer; }
+  .nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; }
+
+  /* ---------- type ---------- */
+
+  .eyebrow {
+    font-family: var(--mono); font-size: .7rem;
+    letter-spacing: .18em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.75rem;
+  }
+  .eyebrow.plain { color: var(--ink-faint); }
+
+  h1 {
+    font-size: clamp(3.5rem, 11vw, 10rem);
+    line-height: .88; letter-spacing: -.045em; font-weight: 700;
+  }
+  h2 {
+    font-size: clamp(2rem, 4.6vw, 4rem);
+    line-height: 1.02; letter-spacing: -.035em; font-weight: 650;
+    max-width: 20ch;
+  }
+  h3 {
+    font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+    letter-spacing: -.015em; font-weight: 650; margin-bottom: .5rem;
+  }
+  p, li {
+    font-size: clamp(1rem, 1.35vw, 1.2rem);
+    line-height: 1.55; color: var(--ink-dim);
+  }
+  .lede {
+    font-size: clamp(1.15rem, 1.75vw, 1.55rem);
+    line-height: 1.45; color: var(--ink); max-width: 42ch;
+  }
+  strong { color: var(--ink); font-weight: 650; }
+  em { color: var(--accent); font-style: normal; }
+
+  .stack > * + * { margin-top: 1.5rem; }
+  .rule { height: 1px; background: var(--line); margin: 2.75rem 0; }
+
+  /* ---------- layouts ---------- */
+
+  .cols {
+    display: grid; gap: clamp(1.75rem, 3.5vw, 3.5rem);
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    margin-top: 3rem;
+  }
+  .col .num {
+    font-family: var(--mono); font-size: .7rem; letter-spacing: .12em;
+    color: var(--accent); display: block; margin-bottom: .9rem;
+  }
+  .col p { font-size: clamp(.92rem, 1.15vw, 1.02rem); }
+
+  .split {
+    display: grid; gap: clamp(2rem, 6vw, 6rem);
+    grid-template-columns: 1fr 1fr; align-items: center;
+  }
+  @media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
+
+  /* asset list */
+  .assets { margin-top: 2.5rem; border-top: 1px solid var(--line); }
+  .asset {
+    display: grid; grid-template-columns: minmax(160px, 1fr) 2fr;
+    gap: 1.5rem; padding: .85rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .asset dt { font-weight: 650; font-size: clamp(.95rem, 1.2vw, 1.08rem); }
+  .asset dd { color: var(--ink-dim); font-size: clamp(.9rem, 1.15vw, 1.02rem); }
+  @media (max-width: 700px) { .asset { grid-template-columns: 1fr; gap: .25rem; } }
+
+  /* flywheel */
+  .wheel {
+    display: flex; flex-wrap: wrap; gap: .5rem;
+    margin-top: 2.75rem; align-items: stretch;
+  }
+  .step {
+    flex: 1 1 130px; padding: 1.1rem 1rem 1.25rem;
+    border-top: 2px solid var(--line);
+  }
+  .step.key { border-top-color: var(--accent); }
+  .step .n {
+    font-family: var(--mono); font-size: .66rem; letter-spacing: .1em;
+    color: var(--ink-faint); display: block; margin-bottom: .55rem;
+  }
+  .step.key .n { color: var(--accent); }
+  .step .t { font-weight: 650; font-size: clamp(.95rem, 1.25vw, 1.1rem); display: block; }
+  .step .d { font-size: .82rem; color: var(--ink-faint); line-height: 1.4; margin-top: .3rem; }
+  .loop {
+    margin-top: 1.5rem; font-family: var(--mono); font-size: .72rem;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint);
+    display: flex; align-items: center; gap: .8rem;
+  }
+  .loop::before {
+    content: ""; flex: 0 0 auto; width: 44px; height: 1px; background: var(--accent);
+  }
+
+  /* ladder */
+  .ladder { margin-top: 2.5rem; border-top: 1px solid var(--line); }
+  .rung {
+    display: grid; grid-template-columns: 22px minmax(120px,.7fr) 2.2fr .8fr;
+    gap: 1.5rem; padding: 1.15rem 0; align-items: baseline;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink-faint);
+  }
+  .rung .tier { font-family: var(--mono); font-size: .75rem; }
+  .rung .name { font-weight: 650; font-size: clamp(.98rem,1.25vw,1.12rem); color: var(--ink-dim); }
+  .rung .what { font-size: clamp(.88rem,1.1vw,1rem); }
+  .rung .vol { font-family: var(--mono); font-size: .75rem; letter-spacing: .06em; text-align: right; }
+  .rung.on { color: var(--ink); }
+  .rung.on .tier, .rung.on .vol { color: var(--accent); }
+  .rung.on .name { color: var(--ink); }
+  .rung.on .what { color: var(--ink-dim); }
+  @media (max-width: 800px) {
+    .rung { grid-template-columns: 22px 1fr; gap: .4rem 1rem; }
+    .rung .what, .rung .vol { grid-column: 2; text-align: left; }
+  }
+
+  /* product slides */
+  .tag {
+    display: inline-block; align-self: flex-start;
+    font-family: var(--mono); font-size: .66rem;
+    letter-spacing: .14em; text-transform: uppercase;
+    border: 1px solid var(--accent); color: var(--accent);
+    padding: .3rem .6rem; margin-bottom: 1.5rem;
+  }
+  .feat { margin-top: 2.25rem; }
+  .feat li {
+    list-style: none; padding: .85rem 0 .85rem 1.6rem;
+    position: relative; border-bottom: 1px solid var(--line);
+    font-size: clamp(.95rem, 1.2vw, 1.08rem);
+  }
+  .feat li::before {
+    content: ""; position: absolute; left: 0; top: 1.42em;
+    width: 7px; height: 1px; background: var(--accent);
+  }
+  .feat li b { color: var(--ink); font-weight: 650; }
+
+  /* ---------- product mocks ---------- */
+
+  .mock {
+    border: 1px solid var(--line);
+    background: #101012;
+  }
+  .mock-head {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: .7rem .95rem; border-bottom: 1px solid var(--line);
+    font-family: var(--mono); font-size: .6rem;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint);
+  }
+  .mock-head .live { color: var(--accent); }
+
+  /* listening — shortlist rows */
+  .row {
+    display: grid; grid-template-columns: 1.35fr 1.5fr auto;
+    gap: 1rem; align-items: center;
+    padding: .8rem .95rem; border-bottom: 1px solid var(--line);
+  }
+  .row:last-child { border-bottom: 0; }
+  .row .who { min-width: 0; }
+  .row .handle {
+    font-weight: 650; font-size: .92rem; color: var(--ink);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .row .sub {
+    font-family: var(--mono); font-size: .62rem;
+    letter-spacing: .06em; color: var(--ink-faint); margin-top: .2rem;
+  }
+  .bars { display: flex; flex-direction: column; gap: 4px; }
+  .track { height: 3px; background: #26262a; position: relative; }
+  .track i { position: absolute; inset: 0 auto 0 0; background: var(--accent); }
+  .track.dim i { background: var(--ink-faint); }
+  .row .score {
+    font-family: var(--mono); font-size: 1.05rem;
+    color: var(--accent); font-weight: 600; letter-spacing: -.02em;
+  }
+  .legend {
+    display: flex; gap: 1rem; padding: .6rem .95rem;
+    font-family: var(--mono); font-size: .56rem;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint);
+    border-top: 1px solid var(--line);
+  }
+
+  /* cultivation — development track */
+  .creator {
+    display: flex; align-items: center; gap: .8rem;
+    padding: .85rem .95rem; border-bottom: 1px solid var(--line);
+  }
+  .creator .dot {
+    width: 30px; height: 30px; flex: 0 0 auto;
+    background: var(--accent); color: #0b0b0c;
+    display: grid; place-items: center;
+    font-weight: 700; font-size: .82rem;
+  }
+  .creator .n { font-weight: 650; font-size: .92rem; }
+  .creator .s {
+    font-family: var(--mono); font-size: .62rem;
+    letter-spacing: .06em; color: var(--ink-faint); margin-top: .15rem;
+  }
+  .tools { display: grid; grid-template-columns: 1fr 1fr; }
+  .tool {
+    padding: .85rem .95rem;
+    border-bottom: 1px solid var(--line); border-right: 1px solid var(--line);
+  }
+  .tool:nth-child(2n) { border-right: 0; }
+  .tool:nth-last-child(-n+2) { border-bottom: 0; }
+  .tool .k {
+    font-weight: 650; font-size: .88rem; display: flex;
+    align-items: center; gap: .45rem;
+  }
+  .tool .k::before {
+    content: ""; width: 5px; height: 5px; background: var(--accent); flex: 0 0 auto;
+  }
+  .tool .v {
+    font-family: var(--mono); font-size: .62rem; line-height: 1.5;
+    letter-spacing: .04em; color: var(--ink-faint); margin-top: .3rem;
+  }
+
+  .callout {
+    border-left: 2px solid var(--accent);
+    padding: .3rem 0 .3rem 1.4rem;
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    line-height: 1.5; color: var(--ink);
+    max-width: 46ch;
+  }
+
+  /* big statement */
+  .statement {
+    font-size: clamp(1.9rem, 4.2vw, 3.6rem);
+    line-height: 1.08; letter-spacing: -.03em; font-weight: 650;
+    max-width: 22ch;
+  }
+
+  /* demo beats */
+  .beats { counter-reset: b; margin-top: 2.5rem; }
+  .beat {
+    counter-increment: b; position: relative;
+    padding: 1.2rem 0 1.2rem 3.5rem; border-bottom: 1px solid var(--line);
+  }
+  .beat::before {
+    content: counter(b); position: absolute; left: 0; top: 1.2rem;
+    font-family: var(--mono); font-size: .8rem; color: var(--accent);
+  }
+  .beat .h { font-weight: 650; font-size: clamp(1rem,1.3vw,1.15rem); }
+  .beat .s { font-size: clamp(.88rem,1.1vw,1rem); color: var(--ink-faint); margin-top: .3rem; }
+
+  .hint {
+    position: fixed; bottom: clamp(1.5rem,3vw,2.5rem); left: 50%;
+    transform: translateX(-50%); font-family: var(--mono);
+    font-size: .66rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink-faint); z-index: 21; transition: opacity .6s;
+  }
+  .hint.gone { opacity: 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .slide { transition: opacity .01s; transform: none; }
+  }
+
+  /* ---------- print / PDF ---------- */
+
+  @media print {
+    :root {
+      --ink: #111; --ink-dim: #444; --ink-faint: #888;
+      --bg: #fff; --line: #ddd;
+    }
+    html, body { overflow: visible; height: auto; background: #fff; }
+    .deck { height: auto; }
+    .bar, .meta, .nav, .hint { display: none !important; }
+
+    .slide {
+      position: relative; inset: auto;
+      opacity: 1 !important; visibility: visible !important;
+      transform: none !important;
+      height: 100vh; overflow: hidden;
+      page-break-after: always; break-after: page;
+      padding: 4rem;
+    }
+    .slide:last-child { page-break-after: auto; break-after: auto; }
+
+    .mock { background: #fafafa; }
+    .track { background: #e4e4e4; }
+    .creator .dot { color: #fff; }
+
+    @page { size: landscape; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bar" id="bar"></div>
+
+<div class="deck" id="deck">
+
+  <!-- 1 · TITLE -->
+  <section class="slide active">
+    <div class="eyebrow">Paradium · Proposal</div>
+    <h1>Warhol</h1>
+    <div class="rule"></div>
+    <p class="lede">Everyone gets fifteen minutes. We find them during theirs — and build something that outlasts it.</p>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="slide">
+    <div class="eyebrow">The Problem</div>
+    <h2>Thousands of creators have an audience and no business.</h2>
+    <div class="cols">
+      <div class="col">
+        <span class="num">01</span>
+        <p>Small followings, obsessive engagement, deep trust. The audience is worth many times what they're extracting from it.</p>
+      </div>
+      <div class="col">
+        <span class="num">02</span>
+        <p>They're a one-person company doing sales, ops and invoicing at midnight. Most plateau there.</p>
+      </div>
+      <div class="col">
+        <span class="num">03</span>
+        <p>When the window closes they own nothing. No channel, no product, no asset. The value evaporates.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · WHY NOBODY FINDS THEM -->
+  <section class="slide">
+    <div class="eyebrow">Why nobody finds them</div>
+    <div class="split">
+      <div class="stack">
+        <h2>Every discovery tool ranks by growth.</h2>
+        <p>Which means they surface creators who are already winning — and already have agents, managers and three competing offers.</p>
+      </div>
+      <div class="stack">
+        <p class="callout">Ranking by momentum finds people thirty days early. We need to find them a year early.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · THE SIGNAL -->
+  <section class="slide">
+    <div class="eyebrow">The Signal</div>
+    <h2>We look for a different shape.</h2>
+    <div class="cols">
+      <div class="col">
+        <span class="num">Core</span>
+        <h3>Monetization gap</h3>
+        <p>High engagement, high trust, near-zero commercial infrastructure. The gap itself is the buy signal.</p>
+      </div>
+      <div class="col">
+        <span class="num">Timing</span>
+        <h3>Operator strain</h3>
+        <p>Cadence decay, abandoned side projects, publicly asking for help. Being one person has stopped working — this quarter.</p>
+      </div>
+      <div class="col">
+        <span class="num">Filter</span>
+        <h3>Format fit</h3>
+        <p>Clips well, repeatable, advertiser demand, adjacent to categories we already sell.</p>
+      </div>
+    </div>
+    <div class="rule"></div>
+    <p class="lede">People who are great at making things and bad at running a business — which is exactly the business we're in.</p>
+  </section>
+
+  <!-- 5 · FLYWHEEL -->
+  <section class="slide">
+    <div class="eyebrow">The Flywheel</div>
+    <h2>Find, develop, own, monetize — then do it better.</h2>
+    <div class="wheel">
+      <div class="step key"><span class="n">01</span><span class="t">Scout</span><span class="d">Social, Substack, niche sites</span></div>
+      <div class="step key"><span class="n">02</span><span class="t">Score</span><span class="d">Signal model finds the mispricing</span></div>
+      <div class="step key"><span class="n">03</span><span class="t">Shortlist</span><span class="d">Opportunities, not leaderboards</span></div>
+      <div class="step key"><span class="n">04</span><span class="t">Cultivate</span><span class="d">Our tooling, while independent</span></div>
+      <div class="step"><span class="n">05</span><span class="t">Distribute</span><span class="d">Platforms they already rent</span></div>
+      <div class="step"><span class="n">06</span><span class="t">Own</span><span class="d">A destination we co-operate</span></div>
+      <div class="step"><span class="n">07</span><span class="t">Monetize</span><span class="d">Ads, commerce, direct sales</span></div>
+    </div>
+    <div class="loop">Every cohort sharpens the model · wins turn scouting inbound</div>
+  </section>
+
+  <!-- 6 · WHAT WE OWN -->
+  <section class="slide">
+    <div class="eyebrow">Why us</div>
+    <h2>We already own every expensive piece.</h2>
+    <dl class="assets">
+      <div class="asset"><dt>O&amp;O CMS platform</dt><dd>The destination itself — site, app or store</dd></div>
+      <div class="asset"><dt>O&amp;O ad infrastructure</dt><dd>Monetization from day one, no third party taking a cut</dd></div>
+      <div class="asset"><dt>Encore</dt><dd>Product recommendation — commerce and affiliate</dd></div>
+      <div class="asset"><dt>Cutter + content tooling</dt><dd>Cultivation, before we commit a dollar</dd></div>
+      <div class="asset"><dt>Direct sales</dt><dd>The one thing a creator genuinely cannot do alone</dd></div>
+      <div class="asset"><dt>Product &amp; design</dt><dd>Bespoke treatment for the rare breakout</dd></div>
+    </dl>
+    <p class="lede" style="margin-top:1.75rem">The only missing piece is the sourcing function.</p>
+  </section>
+
+  <!-- 7 · PRODUCT ONE -->
+  <section class="slide">
+    <div class="eyebrow plain">Product One</div>
+    <span class="tag">Tier 1 · Build now</span>
+    <h2>Listening</h2>
+    <div class="split" style="margin-top:1.75rem">
+      <div>
+        <p class="lede">A always-on scanner that reads the open web for creators in their window — and ranks them by how much money they're leaving on the table.</p>
+      </div>
+      <div class="mock">
+        <div class="mock-head"><span>Shortlist · This week</span><span class="live">Scanning</span></div>
+
+        <div class="row">
+          <div class="who">
+            <div class="handle">@thequietkitchen</div>
+            <div class="sub">14.2K · Substack</div>
+          </div>
+          <div class="bars">
+            <div class="track"><i style="width:92%"></i></div>
+            <div class="track"><i style="width:88%"></i></div>
+            <div class="track dim"><i style="width:71%"></i></div>
+          </div>
+          <div class="score">94</div>
+        </div>
+
+        <div class="row">
+          <div class="who">
+            <div class="handle">@builtbyrosa</div>
+            <div class="sub">31.7K · TikTok</div>
+          </div>
+          <div class="bars">
+            <div class="track"><i style="width:79%"></i></div>
+            <div class="track"><i style="width:83%"></i></div>
+            <div class="track dim"><i style="width:64%"></i></div>
+          </div>
+          <div class="score">87</div>
+        </div>
+
+        <div class="row">
+          <div class="who">
+            <div class="handle">@marginalgains</div>
+            <div class="sub">9.8K · YouTube</div>
+          </div>
+          <div class="bars">
+            <div class="track"><i style="width:86%"></i></div>
+            <div class="track"><i style="width:58%"></i></div>
+            <div class="track dim"><i style="width:52%"></i></div>
+          </div>
+          <div class="score">81</div>
+        </div>
+
+        <div class="legend"><span>Gap</span><span>Strain</span><span>Fit</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · PRODUCT TWO -->
+  <section class="slide">
+    <div class="eyebrow plain">Product Two</div>
+    <span class="tag">Tier 2 · Build now</span>
+    <h2>Cultivation</h2>
+    <div class="split" style="margin-top:1.75rem">
+      <div class="stack">
+        <p class="lede">A development track we run on promising creators while they're still independent — powered entirely by tooling we already own.</p>
+        <p class="callout">It costs us software, not headcount. That's why it runs across dozens at once.</p>
+      </div>
+      <div class="mock">
+        <div class="mock-head"><span>Development track</span><span class="live">Week 6</span></div>
+
+        <div class="creator">
+          <div class="dot">Q</div>
+          <div>
+            <div class="n">@thequietkitchen</div>
+            <div class="s">14.2K → 22.9K · Gap closing</div>
+          </div>
+        </div>
+
+        <div class="tools">
+          <div class="tool">
+            <div class="k">Cutter</div>
+            <div class="v">18 clips cut<br>from 4 long-form</div>
+          </div>
+          <div class="tool">
+            <div class="k">Listening</div>
+            <div class="v">Audience peaks<br>on technique, not recipes</div>
+          </div>
+          <div class="tool">
+            <div class="k">Content design</div>
+            <div class="v">Format locked<br>Cadence 3×/week</div>
+          </div>
+          <div class="tool">
+            <div class="k">Analytics</div>
+            <div class="v">Shorts outperform<br>feed 4.1×</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · WHY CULTIVATION MATTERS -->
+  <section class="slide">
+    <div class="eyebrow">Cultivation is the audition</div>
+    <div class="cols" style="margin-top:1rem">
+      <div class="col">
+        <span class="num">01</span>
+        <h3>It de-risks the bet</h3>
+        <p>We watch them execute with real tools before we spend platform or sales time. Investment becomes a promotion, not a gamble.</p>
+      </div>
+      <div class="col">
+        <span class="num">02</span>
+        <h3>It's the cheapest moat</h3>
+        <p>We're the only company with a reason to hand a 15k-follower creator a professional pipeline for free — because we're the only ones who benefit when they grow.</p>
+      </div>
+      <div class="col">
+        <span class="num">03</span>
+        <h3>It buys the relationship</h3>
+        <p>By the time agencies call, we've been their tooling and their data for a year. We aren't pitching. We're already inside.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · LADDER -->
+  <section class="slide">
+    <div class="eyebrow">The Ladder</div>
+    <h2>Investment is earned, tier by tier.</h2>
+    <div class="ladder">
+      <div class="rung on"><span class="tier">01</span><span class="name">Watchlist</span><span class="what">We monitor. No contact, no cost.</span><span class="vol">Hundreds</span></div>
+      <div class="rung on"><span class="tier">02</span><span class="name">Cultivate</span><span class="what">Cutter, listening, content design, analytics. Software-led.</span><span class="vol">Dozens</span></div>
+      <div class="rung"><span class="tier">03</span><span class="name">The Factory</span><span class="what">Standalone site, app or store on our CMS. Ads, Encore and direct sales attached.</span><span class="vol">10–20</span></div>
+      <div class="rung"><span class="tier">04</span><span class="name">Superstars</span><span class="what">Bespoke experiences. Product and design as an internal agency.</span><span class="vol">1–3</span></div>
+    </div>
+    <p style="margin-top:2rem"><strong>Hackathon scope is Tiers 1 and 2.</strong> The Factory and Superstars are where this goes — not what we're asking to build now.</p>
+  </section>
+
+  <!-- 11 · THE BIG IDEA -->
+  <section class="slide">
+    <div class="eyebrow">The Opportunity</div>
+    <p class="statement">An M&amp;A pipeline where we originate the asset instead of buying it.</p>
+    <div class="rule"></div>
+    <div class="cols" style="margin-top:0">
+      <div class="col"><span class="num">Cost</span><p>Origination instead of acquisition — a fraction of the price of buying a media brand.</p></div>
+      <div class="col"><span class="num">Direction</span><p>Categories that are growing, rather than buying into audiences that are shrinking.</p></div>
+      <div class="col"><span class="num">Compounding</span><p>Every cohort sharpens the signal. Whoever starts later can't catch up.</p></div>
+    </div>
+  </section>
+
+  <!-- 12 · PROOF -->
+  <section class="slide">
+    <div class="eyebrow">How we prove it</div>
+    <h2>We don't run it forward. We backtest.</h2>
+    <p class="lede" style="margin-top:1.75rem">Point Warhol at early-2024 data, blind to everything after. Would it have flagged the creators who actually broke out?</p>
+    <div class="beats">
+      <div class="beat"><div class="h">Warhol, as of January 2024</div><div class="s">Ten names nobody in the room recognises, each with its signal breakdown — then what they're worth today.</div></div>
+      <div class="beat"><div class="h">Warhol, as of this week</div><div class="s">The same screen, today's unknowns. The method has just proved itself on names you can check.</div></div>
+      <div class="beat"><div class="h">And here's how we develop them</div><div class="s">One creator's cultivation track — Cutter in the pipeline, listening data, content guidance, analytics.</div></div>
+    </div>
+  </section>
+
+  <!-- 13 · ASK -->
+  <section class="slide">
+    <div class="eyebrow">The Ask</div>
+    <h2>One quarter. A small team. Two deliverables.</h2>
+    <div class="cols">
+      <div class="col">
+        <span class="num">01</span>
+        <h3>A backtest that proves the signal</h3>
+        <p>Evidence, in weeks rather than eighteen months.</p>
+      </div>
+      <div class="col">
+        <span class="num">02</span>
+        <h3>Ten live pitches that prove the appetite</h3>
+        <p>Signal quality and closeability are different risks. Ten conversations answer the second.</p>
+      </div>
+    </div>
+    <div class="rule"></div>
+    <p class="lede">We already own the expensive half. We're asking to build the cheap one.</p>
+  </section>
+
+</div>
+
+<div class="meta">
+  <span id="label">Warhol</span>
+  <span><span id="cur">1</span> / <span id="tot">13</span></span>
+</div>
+
+<div class="nav">
+  <button id="prev" aria-label="Previous slide"></button>
+  <button id="next" aria-label="Next slide"></button>
+</div>
+
+<div class="hint" id="hint">← → to navigate</div>
+
+<script>
+  const slides = [...document.querySelectorAll('.slide')];
+  const labels = ['Warhol','Problem','Discovery','Signal','Flywheel','Assets','Product One','Product Two','Cultivation','Ladder','Opportunity','Proof','The Ask'];
+  const bar = document.getElementById('bar');
+  const cur = document.getElementById('cur');
+  const label = document.getElementById('label');
+  const hint = document.getElementById('hint');
+  document.getElementById('tot').textContent = slides.length;
+
+  let i = 0, touched = false;
+
+  function go(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((s, k) => s.classList.toggle('active', k === i));
+    bar.style.transform = 'scaleX(' + (i + 1) / slides.length + ')';
+    cur.textContent = i + 1;
+    label.textContent = labels[i];
+    if (!touched) { touched = true; hint.classList.add('gone'); }
+  }
+
+  document.getElementById('next').onclick = () => go(i + 1);
+  document.getElementById('prev').onclick = () => go(i - 1);
+
+  addEventListener('keydown', e => {
+    if (['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)) { e.preventDefault(); go(i + 1); }
+    if (['ArrowLeft','ArrowUp','PageUp'].includes(e.key)) { e.preventDefault(); go(i - 1); }
+    if (e.key === 'Home') go(0);
+    if (e.key === 'End') go(slides.length - 1);
+  });
+
+  let x0 = null;
+  addEventListener('touchstart', e => x0 = e.touches[0].clientX, {passive:true});
+  addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 50) go(dx < 0 ? i + 1 : i - 1);
+    x0 = null;
+  }, {passive:true});
+
+  go(0);
+</script>
+
+</body>
+</html>

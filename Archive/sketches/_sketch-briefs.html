@@ -1,0 +1,265 @@
+<!doctype html>
+<!--
+ROUGH SKETCH — not a build. Decision aid for one question only:
+where do saved views ("briefs") live now that they are free filters
+over a standing scan rather than a prerequisite you configure?
+
+Everything else on screen reflects the decisions already locked in the
+grilling session, so the placement can be judged in context:
+  · land straight in today's drop, no wizard gate
+  · collapsed cards: rank, name, score, thesis, one quote, one absence line
+  · one number on the card; Gap/Strain/Confidence live on the report
+  · no global as-of control, no top-bar ?
+  · nav: drop / watchlist / track record
+-->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sketch — where do briefs live?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..800;1,300..800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../prototypes/v2/alloy.css">
+<style>
+  body { padding: 0; }
+  .sketchbar {
+    position: sticky; top: 0; z-index: 40;
+    display: flex; align-items: center; gap: var(--s4); flex-wrap: wrap;
+    padding: 12px 22px; background: var(--ink); color: var(--on-ink);
+  }
+  .sketchbar b { font-family: var(--disp); font-size: 14px; letter-spacing: -.02em; }
+  .sketchbar .note { color: rgba(242,240,247,.72); font-size: 12.5px; max-width: 60ch; margin: 0; }
+  .sketchbar .seg { margin-left: auto; background: rgba(255,255,255,.10); border-color: transparent; }
+  .sketchbar .seg button { color: rgba(242,240,247,.78); }
+  .sketchbar .seg button[aria-pressed="true"] { background: var(--on-ink); color: var(--ink); box-shadow: none; }
+  .stage { padding: 22px; }
+
+  .slab { grid-template-columns: 248px minmax(0,1fr); max-width: 1240px; }
+  .railcol { align-items: stretch; padding: var(--s5) var(--s4) var(--s4); gap: var(--s5); }
+  .brandrow { display: flex; align-items: center; gap: 11px; }
+  .brandrow .me { margin-bottom: 0; }
+  .brandrow .wm { font-family: var(--disp); font-size: 19px; font-weight: 700; letter-spacing: -.03em; }
+  .brandrow .sub-t { display: block; font-size: 11.5px; color: var(--text-3); }
+  .nav { display: flex; flex-direction: column; gap: 3px; }
+  .rnav { display: flex; align-items: center; gap: 11px; width: 100%; padding: 10px 12px;
+    border: 0; border-radius: 14px; cursor: pointer; background: transparent; color: var(--text-2);
+    font: inherit; font-size: 13.5px; font-weight: 600; text-align: left; }
+  .rnav:hover:not([aria-current]) { background: var(--panel-2h); color: var(--text); }
+  .rnav[aria-current] { background: var(--teal); color: var(--on-field); }
+  .rnav .tx { flex: 1; }
+  .rnav[aria-current] .pill { background: rgba(28,27,35,.16); color: var(--on-field); }
+  .whoami { margin-top: auto; display: flex; align-items: center; gap: 10px;
+    padding-top: var(--s4); border-top: 1px solid var(--line); }
+  .whoami .av { width: 34px; height: 34px; border-radius: 50%; flex: none; background: var(--lilac);
+    color: var(--on-field); display: flex; align-items: center; justify-content: center;
+    font-family: var(--disp); font-weight: 700; font-size: 12px; }
+  .whoami b { font-size: 13px; display: block; }
+  .whoami span { font-size: 11.5px; color: var(--text-3); }
+
+  .main { padding: var(--s5) var(--s6) var(--s7); }
+  h1.dh { font-size: clamp(26px,3.4vw,38px); letter-spacing: -.042em; }
+  .deck { margin-top: 8px; color: var(--text-2); font-size: 14px; max-width: 62ch; line-height: 1.6; }
+  .lifecycle { margin-top: var(--s3); font-size: 12.5px; color: var(--text-3); }
+
+  /* ---- the three candidate placements ---- */
+  .views { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin: var(--s5) 0 var(--s4); }
+  .vchip { display: inline-flex; align-items: center; gap: 9px; padding: 8px 15px; border-radius: var(--r-pill);
+    border: 1px solid var(--line-hi); background: var(--panel); color: var(--text-2);
+    font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+  .vchip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
+  .vchip .c { font-variant-numeric: tabular-nums; opacity: .7; }
+  .vnew { border-style: dashed; color: var(--text-3); }
+
+  .railviews { display: flex; flex-direction: column; gap: 3px; }
+  .railviews .lab { margin-bottom: 4px; }
+  .rv { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 12px; border: 0;
+    border-radius: 12px; background: transparent; color: var(--text-2); font: inherit;
+    font-size: 13px; font-weight: 500; text-align: left; cursor: pointer; }
+  .rv:hover { background: var(--panel-2h); color: var(--text); }
+  .rv .tx { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .rv .c { font-size: 11.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+  .rv--new { color: var(--text-3); border: 1px dashed var(--line-hi); }
+
+  /* ---- collapsed card, the new shape ---- */
+  .row { display: grid; grid-template-columns: 34px 62px minmax(0,1fr) auto; gap: var(--s4);
+    align-items: start; padding: var(--s4) var(--s5); border-top: 1px solid var(--line); }
+  .row:first-of-type { border-top: 0; }
+  .row:hover { background: var(--panel-2); }
+  .rk { font-size: 13px; font-weight: 700; color: var(--text-3); font-variant-numeric: tabular-nums; padding-top: 4px; }
+  .sc { font-family: var(--disp); font-size: 30px; font-weight: 700; letter-spacing: -.045em;
+    font-variant-numeric: tabular-nums; line-height: 1; }
+  .sc small { display: block; font-size: 10px; font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--text-3); margin-top: 3px; }
+  .who .nm { display: block; font-family: var(--disp); font-size: 18px; font-weight: 700; letter-spacing: -.03em; }
+  .who .hd { display: block; font-size: 12px; color: var(--text-3); margin-top: 2px; }
+  .thesis { font-size: 14px; color: var(--text-2); margin-top: 6px; line-height: 1.5; max-width: 62ch; }
+  .quote { font-family: var(--disp); font-weight: 300; font-style: italic; font-size: 16px;
+    letter-spacing: -.02em; margin-top: 10px; line-height: 1.4; max-width: 56ch; }
+  .absence { display: flex; align-items: center; gap: 9px; margin-top: 9px; font-size: 12.5px; color: var(--text-2); }
+  .vm { width: 11px; height: 11px; border-radius: 3px; background: var(--teal-d); flex: none; }
+  .acts { display: flex; flex-direction: column; gap: 6px; width: 128px; flex: none; }
+  .acts .btn { width: 100%; justify-content: center; }
+  .more { display: block; text-align: left; margin-top: 10px; font-size: 12.5px; color: var(--text-3);
+    background: none; border: 0; padding: 0; cursor: pointer; font: inherit;
+    text-decoration: underline; text-underline-offset: 3px; }
+  .more:hover { color: var(--text); }
+
+  .listwrap { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
+  [data-mode] { display: none; }
+  [data-mode].on { display: block; }
+  .callout { margin-top: var(--s5); font-size: 12.5px; color: var(--text-3); line-height: 1.6; max-width: 76ch; }
+  @media (max-width: 900px) { .slab { grid-template-columns: 1fr; } .row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="sketchbar">
+  <b>Sketch</b>
+  <p class="note">Same drop, three placements for saved views. Everything else reflects the decisions already locked.</p>
+  <div class="seg" role="group" aria-label="Placement">
+    <button data-set="a" aria-pressed="true">A · filter row</button>
+    <button data-set="b" aria-pressed="false">B · rail section</button>
+    <button data-set="c" aria-pressed="false">C · top-bar menu</button>
+  </div>
+</div>
+
+<div class="stage">
+<div class="slab">
+  <nav class="railcol" aria-label="Sections">
+    <div class="brandrow"><span class="me">WS</span>
+      <span><span class="wm">Warhol</span><span class="sub-t">Scout · origination desk</span></span></div>
+
+    <div class="nav">
+      <button class="rnav" aria-current="page"><span class="tx">Today's drop</span><span class="pill">9</span></button>
+      <button class="rnav"><span class="tx">Watchlist</span><span class="pill">3</span></button>
+      <button class="rnav"><span class="tx">Track record</span><span class="pill">6</span></button>
+    </div>
+
+    <div data-mode="b" class="railviews">
+      <span class="lab">Your views</span>
+      <button class="rv"><span class="tx">All creators</span><span class="c">9</span></button>
+      <button class="rv"><span class="tx">Kitchen &amp; home goods</span><span class="c">4</span></button>
+      <button class="rv"><span class="tx">Newsletter-shaped</span><span class="c">2</span></button>
+      <button class="rv rv--new"><span class="tx">+ New view</span></button>
+    </div>
+
+    <div class="whoami">
+      <span class="av">DO</span>
+      <span><b>Dana Okonkwo-Reyes</b><span>GM, Home &amp; Kitchen</span></span>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="top">
+      <div class="crumb"><b>Desk</b><span>/</span>Drop</div>
+      <div class="r">
+        <div data-mode="c">
+          <button class="selector"><span class="ic">◍</span><span class="cv">All creators</span> ⌄</button>
+        </div>
+        <div class="tsw" role="group" aria-label="Theme">
+          <button data-t="light" aria-pressed="false">Light</button>
+          <button data-t="dark" aria-pressed="true">Dark</button>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="dh">Today's drop</h1>
+    <p class="deck">Nine creators cleared the threshold this morning. Enough on each to kill it without opening; backing one needs the report.</p>
+    <p class="lifecycle">Today's drop is today's — anything you don't decide on expires tonight, and returns tomorrow if it still clears.</p>
+
+    <div data-mode="a" class="views on">
+      <button class="vchip" aria-pressed="true">All creators <span class="c">9</span></button>
+      <button class="vchip">Kitchen &amp; home goods <span class="c">4</span></button>
+      <button class="vchip">Newsletter-shaped <span class="c">2</span></button>
+      <button class="vchip vnew">+ New view</button>
+    </div>
+
+    <div class="listwrap" style="margin-top:var(--s4)">
+
+      <article class="row">
+        <div class="rk">1</div>
+        <div class="sc">87<small>score</small></div>
+        <div>
+          <div class="who"><span><span class="nm">Marguerite Vaillancourt</span>
+            <span class="hd">@marguerite.bakes · TikTok · 340K across 3</span></span></div>
+          <p class="thesis">Laminated pastry in a rented kitchen. Three hundred thousand people watch her fold butter and nobody can buy anything.</p>
+          <p class="quote">“do you have a newsletter?? i need these written down somewhere”</p>
+          <div class="absence"><span class="vm"></span> Nothing owned — 21 surfaces checked</div>
+          <button class="more">Show the other 6 quotes and the full inventory</button>
+        </div>
+        <div class="acts">
+          <button class="btn btn--sm">Open report</button>
+          <button class="btn btn--sm btn--out">Watch</button>
+          <button class="btn btn--sm btn--ghost">Pass…</button>
+        </div>
+      </article>
+
+      <article class="row">
+        <div class="rk">2</div>
+        <div class="sc">84<small>score</small></div>
+        <div>
+          <div class="who"><span><span class="nm">DeShawn Aliotta-Pryce</span>
+            <span class="hd">@dshwn.builds · YouTube · 512K across 2</span></span></div>
+          <p class="thesis">Restores one tool a week, start to finish, no talking. The comments are a waiting list nobody is running.</p>
+          <p class="quote">“shut up and take my money, where do i buy the restored ones”</p>
+          <div class="absence"><span class="vm"></span> Nothing owned — 17 surfaces checked</div>
+          <button class="more">Show the other 4 quotes and the full inventory</button>
+        </div>
+        <div class="acts">
+          <button class="btn btn--sm">Open report</button>
+          <button class="btn btn--sm btn--out">Watch</button>
+          <button class="btn btn--sm btn--ghost">Pass…</button>
+        </div>
+      </article>
+
+      <article class="row">
+        <div class="rk">3</div>
+        <div class="sc">79<small>score</small></div>
+        <div>
+          <div class="who"><span><span class="nm">Junie Castellanos</span>
+            <span class="hd">@junie.eats · Instagram · 188K across 3</span></span></div>
+          <p class="thesis">Weeknight cooking for people who hate cooking. Says out loud she can't keep answering the same question.</p>
+          <p class="quote">“i cannot answer all of these questions, i am one person with one oven”</p>
+          <div class="absence"><span class="vm"></span> Nothing owned — 14 surfaces checked</div>
+          <button class="more">Show the other 5 quotes and the full inventory</button>
+        </div>
+        <div class="acts">
+          <button class="btn btn--sm">Open report</button>
+          <button class="btn btn--sm btn--out">Watch</button>
+          <button class="btn btn--sm btn--ghost">Pass…</button>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="callout"><b>A</b> puts the filter on the thing it filters, and the <b>+</b> sits exactly where the urge to narrow appears — after you've seen too many names. Day one it's one chip and a plus.<br>
+    <b>B</b> reads like folders and scales to many views, but on day one it's an empty rail section naming a concept the user hasn't met.<br>
+    <b>C</b> is the most compact and the least discoverable — it hides the one thing that should feel cheap.</p>
+  </main>
+</div>
+</div>
+
+<script>
+(function () {
+  var btns = document.querySelectorAll('.sketchbar .seg button');
+  function set(m) {
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.set === m)); });
+    document.querySelectorAll('[data-mode]').forEach(function (el) {
+      el.classList.toggle('on', el.getAttribute('data-mode') === m);
+    });
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.set); }); });
+  document.querySelectorAll('.tsw button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.documentElement.setAttribute('data-theme', b.dataset.t);
+      document.querySelectorAll('.tsw button').forEach(function (x) {
+        x.setAttribute('aria-pressed', String(x === b));
+      });
+    });
+  });
+  set('a');
+})();
+</script>
+</body>
+</html>

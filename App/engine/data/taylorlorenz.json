@@ -1,0 +1,1656 @@
+{
+  "creatorId": "taylorlorenz",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:06:21.822Z",
+  "observationCount": 319,
+  "brief": "Writers and media people with a large audience and no business around it — newsletters, tech and culture commentary",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": true,
+  "escalatedWhy": "store — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 544800,
+      "avatar": {
+        "url": "https://p19-common-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/7f97970ff88b18063848d48e08c4d373~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=45a3260c&x-expires=1786885200&x-signature=xMSN0VSxXrJ1eUMwsOOSe%2BmVbSc%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@taylorlorenz",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 281000,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/lb_5vlARWF4Ag91r9Eu2b9sTH8TQIsEoYgdV-7OiH0Uf-7-CR65kkJw2Hf6ja52tCgRC7Z0D=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@taylorlorenz",
+      "why": "Taylor Lorenz — the YouTube Data API resolved @taylorlorenz"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/taylorlorenz/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": true,
+      "followers": 344625,
+      "avatar": {
+        "url": "https://cdn.bsky.app/img/avatar/plain/did:plc:wo3lxbcfvdptzxyvq3qt2rgj/bafkreicwwe5tldfztlhmt3ptek4caneerpzovsendty5nf4v4oqqnyxdly",
+        "expires": null,
+        "host": "bsky.app"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://bsky.app/profile/taylorlorenz.bsky.social",
+      "why": "taylorlorenz.bsky.social — the profile goes by \"Taylor Lorenz\", the same name as their TikTok, and the AppView resolved it to did:plc:wo3lxbcfvdptzxyvq3qt2rgj"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@taylorlorenz",
+      "evidence": "https://www.youtube.com/@taylorlorenz",
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@taylorlorenz",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:33:00.467Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/taylorlorenz",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:33:00.468Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/taylorlorenz",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:33:00.468Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@taylorlorenz",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:36:34.381Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/taylorlorenz",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:36:34.382Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/taylorlorenz",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:36:34.382Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.046Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.046Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.046Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.026Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.026Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.026Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.027Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by the feed it publishes — the feed author reads \"Taylor Lorenz\"",
+      "why": "found it — usermag.co",
+      "evidence": "https://www.usermag.co/",
+      "placesLooked": 12,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.usermag.co/feed",
+          "status": 200,
+          "why": "20 posts read from User Mag — the feed author reads \"Taylor Lorenz\"",
+          "advisory": false,
+          "at": "2026-08-12T15:33:00.811Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://www.usermag.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:33:00.812Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:33:00.812Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:00.812Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/taylorlorenz",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:00.813Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:00.813Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.usermag.co/feed",
+          "status": 200,
+          "why": "20 posts read from User Mag — the feed author reads \"Taylor Lorenz\"",
+          "advisory": false,
+          "at": "2026-08-12T15:36:34.501Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://www.usermag.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:36:34.503Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:36:34.505Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:36:34.505Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/taylorlorenz",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:36:34.505Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:36:34.506Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.usermag.co/feed",
+          "status": 200,
+          "why": "20 posts read from User Mag — the feed author reads \"Taylor Lorenz\"",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.108Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://www.usermag.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.109Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.109Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.109Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/taylorlorenz",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.109Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.109Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.usermag.co/feed",
+          "status": 200,
+          "why": "20 posts read from User Mag — the feed author reads \"Taylor Lorenz\"",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.101Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://www.usermag.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.102Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.102Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.102Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/taylorlorenz",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.102Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.102Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.usermag.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.102Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "hit",
+          "url": "https://www.usermag.co/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.102Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 4 places · 2 wouldn't answer",
+      "evidence": null,
+      "placesLooked": 13,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:00.813Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/taylorlorenz",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:00.813Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/taylorlorenz",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:33:00.813Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:33:00.813Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/taylorlorenz",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:33:00.813Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:36:34.506Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/taylorlorenz",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:36:34.506Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/taylorlorenz",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:36:34.507Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:36:34.507Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/taylorlorenz",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:36:34.507Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.109Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/taylorlorenz",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.109Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/taylorlorenz",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:55:21.109Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.110Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/taylorlorenz",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:55:21.110Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.103Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/taylorlorenz",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.103Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/taylorlorenz",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:05:58.103Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.103Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/taylorlorenz",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:05:58.103Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.taylorlorenz.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.103Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by a link they publish",
+      "why": "found it — patreon.com/cw/taylorlorenz",
+      "evidence": "https://www.patreon.com/cw/taylorlorenz",
+      "placesLooked": 5,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/cw/taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:33:00.813Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/taylorlorenz",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:00.813Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/cw/taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:36:34.507Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/taylorlorenz",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:36:34.507Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/cw/taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.110Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/taylorlorenz",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.110Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "hit",
+          "url": "https://www.patreon.com/cw/taylorlorenz",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.103Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/taylorlorenz",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.103Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.memberful.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:58.104Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by an official directory",
+      "why": "found it — https://podcasts.apple.com/us/podcast/taylor-lorenzs-power-user/id1733535260?uo=4",
+      "evidence": "https://itunes.apple.com/search?term=Taylor%20Lorenz&entity=podcast&limit=5",
+      "placesLooked": 2,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://anchor.fm/s/ff8b4e30/podcast/rss",
+          "status": 200,
+          "why": "108 posts read from Taylor Lorenz’s Power User — the publication title reads \"Taylor Lorenz’s Power User\"",
+          "advisory": false,
+          "at": "2026-08-12T15:33:01.526Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Taylor%20Lorenz&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Taylor Lorenz’s Power User\" by Taylor Lorenz",
+          "advisory": false,
+          "at": "2026-08-12T15:33:01.527Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://anchor.fm/s/ff8b4e30/podcast/rss",
+          "status": 200,
+          "why": "108 posts read from Taylor Lorenz’s Power User — the publication title reads \"Taylor Lorenz’s Power User\"",
+          "advisory": false,
+          "at": "2026-08-12T15:36:35.196Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Taylor%20Lorenz&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Taylor Lorenz’s Power User\" by Taylor Lorenz",
+          "advisory": false,
+          "at": "2026-08-12T15:36:35.197Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://anchor.fm/s/ff8b4e30/podcast/rss",
+          "status": 200,
+          "why": "108 posts read from Taylor Lorenz’s Power User — the publication title reads \"Taylor Lorenz’s Power User\"",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.773Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Taylor%20Lorenz&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Taylor Lorenz’s Power User\" by Taylor Lorenz",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.773Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://anchor.fm/s/ff8b4e30/podcast/rss",
+          "status": 200,
+          "why": "108 posts read from Taylor Lorenz’s Power User — the publication title reads \"Taylor Lorenz’s Power User\"",
+          "advisory": false,
+          "at": "2026-08-14T13:05:59.044Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Taylor%20Lorenz&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Taylor Lorenz’s Power User\" by Taylor Lorenz",
+          "advisory": false,
+          "at": "2026-08-14T13:05:59.044Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "miss",
+          "url": "https://podcast.taylorlorenz.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:05:59.045Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://poweruserpodcast.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:05:59.045Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by a link they publish",
+      "why": "found it — taylorlorenz.com",
+      "evidence": "https://www.taylorlorenz.com/",
+      "placesLooked": 8,
+      "checks": [
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:33:01.529Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:33:01.529Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:36:35.197Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:36:35.197Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.774Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.774Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.taylorlorenz.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:01.175Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.taylorlorenz.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:01.175Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.taylorlorenz.com/rss.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:01.175Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.taylorlorenz.com/feed.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:01.175Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.taylorlorenz.com/index.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:01.175Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.taylorlorenz.com/atom.xml",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:01.175Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:06:01.175Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://taylorlorenz.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:06:01.176Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.taylorlorenz.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:01.176Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:33:01.530Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:36:35.198Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.774Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:06:01.176Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:33:01.530Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:36:35.198Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.774Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:06:01.176Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:33:01.530Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:36:35.198Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:55:21.774Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:06:01.176Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": 0.382,
+    "recentPerMonth": 25,
+    "baselinePerMonth": 40.42,
+    "recentCount": 75,
+    "baselineCount": 125,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 93,
+    "sampled": 200,
+    "truncated": true,
+    "recentMedianViews": 9243,
+    "baselineMedianViews": 9023,
+    "unit": "videos",
+    "line": "25 videos a month now, against 40 before that — down 38%"
+  },
+  "samples": [
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Your Group Chat Isn't Safe",
+      "url": "https://www.youtube.com/watch?v=ls8XdUgByI8",
+      "at": "2026-08-14T10:45:03Z",
+      "thumbnail": "https://i.ytimg.com/vi/ls8XdUgByI8/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1163,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:53.043Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Taylor Lorenz’s Power User",
+      "kind": "episode",
+      "title": "Your iPhone Could Send You to Jail: The Terrifying Truth About Prairieland",
+      "url": "https://podcasters.spotify.com/pod/show/power-user/episodes/Your-iPhone-Could-Send-You-to-Jail-The-Terrifying-Truth-About-Prairieland-e3ncnpd",
+      "at": "2026-08-14T10:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Inside the Case That Could Change Protesting Forever\n FOR AD-FREE EPISODES SUPPORT MY WORK: \n Buy a paid subscription to my newsletter at https://www.usermag.co \n Support my work on Patreon: http://patreon.com/taylorlorenz \n This week on Free Speech Friday, I sat down with independent investigative ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:06:01.649Z",
+      "status": null
+    },
+    {
+      "platform": "Newsletter",
+      "publication": "User Mag",
+      "kind": "writing",
+      "title": "People Hate AI No Matter How Tech CEOs Talk About It",
+      "url": "https://www.usermag.co/p/people-hate-ai-no-matter-how-tech",
+      "at": "2026-08-12T15:45:39.000Z",
+      "thumbnail": null,
+      "excerpt": "Vast swaths of the American public are against AI, and as Silicon Valley CEOs attempt to shift the narrative there are signs that they’re going to have to do a lot more than simply change the way they’re talking about the tech. \n \n \n Read more",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their newsletter",
+      "seenAt": "2026-08-14T13:06:01.648Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Silicon Valley’s $20 Billion AI Genius Just Blew Up",
+      "url": "https://www.youtube.com/watch?v=U1HWf3VI33U",
+      "at": "2026-08-12T10:45:26Z",
+      "thumbnail": "https://i.ytimg.com/vi/U1HWf3VI33U/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 24718,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:53.043Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Taylor Lorenz’s Power User",
+      "kind": "episode",
+      "title": "​​The Insane Collapse of Silicon Valley's 'Nostradamus of AI'",
+      "url": "https://podcasters.spotify.com/pod/show/power-user/episodes/The-Insane-Collapse-of-Silicon-Valleys-Nostradamus-of-AI-e3n8cum",
+      "at": "2026-08-12T10:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "The Wild Rise and Fall of Leopold Aschenbrenner\n LISTEN AD-FREE!! 👇🏻 \n Buy a paid subscription to my newsletter at https://www.usermag.co \n Support my work on Patreon: http://patreon.com/taylorlorenz \n Until a week ago, Leopold Aschenbrenner was hailed as the \"Nostradamus of AI\". A 24-year-old for",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:06:01.650Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "SpaceXAI just launched Grok Bot, a cloud hosted agent team that never stops working, trained on complex multi-",
+      "url": "https://bsky.app/profile/taylorlorenz.bsky.social/post/3mst6liyijk2j",
+      "at": "2026-08-11T17:52:38.033Z",
+      "thumbnail": null,
+      "excerpt": "SpaceXAI just launched Grok Bot, a cloud hosted agent team that never stops working, trained on complex multi-step coordinated jobs. They can independently message each other, coordinate on their own, become more proactive over time, and share context in threads and group chats.",
+      "metric": 22,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:53.043Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "There's a campaign to put the first data center in a national park site.",
+      "url": "https://bsky.app/profile/taylorlorenz.bsky.social/post/3msqmcbmsy227",
+      "at": "2026-08-10T17:20:01.497Z",
+      "thumbnail": null,
+      "excerpt": "There's a campaign to put the first data center in a national park site.",
+      "metric": 80,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:53.043Z",
+      "status": null
+    },
+    {
+      "platform": "Newsletter",
+      "publication": "User Mag",
+      "kind": "writing",
+      "title": "Would you pee on a Flock camera for $50?",
+      "url": "https://www.usermag.co/p/people-are-peeing-on-flock-cameras",
+      "at": "2026-08-10T14:08:20.000Z",
+      "thumbnail": null,
+      "excerpt": "Over the past several months, Flock Safety, the company that makes those cameras you might’ve noticed all over street poles in your town, has been in hot water. The $7.5 billion startup currently operates camera systems in thousands of cities recording millions of people. Finally, after years of out",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their newsletter",
+      "seenAt": "2026-08-14T13:06:01.648Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "I need to know what YouTube videos Dario was watching to calm down after fighting with Sam",
+      "url": "https://bsky.app/profile/taylorlorenz.bsky.social/post/3mskcsjfdnk2e",
+      "at": "2026-08-08T05:14:10.660Z",
+      "thumbnail": null,
+      "excerpt": "I need to know what YouTube videos Dario was watching to calm down after fighting with Sam",
+      "metric": 146,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:53.043Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "The Viral Elon Lawsuit Everyone Is Getting Wrong",
+      "url": "https://www.youtube.com/watch?v=M6ISExgM9uw",
+      "at": "2026-08-07T10:45:03Z",
+      "thumbnail": "https://i.ytimg.com/vi/M6ISExgM9uw/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 11467,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:53.043Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Taylor Lorenz’s Power User",
+      "kind": "episode",
+      "title": "The Viral Elon Musk Lawsuit Everyone Is Getting Wrong",
+      "url": "https://podcasters.spotify.com/pod/show/power-user/episodes/The-Viral-Elon-Musk-Lawsuit-Everyone-Is-Getting-Wrong-e3n1ri8",
+      "at": "2026-08-07T10:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Everyone got this viral lawsuit totally wrong.\n FOR AD-FREE EPISODES, BUY A PAID SUBSCRIPTION TO MY PATREON OR SUBSTACK!! \n SUPPORT MY WORK: \n Buy a paid subscription to my newsletter at https://www.usermag.co \n Support my work on Patreon: http://patreon.com/taylorlorenz \n This week, a viral story c",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:06:01.650Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Everyone on IG Reels has lost their god damn minds",
+      "url": "https://bsky.app/profile/taylorlorenz.bsky.social/post/3mshyovkhj22g",
+      "at": "2026-08-07T07:07:52.300Z",
+      "thumbnail": null,
+      "excerpt": "Everyone on IG Reels has lost their god damn minds",
+      "metric": 117,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:53.043Z",
+      "status": null
+    },
+    {
+      "platform": "Newsletter",
+      "publication": "User Mag",
+      "kind": "writing",
+      "title": "The Truth About The OpenAI Brand Trip",
+      "url": "https://www.usermag.co/p/the-truth-about-the-openai-brand",
+      "at": "2026-08-05T22:17:58.000Z",
+      "thumbnail": null,
+      "excerpt": "This past weekend, OpenAI took a bunch of influencers on a luxury brand trip to upstate New York, and the backlash has been massive. \n \n \n Read more",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their newsletter",
+      "seenAt": "2026-08-14T13:06:01.649Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Is AI Burning The Library Of Alexandria?",
+      "url": "https://www.youtube.com/watch?v=PP7T4G4cLTQ",
+      "at": "2026-08-05T11:00:18Z",
+      "thumbnail": "https://i.ytimg.com/vi/PP7T4G4cLTQ/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 16475,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:53.043Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Taylor Lorenz’s Power User",
+      "kind": "episode",
+      "title": "AI Is Destroying Millions of Books (But Not For The Reason You Think)",
+      "url": "https://podcasters.spotify.com/pod/show/power-user/episodes/AI-Is-Destroying-Millions-of-Books-But-Not-For-The-Reason-You-Think-e3n0adl",
+      "at": "2026-08-05T10:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Is AI destroying human literature? \n SUPPORT MY WORK: \n Buy a paid subscription to my newsletter at https://www.usermag.co \n Support my work on Patreon: http://patreon.com/taylorlorenz \n You might have seen the viral videos of a \"book guillotine\" slicing the spines off thousands of books in a massiv",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T15:36:35.786Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "If you read one piece today make it @mollytaft.com's excellent new piece out on the politics of data centers",
+      "url": "https://bsky.app/profile/taylorlorenz.bsky.social/post/3msbzx3gqtc2z",
+      "at": "2026-08-04T22:14:22.218Z",
+      "thumbnail": null,
+      "excerpt": "If you read one piece today make it @mollytaft.com's excellent new piece out on the politics of data centers",
+      "metric": 75,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:53.043Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "What That 'No Influencers' Sign Really Means",
+      "url": "https://www.youtube.com/watch?v=u1JV8StXLk8",
+      "at": "2026-08-03T10:45:16Z",
+      "thumbnail": "https://i.ytimg.com/vi/u1JV8StXLk8/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 27879,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:53.043Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Trump Wants To Decide What AI Can Say",
+      "url": "https://www.youtube.com/watch?v=uJULYdIMAgE",
+      "at": "2026-07-31T15:45:16Z",
+      "thumbnail": "https://i.ytimg.com/vi/uJULYdIMAgE/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 11964,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T15:36:23.018Z",
+      "status": null
+    },
+    {
+      "platform": "Newsletter",
+      "publication": "User Mag",
+      "kind": "writing",
+      "title": "My Journey Into The Slop Factory",
+      "url": "https://www.usermag.co/p/my-journey-into-the-slop-factory",
+      "at": "2026-07-30T17:37:02.000Z",
+      "thumbnail": null,
+      "excerpt": "This article is unlocked courtesy of Air , a creative command center for photo and video work. (I’ve used Air for years and I love the platform!!! Air had no editorial oversight or input on this piece.) \n \n Higgsfield lets you generate your own AI character \n There is a particular kind of video that",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their newsletter",
+      "seenAt": "2026-08-12T15:36:35.785Z",
+      "status": null
+    }
+  ],
+  "headline": {
+    "sentence": "Taylor Lorenz covers tech and internet culture across TikTok, YouTube, and Bluesky, and already runs a newsletter, membership, podcast, and her own site, but sells nothing: there is no store, and posting is down 38% to 25 videos a month.",
+    "restsOn": "544,800 on TikTok · 281,000 on YouTube · 344,625 on Bluesky · YouTube channel · Newsletter · Membership · Podcast · Own website · Store · 25 videos a month now, against 40 before that \tIe"
+  },
+  "samplesSearched": {
+    "count": 6,
+    "why": "6 pieces of their own work"
+  },
+  "commentsRead": 407,
+  "audienceHistory": [
+    {
+      "audience": 544800,
+      "at": "2026-08-12T15:32:49.381Z"
+    },
+    {
+      "audience": 544800,
+      "at": "2026-08-12T15:36:23.015Z"
+    },
+    {
+      "audience": 544800,
+      "at": "2026-08-14T12:55:19.196Z"
+    },
+    {
+      "audience": 544800,
+      "at": "2026-08-14T13:05:53.042Z"
+    }
+  ],
+  "audience": 544800,
+  "audienceWhy": "TikTok alone — nothing links the YouTube or Bluesky to it",
+  "audienceSeparate": [
+    {
+      "id": "youtube_profile",
+      "followers": 281000,
+      "url": "https://www.youtube.com/@taylorlorenz",
+      "why": "nothing on either page links the YouTube to the TikTok, so it is not added in"
+    },
+    {
+      "id": "bluesky_profile",
+      "followers": 344625,
+      "url": "https://bsky.app/profile/taylorlorenz.bsky.social",
+      "why": "nothing on either page links the Bluesky to the TikTok, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 9,
+    "brief": "Writers and media people with a large audience and no business around it — newsletters, tech and culture commentary",
+    "demand": {
+      "points": 0.1,
+      "max": 25,
+      "signalCount": 1,
+      "signals": [
+        {
+          "points_at": "membership",
+          "quote": "Taylor I emailed you and I'm sorry I cannot afford patreon I cannot afford to pay for subscriptions I am on disability I was really needing to get in touch with you.",
+          "at": "2026-08-14T13:06:08.303Z"
+        }
+      ]
+    },
+    "missing": {
+      "points": 6.1,
+      "max": 35,
+      "lines": [
+        {
+          "item": "store",
+          "label": "Store",
+          "half": "built",
+          "base": 9,
+          "effective": 9,
+          "demandAligned": false,
+          "why": "not there · we looked in 4 places · 2 wouldn't answer"
+        }
+      ],
+      "share": 0.175,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 6.2,
+    "pressure": {
+      "points": 2.9,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 2.9,
+          "line": "25 videos a month now, against 40 before that — down 38%",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "pass",
+      "because": "She's exactly the profile the brief describes — a tech and online culture journalist and author with a large following across TikTok, YouTube and Bluesky, writing commentary on tech, politics and internet culture."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 2 days apart, the trend needs 90",
+      "why": "our two looks are 2 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 1,
+      "resolved": 6,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 0
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "pass",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 118,
+    "places": 32,
+    "from": "2026-08-12T15:32:27.460Z",
+    "to": "2026-08-14T13:06:21.822Z"
+  }
+}

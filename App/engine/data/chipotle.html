@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warhol engine — check record</title>
+<style>
+  :root{
+    --bg:#0f0f10; --panel:#171719; --line:#26262a; --ink:#ececed; --dim:#8a8a92;
+    --present:#4ade80; --absent:#f87171; --unknown:#fbbf24; --accent:#7dd3fc;
+    /* Three families, three jobs: a document serif for the argument, a sans for
+       running prose, monospace for anything that came off the wire. No webfonts —
+       this file has to open from disk with no network. */
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --sans:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#faf9f7; --panel:#fff; --line:#e5e3df; --ink:#17171a; --dim:#6b6b73;
+           --present:#15803d; --absent:#b91c1c; --unknown:#a16207; --accent:#0369a1; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:15px/1.55 var(--sans);
+       padding:40px 24px 80px;}
+  .wrap{max-width:820px;margin:0 auto}
+  h1{font-family:var(--serif);font-size:34px;font-weight:400;margin:0 0 6px;letter-spacing:-.01em}
+  .sub{color:var(--dim);font-size:13px;margin-bottom:28px}
+  .sub b{color:var(--ink);font-weight:600}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:28px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .stat .n{font-family:var(--serif);font-size:29px;font-weight:400;letter-spacing:-.01em}
+  .stat .l{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.07em;margin-top:2px}
+  h2{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--dim);
+     margin:32px 0 10px;font-weight:600}
+  .item{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+        margin-bottom:8px;overflow:hidden}
+  .item>summary{list-style:none;cursor:pointer;padding:13px 16px;display:flex;
+                gap:12px;align-items:baseline}
+  .item>summary::-webkit-details-marker{display:none}
+  .item>summary:hover{background:color-mix(in srgb,var(--ink) 4%,transparent)}
+  .mark{font-family:var(--mono);font-weight:700;width:13px;flex:none}
+  .present .mark{color:var(--present)} .verified_absent .mark{color:var(--absent)}
+  .not_found .mark{color:var(--unknown)}
+  .name{font-weight:600;width:190px;flex:none}
+  .why{color:var(--dim);font-size:13px}
+  .verified_absent .why{color:var(--absent)}
+  .checks{border-top:1px solid var(--line);padding:6px 0}
+  .chk{display:grid;grid-template-columns:52px 46px 1fr;gap:10px;padding:7px 16px;
+       font-family:var(--mono);font-size:11.5px;align-items:start}
+  .chk+.chk{border-top:1px dashed color-mix(in srgb,var(--line) 70%,transparent)}
+  .badge{font-weight:700}
+  .hit{color:var(--present)} .miss{color:var(--absent)} .inconclusive{color:var(--unknown)}
+  .chk .u{word-break:break-all;color:var(--dim)}
+  .chk .u b{color:var(--ink);font-weight:500;display:block}
+  .adv{opacity:.55}
+  /* A note is set apart by being set differently — serif, indented, on the page
+     background rather than a card. No accent bar down the side. */
+  .note{font-family:var(--serif);font-size:15.5px;line-height:1.62;color:var(--dim);
+        margin:30px 0;padding:0 0 0 22px;border-left:1px solid var(--line)}
+  .note b{color:var(--ink);font-weight:600}
+  .note .lede{display:block;font-family:var(--sans);font-size:10.5px;font-weight:700;
+              text-transform:uppercase;letter-spacing:.14em;color:var(--accent);margin-bottom:7px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  td{padding:7px 0;border-bottom:1px solid var(--line);vertical-align:top}
+  td:first-child{color:var(--dim);width:170px}
+  .gate{display:inline-block;font-family:var(--mono);font-size:11px;padding:1px 7px;
+        border-radius:5px;border:1px solid currentColor}
+  .yes{color:var(--present)} .no{color:var(--absent)}
+  .scroll{overflow-x:auto}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script id="payload" type="application/json">{"creatorId":"chipotle","asOf":null,"observedThrough":"2026-08-06T15:42:05.851Z","observationCount":130,"brief":"Anyone worth a call.","surfaces":[{"id":"tiktok_profile","platform":"TikTok profile","read":true,"followers":2800000,"status":200,"url":"https://www.tiktok.com/@chipotle","why":"HTTP 200 and the page looks like one"},{"id":"youtube_profile","platform":"YouTube channel","read":true,"followers":106000,"status":200,"url":"https://www.youtube.com/@chipotle","why":"Chipotle Mexican Grill — the YouTube Data API resolved @chipotle"},{"id":"instagram_profile","platform":"Instagram profile","read":false,"followers":null,"status":0,"url":"https://www.instagram.com/chipotle/","why":"robots.txt asks us not to look here"},{"id":"beacons","platform":"beacons","read":true,"status":200,"url":"https://beacons.ai/chipotle","why":"link hub read"}],"inventory":[{"item":"youtube_channel","label":"YouTube channel","half":"built","tier":1,"state":"present","presenceOnly":false,"requiresApi":false,"corroborated":true,"corroboratedWhy":"confirmed as theirs by their own page","why":"found it — youtube.com/@chipotle","evidence":"https://www.youtube.com/@chipotle","placesLooked":0,"checks":[{"place":"yt_handle","outcome":"hit","url":"https://www.youtube.com/@chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T13:49:31.655Z"},{"place":"yt_c","outcome":"hit","url":"https://www.youtube.com/c/chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T13:49:31.655Z"},{"place":"yt_user","outcome":"hit","url":"https://www.youtube.com/user/chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T13:49:31.655Z"},{"place":"yt_handle","outcome":"hit","url":"https://www.youtube.com/@chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T14:17:01.804Z"},{"place":"yt_c","outcome":"hit","url":"https://www.youtube.com/c/chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T14:17:01.804Z"},{"place":"yt_user","outcome":"hit","url":"https://www.youtube.com/user/chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T14:17:01.804Z"},{"place":"yt_handle","outcome":"hit","url":"https://www.youtube.com/@chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T15:42:03.880Z"},{"place":"yt_c","outcome":"hit","url":"https://www.youtube.com/c/chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T15:42:03.881Z"},{"place":"yt_user","outcome":"hit","url":"https://www.youtube.com/user/chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T15:42:03.881Z"}]},{"item":"newsletter","label":"Newsletter","half":"built","tier":1,"state":"present","presenceOnly":false,"requiresApi":false,"corroborated":false,"corroboratedWhy":"nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence","why":"something at substack.com/@chipotle — not confirmed as theirs","evidence":"https://substack.com/@chipotle","placesLooked":8,"checks":[{"place":"substack_sub","outcome":"hit","url":"https://substack.com/@chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T13:49:31.656Z"},{"place":"substack_profile","outcome":"hit","url":"https://substack.com/@chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T13:49:31.656Z"},{"place":"beehiiv","outcome":"miss","url":"https://chipotle.beehiiv.com/","status":404,"why":"HTTP 404","advisory":false,"at":"2026-08-06T13:49:31.656Z"},{"place":"buttondown","outcome":"miss","url":"https://buttondown.com/chipotle","status":404,"why":"HTTP 404","advisory":false,"at":"2026-08-06T13:49:31.656Z"},{"place":"ghost_sub","outcome":"miss","url":"https://chipotle.ghost.io/","status":404,"why":"HTTP 404","advisory":false,"at":"2026-08-06T13:49:31.656Z"},{"place":"substack_sub","outcome":"hit","url":"https://substack.com/@chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T14:17:01.805Z"},{"place":"substack_profile","outcome":"hit","url":"https://substack.com/@chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T14:17:01.805Z"},{"place":"beehiiv","outcome":"miss","url":"https://chipotle.beehiiv.com/","status":404,"why":"HTTP 404","advisory":false,"at":"2026-08-06T14:17:01.805Z"},{"place":"buttondown","outcome":"inconclusive","url":"https://buttondown.com/chipotle","status":0,"why":"TimeoutError: The operation was aborted due to timeout","advisory":false,"at":"2026-08-06T14:17:01.805Z"},{"place":"ghost_sub","outcome":"miss","url":"https://chipotle.ghost.io/","status":404,"why":"HTTP 404","advisory":false,"at":"2026-08-06T14:17:01.805Z"},{"place":"substack_sub","outcome":"hit","url":"https://substack.com/@chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T15:42:03.883Z"},{"place":"substack_profile","outcome":"hit","url":"https://substack.com/@chipotle","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T15:42:03.883Z"},{"place":"beehiiv","outcome":"miss","url":"https://chipotle.beehiiv.com/","status":404,"why":"HTTP 404","advisory":false,"at":"2026-08-06T15:42:03.883Z"},{"place":"buttondown","outcome":"miss","url":"https://buttondown.com/chipotle","status":404,"why":"HTTP 404","advisory":false,"at":"2026-08-06T15:42:03.883Z"},{"place":"ghost_sub","outcome":"miss","url":"https://chipotle.ghost.io/","status":404,"why":"HTTP 404","advisory":false,"at":"2026-08-06T15:42:03.884Z"}]},{"item":"store","label":"Store","half":"built","tier":1,"state":"present","presenceOnly":false,"requiresApi":false,"corroborated":false,"corroboratedWhy":"nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence","why":"something at chipotle.gumroad.com — not confirmed as theirs","evidence":"https://chipotle.gumroad.com/","placesLooked":6,"checks":[{"place":"shopify","outcome":"miss","url":"https://chipotle.myshopify.com/","status":404,"why":"HTTP 404","advisory":false,"at":"2026-08-06T13:49:31.657Z"},{"place":"gumroad","outcome":"hit","url":"https://chipotle.gumroad.com/","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T13:49:31.657Z"},{"place":"kofi","outcome":"inconclusive","url":"https://ko-fi.com/chipotle","status":403,"why":"HTTP 403 — blocked or unavailable","advisory":true,"at":"2026-08-06T13:49:31.657Z"},{"place":"stanstore","outcome":"miss","url":"https://www.stan.store/","status":200,"why":"redirected to stan.store","advisory":false,"at":"2026-08-06T13:49:31.657Z"},{"place":"etsy","outcome":"inconclusive","url":"https://www.etsy.com/shop/chipotle","status":403,"why":"HTTP 403 — blocked or unavailable","advisory":true,"at":"2026-08-06T13:49:31.657Z"},{"place":"shopify","outcome":"miss","url":"https://chipotle.myshopify.com/","status":404,"why":"HTTP 404","advisory":false,"at":"2026-08-06T14:17:01.806Z"},{"place":"gumroad","outcome":"hit","url":"https://chipotle.gumroad.com/","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T14:17:01.806Z"},{"place":"kofi","outcome":"inconclusive","url":"https://ko-fi.com/chipotle","status":403,"why":"HTTP 403 — blocked or unavailable","advisory":true,"at":"2026-08-06T14:17:01.806Z"},{"place":"stanstore","outcome":"miss","url":"https://www.stan.store/","status":200,"why":"redirected to stan.store","advisory":false,"at":"2026-08-06T14:17:01.806Z"},{"place":"etsy","outcome":"inconclusive","url":"https://www.etsy.com/shop/chipotle","status":403,"why":"HTTP 403 — blocked or unavailable","advisory":true,"at":"2026-08-06T14:17:01.806Z"},{"place":"shopify","outcome":"miss","url":"https://chipotle.myshopify.com/","status":404,"why":"HTTP 404","advisory":false,"at":"2026-08-06T15:42:03.884Z"},{"place":"gumroad","outcome":"hit","url":"https://chipotle.gumroad.com/","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T15:42:03.884Z"},{"place":"kofi","outcome":"inconclusive","url":"https://ko-fi.com/chipotle","status":403,"why":"HTTP 403 — blocked or unavailable","advisory":true,"at":"2026-08-06T15:42:03.884Z"},{"place":"stanstore","outcome":"miss","url":"https://www.stan.store/","status":200,"why":"redirected to stan.store","advisory":false,"at":"2026-08-06T15:42:03.884Z"},{"place":"etsy","outcome":"inconclusive","url":"https://www.etsy.com/shop/chipotle","status":403,"why":"HTTP 403 — blocked or unavailable","advisory":true,"at":"2026-08-06T15:42:03.884Z"}]},{"item":"membership","label":"Membership","half":"built","tier":2,"state":"verified_absent","presenceOnly":false,"requiresApi":false,"corroboratedWhy":null,"why":"not there · we looked in 2 places","evidence":null,"placesLooked":6,"checks":[{"place":"patreon","outcome":"miss","url":"https://www.patreon.com/profile/creators?u=4503927","status":200,"why":"redirected to patreon.com/profile/creators","advisory":false,"at":"2026-08-06T13:49:31.657Z"},{"place":"buymeacoffee","outcome":"miss","url":"https://buymeacoffee.com/chipotle","status":404,"why":"HTTP 404","advisory":false,"at":"2026-08-06T13:49:31.657Z"},{"place":"patreon","outcome":"miss","url":"https://www.patreon.com/profile/creators?u=4503927","status":200,"why":"redirected to patreon.com/profile/creators","advisory":false,"at":"2026-08-06T14:17:01.806Z"},{"place":"buymeacoffee","outcome":"miss","url":"https://buymeacoffee.com/chipotle","status":404,"why":"HTTP 404","advisory":false,"at":"2026-08-06T14:17:01.806Z"},{"place":"patreon","outcome":"miss","url":"https://www.patreon.com/profile/creators?u=4503927","status":200,"why":"redirected to patreon.com/profile/creators","advisory":false,"at":"2026-08-06T15:42:03.885Z"},{"place":"buymeacoffee","outcome":"miss","url":"https://buymeacoffee.com/chipotle","status":404,"why":"HTTP 404","advisory":false,"at":"2026-08-06T15:42:03.885Z"}]},{"item":"podcast","label":"Podcast","half":"built","tier":2,"state":"present","presenceOnly":false,"requiresApi":false,"corroborated":true,"corroboratedWhy":"confirmed as theirs by an official directory","why":"found it — https://podcasts.apple.com/us/podcast/the-official-chipotle-podcast/id1556244305?uo=4","evidence":"https://itunes.apple.com/search?term=Chipotle&entity=podcast&limit=5","placesLooked":0,"checks":[{"place":"itunes_search","outcome":"hit","url":"https://itunes.apple.com/search?term=Chipotle&entity=podcast&limit=5","status":200,"why":"\"The Official Chipotle Podcast\" by Austin Basile","advisory":false,"at":"2026-08-06T13:49:31.794Z"},{"place":"itunes_search","outcome":"hit","url":"https://itunes.apple.com/search?term=Chipotle&entity=podcast&limit=5","status":200,"why":"\"The Official Chipotle Podcast\" by Austin Basile","advisory":false,"at":"2026-08-06T14:17:02.019Z"},{"place":"itunes_search","outcome":"hit","url":"https://itunes.apple.com/search?term=Chipotle&entity=podcast&limit=5","status":200,"why":"\"The Official Chipotle Podcast\" by Austin Basile","advisory":false,"at":"2026-08-06T15:42:04.205Z"}]},{"item":"website","label":"Own website","half":"built","tier":2,"state":"present","presenceOnly":false,"requiresApi":false,"corroborated":true,"corroboratedWhy":"confirmed as theirs by a link they publish","why":"found it — chipotle.com","evidence":"https://www.chipotle.com/","placesLooked":3,"checks":[{"place":"dotcom","outcome":"hit","url":"https://www.chipotle.com/","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T13:49:31.794Z"},{"place":"dotco","outcome":"miss","url":"https://chipotle.co","status":0,"why":"HTTP 0","advisory":false,"at":"2026-08-06T13:49:31.794Z"},{"place":"dotcom","outcome":"hit","url":"https://www.chipotle.com/","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T14:17:02.020Z"},{"place":"dotco","outcome":"miss","url":"https://chipotle.co","status":0,"why":"HTTP 0","advisory":false,"at":"2026-08-06T14:17:02.020Z"},{"place":"dotcom","outcome":"hit","url":"https://www.chipotle.com/","status":200,"why":"HTTP 200 and the page looks like one","advisory":false,"at":"2026-08-06T15:42:04.206Z"},{"place":"dotco","outcome":"miss","url":"https://chipotle.co","status":0,"why":"HTTP 0","advisory":false,"at":"2026-08-06T15:42:04.207Z"}]},{"item":"representation","label":"Representation / management","half":"built","tier":2,"state":"not_found","presenceOnly":true,"requiresApi":false,"corroboratedWhy":null,"why":"their bio does not mention it, which is not the same as nobody having signed them","evidence":null,"placesLooked":0,"checks":[{"place":"bio_markers","outcome":"inconclusive","url":null,"status":null,"why":"their bio does not mention it, which is not the same as nobody having signed them","advisory":false,"at":"2026-08-06T13:49:31.794Z"},{"place":"bio_markers","outcome":"inconclusive","url":null,"status":null,"why":"their bio does not mention it, which is not the same as nobody having signed them","advisory":false,"at":"2026-08-06T14:17:02.020Z"},{"place":"bio_markers","outcome":"inconclusive","url":null,"status":null,"why":"their bio does not mention it, which is not the same as nobody having signed them","advisory":false,"at":"2026-08-06T15:42:04.208Z"}]},{"item":"sponsorships","label":"Sponsored posts","half":"switched_on","tier":2,"state":"not_found","presenceOnly":true,"requiresApi":false,"corroboratedWhy":null,"why":"nothing in the 4 recent captions we could read — a sample, which cannot show that none exist","evidence":null,"placesLooked":0,"checks":[{"place":"caption_disclosure","outcome":"inconclusive","url":null,"status":null,"why":"nothing in the 4 recent captions we could read — a sample, which cannot show that none exist","advisory":false,"at":"2026-08-06T13:49:31.795Z"},{"place":"caption_disclosure","outcome":"inconclusive","url":null,"status":null,"why":"nothing in the 4 recent captions we could read — a sample, which cannot show that none exist","advisory":false,"at":"2026-08-06T14:17:02.020Z"},{"place":"caption_disclosure","outcome":"inconclusive","url":null,"status":null,"why":"nothing in the 4 recent captions we could read — a sample, which cannot show that none exist","advisory":false,"at":"2026-08-06T15:42:04.209Z"}]},{"item":"affiliate_links","label":"Affiliate links","half":"switched_on","tier":3,"state":"not_found","presenceOnly":true,"requiresApi":false,"corroboratedWhy":null,"why":"none among the 21 links they publish, though these usually sit in video descriptions we cannot read","evidence":null,"placesLooked":0,"checks":[{"place":"link_affiliate","outcome":"inconclusive","url":null,"status":null,"why":"none among the 1 links they publish, though these usually sit in video descriptions we cannot read","advisory":false,"at":"2026-08-06T13:49:31.795Z"},{"place":"link_affiliate","outcome":"inconclusive","url":null,"status":null,"why":"none among the 21 links they publish, though these usually sit in video descriptions we cannot read","advisory":false,"at":"2026-08-06T14:17:02.021Z"},{"place":"link_affiliate","outcome":"inconclusive","url":null,"status":null,"why":"none among the 21 links they publish, though these usually sit in video descriptions we cannot read","advisory":false,"at":"2026-08-06T15:42:04.209Z"}]},{"item":"platform_subscriptions","label":"Platform subscriptions","half":"switched_on","tier":3,"state":"not_found","presenceOnly":false,"requiresApi":true,"corroboratedWhy":null,"why":"Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.","evidence":null,"placesLooked":0,"checks":[]},{"item":"shopping_tags","label":"Shopping tags","half":"switched_on","tier":3,"state":"not_found","presenceOnly":false,"requiresApi":true,"corroboratedWhy":null,"why":"Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.","evidence":null,"placesLooked":0,"checks":[]}],"deadLinks":[{"url":"chipotle.com","status":0,"at":"2026-08-06T13:49:31.795Z"},{"url":"chipotle.com","status":0,"at":"2026-08-06T14:17:03.653Z"},{"url":"chipotle.com","status":0,"at":"2026-08-06T15:42:05.851Z"}],"cadence":{"computable":true,"decline":0.734,"recentPerMonth":0.67,"baselinePerMonth":2.51,"recentCount":2,"baselineCount":23,"recentWindowDays":90,"baselineSpanDays":275,"sampled":50,"truncated":false,"recentMedianViews":3109,"baselineMedianViews":9460,"line":"0.7 videos a month now, against 2.5 before that — down 73%; the recent ones are getting 67% fewer views"},"commentsRead":null,"audienceHistory":[{"audience":2906000,"at":"2026-08-06T13:49:24.762Z"},{"audience":2800000,"at":"2026-08-06T14:16:49.378Z"},{"audience":2800000,"at":"2026-08-06T15:42:00.785Z"}],"audience":2800000,"audienceWhy":"TikTok alone — nothing links the YouTube to it","audienceSeparate":[{"id":"youtube_profile","followers":106000,"url":"https://www.youtube.com/@chipotle","why":"nothing on either page links the YouTube to the TikTok, so it is not added in"}],"score":{"total":25,"brief":"Anyone worth a call.","demand":{"points":0,"max":25,"signalCount":0,"signals":[]},"missing":{"points":2,"max":35,"lines":[{"item":"membership","label":"Membership","half":"built","base":3,"effective":3,"demandAligned":false,"why":"not there · we looked in 2 places"}],"share":0.058,"switchedOn":"we couldn't tell what they've switched on"},"opportunity":2,"pressure":{"points":22.6,"max":40,"ceilingToday":34,"parts":[{"signal":"abandonment_markers","points":12,"line":"3 dead links they still publish — they tried, it broke","engine":"rule"},{"signal":"self_reported_strain","points":0,"line":"we couldn't read their captions","engine":"llm"},{"signal":"cadence_decay","points":10.6,"line":"0.7 videos a month now, against 2.5 before that — down 73%; the recent ones are getting 67% fewer views","engine":"rule"},{"signal":"unanswered_audience","points":0,"unavailable":true,"line":"needs a second look — this is a change over time, and we have seen them once","engine":"rule"}]},"fit":{"verdict":"not_judged","because":"the model pass did not run, and Fit is a judgment — no model, no verdict"},"trajectory":{"verdict":"not_established","why":"our two looks are 0 days apart; the gate needs 90."},"confidence":{"value":0.667,"resolved":4,"total":6,"cannotSee":5,"unconfirmed":2},"threshold":78,"entersDrop":false,"gates":{"scoreOverThreshold":false,"confidenceOverFloor":true,"fit":"not_judged","trajectory":"not_established"}},"checkRecord":{"checks":63,"places":17,"from":"2026-08-06T13:49:24.577Z","to":"2026-08-06T15:42:05.851Z"}}</script>
+<script>
+const R = JSON.parse(document.getElementById('payload').textContent);
+const S = R.score;
+const esc = s => String(s==null?'':s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const num = n => n==null ? '?' : n>=1e6 ? (n/1e6).toFixed(1)+'m' : n>=1e3 ? Math.round(n/1e3)+'k' : n;
+const MARK = { present:'✓', verified_absent:'✗', not_found:'?' };
+
+const gate = (ok,label) => `<span class="gate ${ok?'yes':'no'}">${ok?'pass':'no'}</span> ${esc(label)}`;
+
+function itemBlock(it){
+  const checks = it.checks.map(c => `
+    <div class="chk ${c.advisory?'adv':''}">
+      <span class="badge ${c.outcome}">${c.outcome==='inconclusive'?'???':c.outcome}</span>
+      <span>${c.status==null?'—':c.status}</span>
+      <span class="u"><b>${esc(c.place)}</b>${esc(c.url||'')} <br>${esc(c.why)}</span>
+    </div>`).join('');
+  return `<details class="item ${it.state}" ${it.state==='verified_absent'?'open':''}>
+    <summary><span class="mark">${MARK[it.state]||'?'}</span>
+      <span class="name">${esc(it.label)}</span>
+      <span class="why">${esc(it.why)}</span></summary>
+    ${checks ? `<div class="checks">${checks}</div>` : ''}
+  </details>`;
+}
+
+const readable = R.surfaces.filter(s=>s.read);
+document.getElementById('app').innerHTML = `
+  <h1>${esc(R.creatorId)}</h1>
+  <div class="sub">
+    ${readable.map(s=>`${esc(s.platform)} <b>${num(s.followers)}</b>`).join(' · ') || 'no readable profile'}
+    ${R.asOf ? ` &nbsp;·&nbsp; <b>as of ${esc(R.asOf.slice(0,10))}</b> — the question is today's, the evidence is not` : ''}
+  </div>
+
+  <div class="grid">
+    <div class="stat"><div class="n">${S.total}</div><div class="l">score · threshold ${S.threshold}</div></div>
+    <div class="stat"><div class="n">${Math.round(S.confidence.value*100)}%</div><div class="l">confidence · ${S.confidence.resolved}/${S.confidence.total} resolved</div></div>
+    <div class="stat"><div class="n">${R.checkRecord.checks}</div><div class="l">checks recorded</div></div>
+    <div class="stat"><div class="n">${R.checkRecord.places}</div><div class="l">real URLs opened</div></div>
+  </div>
+
+  <div class="note">
+    <span class="lede">This page is the evidence, not the argument</span>
+    Every line below is an HTTP
+    response to a real URL on ${esc(R.observedThrough.slice(0,10))}, recorded with a date.
+    ${'&ldquo;'}Not there &middot; we looked in N places${'&rdquo;'} means the N doors listed under it opened and
+    were empty. Rows marked <span class="inconclusive">???</span> are doors that would not open —
+    they lower confidence and never count as a gap. Faded rows are advisory: endpoints that
+    answer 403 to everyone, kept because a hit still counts, excluded from the arithmetic
+    because a door that never opens is not a place we looked.
+  </div>
+
+  <h2>What they've built</h2>
+  ${R.inventory.filter(i=>i.half==='built').map(itemBlock).join('')}
+
+  <h2>What they've switched on — ${esc(S.missing.switchedOn)}</h2>
+  ${R.inventory.filter(i=>i.half==='switched_on').map(itemBlock).join('')}
+
+  <h2>The gates</h2>
+  <div class="scroll"><table>
+    <tr><td>Score</td><td>${gate(S.gates.scoreOverThreshold, `${S.total} against a threshold of ${S.threshold}`)}</td></tr>
+    <tr><td>Confidence</td><td>${gate(S.gates.confidenceOverFloor, `${Math.round(S.confidence.value*100)}% of checks resolved`)}</td></tr>
+    <tr><td>Fit</td><td>${gate(S.fit.verdict==='pass', `${S.fit.verdict} — ${S.fit.because}`)}</td></tr>
+    <tr><td>Trajectory</td><td>${gate(S.trajectory.verdict==='pass', `${S.trajectory.verdict} — ${S.trajectory.why}`)}</td></tr>
+    <tr><td>Enters the drop</td><td>${gate(S.entersDrop, S.entersDrop?'yes':'no')}</td></tr>
+  </table></div>
+
+  <h2>How the number was built</h2>
+  <div class="scroll"><table>
+    <tr><td>Demand</td><td>+${S.demand.points} of ${S.demand.max} · ${S.demand.signalCount} purchase or subscribe signals in text we could read</td></tr>
+    <tr><td>Missing</td><td>+${S.missing.points} of ${S.missing.max} · weighted by money on the table, not counted${S.missing.lines.length?': '+S.missing.lines.map(l=>esc(l.label)+' ('+l.effective+')').join(', '):''}</td></tr>
+    <tr><td>Pressure</td><td>${S.pressure.points} of ${S.pressure.max} · ceiling on a first look is ${S.pressure.ceilingToday}, because two of four signals are changes over time</td></tr>
+  </table></div>
+
+  <div class="note" style="margin-top:36px">
+    <span class="lede">The wall</span>
+    Everything on this page was decided by an HTTP status code and a
+    written rule. No language model wrote a verification state here — the store layer
+    throws if one tries. Models are allowed to classify text we fetched, quote from it,
+    judge fit, and propose more places to look. They are not allowed to say whether
+    something exists.
+  </div>
+`;
+</script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warhol engine — check record</title>
+<style>
+  :root{
+    --bg:#0f0f10; --panel:#171719; --line:#26262a; --ink:#ececed; --dim:#8a8a92;
+    --present:#4ade80; --absent:#f87171; --unknown:#fbbf24; --accent:#7dd3fc;
+    /* Three families, three jobs: a document serif for the argument, a sans for
+       running prose, monospace for anything that came off the wire. No webfonts —
+       this file has to open from disk with no network. */
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --sans:ui-sans-serif,-apple-system,"Segoe UI",sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#faf9f7; --panel:#fff; --line:#e5e3df; --ink:#17171a; --dim:#6b6b73;
+           --present:#15803d; --absent:#b91c1c; --unknown:#a16207; --accent:#0369a1; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:15px/1.55 var(--sans);
+       padding:40px 24px 80px;}
+  .wrap{max-width:820px;margin:0 auto}
+  h1{font-family:var(--serif);font-size:34px;font-weight:400;margin:0 0 6px;letter-spacing:-.01em}
+  .sub{color:var(--dim);font-size:13px;margin-bottom:28px}
+  .sub b{color:var(--ink);font-weight:600}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:28px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .stat .n{font-family:var(--serif);font-size:29px;font-weight:400;letter-spacing:-.01em}
+  .stat .l{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.07em;margin-top:2px}
+  h2{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--dim);
+     margin:32px 0 10px;font-weight:600}
+  .item{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+        margin-bottom:8px;overflow:hidden}
+  .item>summary{list-style:none;cursor:pointer;padding:13px 16px;display:flex;
+                gap:12px;align-items:baseline}
+  .item>summary::-webkit-details-marker{display:none}
+  .item>summary:hover{background:color-mix(in srgb,var(--ink) 4%,transparent)}
+  .mark{font-family:var(--mono);font-weight:700;width:13px;flex:none}
+  .present .mark{color:var(--present)} .verified_absent .mark{color:var(--absent)}
+  .not_found .mark{color:var(--unknown)}
+  .name{font-weight:600;width:190px;flex:none}
+  .why{color:var(--dim);font-size:13px}
+  .verified_absent .why{color:var(--absent)}
+  .checks{border-top:1px solid var(--line);padding:6px 0}
+  .chk{display:grid;grid-template-columns:52px 46px 1fr;gap:10px;padding:7px 16px;
+       font-family:var(--mono);font-size:11.5px;align-items:start}
+  .chk+.chk{border-top:1px dashed color-mix(in srgb,var(--line) 70%,transparent)}
+  .badge{font-weight:700}
+  .hit{color:var(--present)} .miss{color:var(--absent)} .inconclusive{color:var(--unknown)}
+  .chk .u{word-break:break-all;color:var(--dim)}
+  .chk .u b{color:var(--ink);font-weight:500;display:block}
+  .adv{opacity:.55}
+  /* A note is set apart by being set differently — serif, indented, on the page
+     background rather than a card. No accent bar down the side. */
+  .note{font-family:var(--serif);font-size:15.5px;line-height:1.62;color:var(--dim);
+        margin:30px 0;padding:0 0 0 22px;border-left:1px solid var(--line)}
+  .note b{color:var(--ink);font-weight:600}
+  .note .lede{display:block;font-family:var(--sans);font-size:10.5px;font-weight:700;
+              text-transform:uppercase;letter-spacing:.14em;color:var(--accent);margin-bottom:7px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  td{padding:7px 0;border-bottom:1px solid var(--line);vertical-align:top}
+  td:first-child{color:var(--dim);width:170px}
+  .gate{display:inline-block;font-family:var(--mono);font-size:11px;padding:1px 7px;
+        border-radius:5px;border:1px solid currentColor}
+  .yes{color:var(--present)} .no{color:var(--absent)}
+  .scroll{overflow-x:auto}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script id="payload" type="application/json">__DATA__</script>
+<script>
+const R = JSON.parse(document.getElementById('payload').textContent);
+const S = R.score;
+const esc = s => String(s==null?'':s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const num = n => n==null ? '?' : n>=1e6 ? (n/1e6).toFixed(1)+'m' : n>=1e3 ? Math.round(n/1e3)+'k' : n;
+const MARK = { present:'✓', verified_absent:'✗', not_found:'?' };
+
+const gate = (ok,label) => `<span class="gate ${ok?'yes':'no'}">${ok?'pass':'no'}</span> ${esc(label)}`;
+
+function itemBlock(it){
+  const checks = it.checks.map(c => `
+    <div class="chk ${c.advisory?'adv':''}">
+      <span class="badge ${c.outcome}">${c.outcome==='inconclusive'?'???':c.outcome}</span>
+      <span>${c.status==null?'—':c.status}</span>
+      <span class="u"><b>${esc(c.place)}</b>${esc(c.url||'')} <br>${esc(c.why)}</span>
+    </div>`).join('');
+  return `<details class="item ${it.state}" ${it.state==='verified_absent'?'open':''}>
+    <summary><span class="mark">${MARK[it.state]||'?'}</span>
+      <span class="name">${esc(it.label)}</span>
+      <span class="why">${esc(it.why)}</span></summary>
+    ${checks ? `<div class="checks">${checks}</div>` : ''}
+  </details>`;
+}
+
+const readable = R.surfaces.filter(s=>s.read);
+document.getElementById('app').innerHTML = `
+  <h1>${esc(R.creatorId)}</h1>
+  <div class="sub">
+    ${readable.map(s=>`${esc(s.platform)} <b>${num(s.followers)}</b>`).join(' · ') || 'no readable profile'}
+    ${R.asOf ? ` &nbsp;·&nbsp; <b>as of ${esc(R.asOf.slice(0,10))}</b> — the question is today's, the evidence is not` : ''}
+  </div>
+
+  <div class="grid">
+    <div class="stat"><div class="n">${S.total}</div><div class="l">score · threshold ${S.threshold}</div></div>
+    <div class="stat"><div class="n">${Math.round(S.confidence.value*100)}%</div><div class="l">confidence · ${S.confidence.resolved}/${S.confidence.total} resolved</div></div>
+    <div class="stat"><div class="n">${R.checkRecord.checks}</div><div class="l">checks recorded</div></div>
+    <div class="stat"><div class="n">${R.checkRecord.places}</div><div class="l">real URLs opened</div></div>
+  </div>
+
+  <div class="note">
+    <span class="lede">This page is the evidence, not the argument</span>
+    Every line below is an HTTP
+    response to a real URL on ${esc(R.observedThrough.slice(0,10))}, recorded with a date.
+    ${'&ldquo;'}Not there &middot; we looked in N places${'&rdquo;'} means the N doors listed under it opened and
+    were empty. Rows marked <span class="inconclusive">???</span> are doors that would not open —
+    they lower confidence and never count as a gap. Faded rows are advisory: endpoints that
+    answer 403 to everyone, kept because a hit still counts, excluded from the arithmetic
+    because a door that never opens is not a place we looked.
+  </div>
+
+  <h2>What they've built</h2>
+  ${R.inventory.filter(i=>i.half==='built').map(itemBlock).join('')}
+
+  <h2>What they've switched on — ${esc(S.missing.switchedOn)}</h2>
+  ${R.inventory.filter(i=>i.half==='switched_on').map(itemBlock).join('')}
+
+  <h2>The gates</h2>
+  <div class="scroll"><table>
+    <tr><td>Score</td><td>${gate(S.gates.scoreOverThreshold, `${S.total} against a threshold of ${S.threshold}`)}</td></tr>
+    <tr><td>Confidence</td><td>${gate(S.gates.confidenceOverFloor, `${Math.round(S.confidence.value*100)}% of checks resolved`)}</td></tr>
+    <tr><td>Fit</td><td>${gate(S.fit.verdict==='pass', `${S.fit.verdict} — ${S.fit.because}`)}</td></tr>
+    <tr><td>Trajectory</td><td>${gate(S.trajectory.verdict==='pass', `${S.trajectory.verdict} — ${S.trajectory.why}`)}</td></tr>
+    <tr><td>Enters the drop</td><td>${gate(S.entersDrop, S.entersDrop?'yes':'no')}</td></tr>
+  </table></div>
+
+  <h2>How the number was built</h2>
+  <div class="scroll"><table>
+    <tr><td>Demand</td><td>+${S.demand.points} of ${S.demand.max} · ${S.demand.signalCount} purchase or subscribe signals in text we could read</td></tr>
+    <tr><td>Missing</td><td>+${S.missing.points} of ${S.missing.max} · weighted by money on the table, not counted${S.missing.lines.length?': '+S.missing.lines.map(l=>esc(l.label)+' ('+l.effective+')').join(', '):''}</td></tr>
+    <tr><td>Pressure</td><td>${S.pressure.points} of ${S.pressure.max} · ceiling on a first look is ${S.pressure.ceilingToday}, because two of four signals are changes over time</td></tr>
+  </table></div>
+
+  <div class="note" style="margin-top:36px">
+    <span class="lede">The wall</span>
+    Everything on this page was decided by an HTTP status code and a
+    written rule. No language model wrote a verification state here — the store layer
+    throws if one tries. Models are allowed to classify text we fetched, quote from it,
+    judge fit, and propose more places to look. They are not allowed to say whether
+    something exists.
+  </div>
+`;
+</script>
+</body>
+</html>

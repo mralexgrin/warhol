@@ -1,0 +1,1507 @@
+{
+  "creatorId": "caseynewton",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:06:13.581Z",
+  "observationCount": 244,
+  "brief": "Writers and media people with a large audience and no business around it — newsletters, tech and culture commentary",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": true,
+  "escalatedWhy": "store — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 18,
+      "avatar": {
+        "url": "https://p16-common-sign.tiktokcdn-us.com/musically-maliva-obj/1594805258216454~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=429df237&x-expires=1786885200&x-signature=f8itnQT%2Br%2BAizjSgJ3OV2CLkl7E%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@caseynewton",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 1570,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/OLLRHb1zhUYlArRtemq4Qt0NECH1QFVS9XywQUMMSy6U6vz6qh6AURNNaYsZo5ungqfC4_0BH4k=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@caseynewton",
+      "why": "Casey Newton — the YouTube Data API resolved @caseynewton"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/caseynewton/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": true,
+      "followers": 298395,
+      "avatar": {
+        "url": "https://cdn.bsky.app/img/avatar/plain/did:plc:jg7zvku4khzmvyjwbzv4lnly/bafkreia6255mkaxmxpjxcjjsoyc46hzmltlxvlvkvoegpknmgtakjbrtue",
+        "expires": null,
+        "host": "bsky.app"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://bsky.app/profile/caseynewton.bsky.social",
+      "why": "caseynewton.bsky.social — the profile goes by \"Casey Newton\", the same name as their TikTok, and the AppView resolved it to did:plc:jg7zvku4khzmvyjwbzv4lnly"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@caseynewton",
+      "evidence": "https://www.youtube.com/@caseynewton",
+      "placesLooked": 2,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@caseynewton",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:32:50.445Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/caseynewton",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:32:50.445Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/caseynewton",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:32:50.446Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@caseynewton",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.209Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/caseynewton",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.209Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/caseynewton",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.209Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@caseynewton",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.234Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/caseynewton",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.235Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "miss",
+          "url": "https://www.youtube.com/user/caseynewton",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.235Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by the feed it publishes — the publication title reads \"Casey Newton\"",
+      "why": "found it — caseynewton.substack.com",
+      "evidence": "https://caseynewton.substack.com/",
+      "placesLooked": 10,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "empty",
+          "url": "https://caseynewton.substack.com/feed",
+          "status": 200,
+          "why": "\"Casey Newton\" is live and has nothing published in it — the publication title reads \"Casey Newton\"",
+          "advisory": false,
+          "at": "2026-08-12T15:32:50.594Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://caseynewton.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:32:50.595Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@caseynewton",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:32:50.595Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://caseynewton.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:32:50.595Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/caseynewton",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:32:50.596Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://caseynewton.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:32:50.596Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "empty",
+          "url": "https://caseynewton.substack.com/feed",
+          "status": 200,
+          "why": "\"Casey Newton\" is live and has nothing published in it — the publication title reads \"Casey Newton\"",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.243Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://caseynewton.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.244Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@caseynewton",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.244Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://caseynewton.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.244Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/caseynewton",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.244Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://caseynewton.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.244Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "empty",
+          "url": "https://caseynewton.substack.com/feed",
+          "status": 200,
+          "why": "\"Casey Newton\" is live and has nothing published in it — the publication title reads \"Casey Newton\"",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.258Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "hit",
+          "url": "https://caseynewton.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.259Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "hit",
+          "url": "https://substack.com/@caseynewton",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.259Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "miss",
+          "url": "https://caseynewton.beehiiv.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.259Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/caseynewton",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.259Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://caseynewton.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.259Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.platformer.news/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.259Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://www.hardforknewsletter.com",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.259Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 4 places · 2 wouldn't answer",
+      "evidence": null,
+      "placesLooked": 10,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://caseynewton.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:32:50.596Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/caseynewton",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:32:50.596Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/caseynewton",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:32:50.596Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:32:50.596Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/caseynewton",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:32:50.596Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://caseynewton.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.244Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/caseynewton",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.244Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/caseynewton",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:55:07.244Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.244Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/caseynewton",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:55:07.244Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://caseynewton.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.260Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/caseynewton",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.260Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/caseynewton",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:05:48.260Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.260Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/caseynewton",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:05:48.260Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://shop.platformer.news",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.260Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 7,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/caseynewton",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:32:50.597Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/caseynewton",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:32:50.597Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/caseynewton",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.245Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/caseynewton",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.245Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/caseynewton",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.260Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/caseynewton",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.260Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.platformer.news/membership/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.260Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by an official directory",
+      "why": "found it — https://podcasts.apple.com/us/podcast/platformer/id1868844067?uo=4",
+      "evidence": "https://itunes.apple.com/search?term=Casey%20Newton&entity=podcast&limit=5",
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.acast.com/public/shows/691393cfc1ed8717c505f219",
+          "status": 200,
+          "why": "33 posts read from Platformer — the feed author reads \"Casey Newton\"",
+          "advisory": false,
+          "at": "2026-08-12T15:32:51.161Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Casey%20Newton&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Platformer\" by Casey Newton",
+          "advisory": false,
+          "at": "2026-08-12T15:32:51.162Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.acast.com/public/shows/691393cfc1ed8717c505f219",
+          "status": 200,
+          "why": "34 posts read from Platformer — the feed author reads \"Casey Newton\"",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.680Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Casey%20Newton&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Platformer\" by Casey Newton",
+          "advisory": false,
+          "at": "2026-08-14T12:55:07.680Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://feeds.acast.com/public/shows/691393cfc1ed8717c505f219",
+          "status": 200,
+          "why": "34 posts read from Platformer — the feed author reads \"Casey Newton\"",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.729Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "hit",
+          "url": "https://itunes.apple.com/search?term=Casey%20Newton&entity=podcast&limit=5",
+          "status": 200,
+          "why": "\"Platformer\" by Casey Newton",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.730Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "hit",
+          "url": "https://podcasts.apple.com/us/podcast/hard-fork/id1528594034",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.730Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "inconclusive",
+          "url": "https://www.nytimes.com/podcasts/hard-fork",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": false,
+          "at": "2026-08-14T13:05:48.730Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at caseynewton.com — not confirmed as theirs",
+      "evidence": "https://caseynewton.com/",
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:32:53.489Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:32:53.489Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:32:53.490Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:32:53.490Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:32:53.491Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-12T15:32:53.491Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://caseynewton.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:32:53.493Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://caseynewton.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-12T15:32:53.493Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:55:09.698Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:55:09.698Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:55:09.698Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:55:09.699Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:55:09.699Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T12:55:09.699Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://caseynewton.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:09.699Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://caseynewton.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T12:55:09.700Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/feed",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:05:50.831Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/rss",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:05:50.831Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/rss.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:05:50.831Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/feed.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:05:50.831Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/index.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:05:50.831Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://caseynewton.com/atom.xml",
+          "status": 200,
+          "why": "the address answered 200 with something that is not a feed",
+          "advisory": false,
+          "at": "2026-08-14T13:05:50.832Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://caseynewton.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:50.832Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "miss",
+          "url": "https://caseynewton.co",
+          "status": 0,
+          "why": "HTTP 0",
+          "advisory": false,
+          "at": "2026-08-14T13:05:50.832Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://caseynewton.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:05:50.832Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "inconclusive",
+          "url": "https://www.twitter.com/caseynewton",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T13:05:50.832Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:32:53.494Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:55:09.700Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:05:50.833Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:32:53.495Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:55:09.700Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:05:50.833Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:32:53.496Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:55:09.700Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:05:50.833Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": true,
+    "decline": 0.263,
+    "recentPerMonth": 23,
+    "baselinePerMonth": 31.2,
+    "recentCount": 69,
+    "baselineCount": 286,
+    "recentWindowDays": 90,
+    "baselineSpanDays": 275,
+    "sampled": 383,
+    "truncated": true,
+    "recentMedianViews": null,
+    "baselineMedianViews": null,
+    "unit": "posts",
+    "line": "23 posts a month now, against 31 before that — down 26%"
+  },
+  "samples": [
+    {
+      "platform": "Podcast",
+      "publication": "Platformer",
+      "kind": "episode",
+      "title": "Town's CEO on the self-organizing company",
+      "url": "https://www.platformer.news/town-interview-jean-denis-greze-assistants/",
+      "at": "2026-08-14T00:16:26.000Z",
+      "thumbnail": null,
+      "excerpt": "Last week on the Platformer podcast, Replit's Amjad Masad predicted that within three years, we'll be using fewer apps and more agents — with the agents using apps on our behalf. For the fifth episode of our miniseries on productivity in the AI era, I talked to someone building one of those agents.\n",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:05:50.834Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Town was the first company I saw in a while that made me say ohhhh ... everyone is going to copy this. I inter",
+      "url": "https://bsky.app/profile/caseynewton.bsky.social/post/3msyuwijjck2g",
+      "at": "2026-08-14T00:15:47.658Z",
+      "thumbnail": null,
+      "excerpt": "Town was the first company I saw in a while that made me say ohhhh ... everyone is going to copy this. I interviewed 'mayor' Jean-Denis Greze about building a self-organizing company www.platformer.news/town-intervi...",
+      "metric": 29,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:41.282Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Town's CEO on the self-organizing company",
+      "url": "https://www.youtube.com/watch?v=8AXQt-jGnjM",
+      "at": "2026-08-13T23:55:32Z",
+      "thumbnail": "https://i.ytimg.com/vi/8AXQt-jGnjM/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 184,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:41.281Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Pretty bleak honestly",
+      "url": "https://bsky.app/profile/caseynewton.bsky.social/post/3mstgefsr3k2c",
+      "at": "2026-08-11T20:11:49.756Z",
+      "thumbnail": null,
+      "excerpt": "Pretty bleak honestly",
+      "metric": 58,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:41.282Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "I wrote about Mark Zuckerberg's facile, self-serving AI manifesto and what he misunderstands about the technol",
+      "url": "https://bsky.app/profile/caseynewton.bsky.social/post/3msrig4pzls2f",
+      "at": "2026-08-11T01:43:15.347Z",
+      "thumbnail": null,
+      "excerpt": "I wrote about Mark Zuckerberg's facile, self-serving AI manifesto and what he misunderstands about the technology www.platformer.news/zuckerberg-a...",
+      "metric": 81,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:41.282Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Btw regarding the claim in here that Gemini 3.5 Pro has been \"silently canceled,\" Google tells me that is not ",
+      "url": "https://bsky.app/profile/caseynewton.bsky.social/post/3msjmawveqs2i",
+      "at": "2026-08-07T22:30:38.520Z",
+      "thumbnail": null,
+      "excerpt": "Btw regarding the claim in here that Gemini 3.5 Pro has been \"silently canceled,\" Google tells me that is not the case.",
+      "metric": 41,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:41.282Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Talked to Replit CEO Amjad Masad about how he dealt with the feeling that \"everything I worked for is kind of ",
+      "url": "https://bsky.app/profile/caseynewton.bsky.social/post/3mshdwznugs2g",
+      "at": "2026-08-07T00:56:36.463Z",
+      "thumbnail": null,
+      "excerpt": "Talked to Replit CEO Amjad Masad about how he dealt with the feeling that \"everything I worked for is kind of moot\" following the rapid improvement of coding tools www.platformer.news/replit-amjad...",
+      "metric": 139,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:05:41.282Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Platformer",
+      "kind": "episode",
+      "title": "Replit's CEO: \"You Don't Need to Code Anymore\"",
+      "url": "https://www.platformer.news/replit-amjad-massad-interview-coding-design-jobs/",
+      "at": "2026-08-07T00:53:46.000Z",
+      "thumbnail": null,
+      "excerpt": "Last week on the Platformer podcast, Granola's Chris Pedregal told me we are only 5 percent into the AI transformation of work. For the fourth episode of our miniseries on productivity in the AI era, we talk to someone who is trying to speed up the process — building an AI tool for writing software,",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:05:50.834Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Replit's CEO: \"You Don't Need to Code Anymore\"",
+      "url": "https://www.youtube.com/watch?v=JaNdnHmoJgk",
+      "at": "2026-08-07T00:52:57Z",
+      "thumbnail": "https://i.ytimg.com/vi/JaNdnHmoJgk/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 24170,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:41.281Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Platformer",
+      "kind": "episode",
+      "title": "How much of my boss's job can AI do?",
+      "url": "https://www.platformer.news/replacing-casey-with-claude/",
+      "at": "2026-08-06T00:01:39.000Z",
+      "thumbnail": null,
+      "excerpt": "Six months after trying to automate myself, I gave Claude Fable 5 a bigger job: replacing Casey. \n Read the newsletter here: https://www.platformer.news/replacing-casey-with-claude/\n \n Hosted on Acast. See acast.com/privacy for more information.",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-14T13:05:50.834Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Grokipedia just stopped updating after eight months ... and it took another four for anyone to notice www.lawf",
+      "url": "https://bsky.app/profile/caseynewton.bsky.social/post/3mseb62ci5s27",
+      "at": "2026-08-05T19:28:51.580Z",
+      "thumbnail": null,
+      "excerpt": "Grokipedia just stopped updating after eight months ... and it took another four for anyone to notice www.lawfaremedia.org/article/grok...",
+      "metric": 127,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:32:39.468Z",
+      "status": null
+    },
+    {
+      "platform": "Podcast",
+      "publication": "Platformer",
+      "kind": "episode",
+      "title": "This AI notetaker won't sell surveillance to your boss",
+      "url": "https://www.platformer.news/granola-chris-pedregal-interview/",
+      "at": "2026-07-31T00:00:31.000Z",
+      "thumbnail": null,
+      "excerpt": "Last week on the Platformer podcast, Thomas Paul Mann predicted that within a few years, as much as half of the software on your Mac could be software you made yourself. For the third episode of our miniseries on keeping your advantage at work in the AI era, we take a look at the tool that may alrea",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their podcast",
+      "seenAt": "2026-08-12T15:32:53.498Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "This AI notetaker won't sell surveillance to your boss",
+      "url": "https://www.youtube.com/watch?v=XODsP0SFqQU",
+      "at": "2026-07-30T23:59:56Z",
+      "thumbnail": "https://i.ytimg.com/vi/XODsP0SFqQU/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 80087,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:41.281Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "The case for making your own apps",
+      "url": "https://www.youtube.com/watch?v=p9OUaRyv5Zs",
+      "at": "2026-07-22T00:10:42Z",
+      "thumbnail": "https://i.ytimg.com/vi/p9OUaRyv5Zs/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 91001,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:41.282Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "He tried 200 to-do apps so you don't have to",
+      "url": "https://www.youtube.com/watch?v=tzrWJZ9VaBk",
+      "at": "2026-07-14T23:55:29Z",
+      "thumbnail": "https://i.ytimg.com/vi/tzrWJZ9VaBk/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 4216,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:05:41.282Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Why Amazon is hiring 11,000 junior employees",
+      "url": "https://www.youtube.com/watch?v=0ii_Fl9R6bw",
+      "at": "2026-06-23T23:55:22Z",
+      "thumbnail": "https://i.ytimg.com/vi/0ii_Fl9R6bw/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 18442,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T15:32:39.466Z",
+      "status": null
+    }
+  ],
+  "headline": {
+    "sentence": "Casey Newton covers AI and tech through a newsletter, a podcast, a YouTube channel, and his own website, reaching 298,395 followers on Bluesky and up to 91,042 views on a recent video, but he has no store and no membership, and his posting has slipped to 23 posts a month from 31.",
+    "restsOn": "user handle: caseynewton · 298,395 on Bluesky · YouTube channel, Newsletter, Podcast, Own website · Store · Membership · 23 posts a month now, against 31 before that · \"The case for making your own apps\" (91,042 views)"
+  },
+  "samplesSearched": {
+    "count": 3,
+    "why": "3 pieces of their own work"
+  },
+  "commentsRead": 42,
+  "audienceHistory": [
+    {
+      "audience": 297699,
+      "at": "2026-08-12T15:32:39.462Z"
+    },
+    {
+      "audience": 298394,
+      "at": "2026-08-14T12:55:06.018Z"
+    },
+    {
+      "audience": 298395,
+      "at": "2026-08-14T13:05:41.280Z"
+    }
+  ],
+  "audience": 298395,
+  "audienceWhy": "Bluesky alone — nothing links the TikTok or YouTube to it",
+  "audienceSeparate": [
+    {
+      "id": "tiktok_profile",
+      "followers": 18,
+      "url": "https://www.tiktok.com/@caseynewton",
+      "why": "nothing on either page links the TikTok to the Bluesky, so it is not added in"
+    },
+    {
+      "id": "youtube_profile",
+      "followers": 1570,
+      "url": "https://www.youtube.com/@caseynewton",
+      "why": "nothing on either page links the YouTube to the Bluesky, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 10,
+    "brief": "Writers and media people with a large audience and no business around it — newsletters, tech and culture commentary",
+    "demand": {
+      "points": 0,
+      "max": 25,
+      "signalCount": 0,
+      "signals": []
+    },
+    "missing": {
+      "points": 10.1,
+      "max": 35,
+      "lines": [
+        {
+          "item": "store",
+          "label": "Store",
+          "half": "built",
+          "base": 9,
+          "effective": 9,
+          "demandAligned": false,
+          "why": "not there · we looked in 4 places · 2 wouldn't answer"
+        },
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        }
+      ],
+      "share": 0.289,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 10.1,
+    "pressure": {
+      "points": 0.3,
+      "max": 40,
+      "ceilingToday": 34,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0.3,
+          "line": "23 posts a month now, against 31 before that — down 26%",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "pass",
+      "because": "He's exactly the brief's target: a tech and culture writer with a ~300k Bluesky following, running Platformer and co-hosting Hard Fork, so the audience and the commentary beat both fit."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 2 days apart, the trend needs 90",
+      "why": "our two looks are 2 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.833,
+      "resolved": 5,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 1
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "pass",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 104,
+    "places": 34,
+    "from": "2026-08-12T15:32:26.958Z",
+    "to": "2026-08-14T13:06:13.581Z"
+  }
+}

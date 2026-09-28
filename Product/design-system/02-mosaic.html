@@ -1,0 +1,1023 @@
+<!doctype html>
+<!--
+DIRECTION CONTRACT — TOOLKIT 02 "MOSAIC"   (rebuilt from the Daily Grind reference)
+THESIS: The desk is an operations floor. A dark app slab floats on a coloured page, and inside
+  it every panel commits to a different saturated hue, so the Scout navigates by field.
+OWN-WORLD: Sage page, charcoal slab at 30px radius. Five panel colours — coral, periwinkle,
+  pale blue, cream, charcoal — each fully saturated and owning its panel. Heavy uppercase
+  Archivo titles. Translucent in-panel pills. HATCHED fills for projected/incomplete. Black
+  tooltip pills. Circular ↗ buttons top-right. A narrow icon rail with a rounded-square active.
+STORY: Colour tells the Scout which question a panel answers before they read a word.
+FIRST VIEWPORT: Slab edge, breadcrumb, mandate selector pill, then the coral score panel and
+  the periwinkle coverage panel side by side.
+FORM: Daily Grind ops-dashboard reference, translated to an origination desk. Reference-pinned.
+-->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toolkit 02 — MOSAIC · Warhol Scout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..900&family=Figtree:wght@300..900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   TOOLKIT 02 — MOSAIC   · rebuilt from the Daily Grind reference
+   Dark slab on a sage page. Saturated panel fields. Hatched projections.
+   ============================================================ */
+:root{
+  /* --- panel fields --- */
+  --coral:#F0655A;   --coral-2:#F5877D;   --coral-d:#B23A31;
+  --peri:#6C63E8;    --peri-2:#8A83EE;    --peri-d:#4038B8;
+  --sky:#C8E4F2;     --sky-d:#2E7898;
+  --cream:#EFEFE7;
+  --lemon:#F5C842;
+
+  /* --- shell --- */
+  --page:#C3D3C3;              /* the coloured page the slab sits on */
+  --slab:#1C201D;
+  --panel:#22261F;
+  --panel-2:#2C3129;
+  --rail:#141814;
+  --line:rgba(255,255,255,.10);
+  --line-hi:rgba(255,255,255,.20);
+  --text:#F2F4EF;
+  --text-2:#A6AC9F;
+  --text-3:#767C70;
+  --on-field:#16180F;          /* text on coral / peri / sky / cream */
+  --on-peri:#FBFAFF;
+
+  --pass:#5FCB8E;
+  --hold:#F5C842;
+  --fail:#F0655A;
+
+  /* --- geometry --- */
+  --r-sm:10px; --r-md:18px; --r-lg:24px; --r-slab:30px; --r-pill:999px;
+
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px;
+  --s6:34px; --s7:50px; --s8:72px; --s9:104px;
+
+  --el-1:0 1px 2px rgba(0,0,0,.4), 0 3px 8px -3px rgba(0,0,0,.4);
+  --el-2:0 2px 5px rgba(0,0,0,.4), 0 14px 30px -12px rgba(0,0,0,.6);
+  --el-3:0 4px 10px rgba(0,0,0,.45), 0 32px 60px -22px rgba(0,0,0,.8);
+  --el-slab:0 8px 20px -8px rgba(28,32,29,.35), 0 40px 80px -30px rgba(28,32,29,.5);
+
+  --disp:"Archivo",-apple-system,system-ui,sans-serif;
+  --ui:"Figtree",-apple-system,system-ui,sans-serif;
+}
+:root[data-theme="light"]{
+  --page:#8FA88F;
+  --slab:#F4F5F0;
+  --panel:#FFFFFF;
+  --panel-2:#EDEFE8;
+  --rail:#E4E7DE;
+  --line:rgba(22,24,15,.10);
+  --line-hi:rgba(22,24,15,.20);
+  --text:#16180F;
+  --text-2:#5A6053;
+  --text-3:#878D7F;
+  --coral:#E4544A;  --coral-2:#F0837A;  --coral-d:#9E3129;
+  --peri:#5D53DE;   --peri-2:#7E76E8;
+  --sky:#B5DAEC;
+  --el-1:0 1px 2px rgba(30,36,24,.05), 0 3px 8px -3px rgba(30,36,24,.09);
+  --el-2:0 2px 5px rgba(30,36,24,.06), 0 14px 30px -12px rgba(30,36,24,.16);
+  --el-3:0 4px 10px rgba(30,36,24,.07), 0 32px 60px -22px rgba(30,36,24,.26);
+  --el-slab:0 8px 20px -8px rgba(20,26,16,.3), 0 40px 80px -30px rgba(20,26,16,.42);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;padding:22px;background:var(--page);color:var(--text);font-family:var(--ui);
+  font-size:15px;line-height:1.55;transition:background-color .2s ease,color .2s ease}
+@media(max-width:900px){body{padding:12px}}
+::selection{background:var(--lemon);color:#16180F}
+h1,h2,h3,h4{margin:0;font-family:var(--disp);font-weight:800;letter-spacing:-.02em;
+  line-height:1.02;text-transform:uppercase;font-variation-settings:"wdth" 92}
+
+/* ---------- the slab: this world's signature ---------- */
+.slab{max-width:1480px;margin:0 auto;background:var(--slab);border-radius:var(--r-slab);
+  box-shadow:var(--el-slab);display:grid;grid-template-columns:76px minmax(0,1fr);overflow:hidden}
+@media(max-width:900px){.slab{grid-template-columns:1fr}}
+.railcol{background:var(--rail);padding:var(--s5) 0;display:flex;flex-direction:column;
+  align-items:center;gap:var(--s3)}
+@media(max-width:900px){.railcol{flex-direction:row;justify-content:flex-start;padding:var(--s3) var(--s4);overflow-x:auto}}
+.railcol .me{width:42px;height:42px;border-radius:50%;background:var(--panel-2);color:var(--text);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;
+  font-family:var(--disp);margin-bottom:var(--s3);flex:none}
+.rbtn{width:42px;height:42px;border-radius:13px;border:0;cursor:pointer;background:transparent;
+  color:var(--text-3);display:flex;align-items:center;justify-content:center;flex:none;
+  transition:background .15s ease,color .15s ease}
+.rbtn:hover{background:var(--panel-2);color:var(--text)}
+.rbtn[aria-current="true"]{background:var(--sky);color:#16180F}
+.rbtn:focus-visible{outline:2px solid var(--lemon);outline-offset:2px}
+.railcol .grow{margin-top:auto}
+@media(max-width:900px){.railcol .grow{margin-top:0;margin-left:auto}}
+.main{padding:var(--s5) var(--s5) var(--s7);min-width:0}
+
+/* ---------- top bar ---------- */
+.top{display:flex;align-items:center;gap:var(--s4);flex-wrap:wrap;margin-bottom:var(--s6)}
+.crumb{font-family:var(--disp);font-size:20px;font-weight:800;text-transform:uppercase;
+  letter-spacing:-.02em;color:var(--text-3)}
+.crumb b{color:var(--text);font-weight:800}
+.crumb span{opacity:.5;margin:0 6px;font-weight:400}
+.top .r{margin-left:auto;display:flex;align-items:center;gap:var(--s2);flex-wrap:wrap}
+.circbtn{width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;background:var(--panel-2);
+  color:var(--text);display:flex;align-items:center;justify-content:center;position:relative;flex:none;
+  transition:background .15s ease,transform .15s cubic-bezier(.2,.7,.3,1)}
+.circbtn:hover{background:var(--panel);transform:translateY(-1px)}
+.circbtn:focus-visible{outline:2px solid var(--lemon);outline-offset:2px}
+.circbtn--w{background:var(--cream);color:#16180F}
+.circbtn--w:hover{background:#fff}
+.circbtn .badge{position:absolute;top:9px;right:10px;width:9px;height:9px;border-radius:50%;
+  background:var(--coral);box-shadow:0 0 0 2.5px var(--panel-2)}
+.selector{display:flex;align-items:center;gap:11px;background:var(--cream);color:#16180F;
+  border-radius:var(--r-pill);padding:9px 16px 9px 11px;font-weight:600;font-size:14px;
+  border:0;cursor:pointer;max-width:100%}
+.selector .ic{width:28px;height:28px;border-radius:50%;background:#16180F;color:var(--cream);
+  display:flex;align-items:center;justify-content:center;flex:none}
+.selector .cv{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tsw{display:inline-flex;background:var(--panel-2);border-radius:var(--r-pill);padding:3px;gap:2px}
+.tsw button{appearance:none;border:0;cursor:pointer;background:transparent;color:var(--text-2);
+  font:inherit;font-size:12px;font-weight:700;padding:7px 14px;border-radius:var(--r-pill)}
+.tsw button[aria-pressed="true"]{background:var(--text);color:var(--slab)}
+.tsw button:focus-visible{outline:2px solid var(--lemon);outline-offset:2px}
+
+/* ---------- panels ---------- */
+.grid{display:grid;gap:var(--s4)}
+.g12{grid-template-columns:repeat(12,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1180px){.g12{grid-template-columns:repeat(6,1fr)}.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.g12{grid-template-columns:1fr}.g12>*{grid-column:auto!important}
+  .g2,.g3,.g4{grid-template-columns:1fr}}
+
+.p{background:var(--panel);border-radius:var(--r-lg);padding:var(--s5);color:var(--text)}
+.p--coral{background:var(--coral);color:var(--on-field)}
+.p--peri{background:var(--peri);color:var(--on-peri)}
+.p--sky{background:var(--sky);color:var(--on-field)}
+.p--cream{background:var(--cream);color:var(--on-field)}
+.p--line{background:transparent;border:1px solid var(--line)}
+.p-hd{display:flex;align-items:center;gap:var(--s3);margin-bottom:var(--s4);flex-wrap:wrap}
+.p-hd h3{font-size:clamp(21px,2.2vw,31px);letter-spacing:-.025em}
+.p-ic{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none}
+.p-hd .r{margin-left:auto;display:flex;gap:var(--s2);align-items:center;flex-wrap:wrap}
+.rule{height:1px;background:currentColor;opacity:.22;margin:var(--s4) 0}
+.arrowbtn{width:38px;height:38px;border-radius:50%;border:0;cursor:pointer;background:var(--cream);
+  color:#16180F;display:flex;align-items:center;justify-content:center;flex:none;
+  transition:transform .15s cubic-bezier(.2,.7,.3,1)}
+.arrowbtn:hover{transform:translateY(-2px) rotate(45deg)}
+.arrowbtn:focus-visible{outline:2px solid #16180F;outline-offset:2px}
+.p--peri .arrowbtn,.p--coral .arrowbtn{background:rgba(255,255,255,.92)}
+
+/* translucent in-panel pill — the reference's control */
+.ipill{display:inline-flex;align-items:center;gap:8px;border-radius:var(--r-pill);
+  padding:8px 14px;font-size:13px;font-weight:600;border:0;cursor:pointer;
+  background:rgba(255,255,255,.22);color:currentColor}
+.p--sky .ipill,.p--cream .ipill{background:rgba(22,24,15,.10)}
+.p .ipill{background:var(--panel-2)}
+.p--coral .ipill,.p--peri .ipill{background:rgba(255,255,255,.22)}
+.ipill:hover{filter:brightness(1.12)}
+.ipill:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.ipill svg{opacity:.7}
+
+/* nested sub-panel inside a colour field */
+.sub{background:rgba(255,255,255,.20);border-radius:var(--r-md);padding:var(--s4)}
+.p--sky .sub,.p--cream .sub{background:rgba(22,24,15,.08)}
+.sub .k{font-size:10.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;opacity:.68}
+.sub .v{font-family:var(--disp);font-size:clamp(24px,2.6vw,34px);font-weight:800;
+  letter-spacing:-.035em;font-variant-numeric:tabular-nums;margin-top:6px}
+.delta{display:inline-flex;align-items:center;gap:3px;font-size:11.5px;font-weight:800;
+  padding:3px 9px;border-radius:var(--r-pill);background:var(--pass);color:#16180F}
+.delta--dn{background:var(--fail);color:#fff}
+
+/* black tooltip pill */
+.tip{display:inline-flex;align-items:center;background:#0F120E;color:#F2F4EF;border-radius:var(--r-pill);
+  padding:6px 13px;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* HATCH — the reference's projected/incomplete fill */
+.hatch{background-image:repeating-linear-gradient(48deg,currentColor 0 2px,transparent 2px 7px);
+  opacity:.42}
+
+.kick{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3)}
+.p--coral .kick,.p--sky .kick,.p--cream .kick{color:rgba(22,24,15,.6)}
+.p--peri .kick{color:rgba(251,250,255,.66)}
+.note{font-size:13px;color:var(--text-2);line-height:1.62;max-width:66ch}
+.p--coral .note,.p--sky .note,.p--cream .note{color:rgba(22,24,15,.74)}
+.p--peri .note{color:rgba(251,250,255,.78)}
+.lab{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-3);display:block;margin-bottom:8px}
+
+/* ---------- sections ---------- */
+.sec{padding-top:var(--s7)}
+.sec-head{display:flex;align-items:flex-end;gap:var(--s5);margin-bottom:var(--s4);flex-wrap:wrap}
+.sec-title{font-size:clamp(24px,3.2vw,36px)}
+.sec-note{margin-left:auto;max-width:50ch;font-size:13px;color:var(--text-2);line-height:1.62}
+
+/* ---------- collage ---------- */
+.collage{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--s3)}
+@media(max-width:1080px){.collage{grid-template-columns:repeat(6,1fr)}}
+@media(max-width:640px){.collage{grid-template-columns:repeat(2,1fr)}.collage>*{grid-column:span 2!important}}
+.tile{border-radius:var(--r-md);padding:var(--s4);background:var(--panel);
+  display:flex;flex-direction:column;gap:9px;min-height:130px}
+.tile .k{font-size:9.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--text-3)}
+.tile .v{font-size:11.5px;color:var(--text-2);line-height:1.45;margin-top:auto}
+.tile--coral{background:var(--coral);color:var(--on-field)}
+.tile--peri{background:var(--peri);color:var(--on-peri)}
+.tile--sky{background:var(--sky);color:var(--on-field)}
+.tile--cream{background:var(--cream);color:var(--on-field)}
+.tile--coral .k,.tile--sky .k,.tile--cream .k{color:rgba(22,24,15,.58)}
+.tile--coral .v,.tile--sky .v,.tile--cream .v{color:rgba(22,24,15,.74)}
+.tile--peri .k{color:rgba(251,250,255,.62)}.tile--peri .v{color:rgba(251,250,255,.8)}
+.aa{font-family:var(--disp);font-size:50px;font-weight:800;letter-spacing:-.035em;line-height:.86;text-transform:uppercase}
+.aa-ui{font-family:var(--ui);font-size:46px;font-weight:700;letter-spacing:-.03em;line-height:.9}
+.shaperow{display:flex;gap:7px;align-items:flex-end;flex-wrap:wrap}
+.shaperow b{width:56px;height:56px;background:currentColor;opacity:.9;display:block}
+.shaperow b.cap{width:84px;height:30px}
+.colrow{display:flex;border-radius:9px;overflow:hidden;height:44px}
+.colrow span{flex:1}
+.gradrow{display:flex;gap:7px}
+.gradrow span{flex:1;height:44px;border-radius:9px}
+.elrow{display:flex;gap:9px;align-items:center}
+.elrow b{width:34px;height:34px;border-radius:9px;background:var(--panel-2);display:block}
+
+/* ---------- type ---------- */
+.tr{border-bottom:1px solid var(--line);padding:var(--s5) 0;display:grid;
+  grid-template-columns:140px minmax(0,1fr);gap:var(--s5);align-items:baseline}
+@media(max-width:680px){.tr{grid-template-columns:1fr;gap:var(--s2)}}
+.tr .s{font-size:11px;color:var(--text-3);line-height:1.6;font-weight:600}
+.d1{font-family:var(--disp);font-size:clamp(38px,6vw,72px);font-weight:800;letter-spacing:-.035em;
+  line-height:.96;text-transform:uppercase;font-variation-settings:"wdth" 88}
+.d2{font-family:var(--disp);font-size:clamp(24px,3.2vw,34px);font-weight:800;letter-spacing:-.03em;text-transform:uppercase}
+.h3s{font-family:var(--disp);font-size:20px;font-weight:800;letter-spacing:-.02em;text-transform:uppercase}
+.bd{font-size:16px;line-height:1.66;max-width:66ch;color:var(--text-2)}
+.sm{font-size:13px;color:var(--text-3);line-height:1.6}
+.bignum{font-family:var(--disp);font-size:68px;font-weight:800;letter-spacing:-.045em;
+  font-variant-numeric:tabular-nums;line-height:.9}
+
+/* ---------- shape ---------- */
+.rad{display:flex;gap:var(--s3);flex-wrap:wrap;align-items:flex-end}
+.rad b{width:82px;height:58px;background:var(--coral);color:var(--on-field);display:flex;
+  align-items:flex-end;justify-content:center;padding-bottom:6px;font-size:11px;font-weight:700}
+.sp{display:flex;align-items:flex-end;gap:6px;height:104px}
+.sp span{width:24px;background:var(--peri);border-radius:5px 5px 0 0;position:relative}
+.sp i{position:absolute;top:calc(100% + 4px);left:0;font-style:normal;font-size:10px;color:var(--text-3);font-weight:700}
+
+/* ---------- gradients ---------- */
+.gr{height:100px;border-radius:var(--r-md)}
+.gr-heat{background:linear-gradient(126deg,var(--coral),var(--lemon))}
+.gr-cool{background:linear-gradient(126deg,var(--peri),var(--sky))}
+.gr-line{background:linear-gradient(180deg,rgba(240,101,90,.55),rgba(240,101,90,0))}
+
+/* ---------- controls ---------- */
+.btn{appearance:none;cursor:pointer;font-family:var(--ui);font-size:13.5px;font-weight:700;
+  padding:11px 20px;border-radius:var(--r-pill);border:1px solid transparent;
+  background:var(--cream);color:#16180F;
+  transition:transform .15s cubic-bezier(.2,.7,.3,1),box-shadow .15s cubic-bezier(.2,.7,.3,1),background .15s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--el-2)}
+.btn:active{transform:translateY(0)}
+.btn:focus-visible{outline:2px solid var(--lemon);outline-offset:3px}
+.btn--sm{padding:8px 15px;font-size:12.5px}
+.btn--coral{background:var(--coral);color:#fff}
+.btn--peri{background:var(--peri);color:var(--on-peri)}
+.btn--ghost{background:var(--panel-2);color:var(--text)}
+.btn--out{background:transparent;border-color:var(--line-hi);color:var(--text)}
+.btn--out:hover{background:var(--panel-2)}
+.btn[disabled]{background:var(--panel-2);color:var(--text-3);cursor:not-allowed}
+.btn[disabled]:hover{transform:none;box-shadow:none}
+.btn--busy{color:transparent;position:relative}
+.btn--busy::after{content:"";position:absolute;inset:0;margin:auto;width:14px;height:14px;
+  border:2px solid #16180F;border-top-color:transparent;border-radius:50%;animation:sp .7s linear infinite}
+.btn--coral.btn--busy::after{border-color:#fff;border-top-color:transparent}
+@keyframes sp{to{transform:rotate(360deg)}}
+.inp{width:100%;font-family:var(--ui);font-size:14px;padding:12px 17px;border-radius:var(--r-pill);
+  border:1px solid var(--line-hi);background:var(--panel-2);color:var(--text)}
+.inp::placeholder{color:var(--text-3)}
+.inp:focus{outline:2px solid var(--lemon);outline-offset:-1px;border-color:var(--lemon)}
+.inp--err{border-color:var(--fail)}
+.em{color:var(--fail);font-size:12.5px;margin-top:7px;font-weight:600;padding-left:17px}
+.pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;
+  padding:6px 13px;border-radius:var(--r-pill);background:var(--panel-2);color:var(--text-2)}
+.pill--pass{background:rgba(95,203,142,.18);color:var(--pass)}
+.pill--hold{background:rgba(245,200,66,.18);color:var(--hold)}
+.pill--fail{background:rgba(240,101,90,.18);color:var(--fail)}
+.pill--solid{background:var(--cream);color:#16180F}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.seg{display:inline-flex;background:var(--panel-2);border-radius:var(--r-pill);padding:3px;gap:2px}
+.seg button{appearance:none;border:0;cursor:pointer;background:transparent;color:var(--text-2);
+  font:inherit;font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:var(--r-pill)}
+.seg button[aria-pressed="true"]{background:var(--cream);color:#16180F}
+
+/* ---------- faces ---------- */
+.faces{display:grid;grid-template-columns:repeat(auto-fit,minmax(136px,1fr));gap:var(--s5)}
+.face{text-align:center}
+.avatar{width:84px;height:84px;border-radius:50%;overflow:hidden;background:var(--panel-2);margin:0 auto}
+.avatar svg{display:block;width:100%;height:100%}
+.pctchip{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:14px;font-variant-numeric:tabular-nums;flex:none;
+  font-family:var(--disp);letter-spacing:-.02em}
+.face .n{font-weight:700;font-size:14px;margin-top:10px;letter-spacing:-.015em}
+.face .m{font-size:12px;color:var(--text-3);margin-top:1px}
+.stack{display:flex;align-items:center}
+.stack .avatar{width:38px;height:38px;margin:0 0 0 -12px;box-shadow:0 0 0 3px var(--panel)}
+.stack .avatar:first-child{margin-left:0}
+.stack .more{width:38px;height:38px;margin-left:-12px;border-radius:50%;background:var(--coral);
+  color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;
+  box-shadow:0 0 0 3px var(--panel);flex:none}
+.avs{display:flex;align-items:flex-end;gap:var(--s4);margin-top:var(--s4)}
+
+/* ---------- data ---------- */
+.track{height:13px;border-radius:var(--r-pill);background:rgba(255,255,255,.22);position:relative;overflow:hidden}
+.p--sky .track,.p--cream .track,.p .track{background:var(--panel-2)}
+.p--coral .track,.p--peri .track{background:rgba(255,255,255,.22)}
+.track i{position:absolute;inset:0 auto 0 0;display:block;border-radius:var(--r-pill)}
+.bar-row{display:grid;grid-template-columns:104px minmax(0,1fr) 42px;gap:var(--s4);align-items:center;padding:8px 0}
+.bar-row .k{font-size:13px;opacity:.8}
+.bar-row .v{font-size:13.5px;font-weight:800;text-align:right;font-variant-numeric:tabular-nums}
+.thr{position:absolute;top:-3px;bottom:-3px;width:2px;background:currentColor;opacity:.6;border-radius:2px}
+.legend{display:flex;gap:7px;flex-wrap:wrap;margin-top:var(--s4)}
+
+/* ---------- in situ ---------- */
+.drow{display:grid;grid-template-columns:44px 62px 1fr 160px 146px 172px;gap:var(--s4);
+  align-items:center;padding:var(--s3) var(--s5);border-top:1px solid var(--line)}
+.drow--hd{background:var(--panel-2);font-size:10.5px;font-weight:800;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--text-3);padding-top:11px;padding-bottom:11px;border-top:0}
+.drow:hover:not(.drow--hd){background:var(--panel-2)}
+.drow .rk{font-family:var(--disp);font-size:14px;font-weight:800;color:var(--text-3)}
+.drow .sc{font-family:var(--disp);font-size:28px;font-weight:800;letter-spacing:-.04em;
+  font-variant-numeric:tabular-nums;line-height:1}
+.drow .who{display:flex;align-items:center;gap:var(--s3);min-width:0}
+.drow .who .avatar{width:36px;height:36px;flex:0 0 36px}
+.drow .who .n{font-weight:700;font-size:14.5px;letter-spacing:-.015em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.drow .who .m{font-size:12px;color:var(--text-3)}
+.drow .acts{display:flex;gap:6px;justify-content:flex-end}
+@media(max-width:1180px){.drow{grid-template-columns:38px 56px 1fr 172px}.drow>.hm{display:none}}
+@media(max-width:700px){.drow{grid-template-columns:34px 52px 1fr}.drow>.hs{display:none}}
+.dropwrap{background:var(--panel);border-radius:var(--r-lg);overflow:hidden}
+.drop-hd{padding:var(--s5);display:flex;justify-content:space-between;gap:var(--s4);align-items:flex-start;flex-wrap:wrap}
+.empty{border-radius:var(--r-lg);background:var(--panel);padding:var(--s8) var(--s5);text-align:center}
+.empty h4{font-family:var(--disp);font-size:26px;margin-bottom:var(--s2)}
+.sk{background:var(--panel-2);border-radius:var(--r-pill);height:14px;animation:pl 1.3s ease-in-out infinite}
+@keyframes pl{0%,100%{opacity:1}50%{opacity:.42}}
+
+pre.tok{background:var(--panel);color:var(--text-2);border-radius:var(--r-lg);padding:var(--s5);
+  overflow:auto;font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:12px;line-height:1.8;margin:0}
+pre.tok .c{color:var(--text-3)}
+pre.tok .v{color:var(--lemon)}
+footer{margin-top:var(--s7);padding-top:var(--s5);font-size:13px;color:var(--text-2);
+  line-height:1.7;border-top:1px solid var(--line)}
+footer b{color:var(--text);font-weight:800}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<div class="slab">
+  <!-- icon rail -->
+  <nav class="railcol" aria-label="Sections">
+    <span class="me">WS</span>
+    <button class="rbtn" aria-current="true" aria-label="Drop"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h16M4 12h16M4 19h10"/></svg></button>
+    <button class="rbtn" aria-label="Charts"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19h-20"/></svg></button>
+    <button class="rbtn" aria-label="Watchlist"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 21l8.8-8.3a5 5 0 0 0 0-7.1z"/></svg></button>
+    <button class="rbtn" aria-label="Mandates"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 4h11l5 5v11H4z"/><path d="M15 4v5h5"/></svg></button>
+    <button class="rbtn grow" aria-label="Settings"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></button>
+  </nav>
+
+  <div class="main">
+    <!-- top bar -->
+    <div class="top">
+      <span class="crumb">Desk<span>/</span><b>Drop</b></span>
+      <span class="r">
+        <span class="kick">Toolkit 02 / 05</span>
+        <button class="selector"><span class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 4h11l5 5v11H4z"/></svg></span>
+          <span class="cv">Design &amp; Built Environment</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <button class="circbtn" aria-label="Alerts"><span class="badge" aria-hidden="true"></span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 9a6 6 0 0 0-12 0c0 6-2 7-2 7h16s-2-1-2-7"/><path d="M10.5 20a2 2 0 0 0 3 0"/></svg></button>
+        <div class="tsw" role="group" aria-label="Theme">
+          <button type="button" data-set="dark" aria-pressed="true">Dark</button>
+          <button type="button" data-set="light" aria-pressed="false">Light</button></div>
+      </span>
+    </div>
+
+    <!-- ══════ HERO PANELS ══════ -->
+    <div class="grid g12">
+      <div class="p p--coral" style="grid-column:span 7">
+        <div class="p-hd">
+          <span class="p-ic" style="background:rgba(22,24,15,.16)"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19V9M10 19V5M16 19v-7"/></svg></span>
+          <h3>Warhol Score</h3>
+          <span class="r">
+            <button class="ipill">this week <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+            <button class="ipill">0–100 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button></span>
+        </div>
+        <div class="rule"></div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:var(--s4)">
+          <div style="position:relative">
+            <svg viewBox="0 0 320 190" width="100%" height="190" role="img"
+              aria-label="Daily surfaced-candidate scores across the week. Tuesday is the highest at 91.">
+              <g>
+                <rect x="6"   y="86"  width="34" height="76"  rx="10" fill="currentColor" opacity=".26"/>
+                <rect x="48"  y="62"  width="34" height="100" rx="10" fill="currentColor" opacity=".26"/>
+                <rect x="90"  y="74"  width="34" height="88"  rx="10" fill="currentColor" opacity=".26"/>
+                <rect x="132" y="26"  width="34" height="136" rx="10" fill="#16180F"/>
+                <rect x="174" y="96"  width="34" height="66"  rx="10" fill="currentColor" opacity=".26"/>
+                <rect x="216" y="110" width="34" height="52"  rx="10" fill="currentColor" opacity=".26" class="hatch"/>
+                <rect x="258" y="120" width="34" height="42"  rx="10" fill="currentColor" opacity=".26" class="hatch"/>
+              </g>
+              <g font-family="Figtree" font-size="11" font-weight="700" fill="rgba(22,24,15,.62)" text-anchor="middle">
+                <text x="23" y="180">Mon</text><text x="65" y="180">Tue</text><text x="107" y="180">Wed</text>
+                <text x="191" y="180">Fri</text><text x="233" y="180">Sat</text><text x="275" y="180">Sun</text></g>
+              <rect x="130" y="168" width="38" height="20" rx="10" fill="#16180F"/>
+              <text x="149" y="182" font-family="Figtree" font-size="11" font-weight="700" fill="#F2F4EF" text-anchor="middle">Thu</text>
+            </svg>
+            <span class="tip" style="position:absolute;left:30%;top:0">91 · M. Ellison</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:var(--s3)">
+            <div class="sub"><div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+              <span class="k">Top score</span><span class="delta">+6.2</span></div>
+              <div class="v">91.4</div></div>
+            <div class="sub"><div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+              <span class="k">Median surfaced</span><span class="delta">+2.4</span></div>
+              <div class="v">78.6</div>
+              <div style="font-size:11.5px;opacity:.72;margin-top:4px">vs. last week</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="grid-column:span 5;display:flex;flex-direction:column;gap:var(--s4)">
+        <div class="p" style="display:flex;gap:var(--s4);align-items:flex-start">
+          <span class="p-ic" style="background:var(--lemon);color:#16180F"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 8v5M12 17h.01"/><path d="M10.3 3.9 2.6 17a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></span>
+          <div style="min-width:0">
+            <h3 style="font-size:17px">Gate refusals rising</h3>
+            <p class="note" style="font-size:12.5px;margin-top:6px">Six of forty-seven failed format fit today. Threshold review due in <span class="tip" style="padding:2px 8px;font-size:11px">2:59:12</span></p>
+          </div>
+          <button class="arrowbtn" aria-label="Open"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></button>
+        </div>
+
+        <div class="p p--peri" style="flex:1">
+          <div class="p-hd"><h3>Scan coverage</h3>
+            <span class="r"><button class="ipill">this week <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button></span></div>
+          <div style="display:flex;justify-content:space-between;gap:6px;margin-bottom:var(--s3)">
+            <span class="kick" style="flex:1;text-align:center">Mon</span><span class="kick" style="flex:1;text-align:center">Tue</span>
+            <span class="kick" style="flex:1;text-align:center">Wed</span><span class="kick" style="flex:1;text-align:center">Thu</span>
+            <span class="kick" style="flex:1;text-align:center">Fri</span><span class="kick" style="flex:1;text-align:center">Sat</span>
+            <span class="kick" style="flex:1;text-align:center">Sun</span></div>
+          <div style="display:flex;justify-content:space-between;gap:6px">
+            <span class="pctchip" style="background:#fff;color:#16180F;flex:1;max-width:56px">78%</span>
+            <span class="pctchip" style="background:#fff;color:#16180F;flex:1;max-width:56px">82%</span>
+            <span class="pctchip" style="background:#16180F;color:#FBFAFF;flex:1;max-width:56px">91%</span>
+            <span class="pctchip" style="background:#fff;color:#16180F;flex:1;max-width:56px">88%</span>
+            <span class="pctchip hatch" style="background:#fff;color:#16180F;flex:1;max-width:56px;opacity:1;
+              background-image:repeating-linear-gradient(48deg,rgba(22,24,15,.34) 0 2px,transparent 2px 7px)">95%</span>
+            <span class="pctchip hatch" style="background:#fff;color:#16180F;flex:1;max-width:56px;opacity:1;
+              background-image:repeating-linear-gradient(48deg,rgba(22,24,15,.34) 0 2px,transparent 2px 7px)">93%</span>
+            <span class="pctchip hatch" style="background:#fff;color:#16180F;flex:1;max-width:56px;opacity:1;
+              background-image:repeating-linear-gradient(48deg,rgba(22,24,15,.34) 0 2px,transparent 2px 7px)">70%</span></div>
+          <svg viewBox="0 0 360 70" width="100%" height="70" style="margin-top:var(--s4)" role="img"
+            aria-label="Scan coverage trend across the week, projected from Friday onward.">
+            <path d="M10 52 C60 44 92 30 132 22 C170 15 196 34 236 40" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M236 40 C272 46 304 30 350 20" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2.5" stroke-dasharray="5 5" stroke-linecap="round"/>
+            <circle cx="132" cy="22" r="4.5" fill="#fff"/><circle cx="236" cy="40" r="4.5" fill="#fff"/>
+          </svg>
+          <div class="legend">
+            <span class="ipill" style="font-size:11.5px;padding:5px 11px"><i class="dot" style="background:#fff"></i>Scanned</span>
+            <span class="ipill" style="font-size:11.5px;padding:5px 11px"><i class="dot" style="background:rgba(255,255,255,.5)"></i>Projected</span>
+            <span class="ipill" style="font-size:11.5px;padding:5px 11px"><i class="dot" style="background:#16180F"></i>Peak</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════ 00 OVERVIEW COLLAGE ══════ -->
+    <section class="sec" id="collage">
+      <div class="sec-head"><h2 class="sec-title">The system at a glance</h2>
+        <p class="sec-note">Everything essential in one screen — faces, shapes, colour, gradient,
+          depth, and the world's signature device. The sections below expand each one.</p></div>
+      <div class="collage">
+        <div class="tile tile--cream" style="grid-column:span 3"><span class="k">Display</span>
+          <span class="aa">Aa</span><span class="v">Archivo · 800 · wdth 88–92 · caps</span></div>
+        <div class="tile" style="grid-column:span 3"><span class="k">Interface</span>
+          <span class="aa-ui">Aa</span><span class="v">Figtree · 400 / 700 / 800</span></div>
+        <div class="tile tile--coral" style="grid-column:span 3"><span class="k">Shape</span>
+          <div class="shaperow" style="color:#16180F">
+            <b style="border-radius:10px"></b><b style="border-radius:18px"></b>
+            <b style="border-radius:24px"></b><b class="cap" style="border-radius:999px"></b></div>
+          <span class="v">10 / 18 / 24 panels · 30 slab · pill</span></div>
+        <div class="tile" style="grid-column:span 3"><span class="k">Colour</span>
+          <div class="colrow"><span style="background:var(--coral)"></span><span style="background:var(--peri)"></span>
+            <span style="background:var(--sky)"></span><span style="background:var(--cream)"></span>
+            <span style="background:var(--lemon)"></span><span style="background:var(--slab)"></span></div>
+          <span class="v">Five panel fields on a charcoal slab</span></div>
+
+        <div class="tile" style="grid-column:span 3"><span class="k">Gradient</span>
+          <div class="gradrow"><span class="gr-heat"></span><span class="gr-cool"></span><span class="gr-line"></span></div>
+          <span class="v">Heat · cool · series fade</span></div>
+        <div class="tile tile--sky" style="grid-column:span 3"><span class="k">Signature — hatch</span>
+          <div style="height:44px;border-radius:9px;background:#fff;position:relative;overflow:hidden">
+            <span style="position:absolute;inset:0;background-image:repeating-linear-gradient(48deg,rgba(22,24,15,.34) 0 2px,transparent 2px 7px)"></span></div>
+          <span class="v">Projected / incomplete, never a flat tint</span></div>
+        <div class="tile" style="grid-column:span 2"><span class="k">Depth</span>
+          <div class="elrow"><b style="box-shadow:var(--el-1)"></b><b style="box-shadow:var(--el-2)"></b><b style="box-shadow:var(--el-3)"></b></div>
+          <span class="v">Three layered shadows + the slab</span></div>
+        <div class="tile tile--peri" style="grid-column:span 2"><span class="k">Numeral</span>
+          <span style="font-family:var(--disp);font-size:44px;font-weight:800;letter-spacing:-.045em;line-height:.86">91</span>
+          <span class="v">Archivo, tabular</span></div>
+        <div class="tile" style="grid-column:span 2"><span class="k">Controls</span>
+          <div style="display:flex;gap:7px;align-items:center;flex-wrap:wrap">
+            <span class="ipill" style="font-size:11px;padding:5px 11px">pill ⌄</span>
+            <span class="arrowbtn" style="width:32px;height:32px" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            <span class="tip" style="font-size:11px;padding:5px 11px">tooltip</span></div>
+          <span class="v">In-panel pill · circular ↗ · black tip</span></div>
+      </div>
+    </section>
+
+    <!-- ══════ 01 COLOUR ══════ -->
+    <section class="sec" id="colour">
+      <div class="sec-head"><h2 class="sec-title">Panel fields</h2>
+        <p class="sec-note">Five fields. A panel takes one entirely — the hue is the label. Text
+          on coral, sky and cream is ink; on periwinkle it's the cool off-white. Lemon never
+          fills a panel; it's the alert tile only.</p></div>
+      <div class="grid g12" style="margin-bottom:var(--s4)">
+        <div class="p p--coral" style="grid-column:span 3"><span class="kick">Coral · #F0655A</span>
+          <h3 style="font-size:24px;margin:var(--s3) 0 var(--s2)">Score</h3>
+          <p class="note" style="font-size:12.5px">The composite and anything ranked. The loudest
+            field, reserved for the one question the Scout opens the app to answer.</p></div>
+        <div class="p p--peri" style="grid-column:span 3"><span class="kick">Periwinkle · #6C63E8</span>
+          <h3 style="font-size:24px;margin:var(--s3) 0 var(--s2)">Coverage</h3>
+          <p class="note" style="font-size:12.5px">Scan health, cadence, projections. Anything
+            that is about the machine rather than a candidate.</p></div>
+        <div class="p p--sky" style="grid-column:span 3"><span class="kick">Sky · #C8E4F2</span>
+          <h3 style="font-size:24px;margin:var(--s3) 0 var(--s2)">Where</h3>
+          <p class="note" style="font-size:12.5px">Platform and audience distribution. The
+            quietest field — it carries context, not verdicts.</p></div>
+        <div class="p p--cream" style="grid-column:span 3"><span class="kick">Cream · #EFEFE7</span>
+          <h3 style="font-size:24px;margin:var(--s3) 0 var(--s2)">Timing</h3>
+          <p class="note" style="font-size:12.5px">The scan clock and anything on a schedule.
+            Also the ground for every white control on a dark panel.</p></div>
+      </div>
+      <div class="grid g4">
+        <div class="p p--line"><span class="kick">Lemon · #F5C842</span>
+          <p class="note" style="margin-top:9px;font-size:12.5px">Alert icon tiles and inline
+            highlight chips. Never a panel fill, never a chart series.</p></div>
+        <div class="p p--line"><span class="kick">Pass · #5FCB8E</span>
+          <p class="note" style="margin-top:9px;font-size:12.5px">Gate cleared and positive
+            deltas. Appears as a solid delta chip, or an 18% pill tint.</p></div>
+        <div class="p p--line"><span class="kick">Slab · #1C201D on page #C3D3C3</span>
+          <p class="note" style="margin-top:9px;font-size:12.5px">The shell. The sage page is
+            visible on all four sides at all times — that margin is the design.</p></div>
+        <div class="p p--line"><span class="kick">Fail · #F0655A</span>
+          <p class="note" style="margin-top:9px;font-size:12.5px">Shares coral deliberately:
+            a refusal is a score outcome, so it lives in the score's colour.</p></div>
+      </div>
+    </section>
+
+    <!-- ══════ 02 TYPE ══════ -->
+    <section class="sec" id="type">
+      <div class="sec-head"><h2 class="sec-title">Type</h2>
+        <p class="sec-note"><strong>Archivo</strong> at width 88–92, weight 800, uppercase — the
+          heavy compressed panel titles are what make this world read as an operations floor.
+          <strong>Figtree</strong> handles everything a person actually reads.</p></div>
+      <div class="tr"><span class="s">Display 1 · Archivo<br>800 · wdth 88<br>38–72px caps</span><span class="d1">Morning drop</span></div>
+      <div class="tr"><span class="s">Panel title · Archivo<br>800 · wdth 92<br>21–31px caps</span><span class="d2">Monetization gap</span></div>
+      <div class="tr"><span class="s">Sub-head · Archivo<br>800 · 20px caps</span><span class="h3s">Recommended play</span></div>
+      <div class="tr"><span class="s">Body · Figtree<br>400 · 16 / 1.66</span><span class="bd">Mara Ellison publishes long-form architecture criticism to 214,000 subscribers and monetizes none of it. Three sponsor mentions in eleven months, no paid tier, no product.</span></div>
+      <div class="tr"><span class="s">Secondary · Figtree<br>400 · 13px</span><span class="sm">Scanned 04:12 · Substack and X · rules engine v4.2</span></div>
+      <div class="tr"><span class="s">Label · Figtree<br>800 · 10.5px · .14em</span><span class="lab" style="margin:0">Pillar breakdown</span></div>
+      <div class="tr"><span class="s">Numeral · Archivo<br>800 · tabular · 68px</span><span class="bignum">91.4</span></div>
+    </section>
+
+    <!-- ══════ 03 SHAPE ══════ -->
+    <section class="sec" id="shape">
+      <div class="sec-head"><h2 class="sec-title">Shape</h2>
+        <p class="sec-note">Panels at 24, the slab at 30, controls and bars at full pill, icon
+          buttons at 13 rounded-square. The rounded-square is what separates a rail button from
+          a content control — it never appears inside a panel.</p></div>
+      <div class="grid g3">
+        <div><span class="lab">Radius</span>
+          <div class="rad"><b style="border-radius:10px">10 · tiles</b>
+            <b style="border-radius:13px;background:var(--sky)">13 · rail</b>
+            <b style="border-radius:18px;background:var(--peri);color:var(--on-peri)">18 · sub</b>
+            <b style="border-radius:24px;background:var(--cream)">24 · panels</b>
+            <b style="border-radius:30px;background:var(--panel-2);color:var(--text)">30 · slab</b>
+            <b style="border-radius:999px;background:var(--lemon)">pill</b></div></div>
+        <div><span class="lab">Lines</span>
+          <div style="display:flex;flex-direction:column;gap:var(--s3)">
+            <div style="display:flex;align-items:center;gap:var(--s3)"><span style="width:70px;font-size:12px;color:var(--text-3)">10% white</span><span style="flex:1;height:1px;background:var(--line)"></span></div>
+            <div style="display:flex;align-items:center;gap:var(--s3)"><span style="width:70px;font-size:12px;color:var(--text-3)">20% white</span><span style="flex:1;height:1px;background:var(--line-hi)"></span></div>
+            <div style="display:flex;align-items:center;gap:var(--s3)"><span style="width:70px;font-size:12px;color:var(--text-3)">in-panel</span><span style="flex:1;height:1px;background:currentColor;opacity:.22"></span></div>
+          </div>
+          <p class="note" style="margin-top:var(--s3);font-size:12.5px">Inside a colour field the
+            rule is <code>currentColor</code> at 22%, so it holds on all five grounds.</p></div>
+        <div><span class="lab">Space — 4px base</span>
+          <div class="sp"><span style="height:4px"><i>4</i></span><span style="height:8px"><i>8</i></span>
+            <span style="height:12px"><i>12</i></span><span style="height:16px"><i>16</i></span>
+            <span style="height:24px"><i>24</i></span><span style="height:34px"><i>34</i></span>
+            <span style="height:50px"><i>50</i></span><span style="height:72px"><i>72</i></span>
+            <span style="height:104px"><i>104</i></span></div></div>
+      </div>
+    </section>
+
+    <!-- ══════ 04 DEPTH ══════ -->
+    <section class="sec" id="surface">
+      <div class="sec-head"><h2 class="sec-title">Depth &amp; fill</h2>
+        <p class="sec-note">The slab casts the only large shadow; panels inside it sit flat,
+          separated by colour rather than elevation. Hatching — not opacity — marks anything
+          projected, pending or incomplete.</p></div>
+      <div class="grid g4" style="margin-bottom:var(--s6)">
+        <div class="p p--line"><span class="kick">Flat</span><p class="note" style="margin-top:8px;font-size:12.5px">Every panel inside the slab. Colour does the separating.</p></div>
+        <div class="p" style="box-shadow:var(--el-1)"><span class="kick">el-1</span><p class="note" style="margin-top:8px;font-size:12.5px">Hover, and controls that leave the surface.</p></div>
+        <div class="p" style="box-shadow:var(--el-2)"><span class="kick">el-2</span><p class="note" style="margin-top:8px;font-size:12.5px">Menus, the mandate selector when open.</p></div>
+        <div class="p" style="box-shadow:var(--el-3)"><span class="kick">el-3 + slab</span><p class="note" style="margin-top:8px;font-size:12.5px">Drawers and the report overlay. The slab itself uses a wider, softer pair.</p></div>
+      </div>
+      <div class="grid g2">
+        <div>
+          <span class="lab">Hatch — the signature fill</span>
+          <div style="display:flex;gap:var(--s3)">
+            <div style="flex:1;height:88px;border-radius:var(--r-md);background:var(--coral)"></div>
+            <div style="flex:1;height:88px;border-radius:var(--r-md);background:var(--coral);position:relative;overflow:hidden">
+              <span style="position:absolute;inset:0;background-image:repeating-linear-gradient(48deg,rgba(22,24,15,.4) 0 2px,transparent 2px 7px)"></span></div>
+          </div>
+          <p class="note" style="margin-top:9px;font-size:12.5px"><strong>Solid = happened.
+            Hatched = projected.</strong> 48°, 2px stripe, 7px pitch, drawn in the field's own
+            ink at 34–42%. Used on bars, capacity chips and gauge remainders.</p>
+        </div>
+        <div>
+          <span class="lab">Gradients</span>
+          <div class="grid g3">
+            <div><div class="gr gr-heat"></div><p class="note" style="margin-top:8px;font-size:12px"><strong>Heat.</strong> Coral → lemon, 126°. Score surfaces.</p></div>
+            <div><div class="gr gr-cool"></div><p class="note" style="margin-top:8px;font-size:12px"><strong>Cool.</strong> Periwinkle → sky. Coverage surfaces.</p></div>
+            <div><div class="gr gr-line"></div><p class="note" style="margin-top:8px;font-size:12px"><strong>Series fade.</strong> Under a line, vertical, to zero.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════ 05 CONTROLS ══════ -->
+    <section class="sec" id="controls">
+      <div class="sec-head"><h2 class="sec-title">Controls</h2>
+        <p class="sec-note">On the slab, actions are cream pills. Inside a colour field they
+          become translucent white so the field stays unbroken. The circular ↗ is the only way
+          a panel opens its own detail view, and it rotates 45° on hover.</p></div>
+      <div class="grid g12" style="margin-bottom:var(--s4)">
+        <div class="p" style="grid-column:span 5">
+          <div class="p-hd"><h3 style="font-size:19px">On the slab</h3></div>
+          <div style="display:flex;gap:var(--s2);flex-wrap:wrap">
+            <button class="btn">Promote</button><button class="btn btn--ghost">Watch</button>
+            <button class="btn btn--out">Pass</button><button class="btn" disabled>Gate failed</button>
+            <button class="btn btn--busy" aria-label="Scanning">Scanning</button></div>
+        </div>
+        <div class="p p--coral" style="grid-column:span 4">
+          <div class="p-hd"><h3 style="font-size:19px">In a field</h3>
+            <span class="r"><button class="arrowbtn" aria-label="Open"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></button></span></div>
+          <div style="display:flex;gap:var(--s2);flex-wrap:wrap">
+            <button class="ipill">this week <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+            <button class="ipill">USD <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+            <span class="delta">+7,5%</span><span class="delta delta--dn">−2,4%</span></div>
+        </div>
+        <div class="p" style="grid-column:span 3">
+          <div class="p-hd"><h3 style="font-size:19px">Pills</h3></div>
+          <div style="display:flex;gap:7px;flex-wrap:wrap">
+            <span class="pill pill--solid">Rank 1</span><span class="pill pill--pass"><i class="dot"></i>Fit pass</span>
+            <span class="pill pill--hold">Watching</span><span class="pill pill--fail">Gate fail</span>
+            <span class="pill">Substack</span></div>
+          <div class="seg" style="margin-top:var(--s3)" role="group" aria-label="Range">
+            <button type="button" aria-pressed="true">Today</button>
+            <button type="button" aria-pressed="false">7d</button>
+            <button type="button" aria-pressed="false">30d</button></div>
+        </div>
+      </div>
+      <div class="grid g3">
+        <label><span class="lab">Mandate</span><input class="inp" value="Design &amp; Built Environment" aria-label="Mandate"></label>
+        <label><span class="lab">Audience band</span><input class="inp" placeholder="50,000 – 500,000" aria-label="Audience band"></label>
+        <label><span class="lab">Score threshold</span><input class="inp inp--err" value="115" aria-label="Score threshold" aria-describedby="e2">
+          <span class="em" id="e2">Must be 0–100. Your last drop used 70.</span></label>
+      </div>
+    </section>
+
+    <!-- ══════ 06 FACES ══════ -->
+    <section class="sec" id="faces">
+      <div class="sec-head"><h2 class="sec-title">Faces</h2>
+        <p class="sec-note">Circular and full colour, paired with a capacity-style score chip
+          rather than a ring — this world already spends its circles on the coverage panel, so
+          the score gets its own chip. Portraits are authored placeholders.</p></div>
+      <div class="faces" style="margin-bottom:var(--s5)">
+        <div class="face"><div style="position:relative;width:84px;margin:0 auto">
+          <div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#F0655A"/><circle cx="50" cy="38" r="19" fill="#16180F"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#16180F"/></svg></div>
+          <span class="pctchip" style="background:var(--pass);color:#16180F;position:absolute;right:-10px;bottom:-6px;width:38px;height:38px;font-size:12px;box-shadow:0 0 0 3px var(--slab)">91</span></div>
+          <div class="n">Mara Ellison</div><div class="m">Substack · 214K</div></div>
+        <div class="face"><div style="position:relative;width:84px;margin:0 auto">
+          <div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#6C63E8"/><circle cx="50" cy="37" r="18" fill="#FBFAFF"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#FBFAFF"/></svg></div>
+          <span class="pctchip" style="background:var(--pass);color:#16180F;position:absolute;right:-10px;bottom:-6px;width:38px;height:38px;font-size:12px;box-shadow:0 0 0 3px var(--slab)">84</span></div>
+          <div class="n">Dev Okonjo</div><div class="m">YouTube · 480K</div></div>
+        <div class="face"><div style="position:relative;width:84px;margin:0 auto">
+          <div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#C8E4F2"/><circle cx="50" cy="39" r="20" fill="#2E7898"/><path d="M10 100c0-22 18-33 40-33s40 11 40 33z" fill="#2E7898"/></svg></div>
+          <span class="pctchip" style="background:var(--lemon);color:#16180F;position:absolute;right:-10px;bottom:-6px;width:38px;height:38px;font-size:12px;box-shadow:0 0 0 3px var(--slab)">78</span></div>
+          <div class="n">Sena Ruiz</div><div class="m">TikTok · 1.2M</div></div>
+        <div class="face"><div style="position:relative;width:84px;margin:0 auto">
+          <div class="avatar"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#EFEFE7"/><circle cx="50" cy="37" r="18" fill="#5A6053"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#5A6053"/></svg></div>
+          <span class="pctchip" style="background:var(--lemon);color:#16180F;position:absolute;right:-10px;bottom:-6px;width:38px;height:38px;font-size:12px;box-shadow:0 0 0 3px var(--slab)">72</span></div>
+          <div class="n">Theo Brandt</div><div class="m">Podcast · 96K</div></div>
+        <div class="face"><div style="position:relative;width:84px;margin:0 auto">
+          <div class="avatar" style="opacity:.55"><svg viewBox="0 0 100 100" aria-label="Portrait placeholder"><rect width="100" height="100" fill="#2C3129"/><circle cx="50" cy="37" r="18" fill="#767C70"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#767C70"/></svg></div>
+          <span class="pctchip" style="background:var(--fail);color:#fff;position:absolute;right:-10px;bottom:-6px;width:38px;height:38px;font-size:12px;box-shadow:0 0 0 3px var(--slab)">68</span></div>
+          <div class="n" style="color:var(--text-3)">Iris Nakamura</div><div class="m">Gate fail</div></div>
+      </div>
+      <div class="grid g2">
+        <div class="p"><span class="lab">Sizes — 24 / 32 / 40 / 56</span>
+          <div class="avs">
+            <div class="avatar" style="width:24px;height:24px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#F0655A"/><circle cx="50" cy="38" r="19" fill="#16180F"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#16180F"/></svg></div>
+            <div class="avatar" style="width:32px;height:32px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#6C63E8"/><circle cx="50" cy="38" r="19" fill="#FBFAFF"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#FBFAFF"/></svg></div>
+            <div class="avatar" style="width:40px;height:40px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#C8E4F2"/><circle cx="50" cy="38" r="19" fill="#2E7898"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#2E7898"/></svg></div>
+            <div class="avatar" style="width:56px;height:56px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#EFEFE7"/><circle cx="50" cy="38" r="19" fill="#5A6053"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#5A6053"/></svg></div></div>
+          <p class="note" style="margin-top:var(--s4);font-size:12.5px">The score chip drops below
+            56px; in tables the score has its own column and the chip would only crowd the name.</p></div>
+        <div class="p"><span class="lab">Group — watchlist</span>
+          <div class="stack" style="margin-top:var(--s4)">
+            <div class="avatar" style="width:38px;height:38px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#F0655A"/><circle cx="50" cy="38" r="19" fill="#16180F"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#16180F"/></svg></div>
+            <div class="avatar" style="width:38px;height:38px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#6C63E8"/><circle cx="50" cy="38" r="19" fill="#FBFAFF"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#FBFAFF"/></svg></div>
+            <div class="avatar" style="width:38px;height:38px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#C8E4F2"/><circle cx="50" cy="38" r="19" fill="#2E7898"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#2E7898"/></svg></div>
+            <div class="avatar" style="width:38px;height:38px"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#EFEFE7"/><circle cx="50" cy="38" r="19" fill="#5A6053"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#5A6053"/></svg></div>
+            <div class="more">+10</div></div>
+          <p class="note" style="margin-top:var(--s4);font-size:12.5px">Overlap −12px with a 3px
+            ring in the panel's own ground. The counter takes coral.</p></div>
+      </div>
+    </section>
+
+    <!-- ══════ 07 CHARTS ══════ -->
+    <section class="sec" id="data">
+      <div class="sec-head"><h2 class="sec-title">Charts</h2>
+        <p class="sec-note">Every chart lives in a colour field, so series are the field's own
+          ink at varying alpha plus one solid highlight. Pill-ended bars, hatched projections,
+          black tooltip pills. Synthetic demonstration data.</p></div>
+
+      <div class="grid g12" style="margin-bottom:var(--s4)">
+        <div class="p p--peri" style="grid-column:span 7">
+          <div class="p-hd"><h3>Value vs. extracted</h3>
+            <span class="r"><span class="ipill" style="font-size:12px">11 months</span>
+              <button class="arrowbtn" aria-label="Open"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></button></span></div>
+          <svg viewBox="0 0 660 250" width="100%" height="250" role="img"
+            aria-label="Estimated audience value climbs from 41 to 96 thousand dollars over eleven months while extracted revenue stays between 3 and 9 thousand. The final two months are projected.">
+            <defs><linearGradient id="mfill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#fff" stop-opacity=".34"/><stop offset="100%" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+            <g stroke="rgba(255,255,255,.18)" stroke-width="1">
+              <line x1="52" y1="32" x2="648" y2="32"/><line x1="52" y1="92" x2="648" y2="92"/><line x1="52" y1="152" x2="648" y2="152"/></g>
+            <line x1="52" y1="204" x2="648" y2="204" stroke="rgba(255,255,255,.36)" stroke-width="1.5"/>
+            <path d="M64 150 C180 136 268 96 380 74 C450 60 500 50 540 44 L540 196 C500 194 450 192 380 190 C268 188 180 184 64 182 Z" fill="url(#mfill)"/>
+            <path d="M64 150 C180 136 268 96 380 74 C450 60 500 50 540 44" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+            <path d="M540 44 C580 38 614 34 642 28" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/>
+            <path d="M64 182 C180 184 268 188 380 190 C450 191 500 193 540 194" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M540 194 C580 195 614 196 642 197" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/>
+            <circle cx="540" cy="44" r="5.5" fill="#fff"/><circle cx="540" cy="194" r="5.5" fill="rgba(255,255,255,.6)"/>
+            <g transform="translate(452,10)"><rect width="112" height="26" rx="13" fill="#0F120E"/>
+              <text x="56" y="17" font-family="Figtree" font-size="12" font-weight="700" fill="#F2F4EF" text-anchor="middle">Gap $87K</text></g>
+            <g font-family="Figtree" font-size="11" font-weight="700" fill="rgba(251,250,255,.62)">
+              <text x="4" y="35">$100K</text><text x="14" y="95">$50K</text><text x="38" y="207">0</text>
+              <text x="60" y="228">Sep</text><text x="340" y="228">Feb</text><text x="620" y="228">Jul</text></g>
+          </svg>
+          <div class="legend">
+            <span class="ipill" style="font-size:11.5px;padding:5px 11px"><i class="dot" style="background:#fff"></i>Est. value</span>
+            <span class="ipill" style="font-size:11.5px;padding:5px 11px"><i class="dot" style="background:rgba(255,255,255,.45)"></i>Extracted</span>
+            <span class="ipill" style="font-size:11.5px;padding:5px 11px">Dashed = projected</span></div>
+        </div>
+
+        <div class="p p--sky" style="grid-column:span 5">
+          <div class="p-hd"><h3>Where they are</h3>
+            <span class="r"><button class="ipill">all platforms <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button></span></div>
+          <div style="display:flex;flex-direction:column;gap:11px">
+            <div class="bar-row"><span class="k">Substack</span>
+              <span class="track" style="background:rgba(22,24,15,.14)"><i style="width:74%;background:#2E7898"></i></span><span class="v">17</span></div>
+            <div class="bar-row"><span class="k">YouTube</span>
+              <span class="track" style="background:rgba(22,24,15,.14)"><i style="width:56%;background:#2E7898"></i></span><span class="v">13</span></div>
+            <div class="bar-row"><span class="k">TikTok</span>
+              <span class="track" style="background:rgba(22,24,15,.14)"><i style="width:39%;background:#2E7898"></i></span><span class="v">9</span></div>
+            <div class="bar-row"><span class="k">Podcast</span>
+              <span class="track" style="background:rgba(22,24,15,.14)"><i style="width:26%;background:#2E7898"></i></span><span class="v">6</span></div>
+            <div class="bar-row"><span class="k">Medium</span>
+              <span class="track" style="background:rgba(22,24,15,.14)"><i style="width:9%;background:#2E7898"></i></span><span class="v">2</span></div>
+          </div>
+          <p class="note" style="font-size:12.5px;margin-top:var(--s4)">Where the forty-seven
+            scanned actually live. Context, not a verdict — hence the quietest field.</p>
+        </div>
+      </div>
+
+      <div class="grid g12">
+        <div class="p p--cream" style="grid-column:span 4">
+          <div class="p-hd"><h3>Scan clock</h3>
+            <span class="r"><button class="arrowbtn" style="background:#16180F;color:var(--cream)" aria-label="Open"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></button></span></div>
+          <svg viewBox="0 0 220 220" width="100%" height="200" role="img"
+            aria-label="Radial clock. The scan window runs 03:40 to 05:10; the drop was assembled at 04:12.">
+            <circle cx="110" cy="110" r="86" fill="none" stroke="rgba(22,24,15,.14)" stroke-width="1.5"/>
+            <g stroke="rgba(22,24,15,.28)" stroke-width="1.5">
+              <line x1="110" y1="24" x2="110" y2="34"/><line x1="196" y1="110" x2="186" y2="110"/>
+              <line x1="110" y1="196" x2="110" y2="186"/><line x1="24" y1="110" x2="34" y2="110"/></g>
+            <path d="M110 110 L110 24 A86 86 0 0 1 176 61 Z" fill="#F0655A" opacity=".85"/>
+            <path d="M110 110 L176 61 A86 86 0 0 1 182 78 Z" fill="#F0655A" opacity=".38"
+                  style="background-image:none"/>
+            <circle cx="110" cy="110" r="54" fill="var(--cream)"/>
+            <line x1="110" y1="110" x2="110" y2="66" stroke="#16180F" stroke-width="3" stroke-linecap="round"/>
+            <line x1="110" y1="110" x2="146" y2="122" stroke="#16180F" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="110" cy="110" r="5" fill="#16180F"/>
+            <g font-family="Figtree" font-size="11" font-weight="700" fill="rgba(22,24,15,.55)" text-anchor="middle">
+              <text x="110" y="18">12</text><text x="208" y="114">3</text><text x="110" y="212">6</text><text x="12" y="114">9</text></g>
+          </svg>
+          <div class="legend" style="justify-content:space-between">
+            <span><span class="ipill" style="font-size:11.5px;padding:5px 11px"><i class="dot" style="background:#F0655A"></i>Scan window</span></span>
+            <span class="v" style="font-family:var(--disp);font-weight:800;font-size:15px;font-variant-numeric:tabular-nums">04:12:07</span></div>
+        </div>
+
+        <div class="p" style="grid-column:span 4">
+          <div class="p-hd"><h3>Distribution</h3><span class="r"><span class="pill">n = 47</span></span></div>
+          <svg viewBox="0 0 380 200" width="100%" height="200" role="img"
+            aria-label="Score distribution. Most creators score between 40 and 65. Six clear the threshold of 70.">
+            <g fill="var(--panel-2)">
+              <rect x="10" y="146" width="34" height="42" rx="14"/><rect x="52" y="114" width="34" height="74" rx="14"/>
+              <rect x="94" y="64" width="34" height="124" rx="14"/><rect x="136" y="44" width="34" height="144" rx="14"/>
+              <rect x="178" y="92" width="34" height="96" rx="14"/></g>
+            <g fill="var(--coral)">
+              <rect x="220" y="124" width="34" height="64" rx="14"/><rect x="262" y="144" width="34" height="44" rx="14"/>
+              <rect x="304" y="158" width="34" height="30" rx="14"/></g>
+            <line x1="216" y1="16" x2="216" y2="194" stroke="var(--text-3)" stroke-width="1.5" stroke-dasharray="5 5"/>
+            <g font-family="Figtree" font-size="11" font-weight="700" fill="var(--text-3)">
+              <text x="16" y="198">30</text><text x="100" y="198">50</text><text x="226" y="198">70</text><text x="310" y="198">90</text></g>
+          </svg>
+          <p class="note" style="font-size:12.5px;margin-top:var(--s3)">Below threshold uses the
+            neutral panel tone — the eye should land only on what entered the drop.</p>
+        </div>
+
+        <div class="p" style="grid-column:span 4">
+          <div class="p-hd"><h3>Scout brief</h3>
+            <span class="r"><button class="arrowbtn" aria-label="Open"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg></button></span></div>
+          <div style="display:flex;gap:var(--s3);align-items:flex-start">
+            <div class="avatar" style="width:38px;height:38px;flex:none"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#6C63E8"/><circle cx="50" cy="38" r="19" fill="#FBFAFF"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#FBFAFF"/></svg></div>
+            <div style="background:var(--panel-2);border-radius:var(--r-md);padding:var(--s4);font-size:13.5px;line-height:1.6">
+              Six surfaced from forty-seven. <span style="background:var(--lemon);color:#16180F;border-radius:5px;padding:1px 6px;font-weight:700">M. Ellison</span>
+              leads at 91 — the gap is the case, strain only confirms timing. Gate refusals are at
+              <span style="background:var(--lemon);color:#16180F;border-radius:5px;padding:1px 6px;font-weight:700">13%</span>, worth a threshold review.</div>
+          </div>
+          <div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:var(--s4)">
+            <button class="ipill" style="background:var(--sky);color:#16180F">Show the gap chart</button>
+            <button class="ipill">Draft outreach</button></div>
+          <div style="display:flex;gap:var(--s2);align-items:center;margin-top:var(--s3)">
+            <button class="circbtn" style="width:40px;height:40px;background:var(--coral);color:#fff" aria-label="Attach"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+            <input class="inp" placeholder="Ask about this drop" aria-label="Ask about this drop"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════ 08 IN SITU ══════ -->
+    <section class="sec" id="situ">
+      <div class="sec-head"><h2 class="sec-title">The drop</h2>
+        <p class="sec-note">The whole system doing the job. Synthetic candidates.</p></div>
+      <div class="dropwrap" style="margin-bottom:var(--s4)">
+        <div class="drop-hd">
+          <div><h3 style="font-size:26px">Morning drop</h3>
+            <p class="note" style="margin-top:6px;font-size:13px">Design &amp; Built Environment ·
+              scanned 04:12 · 47 seen · 6 surfaced · threshold 70</p></div>
+          <div style="display:flex;gap:var(--s2);align-items:center">
+            <span class="pill pill--hold">6 to work</span><button class="btn btn--coral btn--sm">Brief the room</button></div>
+        </div>
+        <div class="drow drow--hd"><span>#</span><span>Score</span><span>Candidate</span>
+          <span class="hm">Gap / strain</span><span class="hs">Play</span><span class="hm">Verdict</span></div>
+
+        <div class="drow"><span class="rk">01</span><span class="sc" style="color:var(--coral)">91</span>
+          <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#F0655A"/><circle cx="50" cy="38" r="19" fill="#16180F"/><path d="M11 100c0-21 18-32 39-32s39 11 39 32z" fill="#16180F"/></svg></span>
+            <span><span class="n">Mara Ellison</span><br><span class="m">Substack · 214K · architecture</span></span></span>
+          <span class="hm"><span class="track" style="height:11px"><i style="width:88%;background:var(--coral)"></i></span>
+            <span class="track" style="height:11px;margin-top:5px"><i style="width:74%;background:var(--peri-2)"></i></span></span>
+          <span class="hs"><span class="pill">Newsletter</span></span>
+          <span class="acts hm"><button class="btn btn--sm">Promote</button><button class="btn btn--ghost btn--sm">Watch</button></span></div>
+
+        <div class="drow"><span class="rk">02</span><span class="sc" style="color:var(--coral)">84</span>
+          <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#6C63E8"/><circle cx="50" cy="37" r="18" fill="#FBFAFF"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#FBFAFF"/></svg></span>
+            <span><span class="n">Dev Okonjo</span><br><span class="m">YouTube · 480K · DIY electronics</span></span></span>
+          <span class="hm"><span class="track" style="height:11px"><i style="width:79%;background:var(--coral)"></i></span>
+            <span class="track" style="height:11px;margin-top:5px"><i style="width:82%;background:var(--peri-2)"></i></span></span>
+          <span class="hs"><span class="pill">Course + kit</span></span>
+          <span class="acts hm"><button class="btn btn--sm">Promote</button><button class="btn btn--ghost btn--sm">Watch</button></span></div>
+
+        <div class="drow"><span class="rk">03</span><span class="sc" style="color:var(--lemon)">78</span>
+          <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#C8E4F2"/><circle cx="50" cy="39" r="20" fill="#2E7898"/><path d="M10 100c0-22 18-33 40-33s40 11 40 33z" fill="#2E7898"/></svg></span>
+            <span><span class="n">Sena Ruiz</span><br><span class="m">TikTok · 1.2M · food</span></span></span>
+          <span class="hm"><span class="track" style="height:11px"><i style="width:91%;background:var(--coral)"></i></span>
+            <span class="track" style="height:11px;margin-top:5px"><i style="width:51%;background:var(--peri-2)"></i></span></span>
+          <span class="hs"><span class="pill">CPG line</span></span>
+          <span class="acts hm"><button class="btn btn--sm">Promote</button><button class="btn btn--ghost btn--sm">Watch</button></span></div>
+
+        <div class="drow"><span class="rk">04</span><span class="sc" style="color:var(--lemon)">72</span>
+          <span class="who"><span class="avatar"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#EFEFE7"/><circle cx="50" cy="37" r="18" fill="#5A6053"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#5A6053"/></svg></span>
+            <span><span class="n">Theo Brandt</span><br><span class="m">Podcast · 96K · markets</span></span></span>
+          <span class="hm"><span class="track" style="height:11px"><i style="width:66%;background:var(--coral)"></i></span>
+            <span class="track" style="height:11px;margin-top:5px"><i style="width:69%;background:var(--peri-2)"></i></span></span>
+          <span class="hs"><span class="pill">Paid research</span></span>
+          <span class="acts hm"><button class="btn btn--sm">Promote</button><button class="btn btn--ghost btn--sm">Watch</button></span></div>
+
+        <div class="drow" style="opacity:.55"><span class="rk">—</span><span class="sc" style="color:var(--text-3)">68</span>
+          <span class="who"><span class="avatar" style="opacity:.6"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#2C3129"/><circle cx="50" cy="37" r="18" fill="#767C70"/><path d="M12 100c0-20 17-31 38-31s38 11 38 31z" fill="#767C70"/></svg></span>
+            <span><span class="n">Iris Nakamura</span><br><span class="m">Medium · 61K · ML research</span></span></span>
+          <span class="hm"><span class="pill pill--fail">Format fit — gate fail</span></span>
+          <span class="hs">—</span>
+          <span class="acts hm"><button class="btn btn--sm" disabled>Gate failed</button></span></div>
+      </div>
+
+      <div class="grid g2">
+        <div class="empty">
+          <div class="gr gr-cool" style="height:88px;max-width:200px;margin:0 auto var(--s5);border-radius:var(--r-lg)"></div>
+          <h4>Worked to zero</h4>
+          <p class="note" style="max-width:44ch;margin:0 auto var(--s5)">Every candidate in today's
+            drop has a verdict. Next scan lands 04:12 tomorrow; 14 on the watchlist are still
+            being re-scored.</p>
+          <button class="btn btn--ghost">Open watchlist</button></div>
+        <div class="p"><span class="lab">Loading</span>
+          <div style="display:flex;gap:var(--s4);align-items:center;margin:var(--s4) 0 var(--s3)">
+            <div class="sk" style="width:36px;height:36px;flex:0 0 36px;border-radius:50%"></div>
+            <div style="flex:1"><div class="sk" style="width:54%"></div><div class="sk" style="width:32%;margin-top:8px;height:11px"></div></div></div>
+          <div style="display:flex;gap:var(--s4);align-items:center">
+            <div class="sk" style="width:36px;height:36px;flex:0 0 36px;border-radius:50%"></div>
+            <div style="flex:1"><div class="sk" style="width:70%"></div><div class="sk" style="width:26%;margin-top:8px;height:11px"></div></div></div>
+          <p class="note" style="margin-top:var(--s4);font-size:12.5px">Skeletons keep the row's
+            exact geometry and pulse opacity. Hatching is reserved for known-but-projected values,
+            so it never stands in for unknown ones.</p></div>
+      </div>
+    </section>
+
+    <!-- ══════ 09 TOKENS ══════ -->
+    <section class="sec" id="tokens">
+      <div class="sec-head"><h2 class="sec-title">Tokens</h2>
+        <p class="sec-note">Dark slab on sage is the default, as the reference has it. Light
+          flips to a bone slab on a deeper sage, keeping all five panel fields.</p></div>
+<pre class="tok">:root{
+  <span class="c">/* panel fields — a panel takes one entirely; the hue IS the label */</span>
+  --coral:<span class="v">#F0655A</span>;  --coral-2:<span class="v">#F5877D</span>;   <span class="c">/* score, ranking, refusal  */</span>
+  --peri:<span class="v">#6C63E8</span>;   --peri-2:<span class="v">#8A83EE</span>;    <span class="c">/* coverage, cadence, machine */</span>
+  --sky:<span class="v">#C8E4F2</span>;                        <span class="c">/* context: platform, audience */</span>
+  --cream:<span class="v">#EFEFE7</span>;                      <span class="c">/* timing + all light controls */</span>
+  --lemon:<span class="v">#F5C842</span>;                      <span class="c">/* alert tiles + inline chips ONLY */</span>
+
+  <span class="c">/* shell — the sage page is visible on all four sides, always */</span>
+  --page:<span class="v">#C3D3C3</span>;  --slab:<span class="v">#1C201D</span>;  --panel:<span class="v">#22261F</span>;
+  --panel-2:<span class="v">#2C3129</span>;  --rail:<span class="v">#141814</span>;
+  --line:<span class="v">rgba(255,255,255,.10)</span>;  --line-hi:<span class="v">rgba(255,255,255,.20)</span>;
+  --text:<span class="v">#F2F4EF</span>;  --text-2:<span class="v">#A6AC9F</span>;  --text-3:<span class="v">#767C70</span>;
+  --on-field:<span class="v">#16180F</span>;  --on-peri:<span class="v">#FBFAFF</span>;
+  --pass:<span class="v">#5FCB8E</span>;  --hold:<span class="v">#F5C842</span>;  --fail:<span class="v">#F0655A</span>;
+
+  --r-sm:<span class="v">10px</span>; --r-md:<span class="v">18px</span>; --r-lg:<span class="v">24px</span>;
+  --r-slab:<span class="v">30px</span>; --r-pill:<span class="v">999px</span>;   <span class="c">/* rail buttons: 13px rounded-square */</span>
+  --s1:<span class="v">4px</span>; --s2:<span class="v">8px</span>; --s3:<span class="v">12px</span>; --s4:<span class="v">16px</span>; --s5:<span class="v">24px</span>;
+  --s6:<span class="v">34px</span>; --s7:<span class="v">50px</span>; --s8:<span class="v">72px</span>; --s9:<span class="v">104px</span>;
+
+  <span class="c">/* only the slab casts a large shadow; panels inside sit flat */</span>
+  --el-1:<span class="v">0 1px 2px rgba(0,0,0,.4), 0 3px 8px -3px rgba(0,0,0,.4)</span>;
+  --el-2:<span class="v">0 2px 5px rgba(0,0,0,.4), 0 14px 30px -12px rgba(0,0,0,.6)</span>;
+  --el-3:<span class="v">0 4px 10px rgba(0,0,0,.45), 0 32px 60px -22px rgba(0,0,0,.8)</span>;
+  --el-slab:<span class="v">0 8px 20px -8px rgba(28,32,29,.35), 0 40px 80px -30px rgba(28,32,29,.5)</span>;
+
+  --disp:<span class="v">"Archivo"</span>;   <span class="c">/* 800, wdth 88–92, uppercase, −0.02..−0.045em */</span>
+  --ui:<span class="v">"Figtree"</span>;     <span class="c">/* 400 / 700 / 800 */</span>
+
+  <span class="c">/* HATCH — the signature. solid = happened, hatched = projected. */</span>
+  --hatch:<span class="v">repeating-linear-gradient(48deg, &lt;ink&gt; 0 2px, transparent 2px 7px)</span>;  <span class="c">/* ink at 34–42% */</span>
+  --gr-heat:<span class="v">linear-gradient(126deg,var(--coral),var(--lemon))</span>;
+  --gr-cool:<span class="v">linear-gradient(126deg,var(--peri),var(--sky))</span>;
+
+  --lift:<span class="v">translateY(-2px)</span>;  --ease:<span class="v">cubic-bezier(.2,.7,.3,1)</span>;  --dur:<span class="v">150ms</span>;
+}
+:root[data-theme="light"]{  <span class="c">/* bone slab on a deeper sage */</span>
+  --page:<span class="v">#8FA88F</span>;  --slab:<span class="v">#F4F5F0</span>;  --panel:<span class="v">#FFFFFF</span>;
+  --panel-2:<span class="v">#EDEFE8</span>;  --rail:<span class="v">#E4E7DE</span>;
+  --line:<span class="v">rgba(22,24,15,.10)</span>;  --line-hi:<span class="v">rgba(22,24,15,.20)</span>;
+  --text:<span class="v">#16180F</span>;  --text-2:<span class="v">#5A6053</span>;  --text-3:<span class="v">#878D7F</span>;
+  --coral:<span class="v">#E4544A</span>;  --peri:<span class="v">#5D53DE</span>;  --sky:<span class="v">#B5DAEC</span>;
+}</pre>
+    </section>
+
+    <footer>
+      <p><b>Toolkit 02 — MOSAIC.</b> Built from the Daily Grind reference. Best when several
+        different questions have to live on one screen at once and the Scout needs to find the
+        right one without reading labels. Weakest when the product is mostly one long list —
+        five saturated fields need five real jobs, or the colour stops meaning anything.</p>
+      <p style="margin-bottom:0">All candidates, scores and revenue figures are synthetic
+        demonstration data. Portraits are authored placeholders.</p>
+    </footer>
+  </div>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement, btns=document.querySelectorAll('.tsw button');
+  function set(t){root.setAttribute('data-theme',t);
+    btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.set===t));});
+    try{localStorage.setItem('wt-02',t);}catch(e){}}
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set);});});
+  document.querySelectorAll('.seg').forEach(function(g){var bs=g.querySelectorAll('button');
+    bs.forEach(function(b){b.addEventListener('click',function(){
+      bs.forEach(function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');});});});
+  document.querySelectorAll('.rbtn').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.rbtn').forEach(function(x){x.removeAttribute('aria-current');});
+    b.setAttribute('aria-current','true');});});
+  var saved=null; try{saved=localStorage.getItem('wt-02');}catch(e){}
+  if(saved){set(saved);}
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme:light)').matches){set('light');}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1596 @@
+{
+  "creatorId": "theverge",
+  "asOf": null,
+  "observedThrough": "2026-08-14T13:06:36.463Z",
+  "observationCount": 237,
+  "brief": "Writers and media people with a large audience and no business around it — newsletters, tech and culture commentary",
+  "source": "named",
+  "sourceWhy": "a person typed this handle in",
+  "escalated": true,
+  "escalatedWhy": "store — worth a closer look",
+  "surfaces": [
+    {
+      "id": "tiktok_profile",
+      "platform": "TikTok profile",
+      "read": true,
+      "followers": 5,
+      "avatar": {
+        "url": "https://p16-common-sign.tiktokcdn-us.com/musically-maliva-obj/1594805258216454~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=429df237&x-expires=1786885200&x-signature=f8itnQT%2Br%2BAizjSgJ3OV2CLkl7E%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+        "expires": "2026-08-16T13:00:00.000Z",
+        "host": "tiktokcdn"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.tiktok.com/@theverge",
+      "why": "HTTP 200 and the page looks like one"
+    },
+    {
+      "id": "youtube_profile",
+      "platform": "YouTube channel",
+      "read": true,
+      "followers": 3520000,
+      "avatar": {
+        "url": "https://yt3.googleusercontent.com/ZIj_dq7beCkAkhufNqCid_SjWW4mkv4tqIDtv7_AAKzWdhBWI-rpsRXYXB9X3mB0s0zNzNtYdQ=s900-c0x00ffffff-no-rj",
+        "expires": null,
+        "host": "googleusercontent"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://www.youtube.com/@theverge",
+      "why": "The Verge — the YouTube Data API resolved @theverge"
+    },
+    {
+      "id": "instagram_profile",
+      "platform": "Instagram profile",
+      "read": false,
+      "followers": null,
+      "avatar": null,
+      "avatarStale": false,
+      "status": 0,
+      "url": "https://www.instagram.com/theverge/",
+      "why": "robots.txt asks us not to look here"
+    },
+    {
+      "id": "bluesky_profile",
+      "platform": "Bluesky profile",
+      "read": true,
+      "followers": 354420,
+      "avatar": {
+        "url": "https://cdn.bsky.app/img/avatar/plain/did:plc:7exlcsle4mjfhu3wnhcgizz6/bafkreiavnay6zpox43vgy6i2wbdwvrg2ydwp4haexq5k63ayuh5pzvg74i",
+        "expires": null,
+        "host": "bsky.app"
+      },
+      "avatarStale": false,
+      "status": 200,
+      "url": "https://bsky.app/profile/theverge.com",
+      "why": "theverge.com — theverge.com carries their name and they publish it, and it is their handle, and the AppView resolved it to did:plc:7exlcsle4mjfhu3wnhcgizz6"
+    }
+  ],
+  "inventory": [
+    {
+      "item": "youtube_channel",
+      "label": "YouTube channel",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by their own page",
+      "why": "found it — youtube.com/@theverge",
+      "evidence": "https://www.youtube.com/@theverge",
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "yt_handle",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/@theverge",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:33:23.498Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/c/theverge",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:33:23.499Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "inconclusive",
+          "url": "https://www.youtube.com/user/theverge",
+          "status": 0,
+          "why": "TypeError: fetch failed",
+          "advisory": false,
+          "at": "2026-08-12T15:33:23.499Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theverge",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:39.975Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/theverge",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:39.975Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/theverge",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:39.975Z"
+        },
+        {
+          "place": "yt_handle",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theverge",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.441Z"
+        },
+        {
+          "place": "yt_c",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/c/theverge",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.441Z"
+        },
+        {
+          "place": "yt_user",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/user/theverge",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.441Z"
+        },
+        {
+          "place": "proposed_3",
+          "outcome": "hit",
+          "url": "https://www.youtube.com/@theverge",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.441Z"
+        }
+      ]
+    },
+    {
+      "item": "newsletter",
+      "label": "Newsletter",
+      "half": "built",
+      "tier": 1,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": false,
+      "corroboratedWhy": "nothing ties this to them beyond the name matching — it stays unconfirmed and it costs confidence",
+      "why": "something at theverge.beehiiv.com — not confirmed as theirs",
+      "evidence": "https://theverge.beehiiv.com/",
+      "placesLooked": 13,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://prettyinteresting.substack.com/feed",
+          "status": 200,
+          "why": "3 posts read from Pretty Interesting — the feed is published by \"Pretty Interesting\", which is not them",
+          "advisory": false,
+          "at": "2026-08-12T15:33:23.800Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://prettyinteresting.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one — but the feed is published by \"Pretty Interesting\", which is not them",
+          "advisory": false,
+          "at": "2026-08-12T15:33:23.801Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/theverge?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/theverge",
+          "advisory": false,
+          "at": "2026-08-12T15:33:23.801Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theverge.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:33:23.801Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theverge",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:23.801Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theverge.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:23.801Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://prettyinteresting.substack.com/feed",
+          "status": 200,
+          "why": "3 posts read from Pretty Interesting — the feed is published by \"Pretty Interesting\", which is not them",
+          "advisory": false,
+          "at": "2026-08-14T12:55:40.368Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://prettyinteresting.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one — but the feed is published by \"Pretty Interesting\", which is not them",
+          "advisory": false,
+          "at": "2026-08-14T12:55:40.370Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/theverge?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/theverge",
+          "advisory": false,
+          "at": "2026-08-14T12:55:40.370Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theverge.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:40.370Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theverge",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:40.370Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theverge.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:40.370Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://prettyinteresting.substack.com/feed",
+          "status": 200,
+          "why": "3 posts read from Pretty Interesting — the feed is published by \"Pretty Interesting\", which is not them",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.491Z"
+        },
+        {
+          "place": "substack_sub",
+          "outcome": "miss",
+          "url": "https://prettyinteresting.substack.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one — but the feed is published by \"Pretty Interesting\", which is not them",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.494Z"
+        },
+        {
+          "place": "substack_profile",
+          "outcome": "miss",
+          "url": "https://substack.com/search/theverge?searching=profile",
+          "status": 200,
+          "why": "redirected to substack.com/search/theverge",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.494Z"
+        },
+        {
+          "place": "beehiiv",
+          "outcome": "hit",
+          "url": "https://theverge.beehiiv.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.494Z"
+        },
+        {
+          "place": "buttondown",
+          "outcome": "miss",
+          "url": "https://buttondown.com/theverge",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.494Z"
+        },
+        {
+          "place": "ghost_sub",
+          "outcome": "miss",
+          "url": "https://theverge.ghost.io/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.494Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "hit",
+          "url": "https://www.theverge.com/newsletters",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.494Z"
+        },
+        {
+          "place": "proposed_7",
+          "outcome": "miss",
+          "url": "https://www.theverge.com/rss",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.494Z"
+        }
+      ]
+    },
+    {
+      "item": "store",
+      "label": "Store",
+      "half": "built",
+      "tier": 1,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 4 places · 2 wouldn't answer",
+      "evidence": null,
+      "placesLooked": 10,
+      "checks": [
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theverge.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:23.802Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theverge",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:23.802Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theverge",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:33:23.802Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-12T15:33:23.802Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theverge",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-12T15:33:23.802Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theverge.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:40.370Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theverge",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:40.370Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theverge",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:55:40.370Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T12:55:40.370Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theverge",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T12:55:40.370Z"
+        },
+        {
+          "place": "shopify",
+          "outcome": "miss",
+          "url": "https://theverge.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.494Z"
+        },
+        {
+          "place": "gumroad",
+          "outcome": "miss",
+          "url": "https://gumroad.com/theverge",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.494Z"
+        },
+        {
+          "place": "kofi",
+          "outcome": "inconclusive",
+          "url": "https://ko-fi.com/theverge",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:06:15.494Z"
+        },
+        {
+          "place": "stanstore",
+          "outcome": "miss",
+          "url": "https://www.stan.store/",
+          "status": 200,
+          "why": "redirected to stan.store",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.494Z"
+        },
+        {
+          "place": "etsy",
+          "outcome": "inconclusive",
+          "url": "https://www.etsy.com/shop/theverge",
+          "status": 403,
+          "why": "HTTP 403 — blocked or unavailable",
+          "advisory": true,
+          "at": "2026-08-14T13:06:15.495Z"
+        },
+        {
+          "place": "proposed_6",
+          "outcome": "miss",
+          "url": "https://the-verge.myshopify.com/",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.495Z"
+        }
+      ]
+    },
+    {
+      "item": "membership",
+      "label": "Membership",
+      "half": "built",
+      "tier": 2,
+      "state": "verified_absent",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "not there · we looked in 3 places",
+      "evidence": null,
+      "placesLooked": 7,
+      "checks": [
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/theverge",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:23.802Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theverge",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-12T15:33:23.802Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/theverge",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:40.370Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theverge",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T12:55:40.370Z"
+        },
+        {
+          "place": "patreon",
+          "outcome": "miss",
+          "url": "https://www.patreon.com/theverge",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.495Z"
+        },
+        {
+          "place": "buymeacoffee",
+          "outcome": "miss",
+          "url": "https://buymeacoffee.com/theverge",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.495Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "miss",
+          "url": "https://www.theverge.com/membership",
+          "status": 404,
+          "why": "HTTP 404",
+          "advisory": false,
+          "at": "2026-08-14T13:06:15.495Z"
+        }
+      ]
+    },
+    {
+      "item": "podcast",
+      "label": "Podcast",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by the feed it publishes — the publication title reads \"The Verge\"",
+      "why": "found it — theverge.com/podcasts",
+      "evidence": "https://www.theverge.com/podcasts",
+      "placesLooked": 3,
+      "checks": [
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=user59847734405&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-12T15:33:24.174Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=user59847734405&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-14T12:55:40.564Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.theverge.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:16.650Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.theverge.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:16.650Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.theverge.com/rss/index.xml",
+          "status": 200,
+          "why": "10 posts read from The Verge — the publication title reads \"The Verge\"",
+          "advisory": false,
+          "at": "2026-08-14T13:06:16.651Z"
+        },
+        {
+          "place": "itunes_search",
+          "outcome": "miss",
+          "url": "https://itunes.apple.com/search?term=user59847734405&entity=podcast&limit=5",
+          "status": 200,
+          "why": "nothing under that name in the Apple Podcasts directory",
+          "advisory": false,
+          "at": "2026-08-14T13:06:16.652Z"
+        },
+        {
+          "place": "proposed_1",
+          "outcome": "hit",
+          "url": "https://www.theverge.com/podcasts",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:16.652Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://theverge.podbean.com/freeze",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:16.652Z"
+        }
+      ]
+    },
+    {
+      "item": "website",
+      "label": "Own website",
+      "half": "built",
+      "tier": 2,
+      "state": "present",
+      "presenceOnly": false,
+      "requiresApi": false,
+      "corroborated": true,
+      "corroboratedWhy": "confirmed as theirs by the feed it publishes — the publication title reads \"The Verge\"",
+      "why": "found it — theverge.com",
+      "evidence": "https://www.theverge.com/",
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.theverge.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:33:25.102Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.theverge.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-12T15:33:25.103Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.theverge.com/rss/index.xml",
+          "status": 200,
+          "why": "10 posts read from The Verge — the publication title reads \"The Verge\"",
+          "advisory": false,
+          "at": "2026-08-12T15:33:25.104Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.theverge.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-12T15:33:25.108Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "inconclusive",
+          "url": "https://theverge.co",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-12T15:33:25.108Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.theverge.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.422Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.theverge.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.422Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.theverge.com/rss/index.xml",
+          "status": 200,
+          "why": "10 posts read from The Verge — the publication title reads \"The Verge\"",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.422Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.theverge.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.424Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "inconclusive",
+          "url": "https://theverge.co",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.424Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.theverge.com/feed",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:17.847Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "unread",
+          "url": "https://www.theverge.com/rss",
+          "status": 404,
+          "why": "no feed at this address",
+          "advisory": false,
+          "at": "2026-08-14T13:06:17.847Z"
+        },
+        {
+          "place": "feed",
+          "outcome": "read",
+          "url": "https://www.theverge.com/rss/index.xml",
+          "status": 200,
+          "why": "10 posts read from The Verge — the publication title reads \"The Verge\"",
+          "advisory": false,
+          "at": "2026-08-14T13:06:17.848Z"
+        },
+        {
+          "place": "dotcom",
+          "outcome": "hit",
+          "url": "https://www.theverge.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:17.852Z"
+        },
+        {
+          "place": "dotco",
+          "outcome": "inconclusive",
+          "url": "https://theverge.co",
+          "status": 0,
+          "why": "robots.txt asks us not to look here",
+          "advisory": false,
+          "at": "2026-08-14T13:06:17.852Z"
+        },
+        {
+          "place": "proposed_2",
+          "outcome": "hit",
+          "url": "https://www.theverge.com/",
+          "status": 200,
+          "why": "HTTP 200 and the page looks like one",
+          "advisory": false,
+          "at": "2026-08-14T13:06:17.852Z"
+        }
+      ]
+    },
+    {
+      "item": "representation",
+      "label": "Representation / management",
+      "half": "built",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "their bio does not mention it, which is not the same as nobody having signed them",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-12T15:33:25.109Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.424Z"
+        },
+        {
+          "place": "bio_markers",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "their bio does not mention it, which is not the same as nobody having signed them",
+          "advisory": false,
+          "at": "2026-08-14T13:06:17.853Z"
+        }
+      ]
+    },
+    {
+      "item": "sponsorships",
+      "label": "Sponsored posts",
+      "half": "switched_on",
+      "tier": 2,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 1 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-12T15:33:25.109Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.424Z"
+        },
+        {
+          "place": "caption_disclosure",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+          "advisory": false,
+          "at": "2026-08-14T13:06:17.853Z"
+        }
+      ]
+    },
+    {
+      "item": "affiliate_links",
+      "label": "Affiliate links",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": true,
+      "requiresApi": false,
+      "corroboratedWhy": null,
+      "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": [
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-12T15:33:25.110Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T12:55:41.424Z"
+        },
+        {
+          "place": "link_affiliate",
+          "outcome": "inconclusive",
+          "url": null,
+          "status": null,
+          "why": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+          "advisory": false,
+          "at": "2026-08-14T13:06:17.853Z"
+        }
+      ]
+    },
+    {
+      "item": "platform_subscriptions",
+      "label": "Platform subscriptions",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    },
+    {
+      "item": "shopping_tags",
+      "label": "Shopping tags",
+      "half": "switched_on",
+      "tier": 3,
+      "state": "not_found",
+      "presenceOnly": false,
+      "requiresApi": true,
+      "corroboratedWhy": null,
+      "why": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+      "evidence": null,
+      "placesLooked": 0,
+      "checks": []
+    }
+  ],
+  "deadLinks": [],
+  "cadence": {
+    "computable": false,
+    "why": "they post often enough that 10 posts only reach back 1 days — not far enough behind the last 90 to compare against"
+  },
+  "samples": [
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "The CMF Clip Pro are a very comfortable option for those that hate things in their ears. www.theverge.com/tech",
+      "url": "https://bsky.app/profile/theverge.com/post/3mt24mpj46m2g",
+      "at": "2026-08-14T12:06:07.467465Z",
+      "thumbnail": null,
+      "excerpt": "The CMF Clip Pro are a very comfortable option for those that hate things in their ears. www.theverge.com/tech/979928/...",
+      "metric": 11,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:08.894Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "The Verge",
+      "kind": "writing",
+      "title": "CMF hit the balance between cheap and good clip earbuds",
+      "url": "https://www.theverge.com/tech/979928/cmf-clip-pro-review",
+      "at": "2026-08-14T12:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "The Clip Pro are the first clip-style earbuds from CMF, Nothing’s budget sub-brand. \n \n Clip earbuds are an exercise in compromise. It's an inherent aspect of their design - and physics. They can be more comfortable for people that don't like something jammed in their ear, but sound response suffers",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:06:17.854Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Intel and MSI’s handheld is a preview of a potato-free portable future. www.theverge.com/games/977646...",
+      "url": "https://bsky.app/profile/theverge.com/post/3mszzrhpsj624",
+      "at": "2026-08-14T11:15:05.279103Z",
+      "thumbnail": null,
+      "excerpt": "Intel and MSI’s handheld is a preview of a potato-free portable future. www.theverge.com/games/977646...",
+      "metric": 14,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:08.894Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "The latest addition to Hoto’s modular Snapbloq toolkit line can also be plugged in when you need more power. w",
+      "url": "https://bsky.app/profile/theverge.com/post/3mszz7k7yvs2l",
+      "at": "2026-08-14T11:05:04.661805Z",
+      "thumbnail": null,
+      "excerpt": "The latest addition to Hoto’s modular Snapbloq toolkit line can also be plugged in when you need more power. www.theverge.com/tech/979576/...",
+      "metric": 13,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:08.894Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "The Verge",
+      "kind": "writing",
+      "title": "The MSI Claw EX is the most important handheld since Steam Deck — I still wouldn’t buy one",
+      "url": "https://www.theverge.com/games/977646/msi-claw-8-ex-review-intel-panther-lake-handheld",
+      "at": "2026-08-14T11:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "The Claw EX. I rather like the purple. 3D-printed stand not included. \n \n As The Verge 's resident handheld reviewer , I have nearly every portable gaming PC on a shelf in my house. The MSI Claw 8 EX AI Plus is now the first one I reach for. Thanks to a next-gen Intel chip and improved MSI design, t",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:06:17.854Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "The Verge",
+      "kind": "writing",
+      "title": "Hoto’s new cordless soldering iron heats up in three seconds",
+      "url": "https://www.theverge.com/tech/979576/hoto-i-a06-cordless-soldering-iron-snapbloq-rechargeable",
+      "at": "2026-08-14T11:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Hoto is introducing its first soldering iron through its modular Snapbloq collection that lets you assemble your own custom toolbox by stacking magnetic cases and tools together. The new I-A06 Cordless Soldering Iron can heat to just over 200 degrees Celsius in about three seconds and offers an adju",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-14T13:06:17.854Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "The rare US-China partnership comes as Apple prepares to roll out its on-device generative AI service in China",
+      "url": "https://bsky.app/profile/theverge.com/post/3msztv2siev27",
+      "at": "2026-08-14T09:29:44.146118Z",
+      "thumbnail": null,
+      "excerpt": "The rare US-China partnership comes as Apple prepares to roll out its on-device generative AI service in China. www.theverge.com/ai-artificia...",
+      "metric": 18,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:08.894Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "Join the Cards Against Humanity campaign today at SadLittleBitchWithNoFriends.com. www.theverge.com/tech/98014",
+      "url": "https://bsky.app/profile/theverge.com/post/3mszrfjvmmi24",
+      "at": "2026-08-14T08:44:56.530106Z",
+      "thumbnail": null,
+      "excerpt": "Join the Cards Against Humanity campaign today at SadLittleBitchWithNoFriends.com. www.theverge.com/tech/980142/...",
+      "metric": 64,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-14T13:06:08.895Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "iPhone 18 to skip fall launch #Vergecast",
+      "url": "https://www.youtube.com/watch?v=-FMgzjc-WPU",
+      "at": "2026-08-13T21:40:59Z",
+      "thumbnail": "https://i.ytimg.com/vi/-FMgzjc-WPU/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 8164,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:08.894Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Should you let a robot mow your lawn? | The Vergecast",
+      "url": "https://www.youtube.com/watch?v=0tCwnvOJi70",
+      "at": "2026-08-13T20:16:30Z",
+      "thumbnail": "https://i.ytimg.com/vi/0tCwnvOJi70/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 3671,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:08.894Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "The original “AI” con #Vergecast",
+      "url": "https://www.youtube.com/watch?v=bGxhpzpKycI",
+      "at": "2026-08-13T15:00:33Z",
+      "thumbnail": "https://i.ytimg.com/vi/bGxhpzpKycI/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 2046,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:08.894Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Google Pixel 11 event in 8 minutes",
+      "url": "https://www.youtube.com/watch?v=VC_Ft0stjCM",
+      "at": "2026-08-12T23:48:44Z",
+      "thumbnail": "https://i.ytimg.com/vi/VC_Ft0stjCM/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 90544,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:08.894Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Pixel 11 phones will recognize ASL",
+      "url": "https://www.youtube.com/watch?v=G9kPt-zNgdk",
+      "at": "2026-08-12T23:27:53Z",
+      "thumbnail": "https://i.ytimg.com/vi/G9kPt-zNgdk/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 5387,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-14T13:06:08.894Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "The new phones are getting a bundle of features designed to help burgeoning influencers film and edit content.",
+      "url": "https://bsky.app/profile/theverge.com/post/3msvdshav3l27",
+      "at": "2026-08-12T14:31:17.880942Z",
+      "thumbnail": null,
+      "excerpt": "The new phones are getting a bundle of features designed to help burgeoning influencers film and edit content. www.theverge.com/tech/977888/...",
+      "metric": 7,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:33:12.603Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "The Verge",
+      "kind": "writing",
+      "title": "Google aims for influencers with the Pixel 11 Creator Suite",
+      "url": "https://www.theverge.com/tech/977888/pixel-creator-suite-influencer-camera-features",
+      "at": "2026-08-12T14:30:00.000Z",
+      "thumbnail": null,
+      "excerpt": "The settings page for the Pixel 11 series’ “Creator Suite.” \n \n Google knows creators are a big audience. The occupation is growing fast, and landing some influential names could be a major turning point for the Pixel's market share. This year, Google is building features directly into its new Pixel",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-12T15:33:25.110Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "This year’s Made by Google event featured a new lineup of Pixel phones and updates to the Pixel Watch and Buds",
+      "url": "https://bsky.app/profile/theverge.com/post/3msvd4f2nn72z",
+      "at": "2026-08-12T14:18:57.225656Z",
+      "thumbnail": null,
+      "excerpt": "This year’s Made by Google event featured a new lineup of Pixel phones and updates to the Pixel Watch and Buds. www.theverge.com/tech/978712/...",
+      "metric": 5,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:33:12.603Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "No one would blame you for looking at this watch and thinking absolutely nothing’s changed. That’s because the",
+      "url": "https://bsky.app/profile/theverge.com/post/3msvd47cn4k2y",
+      "at": "2026-08-12T14:18:52.754Z",
+      "thumbnail": null,
+      "excerpt": "No one would blame you for looking at this watch and thinking absolutely nothing’s changed. That’s because the big updates this year are all software-based. Read more from @vicmsong.bsky.social:",
+      "metric": 5,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:33:12.604Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "The Verge",
+      "kind": "writing",
+      "title": "The 7 biggest announcements of Google’s Pixel 11 launch",
+      "url": "https://www.theverge.com/tech/978712/google-pixel-11-event-everything-announced",
+      "at": "2026-08-12T14:15:00.000Z",
+      "thumbnail": null,
+      "excerpt": "Google is hosting a Pixel launch event on Wednesday night where it will show off its latest lineup of devices. But you don't have to wait until then for all the news: We were able to check out the devices ahead of the event and take a look at everything Google's unveiling, including the latest Pixel",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-12T15:33:25.110Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "More than two years after launching its own device-tracking network, Google has finally followed up with its o",
+      "url": "https://bsky.app/profile/theverge.com/post/3msvcoma3n22y",
+      "at": "2026-08-12T14:11:16.541Z",
+      "thumbnail": null,
+      "excerpt": "More than two years after launching its own device-tracking network, Google has finally followed up with its own $29 tracker, which combines UWB with Bluetooth channel sounding.",
+      "metric": 10,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:33:12.604Z",
+      "status": null
+    },
+    {
+      "platform": "Bluesky",
+      "publication": null,
+      "kind": "post",
+      "title": "A lot of consumers are carrying around old iPhones and cheap point-and-shoots from the early aughts to get a s",
+      "url": "https://bsky.app/profile/theverge.com/post/3msvcl6rgoc2y",
+      "at": "2026-08-12T14:09:21.766Z",
+      "thumbnail": null,
+      "excerpt": "A lot of consumers are carrying around old iPhones and cheap point-and-shoots from the early aughts to get a simpler, less processed, and (to their eye) better look for their photos. The Pixel 11’s new Camera Looks feature is Google’s response to this growing trend. Read more from @davidimel.com:",
+      "metric": 11,
+      "metricUnit": "likes",
+      "metricWhy": null,
+      "foundIn": "the Bluesky AppView",
+      "seenAt": "2026-08-12T15:33:12.604Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "First look at Pixel Buds Pro 2",
+      "url": "https://www.youtube.com/watch?v=c5-ou7cPiGE",
+      "at": "2026-08-12T14:00:29Z",
+      "thumbnail": "https://i.ytimg.com/vi/c5-ou7cPiGE/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 587,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T15:33:12.601Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Google Pixel Watch 5 hands-on",
+      "url": "https://www.youtube.com/watch?v=9G54u5dXx9g",
+      "at": "2026-08-12T14:00:25Z",
+      "thumbnail": "https://i.ytimg.com/vi/9G54u5dXx9g/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1238,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T15:33:12.602Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Google Pixel 11 Pro Fold hands-on",
+      "url": "https://www.youtube.com/watch?v=JJYpPW2_Sd4",
+      "at": "2026-08-12T14:00:12Z",
+      "thumbnail": "https://i.ytimg.com/vi/JJYpPW2_Sd4/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 2935,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T15:33:12.602Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "First look at Google's Pixel Tag",
+      "url": "https://www.youtube.com/watch?v=UKktFfntJZk",
+      "at": "2026-08-12T14:00:10Z",
+      "thumbnail": "https://i.ytimg.com/vi/UKktFfntJZk/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1272,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T15:33:12.602Z",
+      "status": null
+    },
+    {
+      "platform": "YouTube",
+      "publication": null,
+      "kind": "video",
+      "title": "Pixel 11 and Pixel 11 Pro hands-on",
+      "url": "https://www.youtube.com/watch?v=ON-ZlnwMPH8",
+      "at": "2026-08-12T14:00:08Z",
+      "thumbnail": "https://i.ytimg.com/vi/ON-ZlnwMPH8/hqdefault.jpg",
+      "excerpt": null,
+      "metric": 1979,
+      "metricUnit": "views",
+      "metricWhy": null,
+      "foundIn": "the YouTube Data API",
+      "seenAt": "2026-08-12T15:33:12.603Z",
+      "status": null
+    },
+    {
+      "platform": "Their site",
+      "publication": "The Verge",
+      "kind": "writing",
+      "title": "Google’s Pixel 11 series pairs a little new hardware with a lot of new software",
+      "url": "https://www.theverge.com/tech/978013/google-pixel-11-series-hands-on-hardware-software",
+      "at": "2026-08-12T14:00:00.000Z",
+      "thumbnail": null,
+      "excerpt": "When I first picked up the Pixel 11 Pro this week, it was clear to me that this was one of those refinement years - at least when it comes to hardware. Aesthetically, the phones are as beautiful as ever, with Google's signature camera bar and bright, colorful backing glass. There are small updates, ",
+      "metric": null,
+      "metricUnit": null,
+      "metricWhy": "a feed carries no read or listen count",
+      "foundIn": "their site",
+      "seenAt": "2026-08-12T15:33:25.110Z",
+      "status": null
+    }
+  ],
+  "headline": {
+    "sentence": "The Verge makes hands-on gadget videos for 3,520,000 YouTube subscribers and runs a newsletter, a podcast, and its own website, but sells nothing directly: no store and no membership.",
+    "restsOn": "3,520,000 on YouTube · YouTube channel · Newsletter · Podcast · Own website · Store · Membership · \"Google Pixel 11 Pro Fold hands-on\" · \"Pixel 11 and Pixel 11 Pro hands-on\""
+  },
+  "samplesSearched": {
+    "count": 6,
+    "why": "6 pieces of their own work"
+  },
+  "commentsRead": 135,
+  "audienceHistory": [
+    {
+      "audience": 3520000,
+      "at": "2026-08-12T15:33:12.599Z"
+    },
+    {
+      "audience": 3520000,
+      "at": "2026-08-14T12:55:38.240Z"
+    },
+    {
+      "audience": 3520000,
+      "at": "2026-08-14T13:06:08.894Z"
+    }
+  ],
+  "audience": 3520000,
+  "audienceWhy": "YouTube alone — nothing links the TikTok or Bluesky to it",
+  "audienceSeparate": [
+    {
+      "id": "tiktok_profile",
+      "followers": 5,
+      "url": "https://www.tiktok.com/@theverge",
+      "why": "nothing on either page links the TikTok to the YouTube, so it is not added in"
+    },
+    {
+      "id": "bluesky_profile",
+      "followers": 354420,
+      "url": "https://bsky.app/profile/theverge.com",
+      "why": "nothing on either page links the Bluesky to the YouTube, so it is not added in"
+    }
+  ],
+  "score": {
+    "total": 15,
+    "brief": "Writers and media people with a large audience and no business around it — newsletters, tech and culture commentary",
+    "demand": {
+      "points": 0.3,
+      "max": 25,
+      "signalCount": 4,
+      "signals": [
+        {
+          "points_at": "youtube_channel",
+          "quote": "I recently subscribed to your content. Could you possibly film a video analyzing the new SPX30K token from Elon?",
+          "at": "2026-08-14T13:06:25.443Z"
+        },
+        {
+          "points_at": "store",
+          "quote": "Good upgrade from my pixel 8, the 11proXL with the preorder discount and phone trade in only 430$ ! That is basically impossible to beat",
+          "at": "2026-08-14T13:06:25.443Z"
+        },
+        {
+          "points_at": "store",
+          "quote": "Now i'm kinda hooked for a Pixel 9 or 10.",
+          "at": "2026-08-14T13:06:25.444Z"
+        },
+        {
+          "points_at": "store",
+          "quote": "Awesome phone and I would like to get one",
+          "at": "2026-08-14T13:06:25.444Z"
+        }
+      ]
+    },
+    "missing": {
+      "points": 14.4,
+      "max": 35,
+      "lines": [
+        {
+          "item": "store",
+          "label": "Store",
+          "half": "built",
+          "base": 9,
+          "effective": 14.1,
+          "demandAligned": true,
+          "why": "not there · we looked in 4 places · 2 wouldn't answer"
+        },
+        {
+          "item": "membership",
+          "label": "Membership",
+          "half": "built",
+          "base": 3,
+          "effective": 3,
+          "demandAligned": false,
+          "why": "not there · we looked in 3 places"
+        }
+      ],
+      "share": 0.411,
+      "switchedOn": "we couldn't tell what they've switched on"
+    },
+    "opportunity": 14.7,
+    "pressure": {
+      "points": 0,
+      "max": 40,
+      "ceilingToday": 22,
+      "parts": [
+        {
+          "signal": "abandonment_markers",
+          "points": 0,
+          "line": "nothing abandoned that we can see",
+          "engine": "rule"
+        },
+        {
+          "signal": "self_reported_strain",
+          "points": 0,
+          "line": "we couldn't read their captions",
+          "engine": "llm"
+        },
+        {
+          "signal": "cadence_decay",
+          "points": 0,
+          "unavailable": true,
+          "line": "we could not read their posting rate — they post often enough that 10 posts only reach back 1 days — not far enough behind the last 90 to compare against",
+          "engine": "rule"
+        },
+        {
+          "signal": "unanswered_audience",
+          "points": 0,
+          "unavailable": true,
+          "line": "needs a second look — this is a change over time, and we have seen them once",
+          "engine": "rule"
+        }
+      ]
+    },
+    "fit": {
+      "verdict": "fail",
+      "because": "The Verge is a fully staffed media organization with an editorial director, producers, and its own paid subscription product — it's the opposite of a writer with a large audience and no business around it."
+    },
+    "trajectory": {
+      "verdict": "not_established",
+      "blocks": false,
+      "stated": "no trend yet — our two looks are 2 days apart, the trend needs 90",
+      "why": "our two looks are 2 days apart; the gate needs 90."
+    },
+    "confidence": {
+      "value": 0.833,
+      "resolved": 5,
+      "total": 6,
+      "cannotSee": 5,
+      "unconfirmed": 1
+    },
+    "threshold": 25,
+    "entersDrop": false,
+    "gates": {
+      "scoreOverThreshold": false,
+      "confidenceOverFloor": true,
+      "fit": "fail",
+      "trajectory": "not_established"
+    }
+  },
+  "checkRecord": {
+    "checks": 89,
+    "places": 28,
+    "from": "2026-08-12T15:33:03.976Z",
+    "to": "2026-08-14T13:06:36.463Z"
+  }
+}
