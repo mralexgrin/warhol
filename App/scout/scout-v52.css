@@ -3077,3 +3077,101 @@ kbd {
   .railcol .railfoot .rnav .tx, .railcol .whoami .who { display: none; }
   .railcol .whoami { margin: 0; padding: 0; border: 0; }
 }
+
+/* ================================================================ TRENDS v7
+   One picture per question. Tokens: not there --tc-a, built --tc-p, could not
+   tell = the hatch (never a third hue). Heatmaps: one violet ramp, five steps,
+   validated per theme (monotone lightness, light end >= 2:1 on the panel). */
+:root {
+  --tq-0: #B4A9DE; --tq-1: #978AD0; --tq-2: #7B6DBF; --tq-3: #6152AC; --tq-4: #463A90;
+  --tq-ink-lo: #1C1B23; --tq-ink-hi: #FFFFFF;
+}
+:root[data-theme="dark"] {
+  --tq-0: #564C8C; --tq-1: #6A5DAE; --tq-2: #8070CB; --tq-3: #9D8DE3; --tq-4: #C1B6F4;
+  --tq-ink-lo: #FFFFFF; --tq-ink-hi: #1C1B23;
+}
+
+/* -- the four numbers */
+.tkpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s3); margin-top: var(--s5); }
+.tkpi { display: flex; flex-direction: column; gap: 2px; min-width: 0;
+  padding: var(--s4) var(--s5); background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-lg); }
+.tkpi-n { font-family: var(--display, inherit); font-size: clamp(26px, 2.6vw, 40px); font-weight: 700;
+  letter-spacing: -.035em; line-height: 1.1; color: var(--text); }
+.tkpi-n--word { font-size: clamp(20px, 1.9vw, 28px); line-height: 1.25; }
+.tkpi-k { font-size: var(--fs-3); font-weight: 600; color: var(--text-2); }
+.tkpi-s { font-size: var(--fs-2); color: var(--text-3); }
+
+/* -- 100% bars: not there leads, so every bar is read from the same edge */
+.tbars { display: grid; gap: 14px; }
+.tbar { display: grid; grid-template-columns: 140px minmax(0, 1fr) 118px; align-items: center; gap: var(--s4); }
+.tbar-l { font-size: var(--fs-3); font-weight: 600; color: var(--text); }
+.tbar-n { font-size: var(--fs-2); color: var(--text-3); text-align: right; white-space: nowrap; }
+.tbar-n b { font-size: var(--fs-4); color: var(--text); font-weight: 700; margin-right: 2px; }
+.tbar-t { display: flex; height: 28px; border-radius: 4px; overflow: visible; background: var(--tc-track); }
+.tbar-t--free { background: transparent; }
+.tbar-t i { position: relative; display: flex; align-items: center; height: 100%; min-width: 0;
+  box-shadow: 2px 0 0 var(--panel); outline-offset: 2px; }
+.tbar-t i:first-child { border-radius: 4px 0 0 4px; }
+.tbar-t i:last-child { border-radius: 0 4px 4px 0; box-shadow: none; }
+.tbar-t .s-a { background: var(--tc-a); }
+.tbar-t .s-p { background: var(--tc-p); }
+.tbar-t .s-u { background: var(--panel-2);
+  background-image: repeating-linear-gradient(135deg, var(--hatch-ink) 0 1px, transparent 1px 4px); }
+.tbar-t .s-a b { font-style: normal; padding-left: 10px; font-size: var(--fs-2); font-weight: 700; color: #FFFFFF; }
+:root[data-theme="dark"] .tbar-t .s-a b { color: #14121C; }
+
+/* -- matrices: labels are text, cells carry the number, colour is the second read */
+.tmx { display: grid; grid-template-columns: minmax(120px, auto) repeat(var(--n), minmax(56px, 1fr));
+  gap: 3px; min-width: max-content; }
+.tmx--wide { grid-template-columns: minmax(170px, auto) repeat(var(--n), minmax(64px, 1fr)); }
+.tmx-c { display: flex; align-items: center; justify-content: center; min-height: 40px;
+  border-radius: 6px; font-size: var(--fs-3); font-variant-numeric: tabular-nums; }
+.tmx-h { min-height: 0; padding-bottom: 6px; }
+.tmx-col span { font-size: var(--fs-2); font-weight: 600; color: var(--text-2); text-align: center; line-height: 1.25; }
+.tmx-rl { justify-content: flex-start; gap: 8px; padding-right: var(--s3);
+  font-size: var(--fs-3); font-weight: 600; color: var(--text); }
+.tmx-rn { font-size: var(--fs-1); font-weight: 600; color: var(--text-3); }
+.tmx-v { font-weight: 700; cursor: default; }
+.tmx-v[data-q="-1"] { background: var(--panel-2); color: var(--text-3); font-weight: 400; }
+.tmx-v[data-q="0"] { background: var(--tq-0); color: var(--tq-ink-lo); }
+.tmx-v[data-q="1"] { background: var(--tq-1); color: var(--tq-ink-lo); }
+.tmx-v[data-q="2"] { background: var(--tq-2); color: var(--tq-ink-hi); }
+.tmx-v[data-q="3"] { background: var(--tq-3); color: var(--tq-ink-hi); }
+.tmx-v[data-q="4"] { background: var(--tq-4); color: var(--tq-ink-hi); }
+:root[data-theme="dark"] .tmx-v[data-q="2"] { color: var(--tq-ink-lo); }
+.tmx-self { background: var(--panel-2); opacity: .5; }
+.tmx-blank { background: transparent; }
+.tmx-na { background: var(--panel-2); color: var(--text-3);
+  background-image: repeating-linear-gradient(135deg, var(--hatch-ink) 0 1px, transparent 1px 5px); }
+
+/* -- hover / focus tooltip for any [data-tip]; bigger hit target than the ink */
+[data-tip] { position: relative; }
+[data-tip]:hover::after, [data-tip]:focus-visible::after {
+  content: attr(data-tip); position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translateX(-50%);
+  z-index: 20; width: max-content; max-width: 260px; padding: 7px 10px; border-radius: var(--r-xs);
+  background: var(--ink); color: var(--on-ink); font-size: var(--fs-2); font-weight: 500;
+  line-height: 1.35; text-align: left; white-space: normal; pointer-events: none; box-shadow: var(--el-2);
+}
+:root[data-theme="dark"] [data-tip]:hover::after, :root[data-theme="dark"] [data-tip]:focus-visible::after {
+  background: var(--text); color: var(--slab); }
+.tbar-t i:hover, .tmx-v:hover { filter: brightness(1.08); }
+
+/* -- disclosures: the table view and the every-creator map */
+.tdata { margin-top: var(--s4); }
+.tdata > summary, .tevery > summary { cursor: pointer; list-style: none; }
+.tdata > summary { font-size: var(--fs-2); font-weight: 600; color: var(--text-2); }
+.tdata > summary::-webkit-details-marker, .tevery > summary::-webkit-details-marker { display: none; }
+.tdata > summary::before, .tevery > summary .tsec-h::before { content: "▸ "; color: var(--text-3); }
+.tdata[open] > summary::before, .tevery[open] > summary .tsec-h::before { content: "▾ "; }
+.tdata .wex { min-width: 0; margin-top: var(--s3); }
+.tevery > summary { display: flex; flex-direction: column; gap: 4px; }
+.tevery[open] > summary { margin-bottom: var(--s3); }
+
+@media (max-width: 1100px) { .tkpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 720px) {
+  .tbar { grid-template-columns: 1fr auto; row-gap: 6px; }
+  .tbar-t { grid-column: 1 / -1; order: 3; }
+  .tkpi { padding: var(--s3) var(--s4); }
+  .tmap { min-width: 560px; }
+  .tevery .tpanel { overflow-x: auto; }
+}

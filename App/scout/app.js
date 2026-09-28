@@ -4682,11 +4682,54 @@
       });
     });
 
+    /* v7 — THE HEADLINE WAS WIDER THAN ITS COUNT. "214 people asked for
+       something that does not exist yet" counted every labelled ask, including
+       asks for a YouTube channel the creator already runs. An ask counts as
+       unmet only when its label names an item and that item was verified absent
+       on the creator the comment was left under. */
+    var ASK_ITEM = { store: 'Store', membership: 'Membership', website: 'Website',
+      youtube_channel: 'YouTube channel', newsletter: 'Newsletter', podcast: 'Podcast' };
+    var askBy = {}, unmet = 0, qseen2 = {};
+    W.candidates.forEach(function (c) {
+      var inv = {};
+      (c.inventory || []).forEach(function (i) { inv[i.item] = i.state; });
+      (c.evidence || []).forEach(function (e) {
+        var item = e.kind === 'comment' && ASK_ITEM[e.label];
+        if (!item) return;
+        var k = c.handle + '|' + e.quote;
+        if (qseen2[k]) return;
+        qseen2[k] = 1;
+        var a = askBy[item] || (askBy[item] = { label: item, lack: 0, have: 0, unsure: 0 });
+        if (inv[item] === 'verified_absent') { a.lack++; unmet++; }
+        else if (inv[item] === 'present') a.have++;
+        else a.unsure++;
+      });
+    });
+    var askList = Object.keys(askBy).map(function (k) { return askBy[k]; })
+      .sort(function (a, b) { return b.lack - a.lack || (b.have + b.unsure) - (a.have + a.unsure); });
+
+    /* Per brief: a creator in two briefs counts in both, once in each — the
+       question here is what each brief's territory is short of. */
+    var briefRows = W.mandates.map(function (md) {
+      var hs = {}, n = 0, by = {};
+      W.candidates.forEach(function (c) {
+        if (c.mandateId !== md.id || hs[c.handle]) return;
+        hs[c.handle] = 1; n++;
+        (c.inventory || []).forEach(function (i) {
+          var b = by[i.item] || (by[i.item] = { absent: 0, settled: 0 });
+          if (i.state === 'verified_absent') { b.absent++; b.settled++; }
+          else if (i.state === 'present') b.settled++;
+        });
+      });
+      return { id: md.id, name: md.title || md.name, n: n, by: by };
+    }).filter(function (r) { return r.n; });
+
     var days = {};
     people.forEach(function (p) { days[p.day] = 1; });
 
     _market = {
       people: people, order: order, items: items, pairs: pairList,
+      asks2: askList, unmet: unmet, briefs: briefRows,
       days: Object.keys(days).sort(),
       checks: people.reduce(function (a, p) { return a + p.checks; }, 0),
       comments: comments, asks: asks, buying: buying,
@@ -4697,10 +4740,6 @@
   }
 
   var TREND_GATE = 90;          /* the trajectory gate the reports enforce */
-
-  function lockedChip(txt) {
-    return '<span class="tlock">' + U.icon('lock') + esc(txt) + '</span>';
-  }
 
   function trendsView() {
     var m = market();
@@ -4715,13 +4754,168 @@
       '<span class="tage-bar" role="img" aria-label="' + days + ' of ' + TREND_GATE +
       ' days observed"><i style="width:' + (days / TREND_GATE * 100).toFixed(2) + '%"></i><u></u></span>' +
       '<span class="tage-t">' + U.num(m.checks) + ' checks ' + DOT + ' first look ' +
-      esc(U.longDate(m.days[0])) + '</span></div>' +
+      esc(U.longDate(m.days[0])) + ' ' + DOT + ' a direction in ' + U.plural(TREND_GATE - days, 'day') +
+      '</span></div>' +
       '</header>';
 
-    return head + trendMap(m) + trendLedger(m, top) + trendPairs(m) + trendGate(m, days) + trendHandoff(m);
+    return head + trendKpis(m, top) + trendBars(m) + trendMatrix(m) + trendBriefs(m) + trendAsks(m) +
+      trendEvery(m);
   }
 
   /* ---- the map: every creator, every gap, nothing aggregated away ------- */
+  /* ====================================================== TRENDS, v7
+     One picture per question, each with its number said out loud:
+       how big is the gap        -> four stat tiles
+       what is missing, how much -> one 100% bar per item (not there leads)
+       which gaps come together  -> a pair matrix
+       where, by brief           -> a brief x item heatmap
+       did anyone ask            -> asks, split by whether the thing exists
+     The barcode map stays, one click down, for anyone who wants every creator.
+     Colours: not there #5A4CA3 / built #00806A (light), #8A6FE6 / #1DAC8E
+     (dark) — both pairs pass the CVD, normal-vision and contrast checks; could
+     not tell is a hatch, never a third hue. The heatmaps use one violet ramp,
+     five steps, validated for monotone lightness and surface contrast in both
+     themes; zero is a neutral cell, not the lightest violet. */
+  function seqStep(v, max) {
+    if (!v || !max) return -1;
+    return Math.min(4, Math.floor((v / max) * 5 - 1e-9));
+  }
+  function tip(text) { return ' data-tip="' + esc(text) + '" tabindex="0"'; }
+
+  function trendKpis(m, top) {
+    var tile = function (n, k, sub) {
+      var word = !/^[\d,.%]+$/.test(String(n));
+      return '<div class="tkpi"><span class="tkpi-n' + (word ? ' tkpi-n--word' : '') + '">' + n + '</span>' +
+        '<span class="tkpi-k">' + k + '</span>' + (sub ? '<span class="tkpi-s">' + sub + '</span>' : '') + '</div>';
+    };
+    var pair = m.pairs[0];
+    return '<section class="tkpis" aria-label="The market in four numbers">' +
+      tile(U.num(m.people.length), 'creators read', U.num(m.checks) + ' checks') +
+      tile(U.num(m.callable), 'with a gap', Math.round(m.callable / m.people.length * 100) + '% of them') +
+      tile(esc(top.label), 'the biggest gap', top.absent + ' of ' + m.people.length + ' have none') +
+      (pair ? tile(pair[1], 'miss ' + esc(pair[0].toLowerCase()), 'the pair that travels most') : '') +
+      '</section>';
+  }
+
+  function trendBars(m) {
+    var n = m.people.length;
+    var rows = m.items.map(function (it) {
+      var pct = function (v) { return (v / n * 100).toFixed(2) + '%'; };
+      return '<div class="tbar">' +
+        '<span class="tbar-l">' + esc(it.label) + '</span>' +
+        '<span class="tbar-t" role="img" aria-label="' + esc(it.label) + ': ' + it.absent + ' not there, ' +
+          it.present + ' built, ' + it.unknown + ' could not tell, of ' + n + '">' +
+        '<i class="s-a" style="width:' + pct(it.absent) + '"' + tip(it.label + ' · not there on ' + it.absent + ' of ' + n) + '>' +
+          (it.absent / n > 0.08 ? '<b>' + it.absent + '</b>' : '') + '</i>' +
+        '<i class="s-p" style="width:' + pct(it.present) + '"' + tip(it.label + ' · built by ' + it.present + ' of ' + n) + '></i>' +
+        '<i class="s-u" style="width:' + pct(it.unknown) + '"' + tip(it.label + ' · could not tell on ' + it.unknown + ' of ' + n) + '></i>' +
+        '</span>' +
+        '<span class="tbar-n"><b>' + Math.round(it.absent / n * 100) + '%</b> not there</span></div>';
+    }).join('');
+    var table = '<details class="tdata"><summary>Show as a table</summary><div class="wex-scroll"><table class="wex">' +
+      '<thead><tr><th>What</th><th class="wex-num">Not there</th><th class="wex-num">Built</th>' +
+      '<th class="wex-num">Could not tell</th></tr></thead><tbody>' +
+      m.items.map(function (it) {
+        return '<tr><td>' + esc(it.label) + '</td><td class="wex-num">' + it.absent + '</td>' +
+          '<td class="wex-num">' + it.present + '</td><td class="wex-num">' + it.unknown + '</td></tr>';
+      }).join('') + '</tbody></table></div></details>';
+    return '<section class="tsec">' +
+      '<h2 class="tsec-h">What the market has not built</h2>' +
+      '<p class="tsec-s">Each bar is all ' + n + ' creators. Not there is a door we opened and found empty.</p>' +
+      trendKey() +
+      '<div class="tpanel"><div class="tbars">' + rows + '</div>' + table + '</div></section>';
+  }
+
+  function trendMatrix(m) {
+    var labels = m.items.map(function (it) { return it.label; });
+    var pc = {};
+    m.pairs.forEach(function (p) { pc[p[0]] = p[1]; });
+    var get = function (a, b) { return pc[a + ' + ' + b] || pc[b + ' + ' + a] || 0; };
+    var max = m.pairs.length ? m.pairs[0][1] : 0;
+    /* Lower triangle only, and without its empty edges: the first row and the
+       last column would hold nothing but the diagonal. */
+    var cols = labels.slice(0, -1), rowsL = labels.slice(1);
+    var head = '<div class="tmx-c tmx-h"></div>' + cols.map(function (l) {
+      return '<div class="tmx-c tmx-h tmx-col"><span>' + esc(l) + '</span></div>';
+    }).join('');
+    var body = rowsL.map(function (r, ri) {
+      var i = ri + 1;
+      return '<div class="tmx-c tmx-rl">' + esc(r) + '</div>' + cols.map(function (c, j) {
+        if (j >= i) return '<div class="tmx-c tmx-blank" aria-hidden="true"></div>';
+        var v = get(r, c);
+        return '<div class="tmx-c tmx-v" data-q="' + seqStep(v, max) + '"' +
+          tip(r + ' + ' + c + ' · ' + v + ' creators miss both') + '>' + (v || '') + '</div>';
+      }).join('');
+    }).join('');
+    var p = m.pairs[0];
+    return '<section class="tsec">' +
+      '<h2 class="tsec-h">Gaps that travel together</h2>' +
+      '<p class="tsec-s">' + (p ? '<b>' + esc(p[0]) + '</b>: ' + p[1] + ' of ' + m.people.length +
+        ' have neither, one conversation, not two. ' : '') + 'Darker is more creators missing both.</p>' +
+      '<div class="tpanel"><div class="wex-scroll"><div class="tmx" style="--n:' + cols.length + '">' +
+      head + body + '</div></div>' +
+      '<p class="traynote">Confirmed absences only. A pair where either side could not be told is not counted.</p>' +
+      '</div></section>';
+  }
+
+  function trendBriefs(m) {
+    if (m.briefs.length < 2) return '';
+    var labels = m.items.map(function (it) { return it.label; });
+    var head = '<div class="tmx-c tmx-h"></div>' + labels.map(function (l) {
+      return '<div class="tmx-c tmx-h tmx-col"><span>' + esc(l) + '</span></div>';
+    }).join('');
+    var body = m.briefs.map(function (b) {
+      return '<div class="tmx-c tmx-rl">' + esc(b.name) + '<span class="tmx-rn">' + b.n + '</span></div>' +
+        labels.map(function (l) {
+          var x = b.by[l];
+          if (!x || !x.settled) return '<div class="tmx-c tmx-na"' + tip(b.name + ' · ' + l + ' · could not tell on any') + '>–</div>';
+          var pct = Math.round(x.absent / b.n * 100);
+          return '<div class="tmx-c tmx-v" data-q="' + seqStep(pct, 100) + '"' +
+            tip(b.name + ' · ' + l + ' · not there on ' + x.absent + ' of ' + b.n) + '>' + pct + '%</div>';
+        }).join('');
+    }).join('');
+    return '<section class="tsec">' +
+      '<h2 class="tsec-h">Where each gap is widest</h2>' +
+      '<p class="tsec-s">Share of each brief&rsquo;s creators confirmed without it. The number after the brief is how many it read.</p>' +
+      '<div class="tpanel"><div class="wex-scroll"><div class="tmx tmx--wide" style="--n:' + labels.length + '">' +
+      head + body + '</div></div></div></section>';
+  }
+
+  function trendAsks(m) {
+    if (!m.asks2.length) return '';
+    var max = 0;
+    m.asks2.forEach(function (a) { max = Math.max(max, a.lack + a.have + a.unsure); });
+    var rows = m.asks2.map(function (a) {
+      var w = function (v) { return (v / max * 100).toFixed(2) + '%'; };
+      return '<div class="tbar">' +
+        '<span class="tbar-l">' + esc(a.label) + '</span>' +
+        '<span class="tbar-t tbar-t--free" role="img" aria-label="' + esc(a.label) + ': ' + a.lack +
+          ' asked where there is none, ' + a.have + ' where it exists, ' + a.unsure + ' could not tell">' +
+        '<i class="s-a" style="width:' + w(a.lack) + '"' + tip(a.label + ' · ' + a.lack + ' asked, and there is none') + '></i>' +
+        '<i class="s-p" style="width:' + w(a.have) + '"' + tip(a.label + ' · ' + a.have + ' asked, and it exists') + '></i>' +
+        '<i class="s-u" style="width:' + w(a.unsure) + '"' + tip(a.label + ' · ' + a.unsure + ' asked, could not tell') + '></i>' +
+        '</span>' +
+        '<span class="tbar-n"><b>' + a.lack + '</b> unmet</span></div>';
+    }).join('');
+    return '<section class="tsec">' +
+      '<h2 class="tsec-h">' + m.unmet + (m.unmet === 1 ? ' person' : ' people') + ' asked for something that is not there</h2>' +
+      '<p class="tsec-s">Comments that named a thing to buy or join, split by whether the creator has it. ' +
+      U.num(m.comments) + ' comments read.</p>' +
+      '<div class="tkey">' +
+      '<span class="tk"><span class="tswatch tswatch--a"></span>Asked, and there is none</span>' +
+      '<span class="tk"><span class="tswatch tswatch--p"></span>Asked, and it exists</span>' +
+      '<span class="tk"><span class="tswatch tswatch--u"></span>Could not tell</span></div>' +
+      '<div class="tpanel"><div class="tbars">' + rows + '</div></div></section>';
+  }
+
+  function trendEvery(m) {
+    return '<section class="tsec"><details class="tevery"><summary>' +
+      '<span class="tsec-h">Every creator, one column each</span>' +
+      '<span class="tsec-s">' + m.people.length + ' creators × ' + m.items.length + ' things, sorted so the ones missing the most sit left.</span>' +
+      '</summary>' + trendMap(m).replace(/^<section class="tsec"><h2[\s\S]*?<\/p>/, '').replace(/<\/section>$/, '') +
+      '</details></section>';
+  }
+
   function trendMap(m) {
     var rows = m.items.map(function (it, ri) {
       var cells = m.order.map(function (p, ci) {
@@ -4755,85 +4949,12 @@
 
   function trendKey() {
     return '<div class="tkey">' +
-      '<span class="tk"><span class="tswatch tswatch--p"></span>Built</span>' +
       '<span class="tk"><span class="tswatch tswatch--a"></span>Not there</span>' +
+      '<span class="tk"><span class="tswatch tswatch--p"></span>Built</span>' +
       '<span class="tk"><span class="tswatch tswatch--u"></span>Could not tell</span></div>';
   }
 
   /* ---- the same map, counted. This is the map's key, not a second screen. */
-  function trendLedger(m, top) {
-    var rows = m.items.map(function (it) {
-      var tot = it.present + it.absent + it.unknown;
-      var w = function (v) { return (v / tot * 100).toFixed(2) + '%'; };
-      return '<tr><td><span class="wex-nm">' + esc(it.label) + '</span>' +
-        '<span class="wex-why">looked for on all ' + m.people.length + '</span></td>' +
-        '<td class="wex-num">' + it.present + '</td>' +
-        '<td class="wex-num"><b class="tbig">' + it.absent + '</b>' +
-        '<span class="tof">/ ' + m.people.length + '</span></td>' +
-        '<td class="wex-num">' + it.unknown + '</td>' +
-        '<td><span class="tstack" role="img" aria-label="' + it.present + ' built, ' + it.absent +
-        ' not there, ' + it.unknown + ' could not tell">' +
-        '<i class="s-p" style="width:' + w(it.present) + '"></i>' +
-        '<i class="s-a" style="width:' + w(it.absent) + '"></i>' +
-        '<i class="s-u" style="width:' + w(it.unknown) + '"></i></span></td>' +
-        '<td>' + lockedChip('day ' + m.days.length + ' of ' + TREND_GATE) + '</td></tr>';
-    }).join('');
-
-    return '<section class="tsec">' +
-      '<h2 class="tsec-h">The same map, counted</h2>' +
-      '<p class="tsec-s">The key to the picture above. <b>' + esc(top.label) +
-      ' is the gap of the market:</b> ' + top.absent + ' of ' + m.people.length +
-      ' confirmed without one, against ' + top.unknown + ' the engine could not tell either way.</p>' +
-      '<div class="tpanel"><div class="wex-scroll"><table class="wex">' +
-      '<thead><tr><th>What</th><th class="wex-num">Built</th><th class="wex-num">Not there</th>' +
-      '<th class="wex-num">Could not tell</th><th>Across the ' + m.people.length + '</th>' +
-      '<th>Movement</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
-      '</div></section>';
-  }
-
-  /* ---- the pairs. One conversation, not two. --------------------------- */
-  function trendPairs(m) {
-    var max = m.pairs[0][1];
-    var rows = m.pairs.slice(0, 7).map(function (p) {
-      return '<div class="tpair" title="' + esc(p[0]) + ' — ' + p[1] + ' creators are missing both">' +
-        '<span class="tpair-l">' + esc(p[0]) + '</span>' +
-        '<span class="tpair-b"><i style="width:' + (p[1] / max * 100).toFixed(1) + '%"></i></span>' +
-        '<span class="tpair-n"><b>' + p[1] + '</b></span></div>';
-    }).join('');
-
-    return '<section class="tsec">' +
-      '<h2 class="tsec-h">Gaps that travel together</h2>' +
-      '<p class="tsec-s">How often two things are missing off the same creator. <b>' +
-      esc(m.pairs[0][0]) + '</b> is the pattern: ' + m.pairs[0][1] + ' of ' + m.people.length +
-      ' have neither. That is one conversation, not two.</p>' +
-      '<div class="tpanel"><div class="tpairs">' + rows + '</div>' +
-      '<p class="traynote">Counted off confirmed absences only. A pair where either side could not ' +
-      'be told is not counted, so these run lower than the column totals multiplied.</p></div></section>';
-  }
-
-  /* ---- why the one column that could move is shut ---------------------- */
-  function trendGate(m, days) {
-    return '<section class="tsec">' +
-      '<h2 class="tsec-h">Movement &mdash; not yet</h2>' +
-      '<div class="tgate"><span class="tgate-n">' + (TREND_GATE - days) + '</span>' +
-      '<div class="tgate-b">' +
-      '<p><b>days before this screen can call a direction.</b> Every report Scout writes today ' +
-      'reads <i>&ldquo;no trend yet.&rdquo;</i> This screen holds to the same gate.</p>' +
-      '<p>Until it opens, this is a census with a countdown on it. Nothing here is extrapolated, ' +
-      'smoothed or projected.</p>' +
-      '</div></div></section>';
-  }
-
-  /* ---- what this screen deliberately does not do ----------------------- */
-  function trendHandoff(m) {
-    return '<section class="tsec">' +
-      '<div class="thand"><span class="thand-i">' + U.icon('ask') + '</span>' +
-      '<div><h2 class="thand-h">' + m.asks + ' people asked for something that does not exist yet</h2>' +
-      '<p>' + U.num(m.comments) + ' comments read, ' + m.buying + ' of them asking to buy. This screen ' +
-      'is what the market is missing. What its audience wants is a different question, and it gets ' +
-      'its own screen.</p></div></div></section>';
-  }
-
   function adminView() {
     var a = S.admin, ad = state.admin;
     var house = brief('b_house');
@@ -6078,12 +6199,12 @@
 
   /* The rail's default follows the window across 1360px; re-render only on
      the crossing, never on every resize event. */
-  var railWasWide = null;
   window.addEventListener('resize', function () {
     if (state.railChosen || state.phase === 'signedout') return;
-    var w = railIsWide();
-    if (railWasWide === null) { railWasWide = w; return; }
-    if (w !== railWasWide) { railWasWide = w; render(); }
+    /* Compared with what is on screen, not with a remembered value, so the
+       first crossing after a load is caught too. */
+    var shown = document.querySelector('.railcol');
+    if (shown && railIsWide() === shown.classList.contains('railcol--mini')) render();
   });
 
   /* v5 checked only the popover and the menu, which taught you the key works

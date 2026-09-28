@@ -127,6 +127,31 @@ its own line above each name, and the verbs ran off-screen. At 768px the header 
 
 Asked for 28 Sep: *Where the market is short* is hard to read and could be much richer visually.
 
+### Phase 6 — done on branch `phase6-trends`
+
+Found: one dataset drawn three times (a 636-cell barcode, a table of the same counts, a bar list of
+pairs), so the screen took four scrolls to say one thing. The demand callout's headline ("214 people asked
+for something that does not exist yet") counted every labelled ask, including asks for things the creator
+already had.
+
+Now there is one picture per question:
+- **Four stat tiles:** creators read, how many have a gap, the biggest gap, and the most common pair.
+- **What the market has not built:** 100% bars, with not there leading and counts inside the bars. A
+  table view sits one click down.
+- **Gaps that travel together:** a lower-triangle pair matrix.
+- **Where each gap is widest (new):** briefs × items, as the share of each brief confirmed without it.
+- **N people asked for something that is not there:** asks split into unmet, has it, and could not tell.
+  An ask counts as unmet only when the item it names was verified absent on that creator.
+- **The every-creator barcode** is kept behind a disclosure.
+- **The 90-day countdown** is folded into the age line.
+
+The colors went through the dataviz validator. The not there/built pair passes CVD (ΔE 15.2 light, 17.9
+dark), normal vision and contrast in both themes. The heatmaps use one violet ramp per theme (5 steps,
+monotone, light end ≥ 2:1). Could not tell stays a hatch, not a third hue. Every mark has a hover/focus
+tooltip. Checked at 1440 and 375 in light and dark, with no overflow.
+
+Also fixed: the rail's resize listener missed the first width crossing after a load.
+
 ## Phase 7 — One system for the report
 
 Asked for 28 Sep: in the report, the graphs, the summary and the type are all over the place. Streamline
