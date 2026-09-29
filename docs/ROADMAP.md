@@ -10,7 +10,6 @@ Notes/PLAN-SCOUT-INTUITIVE-2026-09-28.md.
 ## Next up
 | # | Item | Why (user problem) | Impact | Effort | Tier | Receipt (if FAST) |
 |---|------|--------------------|--------|--------|------|-------------------|
-| 1 | Landing page with no dead links on Pages | Portfolio visitors hit 404 on Notes, Product and Archive (checked with curl against the live site) | H | S | [STRONG] | |
 | 2 | Scout smoke tests (headless Chrome, zero deps) | Nothing guards 7 phases of UI work; every later item needs a check that runs in one command | H | M | [STRONG] | |
 | 3 | Copy lint in the smoke test | CLAUDE.md bans synonyms (feed, cutoff, purchase intent…); nothing enforces it on rendered text | H | S | [STRONG] | |
 | 4 | One colour per state across report, drop, Trends | Green means "not there" on the report and "built" on Trends | H | M | [STRONG] | |
@@ -33,4 +32,5 @@ Notes/PLAN-SCOUT-INTUITIVE-2026-09-28.md.
   prompt; re-running costs money).
 
 ## Done
+- #1 Landing page with no dead links on Pages (29 Sep 2026, see log)
 - Phases 1–7 (28 Sep 2026, commits 7f72bcd…b48dda9)

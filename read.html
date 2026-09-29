@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warhol</title>
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="crumbs" id="crumbs" aria-label="Where you are"><a href="index.html">Warhol</a></nav>
+  <main id="doc" class="doc" aria-live="polite"><p class="lede">Loading…</p></main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script>
+/* Renders one Markdown file from this repo: read.html?f=Product/PRD-WARHOL-SCOUT.md
+   Links between documents stay inside the reader; everything else resolves against
+   the file's own folder, so it works the same on Pages and on the local server. */
+(function () {
+  'use strict';
+  var doc = document.getElementById('doc');
+  var crumbs = document.getElementById('crumbs');
+  var root = new URL('.', location.href);
+  var f = new URLSearchParams(location.search).get('f') || '';
+
+  /* Only a relative .md path inside the repo. No scheme, no leading slash, no "..". */
+  var ok = /^[\w][\w\-. \/]*\.md$/.test(f) && f.split('/').indexOf('..') === -1;
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; });
+  }
+  function slug(text) {
+    return text.trim().toLowerCase().replace(/[^\w\- ]+/g, '').replace(/ /g, '-');
+  }
+  function fail(html) {
+    doc.innerHTML = '<h1>That document did not open</h1><div class="note">' + html + '</div>';
+  }
+
+  /* Crumbs: Warhol / Folder / file */
+  if (ok) {
+    var parts = f.split('/');
+    var html = '<a href="index.html">Warhol</a>';
+    var hasIndex = { Notes: 1, Product: 1, Archive: 1 };
+    if (parts.length > 1) {
+      html += '<span aria-hidden="true">/</span>' + (hasIndex[parts[0]]
+        ? '<a href="' + esc(parts[0]) + '/index.html">' + esc(parts[0]) + '</a>'
+        : '<span>' + esc(parts.slice(0, -1).join('/')) + '</span>');
+    }
+    html += '<span aria-hidden="true">/</span><span aria-current="page">' + esc(parts[parts.length - 1]) + '</span>';
+    crumbs.innerHTML = html;
+  }
+
+  if (!ok) {
+    fail('Give a Markdown file from this repo, for example <a href="read.html?f=README.md">read.html?f=README.md</a>.');
+    return;
+  }
+  if (!window.marked) {
+    fail('The Markdown reader did not load. <a href="' + esc(f) + '">Open the raw file</a> instead.');
+    return;
+  }
+
+  var src = new URL(f, root);
+  fetch(src).then(function (r) {
+    if (!r.ok) throw new Error(r.status === 404 ? 'missing' : 'status ' + r.status);
+    return r.text();
+  }).then(function (md) {
+    doc.innerHTML = marked.parse(md, { gfm: true });
+
+    /* Heading anchors, GitHub style, so in-document links land. */
+    var seen = {};
+    doc.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function (h) {
+      var id = slug(h.textContent);
+      if (seen[id] != null) { seen[id] += 1; id += '-' + seen[id]; } else seen[id] = 0;
+      h.id = id;
+    });
+
+    /* Wide tables scroll inside their own box. */
+    doc.querySelectorAll('table').forEach(function (t) {
+      var box = document.createElement('div'); box.className = 'tablebox';
+      t.parentNode.insertBefore(box, t); box.appendChild(t);
+    });
+
+    /* Links: another .md opens in the reader; other relative paths resolve from the file's folder. */
+    doc.querySelectorAll('a[href]').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (/^([a-z]+:|#)/i.test(href)) return;
+      var to = new URL(href, src);
+      if (to.origin !== root.origin || to.href.indexOf(root.href) !== 0) return;
+      var rel = decodeURIComponent(to.pathname.slice(root.pathname.length));
+      if (/\.md$/i.test(rel)) a.setAttribute('href', 'read.html?f=' + encodeURIComponent(rel).replace(/%2F/g, '/') + to.hash);
+      else a.setAttribute('href', rel + to.search + to.hash);
+    });
+    doc.querySelectorAll('img[src]').forEach(function (img) {
+      var s = img.getAttribute('src');
+      if (!/^([a-z]+:)/i.test(s)) img.setAttribute('src', new URL(s, src).href);
+    });
+
+    var h1 = doc.querySelector('h1');
+    document.title = (h1 ? h1.textContent.trim() : f.split('/').pop()) + ' · Warhol';
+    if (location.hash) {
+      var t = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (t) t.scrollIntoView();
+    }
+  }).catch(function (err) {
+    if (location.protocol === 'file:') {
+      fail('Opened from disk, the browser will not let this page read other files. Run <code>node Archive/prototypes/serve.js</code> and open it from <code>http://localhost:4321</code>, or <a href="' + esc(f) + '">open the raw file</a>.');
+    } else if (err.message === 'missing') {
+      fail('<b>' + esc(f) + '</b> is not in this repo. <a href="index.html">Back to the start</a>.');
+    } else {
+      fail('<b>' + esc(f) + '</b> did not load (' + esc(err.message) + '). <a href="' + esc(f) + '">Open the raw file</a>.');
+    }
+  });
+})();
+</script>
+</body>
+</html>

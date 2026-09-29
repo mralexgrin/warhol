@@ -52,6 +52,18 @@ node Archive/prototypes/serve.js
 
 Then open `http://localhost:4321`. Pass a port number if 4321 is taken.
 
+**The documents, as a website.** `read.html?f=<path>.md` renders any Markdown file in the repo,
+and `Notes/`, `Product/` and `Archive/` each have an `index.html` listing what is in them. Those
+three pages are generated. After adding or renaming a document, run:
+
+```bash
+node tools/build-indexes.mjs && node tools/check-links.mjs
+```
+
+The second command fails if any relative link in the docs or on the landing page points at nothing.
+The repo root has a `.nojekyll` file so GitHub Pages serves every file as it is, including the
+`_sketch-*.html` files.
+
 ---
 
 ## Three things worth knowing

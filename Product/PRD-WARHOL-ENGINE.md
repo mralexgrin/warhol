@@ -6,7 +6,7 @@
 **Author:** Alex Grinshpoon
 **Date:** 5 August 2026
 **Companion docs:** [PRD-WARHOL-SCOUT.md](PRD-WARHOL-SCOUT.md) · [WARHOL-PROPOSAL.md](WARHOL-PROPOSAL.md)
-**Code:** [`engine/`](engine/) — runs today, `node bin/warhol.js check <handle>`
+**Code:** [`engine/`](../App/engine/README.md) — runs today, `node bin/warhol.js check <handle>`
 
 ---
 
