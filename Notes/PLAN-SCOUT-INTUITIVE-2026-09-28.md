@@ -29,6 +29,10 @@ something that makes the evidence look wrong, or removes a step between the user
   had inflated them: pantheorganizer 44 → 39, joshuaweissman 30 → 16. Home Cooking's drop went from 6 to
   3. `App/trends/trends-data.js` was **not** rebuilt. It comes from per-creator snapshots dated 7 Aug and
   still counts duplicates.
+
+  *Corrected 29 Sep:* it does not. `build-data.mjs` already keeps one ask per creator and quote
+  (2,935 raw signals → 474). The engine's normalised match would remove 3 more (0.6%). And it cannot be
+  rebuilt as it was: 96 of the 7 Aug snapshots have since been overwritten by 14 Aug runs.
 - **#2, fixed.** The report's verbs follow the list the person is on. Passing or watching from a report
   returns you to the list you came from, not always the drop.
 - **#2a, found on the way.** *Stop watching* on a seeded watch added the name to Passed and also left it

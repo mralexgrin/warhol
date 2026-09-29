@@ -13,11 +13,18 @@ Newest entries at the top. This file is the memory of the run: read it at the st
 
 ## Current status
 - Last completed: #9 accessibility checks
-- Next: reflect entry, then #10 standalone Trends board
+- Last: #10 closed (not a defect)
+- Next: #11 Help review
 - Branch: autonomous/product-improvements (from phase7-report @ b48dda9)
 - Open PR: none (cannot push)
 
 ## Log
+### 2026-09-29: #10 closed as not a defect
+- Checked: `App/trends/build-data.mjs` already keeps one ask per creator+quote (2,935 raw → 474 on
+  today's snapshots). The engine's normalised key would drop 3 more (0.6%). My 28 Sep note ("still counts
+  duplicates") was wrong. It is corrected in the plan doc.
+- A plain rebuild would also have changed 215 → 276 creators, because 96 of the 7 Aug snapshots were
+  overwritten by 14 Aug runs, so the board's input is gone. Rebuild reverted; the data is untouched.
 ### 2026-09-29: Reflect after items 1–9
 - Shipped: landing links, smoke suite with copy lint, one colour per state, first-visit note, date
   forms, one pool for counts, tier-3 copy, accessibility checks, plus the review fixes. 12 commits.

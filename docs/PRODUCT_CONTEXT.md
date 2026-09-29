@@ -37,4 +37,4 @@ published at https://mralexgrin.github.io/warhol/.
 - Engine tests: 168 passed, 0 failed.
 - Scout: no automated tests. Checked by hand at 375–1440 px in Phases 1–7.
 - Known broken: on Pages, the landing page's Notes/, Product/ and Archive/ links return 404, and so
-  do `_`-prefixed files. The standalone `App/trends/` board still counts duplicate comments.
+  do `_`-prefixed files. (Both fixed on 29 Sep.)
