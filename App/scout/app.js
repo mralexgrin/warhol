@@ -1645,7 +1645,7 @@
        somebody typed — "who else was looked at" answered about a question this
        tab never asked. */
     if (b && b.tracked) return '';
-    var rejected = S.rejectedFor(asOf(), b, state.admin.threshold);
+    var rejected = S.rejectedFor(asOf(), b, state.admin.threshold, standingExcluded());
     if (!rejected.length) return '';
 
     /* v5.9 — SAY IT ONCE. Every under-the-bar row printed the same fifteen-word
@@ -1681,7 +1681,9 @@
         '<td class="wex-num">' + r.score + '</td>' +
         '<td class="wex-num">' + Math.round((c.confidence || 0) * 100) + '%</td>' +
         '<td class="wex-num">' + aud + '</td>' +
-        '<td class="wex-stop">' + (isBar(r) ? 'under the bar' : esc(r.words.join(', '))) +
+        '<td class="wex-stop">' + (isBar(r) ? 'under the bar'
+          : r.failed.length ? esc(r.words.join(', '))
+          : 'cleared, past today&rsquo;s limit of ' + S.CAP) +
         (why ? '<span class="wex-why">' + esc(why) + '</span>' : '') +
         '</td></tr>';
     }).join('');
@@ -4988,7 +4990,7 @@
        Without standingExcluded() this read "10 of 65" beside a drop saying 9. */
     var clearingList = S.dropFor(asOf(), house, ad.threshold, standingExcluded());
     var clearing = clearingList.length;
-    var pool = clearing + S.rejectedFor(asOf(), house, ad.threshold).length;
+    var pool = clearingList.left.pool;
 
     return '<header class="pagehead"><h1>Admin</h1>' +
       '<p class="deck">The four things the organisation controls.</p></header>' +
@@ -5457,8 +5459,8 @@
      Every number is counted at render time from the same functions the drop
      uses, so this cannot drift from the screen it is explaining. */
   function worthACallReceipts(b) {
-    var list = S.dropFor(asOf(), b, state.admin.threshold);
-    var pool = list.length + S.rejectedFor(asOf(), b, state.admin.threshold).length;
+    var list = dropList(b);
+    var pool = list.left.pool;
     var withDemand = list.filter(function (c) { return !S.claims(c).demand.unread; }).length;
     var withPressure = list.filter(function (c) { return S.claims(c).pressure.points > 0; }).length;
     return { title: 'Worth a call', lines: [

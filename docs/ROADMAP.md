@@ -10,7 +10,6 @@ Notes/PLAN-SCOUT-INTUITIVE-2026-09-28.md.
 ## Next up
 | # | Item | Why (user problem) | Impact | Effort | Tier | Receipt (if FAST) |
 |---|------|--------------------|--------|--------|------|-------------------|
-| 7 | Admin's "9 of 64" matches the drop's 55 looked at | Two denominators for one day | M | S | [STRONG] | |
 | 8 | Tier-3 copy on the watchlist | "the window is what gets us a second reading" argues instead of stating | M | S | [STRONG] | |
 | 9 | Automated accessibility checks + fixes | Unlabelled buttons, duplicate ids and focus traps would pass unnoticed | M | M | [STRONG] | |
 | 10 | Standalone Trends board: count each comment once | App/trends still shows duplicate-inflated demand | M | M | [STRONG] | |
@@ -28,6 +27,7 @@ Notes/PLAN-SCOUT-INTUITIVE-2026-09-28.md.
   prompt; re-running costs money).
 
 ## Done
+- #7 One pool for every count (29 Sep 2026)
 - #6 One date format per context (29 Sep 2026)
 - #5 First-visit note on the drop (29 Sep 2026)
 - #4 One colour per state (29 Sep 2026)

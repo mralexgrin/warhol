@@ -1441,13 +1441,16 @@
      Every creator carries EVERY gate they failed, not the first. A name that
      failed on both score and fit has two different problems and showing one is
      how "why isn't this person in my drop" gets a misleading answer. */
-  function rejectedFor(date, b, threshold) {
+  /* `exclude` is the same map dropFor takes (names a list already owns). Pass it
+     wherever the drop passes it, so "cleared" and "looked at" are counted from one
+     pool. Without it, Admin said 9 of 64 while the drop's own line said 9 + 46. */
+  function rejectedFor(date, b, threshold, exclude) {
     var t = threshold == null ? THRESHOLD : threshold;
     var cleared = {};
-    dropFor(date, b, t).forEach(function (c) { cleared[c.id] = true; });
+    dropFor(date, b, t, exclude).forEach(function (c) { cleared[c.id] = true; });
 
     return poolForBrief(date, b)
-      .filter(function (c) { return !cleared[c.id]; })
+      .filter(function (c) { return !(exclude && exclude[c.id]) && !cleared[c.id]; })
       .map(function (c) {
         /* gatesFor returns {all, failed, enters} — it has already done the
            filtering, and it is the one place that decides what "failed" means. */

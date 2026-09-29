@@ -162,6 +162,15 @@
       var rows = $$('.row[data-id]');
       var head = text().match(/(\d+) creators? cleared the bar/);
       if (head) record('drop [' + label + ']: header count matches the rows', +head[1] === rows.length, head[1] + ' in the header, ' + rows.length + ' rows');
+      /* "Also looked at: 28 scored under 25, 4 did not match…" must add up to the
+         disclosure below it ("46 names, with the gate's own words"). */
+      var also = (text().match(/Also looked at: ([^\n]*)/) || [])[1];
+      var told = (text().match(/(\d+) names?, with the gate/) || [])[1];
+      if (also && told) {
+        var sum = (also.match(/\d+(?= (scored|did|could|were|are|is|was|had|have|posting))/g) || []).reduce(function (a, n) { return a + +n; }, 0);
+        record('drop [' + label + ']: "Also looked at" adds up to "Who else was looked at"', sum === +told, sum + ' vs ' + told);
+      }
+      if (bi === 0) { var housePool = rows.length + (told ? +told : 0); }
 
       var ids = rows.map(function (r) { return r.getAttribute('data-id'); });
       for (var i = 0; i < ids.length; i++) {
@@ -181,8 +190,10 @@
     await click($$('[data-act=brief]')[0]);
     var dropN = (text().match(/(\d+) creators? cleared the bar/) || [])[1];
     await screen('admin', function () { return view('admin'); });
-    var adminN = (text().match(/(\d+) of \d+ clear it/) || [])[1];
+    var adminM = text().match(/(\d+) of (\d+) clear it/) || [];
+    var adminN = adminM[1];
     record('admin: the bar count matches the drop', dropN != null && dropN === adminN, 'drop ' + dropN + ', admin ' + adminN);
+    record('admin: "of N" is the drop plus who else was looked at', +adminM[2] === housePool, 'admin ' + adminM[2] + ', drop ' + housePool);
 
     /* List rows date things the short way ("5 Aug 26"); the long form is for sentences. */
     function rowDates(where) {

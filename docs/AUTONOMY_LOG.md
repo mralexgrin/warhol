@@ -12,12 +12,21 @@ Newest entries at the top. This file is the memory of the run: read it at the st
 - Demand classifier false positives (engine prompt). Left alone: AI prompt plus paid re-run.
 
 ## Current status
-- Last completed: #6 date formats
-- Next: #7 Admin denominator
+- Last completed: #7 one pool for every count
+- Next: reflect (5+ items shipped), then #8 tier-3 copy
 - Branch: autonomous/product-improvements (from phase7-report @ b48dda9)
 - Open PR: none (cannot push)
 
 ## Log
+### 2026-09-29: #7 One pool for every count
+- What: `S.rejectedFor` takes the same `exclude` map as `dropFor`. The drop's disclosure, Admin's
+  bar card and the Worth-a-call receipts all count from `dropFor(...).left.pool`. A name that cleared
+  every gate but missed the daily cap says so, instead of showing an empty reason cell.
+- Why: Admin "9 of 64" vs the drop's 9 + 46 = 55. The disclosure said 55 names under a line that
+  added up to 46. The cause: seeded watches and passes were counted as looked-at in two places but not
+  in the third.
+- Verification: new smoke checks ("Also looked at" sums to the disclosure; Admin's "of N" = rows +
+  disclosure). Without the fix: 46 vs 55, a fail. With it: 272/272. Browser: "9 of 55", "46 names".
 ### 2026-09-29: #6 One date format per context
 - What: the watchlist ("kept …") and Promoted ("promoted …") rows now use `shortDate`, as Passed does.
   The rule is written above `longDate` in ui.js. The smoke test fails if any `.plat1` row line has a long
