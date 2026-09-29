@@ -8,6 +8,9 @@ User-facing release notes. Newest first.
   then promote, watch or pass; the drop is done when every name has a decision. It links to *How a
   score is built*. **Got it** closes it for good in that browser.
 ### Improved
+- Admin says once, on *Where Scout looks*, that switching a place off saves no money (it said so
+  twice). The budget note now states the fact: the confidence floor stays at 60% whatever the budget.
+  One watchlist line now says when the second look is due, instead of arguing for the watchlist.
 - Watchlist and Promoted rows date things the way Passed does ("kept 5 Aug 26", not "kept 5 August
   2026"). The long form is kept for full sentences.
 - One colour per state across Scout. On Trends, *not there* is now the same teal as on the report

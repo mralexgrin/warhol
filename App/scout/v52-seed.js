@@ -1585,7 +1585,7 @@
     { id: 'c_worth_call_they_make_2__briansmobile1', since: '2026-08-05', window: '1 month',
       trend: ['467k on YouTube, nothing to sell them', 'scored 22 against a bar of 25 — close, not over'] },
     { id: 'c_worth_call_they_make_2__watchweswork', since: '2026-08-05', window: '1 month',
-      trend: ['Read too little of them to argue from — 50% of checks resolved', 'the window is what gets us a second reading'] },
+      trend: ['Read too little of them to argue from — 50% of checks resolved', 'one look so far; the second when the window closes'] },
     { id: 'c_worth_call_they_make_2__girlwholove2gossip', since: '2026-08-04', window: '3 months',
       trend: ['46k, every check resolved, still under the bar', 'nothing has moved yet — one look so far'] }
   ];

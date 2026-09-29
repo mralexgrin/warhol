@@ -12,12 +12,20 @@ Newest entries at the top. This file is the memory of the run: read it at the st
 - Demand classifier false positives (engine prompt). Left alone: AI prompt plus paid re-run.
 
 ## Current status
-- Last completed: #7 one pool for every count
-- Next: reflect (5+ items shipped), then #8 tier-3 copy
+- Last completed: #8 tier-3 copy
+- Next: reflect (review pending), then #9 accessibility
 - Branch: autonomous/product-improvements (from phase7-report @ b48dda9)
 - Open PR: none (cannot push)
 
 ## Log
+### 2026-09-29: #8 Tier-3 copy on the watchlist and Admin
+- What: "does not save money" was on Admin twice (the cost card and Sources). It is now said once, on
+  Sources, as a fact. "The confidence floor cannot be lowered to save money" became "stays at 60%
+  whatever the budget" (the number is read from CONF_FLOOR). The watchweswork line "the window is what
+  gets us a second reading" became "one look so far; the second when the window closes".
+- Left alone: "too thin to argue from" is the product's consistent phrase for the confidence floor.
+  "Measured, not projected" is within the "X, not Y" budget.
+- Verification: smoke 272/272; Admin text read back in the browser.
 ### 2026-09-29: #7 One pool for every count
 - What: `S.rejectedFor` takes the same `exclude` map as `dropFor`. The drop's disclosure, Admin's
   bar card and the Worth-a-call receipts all count from `dropFor(...).left.pool`. A name that cleared

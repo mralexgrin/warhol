@@ -3812,8 +3812,8 @@
     return '<section class="adsec" id="sources">' +
       '<h2 class="adsec-h">Where Scout looks</h2>' +
       '<p class="adsec-d">Every place Scout is allowed to read, and what each one can settle. ' +
-      'Switching one off does not save money &mdash; fetching is free and the bill is judgment. ' +
-      'It lowers what can be <b>proven</b>, which is what each row states.</p>' +
+      'Fetching costs nothing, so switching a place off saves no money. It lowers what can be ' +
+      '<b>proven</b>, and each row says what.</p>' +
 
       '<div class="srcsum"><span class="k">Looking in</span><span class="v">' + places + ' places</span>' +
       (offNames.length
@@ -5094,13 +5094,12 @@
         if (!k || !k.fetches || !k.calls) return '';
         return '<p class="adfine"><b>Looking is free; judging is the bill.</b> ' +
           U.num(k.fetches) + ' fetches across Sweep and Probe cost nothing. The entire ' +
-          U.money(k.spent) + ' is ' + U.num(k.calls) + ' model calls at Study depth. ' +
-          'Switching a source off below does not save money; it lowers what can be proven.</p>';
+          U.money(k.spent) + ' is ' + U.num(k.calls) + ' model calls at Study depth.</p>';
       })() +
       '<p class="adfine"><b>No names at Sweep depth.</b> Names appear from Probe upward, where a ' +
       'judgment was made and a result was written down.</p>' +
-      '<p class="adfine">Budget decides how many creators reach Probe and Study. It never decides how ' +
-      'thoroughly one of them is examined: the confidence floor cannot be lowered to save money.</p></div>' +
+      '<p class="adfine">Budget sets how many creators reach Probe and Study. The confidence floor stays at ' +
+      Math.round(S.CONF_FLOOR * 100) + '% whatever the budget.</p></div>' +
       '</section>' +
 
       '<section class="adsec" id="ad-seats"><h2 class="adsec-h">Who is in</h2>' +
