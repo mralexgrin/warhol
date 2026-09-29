@@ -4433,7 +4433,9 @@
 
     if (W) {
       var PR = W.pressure;
-      var pkeys = Object.keys(PR).sort(function (a, b) { return PR[b].max - PR[a].max; });
+      /* The engine's config carries `_comment` notes beside the signals; they are not signals. */
+      var pkeys = Object.keys(PR).filter(function (k) { return k.charAt(0) !== '_' && PR[k] && typeof PR[k] === 'object'; })
+        .sort(function (a, b) { return PR[b].max - PR[a].max; });
       var dark = 0;
       pkeys.forEach(function (k) { if (PR[k].needsHistory) dark += PR[k].max; });
       var ceiling = W.pillars.pressureMax - dark;
@@ -4536,7 +4538,7 @@
       '<p class="adsec-d">Half of explaining a model is saying what it ignores.</p>' +
       '<div class="p"><ul class="hnot">' +
       '<li><b>Follower count.</b> The audience is the qualifier, not the score. Everyone on the board already has one.</li>' +
-      '<li><b>&ldquo;We could not find it.&rdquo;</b> Never earns a Missing point.</li>' +
+      '<li><b>Could not tell.</b> Never earns a Missing point.</li>' +
       '<li><b>Posting less.</b> Not a demerit &mdash; it is Pressure.</li>' +
       '<li><b>Press mentions and citations.</b> A line on the report, never a veto. Strong for ' +
       'expertise-led creators, near zero for entertainment-led ones, so it separates nobody.</li>' +

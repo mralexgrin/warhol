@@ -4,6 +4,9 @@ User-facing release notes. Newest first.
 
 ## 29 Sep 2026
 ### Fixed
+- Help's Pressure table showed a row reading "_comment · undefined". That was an engine note
+  leaking in as a signal.
+- Help said “We could not find it.” where the copy rules call that state *could not tell*.
 - The landing page's Notes, Product and Archive links no longer 404 on the public site. Each folder
   has a page listing its documents, and the sketches that start with an underscore now load.
 ### Added

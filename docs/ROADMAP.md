@@ -10,8 +10,6 @@ Notes/PLAN-SCOUT-INTUITIVE-2026-09-28.md.
 ## Next up
 | # | Item | Why (user problem) | Impact | Effort | Tier | Receipt (if FAST) |
 |---|------|--------------------|--------|--------|------|-------------------|
-| 2 | Scout smoke tests (headless Chrome, zero deps) | Nothing guards 7 phases of UI work; every later item needs a check that runs in one command | H | M | [STRONG] | |
-| 3 | Copy lint in the smoke test | CLAUDE.md bans synonyms (feed, cutoff, purchase intent…); nothing enforces it on rendered text | H | S | [STRONG] | |
 | 4 | One colour per state across report, drop, Trends | Green means "not there" on the report and "built" on Trends | H | M | [STRONG] | |
 | 5 | First-run orientation for new visitors | A visitor lands on a scored list with no idea what a drop, the bar or the verbs are | H | S | [STRONG] | |
 | 6 | One date format per context | Watchlist says "5 August 2026", Passed says "6 Aug 26" for the same kind of fact | M | S | [STRONG] | |
@@ -22,6 +20,7 @@ Notes/PLAN-SCOUT-INTUITIVE-2026-09-28.md.
 | 11 | Help view review against the new screens | Help predates Promoted, Shortcuts, the new Trends | M | S | [STRONG] | |
 
 ## Ideas (unranked)
+- Admin copy that argues: "Switching a source off does not save money" (Admin, Sources). Fold into #8.
 - Show the seed's age plainly for portfolio visitors ("a frozen day: 14 Aug 2026").
 - Load the 1.6 MB seed after the sign-in screen paints.
 - Print stylesheet for the report (a one-page evidence sheet).
@@ -32,5 +31,6 @@ Notes/PLAN-SCOUT-INTUITIVE-2026-09-28.md.
   prompt; re-running costs money).
 
 ## Done
+- #2 Scout smoke tests + #3 copy lint (29 Sep 2026, see log)
 - #1 Landing page with no dead links on Pages (29 Sep 2026, see log)
 - Phases 1–7 (28 Sep 2026, commits 7f72bcd…b48dda9)

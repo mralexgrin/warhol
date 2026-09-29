@@ -12,12 +12,24 @@ Newest entries at the top. This file is the memory of the run: read it at the st
 - Demand classifier false positives (engine prompt). Left alone: AI prompt plus paid re-run.
 
 ## Current status
-- Last completed: #1 landing links
-- Next: #2 Scout smoke tests
+- Last completed: #2/#3 smoke tests and copy lint
+- Next: #4 one colour per state
 - Branch: autonomous/product-improvements (from phase7-report @ b48dda9)
 - Open PR: none (cannot push)
 
 ## Log
+### 2026-09-29: #2/#3 Scout smoke tests with a copy lint
+- What: `App/scout/test/smoke.html` drives the real app in an iframe (sign-in, 3 briefs, all 12
+  reports, every list, Trends, Admin, Help, New brief, the promote/undo and pass/put-back loop,
+  J and ?, at 1440/820/375). `run.mjs` serves the repo and runs it in headless Chrome (no deps).
+  `tools/check.sh` runs everything. 262 checks.
+- Found and fixed: Help's Pressure table iterated the seed config's `_comment` key ("undefined");
+  Help used "could not find" (the rules require *could not tell*).
+- Decision: the lint does not ban "save". "Save and start" (a brief) and "save money" are not
+  decision verbs. It still bans archive/reject/dismiss.
+- Verification: against the pre-fix app.js the suite fails 4 checks and exits 1, and check.sh exits 1.
+  Against the fix, 262/262 pass and check.sh exits 0. A Chrome that hangs after printing is killed as
+  soon as `</html>` arrives (runtime went from 240 s to 3 s).
 ### 2026-09-29: #1 Landing page with no dead links
 - What: `.nojekyll`; `read.html` renders repo Markdown (marked 12.0.2 from cdnjs); generated
   `Notes/`, `Product/`, `Archive/` index pages (`tools/build-indexes.mjs`, lists git-tracked

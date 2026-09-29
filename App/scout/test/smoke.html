@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scout smoke tests</title>
+<style>
+  body { font: 13px/1.5 ui-monospace, Menlo, monospace; margin: 16px; }
+  iframe { border: 1px solid #ccc; width: 1440px; height: 900px; display: block; margin-bottom: 12px; }
+  .fail { color: #b3261e; } .pass { color: #1b6e3a; }
+</style>
+</head>
+<body>
+<!-- Drives the real app in an iframe, the way a person would: sign in, work the drop,
+     open every report, visit every screen at desk and phone width. Run it with
+     `node App/scout/test/run.mjs`, or open this page from the local server to watch.
+     Results land in #result as JSON, which is what run.mjs reads. -->
+<iframe id="app" title="Scout under test"></iframe>
+<ol id="log"></ol>
+<pre id="result"></pre>
+<script>
+(async function () {
+  'use strict';
+  var results = [];
+  var frame = document.getElementById('app');
+  var W, D;                 // the app's window and document
+  var errors = [];
+
+  function record(name, ok, detail) {
+    results.push({ name: name, ok: !!ok, detail: ok ? '' : String(detail || '') });
+    var li = document.createElement('li');
+    li.className = ok ? 'pass' : 'fail';
+    li.textContent = (ok ? 'ok   ' : 'FAIL ') + name + (ok ? '' : ' :: ' + detail);
+    document.getElementById('log').appendChild(li);
+  }
+  function tick(ms) { return new Promise(function (r) { setTimeout(r, ms == null ? 40 : ms); }); }
+  function $(sel) { return D.querySelector(sel); }
+  function $$(sel) { return [].slice.call(D.querySelectorAll(sel)); }
+  function text() { var a = D.getElementById('app'); return a ? a.innerText : ''; }
+  async function click(el) { if (!el) return false; el.click(); await tick(); return true; }
+  async function key(k) {
+    D.body.dispatchEvent(new W.KeyboardEvent('keydown', { key: k, bubbles: true }));
+    await tick();
+  }
+
+  function load() {
+    return new Promise(function (resolve) {
+      frame.onload = function () {
+        W = frame.contentWindow; D = frame.contentDocument;
+        W.addEventListener('error', function (e) { errors.push(e.message); });
+        W.addEventListener('unhandledrejection', function (e) { errors.push('rejection: ' + (e.reason && e.reason.message || e.reason)); });
+        var ce = W.console.error.bind(W.console);
+        W.console.error = function () { errors.push([].join.call(arguments, ' ')); ce.apply(null, arguments); };
+        resolve();
+      };
+      frame.src = '../index.html';
+    });
+  }
+  async function width(px) {
+    frame.style.width = px + 'px';
+    frame.style.height = (px < 700 ? 812 : 900) + 'px';
+    await tick(80);
+  }
+
+  /* ------------------------------------------------------------ checks */
+
+  /* Words the copy rules (CLAUDE.md) ban from the product. Each is a synonym for a
+     state that already has one name, or internal vocabulary that belongs in the notes. */
+  var BANNED = [
+    [/confirmed missing/i, 'not there'], [/\bno data\b/i, 'not there / could not tell'],
+    [/could not (resolve|read|find)\b/i, 'could not tell'], [/\bunreadable\b/i, 'could not tell'],
+    [/\bunknown\b/i, 'could not tell'], [/\bN\/A\b/, 'could not tell'],
+    [/\bcut-?off\b/i, 'the bar'], [/\bfeed\b/i, 'the drop'], [/\bqueue\b/i, 'the drop'],
+    [/\bread it again\b/i, 'Open the report'], [/\bview details\b/i, 'Open the report'],
+    [/\blearn more\b/i, 'Open the report'],
+    [/\b(archived?|reject(ed)?|dismiss(ed)?)\b/i, 'promote / watch / pass'], /* "save" is fine for a brief or money */
+    [/\bdepth [123]\b/i, 'Sweep / Probe / Study'],
+    [/purchase intent/i, 'people asked where to buy'], [/demand indicators?/i, 'people asked where to buy'],
+    [/cadence decay/i, 'posting less'],
+    [/three-verb rule/i, 'tier 3'], [/§\s?\d/, 'tier 3'], [/\bdecision \d{2,}/i, 'tier 3']
+  ];
+
+  function hygiene(where) {
+    var t = text();
+    var junk = t.match(/\bundefined\b|\bNaN\b|\[object Object\]|\bnull\b|Infinity/);
+    record(where + ': no undefined/NaN/null in the text', !junk, junk && junk[0]);
+    var hits = [];
+    BANNED.forEach(function (b) {
+      var m = t.match(b[0]);
+      if (m) hits.push('"' + m[0] + '" (use ' + b[1] + ')');
+    });
+    record(where + ': copy follows the one-name rule', !hits.length, hits.join('; '));
+  }
+
+  function names(where) {
+    var bad = $$('button, a[href], [role=button], [role=link], [role=tab], input:not([type=hidden]), select, textarea')
+      .filter(function (el) {
+        if (el.closest('[hidden], [aria-hidden=true]')) return false;
+        var n = (el.getAttribute('aria-label') || el.getAttribute('title') || el.textContent || el.value || el.placeholder || '').trim();
+        if (!n && el.id) { var l = D.querySelector('label[for="' + el.id + '"]'); n = l ? l.textContent.trim() : ''; }
+        if (!n && el.closest('label')) n = el.closest('label').textContent.trim();
+        if (!n && el.getAttribute('aria-labelledby')) n = el.getAttribute('aria-labelledby');
+        return !n;
+      })
+      .map(function (el) { return el.tagName.toLowerCase() + '.' + (el.className || '').toString().split(' ')[0]; });
+    record(where + ': every control has a name', !bad.length, bad.slice(0, 6).join(', '));
+    var seen = {}, dup = [];
+    $$('[id]').forEach(function (el) { if (seen[el.id]) dup.push(el.id); seen[el.id] = 1; });
+    record(where + ': ids are unique', !dup.length, dup.slice(0, 6).join(', '));
+    var noalt = $$('img:not([alt])').length;
+    record(where + ': images have alt text', !noalt, noalt + ' without alt');
+  }
+
+  function overflow(where) {
+    var over = D.documentElement.scrollWidth - D.documentElement.clientWidth;
+    record(where + ': no sideways scroll', over <= 1, over + 'px wider than the screen');
+  }
+
+  function errorsSince(where, from) {
+    var fresh = errors.slice(from);
+    record(where + ': no script errors', !fresh.length, fresh.slice(0, 3).join(' | '));
+  }
+
+  async function view(v) {
+    var el = $('.rnav[data-view="' + v + '"]') || $('[data-act=view][data-view="' + v + '"]');
+    return click(el);
+  }
+  async function openHelp() {
+    await click($('[data-act=menu]'));
+    return click($('[data-act=help]'));
+  }
+  async function screen(where, go) {
+    var e0 = errors.length;
+    var ok = await go();
+    await tick();
+    if (!ok) { record(where + ': reachable', false, 'no control to open it'); return; }
+    hygiene(where); names(where); overflow(where); errorsSince(where, e0);
+  }
+
+  /* ------------------------------------------------------------ run */
+  try {
+    sessionStorage.clear();
+    try { localStorage.removeItem('scout-v5-theme'); } catch (e) {}
+    await width(1440);
+    await load();
+    await tick(200);
+
+    record('boot: the sign-in screen renders', !!$('form'), 'no form on first paint');
+    var form = $('form');
+    if (form) { form.requestSubmit ? form.requestSubmit() : form.submit(); await tick(120); }
+    record('sign-in: lands on the drop', !!$('.rnav[data-view=drop][aria-current=page]'), 'drop not current after sign-in');
+
+    /* Every brief's drop, and every report in it. */
+    var briefs = $$('[data-act=brief]').map(function (b) { return b.getAttribute('data-id') || b.getAttribute('data-brief'); });
+    record('drop: brief tabs are there', briefs.length >= 2, briefs.length + ' tabs');
+    for (var bi = 0; bi < briefs.length; bi++) {
+      var tab = $$('[data-act=brief]')[bi];
+      var label = tab.textContent.replace(/\s+/g, ' ').trim();
+      await click(tab);
+      await screen('drop [' + label + ']', async function () { return true; });
+
+      var rows = $$('.row[data-id]');
+      var head = text().match(/(\d+) creators? cleared the bar/);
+      if (head) record('drop [' + label + ']: header count matches the rows', +head[1] === rows.length, head[1] + ' in the header, ' + rows.length + ' rows');
+
+      var ids = rows.map(function (r) { return r.getAttribute('data-id'); });
+      for (var i = 0; i < ids.length; i++) {
+        var e0 = errors.length;
+        await click($('[data-act=report][data-id="' + ids[i] + '"]') || $('.row[data-id="' + ids[i] + '"] [data-act=report]'));
+        var where = 'report ' + ids[i];
+        record(where + ': opens', !!$('.rpt-nav, .headverbs'), 'no report chrome');
+        hygiene(where); names(where); errorsSince(where, e0);
+        var quotes = $$('blockquote.q p').map(function (p) { return p.textContent.trim().toLowerCase().replace(/\s+/g, ' '); });
+        var dq = quotes.filter(function (q, k) { return quotes.indexOf(q) !== k; });
+        record(where + ': each quote shown once', !dq.length, dq[0]);
+        await key('Escape');
+      }
+    }
+
+    /* The house brief's count must match Admin's. */
+    await click($$('[data-act=brief]')[0]);
+    var dropN = (text().match(/(\d+) creators? cleared the bar/) || [])[1];
+    await screen('admin', function () { return view('admin'); });
+    var adminN = (text().match(/(\d+) of \d+ clear it/) || [])[1];
+    record('admin: the bar count matches the drop', dropN != null && dropN === adminN, 'drop ' + dropN + ', admin ' + adminN);
+
+    await screen('watchlist', function () { return view('watchlist'); });
+    await screen('promoted', function () { return view('promoted'); });
+    await screen('passed', function () { return view('passed'); });
+    await screen('trends', function () { return view('trends'); });
+    await screen('help', openHelp);
+    await screen('new brief', function () { return click($('[data-act=newbrief]')); });
+
+    /* The loop: promote, undo; watch; pass, put back. */
+    await view('drop');
+    var first = $('.row[data-id]');
+    var fid = first && first.getAttribute('data-id');
+    await click($('.row[data-id="' + fid + '"] [data-act=promote]'));
+    var toast = $('#toast, .toast');
+    record('promote: shows an undo toast', !!toast && /undo/i.test(toast.textContent), 'no toast');
+    await click($('[data-act=toastundo]'));
+    await view('drop');
+    var back = $('.row[data-id="' + fid + '"] [data-act=promote]');
+    record('undo: the row can be decided again', !!back, 'promote button gone after undo');
+
+    await click($('.row[data-id="' + fid + '"] [data-act=passtray]'));
+    var reason = $('.passtray .reasons button');
+    await click(reason);
+    await view('passed');
+    record('pass: the name is on the passed list', text().indexOf(fid.replace(/^c_/, '')) !== -1 || !!$('[data-id="' + fid + '"]'), fid + ' not on Passed');
+    await click($('[data-act=unpass][data-id="' + fid + '"]') || $('[data-act=unpass]'));
+    await view('drop');
+    record('put back: the name returns to the drop', !!$('.row[data-id="' + fid + '"] [data-act=promote]'), fid + ' not back');
+
+    /* Keyboard: J moves the cursor, ? opens the shortcuts. */
+    await key('j');
+    record('keys: J highlights a row', !!$('.row--cur'), 'no .row--cur');
+    await key('?');
+    record('keys: ? opens the shortcuts', !!$('.keysheet'), 'no .keysheet');
+    await key('Escape');
+
+    /* Phone width. */
+    await width(375);
+    await screen('phone drop', function () { return view('drop'); });
+    await screen('phone report', function () { return click($('[data-act=report]')); });
+    await key('Escape');
+    await screen('phone watchlist', function () { return view('watchlist'); });
+    await screen('phone promoted', function () { return view('promoted'); });
+    await screen('phone passed', function () { return view('passed'); });
+    await screen('phone trends', function () { return view('trends'); });
+    await screen('phone admin', function () { return view('admin'); });
+    await screen('phone help', openHelp);
+    await screen('phone new brief', function () { return click($('[data-act=newbrief]')); });
+
+    /* Tablet width. */
+    await width(820);
+    await screen('tablet drop', function () { return view('drop'); });
+    await screen('tablet report', function () { return click($('[data-act=report]')); });
+    await key('Escape');
+    await screen('tablet trends', function () { return view('trends'); });
+  } catch (err) {
+    record('harness: ran to the end', false, err && (err.stack || err.message) || err);
+  }
+
+  var failed = results.filter(function (r) { return !r.ok; });
+  document.getElementById('result').textContent = JSON.stringify({ total: results.length, failed: failed.length, results: results });
+  document.title = failed.length ? 'FAILED ' + failed.length : 'PASSED';
+})();
+</script>
+</body>
+</html>
