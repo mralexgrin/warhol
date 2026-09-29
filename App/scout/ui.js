@@ -54,6 +54,10 @@
     return (h12 === 0 ? 12 : h12) + ':' + t.slice(3, 5) + ' ' + (h < 12 ? 'AM' : 'PM');
   }
   function clockZone(d) { return clock(d) + ' ' + ZONE; }
+  /* Two date forms, one job each (29 Sep 2026). shortDate ("5 Aug 26") on list rows,
+     evidence and anything read at a glance; longDate ("5 August 2026") only inside a full
+     sentence. The watchlist and Promoted rows used the long form while Passed used the
+     short one for the same kind of fact. */
   function longDate(d) {
     var t = parseISO(d);
     return t.getDate() + ' ' + MONTHS_LONG[t.getMonth()] + ' ' + t.getFullYear();

@@ -8,6 +8,8 @@ User-facing release notes. Newest first.
   then promote, watch or pass; the drop is done when every name has a decision. It links to *How a
   score is built*. **Got it** closes it for good in that browser.
 ### Improved
+- Watchlist and Promoted rows date things the way Passed does ("kept 5 Aug 26", not "kept 5 August
+  2026"). The long form is kept for full sentences.
 - One colour per state across Scout. On Trends, *not there* is now the same teal as on the report
   (it was violet, the colour Help keeps for the model's opinion), and *built* is neutral grey, as
   "Found it" is on the report. The heatmaps use a teal ramp, and every number on them is readable

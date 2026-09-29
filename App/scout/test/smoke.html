@@ -184,9 +184,15 @@
     var adminN = (text().match(/(\d+) of \d+ clear it/) || [])[1];
     record('admin: the bar count matches the drop', dropN != null && dropN === adminN, 'drop ' + dropN + ', admin ' + adminN);
 
-    await screen('watchlist', function () { return view('watchlist'); });
-    await screen('promoted', function () { return view('promoted'); });
-    await screen('passed', function () { return view('passed'); });
+    /* List rows date things the short way ("5 Aug 26"); the long form is for sentences. */
+    function rowDates(where) {
+      var long = $$('.plat1').map(function (e) { return e.textContent; })
+        .filter(function (t) { return /(January|February|March|April|June|July|August|September|October|November|December) \d{4}/.test(t); });
+      record(where + ': row dates use the short form', !long.length, long[0]);
+    }
+    await screen('watchlist', function () { return view('watchlist'); }); rowDates('watchlist');
+    await screen('promoted', function () { return view('promoted'); }); rowDates('promoted');
+    await screen('passed', function () { return view('passed'); }); rowDates('passed');
     await screen('trends', function () { return view('trends'); });
     await screen('help', openHelp);
     await screen('new brief', function () { return click($('[data-act=newbrief]')); });

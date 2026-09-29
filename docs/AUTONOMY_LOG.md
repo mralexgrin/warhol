@@ -12,12 +12,17 @@ Newest entries at the top. This file is the memory of the run: read it at the st
 - Demand classifier false positives (engine prompt). Left alone: AI prompt plus paid re-run.
 
 ## Current status
-- Last completed: #5 first-visit note
-- Next: #6 one date format per context
+- Last completed: #6 date formats
+- Next: #7 Admin denominator
 - Branch: autonomous/product-improvements (from phase7-report @ b48dda9)
 - Open PR: none (cannot push)
 
 ## Log
+### 2026-09-29: #6 One date format per context
+- What: the watchlist ("kept …") and Promoted ("promoted …") rows now use `shortDate`, as Passed does.
+  The rule is written above `longDate` in ui.js. The smoke test fails if any `.plat1` row line has a long
+  month name.
+- Verification: 269/269. Against the old app.js the new check fails on "kept 5 August 2026".
 ### 2026-09-29: #5 First-visit note on the drop
 - What: `introNote()` puts one dismissible line above the rows (the house brief and user briefs;
   not the tracked tab, an empty drop or a finished one). Its *How a score is built* opens Help. *Got

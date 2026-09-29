@@ -3329,7 +3329,7 @@
         '<div class="idtop"><h2 class="nm">' +
         '<button class="nmlink" data-act="report" data-id="' + c.id + '" data-from="watchlist">' + esc(c.name) + '</button>' +
         '</h2><span class="hd">' + esc(c.handle) + '</span></div>' +
-        '<span class="plat1">kept ' + esc(U.longDate(since)) + ' ' + DOT + ' ' + esc(win) + ' window</span>' +
+        '<span class="plat1">kept ' + esc(U.shortDate(since)) + ' ' + DOT + ' ' + esc(win) + ' window</span>' +
         '</div></div>' +
         /* What the watchlist watches is the trajectory block, because those are
            the lines that move. An alert quotes the trend, never the score
@@ -3413,7 +3413,7 @@
         '<div class="idtop"><h2 class="nm">' +
         '<button class="nmlink" data-act="report" data-id="' + c.id + '" data-from="promoted">' + esc(c.name) + '</button>' +
         '</h2><span class="hd">' + esc(c.handle) + '</span></div>' +
-        '<span class="plat1">promoted ' + esc(U.longDate(r.at)) + ' ' + DOT + ' ' + esc(r.by) + '</span>' +
+        '<span class="plat1">promoted ' + esc(U.shortDate(r.at)) + ' ' + DOT + ' ' + esc(r.by) + '</span>' +
         '</div></div>' +
         '<p class="oline' + (o && o.code ? '' : ' oline--none') + '">' + esc(outcomeLine(c)) + '</p>' +
         '</div>' +
