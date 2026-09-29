@@ -12,12 +12,20 @@ Newest entries at the top. This file is the memory of the run: read it at the st
 - Demand classifier false positives (engine prompt). Left alone: AI prompt plus paid re-run.
 
 ## Current status
-- Last completed: #8 tier-3 copy
-- Next: reflect (review pending), then #9 accessibility
+- Last completed: #9 accessibility checks
+- Next: reflect (review pending), then #10 standalone Trends board
 - Branch: autonomous/product-improvements (from phase7-report @ b48dda9)
 - Open PR: none (cannot push)
 
 ## Log
+### 2026-09-29: #9 Automated accessibility checks
+- What: the smoke suite now checks WCAG AA text contrast on every screen (the nearest opaque background
+  per text node, 3:1 for large text; skips sr-only, deliberately dimmed rows, and text over images or
+  gradients) and one visible h1 per screen. A dark-theme pass repeats the screen checks. 389 checks.
+- Found: the selected nav item's count chip (white on a 24% white tint over violet) was 3.98:1. It is now a dark tint.
+  Nothing else in either theme falls below AA.
+- Not automated: focus visibility. Alloy has a global `:focus-visible` ring; the only two outline
+  removals are programmatic focus targets (h1[tabindex=-1], .adsec).
 ### 2026-09-29: #8 Tier-3 copy on the watchlist and Admin
 - What: "does not save money" was on Admin twice (the cost card and Sources). It is now said once, on
   Sources, as a fact. "The confidence floor cannot be lowered to save money" became "stays at 60%

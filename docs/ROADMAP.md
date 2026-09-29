@@ -10,7 +10,6 @@ Notes/PLAN-SCOUT-INTUITIVE-2026-09-28.md.
 ## Next up
 | # | Item | Why (user problem) | Impact | Effort | Tier | Receipt (if FAST) |
 |---|------|--------------------|--------|--------|------|-------------------|
-| 9 | Automated accessibility checks + fixes | Unlabelled buttons, duplicate ids and focus traps would pass unnoticed | M | M | [STRONG] | |
 | 10 | Standalone Trends board: count each comment once | App/trends still shows duplicate-inflated demand | M | M | [STRONG] | |
 | 11 | Help view review against the new screens | Help predates Promoted, Shortcuts, the new Trends | M | S | [STRONG] | |
 
@@ -25,6 +24,7 @@ Notes/PLAN-SCOUT-INTUITIVE-2026-09-28.md.
   prompt; re-running costs money).
 
 ## Done
+- #9 Automated accessibility checks (29 Sep 2026)
 - #8 Tier-3 copy on the watchlist and Admin (29 Sep 2026)
 - #7 One pool for every count (29 Sep 2026)
 - #6 One date format per context (29 Sep 2026)
