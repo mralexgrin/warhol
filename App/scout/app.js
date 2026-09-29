@@ -5396,6 +5396,18 @@
       else history.pushState(entry, '', r);
     } catch (e) { /* some file:// hosts refuse history; the app still works without it */ }
   }
+  /* Printing always uses the light theme: dark panels print as ink-heavy blocks,
+     or vanish when the browser drops backgrounds. Restored straight after. */
+  var themeBeforePrint = null;
+  window.addEventListener('beforeprint', function () {
+    themeBeforePrint = document.documentElement.getAttribute('data-theme');
+    document.documentElement.setAttribute('data-theme', 'light');
+  });
+  window.addEventListener('afterprint', function () {
+    if (themeBeforePrint) document.documentElement.setAttribute('data-theme', themeBeforePrint);
+    themeBeforePrint = null;
+  });
+
   window.addEventListener('popstate', function (e) {
     if (state.phase === 'signedout') return;
     var r = (e.state && e.state.scout) || location.hash;

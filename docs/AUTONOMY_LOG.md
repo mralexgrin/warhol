@@ -13,12 +13,19 @@ Newest entries at the top. This file is the memory of the run: read it at the st
 
 ## Current status
 - Last completed: #9 accessibility checks
-- Last: #12 Back/Forward and links
-- Next: #13 print sheet for the report
+- Last: #13 print sheet
+- Next: fresh re-audit; the roadmap is empty apart from ideas and human flags
 - Branch: autonomous/product-improvements (from phase7-report @ b48dda9)
 - Open PR: none (cannot push)
 
 ## Log
+### 2026-09-29: #13 Print sheet for the report
+- What: an `@media print` block in scout-v52.css unclips .slab/.main, hides the rail, verbs, report nav,
+  toast, shortcuts and first-visit note, and avoids page breaks inside blocks. beforeprint/afterprint in
+  app.js pin the light theme and restore it afterwards.
+- Verification: the pane applied the print rules on screen. #main showed its full 2,744 px and the rail
+  was hidden. Smoke adds 4 print checks (403/403). The "light theme" check runs while already in light,
+  so it is weak. An actual PDF was not produced (headless Chrome cannot sign in).
 ### 2026-09-29: #12 Back/Forward and a link for every screen (new item)
 - Found on re-audit: no history handling at all. The browser's Back (the swipe on a phone) left the app
   from anywhere, and nothing could be linked.

@@ -10,7 +10,6 @@ Notes/PLAN-SCOUT-INTUITIVE-2026-09-28.md.
 ## Next up
 | # | Item | Why (user problem) | Impact | Effort | Tier | Receipt (if FAST) |
 |---|------|--------------------|--------|--------|------|-------------------|
-| 13 | Print sheet for the report | A desk shares evidence; printing a report today prints the app chrome | M | S | [STRONG] | |
 
 ## Ideas (unranked)
 - Show the seed's age plainly for portfolio visitors ("a frozen day: 14 Aug 2026").
@@ -22,6 +21,7 @@ Notes/PLAN-SCOUT-INTUITIVE-2026-09-28.md.
   prompt; re-running costs money).
 
 ## Done
+- #13 Print sheet for the report (29 Sep 2026)
 - #12 Back/Forward and a link for every screen (29 Sep 2026)
 - #11 Help review: closed, no change (Help covers the model, not screens; hidden Pressure is a documented demo choice)
 - #10 Standalone Trends board: closed, not a defect (its build already dedupes; see log)

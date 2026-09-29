@@ -3255,3 +3255,23 @@ button, input, select, textarea { font-family: inherit; }
   .intro { flex-direction: column; align-items: stretch; gap: var(--s3); }
   .intro-x { align-self: flex-start; min-height: 44px; }
 }
+
+/* ================================================================ PRINT
+   29 Sep 2026. A report prints as the evidence alone. Before this, #main was a
+   fixed-height scroll box inside the slab, so printing a report gave one screen
+   of it with the rail beside it. The theme is pinned to light while printing
+   (beforeprint in app.js), so the tokens below are the light ones. */
+@media print {
+  @page { margin: 14mm 12mm; }
+  html, body { background: #FFFFFF !important; }
+  body { padding: 0; }
+  .slab, .slab--app { display: block; height: auto; max-width: none; margin: 0; border-radius: 0;
+    box-shadow: none; background: #FFFFFF; overflow: visible; }
+  .slab--app > .main { overflow: visible; height: auto; padding: 0; }
+  .railcol, .compact, .rpt-nav, .headverbs, .toast, .keysheet, .keyhint, .intro, .skip,
+  .cbar, .acts, .doneacts, .backbtn, .deft, .keysheet-bg { display: none !important; }
+  .claim, .work, .p, blockquote, figure, tr { break-inside: avoid; }
+  h1, h2, h3, .ch { break-after: avoid; }
+  .wrap { max-width: none; }
+  * { animation: none !important; transition: none !important; }
+}

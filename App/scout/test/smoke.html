@@ -309,6 +309,27 @@
     record('keys: ? opens the shortcuts', !!$('.keysheet'), 'no .keysheet');
     await key('Escape');
 
+    /* Print: the report's @media print rules, applied on screen, must unclip #main and
+       drop the app's chrome. (Headless print needs a signed-in page, which this is.) */
+    await view('drop');
+    await click($('[data-act=report]'));
+    var printCss = '';
+    [].forEach.call(D.styleSheets, function (sh) {
+      try { [].forEach.call(sh.cssRules, function (r) {
+        if (r.media && r.media.mediaText === 'print') [].forEach.call(r.cssRules, function (x) { if (!/^@page/.test(x.cssText)) printCss += x.cssText + '\n'; });
+      }); } catch (e) {}
+    });
+    record('print: the stylesheet has print rules', printCss.length > 100, printCss.length + ' chars');
+    var ps = D.createElement('style'); ps.textContent = printCss; D.head.appendChild(ps);
+    W.dispatchEvent(new W.Event('beforeprint'));
+    var pm = D.getElementById('main');
+    record('print: the whole report flows onto the page', pm.scrollHeight - pm.clientHeight <= 1, (pm.scrollHeight - pm.clientHeight) + 'px clipped');
+    var chrome = ['.railcol', '.headverbs', '.rpt-nav'].filter(function (sel) { var e = $(sel); return e && W.getComputedStyle(e).display !== 'none'; });
+    record('print: no app chrome', !chrome.length, chrome.join(', ') + ' still shown');
+    record('print: pinned to the light theme', D.documentElement.getAttribute('data-theme') === 'light', D.documentElement.getAttribute('data-theme'));
+    ps.remove(); W.dispatchEvent(new W.Event('afterprint'));
+    await key('Escape');
+
     /* Back and Forward move between screens; every screen has a link. */
     await view('drop');
     var rid = $('.row[data-id]').getAttribute('data-id');

@@ -4,6 +4,8 @@ User-facing release notes. Newest first.
 
 ## 29 Sep 2026
 ### Added
+- **Reports print cleanly.** Print a report (⌘P) and you get the evidence alone, in full, in the
+  light theme: no sidebar, no buttons, and no blocks split across pages.
 - **Back and Forward work.** The browser's Back button (the swipe on a phone) used to leave Scout
   from any screen. It now steps back through the screens you visited, a report back to the list you
   opened it from. Every screen has its own link (for example `#/watchlist` or `#/report/<name>`), so a
