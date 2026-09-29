@@ -18,6 +18,30 @@ Newest entries at the top. This file is the memory of the run: read it at the st
 - Open PR: none (cannot push)
 
 ## Log
+### 2026-09-29: Reflect after items 1–9
+- Shipped: landing links, smoke suite with copy lint, one colour per state, first-visit note, date
+  forms, one pool for counts, tier-3 copy, accessibility checks, plus the review fixes. 12 commits.
+- Re-audit with fresh eyes: the smoke suite (393 checks, 3 s) is the lever. Each time it grew, it found
+  a real defect that eyes had missed (`_comment`, the count pools, the Passed dates, the dark `?`).
+  Next time, widen it before the UI work, not after.
+- Process lesson: my ad-hoc `String.replace` edits failed silently twice (a `$` in the replacement,
+  and a heading that didn't match), and the second one dropped three CHANGELOG entries. Every scripted
+  edit now goes through a helper that throws when its anchor is missing.
+- Re-prioritised: #10 (standalone Trends board) stays, but is it still worth a separate board? The
+  in-app Trends supersedes it, so the smallest honest fix is preferred. #11 Help review next.
+  Added to ideas: a print sheet for the report; show the seed's frozen date to visitors.
+
+## Model usage
+### Items 1–9
+- Calls per tier: CMD ~60 (tests, greps, validators, headless runs), FAST 0, STRONG main session plus 1
+  code-reviewer subagent (inherit), TOP 0.
+- Escalations: none.
+- Spot-check failures: 0 of 10 review receipts were wrong (all 10 grepped or reproduced).
+- Routing changes: none. No [FAST] use yet: the work was UI judgment and verification, and the
+  bounded scans a Haiku agent could do were cheaper as a single grep.
+- Unexpectedly expensive: the first headless runs took 240 s each, because Chrome lingers after
+  --dump-dom. Now killed on `</html>`, 3 s a run.
+
 ### 2026-09-29: Code review of items 1–9, and the fixes
 - Review: code-reviewer subagent (inherit model) over `.autonomy/diff.patch`. 10 findings with receipts.
   I checked all the receipts (grep plus a `set -e` repro), and none was false. Fixed all 10:
