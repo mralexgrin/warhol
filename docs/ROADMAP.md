@@ -10,12 +10,11 @@ Notes/PLAN-SCOUT-INTUITIVE-2026-09-28.md.
 ## Next up
 | # | Item | Why (user problem) | Impact | Effort | Tier | Receipt (if FAST) |
 |---|------|--------------------|--------|--------|------|-------------------|
-| 11 | Help view review against the new screens | Help predates Promoted, Shortcuts, the new Trends | M | S | [STRONG] | |
+| 13 | Print sheet for the report | A desk shares evidence; printing a report today prints the app chrome | M | S | [STRONG] | |
 
 ## Ideas (unranked)
 - Show the seed's age plainly for portfolio visitors ("a frozen day: 14 Aug 2026").
-- Load the 1.6 MB seed after the sign-in screen paints.
-- Print stylesheet for the report (a one-page evidence sheet).
+- (dropped) Load the seed later: measured 194 KB gzipped on Pages, about 400 KB for the whole app.
 
 ## Flagged, not scheduled (need a human)
 - Sign-in shows a work email and the demo password on a public page.
@@ -23,6 +22,8 @@ Notes/PLAN-SCOUT-INTUITIVE-2026-09-28.md.
   prompt; re-running costs money).
 
 ## Done
+- #12 Back/Forward and a link for every screen (29 Sep 2026)
+- #11 Help review: closed, no change (Help covers the model, not screens; hidden Pressure is a documented demo choice)
 - #10 Standalone Trends board: closed, not a defect (its build already dedupes; see log)
 - #9 Automated accessibility checks (29 Sep 2026)
 - #8 Tier-3 copy on the watchlist and Admin (29 Sep 2026)

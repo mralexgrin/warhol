@@ -13,12 +13,31 @@ Newest entries at the top. This file is the memory of the run: read it at the st
 
 ## Current status
 - Last completed: #9 accessibility checks
-- Last: #10 closed (not a defect)
-- Next: #11 Help review
+- Last: #12 Back/Forward and links
+- Next: #13 print sheet for the report
 - Branch: autonomous/product-improvements (from phase7-report @ b48dda9)
 - Open PR: none (cannot push)
 
 ## Log
+### 2026-09-29: #12 Back/Forward and a link for every screen (new item)
+- Found on re-audit: no history handling at all. The browser's Back (the swipe on a phone) left the app
+  from anywhere, and nothing could be linked.
+- What: `routeOf/applyRoute/syncRoute` plus a popstate handler in app.js. `#/<view>` for the lists,
+  Trends, Admin, Help and New brief; `#/report/<id>` and `#/outreach/<id>`. The first screen replaces
+  the entry, and later screen changes push. Back restores the report's `from`. A link wins over the
+  restored session; before sign-in it waits in `pendingRoute`. An unknown id or view is ignored.
+- Decision: hash routes, not paths, so it works on Pages and from file:// without a server rewrite.
+  In-app back buttons still push, which is ordinary SPA behaviour.
+- Harness: the frame shares the tab's history, so Back is only pressed once the app has pushed. Against
+  the old app, the unguarded Back navigated the test page itself away. Loads now use `?load=n`, because a
+  hash-only src change does not reload the frame. A 90 s watchdog reports where a hung run stopped.
+- Verification: 399/399. Against the old app.js: 3 history failures in 4 s. In the browser pane, the real
+  Back button goes from a report to the watchlist it was opened from. (The pane first served a cached
+  app.js. Worth knowing: Pages caches for 10 min after a deploy.)
+- Process slip: the commit line sat after a heredoc, outside the `&&` chain, so 895d8f6 went in
+  before a docs edit threw. The code was already verified; the docs followed in the next commit.
+- #11 Help review: closed with no change. Help explains the model, not screens. The hidden Pressure
+  claim (SHOW_PRESSURE=false) is a documented demo choice, still scored and still explained.
 ### 2026-09-29: #10 closed as not a defect
 - Checked: `App/trends/build-data.mjs` already keeps one ask per creator+quote (2,935 raw → 474 on
   today's snapshots). The engine's normalised key would drop 3 more (0.6%). My 28 Sep note ("still counts
