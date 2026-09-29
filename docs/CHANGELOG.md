@@ -4,6 +4,10 @@ User-facing release notes. Newest first.
 
 ## 29 Sep 2026
 ### Added
+- **Back and Forward work.** The browser's Back button (the swipe on a phone) used to leave Scout
+  from any screen. It now steps back through the screens you visited, a report back to the list you
+  opened it from. Every screen has its own link (for example `#/watchlist` or `#/report/<name>`), so a
+  report can be bookmarked or sent, and a link opened before signing in lands there after sign-in.
 - **A first-visit note on the drop.** One line above the names: open any name for the evidence,
   then promote, watch or pass; the drop is done when every name has a decision. It links to *How a
   score is built*. **Got it** closes it for good in that browser.

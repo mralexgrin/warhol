@@ -5347,7 +5347,65 @@
     bindTabs();
     restoreFocus(key, viewChanged);
     persist();
+    syncRoute();
   }
+
+  /* 29 Sep 2026 — THE BROWSER'S BACK BUTTON, AND A LINK FOR EVERY SCREEN.
+     Scout kept its place in sessionStorage only, so the browser's Back (the
+     swipe on a phone) left the app from any screen, a report included, and no
+     report could be linked to. Each screen now has a hash (#/watchlist,
+     #/report/<id>); moving between screens adds a history entry, and Back and
+     Forward move between them. A link opened while signed out lands on its
+     screen after sign-in. Brief tabs, trays and disclosures are not screens and
+     add nothing to the history. */
+  var ROUTE_VIEWS = { drop: 1, watchlist: 1, promoted: 1, passed: 1, trends: 1, admin: 1, help: 1, newbrief: 1 };
+  var routing = false;        // true while a Back/Forward is being applied
+  var pendingRoute = null;    // a link that arrived before sign-in
+
+  function routeOf() {
+    if (state.phase === 'signedout') return '';
+    if (state.view === 'report' && state.reportId) return '#/report/' + encodeURIComponent(state.reportId);
+    if (state.view === 'outreach' && state.outreachId) return '#/outreach/' + encodeURIComponent(state.outreachId);
+    return ROUTE_VIEWS[state.view] ? '#/' + state.view : '';
+  }
+  /* Sets state from a hash; returns false (and changes nothing) for one that
+     names no screen or no creator we hold. */
+  function applyRoute(hash, from) {
+    var m = String(hash || '').match(/^#\/([a-z]+)(?:\/(.+))?$/);
+    if (!m) return false;
+    var id = null;
+    if (m[2]) { try { id = decodeURIComponent(m[2]); } catch (e) { return false; } }
+    if (m[1] === 'report' || m[1] === 'outreach') {
+      if (!id || !W.byId[id]) return false;
+      if (m[1] === 'report') { state.reportId = id; state.open = {}; } else state.outreachId = id;
+      if (from && ROUTE_VIEWS[from]) state.from = from;
+      else if (!ROUTE_VIEWS[state.from]) state.from = 'drop';
+      state.view = m[1];
+      return true;
+    }
+    if (!ROUTE_VIEWS[m[1]]) return false;
+    state.view = m[1];
+    return true;
+  }
+  function syncRoute() {
+    var r = routeOf();
+    if (!r || location.hash === r) return;
+    try {
+      var entry = { scout: r, from: state.from };
+      if (routing || !(history.state && history.state.scout)) history.replaceState(entry, '', r);
+      else history.pushState(entry, '', r);
+    } catch (e) { /* some file:// hosts refuse history; the app still works without it */ }
+  }
+  window.addEventListener('popstate', function (e) {
+    if (state.phase === 'signedout') return;
+    var r = (e.state && e.state.scout) || location.hash;
+    routing = true;
+    if (applyRoute(r, e.state && e.state.from)) {
+      if (state.keys) state.keys = false;
+      go(state.view);
+    }
+    routing = false;
+  });
 
   /* The fade and the arrows are driven by measurement, never by assumption: a
      row that fits shows neither, and each end hides its own affordance when
@@ -6002,6 +6060,8 @@
       state.gateError = null; state.gateShow = false;
       state.gateEmail = null; state.gatePass = null;
       state.phase = 'app'; state.asOf = null; state.firstRun = false;
+      if (pendingRoute && applyRoute(pendingRoute)) { pendingRoute = null; go(state.view); return; }
+      pendingRoute = null;
       go('drop');
       return;
     }
@@ -6409,6 +6469,11 @@
   })();
 
   restore();
+  /* A link wins over the restored session; before sign-in it waits for it. */
+  if (location.hash) {
+    if (state.phase === 'signedout') pendingRoute = location.hash;
+    else applyRoute(location.hash);
+  }
   render();
   /* Asked once, now, while the tab is certainly in front of somebody — see
      askEngine. Nothing waits on it: the answer lands long before a brief has

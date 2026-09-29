@@ -42,7 +42,8 @@
     await tick();
   }
 
-  function load() {
+  var loads = 0;
+  function load(hash) {
     return new Promise(function (resolve) {
       frame.onload = function () {
         W = frame.contentWindow; D = frame.contentDocument;
@@ -57,7 +58,8 @@
         W.console.error = function () { errors.push([].join.call(arguments, ' ')); ce.apply(null, arguments); };
         resolve();
       };
-      frame.src = '../index.html';
+      /* A new query each time: changing only the hash would not reload the frame. */
+      frame.src = '../index.html?load=' + (++loads) + (hash || '');
     });
   }
   async function width(px) {
@@ -186,6 +188,23 @@
   }
 
   /* ------------------------------------------------------------ run */
+  /* A step that never returns (a frame that navigated away, a load that never fires)
+     would otherwise hang until run.mjs gives up. After 90s the page reports what it
+     has, with a failure naming the last check that passed. */
+  var finished = false;
+  function finish() {
+    if (finished) return;
+    finished = true;
+    var failed = results.filter(function (r) { return !r.ok; });
+    document.getElementById('result').textContent = JSON.stringify({ total: results.length, failed: failed.length, results: results });
+    document.title = failed.length ? 'FAILED ' + failed.length : 'PASSED';
+  }
+  setTimeout(function () {
+    if (finished) return;
+    var last = results.length ? results[results.length - 1].name : 'nothing';
+    record('harness: finished within 90s', false, 'stuck after "' + last + '"');
+    finish();
+  }, 90000);
   try {
     sessionStorage.clear();
     try { localStorage.removeItem('scout-v5-theme'); localStorage.removeItem('scout-intro-seen'); } catch (e) {}
@@ -290,6 +309,30 @@
     record('keys: ? opens the shortcuts', !!$('.keysheet'), 'no .keysheet');
     await key('Escape');
 
+    /* Back and Forward move between screens; every screen has a link. */
+    await view('drop');
+    var rid = $('.row[data-id]').getAttribute('data-id');
+    await click($('[data-act=report][data-id="' + rid + '"]'));
+    record('history: a report has its own link', W.location.hash === '#/report/' + encodeURIComponent(rid), 'hash is ' + W.location.hash);
+    /* The frame shares this tab's history. If the app pushed nothing, Back would take
+       this test page itself away, so it is only pressed once an app entry exists. */
+    var pushed = !!(W.history.state && W.history.state.scout);
+    record('history: opening a report adds a history entry', pushed, 'history.state is ' + JSON.stringify(W.history.state));
+    if (pushed) {
+    W.history.back(); await tick(150);
+    record('history: Back from a report returns to the drop', !!$('.rnav[data-view=drop][aria-current=page]') && !!$('.row[data-id]') && W.location.hash === '#/drop', 'hash ' + W.location.hash);
+    W.history.forward(); await tick(150);
+    record('history: Forward reopens the report', !!$('.rpt-nav, .headverbs') && W.location.hash.indexOf('#/report/') === 0, 'hash ' + W.location.hash);
+    }
+    await load('#/watchlist'); await tick(200);
+    if ($('form')) { $('form').requestSubmit(); await tick(120); }
+    record('history: a link to the watchlist opens the watchlist', (($('#app h1') || {}).textContent || '') === 'Watchlist', 'h1 is ' + (($('#app h1') || {}).textContent));
+    await load('#/report/nobody'); await tick(200);
+    if ($('form')) { $('form').requestSubmit(); await tick(120); }
+    record('history: a link to an unknown name falls back safely', !!$('#app h1') && allErrors().length === 0, 'errors: ' + allErrors().join(' | '));
+    await load('#/drop'); await tick(200);
+    if ($('form')) { $('form').requestSubmit(); await tick(120); }
+
     /* Phone width. */
     await width(375);
     await screen('phone drop', function () { return view('drop'); });
@@ -345,9 +388,7 @@
     record('harness: ran to the end', false, err && (err.stack || err.message) || err);
   }
 
-  var failed = results.filter(function (r) { return !r.ok; });
-  document.getElementById('result').textContent = JSON.stringify({ total: results.length, failed: failed.length, results: results });
-  document.title = failed.length ? 'FAILED ' + failed.length : 'PASSED';
+  finish();
 })();
 </script>
 </body>
