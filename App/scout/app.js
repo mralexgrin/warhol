@@ -89,6 +89,7 @@
     briefId: 'b_house',
     asOf: null,                 // always today. The rewind is removed.
     firstRun: false,            // was: show January 2024 once. Nothing reads it now.
+    introSeen: readIntroSeen(), // the one-line note for a first visit; per browser, see introNote
     reportId: null,
     from: 'drop',
     outreachId: null,
@@ -1416,8 +1417,25 @@
         '</p></div>';
     }
 
-    return lens + head + chips + runbar + progress + done0 +
+    return lens + head + chips + introNote(b, list, done0) + runbar + progress + done0 +
       '<div class="listwrap">' + rows + '</div>' + below;
+  }
+
+  /* 29 Sep 2026 — A FIRST VISIT GETS ONE LINE. Scout is also a public portfolio
+     piece, and a visitor who signs in lands on scored names with no word on what
+     to do with them. One line, above the rows, that says what the verbs are for
+     and points at Help for the rest. Closed once, it stays closed in this
+     browser (localStorage, not the session: a reload should not bring it back). */
+  function readIntroSeen() {
+    try { return localStorage.getItem('scout-intro-seen') === '1'; } catch (e) { return false; }
+  }
+  function introNote(b, list, done0) {
+    if (state.introSeen || b.tracked || !list.length || done0) return '';
+    return '<aside class="intro" aria-label="New here">' +
+      '<p><b>New here?</b> Open any name for the evidence behind its score, then promote, watch or ' +
+      'pass it. The drop is done when every name has a decision. ' +
+      '<button class="lnk" data-act="help">How a score is built</button></p>' +
+      '<button class="btn btn--ghost btn--sm intro-x" data-act="introdone">Got it</button></aside>';
   }
 
   /* v5.9 — WHEN HALF THE DROP LEADS WITH AN ABSENCE, SAY WHOSE ABSENCE IT IS.
@@ -5676,6 +5694,14 @@
        The scroll is deferred one frame rather than done here: go() re-renders
        the whole DOM and then resets #main's scrollTop to 0, so anything that
        scrolls before that runs is immediately undone. */
+    if (act === 'introdone') {
+      state.introSeen = true;
+      try { localStorage.setItem('scout-intro-seen', '1'); } catch (e) { /* file:// or private mode */ }
+      render();
+      var h1 = document.querySelector('#main h1');
+      if (h1) { h1.setAttribute('tabindex', '-1'); h1.focus(); }
+      return;
+    }
     if (act === 'help') {
       if (state.view !== 'help') state.helpFrom = state.view;
       var hs = el.getAttribute('data-sec');

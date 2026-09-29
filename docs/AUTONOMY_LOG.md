@@ -12,12 +12,23 @@ Newest entries at the top. This file is the memory of the run: read it at the st
 - Demand classifier false positives (engine prompt). Left alone: AI prompt plus paid re-run.
 
 ## Current status
-- Last completed: #4 one colour per state
-- Next: #5 first-run orientation
+- Last completed: #5 first-visit note
+- Next: #6 one date format per context
 - Branch: autonomous/product-improvements (from phase7-report @ b48dda9)
 - Open PR: none (cannot push)
 
 ## Log
+### 2026-09-29: #5 First-visit note on the drop
+- What: `introNote()` puts one dismissible line above the rows (the house brief and user briefs;
+  not the tracked tab, an empty drop or a finished one). Its *How a score is built* opens Help. *Got
+  it* sets `localStorage['scout-intro-seen']` and moves focus to the h1.
+- Why: portfolio visitors sign in to scored names with nothing saying what to do.
+- Decision: one line rather than a tour or a modal. DESIGN-NOTES records how hard the team fought
+  chrome above the first card (477px measured in v5.4). It costs about 60px at 1440. The note states
+  the task and leaves the model's explanation to Help (copy rule tier 2). Kept out of PERSIST:
+  sessionStorage would bring it back in every new tab.
+- Verification: smoke checks that it shows on the first visit, *Got it* closes it and it stays closed; no
+  overflow at 375; screenshots at 1440 and 375.
 ### 2026-09-29: #4 One colour per state
 - What: Trends' *not there* goes from violet (#5A4CA3, which is --lilac-d) to the counted teal
   (#00806A / #1DAC8E dark). *Built* goes from green to neutral (#A9A5B8 / #6E6A7D). The heatmap ramps

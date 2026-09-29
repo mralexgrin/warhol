@@ -3236,3 +3236,17 @@ button, input, select, textarea { font-family: inherit; }
 .trg-peak { background: var(--tc-count); box-shadow: 0 0 0 3px color-mix(in srgb, var(--tc-count) 22%, transparent); }
 .trg-cap, .trg-sparkx, .trg-curvex { font-size: var(--fs-1); }
 .trg-curve svg path[stroke] { stroke: var(--tc-count); }
+
+/* ================================================================ FIRST VISIT
+   One line above the rows, closed for good with "Got it" (29 Sep 2026). */
+.intro { display: flex; align-items: center; gap: var(--s4); margin-top: var(--s4);
+  padding: 10px 12px 10px var(--s4); background: var(--panel-2); border: 1px solid var(--line);
+  border-radius: var(--r-md); }
+.intro p { margin: 0; flex: 1; min-width: 0; font-size: var(--fs-3); line-height: 1.5; color: var(--text-2); }
+.intro p b { color: var(--text); }
+.intro .lnk { color: var(--text); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.intro-x { flex: none; }
+@media (max-width: 720px) {
+  .intro { flex-direction: column; align-items: stretch; gap: var(--s3); }
+  .intro-x { align-self: flex-start; min-height: 44px; }
+}

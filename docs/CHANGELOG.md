@@ -3,6 +3,10 @@
 User-facing release notes. Newest first.
 
 ## 29 Sep 2026
+### Added
+- **A first-visit note on the drop.** One line above the names: open any name for the evidence,
+  then promote, watch or pass; the drop is done when every name has a decision. It links to *How a
+  score is built*. **Got it** closes it for good in that browser.
 ### Improved
 - One colour per state across Scout. On Trends, *not there* is now the same teal as on the report
   (it was violet, the colour Help keeps for the model's opinion), and *built* is neutral grey, as

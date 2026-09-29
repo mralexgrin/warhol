@@ -139,7 +139,7 @@
   /* ------------------------------------------------------------ run */
   try {
     sessionStorage.clear();
-    try { localStorage.removeItem('scout-v5-theme'); } catch (e) {}
+    try { localStorage.removeItem('scout-v5-theme'); localStorage.removeItem('scout-intro-seen'); } catch (e) {}
     await width(1440);
     await load();
     await tick(200);
@@ -147,6 +147,7 @@
     record('boot: the sign-in screen renders', !!$('form'), 'no form on first paint');
     var form = $('form');
     if (form) { form.requestSubmit ? form.requestSubmit() : form.submit(); await tick(120); }
+    record('first visit: the drop shows the New here note', !!$('.intro'), 'no .intro');
     record('sign-in: lands on the drop', !!$('.rnav[data-view=drop][aria-current=page]'), 'drop not current after sign-in');
 
     /* Every brief's drop, and every report in it. */
@@ -237,6 +238,15 @@
     await screen('tablet report', function () { return click($('[data-act=report]')); });
     await key('Escape');
     await screen('tablet trends', function () { return view('trends'); });
+
+    /* The first-visit note closes for good. */
+    await width(1440);
+    await view('drop');
+    record('first visit: the note is still there until closed', !!$('.intro'), 'no .intro before Got it');
+    await click($('[data-act=introdone]'));
+    record('first visit: Got it closes the note', !$('.intro'), '.intro still on screen');
+    await view('watchlist'); await view('drop');
+    record('first visit: it stays closed', !$('.intro'), '.intro came back');
   } catch (err) {
     record('harness: ran to the end', false, err && (err.stack || err.message) || err);
   }
