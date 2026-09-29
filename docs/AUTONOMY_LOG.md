@@ -12,12 +12,27 @@ Newest entries at the top. This file is the memory of the run: read it at the st
 - Demand classifier false positives (engine prompt). Left alone: AI prompt plus paid re-run.
 
 ## Current status
-- Last completed: #2/#3 smoke tests and copy lint
-- Next: #4 one colour per state
+- Last completed: #4 one colour per state
+- Next: #5 first-run orientation
 - Branch: autonomous/product-improvements (from phase7-report @ b48dda9)
 - Open PR: none (cannot push)
 
 ## Log
+### 2026-09-29: #4 One colour per state
+- What: Trends' *not there* goes from violet (#5A4CA3, which is --lilac-d) to the counted teal
+  (#00806A / #1DAC8E dark). *Built* goes from green to neutral (#A9A5B8 / #6E6A7D). The heatmap ramps
+  are now teal. The report charts use the same token (--tc-count). The matrix caption no longer
+  says "darker", which was backwards in dark mode.
+- Why: Help defines the colours: "Teal is counted… Lilac is judged". The report follows it (teal
+  vmark, lilac on model-judged quotes). Trends used lilac for a counted fact.
+- Decision: I resolved the open question from 28 Sep ("report green vs Trends violet") in favour of
+  the language Help already states, rather than repainting the report. Alternative: violet
+  everywhere, but that would break Help's rule and the lilac *judged* tags.
+- Validation: dataviz validator. The pair passes CVD (16.9 light, 13.5 dark) and normal vision.
+  Built's chroma "fails" by design, as the neutral half of an accent-plus-grey pair; its 2.4:1 on white is
+  relieved by the bar counts and the table view. Ramps pass monotone, step gap, light-end and
+  single-hue checks in both themes. Every cell's ink is at least 4.5:1 (dark theme: only q0 takes white).
+- Verification: computed styles in both themes, Trends screenshots, check.sh all green.
 ### 2026-09-29: #2/#3 Scout smoke tests with a copy lint
 - What: `App/scout/test/smoke.html` drives the real app in an iframe (sign-in, 3 briefs, all 12
   reports, every list, Trends, Admin, Help, New brief, the promote/undo and pass/put-back loop,

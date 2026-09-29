@@ -2574,14 +2574,22 @@ blockquote.q .src .m { font-size: var(--fs-1); color: var(--text-3); }
    surface it appears on, because it is an absence of knowledge and not a
    value. It has to survive greyscale, forced colours and a screenshot.
    ========================================================================== */
+/* 29 Sep 2026: ONE COLOUR PER STATE, the language Help states ("teal is counted,
+   lilac is judged, butter is attention"). Not there is a counted fact, so it is
+   teal here as it is on the report. It used to be --lilac-d's violet, the colour
+   Help reserves for the model's opinion. Built is neutral, as "Found it" is
+   unfilled on the report: the eye goes to the gap. Validated: CVD ΔE 16.9 light /
+   13.5 dark, normal 22.8 / 19.2. Built sits under 3:1 on white (2.4), relieved by
+   the counts on every bar and the table view. */
 :root {
-  --tc-p: #00806A;                     /* built */
-  --tc-a: #5A4CA3;                     /* confirmed missing */
+  --tc-count: #00806A;                 /* counted: not there, and the report's charts */
+  --tc-a: var(--tc-count);             /* not there */
+  --tc-p: #A9A5B8;                     /* built */
   --tc-track: #E7E4F0;
 }
 :root[data-theme="dark"] {
-  --tc-p: #1DAC8E;
-  --tc-a: #8A6FE6;
+  --tc-count: #1DAC8E;
+  --tc-p: #6E6A7D;
   --tc-track: #3A3747;
 }
 
@@ -3080,14 +3088,15 @@ kbd {
 
 /* ================================================================ TRENDS v7
    One picture per question. Tokens: not there --tc-a, built --tc-p, could not
-   tell = the hatch (never a third hue). Heatmaps: one violet ramp, five steps,
-   validated per theme (monotone lightness, light end >= 2:1 on the panel). */
+   tell = the hatch (never a third hue). Heatmaps: one teal ramp, five steps,
+   validated per theme (monotone lightness, light end >= 2:1 on the panel), and
+   every step's number clears 4.5:1 with the ink it is given. */
 :root {
-  --tq-0: #B4A9DE; --tq-1: #978AD0; --tq-2: #7B6DBF; --tq-3: #6152AC; --tq-4: #463A90;
+  --tq-0: #78C5B0; --tq-1: #4AA991; --tq-2: #1F826C; --tq-3: #0E6553; --tq-4: #07463A;
   --tq-ink-lo: #1C1B23; --tq-ink-hi: #FFFFFF;
 }
 :root[data-theme="dark"] {
-  --tq-0: #564C8C; --tq-1: #6A5DAE; --tq-2: #8070CB; --tq-3: #9D8DE3; --tq-4: #C1B6F4;
+  --tq-0: #2A7564; --tq-1: #3A9883; --tq-2: #4FB199; --tq-3: #76C8B2; --tq-4: #AEE5D5;
   --tq-ink-lo: #FFFFFF; --tq-ink-hi: #1C1B23;
 }
 
@@ -3138,7 +3147,8 @@ kbd {
 .tmx-v[data-q="2"] { background: var(--tq-2); color: var(--tq-ink-hi); }
 .tmx-v[data-q="3"] { background: var(--tq-3); color: var(--tq-ink-hi); }
 .tmx-v[data-q="4"] { background: var(--tq-4); color: var(--tq-ink-hi); }
-:root[data-theme="dark"] .tmx-v[data-q="2"] { color: var(--tq-ink-lo); }
+/* Dark: only the deepest step takes white; the rest are light enough for dark ink. */
+:root[data-theme="dark"] .tmx-v[data-q="1"] { color: var(--tq-ink-hi); }
 .tmx-self { background: var(--panel-2); opacity: .5; }
 .tmx-blank { background: transparent; }
 .tmx-na { background: var(--panel-2); color: var(--text-3);
@@ -3195,9 +3205,9 @@ kbd {
    section that carried no meaning a reader could name. They are one neutral
    band now; the eyebrow says what the section is.
 
-   And ONE DATA COLOUR for the report's charts: the built green, lighter for
-   the months and full for the one you are looking at. Violet means "not
-   there" everywhere else in Scout, so it no longer marks a selected month. */
+   And ONE DATA COLOUR for the report's charts: the counted teal, lighter for
+   the months and full for the one you are looking at. Teal is counted, in
+   Help's words, and a post count is counted. */
 button, input, select, textarea { font-family: inherit; }
 
 /* -- section header */
@@ -3220,9 +3230,9 @@ button, input, select, textarea { font-family: inherit; }
   line-height: 1.55; color: var(--text-2); }
 
 /* -- charts: one data colour, app font on every tick */
-.trg-bar { background: color-mix(in srgb, var(--tc-p) 32%, var(--panel)); opacity: 1; }
-.trg-col:hover .trg-bar { background: color-mix(in srgb, var(--tc-p) 55%, var(--panel)); }
-.trg-col.sel .trg-bar { background: var(--tc-p); }
-.trg-peak { background: var(--tc-p); box-shadow: 0 0 0 3px color-mix(in srgb, var(--tc-p) 22%, transparent); }
+.trg-bar { background: color-mix(in srgb, var(--tc-count) 32%, var(--panel)); opacity: 1; }
+.trg-col:hover .trg-bar { background: color-mix(in srgb, var(--tc-count) 55%, var(--panel)); }
+.trg-col.sel .trg-bar { background: var(--tc-count); }
+.trg-peak { background: var(--tc-count); box-shadow: 0 0 0 3px color-mix(in srgb, var(--tc-count) 22%, transparent); }
 .trg-cap, .trg-sparkx, .trg-curvex { font-size: var(--fs-1); }
-.trg-curve svg path[stroke] { stroke: var(--tc-p); }
+.trg-curve svg path[stroke] { stroke: var(--tc-count); }

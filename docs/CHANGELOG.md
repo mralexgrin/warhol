@@ -3,6 +3,14 @@
 User-facing release notes. Newest first.
 
 ## 29 Sep 2026
+### Improved
+- One colour per state across Scout. On Trends, *not there* is now the same teal as on the report
+  (it was violet, the colour Help keeps for the model's opinion), and *built* is neutral grey, as
+  "Found it" is on the report. The heatmaps use a teal ramp, and every number on them is readable
+  (4.5:1 or better) in both themes.
+- The report's Output and Audience charts use the same teal. It was a second, separate green.
+- The pair matrix's caption read "Darker is more creators", which was backwards in dark mode. It
+  now reads "The stronger the teal…".
 ### Fixed
 - Help's Pressure table showed a row reading "_comment · undefined". That was an engine note
   leaking in as a signal.

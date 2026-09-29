@@ -4773,11 +4773,10 @@
        where, by brief           -> a brief x item heatmap
        did anyone ask            -> asks, split by whether the thing exists
      The barcode map stays, one click down, for anyone who wants every creator.
-     Colours: not there #5A4CA3 / built #00806A (light), #8A6FE6 / #1DAC8E
-     (dark) — both pairs pass the CVD, normal-vision and contrast checks; could
-     not tell is a hatch, never a third hue. The heatmaps use one violet ramp,
-     five steps, validated for monotone lightness and surface contrast in both
-     themes; zero is a neutral cell, not the lightest violet. */
+     Colours (29 Sep): not there is the counted teal, as on the report; built is
+     neutral. Could not tell is a hatch, never a third hue. The heatmaps use one
+     teal ramp, five steps, validated for monotone lightness and surface
+     contrast in both themes; zero is a neutral cell, not the lightest teal. */
   function seqStep(v, max) {
     if (!v || !max) return -1;
     return Math.min(4, Math.floor((v / max) * 5 - 1e-9));
@@ -4853,7 +4852,7 @@
     return '<section class="tsec">' +
       '<h2 class="tsec-h">Gaps that travel together</h2>' +
       '<p class="tsec-s">' + (p ? '<b>' + esc(p[0]) + '</b>: ' + p[1] + ' of ' + m.people.length +
-        ' have neither, one conversation, not two. ' : '') + 'Darker is more creators missing both.</p>' +
+        ' have neither, one conversation, not two. ' : '') + 'The stronger the teal, the more creators are missing both.</p>' +
       '<div class="tpanel"><div class="wex-scroll"><div class="tmx" style="--n:' + cols.length + '">' +
       head + body + '</div></div>' +
       '<p class="traynote">Confirmed absences only. A pair where either side could not be told is not counted.</p>' +
