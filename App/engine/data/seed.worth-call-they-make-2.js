@@ -41,7 +41,7 @@
       ],
       "scoreThreshold": 25,
       "costs": {
-        "takenAt": "2026-08-14T15:05:17.179Z",
+        "takenAt": "2026-08-14T15:05:17.184Z",
         "spent": 33.317,
         "studiedCreators": 238,
         "perCreator": 0.14,
@@ -313,12 +313,12 @@
         "audience": {
           "total": 1120000
         },
-        "score": 44,
+        "score": 39,
         "scoreDelta": null,
         "confidence": 0.833,
         "pillars": {
           "gap": {
-            "score": 32,
+            "score": 27,
             "max": 60,
             "engine": "rule+llm",
             "coverage": 0.833,
@@ -328,16 +328,16 @@
                 "label": "Owned-channel absence",
                 "engine": "rule",
                 "value": "No store, no newsletter, no membership",
-                "weightPct": 75,
+                "weightPct": 89,
                 "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
               },
               {
                 "key": "demand",
                 "label": "Unmet demand",
                 "engine": "llm+rule",
-                "value": "144 purchase-intent comments",
-                "weightPct": 25,
-                "detail": "144 lines classified as intent to buy or subscribe, in text the engine fetched first."
+                "value": "41 purchase-intent comments",
+                "weightPct": 11,
+                "detail": "41 lines classified as intent to buy or subscribe, in text the engine fetched first."
               }
             ]
           },
@@ -501,7 +501,7 @@
             "url": null,
             "observedAt": "2026-08-14",
             "engine": "llm",
-            "label": "unspecified"
+            "label": "store"
           },
           {
             "kind": "comment",
@@ -510,7 +510,7 @@
             "url": null,
             "observedAt": "2026-08-14",
             "engine": "llm",
-            "label": "unspecified"
+            "label": "store"
           },
           {
             "kind": "comment",
@@ -519,7 +519,7 @@
             "url": null,
             "observedAt": "2026-08-14",
             "engine": "llm",
-            "label": "unspecified"
+            "label": "store"
           },
           {
             "kind": "comment",
@@ -604,52 +604,7 @@
           },
           {
             "kind": "comment",
-            "quote": "Ordered!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "But just to support Ivan I'll buy a bott",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "But just to support Ivan I'll buy a bott",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
             "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
             "platform": "YouTube",
             "url": null,
             "observedAt": "2026-08-14",
@@ -685,43 +640,7 @@
           },
           {
             "kind": "comment",
-            "quote": "I have purchased many products from DIY and CLEAN, and love both.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Just started using this product and love it!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
             "quote": "Can't wait to try it out 🔥",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
             "platform": "YouTube",
             "url": null,
             "observedAt": "2026-08-14",
@@ -739,61 +658,7 @@
           },
           {
             "kind": "comment",
-            "quote": "But just to support Ivan I'll buy a bott",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
             "quote": "I have a 80series landcruiser i been looking for a great product.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I have two unopened tins still on my shelf from when I thought it was being discontinued so I stocked up.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I use the Diy wax , I can say it really does fill.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "However $30 for this glass/cleaner/sealant is a bit steep considering you can get Glaco for $35 which is a full on coating. But just to support Ivan I'll buy a bott",
             "platform": "YouTube",
             "url": null,
             "observedAt": "2026-08-14",
@@ -811,43 +676,7 @@
           },
           {
             "kind": "comment",
-            "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
             "quote": "Love me some DIYDetail products, I'm still hooked on Quickbeads. My favorite so far, you have to pry it from my dead cold beaded hands. However $30 for this glass/cleaner/sealant is a bit steep considering you can get Glaco for $35 which is a full on coating. But just to support Ivan I'll buy a bott",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
             "platform": "YouTube",
             "url": null,
             "observedAt": "2026-08-14",
@@ -929,33 +758,6 @@
           {
             "kind": "comment",
             "quote": "Have a whole gallon love it !!!!!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Can't wait to try it out 🔥",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
             "platform": "YouTube",
             "url": null,
             "observedAt": "2026-08-14",
@@ -973,42 +775,6 @@
           },
           {
             "kind": "comment",
-            "quote": "Thanks for the discount as always.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I did purchase the window cleaner (Glaco), but haven't used it ye",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I did a paint correction and put the 8 year coating on it.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
             "quote": "Hello Pan, Thank you for your videos — they truly help us better understand the entire world of detailing. I would like to know whether my Clean by Pan 8‑year coating, applied to my vehicle about a year ago and stored immediately afterward in my freezer, can still be used on my new summer car.",
             "platform": "YouTube",
             "url": null,
@@ -1018,151 +784,16 @@
           },
           {
             "kind": "comment",
-            "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "My 128 oz one is arriving today😊",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Have a whole gallon love it !!!!!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
             "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
             "platform": "YouTube",
             "url": null,
             "observedAt": "2026-08-14",
             "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "Thanks for the discount as always.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "My 128 oz one is arriving today😊",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
+            "label": "membership"
           },
           {
             "kind": "comment",
             "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Have a whole gallon love it !!!!!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "But just to support Ivan I'll buy a bott",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Thanks for the discount as always.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
             "platform": "YouTube",
             "url": null,
             "observedAt": "2026-08-14",
@@ -1181,87 +812,6 @@
           {
             "kind": "comment",
             "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "My 128 oz one is arriving today😊",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Have a whole gallon love it !!!!!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "Thanks for the discount as always.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
             "platform": "YouTube",
             "url": null,
             "observedAt": "2026-08-14",
@@ -1271,141 +821,6 @@
           {
             "kind": "comment",
             "quote": "Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I did a paint correction and put the 8 year coating on it.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I would like to know whether my Clean by Pan 8‑year coating, applied to my vehicle about a year ago and stored immediately afterward in my freezer, can still be used on my new summer car.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "My 128 oz one is arriving today😊",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Have a whole gallon love it !!!!!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Can't wait to try it out 🔥",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "Thanks for the discount as always.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Finally, a C8 Corvette! Thanks, Pan, for making this happen. Nice to see your approach on this vehicle so I can learn some tricks taking care of mine... Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
             "platform": "YouTube",
             "url": null,
             "observedAt": "2026-08-14",
@@ -1423,52 +838,7 @@
           },
           {
             "kind": "comment",
-            "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "My 128 oz one is arriving today😊",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
             "quote": "Hi pan, I'm currently half way through my V1 bottle and love the slickness, foam and scent. Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Have a whole gallon love it !!!!!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
             "platform": "YouTube",
             "url": null,
             "observedAt": "2026-08-14",
@@ -1483,303 +853,6 @@
             "observedAt": "2026-08-14",
             "engine": "llm",
             "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "But just to support Ivan I'll buy a bott",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Thanks for the discount as always.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "My 128 oz one is arriving today😊",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Have a whole gallon love it !!!!!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "membership"
-          },
-          {
-            "kind": "comment",
-            "quote": "Thanks for the discount as always.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "My 128 oz one is arriving today😊",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Have a whole gallon love it !!!!!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I'll try this",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "But just to support Ivan I'll buy a bott",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "Thanks for the discount as always.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Finally, a C8 Corvette! Thanks, Pan, for making this happen. Nice to see your approach on this vehicle so I can learn some tricks taking care of mine... Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "My 128 oz one is arriving today😊",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Ordered!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "membership"
           },
           {
             "kind": "signal",
@@ -2890,16 +1963,16 @@
                 "label": "Owned-channel absence",
                 "engine": "rule",
                 "value": "No store, no newsletter",
-                "weightPct": 99,
+                "weightPct": 100,
                 "detail": "4 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
               },
               {
                 "key": "demand",
                 "label": "Unmet demand",
                 "engine": "llm+rule",
-                "value": "4 purchase-intent comments",
-                "weightPct": 1,
-                "detail": "4 lines classified as intent to buy or subscribe, in text the engine fetched first."
+                "value": "1 purchase-intent comment",
+                "weightPct": 0,
+                "detail": "1 lines classified as intent to buy or subscribe, in text the engine fetched first."
               }
             ]
           },
@@ -3047,33 +2120,6 @@
           }
         ],
         "evidence": [
-          {
-            "kind": "comment",
-            "quote": "I bought a rock rake from Lee Valley. Great to see a genius at work!Thanks Wes.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I bought a rock rake from Lee Valley. Great to see a genius at work!Thanks Wes.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I bought a rock rake from Lee Valley. Great to see a genius at work!Thanks Wes.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
           {
             "kind": "comment",
             "quote": "I bought a rock rake from Lee Valley. Great to see a genius at work!Thanks Wes.",
@@ -3931,1354 +2977,6 @@
         "sourceWhy": "a person typed this handle in"
       },
       {
-        "id": "c_worth_call_they_make_2__superfastmatt",
-        "name": "superfastmatt",
-        "handle": "@superfastmatt",
-        "initials": "SU",
-        "avatar": "https://yt3.googleusercontent.com/nqgbsRZPop6g87lugiS2bCe3a7WfW7cRTW3WjIQIykcXdU9ykFmfSHRHRxRhUs5KtMNWc8iG6CA=s900-c0x00ffffff-no-rj",
-        "mandateId": "m_worth_call_they_make_2",
-        "primaryPlatform": "TikTok profile",
-        "platforms": [
-          {
-            "name": "TikTok profile",
-            "handle": "@superfastmatt",
-            "followers": 17700,
-            "url": "https://www.tiktok.com/@superfastmatt",
-            "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/0b7ead6dbc777cca77f6d564a1916b41~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=a92d7667&x-expires=1786885200&x-signature=jhtmvCdV%2BKd98VNYp8HMSIIq7Mw%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
-            "avatarExpires": "2026-08-16T13:00:00.000Z",
-            "avatarStale": false,
-            "matchConfidence": 1
-          },
-          {
-            "name": "YouTube channel",
-            "handle": "@superfastmatt",
-            "followers": 666000,
-            "url": "https://www.youtube.com/@superfastmatt",
-            "avatar": "https://yt3.googleusercontent.com/nqgbsRZPop6g87lugiS2bCe3a7WfW7cRTW3WjIQIykcXdU9ykFmfSHRHRxRhUs5KtMNWc8iG6CA=s900-c0x00ffffff-no-rj",
-            "avatarExpires": null,
-            "avatarStale": false,
-            "matchConfidence": 1
-          }
-        ],
-        "places": [
-          {
-            "name": "TikTok profile",
-            "url": "https://www.tiktok.com/@superfastmatt",
-            "host": "tiktok.com",
-            "followers": 17700
-          },
-          {
-            "name": "YouTube channel",
-            "url": "https://www.youtube.com/@superfastmatt",
-            "host": "youtube.com",
-            "followers": 666000
-          }
-        ],
-        "audience": {
-          "total": 683700
-        },
-        "score": 28,
-        "scoreDelta": null,
-        "confidence": 0.667,
-        "pillars": {
-          "gap": {
-            "score": 16,
-            "max": 60,
-            "engine": "rule+llm",
-            "coverage": 0.667,
-            "subsignals": [
-              {
-                "key": "owned",
-                "label": "Owned-channel absence",
-                "engine": "rule",
-                "value": "No newsletter, no podcast",
-                "weightPct": 71,
-                "detail": "4 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
-              },
-              {
-                "key": "demand",
-                "label": "Unmet demand",
-                "engine": "llm+rule",
-                "value": "68 purchase-intent comments",
-                "weightPct": 29,
-                "detail": "68 lines classified as intent to buy or subscribe, in text the engine fetched first."
-              }
-            ]
-          },
-          "strain": {
-            "score": 12,
-            "max": 40,
-            "engine": "rule+llm",
-            "subsignals": [
-              {
-                "key": "abandon",
-                "label": "Abandonment markers",
-                "engine": "rule",
-                "value": "2 dead links they still publish — they tried, it broke",
-                "weightPct": 100,
-                "detail": "2 dead links they still publish — they tried, it broke — 12 of the 40 Pressure points. Ceiling on this look is 34."
-              },
-              {
-                "key": "selfreport",
-                "label": "Self-reported strain",
-                "engine": "llm",
-                "value": "we couldn't read their captions",
-                "weightPct": 0,
-                "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 34."
-              },
-              {
-                "key": "cadence",
-                "label": "Cadence decay",
-                "engine": "rule",
-                "value": "−18% vs baseline",
-                "weightPct": 0,
-                "detail": "2.3 videos a month now, against 2.8 before that — down 18% — 0 of the 40 Pressure points. Ceiling on this look is 34."
-              },
-              {
-                "key": "unanswered",
-                "label": "Unanswered audience",
-                "engine": "rule",
-                "value": "not readable on this look",
-                "weightPct": 0,
-                "detail": "needs a second look — this is a change over time, and we have seen them once"
-              }
-            ]
-          },
-          "fit": {
-            "verdict": "pass",
-            "engine": "llm",
-            "subsignals": [
-              {
-                "key": "brief",
-                "label": "Against the brief",
-                "engine": "llm",
-                "value": "pass",
-                "detail": "He's an automotive engineer who does hands-on engine swaps and builds on camera in a consistent explainer format, which fits the DIY repair and restoration brief, though the recent-post evidence is thin and doesn't directly confirm he names specific parts and products every video."
-              }
-            ]
-          }
-        },
-        "inventory": [
-          {
-            "item": "YouTube channel",
-            "state": "present",
-            "surfacesChecked": 15,
-            "note": "found it — youtube.com/@superfastmatt",
-            "observedAt": "2026-08-14",
-            "source": "youtube_channel"
-          },
-          {
-            "item": "Newsletter",
-            "state": "verified_absent",
-            "surfacesChecked": 96,
-            "note": "not there · we looked in 6 places",
-            "observedAt": "2026-08-14",
-            "source": "newsletter"
-          },
-          {
-            "item": "Store",
-            "state": "present",
-            "surfacesChecked": 42,
-            "note": "something at superfastmatt.myshopify.com — not confirmed as theirs",
-            "observedAt": "2026-08-14",
-            "source": "store"
-          },
-          {
-            "item": "Membership",
-            "state": "present",
-            "surfacesChecked": 17,
-            "note": "something at patreon.com/superfastmatt — not confirmed as theirs",
-            "observedAt": "2026-08-14",
-            "source": "membership"
-          },
-          {
-            "item": "Podcast",
-            "state": "verified_absent",
-            "surfacesChecked": 25,
-            "note": "not there · we looked in 2 places",
-            "observedAt": "2026-08-14",
-            "source": "podcast"
-          },
-          {
-            "item": "Website",
-            "state": "present",
-            "surfacesChecked": 44,
-            "note": "found it — tiktok.com/@superfastmatt",
-            "observedAt": "2026-08-14",
-            "source": "website"
-          },
-          {
-            "item": "Representation",
-            "state": "not_found",
-            "surfacesChecked": 0,
-            "note": "their bio does not mention it, which is not the same as nobody having signed them",
-            "observedAt": "2026-08-14",
-            "source": "representation"
-          },
-          {
-            "item": "Sponsored posts",
-            "state": "not_found",
-            "surfacesChecked": 0,
-            "note": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
-            "observedAt": "2026-08-14",
-            "source": "sponsorships"
-          },
-          {
-            "item": "Affiliate links",
-            "state": "not_found",
-            "surfacesChecked": 0,
-            "note": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
-            "observedAt": "2026-08-14",
-            "source": "affiliate_links"
-          },
-          {
-            "item": "Platform subscriptions",
-            "state": "not_found",
-            "surfacesChecked": 0,
-            "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-            "observedAt": "2026-08-14",
-            "source": "platform_subscriptions"
-          },
-          {
-            "item": "Shopping tags",
-            "state": "not_found",
-            "surfacesChecked": 0,
-            "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-            "observedAt": "2026-08-14",
-            "source": "shopping_tags"
-          }
-        ],
-        "evidence": [
-          {
-            "kind": "comment",
-            "quote": "I want one. License plate: \"D2\"",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I've got my fingers crossed that Slate makes it. I love small trucks.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I'm yearning for an R3X.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "If I can afford the R3 I'll defo get one",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "im for slate bigtime, ill get one once they become a readily available, if they do so.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "still bigger than i'd buy since i don't need a big car, but if the r3 is as small as promised, i might be convinced to get one",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I have my eye on an R2, once it level 3 self-drives.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I'll probably buy a nice used R1T when they get a little more common.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I really like rivians. I would like to buy one in the future so I hope they can stick around.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I want one. License plate: \"D2\"",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I'm yearning for an R3X.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "If I can afford the R3 I'll defo get one",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I really really want Aptera to succeed. I can't put my finger on why, but there's just something about them. I guess the design just makes a lot of sense for most people the majority of the time.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I hope aptera makes it. Not just because i threw 3 grand at it, but because it's the only vehicle out there that's not a non-aero brick for some reason, can get 1000 miles to a charge and can sit out for 6 months without the battery dying. I want it.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I really like rivians. I would like to buy one in the future so I hope they can stick around.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I want Aptera to make it",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "Rivian is the only EV company I am fully hoping to buy into. They just seem so passionate about making a *good product* that *happens* to be an EV, rather than just trying to meet a quota and/or jump ship as soon as they are allowed (Honda >.>). I get to test the R2 tomorrow. I hope it goes well. Th",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "im for slate bigtime, ill get one once they become a readily available, if they do so.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I want one. License plate: \"D2\"",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I've got my fingers crossed that Slate makes it. I love small trucks.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I'm yearning for an R3X.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I own a Rivian 2nd Gen R1T. I watched the videos and followed the growing pains through the 1st Gen product line before making my decision to purchase, and I am glad I did.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I really really want Aptera to succeed. I can't put my finger on why, but there's just something about them. I guess the design just makes a lot of sense for most people the majority of the time.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I hope Slate makes it. The market needs a basic, economy EV to counter all the luxury laptops with wheels.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I think Aptera's going to make it, but initially be niche, which was the original intention anyways. Go Aptera!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "If I can afford the R3 I'll defo get one",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I bought a used r1t launch edition over a year ago, and live where it's bitter cold about 19 months a year with a 6 minute 110° summer. I've asked myself if I'd ever get another gas cage, and I got sad thinking about the prospect.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I really like rivians. I would like to buy one in the future so I hope they can stick around.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "im for slate bigtime, ill get one once they become a readily available, if they do so.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I hope aptera makes it. Not just because i threw 3 grand at it, but because it's the only vehicle out there that's not a non-aero brick for some reason, can get 1000 miles to a charge and can sit out for 6 months without the battery dying. I want it.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I want Aptera to make it",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "Rivian is the only EV company I am fully hoping to buy into. They just seem so passionate about making a *good product* that *happens* to be an EV, rather than just trying to meet a quota and/or jump ship as soon as they are allowed (Honda >.>). I get to test the R2 tomorrow. I hope it goes well.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I want one. License plate: \"D2\"",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "If I can afford the R3 I'll defo get one",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "im for slate bigtime, ill get one once they become a readily available, if they do so.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I really like rivians. I would like to buy one in the future so I hope they can stick around.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I have my eye on an R2, once it level 3 self-drives.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I too have a deposit on an R2, although it was more of a statement. I'll probably buy a nice used R1T when they get a little more common.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I hope aptera makes it. Not just because i threw 3 grand at it, but because it's the only vehicle out there that's not a non-aero brick for some reason, can get 1000 miles to a charge and can sit out for 6 months without the battery dying. I want it.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I want one. License plate: \"D2\"",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I'm yearning for an R3X.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "If I can afford the R3 I'll defo get one",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I hope aptera makes it. Not just because i threw 3 grand at it, but because it's the only vehicle out there that's not a non-aero brick for some reason, can get 1000 miles to a charge and can sit out for 6 months without the battery dying. I want it.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "im for slate bigtime, ill get one once they become a readily available, if they do so.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "Rivian is the only EV company I am fully hoping to buy into. They just seem so passionate about making a *good product* that *happens* to be an EV, rather than just trying to meet a quota and/or jump ship as soon as they are allowed (Honda >.>). I get to test the R2 tomorrow. I hope it goes well. Th",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I want Aptera to make it",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I really hope they do make it and can expand into Europe as well, I wouldn't mind a Tesla alternative tha",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "The R3 looks so sick, if it has decent self driving, the wife and I will be getting that.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "still bigger than i'd buy since i don't need a big car, but if the r3 is as small as promised, i might be convinced to get one",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I want one. License plate: \"D2\"",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I'm yearning for an R3X.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "If I can afford the R3 I'll defo get one",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I hope aptera makes it. Not just because i threw 3 grand at it, but because it's the only vehicle out there that's not a non-aero brick for some reason, can get 1000 miles to a charge and can sit out for 6 months without the battery dying. I want it.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "im for slate bigtime, ill get one once they become a readily available, if they do so.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "Rivian is the only EV company I am fully hoping to buy into. They just seem so passionate about making a *good product* that *happens* to be an EV, rather than just trying to meet a quota and/or jump ship as soon as they are allowed (Honda >.>). I get to test the R2 tomorrow. I hope it goes well. Th",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I want Aptera to make it",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I unironically like the look of Rivian's cars. I just found out about the R3, and even that looks really cool in my opinion. Some sort of cross between a futuristic Jeep and an old Russian Lada. I really hope they do make it and can expand into Europe as well, I wouldn't mind a Tesla alternative tha",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "The R3 looks so sick, if it has decent self driving, the wife and I will be getting that.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I have my eye on an R2, once it level 3 self-drives.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "14:56 you said keychain and I immediately looked for a purchase link. You sold out so fast last time, like super fast! 😅",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Great investment on the key chains, I will be buying one once they have outlived their usefulness and you need them to be converted back to cold hard cash. Congrats on your run, thats amazing. You definitely are living up to your name.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Dang it! I wanted the blue key chain to pair with my red one.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "14:56 you said keychain and I immediately looked for a purchase link. You sold out so fast last time, like super fast! 😅",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Great investment on the key chains, I will be buying one once they have outlived their usefulness and you need them to be converted back to cold hard cash. Congrats on your run, thats amazing. You definitely are living up to your name.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Dang it! I wanted the blue key chain to pair with my red one.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Great investment on the key chains, I will be buying one once they have outlived their usefulness and you need them to be converted back to cold hard cash.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "14:56 you said keychain and I immediately looked for a purchase link. You sold out so fast last time, like super fast! 😅",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Dang it! I wanted the blue key chain to pair with my red one.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "signal",
-            "quote": "https://www.youtube.com/@SuperfastMatt",
-            "platform": "link they publish",
-            "url": "https://www.youtube.com/@SuperfastMatt",
-            "observedAt": "2026-08-12",
-            "engine": "rule",
-            "label": "abandonment"
-          },
-          {
-            "kind": "signal",
-            "quote": "https://www.youtube.com/@SuperfastMatt",
-            "platform": "link they publish",
-            "url": "https://www.youtube.com/@SuperfastMatt",
-            "observedAt": "2026-08-12",
-            "engine": "rule",
-            "label": "abandonment"
-          }
-        ],
-        "status": "in_drop",
-        "resurfaced": null,
-        "passed": null,
-        "promoted": null,
-        "outcome": null,
-        "asOf": "2026-08-14",
-        "alert": null,
-        "samples": [
-          {
-            "platform": "YouTube",
-            "publication": null,
-            "kind": "video",
-            "title": "Speed Week Was A Mixed Bag",
-            "url": "https://www.youtube.com/watch?v=0gUvDfgn5I0",
-            "at": "2026-08-11T15:17:43Z",
-            "thumbnail": "https://i.ytimg.com/vi/0gUvDfgn5I0/hqdefault.jpg",
-            "excerpt": null,
-            "metric": 421558,
-            "metricUnit": "views",
-            "metricWhy": null,
-            "foundIn": "the YouTube Data API",
-            "seenAt": "2026-08-14T13:21:48.393Z",
-            "status": null
-          },
-          {
-            "platform": "YouTube",
-            "publication": null,
-            "kind": "video",
-            "title": "Rivian Is Gonna Be Alright",
-            "url": "https://www.youtube.com/watch?v=JEmjg1q19GI",
-            "at": "2026-07-26T14:57:04Z",
-            "thumbnail": "https://i.ytimg.com/vi/JEmjg1q19GI/hqdefault.jpg",
-            "excerpt": null,
-            "metric": 261335,
-            "metricUnit": "views",
-            "metricWhy": null,
-            "foundIn": "the YouTube Data API",
-            "seenAt": "2026-08-14T13:21:48.393Z",
-            "status": null
-          },
-          {
-            "platform": "YouTube",
-            "publication": null,
-            "kind": "video",
-            "title": "The World's Best Driving Road Is Kinda Terrible",
-            "url": "https://www.youtube.com/watch?v=o0mNM0LIFY4",
-            "at": "2026-07-11T14:19:32Z",
-            "thumbnail": "https://i.ytimg.com/vi/o0mNM0LIFY4/hqdefault.jpg",
-            "excerpt": null,
-            "metric": 454787,
-            "metricUnit": "views",
-            "metricWhy": null,
-            "foundIn": "the YouTube Data API",
-            "seenAt": "2026-08-14T13:21:48.393Z",
-            "status": null
-          },
-          {
-            "platform": "YouTube",
-            "publication": null,
-            "kind": "video",
-            "title": "3D Print A Whole Race Car Body. Or Just Watch Me Do It. Whatever.",
-            "url": "https://www.youtube.com/watch?v=nt85nTMnY1w",
-            "at": "2026-06-20T23:53:10Z",
-            "thumbnail": "https://i.ytimg.com/vi/nt85nTMnY1w/hqdefault.jpg",
-            "excerpt": null,
-            "metric": 415052,
-            "metricUnit": "views",
-            "metricWhy": null,
-            "foundIn": "the YouTube Data API",
-            "seenAt": "2026-08-14T13:21:48.393Z",
-            "status": null
-          }
-        ],
-        "samplesSearched": {
-          "count": 0,
-          "why": "they link none of their own posts anywhere we can read"
-        },
-        "headline": "superfastmatt makes car build and engineering videos for 666,000 on YouTube, with recent uploads landing between 256,172 and 449,495 views, and he already sells through a store, a membership, and his own website, but he has no newsletter or podcast and his posting has slowed to 2.3 videos a month from 2.8.",
-        "headlineRestsOn": "666,000 on YouTube · \"Rivian Is Gonna Be Alright\" (256,172 views) · \"The World's Best Driving Road Is Kinda Terrible\" (449,495 views) · Store · Membership · Own website · Newsletter · Podcast · 2.3 videos a month now, against 2.8 before that",
-        "accent": "#6E6E6E",
-        "play": {
-          "id": null,
-          "label": "No play recommended",
-          "why": "The play catalog (§5.5) is a product decision the engine does not make.",
-          "generated": true
-        },
-        "outreach": {
-          "subject": null,
-          "opener": null,
-          "bullets": [],
-          "close": null,
-          "generated": true,
-          "why": "Generated on Promote (§6.5). Nothing generates it yet."
-        },
-        "generatedFields": [
-          "accent",
-          "play",
-          "outreach"
-        ],
-        "source": "named",
-        "sourceWhy": null
-      },
-      {
-        "id": "c_worth_call_they_make_2__motorcitymechanic",
-        "name": "motorcitymechanic",
-        "handle": "@motorcitymechanic",
-        "initials": "MO",
-        "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kaFAoWrqsWdm_zVN9kvkf6_Rgh6XcM79nb_diHLVIPN-U=s900-c0x00ffffff-no-rj",
-        "mandateId": "m_worth_call_they_make_2",
-        "primaryPlatform": "YouTube channel",
-        "platforms": [
-          {
-            "name": "YouTube channel",
-            "handle": "@motorcitymechanic",
-            "followers": 253000,
-            "url": "https://www.youtube.com/@motorcitymechanic",
-            "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kaFAoWrqsWdm_zVN9kvkf6_Rgh6XcM79nb_diHLVIPN-U=s900-c0x00ffffff-no-rj",
-            "avatarExpires": null,
-            "avatarStale": false,
-            "matchConfidence": 1
-          }
-        ],
-        "places": [
-          {
-            "name": "YouTube channel",
-            "url": "https://www.youtube.com/@motorcitymechanic",
-            "host": "youtube.com",
-            "followers": 253000
-          }
-        ],
-        "audience": {
-          "total": 253000
-        },
-        "score": 28,
-        "scoreDelta": null,
-        "confidence": 0.833,
-        "pillars": {
-          "gap": {
-            "score": 28,
-            "max": 60,
-            "engine": "rule+llm",
-            "coverage": 0.833,
-            "subsignals": [
-              {
-                "key": "owned",
-                "label": "Owned-channel absence",
-                "engine": "rule",
-                "value": "No store, no newsletter, no membership",
-                "weightPct": 97,
-                "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
-              },
-              {
-                "key": "demand",
-                "label": "Unmet demand",
-                "engine": "llm+rule",
-                "value": "10 purchase-intent comments",
-                "weightPct": 3,
-                "detail": "10 lines classified as intent to buy or subscribe, in text the engine fetched first."
-              }
-            ]
-          },
-          "strain": {
-            "score": 0,
-            "max": 40,
-            "engine": "rule+llm",
-            "subsignals": [
-              {
-                "key": "abandon",
-                "label": "Abandonment markers",
-                "engine": "rule",
-                "value": "nothing abandoned that we can see",
-                "weightPct": 0,
-                "detail": "nothing abandoned that we can see — 0 of the 40 Pressure points. Ceiling on this look is 22."
-              },
-              {
-                "key": "selfreport",
-                "label": "Self-reported strain",
-                "engine": "llm",
-                "value": "we couldn't read their captions",
-                "weightPct": 0,
-                "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 22."
-              },
-              {
-                "key": "cadence",
-                "label": "Cadence decay",
-                "engine": "rule",
-                "value": "not readable on this look",
-                "weightPct": 0,
-                "detail": "we could not read their posting rate — only 5 uploads in the 275 days before that — too few to call it a rate"
-              },
-              {
-                "key": "unanswered",
-                "label": "Unanswered audience",
-                "engine": "rule",
-                "value": "not readable on this look",
-                "weightPct": 0,
-                "detail": "needs a second look — this is a change over time, and we have seen them once"
-              }
-            ]
-          },
-          "fit": {
-            "verdict": "pass",
-            "engine": "llm",
-            "subsignals": [
-              {
-                "key": "brief",
-                "label": "Against the brief",
-                "engine": "llm",
-                "value": "pass",
-                "detail": "Nothing visible contradicts the brief — a Detroit mechanic channel with 253k YouTube subscribers sits in a category people genuinely search for and lends itself to a repeatable, clippable repair-and-diagnosis format — though the scraped page text is boilerplate, so the actual content is unconfirmed rather than disqualifying."
-              }
-            ]
-          }
-        },
-        "inventory": [
-          {
-            "item": "YouTube channel",
-            "state": "present",
-            "surfacesChecked": 0,
-            "note": "found it — youtube.com/@motorcitymechanic",
-            "observedAt": "2026-08-14",
-            "source": "youtube_channel"
-          },
-          {
-            "item": "Newsletter",
-            "state": "verified_absent",
-            "surfacesChecked": 74,
-            "note": "not there · we looked in 6 places",
-            "observedAt": "2026-08-14",
-            "source": "newsletter"
-          },
-          {
-            "item": "Store",
-            "state": "verified_absent",
-            "surfacesChecked": 48,
-            "note": "not there · we looked in 4 places · 3 wouldn't answer",
-            "observedAt": "2026-08-14",
-            "source": "store"
-          },
-          {
-            "item": "Membership",
-            "state": "verified_absent",
-            "surfacesChecked": 34,
-            "note": "not there · we looked in 3 places",
-            "observedAt": "2026-08-14",
-            "source": "membership"
-          },
-          {
-            "item": "Podcast",
-            "state": "verified_absent",
-            "surfacesChecked": 20,
-            "note": "not there · we looked in 2 places · 1 wouldn't answer",
-            "observedAt": "2026-08-14",
-            "source": "podcast"
-          },
-          {
-            "item": "Website",
-            "state": "present",
-            "surfacesChecked": 16,
-            "note": "something at youtube.com/user/vipertech30813 — not confirmed as theirs",
-            "observedAt": "2026-08-14",
-            "source": "website"
-          },
-          {
-            "item": "Representation",
-            "state": "not_found",
-            "surfacesChecked": 0,
-            "note": "their bio does not mention it, which is not the same as nobody having signed them",
-            "observedAt": "2026-08-14",
-            "source": "representation"
-          },
-          {
-            "item": "Sponsored posts",
-            "state": "not_found",
-            "surfacesChecked": 0,
-            "note": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
-            "observedAt": "2026-08-14",
-            "source": "sponsorships"
-          },
-          {
-            "item": "Affiliate links",
-            "state": "not_found",
-            "surfacesChecked": 0,
-            "note": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
-            "observedAt": "2026-08-14",
-            "source": "affiliate_links"
-          },
-          {
-            "item": "Platform subscriptions",
-            "state": "not_found",
-            "surfacesChecked": 0,
-            "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-            "observedAt": "2026-08-14",
-            "source": "platform_subscriptions"
-          },
-          {
-            "item": "Shopping tags",
-            "state": "not_found",
-            "surfacesChecked": 0,
-            "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
-            "observedAt": "2026-08-14",
-            "source": "shopping_tags"
-          }
-        ],
-        "evidence": [
-          {
-            "kind": "comment",
-            "quote": "If the Pacifica was equipped with a 5.7 EZC instead of 3.6, I'd buy one!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I currently have a valve cover leak. I purchased the 13mm wrenches as suggested.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "If the Pacifica was equipped with a 5.7 EZC instead of 3.6, I'd buy one!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I really appreciate your Channel, it's very helpful. My stepdaughter is on a budget with her Chrysler 200 and I'm going to need some cams. Are there any aftermarket cams that can be trusted?",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "If the Pacifica was equipped with a 5.7 EZC instead of 3.6, I'd buy one!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "I really appreciate your Channel, it's very helpful. My stepdaughter is on a budget with her Chrysler 200 and I'm going to need some cams. Are there any aftermarket cams that can be trusted?",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "If the Pacifica was equipped with a 5.7 EZC instead of 3.6, I'd buy one!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I purchased the 13mm wrenches as suggested.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "If the Pacifica was equipped with a 5.7 EZC instead of 3.6, I'd buy one!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "unspecified"
-          },
-          {
-            "kind": "comment",
-            "quote": "I purchased the 13mm wrenches as suggested.",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          }
-        ],
-        "status": "in_drop",
-        "resurfaced": null,
-        "passed": null,
-        "promoted": null,
-        "outcome": null,
-        "asOf": "2026-08-14",
-        "alert": null,
-        "samples": [
-          {
-            "platform": "YouTube",
-            "publication": null,
-            "kind": "video",
-            "title": "Chrysler Dodge Jeep Ram 3.6L Camshaft Tone Wheel Check Tool 2027900090",
-            "url": "https://www.youtube.com/watch?v=X6BXr08mMK0",
-            "at": "2026-08-13T16:00:09Z",
-            "thumbnail": "https://i.ytimg.com/vi/X6BXr08mMK0/hqdefault.jpg",
-            "excerpt": null,
-            "metric": 1570,
-            "metricUnit": "views",
-            "metricWhy": null,
-            "foundIn": "the YouTube Data API",
-            "seenAt": "2026-08-14T13:07:53.181Z",
-            "status": null
-          },
-          {
-            "platform": "YouTube",
-            "publication": null,
-            "kind": "video",
-            "title": "WARNING: Chrysler, Dodge, Jeep, Ram 3.6L Pentastar engine loose oil galley bolts, make sure to check",
-            "url": "https://www.youtube.com/watch?v=KNZFFciXKk8",
-            "at": "2025-12-18T16:08:38Z",
-            "thumbnail": "https://i.ytimg.com/vi/KNZFFciXKk8/hqdefault.jpg",
-            "excerpt": null,
-            "metric": 80420,
-            "metricUnit": "views",
-            "metricWhy": null,
-            "foundIn": "the YouTube Data API",
-            "seenAt": "2026-08-14T13:07:53.181Z",
-            "status": null
-          },
-          {
-            "platform": "YouTube",
-            "publication": null,
-            "kind": "video",
-            "title": "2021-2025 WL Jeep Grand Cherokee main battery replacement",
-            "url": "https://www.youtube.com/watch?v=bFA2vI2Fiso",
-            "at": "2025-10-10T16:01:13Z",
-            "thumbnail": "https://i.ytimg.com/vi/bFA2vI2Fiso/hqdefault.jpg",
-            "excerpt": null,
-            "metric": 76497,
-            "metricUnit": "views",
-            "metricWhy": null,
-            "foundIn": "the YouTube Data API",
-            "seenAt": "2026-08-14T13:07:53.181Z",
-            "status": null
-          },
-          {
-            "platform": "YouTube",
-            "publication": null,
-            "kind": "video",
-            "title": "2021-2025 WL Jeep Grand Cherokee Park Override Procedure",
-            "url": "https://www.youtube.com/watch?v=yvvRtFe4nPQ",
-            "at": "2025-10-07T16:01:41Z",
-            "thumbnail": "https://i.ytimg.com/vi/yvvRtFe4nPQ/hqdefault.jpg",
-            "excerpt": null,
-            "metric": 19547,
-            "metricUnit": "views",
-            "metricWhy": null,
-            "foundIn": "the YouTube Data API",
-            "seenAt": "2026-08-14T13:07:53.182Z",
-            "status": null
-          }
-        ],
-        "samplesSearched": {
-          "count": 0,
-          "why": "they link none of their own posts anywhere we can read"
-        },
-        "headline": "motorcitymechanic makes step-by-step Chrysler, Dodge, Jeep, and Ram repair videos for 253,000 YouTube subscribers and runs his own website, but has no newsletter, store, or membership to sell parts, tools, or paid help to the owners who come looking for a fix.",
-        "headlineRestsOn": "audience: 253,000 on YouTube · YouTube channel, Own website · they do not have: Newsletter, Store, Membership · \"WARNING: Chrysler, Dodge, Jeep, Ram 3.6L Pentastar engine loose oil galley bolts, make sure to check\" · \"2021-2025 WL Jeep Grand Cherokee main battery replacement\" · \"2017-2021 Jeep Compass tail light bulbs and housing/assembly replacement\"",
-        "accent": "#6E6E6E",
-        "play": {
-          "id": null,
-          "label": "No play recommended",
-          "why": "The play catalog (§5.5) is a product decision the engine does not make.",
-          "generated": true
-        },
-        "outreach": {
-          "subject": null,
-          "opener": null,
-          "bullets": [],
-          "close": null,
-          "generated": true,
-          "why": "Generated on Promote (§6.5). Nothing generates it yet."
-        },
-        "generatedFields": [
-          "accent",
-          "play",
-          "outreach"
-        ],
-        "source": "named",
-        "sourceWhy": "a person typed this handle in"
-      },
-      {
         "id": "c_worth_call_they_make_2__hayesfawcett",
         "name": "hayesfawcett",
         "handle": "@hayesfawcett",
@@ -6014,6 +3712,348 @@
         },
         "headline": null,
         "headlineRestsOn": null,
+        "accent": "#6E6E6E",
+        "play": {
+          "id": null,
+          "label": "No play recommended",
+          "why": "The play catalog (§5.5) is a product decision the engine does not make.",
+          "generated": true
+        },
+        "outreach": {
+          "subject": null,
+          "opener": null,
+          "bullets": [],
+          "close": null,
+          "generated": true,
+          "why": "Generated on Promote (§6.5). Nothing generates it yet."
+        },
+        "generatedFields": [
+          "accent",
+          "play",
+          "outreach"
+        ],
+        "source": "named",
+        "sourceWhy": "a person typed this handle in"
+      },
+      {
+        "id": "c_worth_call_they_make_2__motorcitymechanic",
+        "name": "motorcitymechanic",
+        "handle": "@motorcitymechanic",
+        "initials": "MO",
+        "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kaFAoWrqsWdm_zVN9kvkf6_Rgh6XcM79nb_diHLVIPN-U=s900-c0x00ffffff-no-rj",
+        "mandateId": "m_worth_call_they_make_2",
+        "primaryPlatform": "YouTube channel",
+        "platforms": [
+          {
+            "name": "YouTube channel",
+            "handle": "@motorcitymechanic",
+            "followers": 253000,
+            "url": "https://www.youtube.com/@motorcitymechanic",
+            "avatar": "https://yt3.googleusercontent.com/ytc/AIdro_kaFAoWrqsWdm_zVN9kvkf6_Rgh6XcM79nb_diHLVIPN-U=s900-c0x00ffffff-no-rj",
+            "avatarExpires": null,
+            "avatarStale": false,
+            "matchConfidence": 1
+          }
+        ],
+        "places": [
+          {
+            "name": "YouTube channel",
+            "url": "https://www.youtube.com/@motorcitymechanic",
+            "host": "youtube.com",
+            "followers": 253000
+          }
+        ],
+        "audience": {
+          "total": 253000
+        },
+        "score": 27,
+        "scoreDelta": null,
+        "confidence": 0.833,
+        "pillars": {
+          "gap": {
+            "score": 27,
+            "max": 60,
+            "engine": "rule+llm",
+            "coverage": 0.833,
+            "subsignals": [
+              {
+                "key": "owned",
+                "label": "Owned-channel absence",
+                "engine": "rule",
+                "value": "No store, no newsletter, no membership",
+                "weightPct": 99,
+                "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
+              },
+              {
+                "key": "demand",
+                "label": "Unmet demand",
+                "engine": "llm+rule",
+                "value": "4 purchase-intent comments",
+                "weightPct": 1,
+                "detail": "4 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              }
+            ]
+          },
+          "strain": {
+            "score": 0,
+            "max": 40,
+            "engine": "rule+llm",
+            "subsignals": [
+              {
+                "key": "abandon",
+                "label": "Abandonment markers",
+                "engine": "rule",
+                "value": "nothing abandoned that we can see",
+                "weightPct": 0,
+                "detail": "nothing abandoned that we can see — 0 of the 40 Pressure points. Ceiling on this look is 22."
+              },
+              {
+                "key": "selfreport",
+                "label": "Self-reported strain",
+                "engine": "llm",
+                "value": "we couldn't read their captions",
+                "weightPct": 0,
+                "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 22."
+              },
+              {
+                "key": "cadence",
+                "label": "Cadence decay",
+                "engine": "rule",
+                "value": "not readable on this look",
+                "weightPct": 0,
+                "detail": "we could not read their posting rate — only 5 uploads in the 275 days before that — too few to call it a rate"
+              },
+              {
+                "key": "unanswered",
+                "label": "Unanswered audience",
+                "engine": "rule",
+                "value": "not readable on this look",
+                "weightPct": 0,
+                "detail": "needs a second look — this is a change over time, and we have seen them once"
+              }
+            ]
+          },
+          "fit": {
+            "verdict": "pass",
+            "engine": "llm",
+            "subsignals": [
+              {
+                "key": "brief",
+                "label": "Against the brief",
+                "engine": "llm",
+                "value": "pass",
+                "detail": "Nothing visible contradicts the brief — a Detroit mechanic channel with 253k YouTube subscribers sits in a category people genuinely search for and lends itself to a repeatable, clippable repair-and-diagnosis format — though the scraped page text is boilerplate, so the actual content is unconfirmed rather than disqualifying."
+              }
+            ]
+          }
+        },
+        "inventory": [
+          {
+            "item": "YouTube channel",
+            "state": "present",
+            "surfacesChecked": 0,
+            "note": "found it — youtube.com/@motorcitymechanic",
+            "observedAt": "2026-08-14",
+            "source": "youtube_channel"
+          },
+          {
+            "item": "Newsletter",
+            "state": "verified_absent",
+            "surfacesChecked": 74,
+            "note": "not there · we looked in 6 places",
+            "observedAt": "2026-08-14",
+            "source": "newsletter"
+          },
+          {
+            "item": "Store",
+            "state": "verified_absent",
+            "surfacesChecked": 48,
+            "note": "not there · we looked in 4 places · 3 wouldn't answer",
+            "observedAt": "2026-08-14",
+            "source": "store"
+          },
+          {
+            "item": "Membership",
+            "state": "verified_absent",
+            "surfacesChecked": 34,
+            "note": "not there · we looked in 3 places",
+            "observedAt": "2026-08-14",
+            "source": "membership"
+          },
+          {
+            "item": "Podcast",
+            "state": "verified_absent",
+            "surfacesChecked": 20,
+            "note": "not there · we looked in 2 places · 1 wouldn't answer",
+            "observedAt": "2026-08-14",
+            "source": "podcast"
+          },
+          {
+            "item": "Website",
+            "state": "present",
+            "surfacesChecked": 16,
+            "note": "something at youtube.com/user/vipertech30813 — not confirmed as theirs",
+            "observedAt": "2026-08-14",
+            "source": "website"
+          },
+          {
+            "item": "Representation",
+            "state": "not_found",
+            "surfacesChecked": 0,
+            "note": "their bio does not mention it, which is not the same as nobody having signed them",
+            "observedAt": "2026-08-14",
+            "source": "representation"
+          },
+          {
+            "item": "Sponsored posts",
+            "state": "not_found",
+            "surfacesChecked": 0,
+            "note": "nothing in the 3 recent captions we could read — a sample, which cannot show that none exist",
+            "observedAt": "2026-08-14",
+            "source": "sponsorships"
+          },
+          {
+            "item": "Affiliate links",
+            "state": "not_found",
+            "surfacesChecked": 0,
+            "note": "none among the 0 links they publish, though these usually sit in video descriptions we cannot read",
+            "observedAt": "2026-08-14",
+            "source": "affiliate_links"
+          },
+          {
+            "item": "Platform subscriptions",
+            "state": "not_found",
+            "surfacesChecked": 0,
+            "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+            "observedAt": "2026-08-14",
+            "source": "platform_subscriptions"
+          },
+          {
+            "item": "Shopping tags",
+            "state": "not_found",
+            "surfacesChecked": 0,
+            "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+            "observedAt": "2026-08-14",
+            "source": "shopping_tags"
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "comment",
+            "quote": "If the Pacifica was equipped with a 5.7 EZC instead of 3.6, I'd buy one!",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "I currently have a valve cover leak. I purchased the 13mm wrenches as suggested.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "store"
+          },
+          {
+            "kind": "comment",
+            "quote": "I really appreciate your Channel, it's very helpful. My stepdaughter is on a budget with her Chrysler 200 and I'm going to need some cams. Are there any aftermarket cams that can be trusted?",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "store"
+          },
+          {
+            "kind": "comment",
+            "quote": "I purchased the 13mm wrenches as suggested.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "store"
+          }
+        ],
+        "status": "in_drop",
+        "resurfaced": null,
+        "passed": null,
+        "promoted": null,
+        "outcome": null,
+        "asOf": "2026-08-14",
+        "alert": null,
+        "samples": [
+          {
+            "platform": "YouTube",
+            "publication": null,
+            "kind": "video",
+            "title": "Chrysler Dodge Jeep Ram 3.6L Camshaft Tone Wheel Check Tool 2027900090",
+            "url": "https://www.youtube.com/watch?v=X6BXr08mMK0",
+            "at": "2026-08-13T16:00:09Z",
+            "thumbnail": "https://i.ytimg.com/vi/X6BXr08mMK0/hqdefault.jpg",
+            "excerpt": null,
+            "metric": 1570,
+            "metricUnit": "views",
+            "metricWhy": null,
+            "foundIn": "the YouTube Data API",
+            "seenAt": "2026-08-14T13:07:53.181Z",
+            "status": null
+          },
+          {
+            "platform": "YouTube",
+            "publication": null,
+            "kind": "video",
+            "title": "WARNING: Chrysler, Dodge, Jeep, Ram 3.6L Pentastar engine loose oil galley bolts, make sure to check",
+            "url": "https://www.youtube.com/watch?v=KNZFFciXKk8",
+            "at": "2025-12-18T16:08:38Z",
+            "thumbnail": "https://i.ytimg.com/vi/KNZFFciXKk8/hqdefault.jpg",
+            "excerpt": null,
+            "metric": 80420,
+            "metricUnit": "views",
+            "metricWhy": null,
+            "foundIn": "the YouTube Data API",
+            "seenAt": "2026-08-14T13:07:53.181Z",
+            "status": null
+          },
+          {
+            "platform": "YouTube",
+            "publication": null,
+            "kind": "video",
+            "title": "2021-2025 WL Jeep Grand Cherokee main battery replacement",
+            "url": "https://www.youtube.com/watch?v=bFA2vI2Fiso",
+            "at": "2025-10-10T16:01:13Z",
+            "thumbnail": "https://i.ytimg.com/vi/bFA2vI2Fiso/hqdefault.jpg",
+            "excerpt": null,
+            "metric": 76497,
+            "metricUnit": "views",
+            "metricWhy": null,
+            "foundIn": "the YouTube Data API",
+            "seenAt": "2026-08-14T13:07:53.181Z",
+            "status": null
+          },
+          {
+            "platform": "YouTube",
+            "publication": null,
+            "kind": "video",
+            "title": "2021-2025 WL Jeep Grand Cherokee Park Override Procedure",
+            "url": "https://www.youtube.com/watch?v=yvvRtFe4nPQ",
+            "at": "2025-10-07T16:01:41Z",
+            "thumbnail": "https://i.ytimg.com/vi/yvvRtFe4nPQ/hqdefault.jpg",
+            "excerpt": null,
+            "metric": 19547,
+            "metricUnit": "views",
+            "metricWhy": null,
+            "foundIn": "the YouTube Data API",
+            "seenAt": "2026-08-14T13:07:53.182Z",
+            "status": null
+          }
+        ],
+        "samplesSearched": {
+          "count": 0,
+          "why": "they link none of their own posts anywhere we can read"
+        },
+        "headline": "motorcitymechanic makes step-by-step Chrysler, Dodge, Jeep, and Ram repair videos for 253,000 YouTube subscribers and runs his own website, but has no newsletter, store, or membership to sell parts, tools, or paid help to the owners who come looking for a fix.",
+        "headlineRestsOn": "audience: 253,000 on YouTube · YouTube channel, Own website · they do not have: Newsletter, Store, Membership · \"WARNING: Chrysler, Dodge, Jeep, Ram 3.6L Pentastar engine loose oil galley bolts, make sure to check\" · \"2021-2025 WL Jeep Grand Cherokee main battery replacement\" · \"2017-2021 Jeep Compass tail light bulbs and housing/assembly replacement\"",
         "accent": "#6E6E6E",
         "play": {
           "id": null,
@@ -7625,6 +5665,580 @@
         "sourceWhy": null
       },
       {
+        "id": "c_worth_call_they_make_2__superfastmatt",
+        "name": "superfastmatt",
+        "handle": "@superfastmatt",
+        "initials": "SU",
+        "avatar": "https://yt3.googleusercontent.com/nqgbsRZPop6g87lugiS2bCe3a7WfW7cRTW3WjIQIykcXdU9ykFmfSHRHRxRhUs5KtMNWc8iG6CA=s900-c0x00ffffff-no-rj",
+        "mandateId": "m_worth_call_they_make_2",
+        "primaryPlatform": "TikTok profile",
+        "platforms": [
+          {
+            "name": "TikTok profile",
+            "handle": "@superfastmatt",
+            "followers": 17700,
+            "url": "https://www.tiktok.com/@superfastmatt",
+            "avatar": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/0b7ead6dbc777cca77f6d564a1916b41~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=a92d7667&x-expires=1786885200&x-signature=jhtmvCdV%2BKd98VNYp8HMSIIq7Mw%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5",
+            "avatarExpires": "2026-08-16T13:00:00.000Z",
+            "avatarStale": false,
+            "matchConfidence": 1
+          },
+          {
+            "name": "YouTube channel",
+            "handle": "@superfastmatt",
+            "followers": 666000,
+            "url": "https://www.youtube.com/@superfastmatt",
+            "avatar": "https://yt3.googleusercontent.com/nqgbsRZPop6g87lugiS2bCe3a7WfW7cRTW3WjIQIykcXdU9ykFmfSHRHRxRhUs5KtMNWc8iG6CA=s900-c0x00ffffff-no-rj",
+            "avatarExpires": null,
+            "avatarStale": false,
+            "matchConfidence": 1
+          }
+        ],
+        "places": [
+          {
+            "name": "TikTok profile",
+            "url": "https://www.tiktok.com/@superfastmatt",
+            "host": "tiktok.com",
+            "followers": 17700
+          },
+          {
+            "name": "YouTube channel",
+            "url": "https://www.youtube.com/@superfastmatt",
+            "host": "youtube.com",
+            "followers": 666000
+          }
+        ],
+        "audience": {
+          "total": 683700
+        },
+        "score": 25,
+        "scoreDelta": null,
+        "confidence": 0.667,
+        "pillars": {
+          "gap": {
+            "score": 13,
+            "max": 60,
+            "engine": "rule+llm",
+            "coverage": 0.667,
+            "subsignals": [
+              {
+                "key": "owned",
+                "label": "Owned-channel absence",
+                "engine": "rule",
+                "value": "No newsletter, no podcast",
+                "weightPct": 85,
+                "detail": "4 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
+              },
+              {
+                "key": "demand",
+                "label": "Unmet demand",
+                "engine": "llm+rule",
+                "value": "26 purchase-intent comments",
+                "weightPct": 15,
+                "detail": "26 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              }
+            ]
+          },
+          "strain": {
+            "score": 12,
+            "max": 40,
+            "engine": "rule+llm",
+            "subsignals": [
+              {
+                "key": "abandon",
+                "label": "Abandonment markers",
+                "engine": "rule",
+                "value": "2 dead links they still publish — they tried, it broke",
+                "weightPct": 100,
+                "detail": "2 dead links they still publish — they tried, it broke — 12 of the 40 Pressure points. Ceiling on this look is 34."
+              },
+              {
+                "key": "selfreport",
+                "label": "Self-reported strain",
+                "engine": "llm",
+                "value": "we couldn't read their captions",
+                "weightPct": 0,
+                "detail": "we couldn't read their captions — 0 of the 40 Pressure points. Ceiling on this look is 34."
+              },
+              {
+                "key": "cadence",
+                "label": "Cadence decay",
+                "engine": "rule",
+                "value": "−18% vs baseline",
+                "weightPct": 0,
+                "detail": "2.3 videos a month now, against 2.8 before that — down 18% — 0 of the 40 Pressure points. Ceiling on this look is 34."
+              },
+              {
+                "key": "unanswered",
+                "label": "Unanswered audience",
+                "engine": "rule",
+                "value": "not readable on this look",
+                "weightPct": 0,
+                "detail": "needs a second look — this is a change over time, and we have seen them once"
+              }
+            ]
+          },
+          "fit": {
+            "verdict": "pass",
+            "engine": "llm",
+            "subsignals": [
+              {
+                "key": "brief",
+                "label": "Against the brief",
+                "engine": "llm",
+                "value": "pass",
+                "detail": "He's an automotive engineer who does hands-on engine swaps and builds on camera in a consistent explainer format, which fits the DIY repair and restoration brief, though the recent-post evidence is thin and doesn't directly confirm he names specific parts and products every video."
+              }
+            ]
+          }
+        },
+        "inventory": [
+          {
+            "item": "YouTube channel",
+            "state": "present",
+            "surfacesChecked": 15,
+            "note": "found it — youtube.com/@superfastmatt",
+            "observedAt": "2026-08-14",
+            "source": "youtube_channel"
+          },
+          {
+            "item": "Newsletter",
+            "state": "verified_absent",
+            "surfacesChecked": 96,
+            "note": "not there · we looked in 6 places",
+            "observedAt": "2026-08-14",
+            "source": "newsletter"
+          },
+          {
+            "item": "Store",
+            "state": "present",
+            "surfacesChecked": 42,
+            "note": "something at superfastmatt.myshopify.com — not confirmed as theirs",
+            "observedAt": "2026-08-14",
+            "source": "store"
+          },
+          {
+            "item": "Membership",
+            "state": "present",
+            "surfacesChecked": 17,
+            "note": "something at patreon.com/superfastmatt — not confirmed as theirs",
+            "observedAt": "2026-08-14",
+            "source": "membership"
+          },
+          {
+            "item": "Podcast",
+            "state": "verified_absent",
+            "surfacesChecked": 25,
+            "note": "not there · we looked in 2 places",
+            "observedAt": "2026-08-14",
+            "source": "podcast"
+          },
+          {
+            "item": "Website",
+            "state": "present",
+            "surfacesChecked": 44,
+            "note": "found it — tiktok.com/@superfastmatt",
+            "observedAt": "2026-08-14",
+            "source": "website"
+          },
+          {
+            "item": "Representation",
+            "state": "not_found",
+            "surfacesChecked": 0,
+            "note": "their bio does not mention it, which is not the same as nobody having signed them",
+            "observedAt": "2026-08-14",
+            "source": "representation"
+          },
+          {
+            "item": "Sponsored posts",
+            "state": "not_found",
+            "surfacesChecked": 0,
+            "note": "nothing in the 4 recent captions we could read — a sample, which cannot show that none exist",
+            "observedAt": "2026-08-14",
+            "source": "sponsorships"
+          },
+          {
+            "item": "Affiliate links",
+            "state": "not_found",
+            "surfacesChecked": 0,
+            "note": "none among the 1 links they publish, though these usually sit in video descriptions we cannot read",
+            "observedAt": "2026-08-14",
+            "source": "affiliate_links"
+          },
+          {
+            "item": "Platform subscriptions",
+            "state": "not_found",
+            "surfacesChecked": 0,
+            "note": "Platform subscription status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+            "observedAt": "2026-08-14",
+            "source": "platform_subscriptions"
+          },
+          {
+            "item": "Shopping tags",
+            "state": "not_found",
+            "surfacesChecked": 0,
+            "note": "Shopping-tag status is only visible through partner APIs we do not have. Resolves not_found and says so.",
+            "observedAt": "2026-08-14",
+            "source": "shopping_tags"
+          }
+        ],
+        "evidence": [
+          {
+            "kind": "comment",
+            "quote": "I want one. License plate: \"D2\"",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "I've got my fingers crossed that Slate makes it. I love small trucks.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "I'm yearning for an R3X.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "If I can afford the R3 I'll defo get one",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "im for slate bigtime, ill get one once they become a readily available, if they do so.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "still bigger than i'd buy since i don't need a big car, but if the r3 is as small as promised, i might be convinced to get one",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "I have my eye on an R2, once it level 3 self-drives.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "I'll probably buy a nice used R1T when they get a little more common.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "I really like rivians. I would like to buy one in the future so I hope they can stick around.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "store"
+          },
+          {
+            "kind": "comment",
+            "quote": "I really really want Aptera to succeed. I can't put my finger on why, but there's just something about them. I guess the design just makes a lot of sense for most people the majority of the time.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "I hope aptera makes it. Not just because i threw 3 grand at it, but because it's the only vehicle out there that's not a non-aero brick for some reason, can get 1000 miles to a charge and can sit out for 6 months without the battery dying. I want it.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "I want Aptera to make it",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "Rivian is the only EV company I am fully hoping to buy into. They just seem so passionate about making a *good product* that *happens* to be an EV, rather than just trying to meet a quota and/or jump ship as soon as they are allowed (Honda >.>). I get to test the R2 tomorrow. I hope it goes well. Th",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "I own a Rivian 2nd Gen R1T. I watched the videos and followed the growing pains through the 1st Gen product line before making my decision to purchase, and I am glad I did.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "I hope Slate makes it. The market needs a basic, economy EV to counter all the luxury laptops with wheels.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "I think Aptera's going to make it, but initially be niche, which was the original intention anyways. Go Aptera!",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "I bought a used r1t launch edition over a year ago, and live where it's bitter cold about 19 months a year with a 6 minute 110° summer. I've asked myself if I'd ever get another gas cage, and I got sad thinking about the prospect.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "Rivian is the only EV company I am fully hoping to buy into. They just seem so passionate about making a *good product* that *happens* to be an EV, rather than just trying to meet a quota and/or jump ship as soon as they are allowed (Honda >.>). I get to test the R2 tomorrow. I hope it goes well.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "I too have a deposit on an R2, although it was more of a statement. I'll probably buy a nice used R1T when they get a little more common.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "store"
+          },
+          {
+            "kind": "comment",
+            "quote": "I really hope they do make it and can expand into Europe as well, I wouldn't mind a Tesla alternative tha",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "The R3 looks so sick, if it has decent self driving, the wife and I will be getting that.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "I unironically like the look of Rivian's cars. I just found out about the R3, and even that looks really cool in my opinion. Some sort of cross between a futuristic Jeep and an old Russian Lada. I really hope they do make it and can expand into Europe as well, I wouldn't mind a Tesla alternative tha",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "unspecified"
+          },
+          {
+            "kind": "comment",
+            "quote": "14:56 you said keychain and I immediately looked for a purchase link. You sold out so fast last time, like super fast! 😅",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "store"
+          },
+          {
+            "kind": "comment",
+            "quote": "Great investment on the key chains, I will be buying one once they have outlived their usefulness and you need them to be converted back to cold hard cash. Congrats on your run, thats amazing. You definitely are living up to your name.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "store"
+          },
+          {
+            "kind": "comment",
+            "quote": "Dang it! I wanted the blue key chain to pair with my red one.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "store"
+          },
+          {
+            "kind": "comment",
+            "quote": "Great investment on the key chains, I will be buying one once they have outlived their usefulness and you need them to be converted back to cold hard cash.",
+            "platform": "YouTube",
+            "url": null,
+            "observedAt": "2026-08-14",
+            "engine": "llm",
+            "label": "store"
+          },
+          {
+            "kind": "signal",
+            "quote": "https://www.youtube.com/@SuperfastMatt",
+            "platform": "link they publish",
+            "url": "https://www.youtube.com/@SuperfastMatt",
+            "observedAt": "2026-08-12",
+            "engine": "rule",
+            "label": "abandonment"
+          },
+          {
+            "kind": "signal",
+            "quote": "https://www.youtube.com/@SuperfastMatt",
+            "platform": "link they publish",
+            "url": "https://www.youtube.com/@SuperfastMatt",
+            "observedAt": "2026-08-12",
+            "engine": "rule",
+            "label": "abandonment"
+          }
+        ],
+        "status": "in_drop",
+        "resurfaced": null,
+        "passed": null,
+        "promoted": null,
+        "outcome": null,
+        "asOf": "2026-08-14",
+        "alert": null,
+        "samples": [
+          {
+            "platform": "YouTube",
+            "publication": null,
+            "kind": "video",
+            "title": "Speed Week Was A Mixed Bag",
+            "url": "https://www.youtube.com/watch?v=0gUvDfgn5I0",
+            "at": "2026-08-11T15:17:43Z",
+            "thumbnail": "https://i.ytimg.com/vi/0gUvDfgn5I0/hqdefault.jpg",
+            "excerpt": null,
+            "metric": 421558,
+            "metricUnit": "views",
+            "metricWhy": null,
+            "foundIn": "the YouTube Data API",
+            "seenAt": "2026-08-14T13:21:48.393Z",
+            "status": null
+          },
+          {
+            "platform": "YouTube",
+            "publication": null,
+            "kind": "video",
+            "title": "Rivian Is Gonna Be Alright",
+            "url": "https://www.youtube.com/watch?v=JEmjg1q19GI",
+            "at": "2026-07-26T14:57:04Z",
+            "thumbnail": "https://i.ytimg.com/vi/JEmjg1q19GI/hqdefault.jpg",
+            "excerpt": null,
+            "metric": 261335,
+            "metricUnit": "views",
+            "metricWhy": null,
+            "foundIn": "the YouTube Data API",
+            "seenAt": "2026-08-14T13:21:48.393Z",
+            "status": null
+          },
+          {
+            "platform": "YouTube",
+            "publication": null,
+            "kind": "video",
+            "title": "The World's Best Driving Road Is Kinda Terrible",
+            "url": "https://www.youtube.com/watch?v=o0mNM0LIFY4",
+            "at": "2026-07-11T14:19:32Z",
+            "thumbnail": "https://i.ytimg.com/vi/o0mNM0LIFY4/hqdefault.jpg",
+            "excerpt": null,
+            "metric": 454787,
+            "metricUnit": "views",
+            "metricWhy": null,
+            "foundIn": "the YouTube Data API",
+            "seenAt": "2026-08-14T13:21:48.393Z",
+            "status": null
+          },
+          {
+            "platform": "YouTube",
+            "publication": null,
+            "kind": "video",
+            "title": "3D Print A Whole Race Car Body. Or Just Watch Me Do It. Whatever.",
+            "url": "https://www.youtube.com/watch?v=nt85nTMnY1w",
+            "at": "2026-06-20T23:53:10Z",
+            "thumbnail": "https://i.ytimg.com/vi/nt85nTMnY1w/hqdefault.jpg",
+            "excerpt": null,
+            "metric": 415052,
+            "metricUnit": "views",
+            "metricWhy": null,
+            "foundIn": "the YouTube Data API",
+            "seenAt": "2026-08-14T13:21:48.393Z",
+            "status": null
+          }
+        ],
+        "samplesSearched": {
+          "count": 0,
+          "why": "they link none of their own posts anywhere we can read"
+        },
+        "headline": "superfastmatt makes car build and engineering videos for 666,000 on YouTube, with recent uploads landing between 256,172 and 449,495 views, and he already sells through a store, a membership, and his own website, but he has no newsletter or podcast and his posting has slowed to 2.3 videos a month from 2.8.",
+        "headlineRestsOn": "666,000 on YouTube · \"Rivian Is Gonna Be Alright\" (256,172 views) · \"The World's Best Driving Road Is Kinda Terrible\" (449,495 views) · Store · Membership · Own website · Newsletter · Podcast · 2.3 videos a month now, against 2.8 before that",
+        "accent": "#6E6E6E",
+        "play": {
+          "id": null,
+          "label": "No play recommended",
+          "why": "The play catalog (§5.5) is a product decision the engine does not make.",
+          "generated": true
+        },
+        "outreach": {
+          "subject": null,
+          "opener": null,
+          "bullets": [],
+          "close": null,
+          "generated": true,
+          "why": "Generated on Promote (§6.5). Nothing generates it yet."
+        },
+        "generatedFields": [
+          "accent",
+          "play",
+          "outreach"
+        ],
+        "source": "named",
+        "sourceWhy": null
+      },
+      {
         "id": "c_worth_call_they_make_2__brandonfwalker",
         "name": "brandonfwalker",
         "handle": "@brandonfwalker",
@@ -8427,12 +7041,12 @@
         "audience": {
           "total": 277000
         },
-        "score": 24,
+        "score": 23,
         "scoreDelta": null,
         "confidence": 0.833,
         "pillars": {
           "gap": {
-            "score": 24,
+            "score": 23,
             "max": 60,
             "engine": "rule+llm",
             "coverage": 0.833,
@@ -8449,9 +7063,9 @@
                 "key": "demand",
                 "label": "Unmet demand",
                 "engine": "llm+rule",
-                "value": "4 purchase-intent comments",
+                "value": "3 purchase-intent comments",
                 "weightPct": 1,
-                "detail": "4 lines classified as intent to buy or subscribe, in text the engine fetched first."
+                "detail": "3 lines classified as intent to buy or subscribe, in text the engine fetched first."
               }
             ]
           },
@@ -8616,15 +7230,6 @@
             "observedAt": "2026-08-14",
             "engine": "llm",
             "label": "youtube_channel"
-          },
-          {
-            "kind": "comment",
-            "quote": "First you got me back into soldering over crimping. You may be convincing me more after this video. Love my TS 101 still need a Battery pack just cord for now till I break down and buy a battery pack👊🏻",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
           },
           {
             "kind": "comment",
@@ -13175,16 +11780,16 @@
                 "label": "Owned-channel absence",
                 "engine": "rule",
                 "value": "No store, no podcast",
-                "weightPct": 97,
+                "weightPct": 99,
                 "detail": "3 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
               },
               {
                 "key": "demand",
                 "label": "Unmet demand",
                 "engine": "llm+rule",
-                "value": "6 purchase-intent comments",
-                "weightPct": 3,
-                "detail": "6 lines classified as intent to buy or subscribe, in text the engine fetched first."
+                "value": "1 purchase-intent comment",
+                "weightPct": 1,
+                "detail": "1 lines classified as intent to buy or subscribe, in text the engine fetched first."
               }
             ]
           },
@@ -13332,51 +11937,6 @@
           }
         ],
         "evidence": [
-          {
-            "kind": "comment",
-            "quote": "Do you still sell the M56 valve cover? If so, what is your ebay username? I'd like to buy from you if still possible. Thanks!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Do you still sell the M56 valve cover? If so, what is your ebay username? I'd like to buy from you if still possible. Thanks!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Do you still sell the M56 valve cover? If so, what is your ebay username? I'd like to buy from you if still possible. Thanks!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Do you still sell the M56 valve cover? If so, what is your ebay username? I'd like to buy from you if still possible. Thanks!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
-          {
-            "kind": "comment",
-            "quote": "Do you still sell the M56 valve cover? If so, what is your ebay username? I'd like to buy from you if still possible. Thanks!",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "store"
-          },
           {
             "kind": "comment",
             "quote": "Do you still sell the M56 valve cover? If so, what is your ebay username? I'd like to buy from you if still possible. Thanks!",
@@ -22671,9 +21231,9 @@
                 "key": "demand",
                 "label": "Unmet demand",
                 "engine": "llm+rule",
-                "value": "2 purchase-intent comments",
+                "value": "1 purchase-intent comment",
                 "weightPct": 100,
-                "detail": "2 lines classified as intent to buy or subscribe, in text the engine fetched first."
+                "detail": "1 lines classified as intent to buy or subscribe, in text the engine fetched first."
               }
             ]
           },
@@ -22829,15 +21389,6 @@
             "observedAt": "2026-08-14",
             "engine": "llm",
             "label": "membership"
-          },
-          {
-            "kind": "comment",
-            "quote": "Want to join this channel?",
-            "platform": "YouTube",
-            "url": null,
-            "observedAt": "2026-08-14",
-            "engine": "llm",
-            "label": "membership"
           }
         ],
         "status": "candidate",
@@ -22952,15 +21503,15 @@
           "c_worth_call_they_make_2__watchweswork",
           "c_worth_call_they_make_2__itshunterfriesen",
           "c_worth_call_they_make_2__marcelluswiley",
-          "c_worth_call_they_make_2__superfastmatt",
-          "c_worth_call_they_make_2__motorcitymechanic",
           "c_worth_call_they_make_2__hayesfawcett",
           "c_worth_call_they_make_2__girlwholove2gossip",
           "c_worth_call_they_make_2__ratchetsandwrenches",
+          "c_worth_call_they_make_2__motorcitymechanic",
           "c_worth_call_they_make_2__backseatcoach",
           "c_worth_call_they_make_2__samhartman_10",
           "c_worth_call_they_make_2__catsofyore",
           "c_worth_call_they_make_2__humblemechanic",
+          "c_worth_call_they_make_2__superfastmatt",
           "c_worth_call_they_make_2__brandonfwalker",
           "c_worth_call_they_make_2__gossipgilby",
           "c_worth_call_they_make_2__jeffvandermeer",
@@ -23069,12 +21620,12 @@
       "audience": {
         "total": 1120000
       },
-      "score": 44,
+      "score": 39,
       "scoreDelta": null,
       "confidence": 0.833,
       "pillars": {
         "gap": {
-          "score": 32,
+          "score": 27,
           "max": 60,
           "engine": "rule+llm",
           "coverage": 0.833,
@@ -23084,16 +21635,16 @@
               "label": "Owned-channel absence",
               "engine": "rule",
               "value": "No store, no newsletter, no membership",
-              "weightPct": 75,
+              "weightPct": 89,
               "detail": "5 of 6 checks we can settle either way came back settled. we couldn't tell what they've switched on."
             },
             {
               "key": "demand",
               "label": "Unmet demand",
               "engine": "llm+rule",
-              "value": "144 purchase-intent comments",
-              "weightPct": 25,
-              "detail": "144 lines classified as intent to buy or subscribe, in text the engine fetched first."
+              "value": "41 purchase-intent comments",
+              "weightPct": 11,
+              "detail": "41 lines classified as intent to buy or subscribe, in text the engine fetched first."
             }
           ]
         },
@@ -23257,7 +21808,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "unspecified"
+          "label": "store"
         },
         {
           "kind": "comment",
@@ -23266,7 +21817,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "unspecified"
+          "label": "store"
         },
         {
           "kind": "comment",
@@ -23275,7 +21826,7 @@
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "unspecified"
+          "label": "store"
         },
         {
           "kind": "comment",
@@ -23360,52 +21911,7 @@
         },
         {
           "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -23441,43 +21947,7 @@
         },
         {
           "kind": "comment",
-          "quote": "I have purchased many products from DIY and CLEAN, and love both.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Just started using this product and love it!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Can't wait to try it out 🔥",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -23495,61 +21965,7 @@
         },
         {
           "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "I have a 80series landcruiser i been looking for a great product.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I have two unopened tins still on my shelf from when I thought it was being discontinued so I stocked up.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I use the Diy wax , I can say it really does fill.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "However $30 for this glass/cleaner/sealant is a bit steep considering you can get Glaco for $35 which is a full on coating. But just to support Ivan I'll buy a bott",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -23567,43 +21983,7 @@
         },
         {
           "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Love me some DIYDetail products, I'm still hooked on Quickbeads. My favorite so far, you have to pry it from my dead cold beaded hands. However $30 for this glass/cleaner/sealant is a bit steep considering you can get Glaco for $35 which is a full on coating. But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -23685,33 +22065,6 @@
         {
           "kind": "comment",
           "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Can't wait to try it out 🔥",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -23729,42 +22082,6 @@
         },
         {
           "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Hello Pan, Thank you for your videos — they truly help us better understand the entire world of detailing. I would like to know whether my Clean by Pan 8‑year coating, applied to my vehicle about a year ago and stored immediately afterward in my freezer, can still be used on my new summer car.",
           "platform": "YouTube",
           "url": null,
@@ -23774,151 +22091,16 @@
         },
         {
           "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
           "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
+          "label": "membership"
         },
         {
           "kind": "comment",
           "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -23937,87 +22119,6 @@
         {
           "kind": "comment",
           "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -24027,141 +22128,6 @@
         {
           "kind": "comment",
           "quote": "Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I would like to know whether my Clean by Pan 8‑year coating, applied to my vehicle about a year ago and stored immediately afterward in my freezer, can still be used on my new summer car.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Can't wait to try it out 🔥",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Finally, a C8 Corvette! Thanks, Pan, for making this happen. Nice to see your approach on this vehicle so I can learn some tricks taking care of mine... Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -24179,52 +22145,7 @@
         },
         {
           "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
           "quote": "Hi pan, I'm currently half way through my V1 bottle and love the slickness, foam and scent. Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
           "platform": "YouTube",
           "url": null,
           "observedAt": "2026-08-14",
@@ -24239,303 +22160,6 @@
           "observedAt": "2026-08-14",
           "engine": "llm",
           "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Look forward to trying the V2 next. In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "membership"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Have a whole gallon love it !!!!!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I'll try this",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "But just to support Ivan I'll buy a bott",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "unspecified"
-        },
-        {
-          "kind": "comment",
-          "quote": "Thanks for the discount as always.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I appreciate the 20% off but that shipping cost still drives the price right back up. I ordered the shampoo, discounted price looked great but then I go to check out and the price I still high when they add that shipping fee.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Finally, a C8 Corvette! Thanks, Pan, for making this happen. Nice to see your approach on this vehicle so I can learn some tricks taking care of mine... Btw its been a few months, and the 8-year clean ceramic coating is looking great! I did purchase the window cleaner (Glaco), but haven't used it ye",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "I just bought a new to me 2014 e350 coupe. I did a paint correction and put the 8 year coating on it.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Incredibly informative. Will be picking up some of the shampoo very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "My 128 oz one is arriving today😊",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "In the autumn when the weather cools down, I'm going to order your spray polish and pads ready for 2 coats of gyeon can coat for winter protection.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "The regular envié spray is so slick I love it works great for so many things, will be buying g bottle number two very soon",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Ordered!",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "store"
-        },
-        {
-          "kind": "comment",
-          "quote": "Pan, another good one. I signed up and hope to ask you a few questions at TOC.",
-          "platform": "YouTube",
-          "url": null,
-          "observedAt": "2026-08-14",
-          "engine": "llm",
-          "label": "membership"
         },
         {
           "kind": "signal",

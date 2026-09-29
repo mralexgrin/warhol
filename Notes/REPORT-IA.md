@@ -264,7 +264,7 @@ design work, and Task 6's export adapter is the version of it that resolves itse
 
 ## 6. Built — v5.2
 
-All of the above is built at [`prototypes/v5.2/`](prototypes/v5.2/), prototype fidelity, on the
+All of the above is built at [`prototypes/v5.2/`](../Archive/prototypes/v5.2/index.html), prototype fidelity, on the
 curated seed. v5.1 is preserved unedited. Full build notes:
 [`v5.2/DESIGN-NOTES.md`](../Archive/prototypes/v5.2/DESIGN-NOTES.md).
 

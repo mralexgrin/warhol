@@ -27,9 +27,19 @@ function project(creatorId, asOf) {
   const latest = new Map();          // key -> newest row at or before as_of
   const all = { demand: [], strain: [], dead: [], checks: [], audience: [] };
   const sampleRows = new Map();      // sample key -> newest reading of that post
+  const demandRows = new Map();      // the comment's words -> newest reading of it
 
   for (const r of rows) {
-    if (r.key === 'demand.signal') { all.demand.push({ points_at: r.value, quote: r.evidence, at: r.observed_at }); continue; }
+    /* DEMAND IS LATEST-WINS PER COMMENT, for the same reason samples are below.
+       Every Study pass re-reads the comment section and logs each buy-question
+       it finds again, so a comment read on four passes counted as four people:
+       watchweswork scored one comment as 4, pantheorganizer 41 as 144. One
+       comment is one person asking. */
+    if (r.key === 'demand.signal') {
+      const words = String(r.evidence || '').replace(/\s+/g, ' ').trim().toLowerCase();
+      demandRows.set(words || r.id, { points_at: r.value, quote: r.evidence, at: r.observed_at });
+      continue;
+    }
     if (r.key === 'pressure.self_reported') { all.strain.push({ reading: r.value, quote: r.evidence, at: r.observed_at }); continue; }
     if (r.key === 'pressure.abandonment') { all.dead.push({ url: r.value, status: r.http_status, at: r.observed_at }); continue; }
     if (r.key.startsWith('check.')) { all.checks.push(r); continue; }
@@ -56,6 +66,7 @@ function project(creatorId, asOf) {
     const prev = latest.get(r.key);
     if (!prev || new Date(r.observed_at) >= new Date(prev.observed_at)) latest.set(r.key, r);
   }
+  all.demand = [...demandRows.values()];
 
   // ---- surfaces
   const surfaces = [];

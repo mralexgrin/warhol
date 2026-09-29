@@ -89,6 +89,7 @@
     briefId: 'b_house',
     asOf: null,                 // always today. The rewind is removed.
     firstRun: false,            // was: show January 2024 once. Nothing reads it now.
+    introSeen: readIntroSeen(), // the one-line note for a first visit; per browser, see introNote
     reportId: null,
     from: 'drop',
     outreachId: null,
@@ -140,6 +141,7 @@
        otherwise is remembered. Persisted so the choice survives a reload, which
        is the difference between a preference and a fidget. */
     railWide: false,
+    railChosen: false,
     gateError: null,            // the sign-in refusal, inline and generic
     gateShow: false,            // is the password field showing its value
     /* render() replaces the whole DOM, so a field that reads its value from the
@@ -174,7 +176,7 @@
     /* v6.2 — `run` rides along now that a lookup is a batch. Six names typed in
        and resolved is work, and the answer used to be thrown away by any
        navigation that cleared the timers. */
-    'railWide', 'helpFrom', 'tracked', 'run',
+    'railWide', 'railChosen', 'helpFrom', 'tracked', 'run',
     /* v5.8 — the scans ride along too. A reload used to put every fresh brief
        back to "Scout is looking" from zero, which on a live run means paying
        for the same names twice. Sanitised on the way out by scanSnapshot. */
@@ -349,6 +351,28 @@
     return ex;
   }
   function decisionFor(id) { return state.decisions[id] || null; }
+  /* v7 — THE LIST A NAME WAS ALREADY ON BEFORE TODAY. decisionFor only knows
+     today's verbs, so a report opened from the watchlist offered "Watch" on
+     someone already watched. The report's verbs now match the row they were
+     opened from. */
+  function standingOf(c) {
+    if (!c || decisionFor(c.id)) return null;
+    if (c.status === 'watched') return 'watched';
+    var passed = S.passedSeed.some(function (p) { return p.id === c.id; });
+    return passed && !state.unpassed[c.id] ? 'passed' : null;
+  }
+  function verbSet(c, size) {
+    var st = standingOf(c);
+    var undo = '<button class="vbtn vbtn--undo' + (size ? ' vbtn--' + size : '') + '" data-act="';
+    if (st === 'watched') {
+      return U.verbBtn('promote', c.id, 'Promote', 'go', size) +
+        undo + 'passtray" data-id="' + c.id + '">Stop watching</button>';
+    }
+    if (st === 'passed') return undo + 'unpass" data-id="' + c.id + '">Put back in the drop</button>';
+    return U.verbBtn('promote', c.id, 'Promote', 'go', size) +
+      U.verbBtn('watchtray', c.id, 'Watch', 'hold', size) +
+      U.verbBtn('passtray', c.id, 'Pass', 'no', size);
+  }
   function creator(id) { return id === W.runANameResult.id ? W.runANameResult : W.byId[id]; }
   function score(c) { return S.score13(c); }
   function remaining() {
@@ -358,7 +382,12 @@
     return v === 'pass' ? 'Passed' : v === 'watch' ? 'Watched' : 'Promoted';
   }
   function watchlist() {
-    var seeded = W.candidates.filter(function (c) { return c.status === 'watched'; });
+    /* v7 — a seeded watch that was passed or promoted today has left the list.
+       "Stop watching" used to add the name to Passed and leave it here too. */
+    var seeded = W.candidates.filter(function (c) {
+      var d = decisionFor(c.id);
+      return c.status === 'watched' && (!d || d.verb === 'watch');
+    });
     var added = [];
     Object.keys(state.decisions).forEach(function (id) {
       if (state.decisions[id].verb !== 'watch') return;
@@ -434,7 +463,7 @@
   function railHTML() {
     var who = me();
     var dark = document.documentElement.getAttribute('data-theme') === 'dark';
-    var wide = !!state.railWide;
+    var wide = railIsWide();
     return '<nav class="railcol railcol--wide' + (wide ? '' : ' railcol--mini') +
       '" aria-label="Sections">' +
       /* v5.5c — THE REAL MARK. The gradient tile with a typographic S in it was
@@ -501,6 +530,7 @@
          the only fix that survives them being equal. */
       navBtn('drop', 'drop', "Today's drop", String(dropList().length ? remaining() : 0), 'still to decide') +
       navBtn('watchlist', 'watch', 'Watchlist', String(watchlist().length), 'being watched') +
+      navBtn('promoted', 'up', 'Promoted', String(promotedList().length || ''), 'promoted') +
       navBtn('passed', 'passed', 'Passed', String(passedList().length), 'passed') +
       (SHOW_RUNNAME ? navBtn('runname', 'run', 'Run a name', '') : '') +
       /* v5.8 — TRENDS. The standing read of everything scanned so far, which
@@ -537,7 +567,12 @@
          the bottom and the top bar carried a second avatar that did the same
          job — so the identity is now the control, where it already was. */
       '<div class="acct acct--rail">' +
-      '<button class="whoami" data-act="menu" aria-expanded="' + state.menu + '" aria-haspopup="true">' +
+      '<button class="whoami" data-act="menu" aria-expanded="' + state.menu + '" aria-haspopup="true"' +
+      /* v6 P1 — the account control's visible label (`.who`) is display:none in
+         the collapsed rail, which left the button nameless to a screen reader.
+         The name is the accessible name in both states; in the wide rail it also
+         shows, so label-in-name holds. */
+      ' aria-label="' + esc(who.name) + '">' +
       /* v5.5c — no field behind it. `.ini` is the AVATAR component: a lilac tile
          standing in for a picture. With a glyph in it there is no picture being
          stood in for, so the tile was a coloured chip sitting directly under the
@@ -567,11 +602,21 @@
       '</nav>';
   }
 
+  /* v7 — LABELS WHEN THERE IS ROOM FOR THEM. v5.5b made the rail icons-only to
+     give the work column 176px, which matters at a laptop width and not on a
+     wide screen — and an inbox, an eye and a box do not say drop, watchlist and
+     passed. Wide by default from 1360px; once the toggle is used, the person's
+     choice wins at every width. */
+  function railIsWide() {
+    return state.railChosen ? !!state.railWide : window.innerWidth >= 1360;
+  }
+
   function navBtn(view, ic, label, n, nWhat) {
     var on = state.view === view ||
       (view === 'drop' && state.view === 'report' && state.from === 'drop') ||
       (view === 'watchlist' && state.view === 'report' && state.from === 'watchlist') ||
-      (view === 'passed' && state.view === 'report' && state.from === 'passed');
+      (view === 'passed' && state.view === 'report' && state.from === 'passed') ||
+      (view === 'promoted' && state.view === 'report' && state.from === 'promoted');
     return '<button class="rnav" data-act="view" data-view="' + view + '"' +
       (on ? ' aria-current="page"' : '') + '>' +
       '<span class="ic">' + U.icon(ic) + '</span><span class="tx">' + esc(label) + '</span>' +
@@ -1254,6 +1299,7 @@
       (lr ? '<span class="deck-run">' + U.icon('run') +
         'Last run ' + esc(U.clockZone(lr.finished)) + ', ' +
         esc(U.shortDate(lr.finished)) + U.rcp('lastrun', '', 'the last run') + '</span>' : '') +
+      (list.length ? '<button class="keyhint" data-act="keys">Shortcuts</button>' : '') +
       '</p>' + '</header>';
 
     var chips = briefTabs(b);
@@ -1342,12 +1388,54 @@
 
     below += whoElse(b);
 
-    var done0 = remaining() === 0 ? '<div class="p p--teal zero mt-5">' +
-      '<h2>Worked to zero.</h2>' +
-      '<p>Every name has a decision. Next drop ' + U.clockZone(S.lastRun ? S.lastRun.next : '06:00') + '.</p></div>' : '';
+    /* v7 — THE END OF THE DAY GOES WHERE THE DAY STARTS. This panel sat under
+       the list and under "Also looked at", so the moment the work was done it
+       was a scroll away. It leads now, and says what the day came to and what
+       is due next, so "done" has somewhere to go. */
+    var done0 = '';
+    if (list.length && remaining() === 0) {
+      var tally = { promote: 0, watch: 0, pass: 0 };
+      list.forEach(function (c) { var d = decisionFor(c.id); if (d) tally[d.verb]++; });
+      var parts = [
+        tally.promote ? tally.promote + ' promoted' : '',
+        tally.watch ? tally.watch + ' watched' : '',
+        tally.pass ? tally.pass + ' passed' : ''
+      ].filter(Boolean);
+      var due = watchlist().filter(function (c) {
+        var a = S.V13[c.id] || {}, d = decisionFor(c.id);
+        var win = (d && d.window) || a.window || '1 month';
+        var span = win === '3 months' ? 90 : win === '2 months' ? 60 : 30;
+        return span - U.daysBetween(c.watchedSince || asOf(), asOf()) <= 7;
+      }).length;
+      done0 = '<div class="p p--teal zero donepanel">' +
+        '<h2>Worked to zero.</h2>' +
+        '<p>' + esc(parts.join(', ')) + '. Next drop ' + U.clockZone(S.lastRun ? S.lastRun.next : '06:00') + '.</p>' +
+        '<p class="doneacts">' +
+        (tally.promote ? '<button class="btn btn--sm btn--out" data-act="view" data-view="promoted">Promoted</button>' : '') +
+        (due ? '<button class="btn btn--sm btn--out" data-act="view" data-view="watchlist">' +
+          U.plural(due, 'name') + ' due on the watchlist this week</button>' : '') +
+        '</p></div>';
+    }
 
-    return lens + head + chips + runbar + progress +
-      '<div class="listwrap">' + rows + '</div>' + below + done0;
+    return lens + head + chips + introNote(b, list, done0) + runbar + progress + done0 +
+      '<div class="listwrap">' + rows + '</div>' + below;
+  }
+
+  /* 29 Sep 2026 — A FIRST VISIT GETS ONE LINE. Scout is also a public portfolio
+     piece, and a visitor who signs in lands on scored names with no word on what
+     to do with them. One line, above the rows, that says what the verbs are for
+     and points at Help for the rest. Closed once, it stays closed in this
+     browser (localStorage, not the session: a reload should not bring it back). */
+  function readIntroSeen() {
+    try { return localStorage.getItem('scout-intro-seen') === '1'; } catch (e) { return false; }
+  }
+  function introNote(b, list, done0) {
+    if (state.introSeen || b.tracked || !list.length || done0) return '';
+    return '<aside class="intro" aria-label="New here">' +
+      '<p><b>New here?</b> Open any name for the evidence behind its score, then promote, watch or ' +
+      'pass it. The drop is done when every name has a decision. ' +
+      '<button class="lnk" data-act="help">How a score is built</button></p>' +
+      '<button class="btn btn--ghost btn--sm intro-x" data-act="introdone">Got it</button></aside>';
   }
 
   /* v5.9 — WHEN HALF THE DROP LEADS WITH AN ABSENCE, SAY WHOSE ABSENCE IT IS.
@@ -1557,7 +1645,7 @@
        somebody typed — "who else was looked at" answered about a question this
        tab never asked. */
     if (b && b.tracked) return '';
-    var rejected = S.rejectedFor(asOf(), b, state.admin.threshold);
+    var rejected = S.rejectedFor(asOf(), b, state.admin.threshold, standingExcluded());
     if (!rejected.length) return '';
 
     /* v5.9 — SAY IT ONCE. Every under-the-bar row printed the same fifteen-word
@@ -1593,7 +1681,9 @@
         '<td class="wex-num">' + r.score + '</td>' +
         '<td class="wex-num">' + Math.round((c.confidence || 0) * 100) + '%</td>' +
         '<td class="wex-num">' + aud + '</td>' +
-        '<td class="wex-stop">' + (isBar(r) ? 'under the bar' : esc(r.words.join(', '))) +
+        '<td class="wex-stop">' + (isBar(r) ? 'under the bar'
+          : r.failed.length ? esc(r.words.join(', '))
+          : 'cleared, past today&rsquo;s limit of ' + S.CAP) +
         (why ? '<span class="wex-why">' + esc(why) + '</span>' : '') +
         '</td></tr>';
     }).join('');
@@ -1727,7 +1817,7 @@
        while a tray is open on this card: a tray is a decision in progress, and
        a stray click in its whitespace must not navigate out of it. */
     var trayOpen = state.passTray === c.id || state.watchTray === c.id;
-    return '<article class="row row--link" data-id="' + c.id + '"' +
+    return '<article class="row row--link' + (state.cursor === c.id ? ' row--cur' : '') + '" data-id="' + c.id + '"' +
       (trayOpen ? '' : ' data-act="report"') + '>' +
       '<div class="rk">' + rank + '</div>' +
       '<div class="scorewrap">' + U.ring(c, 'sm', score(c)) + '</div>' +
@@ -1894,10 +1984,7 @@
          for the corner. Mirrors the verbs' own rule: one set visible at a time,
          this one when the tall header has scrolled away. */
       seriesNav(c, true) +
-      (d || rewound() ? '' : '<div class="verbs">' +
-        U.verbBtn('promote', c.id, 'Promote', 'go', 'sm') +
-        U.verbBtn('watchtray', c.id, 'Watch', 'hold', 'sm') +
-        U.verbBtn('passtray', c.id, 'Pass', 'no', 'sm') + '</div>') +
+      (d || rewound() ? '' : '<div class="verbs">' + verbSet(c, 'sm') + '</div>') +
       '</div></div>';
 
     out += lens + '<header class="rpthead"><div class="who2 rpt-topbar">' +
@@ -1912,6 +1999,7 @@
       '<button class="btn btn--soft btn--sm backbtn" data-act="view" data-view="' + esc(state.from) + '">' +
       U.icon('back') + 'Back to ' + esc(state.from === 'watchlist' ? 'the watchlist'
         : state.from === 'passed' ? 'the passed list'
+        : state.from === 'promoted' ? 'the promoted list'
           : state.from === 'newbrief' ? 'the lookup' : state.from === 'runname' ? 'the lookup' : 'the drop') + '</button>' +
       seriesNav(c, false) + '</div>' +
       (c.sourceTag === 'manual' || c.resurfaced || rewound() ? '<div class="rpt-tags">' +
@@ -1927,10 +2015,7 @@
       '<p class="handle">' + esc(c.handle) + '</p></div></div>' +
       '<div class="cmdcluster">' +
       ((d || rewound() || outcomeOf(c.id) || state.passTray === c.id || state.watchTray === c.id) ? ''
-        : '<div class="headverbs">' +
-          U.verbBtn('promote', c.id, 'Promote', 'go') +
-          U.verbBtn('watchtray', c.id, 'Watch', 'hold') +
-          U.verbBtn('passtray', c.id, 'Pass', 'no') + '</div>') +
+        : '<div class="headverbs">' + verbSet(c) + '</div>') +
       '<div class="scorechip">' + U.ring(c, 'sm', sc) +
       '<span class="bs-k">the score ' + U.rcp('score', c.id, 'the score') + '</span>' +
       '<span class="bs-n">bar is ' + state.admin.threshold + '</span></div>' +
@@ -1981,7 +2066,7 @@
         var h = S.plain(c.headline);
         if (h && !/^no headline/i.test(h)) {
           return '<p class="thesis thesis--judged">' +
-            '<span class="judged-tag">The model&rsquo;s read</span>' + esc(h) + '</p>';
+            '<span class="judged-tag">The model&rsquo;s read</span>' + esc(roundBig(h)) + '</p>';
         }
         var prelim = preliminaryHeadline(c);
         return prelim
@@ -2114,7 +2199,7 @@
       '<p class="lede">' + esc(cl.demand.line) + ', ' + esc(cl.demand.window) + '.</p>' +
       (cl.demand.quotes.length
         ? '<div class="quotes">' + cl.demand.quotes.map(function (e, i) {
-            return U.quoteBlock(e, asOf(), { url: false, likes: S.likesFor(c, i) });
+            return U.quoteBlock(e, asOf(), { url: false });
           }).join('') + '</div>'
         : '<p class="sub-t mt-3">Comments could not be read on this platform, so this scores neutral ' +
           'and pulls confidence down. It is not evidence of nothing.</p>') +
@@ -2423,7 +2508,7 @@
     var area = line + ' L' + xy[xy.length - 1][0] + ',' + GH + ' L' + xy[0][0] + ',' + GH + ' Z';
     var end = xy[xy.length - 1];
     var down = a.delta < 0;
-    var deltaStr = (down ? '−' : '+') + Math.abs(a.delta).toLocaleString('en-US');
+    var deltaStr = (down ? '−' : '+') + roundBig(Math.abs(a.delta).toLocaleString('en-US'));
     var pctStr = (down ? '−' : '+') + Math.abs(a.pct).toFixed(1) + '%';
 
     var audience = '<div class="trg">' +
@@ -2753,6 +2838,7 @@
   function siblings() {
     if (state.from === 'watchlist') return watchlist();
     if (state.from === 'passed') return passedList().map(function (r) { return r.c; });
+    if (state.from === 'promoted') return promotedList().map(function (r) { return r.c; });
     if (state.from === 'drop') return dropList();
     return [];
   }
@@ -3052,9 +3138,7 @@
     var open = state.outcomeTray === c.id;
     return '<div class="p outcomebox mt-5">' +
       '<span class="lab">Any word?</span>' +
-      '<p class="obnote">The only thing that tells Scout whether it was right. It rides in the ' +
-      'digest too &mdash; <em>&ldquo;You promoted ' + esc(c.name.split(' ')[0]) + ' 9 days ago. Any word?&rdquo;</em> &mdash; ' +
-      'because a field nobody is prompted for is blank in a month.</p>' +
+      '<p class="obnote">What they said when you reached out.</p>' +
       '<div class="ocrow">' + S.outcomes.map(function (x) {
         return '<button class="ocbtn' + (o.code === x.code ? ' on' : '') + '" data-act="outcome" data-id="' +
           c.id + '" data-o="' + x.code + '"><b>' + esc(x.label) + '</b><span>' + esc(x.note) + '</span></button>';
@@ -3068,7 +3152,7 @@
         }).join('') + '</div></div>' : '') +
       (o.code && o.code !== 'declined'
         ? '<p class="obstate">Recorded ' + esc(U.longDate(o.at || asOf())) + '. ' +
-          (o.code === 'signed' ? 'This is the row that validates the model.' : 'Scout will ask again in nine days.') + '</p>'
+          (o.code === 'signed' ? '' : 'Scout will ask again in nine days.') + '</p>'
         : '') +
       '</div>';
   }
@@ -3235,12 +3319,20 @@
       /* v5.9 — the same pattern as the drop: the name opens the report, the
          buttons are verbs. Watching had no exit from the list you were looking
          at — the only control on the row was the report. */
-      return '<div class="wrow wrow--link" data-act="report" data-id="' + c.id + '" data-from="watchlist">' + U.face(c, 'sm') +
-        '<div><span class="nm">' +
+      /* v6 P0 — same row scaffold as the drop: score ring far left, the face
+         beside the name, the verbs on the right. The watchlist used to mirror
+         the drop rotated — ring on the right, no ring column — which read as a
+         different screen. One row shape now, ranked or not. */
+      return '<div class="wrow wrow--link" data-act="report" data-id="' + c.id + '" data-from="watchlist">' +
+        '<div class="scorewrap">' + U.ring(c, 'sm', score(c)) + '</div>' +
+        '<div class="rowmain">' +
+        '<div class="idline">' + U.face(c, 'sm') +
+        '<div class="idtext">' +
+        '<div class="idtop"><h2 class="nm">' +
         '<button class="nmlink" data-act="report" data-id="' + c.id + '" data-from="watchlist">' + esc(c.name) + '</button>' +
-        '</span>' +
-        '<span class="hd">' + esc(c.handle) + ' ' + DOT + ' kept ' + esc(U.longDate(since)) +
-        ' ' + DOT + ' ' + esc(win) + ' window</span>' +
+        '</h2><span class="hd">' + esc(c.handle) + '</span></div>' +
+        '<span class="plat1">kept ' + esc(U.shortDate(since)) + ' ' + DOT + ' ' + esc(win) + ' window</span>' +
+        '</div></div>' +
         /* What the watchlist watches is the trajectory block, because those are
            the lines that move. An alert quotes the trend, never the score
            delta — "score dropped 4 points" says nothing a person can act on. */
@@ -3249,7 +3341,7 @@
         }).join('') + '</ul>' +
         due +
         (state.passTray === c.id ? passTray(c) : '') + '</div>' +
-        '<div class="right">' + U.ring(c, 'sm', score(c)) +
+        '<div class="acts">' +
         U.verbBtn('promote', c.id, 'Promote', 'go', 'sm') +
         '<button class="vbtn vbtn--undo vbtn--sm" data-act="passtray" data-id="' + c.id + '">Stop watching</button>' +
         '</div></div>';
@@ -3287,6 +3379,53 @@
       '</div></div>';
   }
 
+  /* ========================================================= PROMOTED LIST */
+  /* v7 — THE ONLY LIST THAT CAN PROVE THE MODEL RIGHT HAD NO SCREEN.
+     promotedList() was built and never rendered, so a promoted name was reachable
+     only from the day's drop — and gone from it the next morning, with "Any
+     word?" still blank on a report nobody could find. Same row as the watchlist;
+     the outcome takes the place of the trend. */
+  function outcomeLine(c) {
+    var o = outcomeOf(c.id);
+    if (!o || !o.code) return 'No word yet';
+    var hit = null;
+    S.outcomes.forEach(function (x) { if (x.code === o.code) hit = x.label; });
+    var why = o.code === 'declined' && o.declineCode ? declineLabel(o.declineCode) : null;
+    return (hit || o.code) + ' ' + U.shortDate(o.at || asOf()) + (why ? ' ' + DOT + ' ' + why.toLowerCase() : '');
+  }
+
+  function promotedView() {
+    var rows = promotedList();
+    var head = '<header class="pagehead"><h1>Promoted</h1>' +
+      '<p class="deck">Everyone promoted, and what they said.</p></header>';
+
+    if (!rows.length) {
+      return head + '<section class="p zero"><h2>Nobody promoted yet.</h2>' +
+        '<p>Promote a creator from the drop and they are kept here with what they said.</p></section>';
+    }
+
+    return head + '<div class="listwrap">' + rows.map(function (r) {
+      var c = r.c;
+      var o = outcomeOf(c.id);
+      return '<div class="wrow wrow--link" data-act="report" data-id="' + c.id + '" data-from="promoted">' +
+        '<div class="scorewrap">' + U.ring(c, 'sm', score(c)) + '</div>' +
+        '<div class="rowmain">' +
+        '<div class="idline">' + U.face(c, 'sm') +
+        '<div class="idtext">' +
+        '<div class="idtop"><h2 class="nm">' +
+        '<button class="nmlink" data-act="report" data-id="' + c.id + '" data-from="promoted">' + esc(c.name) + '</button>' +
+        '</h2><span class="hd">' + esc(c.handle) + '</span></div>' +
+        '<span class="plat1">promoted ' + esc(U.shortDate(r.at)) + ' ' + DOT + ' ' + esc(r.by) + '</span>' +
+        '</div></div>' +
+        '<p class="oline' + (o && o.code ? '' : ' oline--none') + '">' + esc(outcomeLine(c)) + '</p>' +
+        '</div>' +
+        '<div class="acts">' +
+        '<button class="btn btn--sm btn--out" data-act="report" data-id="' + c.id + '" data-from="promoted">Open the report</button>' +
+        '<button class="btn btn--ghost btn--sm" data-act="outreach" data-id="' + c.id + '">Outreach package</button>' +
+        '</div></div>';
+    }).join('') + '</div>';
+  }
+
   /* =========================================================== PASSED LIST */
   /* Passed creators go somewhere and it is visible. The reason and the trigger
      together are what make a Pass read as a decision rather than a deletion.
@@ -3294,7 +3433,7 @@
   function passedView() {
     var rows = passedList();
     var head = '<header class="pagehead"><h1>Passed</h1>' +
-      '<p class="deck">Nobody vanishes. Every pass carries your reason and what would bring the name ' +
+      '<p class="deck">Every pass, with your reason and what would bring the name ' +
       'back.</p></header>';
 
     if (!rows.length) {
@@ -3365,7 +3504,7 @@
        The person half is the old Run a name screen, unchanged below the
        header — same parser, same four stages, same honest miss. */
     if (state.briefStage === 'write' && state.briefMode === 'person') {
-      return '<header class="pagehead"><h1>Add to Scout</h1>' +
+      return '<header class="pagehead"><span class="kick pk">New brief</span><h1>Add to Scout</h1>' +
         briefModeToggle() +
         /* v6.2 — the old deck said "one person" and promised they stay in
            the Shortlist (then "Tracked by hand") afterwards. Both were true of the single-name screen
@@ -3377,12 +3516,10 @@
     }
 
     if (state.briefStage === 'write') {
-      return '<header class="pagehead"><h1>Add to Scout</h1>' +
+      return '<header class="pagehead"><span class="kick pk">New brief</span><h1>Add to Scout</h1>' +
         briefModeToggle() +
-        '<p class="deck">A brief is the assignment: what we need, who we are looking for, where they ' +
-        'post, and what good looks like. Write it the way you would say it out loud. This is not a ' +
-        'search &mdash; a search returns results now, ranked by match, but a brief returns nobody ' +
-        'today, reports tomorrow morning, and is allowed to find nothing.</p>' +
+        '<p class="deck">Say who you are looking for and where they post, the way you would say it out ' +
+        'loud. Scout reports back tomorrow morning, and it may find nobody.</p>' +
         '</header>' +
         '<div class="form">' +
         '<form data-act="briefsubmit">' +
@@ -3675,8 +3812,8 @@
     return '<section class="adsec" id="sources">' +
       '<h2 class="adsec-h">Where Scout looks</h2>' +
       '<p class="adsec-d">Every place Scout is allowed to read, and what each one can settle. ' +
-      'Switching one off does not save money &mdash; fetching is free and the bill is judgment. ' +
-      'It lowers what can be <b>proven</b>, which is what each row states.</p>' +
+      'Fetching costs nothing, so switching a place off saves no money. It lowers what can be ' +
+      '<b>proven</b>, and each row says what.</p>' +
 
       '<div class="srcsum"><span class="k">Looking in</span><span class="v">' + places + ' places</span>' +
       (offNames.length
@@ -4033,8 +4170,7 @@
     return '<header class="pagehead"><div class="rpt-tags">' +
       '<span class="pill pill--ok">Promoted</span></div>' +
       '<h1 class="mt-3">Outreach package: ' + esc(c.name) + '</h1>' +
-      '<p class="deck">Everything a first contact needs was already in the report, so this costs nothing to ' +
-      'assemble.</p></header>' +
+      '<p class="deck">The signals from the report, ready for a first contact.</p></header>' +
       /* v5.5 — THE TWO HALVES OF THIS SCREEN ARE THE PRODUCT'S WHOLE ARGUMENT,
          and they were one white panel split by a gutter. Left is carried over:
          the same sentences the card and the report already made, which is why
@@ -4058,16 +4194,37 @@
           '<p class="draft-sig">' + esc(who.name) + ' ' + DOT + ' Paradium</p></div>' +
           '<div class="formacts"><button class="btn btn--primary" data-act="copy" data-id="' + c.id + '">' +
           (state.copied ? 'Copied' : 'Copy the draft') + '</button>' +
-          '<button class="btn btn--ghost" data-act="view" data-view="drop">Back to the drop</button></div>'
-        : '<p class="draftnone mt-3"><b>Not written for this creator.</b> Scout does not draft a first contact ' +
-          'to a real person until someone owns that decision. The signals above are the package; the ' +
-          'words are yours.</p>' +
+          outreachBack() + '</div>'
+        : '<p class="draftnone mt-3">Scout does not write the first message. The signals are the ' +
+          'package; the words are yours.</p>' +
           '<div class="formacts">' +
           '<button class="btn btn--primary" data-act="copy" data-id="' + c.id + '">' +
           (state.copied ? 'Copied' : 'Copy the signals') + '</button>' +
-          '<button class="btn btn--ghost" data-act="view" data-view="drop">Back to the drop</button></div>') +
-      '<p class="lifecycle"><b>Scout never sends.</b> When you hear back, tell it &mdash; that answer ' +
-      'is the only thing that says whether the machine was right.</p></div></div>';
+          outreachBack() + '</div>') +
+      '<p class="lifecycle"><b>Scout never sends.</b> When you hear back, record it on the ' +
+      '<button class="lnk" data-act="view" data-view="promoted">Promoted list</button>.</p></div></div>';
+  }
+
+  /* v7 — "between 264,818 and 1,717,306 views" is exact and unreadable in a
+     sentence. Counts of ten thousand or more are shortened the way the rest of
+     the report prints an audience (447k, 1.7M); the engine's words are kept,
+     and every smaller number is left alone. */
+  function roundBig(text) {
+    return String(text).replace(/\b\d{1,3}(?:,\d{3})+\b|\b\d{5,}\b/g, function (m) {
+      var n = Number(m.replace(/,/g, ''));
+      if (n < 10000) return m;
+      if (n >= 1e6) return (Math.round(n / 1e5) / 10).toString().replace(/\.0$/, '') + 'M';
+      return Math.round(n / 1000) + 'k';
+    });
+  }
+
+  /* v7 — the package said "Back to the drop" wherever it was opened from,
+     including the Promoted list. */
+  function outreachBack() {
+    var v = state.outreachFrom || 'drop';
+    var name = v === 'promoted' ? 'the promoted list' : v === 'watchlist' ? 'the watchlist'
+      : v === 'passed' ? 'the passed list' : 'the drop';
+    return '<button class="btn btn--ghost" data-act="view" data-view="' + esc(v) + '">Back to ' + name + '</button>';
   }
 
   /* ================================================================= ADMIN */
@@ -4175,6 +4332,7 @@
       esc(state.helpFrom || 'drop') + '">' + U.icon('back') + 'Back to ' +
       esc(state.helpFrom === 'watchlist' ? 'the watchlist'
         : state.helpFrom === 'passed' ? 'the passed list'
+        : state.helpFrom === 'promoted' ? 'the promoted list'
           : state.helpFrom === 'report' ? 'the report'
             : state.helpFrom === 'admin' ? 'Admin'
               : state.helpFrom === 'newbrief' ? 'the lookup' : state.helpFrom === 'runname' ? 'the lookup' : 'the drop') + '</button></div>' +
@@ -4295,7 +4453,9 @@
 
     if (W) {
       var PR = W.pressure;
-      var pkeys = Object.keys(PR).sort(function (a, b) { return PR[b].max - PR[a].max; });
+      /* The engine's config carries `_comment` notes beside the signals; they are not signals. */
+      var pkeys = Object.keys(PR).filter(function (k) { return k.charAt(0) !== '_' && PR[k] && typeof PR[k] === 'object'; })
+        .sort(function (a, b) { return PR[b].max - PR[a].max; });
       var dark = 0;
       pkeys.forEach(function (k) { if (PR[k].needsHistory) dark += PR[k].max; });
       var ceiling = W.pillars.pressureMax - dark;
@@ -4398,7 +4558,7 @@
       '<p class="adsec-d">Half of explaining a model is saying what it ignores.</p>' +
       '<div class="p"><ul class="hnot">' +
       '<li><b>Follower count.</b> The audience is the qualifier, not the score. Everyone on the board already has one.</li>' +
-      '<li><b>&ldquo;We could not find it.&rdquo;</b> Never earns a Missing point.</li>' +
+      '<li><b>Could not tell.</b> Never earns a Missing point.</li>' +
       '<li><b>Posting less.</b> Not a demerit &mdash; it is Pressure.</li>' +
       '<li><b>Press mentions and citations.</b> A line on the report, never a veto. Strong for ' +
       'expertise-led creators, near zero for entertainment-led ones, so it separates nobody.</li>' +
@@ -4544,11 +4704,54 @@
       });
     });
 
+    /* v7 — THE HEADLINE WAS WIDER THAN ITS COUNT. "214 people asked for
+       something that does not exist yet" counted every labelled ask, including
+       asks for a YouTube channel the creator already runs. An ask counts as
+       unmet only when its label names an item and that item was verified absent
+       on the creator the comment was left under. */
+    var ASK_ITEM = { store: 'Store', membership: 'Membership', website: 'Website',
+      youtube_channel: 'YouTube channel', newsletter: 'Newsletter', podcast: 'Podcast' };
+    var askBy = {}, unmet = 0, qseen2 = {};
+    W.candidates.forEach(function (c) {
+      var inv = {};
+      (c.inventory || []).forEach(function (i) { inv[i.item] = i.state; });
+      (c.evidence || []).forEach(function (e) {
+        var item = e.kind === 'comment' && ASK_ITEM[e.label];
+        if (!item) return;
+        var k = c.handle + '|' + e.quote;
+        if (qseen2[k]) return;
+        qseen2[k] = 1;
+        var a = askBy[item] || (askBy[item] = { label: item, lack: 0, have: 0, unsure: 0 });
+        if (inv[item] === 'verified_absent') { a.lack++; unmet++; }
+        else if (inv[item] === 'present') a.have++;
+        else a.unsure++;
+      });
+    });
+    var askList = Object.keys(askBy).map(function (k) { return askBy[k]; })
+      .sort(function (a, b) { return b.lack - a.lack || (b.have + b.unsure) - (a.have + a.unsure); });
+
+    /* Per brief: a creator in two briefs counts in both, once in each — the
+       question here is what each brief's territory is short of. */
+    var briefRows = W.mandates.map(function (md) {
+      var hs = {}, n = 0, by = {};
+      W.candidates.forEach(function (c) {
+        if (c.mandateId !== md.id || hs[c.handle]) return;
+        hs[c.handle] = 1; n++;
+        (c.inventory || []).forEach(function (i) {
+          var b = by[i.item] || (by[i.item] = { absent: 0, settled: 0 });
+          if (i.state === 'verified_absent') { b.absent++; b.settled++; }
+          else if (i.state === 'present') b.settled++;
+        });
+      });
+      return { id: md.id, name: md.title || md.name, n: n, by: by };
+    }).filter(function (r) { return r.n; });
+
     var days = {};
     people.forEach(function (p) { days[p.day] = 1; });
 
     _market = {
       people: people, order: order, items: items, pairs: pairList,
+      asks2: askList, unmet: unmet, briefs: briefRows,
       days: Object.keys(days).sort(),
       checks: people.reduce(function (a, p) { return a + p.checks; }, 0),
       comments: comments, asks: asks, buying: buying,
@@ -4560,16 +4763,12 @@
 
   var TREND_GATE = 90;          /* the trajectory gate the reports enforce */
 
-  function lockedChip(txt) {
-    return '<span class="tlock">' + U.icon('lock') + esc(txt) + '</span>';
-  }
-
   function trendsView() {
     var m = market();
     var days = m.days.length;
     var top = m.items[0];
 
-    var head = '<header class="pagehead"><h1>Where the market is short</h1>' +
+    var head = '<header class="pagehead"><span class="kick pk">Trends</span><h1>Where the market is short</h1>' +
       '<p class="deck">' + U.plural(m.people.length, 'creator') + ' read. ' + m.callable +
       ' of them have at least one thing their audience has a name for and they have not built.</p>' +
       '<div class="tage">' +
@@ -4577,13 +4776,167 @@
       '<span class="tage-bar" role="img" aria-label="' + days + ' of ' + TREND_GATE +
       ' days observed"><i style="width:' + (days / TREND_GATE * 100).toFixed(2) + '%"></i><u></u></span>' +
       '<span class="tage-t">' + U.num(m.checks) + ' checks ' + DOT + ' first look ' +
-      esc(U.longDate(m.days[0])) + '</span></div>' +
+      esc(U.longDate(m.days[0])) + ' ' + DOT + ' a direction in ' + U.plural(TREND_GATE - days, 'day') +
+      '</span></div>' +
       '</header>';
 
-    return head + trendMap(m) + trendLedger(m, top) + trendPairs(m) + trendGate(m, days) + trendHandoff(m);
+    return head + trendKpis(m, top) + trendBars(m) + trendMatrix(m) + trendBriefs(m) + trendAsks(m) +
+      trendEvery(m);
   }
 
   /* ---- the map: every creator, every gap, nothing aggregated away ------- */
+  /* ====================================================== TRENDS, v7
+     One picture per question, each with its number said out loud:
+       how big is the gap        -> four stat tiles
+       what is missing, how much -> one 100% bar per item (not there leads)
+       which gaps come together  -> a pair matrix
+       where, by brief           -> a brief x item heatmap
+       did anyone ask            -> asks, split by whether the thing exists
+     The barcode map stays, one click down, for anyone who wants every creator.
+     Colours (29 Sep): not there is the counted teal, as on the report; built is
+     neutral. Could not tell is a hatch, never a third hue. The heatmaps use one
+     teal ramp, five steps, validated for monotone lightness and surface
+     contrast in both themes; zero is a neutral cell, not the lightest teal. */
+  function seqStep(v, max) {
+    if (!v || !max) return -1;
+    return Math.min(4, Math.floor((v / max) * 5 - 1e-9));
+  }
+  function tip(text) { return ' data-tip="' + esc(text) + '" tabindex="0"'; }
+
+  function trendKpis(m, top) {
+    var tile = function (n, k, sub) {
+      var word = !/^[\d,.%]+$/.test(String(n));
+      return '<div class="tkpi"><span class="tkpi-n' + (word ? ' tkpi-n--word' : '') + '">' + n + '</span>' +
+        '<span class="tkpi-k">' + k + '</span>' + (sub ? '<span class="tkpi-s">' + sub + '</span>' : '') + '</div>';
+    };
+    var pair = m.pairs[0];
+    return '<section class="tkpis" aria-label="The market in four numbers">' +
+      tile(U.num(m.people.length), 'creators read', U.num(m.checks) + ' checks') +
+      tile(U.num(m.callable), 'with a gap', Math.round(m.callable / m.people.length * 100) + '% of them') +
+      tile(esc(top.label), 'the biggest gap', top.absent + ' of ' + m.people.length + ' have none') +
+      (pair ? tile(pair[1], 'miss ' + esc(pair[0].toLowerCase()), 'the pair that travels most') : '') +
+      '</section>';
+  }
+
+  function trendBars(m) {
+    var n = m.people.length;
+    var rows = m.items.map(function (it) {
+      var pct = function (v) { return (v / n * 100).toFixed(2) + '%'; };
+      return '<div class="tbar">' +
+        '<span class="tbar-l">' + esc(it.label) + '</span>' +
+        '<span class="tbar-t" role="img" aria-label="' + esc(it.label) + ': ' + it.absent + ' not there, ' +
+          it.present + ' built, ' + it.unknown + ' could not tell, of ' + n + '">' +
+        '<i class="s-a" style="width:' + pct(it.absent) + '"' + tip(it.label + ' · not there on ' + it.absent + ' of ' + n) + '>' +
+          (it.absent / n > 0.08 ? '<b>' + it.absent + '</b>' : '') + '</i>' +
+        '<i class="s-p" style="width:' + pct(it.present) + '"' + tip(it.label + ' · built by ' + it.present + ' of ' + n) + '></i>' +
+        '<i class="s-u" style="width:' + pct(it.unknown) + '"' + tip(it.label + ' · could not tell on ' + it.unknown + ' of ' + n) + '></i>' +
+        '</span>' +
+        '<span class="tbar-n"><b>' + Math.round(it.absent / n * 100) + '%</b> not there</span></div>';
+    }).join('');
+    var table = '<details class="tdata"><summary>Show as a table</summary><div class="wex-scroll"><table class="wex">' +
+      '<thead><tr><th>What</th><th class="wex-num">Not there</th><th class="wex-num">Built</th>' +
+      '<th class="wex-num">Could not tell</th></tr></thead><tbody>' +
+      m.items.map(function (it) {
+        return '<tr><td>' + esc(it.label) + '</td><td class="wex-num">' + it.absent + '</td>' +
+          '<td class="wex-num">' + it.present + '</td><td class="wex-num">' + it.unknown + '</td></tr>';
+      }).join('') + '</tbody></table></div></details>';
+    return '<section class="tsec">' +
+      '<h2 class="tsec-h">What the market has not built</h2>' +
+      '<p class="tsec-s">Each bar is all ' + n + ' creators. Not there is a door we opened and found empty.</p>' +
+      trendKey() +
+      '<div class="tpanel"><div class="tbars">' + rows + '</div>' + table + '</div></section>';
+  }
+
+  function trendMatrix(m) {
+    var labels = m.items.map(function (it) { return it.label; });
+    var pc = {};
+    m.pairs.forEach(function (p) { pc[p[0]] = p[1]; });
+    var get = function (a, b) { return pc[a + ' + ' + b] || pc[b + ' + ' + a] || 0; };
+    var max = m.pairs.length ? m.pairs[0][1] : 0;
+    /* Lower triangle only, and without its empty edges: the first row and the
+       last column would hold nothing but the diagonal. */
+    var cols = labels.slice(0, -1), rowsL = labels.slice(1);
+    var head = '<div class="tmx-c tmx-h"></div>' + cols.map(function (l) {
+      return '<div class="tmx-c tmx-h tmx-col"><span>' + esc(l) + '</span></div>';
+    }).join('');
+    var body = rowsL.map(function (r, ri) {
+      var i = ri + 1;
+      return '<div class="tmx-c tmx-rl">' + esc(r) + '</div>' + cols.map(function (c, j) {
+        if (j >= i) return '<div class="tmx-c tmx-blank" aria-hidden="true"></div>';
+        var v = get(r, c);
+        return '<div class="tmx-c tmx-v" data-q="' + seqStep(v, max) + '"' +
+          tip(r + ' + ' + c + ' · ' + v + ' creators miss both') + '>' + (v || '') + '</div>';
+      }).join('');
+    }).join('');
+    var p = m.pairs[0];
+    return '<section class="tsec">' +
+      '<h2 class="tsec-h">Gaps that travel together</h2>' +
+      '<p class="tsec-s">' + (p ? '<b>' + esc(p[0]) + '</b>: ' + p[1] + ' of ' + m.people.length +
+        ' have neither, one conversation, not two. ' : '') + 'The stronger the teal, the more creators are missing both.</p>' +
+      '<div class="tpanel"><div class="wex-scroll"><div class="tmx" style="--n:' + cols.length + '">' +
+      head + body + '</div></div>' +
+      '<p class="traynote">Confirmed absences only. A pair where either side could not be told is not counted.</p>' +
+      '</div></section>';
+  }
+
+  function trendBriefs(m) {
+    if (m.briefs.length < 2) return '';
+    var labels = m.items.map(function (it) { return it.label; });
+    var head = '<div class="tmx-c tmx-h"></div>' + labels.map(function (l) {
+      return '<div class="tmx-c tmx-h tmx-col"><span>' + esc(l) + '</span></div>';
+    }).join('');
+    var body = m.briefs.map(function (b) {
+      return '<div class="tmx-c tmx-rl">' + esc(b.name) + '<span class="tmx-rn">' + b.n + '</span></div>' +
+        labels.map(function (l) {
+          var x = b.by[l];
+          if (!x || !x.settled) return '<div class="tmx-c tmx-na"' + tip(b.name + ' · ' + l + ' · could not tell on any') + '>–</div>';
+          var pct = Math.round(x.absent / b.n * 100);
+          return '<div class="tmx-c tmx-v" data-q="' + seqStep(pct, 100) + '"' +
+            tip(b.name + ' · ' + l + ' · not there on ' + x.absent + ' of ' + b.n) + '>' + pct + '%</div>';
+        }).join('');
+    }).join('');
+    return '<section class="tsec">' +
+      '<h2 class="tsec-h">Where each gap is widest</h2>' +
+      '<p class="tsec-s">Share of each brief&rsquo;s creators confirmed without it. The number after the brief is how many it read.</p>' +
+      '<div class="tpanel"><div class="wex-scroll"><div class="tmx tmx--wide" style="--n:' + labels.length + '">' +
+      head + body + '</div></div></div></section>';
+  }
+
+  function trendAsks(m) {
+    if (!m.asks2.length) return '';
+    var max = 0;
+    m.asks2.forEach(function (a) { max = Math.max(max, a.lack + a.have + a.unsure); });
+    var rows = m.asks2.map(function (a) {
+      var w = function (v) { return (v / max * 100).toFixed(2) + '%'; };
+      return '<div class="tbar">' +
+        '<span class="tbar-l">' + esc(a.label) + '</span>' +
+        '<span class="tbar-t tbar-t--free" role="img" aria-label="' + esc(a.label) + ': ' + a.lack +
+          ' asked where there is none, ' + a.have + ' where it exists, ' + a.unsure + ' could not tell">' +
+        '<i class="s-a" style="width:' + w(a.lack) + '"' + tip(a.label + ' · ' + a.lack + ' asked, and there is none') + '></i>' +
+        '<i class="s-p" style="width:' + w(a.have) + '"' + tip(a.label + ' · ' + a.have + ' asked, and it exists') + '></i>' +
+        '<i class="s-u" style="width:' + w(a.unsure) + '"' + tip(a.label + ' · ' + a.unsure + ' asked, could not tell') + '></i>' +
+        '</span>' +
+        '<span class="tbar-n"><b>' + a.lack + '</b> unmet</span></div>';
+    }).join('');
+    return '<section class="tsec">' +
+      '<h2 class="tsec-h">' + m.unmet + (m.unmet === 1 ? ' person' : ' people') + ' asked for something that is not there</h2>' +
+      '<p class="tsec-s">Comments that named a thing to buy or join, split by whether the creator has it. ' +
+      U.num(m.comments) + ' comments read.</p>' +
+      '<div class="tkey">' +
+      '<span class="tk"><span class="tswatch tswatch--a"></span>Asked, and there is none</span>' +
+      '<span class="tk"><span class="tswatch tswatch--p"></span>Asked, and it exists</span>' +
+      '<span class="tk"><span class="tswatch tswatch--u"></span>Could not tell</span></div>' +
+      '<div class="tpanel"><div class="tbars">' + rows + '</div></div></section>';
+  }
+
+  function trendEvery(m) {
+    return '<section class="tsec"><details class="tevery"><summary>' +
+      '<span class="tsec-h">Every creator, one column each</span>' +
+      '<span class="tsec-s">' + m.people.length + ' creators × ' + m.items.length + ' things, sorted so the ones missing the most sit left.</span>' +
+      '</summary>' + trendMap(m).replace(/^<section class="tsec"><h2[\s\S]*?<\/p>/, '').replace(/<\/section>$/, '') +
+      '</details></section>';
+  }
+
   function trendMap(m) {
     var rows = m.items.map(function (it, ri) {
       var cells = m.order.map(function (p, ci) {
@@ -4617,85 +4970,12 @@
 
   function trendKey() {
     return '<div class="tkey">' +
-      '<span class="tk"><span class="tswatch tswatch--p"></span>Built</span>' +
       '<span class="tk"><span class="tswatch tswatch--a"></span>Not there</span>' +
+      '<span class="tk"><span class="tswatch tswatch--p"></span>Built</span>' +
       '<span class="tk"><span class="tswatch tswatch--u"></span>Could not tell</span></div>';
   }
 
   /* ---- the same map, counted. This is the map's key, not a second screen. */
-  function trendLedger(m, top) {
-    var rows = m.items.map(function (it) {
-      var tot = it.present + it.absent + it.unknown;
-      var w = function (v) { return (v / tot * 100).toFixed(2) + '%'; };
-      return '<tr><td><span class="wex-nm">' + esc(it.label) + '</span>' +
-        '<span class="wex-why">looked for on all ' + m.people.length + '</span></td>' +
-        '<td class="wex-num">' + it.present + '</td>' +
-        '<td class="wex-num"><b class="tbig">' + it.absent + '</b>' +
-        '<span class="tof">/ ' + m.people.length + '</span></td>' +
-        '<td class="wex-num">' + it.unknown + '</td>' +
-        '<td><span class="tstack" role="img" aria-label="' + it.present + ' built, ' + it.absent +
-        ' not there, ' + it.unknown + ' could not tell">' +
-        '<i class="s-p" style="width:' + w(it.present) + '"></i>' +
-        '<i class="s-a" style="width:' + w(it.absent) + '"></i>' +
-        '<i class="s-u" style="width:' + w(it.unknown) + '"></i></span></td>' +
-        '<td>' + lockedChip('day ' + m.days.length + ' of ' + TREND_GATE) + '</td></tr>';
-    }).join('');
-
-    return '<section class="tsec">' +
-      '<h2 class="tsec-h">The same map, counted</h2>' +
-      '<p class="tsec-s">The key to the picture above. <b>' + esc(top.label) +
-      ' is the gap of the market:</b> ' + top.absent + ' of ' + m.people.length +
-      ' confirmed without one, against ' + top.unknown + ' the engine could not tell either way.</p>' +
-      '<div class="tpanel"><div class="wex-scroll"><table class="wex">' +
-      '<thead><tr><th>What</th><th class="wex-num">Built</th><th class="wex-num">Not there</th>' +
-      '<th class="wex-num">Could not tell</th><th>Across the ' + m.people.length + '</th>' +
-      '<th>Movement</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
-      '</div></section>';
-  }
-
-  /* ---- the pairs. One conversation, not two. --------------------------- */
-  function trendPairs(m) {
-    var max = m.pairs[0][1];
-    var rows = m.pairs.slice(0, 7).map(function (p) {
-      return '<div class="tpair" title="' + esc(p[0]) + ' — ' + p[1] + ' creators are missing both">' +
-        '<span class="tpair-l">' + esc(p[0]) + '</span>' +
-        '<span class="tpair-b"><i style="width:' + (p[1] / max * 100).toFixed(1) + '%"></i></span>' +
-        '<span class="tpair-n"><b>' + p[1] + '</b></span></div>';
-    }).join('');
-
-    return '<section class="tsec">' +
-      '<h2 class="tsec-h">Gaps that travel together</h2>' +
-      '<p class="tsec-s">How often two things are missing off the same creator. <b>' +
-      esc(m.pairs[0][0]) + '</b> is the pattern: ' + m.pairs[0][1] + ' of ' + m.people.length +
-      ' have neither. That is one conversation, not two.</p>' +
-      '<div class="tpanel"><div class="tpairs">' + rows + '</div>' +
-      '<p class="traynote">Counted off confirmed absences only. A pair where either side could not ' +
-      'be told is not counted, so these run lower than the column totals multiplied.</p></div></section>';
-  }
-
-  /* ---- why the one column that could move is shut ---------------------- */
-  function trendGate(m, days) {
-    return '<section class="tsec">' +
-      '<h2 class="tsec-h">Movement &mdash; not yet</h2>' +
-      '<div class="tgate"><span class="tgate-n">' + (TREND_GATE - days) + '</span>' +
-      '<div class="tgate-b">' +
-      '<p><b>days before this screen can call a direction.</b> Every report Scout writes today ' +
-      'reads <i>&ldquo;no trend yet.&rdquo;</i> This screen holds to the same gate.</p>' +
-      '<p>Until it opens, this is a census with a countdown on it. Nothing here is extrapolated, ' +
-      'smoothed or projected.</p>' +
-      '</div></div></section>';
-  }
-
-  /* ---- what this screen deliberately does not do ----------------------- */
-  function trendHandoff(m) {
-    return '<section class="tsec">' +
-      '<div class="thand"><span class="thand-i">' + U.icon('ask') + '</span>' +
-      '<div><h2 class="thand-h">' + m.asks + ' people asked for something that does not exist yet</h2>' +
-      '<p>' + U.num(m.comments) + ' comments read, ' + m.buying + ' of them asking to buy. This screen ' +
-      'is what the market is missing. What its audience wants is a different question, and it gets ' +
-      'its own screen.</p></div></div></section>';
-  }
-
   function adminView() {
     var a = S.admin, ad = state.admin;
     var house = brief('b_house');
@@ -4706,9 +4986,11 @@
        two answers to the same question, 116 and 58, computed from the same data.
        dropFor + rejectedFor is exactly the brief's pool by construction — the two
        functions partition it — so it cannot drift from what the drop screen says. */
-    var clearingList = S.dropFor(asOf(), house, ad.threshold);
+    /* v7 — and it leaves out the names a list already owns, as the drop does.
+       Without standingExcluded() this read "10 of 65" beside a drop saying 9. */
+    var clearingList = S.dropFor(asOf(), house, ad.threshold, standingExcluded());
     var clearing = clearingList.length;
-    var pool = clearing + S.rejectedFor(asOf(), house, ad.threshold).length;
+    var pool = clearingList.left.pool;
 
     return '<header class="pagehead"><h1>Admin</h1>' +
       '<p class="deck">The four things the organisation controls.</p></header>' +
@@ -4792,10 +5074,7 @@
         .map(function (n) {
           return '<button data-act="thresh" data-v="' + n + '" aria-pressed="' + (ad.threshold === n) + '">' + n + '</button>';
         }).join('') + '</div>' +
-      '<p class="adfine">Read off a result, not chosen: whatever produces five to ten names on a good ' +
-      'day and zero on a thin one.</p>' +
-      '<p class="adfine">Re-read it the first time a cohort has real demand. The cohort behind ' +
-      S.THRESHOLD + ' had almost none that Scout could reach, so its ceiling was well under 100.</p>' +
+      '<p class="adfine">Set so a good day brings five to ten names and a thin day none.</p>' +
       /* The admin moving this number is the person most owed the story of where
          it came from and what the score it gates is made of. */
       helpLink('cut', 'What makes the cut') + '</section>' +
@@ -4815,13 +5094,12 @@
         if (!k || !k.fetches || !k.calls) return '';
         return '<p class="adfine"><b>Looking is free; judging is the bill.</b> ' +
           U.num(k.fetches) + ' fetches across Sweep and Probe cost nothing. The entire ' +
-          U.money(k.spent) + ' is ' + U.num(k.calls) + ' model calls at Study depth. ' +
-          'Switching a source off below does not save money; it lowers what can be proven.</p>';
+          U.money(k.spent) + ' is ' + U.num(k.calls) + ' model calls at Study depth.</p>';
       })() +
       '<p class="adfine"><b>No names at Sweep depth.</b> Names appear from Probe upward, where a ' +
       'judgment was made and a result was written down.</p>' +
-      '<p class="adfine">Budget decides how many creators reach Probe and Study. It never decides how ' +
-      'thoroughly one of them is examined: the confidence floor cannot be lowered to save money.</p></div>' +
+      '<p class="adfine">Budget sets how many creators reach Probe and Study. The confidence floor stays at ' +
+      Math.round(S.CONF_FLOOR * 100) + '% whatever the budget.</p></div>' +
       '</section>' +
 
       '<section class="adsec" id="ad-seats"><h2 class="adsec-h">Who is in</h2>' +
@@ -4984,6 +5262,39 @@
     if (el) el.textContent = msg;
   }
 
+  /* v7 — EVERY VERB CAN BE TAKEN BACK FROM WHERE IT LANDS. Undo used to live
+     only on the drop's decided row, so a Promote from the report went straight
+     to the outreach package with no way back, and a Pass from the report
+     dropped you on another screen with the name gone. The toast names what
+     happened and holds the way back for eight seconds. Not persisted: after a
+     reload the lists are the way back. */
+  var toastTimer = null;
+  function decided(id, msg) {
+    announce(msg);
+    /* The keyboard's place moves on with the decision, to the next name still
+       open below it, so J is never spent stepping over what is already done. */
+    if (state.cursor === id) {
+      var all = dropList(), at = -1, next = null;
+      all.forEach(function (c, n) { if (c.id === id) at = n; });
+      all.forEach(function (c, n) { if (!next && n > at && !decisionFor(c.id)) next = c.id; });
+      state.cursor = next;
+    }
+    var t = state.toast = { id: id, msg: msg,
+      back: { view: state.view, from: state.from, reportId: state.reportId } };
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      if (state.toast !== t) return;
+      state.toast = null;
+      var el = document.getElementById('toast');
+      if (el) el.remove();
+    }, 8000);
+  }
+  function toastHTML() {
+    if (!state.toast) return '';
+    return '<div class="toast" id="toast"><span>' + esc(state.toast.msg) + '</span>' +
+      '<button class="toastbtn" data-act="toastundo">Undo</button></div>';
+  }
+
   function render(viewChanged) {
     var fade = state.animate && !reduceMotion.matches ? ' viewfade' : '';
     state.animate = false;
@@ -5002,6 +5313,7 @@
         state.view === 'report' ? reportView() :
           state.view === 'watchlist' ? watchlistView() :
             state.view === 'passed' ? passedView() :
+            state.view === 'promoted' ? promotedView() :
               (state.view === 'runname' && SHOW_RUNNAME) ? runNameView() :
                 state.view === 'outreach' ? outreachView() :
                   state.view === 'trends' ? trendsView() :
@@ -5010,11 +5322,12 @@
                     state.view === 'briefdetail' ? briefDetailView() :
                       state.view === 'newbrief' ? briefView() : dropView();
 
-      html = '<div class="slab slab--app' + (state.railWide ? '' : ' slab--rmini') + '">' + railHTML() +
+      html = '<div class="slab slab--app slab--v-' + esc(state.view) + (railIsWide() ? '' : ' slab--rmini') + '">' + railHTML() +
         '<main class="main" id="main">' +
         '<div class="wrap' + fade + '">' + body + '</div></main></div>';
     }
     if (state.rcp) html += rcpPop();
+    if (state.phase !== 'signedout') html += toastHTML() + keysHTML();
 
     /* render() replaces the whole DOM, which destroys the scroll container.
        Capture and restore; go() is the only thing that resets, because only a
@@ -5034,7 +5347,77 @@
     bindTabs();
     restoreFocus(key, viewChanged);
     persist();
+    syncRoute();
   }
+
+  /* 29 Sep 2026 — THE BROWSER'S BACK BUTTON, AND A LINK FOR EVERY SCREEN.
+     Scout kept its place in sessionStorage only, so the browser's Back (the
+     swipe on a phone) left the app from any screen, a report included, and no
+     report could be linked to. Each screen now has a hash (#/watchlist,
+     #/report/<id>); moving between screens adds a history entry, and Back and
+     Forward move between them. A link opened while signed out lands on its
+     screen after sign-in. Brief tabs, trays and disclosures are not screens and
+     add nothing to the history. */
+  var ROUTE_VIEWS = { drop: 1, watchlist: 1, promoted: 1, passed: 1, trends: 1, admin: 1, help: 1, newbrief: 1 };
+  var routing = false;        // true while a Back/Forward is being applied
+  var pendingRoute = null;    // a link that arrived before sign-in
+
+  function routeOf() {
+    if (state.phase === 'signedout') return '';
+    if (state.view === 'report' && state.reportId) return '#/report/' + encodeURIComponent(state.reportId);
+    if (state.view === 'outreach' && state.outreachId) return '#/outreach/' + encodeURIComponent(state.outreachId);
+    return ROUTE_VIEWS[state.view] ? '#/' + state.view : '';
+  }
+  /* Sets state from a hash; returns false (and changes nothing) for one that
+     names no screen or no creator we hold. */
+  function applyRoute(hash, from) {
+    var m = String(hash || '').match(/^#\/([a-z]+)(?:\/(.+))?$/);
+    if (!m) return false;
+    var id = null;
+    if (m[2]) { try { id = decodeURIComponent(m[2]); } catch (e) { return false; } }
+    if (m[1] === 'report' || m[1] === 'outreach') {
+      if (!id || !W.byId[id]) return false;
+      if (m[1] === 'report') { state.reportId = id; state.open = {}; } else state.outreachId = id;
+      if (from && ROUTE_VIEWS[from]) state.from = from;
+      else if (!ROUTE_VIEWS[state.from]) state.from = 'drop';
+      state.view = m[1];
+      return true;
+    }
+    if (!ROUTE_VIEWS[m[1]]) return false;
+    state.view = m[1];
+    return true;
+  }
+  function syncRoute() {
+    var r = routeOf();
+    if (!r || location.hash === r) return;
+    try {
+      var entry = { scout: r, from: state.from };
+      if (routing || !(history.state && history.state.scout)) history.replaceState(entry, '', r);
+      else history.pushState(entry, '', r);
+    } catch (e) { /* some file:// hosts refuse history; the app still works without it */ }
+  }
+  /* Printing always uses the light theme: dark panels print as ink-heavy blocks,
+     or vanish when the browser drops backgrounds. Restored straight after. */
+  var themeBeforePrint = null;
+  window.addEventListener('beforeprint', function () {
+    themeBeforePrint = document.documentElement.getAttribute('data-theme');
+    document.documentElement.setAttribute('data-theme', 'light');
+  });
+  window.addEventListener('afterprint', function () {
+    if (themeBeforePrint) document.documentElement.setAttribute('data-theme', themeBeforePrint);
+    themeBeforePrint = null;
+  });
+
+  window.addEventListener('popstate', function (e) {
+    if (state.phase === 'signedout') return;
+    var r = (e.state && e.state.scout) || location.hash;
+    routing = true;
+    if (applyRoute(r, e.state && e.state.from)) {
+      if (state.keys) state.keys = false;
+      go(state.view);
+    }
+    routing = false;
+  });
 
   /* The fade and the arrows are driven by measurement, never by assumption: a
      row that fits shows neither, and each end hides its own affordance when
@@ -5145,8 +5528,8 @@
      Every number is counted at render time from the same functions the drop
      uses, so this cannot drift from the screen it is explaining. */
   function worthACallReceipts(b) {
-    var list = S.dropFor(asOf(), b, state.admin.threshold);
-    var pool = list.length + S.rejectedFor(asOf(), b, state.admin.threshold).length;
+    var list = dropList(b);
+    var pool = list.left.pool;
     var withDemand = list.filter(function (c) { return !S.claims(c).demand.unread; }).length;
     var withPressure = list.filter(function (c) { return S.claims(c).pressure.points > 0; }).length;
     return { title: 'Worth a call', lines: [
@@ -5336,7 +5719,9 @@
     }
     state.rcp = null;
 
-    if (act === 'railtog') { state.railWide = !state.railWide; state.menu = false; render(); return; }
+    if (act === 'railtog') {
+      state.railWide = !railIsWide(); state.railChosen = true; state.menu = false; render(); return;
+    }
     if (act === 'menu') { state.menu = !state.menu; render(); return; }
     if (act === 'theme') { setTheme(el.getAttribute('data-set')); render(); return; }
 
@@ -5380,6 +5765,14 @@
        The scroll is deferred one frame rather than done here: go() re-renders
        the whole DOM and then resets #main's scrollTop to 0, so anything that
        scrolls before that runs is immediately undone. */
+    if (act === 'introdone') {
+      state.introSeen = true;
+      try { localStorage.setItem('scout-intro-seen', '1'); } catch (e) { /* file:// or private mode */ }
+      render();
+      var h1 = document.querySelector('#main h1');
+      if (h1) { h1.setAttribute('tabindex', '-1'); h1.focus(); }
+      return;
+    }
     if (act === 'help') {
       if (state.view !== 'help') state.helpFrom = state.view;
       var hs = el.getAttribute('data-sec');
@@ -5488,6 +5881,7 @@
       state.passTray = id || null; state.watchTray = null; state.passAll = false; render(); return;
     }
     if (act === 'passall') { state.passAll = true; render(); return; }
+    if (act === 'keys') { toggleKeys(); return; }
     if (act === 'watchtray') {
       state.watchTray = id || null; state.passTray = null; state.watchWindow = null; render(); return;
     }
@@ -5495,23 +5889,39 @@
     if (act === 'pass') {
       state.decisions[id] = { verb: 'pass', reasonCode: el.getAttribute('data-code'), at: asOf() };
       state.passTray = null;
-      announce('Passed ' + creator(id).name + '.');
-      if (state.view === 'report') go('drop'); else render();
+      decided(id, 'Passed ' + creator(id).name + '.');
+      if (state.view === 'report') go(state.from || 'drop'); else render();
       return;
     }
     if (act === 'watch') {
       state.decisions[id] = { verb: 'watch', at: asOf(), window: el.getAttribute('data-w') || '1 month' };
       state.watchTray = null; state.watchWindow = null;
-      announce('Watching ' + creator(id).name + ', checking back in ' + (el.getAttribute('data-w') || '1 month') + '.');
-      if (state.view === 'report') go('drop'); else render();
+      decided(id, 'Watching ' + creator(id).name + ', checking back in ' + (el.getAttribute('data-w') || '1 month') + '.');
+      if (state.view === 'report') go(state.from || 'drop'); else render();
       return;
     }
     if (act === 'promote') {
       state.decisions[id] = { verb: 'promote', at: asOf() };
+      decided(id, 'Promoted ' + creator(id).name + '.');
+      state.outreachFrom = state.view === 'report' ? state.from : state.view;
       state.outreachId = id; go('outreach'); return;
     }
-    if (act === 'outreach') { state.outreachId = id; go('outreach'); return; }
+    if (act === 'outreach') {
+      state.outreachFrom = state.view === 'report' ? state.from : state.view;
+      state.outreachId = id; go('outreach'); return;
+    }
     if (act === 'undo') { delete state.decisions[id]; delete state.outcomeState[id]; render(); return; }
+    if (act === 'toastundo') {
+      var t = state.toast;
+      if (!t) return;
+      delete state.decisions[t.id]; delete state.outcomeState[t.id];
+      state.toast = null;
+      announce('Undone. ' + creator(t.id).name + ' is back where they were.');
+      if (state.view === t.back.view && t.back.view !== 'report') { render(); return; }
+      state.reportId = t.back.reportId;
+      go(t.back.view, t.back.from);
+      return;
+    }
     /* v5.9 — the same clearing as `undo`, under the name the Passed list uses.
        One verb per surface: the button says what happens, not "undo". */
     if (act === 'unpass') {
@@ -5662,6 +6072,8 @@
       state.gateError = null; state.gateShow = false;
       state.gateEmail = null; state.gatePass = null;
       state.phase = 'app'; state.asOf = null; state.firstRun = false;
+      if (pendingRoute && applyRoute(pendingRoute)) { pendingRoute = null; go(state.view); return; }
+      pendingRoute = null;
       go('drop');
       return;
     }
@@ -5683,9 +6095,9 @@
       var id = ww.getAttribute('data-id');
       state.decisions[id] = { verb: 'watch', at: asOf(), window: state.watchWindow,
         why: (wi && wi.value.trim()) || 'No reason given' };
-      announce('Watching ' + creator(id).name + ' for ' + state.watchWindow + '.');
+      decided(id, 'Watching ' + creator(id).name + ' for ' + state.watchWindow + '.');
       state.watchTray = null; state.watchWindow = null;
-      if (state.view === 'report') go('drop'); else render();
+      if (state.view === 'report') go(state.from || 'drop'); else render();
       return;
     }
     var bf = e.target.closest ? e.target.closest('[data-act="briefsubmit"]') : null;
@@ -5792,14 +6204,120 @@
     }
   });
 
+  /* ============================================================ KEYBOARD
+     v7 — THE DAY IS "WORK THE DROP TO ZERO" (§3), and every decision was a
+     mouse trip to the far column and back. Each key presses the button a click
+     would, so the keyboard cannot drift from what the screen offers: a verb
+     the report does not show (Watch on someone already watched) has no key. */
+  function typing(t) {
+    return !!t && (/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) || t.isContentEditable);
+  }
+  var KEYS = [
+    ['J / K', 'Next and previous creator'],
+    ['Enter', 'Open the report'],
+    ['P', 'Promote'],
+    ['W', 'Watch'],
+    ['X', 'Pass'],
+    ['Esc', 'Close, or back to the list'],
+    ['?', 'This list']
+  ];
+  function keysHTML() {
+    if (!state.keys) return '';
+    return '<div class="keysheet" role="dialog" aria-modal="true" aria-label="Shortcuts">' +
+      '<div class="keysbox"><div class="keyshd"><h2>Shortcuts</h2>' +
+      '<button class="btn btn--ghost btn--sm" data-act="keys">Close</button></div>' +
+      '<dl>' + KEYS.map(function (k) {
+        return '<div><dt>' + k[0].split(' / ').map(function (x) { return '<kbd>' + esc(x) + '</kbd>'; }).join(' ') +
+          '</dt><dd>' + esc(k[1]) + '</dd></div>';
+      }).join('') + '</dl></div></div>';
+  }
+  /* Focus goes into the sheet when it opens and back to the page when it
+     closes, so a keyboard user is never left behind the overlay. */
+  function toggleKeys() {
+    state.keys = !state.keys;
+    render();
+    var b = document.querySelector(state.keys ? '.keysheet button' : '.keyhint');
+    if (b) b.focus();
+  }
+  function press(root, act) {
+    var b = root && root.querySelector('[data-act="' + act + '"]');
+    if (!b) return false;
+    b.click();
+    /* A tray is a choice in progress: put focus on its first option, so the
+       next key is Enter or Tab and not a trip back to the mouse. */
+    if (act === 'passtray' || act === 'watchtray') {
+      var first = document.querySelector('.passtray button');
+      if (first) first.focus();
+    }
+    return true;
+  }
+  function moveCursor(step) {
+    var open = dropList().filter(function (c) { return !decisionFor(c.id); });
+    if (!open.length) return;
+    var i = -1;
+    open.forEach(function (c, n) { if (c.id === state.cursor) i = n; });
+    i = i === -1 ? (step > 0 ? 0 : open.length - 1) : Math.max(0, Math.min(open.length - 1, i + step));
+    state.cursor = open[i].id;
+    render();
+    var row = document.querySelector('.row--cur');
+    if (row) row.scrollIntoView({ block: 'nearest', behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+  }
+  document.addEventListener('keydown', function (e) {
+    if (state.phase === 'signedout' || e.metaKey || e.ctrlKey || e.altKey || typing(e.target)) return;
+    if (state.passTray || state.watchTray || state.rcp || state.menu) return;
+    var k = e.key;
+    if (k === '?') { e.preventDefault(); toggleKeys(); return; }
+    if (state.keys) return;
+    var key = k.length === 1 ? k.toLowerCase() : k;
+
+    if (state.view === 'drop') {
+      if (key === 'j' || k === 'ArrowDown') { e.preventDefault(); moveCursor(1); return; }
+      if (key === 'k' || k === 'ArrowUp') { e.preventDefault(); moveCursor(-1); return; }
+      var row = state.cursor && document.querySelector('.row[data-id="' + state.cursor + '"]');
+      if (!row) return;
+      /* Enter on a focused button is that button's; only a bare Enter opens. */
+      if (k === 'Enter' && e.target === document.body) { e.preventDefault(); row.click(); return; }
+      var act = key === 'p' ? 'promote' : key === 'w' ? 'watchtray' : key === 'x' ? 'passtray' : null;
+      if (act) { e.preventDefault(); press(row.querySelector('.acts'), act); }
+      return;
+    }
+
+    if (state.view === 'report') {
+      var s = seriesOf(state.reportId);
+      var to = s && (key === 'j' ? s.next : key === 'k' ? s.prev : null);
+      if (to) {
+        e.preventDefault();
+        var nb = document.querySelector('.rpt-nav .serbtn[data-id="' + to.id + '"]');
+        if (nb) nb.click();
+        return;
+      }
+      var head = document.querySelector('.headverbs');
+      var ract = key === 'p' ? 'promote' : key === 'w' ? 'watchtray' : key === 'x' ? 'passtray' : null;
+      if (ract && head) { e.preventDefault(); press(head, ract); }
+    }
+  });
+
+  /* The rail's default follows the window across 1360px; re-render only on
+     the crossing, never on every resize event. */
+  window.addEventListener('resize', function () {
+    if (state.railChosen || state.phase === 'signedout') return;
+    /* Compared with what is on screen, not with a remembered value, so the
+       first crossing after a load is caught too. */
+    var shown = document.querySelector('.railcol');
+    if (shown && railIsWide() === shown.classList.contains('railcol--mini')) render();
+  });
+
   /* v5 checked only the popover and the menu, which taught you the key works
      and then dropped it two clicks later on a tray that looks the same. */
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
+    if (state.keys) { state.keys = false; render(); return; }
     if (state.rcp || state.menu) { state.rcp = null; state.menu = false; render(); return; }
     if (state.passTray || state.watchTray || state.outcomeTray) {
       state.passTray = null; state.watchTray = null; state.outcomeTray = null; render();
+      return;
     }
+    if (state.view === 'report' && !typing(e.target)) go(state.from || 'drop');
   });
 
   /* Scout deriving structure from a description. In the product this is one
@@ -5963,6 +6481,11 @@
   })();
 
   restore();
+  /* A link wins over the restored session; before sign-in it waits for it. */
+  if (location.hash) {
+    if (state.phase === 'signedout') pendingRoute = location.hash;
+    else applyRoute(location.hash);
+  }
   render();
   /* Asked once, now, while the tab is certainly in front of somebody — see
      askEngine. Nothing waits on it: the answer lands long before a brief has

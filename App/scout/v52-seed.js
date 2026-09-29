@@ -744,24 +744,32 @@
     return { text: e.quote, at: e.observedAt, url: e.url, platform: e.platform, kind: 'said', engine: 'llm' };
   }
 
-  /* The sketch in §6.2 puts a like count beside each quoted comment, and the
-     frozen seed does not store one. Derived from the audience rather than
-     invented per quote, so a 61k account's top comment is not louder than a
-     1.2M account's — and so the same quote always carries the same number. */
-  function likesFor(c, i) {
-    /* A per-rank factor so four stacked quotes carry four distinct counts
-       instead of the top one and three identical also-rans. Deterministic:
-       the same quote always lands on the same rank and the same number. */
-    var factor = [1.7, 1.05, 0.72, 0.5][i] || 0.42;
-    var base = Math.round((c.audience.total / 1000) * factor);
-    return base >= 1000 ? (base / 1000).toFixed(1).replace(/\.0$/, '') + 'k likes' : base + ' likes';
+  /* v7 — ONE COMMENT IS ONE PERSON. The engine logged the same comment once per
+     fetch, so 10 of 30 creators showed a quote twice or more and their count
+     carried every copy: pantheorganizer read "144 people asked where to buy"
+     over 41 distinct comments, watchweswork "4 people" over one comment shown
+     four times. Collapse on the words before anything is counted or quoted.
+
+     The per-quote like counts that used to sit beside these (likesFor) are
+     gone with it. The seed never stored a like; they were derived from the
+     audience size and the quote's rank, which is a number printed as a
+     measurement that nobody measured. */
+  function distinctComments(c) {
+    var seen = {};
+    return ev(c, 'comment').filter(function (e) {
+      var k = String(e.quote || '').replace(/\s+/g, ' ').trim().toLowerCase();
+      if (!k || seen[k]) return false;
+      seen[k] = true;
+      return true;
+    });
   }
 
   function claims(c) {
     var a = V13[c.id] || {};
     var pt = points(c);
     var demandSub = sub((c.pillars.gap || {}).subsignals, 'demand');
-    var comments = ev(c, 'comment').slice(0, 4);
+    var distinct = distinctComments(c);
+    var comments = distinct.slice(0, 4);
     var said = saidLine(c);
     var posting = postingLine(c);
 
@@ -803,13 +811,21 @@
        So: only build the counted sentence when there is genuinely a count.
        Otherwise use the engine's own words. */
     var demandCount = firstNum(a.demand || (demandSub && demandSub.value));
+    /* When the seed holds every comment the engine counted, the distinct ones
+       are the count. When it holds fewer, the engine saw comments we cannot
+       check here, so its number stands. */
+    if (!a.demand && demandCount && ev(c, 'comment').length >= demandCount) {
+      demandCount = distinct.length;
+    }
     /* The seeded cohort's demand counts were all in the hundreds, so "N people"
        was always right and the singular never came up. Real creators produce
        counts of 1, and "1 people asked where to buy" is the lead card of a live
        brief. */
     var demandLine = a.demand
       || (demandCount ? demandCount + (demandCount === 1 ? ' person' : ' people') + ' asked where to buy'
-        : (demandSub && demandSub.value) || 'Nothing we could read asked to buy');
+        /* The engine's own sentence here is "No purchase intent we could read",
+           an engine term CLAUDE.md keeps out of the product. Same fact, house words. */
+        : 'Nothing we could read asked to buy');
 
     return {
       demand: {
@@ -1425,13 +1441,16 @@
      Every creator carries EVERY gate they failed, not the first. A name that
      failed on both score and fit has two different problems and showing one is
      how "why isn't this person in my drop" gets a misleading answer. */
-  function rejectedFor(date, b, threshold) {
+  /* `exclude` is the same map dropFor takes (names a list already owns). Pass it
+     wherever the drop passes it, so "cleared" and "looked at" are counted from one
+     pool. Without it, Admin said 9 of 64 while the drop's own line said 9 + 46. */
+  function rejectedFor(date, b, threshold, exclude) {
     var t = threshold == null ? THRESHOLD : threshold;
     var cleared = {};
-    dropFor(date, b, t).forEach(function (c) { cleared[c.id] = true; });
+    dropFor(date, b, t, exclude).forEach(function (c) { cleared[c.id] = true; });
 
     return poolForBrief(date, b)
-      .filter(function (c) { return !cleared[c.id]; })
+      .filter(function (c) { return !(exclude && exclude[c.id]) && !cleared[c.id]; })
       .map(function (c) {
         /* gatesFor returns {all, failed, enters} — it has already done the
            filtering, and it is the one place that decides what "failed" means. */
@@ -1566,7 +1585,7 @@
     { id: 'c_worth_call_they_make_2__briansmobile1', since: '2026-08-05', window: '1 month',
       trend: ['467k on YouTube, nothing to sell them', 'scored 22 against a bar of 25 — close, not over'] },
     { id: 'c_worth_call_they_make_2__watchweswork', since: '2026-08-05', window: '1 month',
-      trend: ['Read too little of them to argue from — 50% of checks resolved', 'the window is what gets us a second reading'] },
+      trend: ['Read too little of them to argue from — 50% of checks resolved', 'one look so far; the second when the window closes'] },
     { id: 'c_worth_call_they_make_2__girlwholove2gossip', since: '2026-08-04', window: '3 months',
       trend: ['46k, every check resolved, still under the bar', 'nothing has moved yet — one look so far'] }
   ];
@@ -1587,8 +1606,8 @@
   var outcomes = [
     { code: 'contacted', label: 'Contacted', note: 'Package sent.' },
     { code: 'replied', label: 'Replied', note: 'They engaged.' },
-    { code: 'signed', label: 'Signed', note: 'The only outcome that validates the model.' },
-    { code: 'declined', label: 'Declined', note: 'With a reason — each teaches something different.' }
+    { code: 'signed', label: 'Signed', note: 'They said yes.' },
+    { code: 'declined', label: 'Declined', note: 'With a reason.' }
   ];
   var declineReasons = [
     { code: 'agency', label: 'Already with an agency', teaches: 'The Missing check failed — representation was not in the inventory.' },
@@ -2088,7 +2107,7 @@
     passReasons: passReasons, reasonFor: reasonFor, passedSeed: passedSeed,
     outcomes: outcomes, declineReasons: declineReasons, promotedSeed: promotedSeed,
     rewindCalls: rewindCalls, outcomeFor: outcomeFor,
-    recordFor: recordFor, checkSummary: checkSummary, likesFor: likesFor,
+    recordFor: recordFor, checkSummary: checkSummary,
     PROBES: PROBES, placesFor: placesFor, checksForItem: checksForItem,
     lookedIn: lookedIn, cannotSettle: cannotSettle,
     DEPTH: DEPTH, effortFor: effortFor, admin: admin, lastRun: lastRun, receipts: receipts

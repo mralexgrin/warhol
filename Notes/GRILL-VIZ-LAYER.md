@@ -3,7 +3,7 @@
 **Self-run, 5 August 2026.** Every branch of `viz-spec.html` (D1–D20, C1–C2, P1), argued against and
 answered. One-line options, one-line recommendation. Nothing here is built.
 
-Companion: [viz-spec.html](../Archive/prototypes/viz-spec.html) · [PRD-WARHOL-SCOUT.md](../Product/PRD-WARHOL-SCOUT.md)
+Companion: [viz-spec.html](../Archive/sketches/viz-spec.html) · [PRD-WARHOL-SCOUT.md](../Product/PRD-WARHOL-SCOUT.md)
 
 ---
 

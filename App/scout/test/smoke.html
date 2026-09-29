@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scout smoke tests</title>
+<style>
+  body { font: 13px/1.5 ui-monospace, Menlo, monospace; margin: 16px; }
+  iframe { border: 1px solid #ccc; width: 1440px; height: 900px; display: block; margin-bottom: 12px; }
+  .fail { color: #b3261e; } .pass { color: #1b6e3a; }
+</style>
+</head>
+<body>
+<!-- Drives the real app in an iframe, the way a person would: sign in, work the drop,
+     open every report, visit every screen at desk and phone width. Run it with
+     `node App/scout/test/run.mjs`, or open this page from the local server to watch.
+     Results land in #result as JSON, which is what run.mjs reads. -->
+<iframe id="app" title="Scout under test"></iframe>
+<ol id="log"></ol>
+<pre id="result"></pre>
+<script>
+(async function () {
+  'use strict';
+  var results = [];
+  var frame = document.getElementById('app');
+  var W, D;                 // the app's window and document
+  var errors = [];
+
+  function record(name, ok, detail) {
+    results.push({ name: name, ok: !!ok, detail: ok ? '' : String(detail || '') });
+    var li = document.createElement('li');
+    li.className = ok ? 'pass' : 'fail';
+    li.textContent = (ok ? 'ok   ' : 'FAIL ') + name + (ok ? '' : ' :: ' + detail);
+    document.getElementById('log').appendChild(li);
+  }
+  function tick(ms) { return new Promise(function (r) { setTimeout(r, ms == null ? 40 : ms); }); }
+  function $(sel) { return D.querySelector(sel); }
+  function $$(sel) { return [].slice.call(D.querySelectorAll(sel)); }
+  function text() { var a = D.getElementById('app'); return a ? a.innerText : ''; }
+  async function click(el) { if (!el) return false; el.click(); await tick(); return true; }
+  async function key(k) {
+    D.body.dispatchEvent(new W.KeyboardEvent('keydown', { key: k, bubbles: true }));
+    await tick();
+  }
+
+  var loads = 0;
+  function load(hash) {
+    return new Promise(function (resolve) {
+      frame.onload = function () {
+        W = frame.contentWindow; D = frame.contentDocument;
+        /* Measure end states, not frames of a fade: a colour caught mid-transition after a
+           theme switch read as 1.25:1 once in ten runs. */
+        var still = D.createElement('style');
+        still.textContent = '*, *::before, *::after { transition: none !important; animation: none !important; }';
+        D.head.appendChild(still);
+        /* Uncaught errors are collected by index.html itself from its first line
+           (window.__scoutErrors), so boot errors count too. console.error is wrapped here. */
+        var ce = W.console.error.bind(W.console);
+        W.console.error = function () { errors.push([].join.call(arguments, ' ')); ce.apply(null, arguments); };
+        resolve();
+      };
+      /* A new query each time: changing only the hash would not reload the frame. */
+      frame.src = '../index.html?load=' + (++loads) + (hash || '');
+    });
+  }
+  async function width(px) {
+    frame.style.width = px + 'px';
+    frame.style.height = (px < 700 ? 812 : 900) + 'px';
+    await tick(80);
+  }
+
+  /* ------------------------------------------------------------ checks */
+
+  /* Words the copy rules (CLAUDE.md) ban from the product. Each is a synonym for a
+     state that already has one name, or internal vocabulary that belongs in the notes. */
+  var BANNED = [
+    [/confirmed missing/i, 'not there'], [/\bno data\b/i, 'not there / could not tell'],
+    [/could not (resolve|read|find)\b/i, 'could not tell'], [/\bunreadable\b/i, 'could not tell'],
+    [/\bunknown\b/i, 'could not tell'], [/\bN\/A\b/, 'could not tell'],
+    [/\bcut-?off\b/i, 'the bar'], [/\bfeed\b/i, 'the drop'], [/\bqueue\b/i, 'the drop'],
+    [/\bread it again\b/i, 'Open the report'], [/\bview details\b/i, 'Open the report'],
+    [/\blearn more\b/i, 'Open the report'],
+    [/\b(archived?|reject(ed)?|dismiss(ed)?)\b/i, 'promote / watch / pass'], /* "save" is fine for a brief or money */
+    [/\bdepth [123]\b/i, 'Sweep / Probe / Study'],
+    [/purchase intent/i, 'people asked where to buy'], [/demand indicators?/i, 'people asked where to buy'],
+    [/cadence decay/i, 'posting less'],
+    [/three-verb rule/i, 'tier 3'], [/§\s?\d/, 'tier 3'], [/\bdecision \d{2,}/i, 'tier 3']
+  ];
+
+  function hygiene(where) {
+    var t = text();
+    var junk = t.match(/\bundefined\b|\bNaN\b|\[object Object\]|\bnull\b|Infinity/);
+    record(where + ': no undefined/NaN/null in the text', !junk, junk && junk[0]);
+    var hits = [];
+    BANNED.forEach(function (b) {
+      var m = t.match(b[0]);
+      if (m) hits.push('"' + m[0] + '" (use ' + b[1] + ')');
+    });
+    record(where + ': copy follows the one-name rule', !hits.length, hits.join('; '));
+  }
+
+  function names(where) {
+    var bad = $$('button, a[href], [role=button], [role=link], [role=tab], input:not([type=hidden]), select, textarea')
+      .filter(function (el) {
+        if (el.closest('[hidden], [aria-hidden=true]')) return false;
+        var n = (el.getAttribute('aria-label') || el.getAttribute('title') || el.textContent || el.value || el.placeholder || '').trim();
+        if (!n && el.id) { var l = D.querySelector('label[for="' + el.id + '"]'); n = l ? l.textContent.trim() : ''; }
+        if (!n && el.closest('label')) n = el.closest('label').textContent.trim();
+        if (!n && el.getAttribute('aria-labelledby')) n = el.getAttribute('aria-labelledby');
+        return !n;
+      })
+      .map(function (el) { return el.tagName.toLowerCase() + '.' + (el.className || '').toString().split(' ')[0]; });
+    record(where + ': every control has a name', !bad.length, bad.slice(0, 6).join(', '));
+    var seen = {}, dup = [];
+    $$('[id]').forEach(function (el) { if (seen[el.id]) dup.push(el.id); seen[el.id] = 1; });
+    record(where + ': ids are unique', !dup.length, dup.slice(0, 6).join(', '));
+    var noalt = $$('img:not([alt])').length;
+    record(where + ': images have alt text', !noalt, noalt + ' without alt');
+  }
+
+  /* WCAG text contrast: 4.5:1, or 3:1 for large text (24px, or 18.66px bold).
+     The background is the nearest ancestor with an opaque fill; text over an image
+     or a gradient is skipped rather than guessed at. Hidden and sr-only text is skipped. */
+  function lum(rgb) {
+    return rgb.slice(0, 3).map(function (v) { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); })
+      .reduce(function (a, v, i) { return a + v * [0.2126, 0.7152, 0.0722][i]; }, 0);
+  }
+  function rgba(c) { var m = c.match(/[\d.]+/g); return m && /^rgb/.test(c) ? m.map(Number).concat(m.length < 4 ? [1] : []) : null; }
+  function blend(fg, bg) { var a = fg[3]; return [0, 1, 2].map(function (i) { return fg[i] * a + bg[i] * (1 - a); }).concat([1]); }
+  function contrast(where) {
+    var bad = [];
+    $$('#app *').forEach(function (el) {
+      var own = [].some.call(el.childNodes, function (n) { return n.nodeType === 3 && n.textContent.trim(); });
+      if (!own || !el.getClientRects().length) return;
+      var cs = W.getComputedStyle(el);
+      if (cs.visibility === 'hidden' || +cs.opacity === 0 || el.closest('.sr-only, [aria-hidden=true]')) return;
+      if (el.closest('[disabled], [aria-disabled=true]')) return;   /* WCAG 1.4.3 exempts inactive controls */
+      var fg = rgba(cs.color), bg = null, e = el;
+      while (e && e.nodeType === 1) {
+        var s = W.getComputedStyle(e);
+        if (s.backgroundImage !== 'none' && !/repeating-linear-gradient/.test(s.backgroundImage)) return;
+        var b = rgba(s.backgroundColor);
+        if (b && b[3] > 0) { bg = bg ? blend(bg, b) : b; if (b[3] >= 1) break; }
+        e = e.parentElement;
+      }
+      if (!fg || !bg || bg[3] < 1) return;
+      var eff = 1;
+      for (var p = el; p && p.nodeType === 1; p = p.parentElement) eff *= +W.getComputedStyle(p).opacity;
+      if (eff < 1) return;              /* dimmed on purpose (a decided row, a disabled control) */
+      if (fg[3] < 1) fg = blend(fg, bg);
+      var l1 = lum(fg), l2 = lum(bg), ratio = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+      var px = parseFloat(cs.fontSize), large = px >= 24 || (px >= 18.66 && +cs.fontWeight >= 700);
+      if (ratio < (large ? 3 : 4.5)) bad.push('"' + el.textContent.trim().slice(0, 24) + '" ' + ratio.toFixed(2) + ':1 (' + (el.className || el.tagName).toString().split(' ')[0] + ')');
+    });
+    record(where + ': text contrast meets WCAG AA', !bad.length, bad.length + ' low: ' + bad.slice(0, 5).join('; '));
+    var h1 = $$('#app h1').filter(function (h) { return h.getClientRects().length; }).length;
+    record(where + ': one h1', h1 === 1, h1 + ' h1 elements');
+  }
+
+  /* The page, and #main: above 960px #main scrolls on its own, so wide content
+     would scroll sideways inside it and never widen the page. */
+  function overflow(where) {
+    var m = D.getElementById('main');
+    var over = Math.max(D.documentElement.scrollWidth - D.documentElement.clientWidth,
+      m ? m.scrollWidth - m.clientWidth : 0);
+    record(where + ': no sideways scroll', over <= 1, over + 'px wider than the screen');
+  }
+
+  function allErrors() { return (W.__scoutErrors || []).concat(errors); }
+  function errorsSince(where, from) {
+    var fresh = allErrors().slice(from);
+    record(where + ': no script errors', !fresh.length, fresh.slice(0, 3).join(' | '));
+  }
+
+  async function view(v) {
+    var el = $('.rnav[data-view="' + v + '"]') || $('[data-act=view][data-view="' + v + '"]');
+    return click(el);
+  }
+  async function openHelp() {
+    await click($('[data-act=menu]'));
+    return click($('[data-act=help]'));
+  }
+  async function screen(where, go) {
+    var e0 = allErrors().length;
+    var ok = await go();
+    await tick();
+    if (!ok) { record(where + ': reachable', false, 'no control to open it'); return; }
+    hygiene(where); names(where); overflow(where); contrast(where); errorsSince(where, e0);
+  }
+
+  /* ------------------------------------------------------------ run */
+  /* A step that never returns (a frame that navigated away, a load that never fires)
+     would otherwise hang until run.mjs gives up. After 90s the page reports what it
+     has, with a failure naming the last check that passed. */
+  var finished = false;
+  function finish() {
+    if (finished) return;
+    finished = true;
+    var failed = results.filter(function (r) { return !r.ok; });
+    document.getElementById('result').textContent = JSON.stringify({ total: results.length, failed: failed.length, results: results });
+    document.title = failed.length ? 'FAILED ' + failed.length : 'PASSED';
+  }
+  setTimeout(function () {
+    if (finished) return;
+    var last = results.length ? results[results.length - 1].name : 'nothing';
+    record('harness: finished within 90s', false, 'stuck after "' + last + '"');
+    finish();
+  }, 90000);
+  try {
+    sessionStorage.clear();
+    try { localStorage.removeItem('scout-v5-theme'); localStorage.removeItem('scout-intro-seen'); } catch (e) {}
+    await width(1440);
+    await load();
+    await tick(200);
+
+    record('boot: the page has its error log', Array.isArray(W.__scoutErrors), 'no window.__scoutErrors');
+    errorsSince('boot', 0);
+    record('boot: the sign-in screen renders', !!$('form'), 'no form on first paint');
+    var form = $('form');
+    if (form) { form.requestSubmit ? form.requestSubmit() : form.submit(); await tick(120); }
+    record('first visit: the drop shows the New here note', !!$('.intro'), 'no .intro');
+    record('sign-in: lands on the drop', !!$('.rnav[data-view=drop][aria-current=page]'), 'drop not current after sign-in');
+
+    /* Every brief's drop, and every report in it. */
+    var briefs = $$('[data-act=brief]').map(function (b) { return b.getAttribute('data-id') || b.getAttribute('data-brief'); });
+    record('drop: brief tabs are there', briefs.length >= 2, briefs.length + ' tabs');
+    for (var bi = 0; bi < briefs.length; bi++) {
+      var tab = $$('[data-act=brief]')[bi];
+      var label = tab.textContent.replace(/\s+/g, ' ').trim();
+      await click(tab);
+      await screen('drop [' + label + ']', async function () { return true; });
+
+      var rows = $$('.row[data-id]');
+      var head = text().match(/(\d+) creators? cleared the bar/);
+      if (!head && rows.length) record('drop [' + label + ']: header states the count', false, 'no "N creators cleared the bar" above ' + rows.length + ' rows');
+      if (head) record('drop [' + label + ']: header count matches the rows', +head[1] === rows.length, head[1] + ' in the header, ' + rows.length + ' rows');
+      /* "Also looked at: 28 scored under 25, 4 did not match…" must add up to the
+         disclosure below it ("46 names, with the gate's own words"). */
+      var also = (text().match(/Also looked at: ([^\n]*)/) || [])[1];
+      var told = (text().match(/(\d+) names?, with the gate/) || [])[1];
+      if (also && told) {
+        var sum = (also.match(/\d+(?= (scored|did|could|were|are|is|was|had|have|posting))/g) || []).reduce(function (a, n) { return a + +n; }, 0);
+        record('drop [' + label + ']: "Also looked at" adds up to "Who else was looked at"', sum === +told, sum + ' vs ' + told);
+      }
+      if (bi === 0) { var housePool = rows.length + (told ? +told : 0); }
+
+      var ids = rows.map(function (r) { return r.getAttribute('data-id'); });
+      for (var i = 0; i < ids.length; i++) {
+        var e0 = allErrors().length;
+        await click($('[data-act=report][data-id="' + ids[i] + '"]') || $('.row[data-id="' + ids[i] + '"] [data-act=report]'));
+        var where = 'report ' + ids[i];
+        record(where + ': opens', !!$('.rpt-nav, .headverbs'), 'no report chrome');
+        hygiene(where); names(where); errorsSince(where, e0);
+        var quotes = $$('blockquote.q p').map(function (p) { return p.textContent.trim().toLowerCase().replace(/\s+/g, ' '); });
+        var dq = quotes.filter(function (q, k) { return quotes.indexOf(q) !== k; });
+        record(where + ': each quote shown once', !dq.length, dq[0]);
+        await key('Escape');
+      }
+    }
+
+    /* The house brief's count must match Admin's. */
+    await click($$('[data-act=brief]')[0]);
+    var dropN = (text().match(/(\d+) creators? cleared the bar/) || [])[1];
+    await screen('admin', function () { return view('admin'); });
+    var adminM = text().match(/(\d+) of (\d+) clear it/) || [];
+    var adminN = adminM[1];
+    record('admin: the bar count matches the drop', dropN != null && dropN === adminN, 'drop ' + dropN + ', admin ' + adminN);
+    record('admin: "of N" is the drop plus who else was looked at', +adminM[2] === housePool, 'admin ' + adminM[2] + ', drop ' + housePool);
+
+    /* List rows date things the short way ("5 Aug 26"); the long form is for sentences. */
+    function rowDates(where) {
+      var long = $$('.plat1, .pline').map(function (e) { return e.textContent; })
+        .filter(function (t) { return /(January|February|March|April|June|July|August|September|October|November|December) \d{4}/.test(t); });
+      var n = $$('.plat1, .pline').length;
+      if (!n && !/Nobody|No names|Nothing/.test(text())) { record(where + ': row dates use the short form', false, 'no row lines found to check'); return; }
+      record(where + ': row dates use the short form (' + n + ' rows)', !long.length, long[0]);
+    }
+    await screen('watchlist', function () { return view('watchlist'); }); rowDates('watchlist');
+    await screen('promoted', function () { return view('promoted'); }); rowDates('promoted');
+    await screen('passed', function () { return view('passed'); }); rowDates('passed');
+    await screen('trends', function () { return view('trends'); });
+    await screen('help', openHelp);
+    await screen('new brief', function () { return click($('[data-act=newbrief]')); });
+
+    /* The loop: promote, undo; watch; pass, put back. */
+    await view('drop');
+    var first = $('.row[data-id]');
+    var fid = first && first.getAttribute('data-id');
+    await click($('.row[data-id="' + fid + '"] [data-act=promote]'));
+    var toast = $('#toast, .toast');
+    record('promote: shows an undo toast', !!toast && /undo/i.test(toast.textContent), 'no toast');
+    await click($('[data-act=toastundo]'));
+    await view('drop');
+    var back = $('.row[data-id="' + fid + '"] [data-act=promote]');
+    record('undo: the row can be decided again', !!back, 'promote button gone after undo');
+
+    await click($('.row[data-id="' + fid + '"] [data-act=passtray]'));
+    var reason = $('.passtray .reasons button');
+    await click(reason);
+    await view('passed');
+    record('pass: the name is on the passed list', text().indexOf(fid.replace(/^c_/, '')) !== -1 || !!$('[data-id="' + fid + '"]'), fid + ' not on Passed');
+    await click($('[data-act=unpass][data-id="' + fid + '"]') || $('[data-act=unpass]'));
+    await view('drop');
+    record('put back: the name returns to the drop', !!$('.row[data-id="' + fid + '"] [data-act=promote]'), fid + ' not back');
+
+    /* Keyboard: J moves the cursor, ? opens the shortcuts. */
+    await key('j');
+    record('keys: J highlights a row', !!$('.row--cur'), 'no .row--cur');
+    await key('?');
+    record('keys: ? opens the shortcuts', !!$('.keysheet'), 'no .keysheet');
+    await key('Escape');
+
+    /* Print: the report's @media print rules, applied on screen, must unclip #main and
+       drop the app's chrome. (Headless print needs a signed-in page, which this is.) */
+    await view('drop');
+    await click($('[data-act=report]'));
+    var printCss = '';
+    [].forEach.call(D.styleSheets, function (sh) {
+      try { [].forEach.call(sh.cssRules, function (r) {
+        if (r.media && r.media.mediaText === 'print') [].forEach.call(r.cssRules, function (x) { if (!/^@page/.test(x.cssText)) printCss += x.cssText + '\n'; });
+      }); } catch (e) {}
+    });
+    record('print: the stylesheet has print rules', printCss.length > 100, printCss.length + ' chars');
+    var ps = D.createElement('style'); ps.textContent = printCss; D.head.appendChild(ps);
+    W.dispatchEvent(new W.Event('beforeprint'));
+    var pm = D.getElementById('main');
+    record('print: the whole report flows onto the page', pm.scrollHeight - pm.clientHeight <= 1, (pm.scrollHeight - pm.clientHeight) + 'px clipped');
+    var chrome = ['.railcol', '.headverbs', '.rpt-nav'].filter(function (sel) { var e = $(sel); return e && W.getComputedStyle(e).display !== 'none'; });
+    record('print: no app chrome', !chrome.length, chrome.join(', ') + ' still shown');
+    record('print: pinned to the light theme', D.documentElement.getAttribute('data-theme') === 'light', D.documentElement.getAttribute('data-theme'));
+    ps.remove(); W.dispatchEvent(new W.Event('afterprint'));
+    await key('Escape');
+
+    /* Back and Forward move between screens; every screen has a link. */
+    await view('drop');
+    var rid = $('.row[data-id]').getAttribute('data-id');
+    await click($('[data-act=report][data-id="' + rid + '"]'));
+    record('history: a report has its own link', W.location.hash === '#/report/' + encodeURIComponent(rid), 'hash is ' + W.location.hash);
+    /* The frame shares this tab's history. If the app pushed nothing, Back would take
+       this test page itself away, so it is only pressed once an app entry exists. */
+    var pushed = !!(W.history.state && W.history.state.scout);
+    record('history: opening a report adds a history entry', pushed, 'history.state is ' + JSON.stringify(W.history.state));
+    if (pushed) {
+    W.history.back(); await tick(150);
+    record('history: Back from a report returns to the drop', !!$('.rnav[data-view=drop][aria-current=page]') && !!$('.row[data-id]') && W.location.hash === '#/drop', 'hash ' + W.location.hash);
+    W.history.forward(); await tick(150);
+    record('history: Forward reopens the report', !!$('.rpt-nav, .headverbs') && W.location.hash.indexOf('#/report/') === 0, 'hash ' + W.location.hash);
+    }
+    await load('#/watchlist'); await tick(200);
+    if ($('form')) { $('form').requestSubmit(); await tick(120); }
+    record('history: a link to the watchlist opens the watchlist', (($('#app h1') || {}).textContent || '') === 'Watchlist', 'h1 is ' + (($('#app h1') || {}).textContent));
+    await load('#/report/nobody'); await tick(200);
+    if ($('form')) { $('form').requestSubmit(); await tick(120); }
+    record('history: a link to an unknown name falls back safely', !!$('#app h1') && allErrors().length === 0, 'errors: ' + allErrors().join(' | '));
+    await load('#/drop'); await tick(200);
+    if ($('form')) { $('form').requestSubmit(); await tick(120); }
+
+    /* Phone width. */
+    await width(375);
+    await screen('phone drop', function () { return view('drop'); });
+    await screen('phone report', function () { return click($('[data-act=report]')); });
+    await key('Escape');
+    await screen('phone watchlist', function () { return view('watchlist'); });
+    await screen('phone promoted', function () { return view('promoted'); });
+    await screen('phone passed', function () { return view('passed'); });
+    await screen('phone trends', function () { return view('trends'); });
+    await screen('phone admin', function () { return view('admin'); });
+    await screen('phone help', openHelp);
+    await screen('phone new brief', function () { return click($('[data-act=newbrief]')); });
+
+    /* Tablet width. */
+    await width(820);
+    await screen('tablet drop', function () { return view('drop'); });
+    await screen('tablet report', function () { return click($('[data-act=report]')); });
+    await key('Escape');
+    await screen('tablet trends', function () { return view('trends'); });
+
+    /* Dark theme, desk width: the same checks, contrast included. */
+    await width(1440);
+    await click($('[data-act=menu]'));
+    await click($('[data-act=theme][data-set=dark]'));
+    if ($('[data-act=menu][aria-expanded=true]')) await click($('[data-act=menu]'));
+    record('dark: the theme switches', D.documentElement.getAttribute('data-theme') === 'dark', 'still ' + D.documentElement.getAttribute('data-theme'));
+    var darkViews = ['drop', 'watchlist', 'passed', 'promoted', 'trends', 'admin'];
+    for (var dv = 0; dv < darkViews.length; dv++) {
+      await screen('dark ' + darkViews[dv], (function (v) { return function () { return view(v); }; })(darkViews[dv]));
+    }
+    await view('drop');
+    await screen('dark report', function () { return click($('[data-act=report]')); });
+    await key('Escape');
+    await screen('dark help', openHelp);
+    await click($('[data-act=menu]'));
+    await click($('[data-act=theme][data-set=light]'));
+    if ($('[data-act=menu][aria-expanded=true]')) await click($('[data-act=menu]'));
+
+    /* The first-visit note closes for good. */
+    await width(1440);
+    await view('drop');
+    record('first visit: the note is still there until closed', !!$('.intro'), 'no .intro before Got it');
+    await click($('[data-act=introdone]'));
+    record('first visit: Got it closes the note', !$('.intro'), '.intro still on screen');
+    await view('watchlist'); await view('drop');
+    record('first visit: it stays closed', !$('.intro'), '.intro came back');
+    record('first visit: remembered in this browser', W.localStorage.getItem('scout-intro-seen') === '1', 'scout-intro-seen is ' + W.localStorage.getItem('scout-intro-seen'));
+    await load(); await tick(200);
+    if ($('form')) { $('form').requestSubmit(); await tick(120); }
+    await view('drop');
+    record('first visit: a reload does not bring it back', !!$('.row[data-id]') && !$('.intro'), $('.intro') ? '.intro is back' : 'no drop rows after reload');
+  } catch (err) {
+    record('harness: ran to the end', false, err && (err.stack || err.message) || err);
+  }
+
+  finish();
+})();
+</script>
+</body>
+</html>

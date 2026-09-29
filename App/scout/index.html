@@ -10,6 +10,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300..800;1,300..800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="alloy.css">
 <link rel="stylesheet" href="scout-v52.css">
+<!-- Errors from the first instant of the page, before anything else could be listening.
+     Read by the smoke tests (test/smoke.html); costs nothing otherwise. -->
+<script>
+  window.__scoutErrors = [];
+  addEventListener('error', function (e) { __scoutErrors.push(e.message); });
+  addEventListener('unhandledrejection', function (e) { __scoutErrors.push('rejection: ' + (e.reason && e.reason.message || e.reason)); });
+</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to the drop</a>
