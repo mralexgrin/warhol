@@ -46,8 +46,13 @@
     return new Promise(function (resolve) {
       frame.onload = function () {
         W = frame.contentWindow; D = frame.contentDocument;
-        W.addEventListener('error', function (e) { errors.push(e.message); });
-        W.addEventListener('unhandledrejection', function (e) { errors.push('rejection: ' + (e.reason && e.reason.message || e.reason)); });
+        /* Measure end states, not frames of a fade: a colour caught mid-transition after a
+           theme switch read as 1.25:1 once in ten runs. */
+        var still = D.createElement('style');
+        still.textContent = '*, *::before, *::after { transition: none !important; animation: none !important; }';
+        D.head.appendChild(still);
+        /* Uncaught errors are collected by index.html itself from its first line
+           (window.__scoutErrors), so boot errors count too. console.error is wrapped here. */
         var ce = W.console.error.bind(W.console);
         W.console.error = function () { errors.push([].join.call(arguments, ' ')); ce.apply(null, arguments); };
         resolve();
@@ -126,6 +131,7 @@
       if (!own || !el.getClientRects().length) return;
       var cs = W.getComputedStyle(el);
       if (cs.visibility === 'hidden' || +cs.opacity === 0 || el.closest('.sr-only, [aria-hidden=true]')) return;
+      if (el.closest('[disabled], [aria-disabled=true]')) return;   /* WCAG 1.4.3 exempts inactive controls */
       var fg = rgba(cs.color), bg = null, e = el;
       while (e && e.nodeType === 1) {
         var s = W.getComputedStyle(e);
@@ -148,13 +154,18 @@
     record(where + ': one h1', h1 === 1, h1 + ' h1 elements');
   }
 
+  /* The page, and #main: above 960px #main scrolls on its own, so wide content
+     would scroll sideways inside it and never widen the page. */
   function overflow(where) {
-    var over = D.documentElement.scrollWidth - D.documentElement.clientWidth;
+    var m = D.getElementById('main');
+    var over = Math.max(D.documentElement.scrollWidth - D.documentElement.clientWidth,
+      m ? m.scrollWidth - m.clientWidth : 0);
     record(where + ': no sideways scroll', over <= 1, over + 'px wider than the screen');
   }
 
+  function allErrors() { return (W.__scoutErrors || []).concat(errors); }
   function errorsSince(where, from) {
-    var fresh = errors.slice(from);
+    var fresh = allErrors().slice(from);
     record(where + ': no script errors', !fresh.length, fresh.slice(0, 3).join(' | '));
   }
 
@@ -167,7 +178,7 @@
     return click($('[data-act=help]'));
   }
   async function screen(where, go) {
-    var e0 = errors.length;
+    var e0 = allErrors().length;
     var ok = await go();
     await tick();
     if (!ok) { record(where + ': reachable', false, 'no control to open it'); return; }
@@ -182,6 +193,8 @@
     await load();
     await tick(200);
 
+    record('boot: the page has its error log', Array.isArray(W.__scoutErrors), 'no window.__scoutErrors');
+    errorsSince('boot', 0);
     record('boot: the sign-in screen renders', !!$('form'), 'no form on first paint');
     var form = $('form');
     if (form) { form.requestSubmit ? form.requestSubmit() : form.submit(); await tick(120); }
@@ -199,6 +212,7 @@
 
       var rows = $$('.row[data-id]');
       var head = text().match(/(\d+) creators? cleared the bar/);
+      if (!head && rows.length) record('drop [' + label + ']: header states the count', false, 'no "N creators cleared the bar" above ' + rows.length + ' rows');
       if (head) record('drop [' + label + ']: header count matches the rows', +head[1] === rows.length, head[1] + ' in the header, ' + rows.length + ' rows');
       /* "Also looked at: 28 scored under 25, 4 did not match…" must add up to the
          disclosure below it ("46 names, with the gate's own words"). */
@@ -212,7 +226,7 @@
 
       var ids = rows.map(function (r) { return r.getAttribute('data-id'); });
       for (var i = 0; i < ids.length; i++) {
-        var e0 = errors.length;
+        var e0 = allErrors().length;
         await click($('[data-act=report][data-id="' + ids[i] + '"]') || $('.row[data-id="' + ids[i] + '"] [data-act=report]'));
         var where = 'report ' + ids[i];
         record(where + ': opens', !!$('.rpt-nav, .headverbs'), 'no report chrome');
@@ -235,9 +249,11 @@
 
     /* List rows date things the short way ("5 Aug 26"); the long form is for sentences. */
     function rowDates(where) {
-      var long = $$('.plat1').map(function (e) { return e.textContent; })
+      var long = $$('.plat1, .pline').map(function (e) { return e.textContent; })
         .filter(function (t) { return /(January|February|March|April|June|July|August|September|October|November|December) \d{4}/.test(t); });
-      record(where + ': row dates use the short form', !long.length, long[0]);
+      var n = $$('.plat1, .pline').length;
+      if (!n && !/Nobody|No names|Nothing/.test(text())) { record(where + ': row dates use the short form', false, 'no row lines found to check'); return; }
+      record(where + ': row dates use the short form (' + n + ' rows)', !long.length, long[0]);
     }
     await screen('watchlist', function () { return view('watchlist'); }); rowDates('watchlist');
     await screen('promoted', function () { return view('promoted'); }); rowDates('promoted');
@@ -320,6 +336,11 @@
     record('first visit: Got it closes the note', !$('.intro'), '.intro still on screen');
     await view('watchlist'); await view('drop');
     record('first visit: it stays closed', !$('.intro'), '.intro came back');
+    record('first visit: remembered in this browser', W.localStorage.getItem('scout-intro-seen') === '1', 'scout-intro-seen is ' + W.localStorage.getItem('scout-intro-seen'));
+    await load(); await tick(200);
+    if ($('form')) { $('form').requestSubmit(); await tick(120); }
+    await view('drop');
+    record('first visit: a reload does not bring it back', !!$('.row[data-id]') && !$('.intro'), $('.intro') ? '.intro is back' : 'no drop rows after reload');
   } catch (err) {
     record('harness: ran to the end', false, err && (err.stack || err.message) || err);
   }

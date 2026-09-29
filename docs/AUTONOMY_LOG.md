@@ -13,11 +13,34 @@ Newest entries at the top. This file is the memory of the run: read it at the st
 
 ## Current status
 - Last completed: #9 accessibility checks
-- Next: reflect (review pending), then #10 standalone Trends board
+- Next: reflect entry, then #10 standalone Trends board
 - Branch: autonomous/product-improvements (from phase7-report @ b48dda9)
 - Open PR: none (cannot push)
 
 ## Log
+### 2026-09-29: Code review of items 1–9, and the fixes
+- Review: code-reviewer subagent (inherit model) over `.autonomy/diff.patch`. 10 findings with receipts.
+  I checked all the receipts (grep plus a `set -e` repro), and none was false. Fixed all 10:
+  1. check.sh ignored a stale index (`a && b` under set -e). Now `if … else exit 1`.
+  2. read.html: SRI on marked 12.0.2, DOMPurify 3.1.6 (with SRI) around the parsed HTML. A test
+     file with `<img onerror>` and `<script>` rendered both inert.
+  3. The overflow check now measures `#main` too (above 960px it scrolls on its own).
+  4. Boot errors: index.html collects `window.__scoutErrors` from its first line; the harness reads it.
+  5. check-links matches exact case against git's published list (a wrong-case link is proven to fail).
+  6. The intro test checks localStorage, reloads the frame, and asserts the note stays gone.
+  7. read.html: `aria-busy` plus a `role=status` line instead of a live `<main>`.
+  8. build-indexes lists `--cached --others --exclude-standard` and skips files missing on disk.
+  9. A malformed hash is decoded in a try/catch.
+  10. Checks that could skip silently now record a failure (no header, no rows to check).
+- New defects this surfaced: the date check had never looked at Passed rows (`.pline`, not
+  `.plat1`). It does now (7 rows).
+- Flake found and fixed: a colour read mid-transition after the theme switch (1.25:1, 1 run in 10). The
+  frame now disables transitions and animations. Without the fades, three real contrast failures showed
+  (fading rows had been skipped as dimmed): the Admin bar choices at 4.38:1 (their ink was tuned for the
+  field, not the darker well), the header `?` at 1.21:1 in dark (**my Phase 7 regression**: dark
+  on-field ink on the now-neutral band), and the disabled Invite button (exempt; the harness skips
+  disabled controls).
+- Verification: 393/393 on 3 consecutive runs; check.sh green.
 ### 2026-09-29: #9 Automated accessibility checks
 - What: the smoke suite now checks WCAG AA text contrast on every screen (the nearest opaque background
   per text node, 3:1 for large text; skips sr-only, deliberately dimmed rows, and text over images or

@@ -8,7 +8,7 @@ printf 'engine tests      '
 if out=$(cd App/engine && node test.js 2>&1); then echo "$out" | tail -1 | sed 's/^ *//'; else echo "$out"; exit 1; fi
 
 printf 'folder indexes    '
-node tools/build-indexes.mjs --check && echo 'up to date'
+if node tools/build-indexes.mjs --check; then echo 'up to date'; else exit 1; fi
 
 printf 'doc links         '
 node tools/check-links.mjs

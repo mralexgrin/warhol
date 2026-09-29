@@ -2,7 +2,8 @@
 /* Writes an index.html into Notes/, Product/ and Archive/ so the landing page's
    folder links work on static hosting (GitHub Pages cannot list a directory).
 
-   Lists only files git tracks, since those are the ones Pages publishes.
+   Lists the files Pages will publish: tracked ones and new ones not yet committed,
+   never gitignored ones.
    Markdown opens in read.html; HTML opens directly; anything else is listed, not linked.
 
    Run from the repo root after adding or renaming a document:
@@ -23,8 +24,10 @@ const FOLDERS = {
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 function tracked(folder) {
-  const out = execFileSync('git', ['ls-files', '-z', '--', folder], { cwd: ROOT, encoding: 'utf8' });
-  return out.split('\0').filter(Boolean);
+  /* Tracked files plus new ones not yet committed (but not ignored ones), and only
+     those still on disk, so a deleted-but-staged file cannot crash the title read. */
+  const out = execFileSync('git', ['ls-files', '-z', '--cached', '--others', '--exclude-standard', '--', folder], { cwd: ROOT, encoding: 'utf8' });
+  return [...new Set(out.split('\0').filter(Boolean))].filter((p) => existsSync(join(ROOT, p)));
 }
 
 function titleOf(path) {

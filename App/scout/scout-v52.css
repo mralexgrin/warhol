@@ -2192,7 +2192,9 @@ blockquote.q .src .m { font-size: var(--fs-1); color: var(--text-3); }
    whole card reads as one object rather than a white widget dropped on colour. */
 :is(.p--butter, .p--teal, .p--lilac, .p--ink) .seg {
   background: var(--fg-well); border-color: var(--fg-rule); }
-:is(.p--butter, .p--teal, .p--lilac, .p--ink) .seg button { color: var(--fg-2); }
+/* Full ink: the buttons sit on --fg-well, a wash darker than the field, where --fg-2
+   measured 4.38:1 (29 Sep). The pressed one is told apart by its lift, not its ink. */
+:is(.p--butter, .p--teal, .p--lilac, .p--ink) .seg button { color: var(--fg); }
 :is(.p--butter, .p--teal, .p--lilac, .p--ink) .seg button:hover { color: var(--fg); }
 /* The pressed state is the one thing that must NOT be translucent: it is the
    answer to "which one is set", and a wash of the ground over the ground is the
@@ -3215,6 +3217,9 @@ button, input, select, textarea { font-family: inherit; }
 .claim .ch h2, .work .ch h2 { font-family: var(--ui); color: var(--text-2); }
 .ch .q, .ch .pts--gate { color: var(--text-3); }
 .claim--why { background: var(--panel); }
+/* The ? in a section header was dark ink on a translucent dark chip, made for the old
+   coloured bands. On the neutral band it read 1.21:1 in dark. It takes the plain ? style. */
+.claim .ch .deft, .work .ch .deft { background: transparent; color: var(--text-3); border-color: var(--line-ctl); }
 
 /* -- headings */
 .claim--why .subh, .claim--why .trg-k, .trg-k, .disc .t, .readfit .v {

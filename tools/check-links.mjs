@@ -1,18 +1,21 @@
 #!/usr/bin/env node
 /* Fails if a relative link in the published docs points at nothing.
-   Covers every tracked Markdown file outside Archive/ (Archive is kept as it was),
+   Covers every published Markdown file outside Archive/ (Archive is kept as it was),
    plus the landing page and the folder indexes. A read.html?f=X link is checked as X.
      node tools/check-links.mjs */
 import { execFileSync } from 'node:child_process';
-import { readFileSync, existsSync, statSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { dirname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 process.chdir(ROOT);
 
-const md = execFileSync('git', ['ls-files', '*.md'], { encoding: 'utf8' }).split('\n')
-  .filter((f) => f && !f.startsWith('Archive/') && !f.includes('node_modules'));
+/* What Pages will publish: tracked files plus new ones not yet committed, matched with
+   exact case (GitHub Pages is case-sensitive; a Mac's disk usually is not). */
+const published = new Set(execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard'], { encoding: 'utf8' })
+  .split('\n').filter((f) => f && existsSync(f)));
+const md = [...published].filter((f) => f.endsWith('.md') && !f.startsWith('Archive/') && !f.includes('node_modules'));
 const html = ['index.html', 'Notes/index.html', 'Product/index.html', 'Archive/index.html'];
 
 let total = 0;
@@ -25,7 +28,8 @@ function check(from, href) {
   if (!path) return;
   total += 1;
   const target = normalize(reader ? path : join(dirname(from), path));
-  const ok = existsSync(target) && (!statSync(target).isDirectory() || existsSync(join(target, 'index.html')));
+  const t = target.replace(/\/$/, '');
+  const ok = published.has(t) || published.has(t + '/index.html');
   if (!ok) broken.push(`${from} -> ${href}`);
 }
 
